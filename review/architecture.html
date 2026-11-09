@@ -147,6 +147,7 @@
     <a href="#s8">8 · 测试与校验</a>
     <a href="#s9">9 · Review UI 与 TODO.md</a>
     <a href="#s10">10 · 风险与延后项</a>
+    <a href="#s10b">★ · 引擎核实结论</a>
     <a href="#s11">11 · 复审清单</a>
   </nav>
 </aside>
@@ -172,7 +173,8 @@
 <!-- ================= 1 目标 ================= -->
 <section id="s1">
   <h2><span class="num">1</span>目标与范围</h2>
-  <div class="sub">把 wiki 抄录的中文描述，变成一手、可校验、机器可执行的数据集</div>
+  <div class="sub">在已有的 wiki 数据集（371 卡 / 193 遗物 / 42 药水 / 62 怪 / 52 事件，见 index.html）之上，升级为一手、可校验、机器可执行的数据集</div>
+  <div class="tip"><b>已收集的数据是基线，不是废弃物。</b>① <code>tools/diff-baseline.ts</code> 把每个提取出的数值/名称与 wiki 时期记录比对，写出 <code>_baseline-diff.json</code>，逐条复核（以代码为准，但差异清单同时暴露 wiki 错误与提取器错误）；② 无代码对应的手写字段——怪物 <code>pattern</code> 散文、<code>notes</code>、事件摘要——原样迁入新记录；③ 现有 <code>enemies.json</code> 的招式表作为怪物提取器的第一批黄金值。</div>
 
   <div class="grid g4" style="margin-bottom:18px">
     <div class="card stat"><div class="n">371</div><div class="l">可玩卡牌（+临时/选项卡）</div></div>
@@ -279,7 +281,7 @@
 ├─ data/sts2/                       <span class="c">不动</span>
 ├─ <span class="new">schemas/</span>                           <span class="c">每实体一份 + dsl.schema.json</span>
 ├─ <span class="new">tools/</span>                             <span class="c">Node + TypeScript（tsx），无 Python</span>
-│   ├─ decompile.ts  merge.ts  validate.ts（写 review/validation.json）  status.ts  build-review.ts
+│   ├─ decompile.ts  diff-baseline.ts  merge.ts  validate.ts（写 review/validation.json）  status.ts  build-review.ts
 │   └─ extract/ localization.ts cards.ts relics.ts powers.ts potions.ts monsters.ts events.ts characters.ts map.ts keywords.ts class-filter.ts java-parse.ts
 ├─ <span class="new">packages/sts-data/</span>                 <span class="c">npm workspace：@sts/data（types.ts 由 schema 生成并提交；<span class="ign">dist/</span> git-ignored）</span>
 ├─ <span class="ign">decompiled/</span>                        <span class="c">CFR 输出，git-ignored</span>
@@ -370,8 +372,8 @@
     <tr><td><b>Relic</b></td><td>id · name · flavor · description（DESCRIPTIONS 拼接，<code>#b</code> 替换为计数器）· tier（starter/common/uncommon/rare/boss/shop/event/special/blight）· pool（red/green/blue/purple/shared）· counterStart · source</td><td><code>triggers: [{ on, do: [ops] }]</code>；hook：combatStart turnStart turnEnd cardPlayed attackPlayed onRest onPickup onShuffle onExhaust onVictory onChestOpen atDamageGive atDamageReceive modifyBlock custom</td></tr>
     <tr><td><b>Power</b></td><td>id · name · description · type（buff/debuff）· turnBased · canStack · priority · source</td><td><code>triggers</code>（同上 + atEndOfRound onApply onRemove）</td></tr>
     <tr><td><b>Potion</b></td><td>id · name · description · rarity · targetRequired · potency{base, perAscension} · sacredBarkDoubles · source</td><td><code>effects</code></td></tr>
-    <tr><td><b>Monster</b></td><td>id · name · act · tier · <code>hp: Asc&lt;{min,max}&gt;</code> · moves[{ byte, name, intent, <code>damage: Asc&lt;int&gt;</code>, <code>hits</code>, <code>block</code>, powers[{ power, <code>amount: Asc&lt;int&gt;</code> }] }] · source。<br><b><code>Asc&lt;T&gt; = { base: T, asc?: [{ level, value: T }] }</code></b>，level 取类里 <code>ascensionLevel &gt;= N</code> 的阈值（普通 2/7/17、精英 3/8/18、Boss 4/9/19），结构本身不写死阈值</td><td>行为 <code>pattern</code> 沿用现有散文；AI DSL 延后到子项目 2</td></tr>
-    <tr><td><b>Encounter</b></td><td>act · kind（weak/normal/elite/boss）· monsters[] · weight</td><td>—</td></tr>
+    <tr><td><b>Monster</b></td><td>id · name · act · tier · <code>hp: Asc&lt;{min,max}&gt;</code> · moves[{ byte, name, intent, <code>damage: Asc&lt;int&gt;</code>, <code>hits</code>, <code>block</code>, powers[{ power, <code>amount: Asc&lt;int&gt;</code> }] }] · source。<br><b><code>Asc&lt;T&gt; = { base: T, asc?: [{ level, value: T }] }</code></b>，level 取类里 <code>ascensionLevel &gt;= N</code> 的阈值（普通 2/7/17、精英 3/8/18、Boss 4/9/19），结构本身不写死阈值</td><td>行为 <code>pattern</code> 沿用现有散文。<b>招式选择（getMove）刻意不做成数据</b>：jar 里是带掷骰阈值与 lastMove/lastTwoMoves 历史判断的分支代码（已在 JawWorm / GremlinNob / TheCollector 上核实），子项目 2 中每个怪物移植为一个小 TS 函数，数值从本记录读取</td></tr>
+    <tr><td><b>Encounter</b></td><td>act · kind（weak/normal/elite/boss）· monsters[] · weight —— 来源 <code>MonsterHelper.getEncounter</code> 与 <code>Exordium/TheCity/TheBeyond</code> 的 generateWeak/Strong/Elites/initializeBoss 列表</td><td>—</td></tr>
     <tr><td><b>Event</b></td><td>id · name · pool · text（eng/zhs DESCRIPTIONS + OPTIONS）· source</td><td><code>events.effects.json</code>：options[{ text, requirement, outcomes[] }] 整体<b>策展</b>（事件类是不规则状态机，不自动解析）；outcomes DSL：gold hp maxHp card relic potion curse combat custom</td></tr>
     <tr><td><b>Neow</b></td><td>四阶段祝福 / 代价选项</td><td>—</td></tr>
     <tr><td><b>Keyword</b></td><td>id · names[] · description{en,zh}</td><td>—</td></tr>
@@ -530,7 +532,7 @@ super(ID, <span class="s">"anchor.png"</span>, RelicTier.<span class="k">COMMON<
 - [ ] StS2：用 sts2.dll v0.107.1 核对 data/sts2（ilspycmd 已装）
 - [ ] StS2：2026-11-12 补丁后复核
 - [ ] StS2：效果 DSL
-- [ ] 怪物 AI DSL（招式选择逻辑）— 子项目 2
+- [ ] 怪物 AI：每个 getMove() 移植为 TS 函数 — 子项目 2
 ## How to resume
 <span class="c">精确命令：前置依赖 · decompile · extract · validate · test · build:review</span></pre>
 
@@ -550,6 +552,20 @@ super(ID, <span class="s">"anchor.png"</span>, RelicTier.<span class="k">COMMON<
     <tr><td>版权</td><td>只分发机制与数值（及 wiki 早已公开的本地化文本）；素材本地保留且 git-ignored</td></tr>
     <tr><td>范围蔓延到引擎</td><td>怪物 AI、VFX、素材加载明确延后</td></tr>
   </table></div>
+</section>
+
+<!-- ================= 10b 引擎核实 ================= -->
+<section id="s10b">
+  <h2><span class="num">★</span>引擎核实结论（带入子项目 2）</h2>
+  <div class="sub">已用 CFR 反编译并阅读 41 个核心类（GameActionManager / DamageInfo / AbstractMonster / MapGenerator / Random / AbstractDungeon / ShopScreen / RelicLibrary / CardLibrary / MonsterHelper …）</div>
+  <div class="grid g2">
+    <div class="card"><h5>动作队列就是引擎</h5><p>全部逻辑经由一条有序动作列表（addToTop / addToBottom）+ cardQueue + WAITING_ON_USER / EXECUTING_ACTIONS 相位机。VFX / SFX / Wait / ShakeScreen 动作穿插其中，网页引擎把它们作为 UI 事件发出，模拟层保持确定性。</p></div>
+    <div class="card"><h5>伤害公式</h5><p>base → 施加方 atDamageGive → 姿态 → 承受方 atDamageReceive → atDamageFinalGive → atDamageFinalReceive → floor，钳到 ≥0；Java float 运算，TS 侧每步 <code>Math.fround</code> 以保证舍入一致。</p></div>
+    <div class="card"><h5>RNG 可复现</h5><p>RandomXS128（xorshift128+）+ 调用计数器，多路流（aiRng / cardRandomRng / mapRng / monsterRng / relicRng / potionRng / treasureRng / eventRng / merchantRng / shuffleRng …）由局种子派生。精确移植后可用「同一种子 → 同一张第 1 幕地图 / 同一组 Neow 选项」作为对照测试。</p></div>
+    <div class="card"><h5>地图生成</h5><p>MapGenerator ≈ 250 行纯算法（7×15 网格、6 条路径、祖先检查防交叉），直接移植；常量进 map.json。</p></div>
+    <div class="card"><h5>需要重新切分的上帝类</h5><p>AbstractDungeon 2,680 行 / AbstractCard 2,566 / AbstractPlayer 2,218 混合了状态、渲染与输入，不逐行移植。</p></div>
+    <div class="card"><h5>怪物 AI 是代码不是数据</h5><p>JawWorm 的 getMove：roll&lt;25 且上一招咬合 → 56.25% 吼叫否则鞭打；roll&lt;55 且连续两次鞭打 → 35.7% 咬合否则吼叫；其余分支类似。现有 wiki 数据「咬合后 59%/41%」是对这段结构的近似。按怪物各写一个 TS 函数。</p></div>
+  </div>
 </section>
 
 <!-- ================= 11 复审清单 ================= -->

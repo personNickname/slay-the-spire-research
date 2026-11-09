@@ -17,7 +17,9 @@
 
 ## 1. Goal
 
-Turn `data/sts1/` from wiki-transcribed Chinese prose into a **first-hand, schema-validated, machine-executable** dataset extracted from `desktop-1.0.jar`, so the web remake can import it and run combat without hand-coding each card.
+Upgrade `data/sts1/` — which already holds a complete wiki-sourced dataset (371 cards, 193 relics, 42 potions, 62 monsters with per-ascension moves, 52 events, Neow, achievements, score; browsable in `review/index.html`) — into a **first-hand, schema-validated, machine-executable** dataset extracted from `desktop-1.0.jar`, so the web remake can import it and run combat without hand-coding each card.
+
+**The existing data is the baseline, not waste.** It is kept in git history and used in three ways: (a) `tools/diff-baseline.ts` compares every extracted number/name against the wiki-era record and writes `data/sts1/_baseline-diff.json`, so each discrepancy is reviewed (the code wins, but the list tells us where the wiki was wrong and where an extractor may be wrong); (b) hand-written fields with no code equivalent — monster `pattern` prose, `notes`, event flavour summaries — are carried over into the new records; (c) the current `enemies.json` move tables serve as the first golden-value set for the monster extractor.
 
 Success criteria (all must hold):
 
@@ -68,6 +70,7 @@ slay-the-spire-research/
 │   │   ├─ characters.ts map.ts keywords.ts
 │   │   ├─ class-filter.ts     which jar classes count as entities (exclusion list, see §6.3)
 │   │   └─ java-parse.ts       shared regex/AST helpers
+│   ├─ diff-baseline.ts        compares extraction against the wiki-era data → data/sts1/_baseline-diff.json
 │   ├─ merge.ts                joins *.json + *.effects.json → packages/sts-data/dist
 │   ├─ validate.ts             schema + cross-reference + counts; writes review/validation.json
 │   ├─ status.ts               writes the Status block of TODO.md
@@ -203,8 +206,8 @@ Target: ≤ 10 % of cards use `custom`. The current count is printed by `npm run
 | Relic | id, name{en,zh}, flavor, description (joined `DESCRIPTIONS`, `#b` counter substituted), tier (starter\|common\|uncommon\|rare\|boss\|shop\|event\|special\|blight), pool (red\|green\|blue\|purple\|shared — **from `RelicLibrary.initialize()`'s `addRed/addGreen/addBlue/addPurple/addShared` calls, not the relic class**), counterStart, landingSound ignored, source | `triggers: [{ on: <hook>, do: [ops] }]` with hooks combatStart\|turnStart\|turnEnd\|cardPlayed\|attackPlayed\|onRest\|onPickup\|onShuffle\|onExhaust\|onVictory\|onChestOpen\|atDamageGive\|atDamageReceive\|modifyBlock\|custom |
 | Power | id, name, description, type (buff\|debuff), turnBased, canStack, priority, source | `triggers` (same hook set + `atEndOfRound`, `onApply`, `onRemove`) |
 | Potion | id, name, description, rarity (common\|uncommon\|rare), targetRequired, potency{base, perAscension}, sacredBarkDoubles, source | `effects` |
-| Monster | id, name, act, tier (normal\|elite\|boss), `hp: Asc<{min,max}>`, moves[{ byte, name, intent, `damage: Asc<int>`, `hits: Asc<int>`, `block: Asc<int>`, powers[{ power, `amount: Asc<int>` }] }], source. **`Asc<T>` = `{ base: T, asc?: [{ level: int, value: T }] }`**, where `level` is the `ascensionLevel >= N` threshold found in the class (normal monsters use 2/7/17, elites 3/8/18, bosses 4/9/19; the structure does not hardcode these) | `pattern` prose kept from current data; `ai` DSL deferred to sub-project 2 |
-| Encounter | act, kind (weak\|normal\|elite\|boss), monsters[], weight | none |
+| Monster | id, name, act, tier (normal\|elite\|boss), `hp: Asc<{min,max}>`, moves[{ byte, name, intent, `damage: Asc<int>`, `hits: Asc<int>`, `block: Asc<int>`, powers[{ power, `amount: Asc<int>` }] }], source. **`Asc<T>` = `{ base: T, asc?: [{ level: int, value: T }] }`**, where `level` is the `ascensionLevel >= N` threshold found in the class (normal monsters use 2/7/17, elites 3/8/18, bosses 4/9/19; the structure does not hardcode these) | `pattern` prose carried over from the current data. **Move selection (`getMove`) is deliberately not modelled as data**: in the jar it is branchy code with roll thresholds and `lastMove`/`lastTwoMoves` history checks (verified on `JawWorm`, `GremlinNob`, `TheCollector`); it will be ported as one small TypeScript function per monster in sub-project 2, reading its numbers from this record |
+| Encounter | act, kind (weak\|normal\|elite\|boss), monsters[], weight — sourced from `MonsterHelper.getEncounter` and the `Exordium` / `TheCity` / `TheBeyond` `generateWeakEnemies` / `generateStrongEnemies` / `generateElites` / `initializeBoss` lists | none |
 | Event | id, name, act/pool, text (eng/zhs `events.json`: DESCRIPTIONS + OPTIONS strings), source | `options[{ text, requirement, outcomes[] }]` in `events.effects.json` — event classes are irregular state machines, so option structure is **curated**, not parsed; outcomes DSL ops: gold, hp, maxHp, card, relic, potion, curse, combat, custom |
 | Neow | the four blessing stages with options and drawbacks | none |
 | Keyword | id, names[], description{en,zh} | none |
@@ -272,7 +275,7 @@ Root-level, fixed structure, maintained by every task:
 - [ ] StS2: verify data/sts2 against sts2.dll v0.107.1 (ilspycmd installed)
 - [ ] StS2: re-verify after the 2026-11-12 patch
 - [ ] StS2: effect DSL
-- [ ] Monster AI DSL (move selection logic) — sub-project 2
+- [ ] Monster AI: port each getMove() as a TS function — sub-project 2
 ## How to resume
 exact commands: prerequisites, decompile, extract, validate, test, build:review
 ```
@@ -298,6 +301,17 @@ Branch `sts1-data-layer`; small commits per extractor / per curation batch; `dec
 | Copyright | No art/audio/text redistributed beyond mechanics and localization strings already public on wikis; assets stay local and ignored |
 | Scope creep into the engine | Monster AI, VFX, and asset loading are explicitly deferred |
 
-## 9. Open questions for the user
+## 9. Engine findings carried forward to sub-project 2
+
+Recorded here because they were verified while checking feasibility against the decompiled core (41 classes read: `GameActionManager`, `DamageInfo`, `AbstractMonster`, `MapGenerator`, `random/Random`, `AbstractDungeon`, `ShopScreen`, `RelicLibrary`, `CardLibrary`, `MonsterHelper`, …). They constrain the game spec, not this data spec, but the data layer must not make them harder:
+
+1. **Action queue is the engine.** All game logic funnels through one ordered action list with `addToTop`/`addToBottom`, a `cardQueue`, and a `WAITING_ON_USER`/`EXECUTING_ACTIONS` phase machine. Visual actions (`VFXAction`, `SFXAction`, `WaitAction`, `ShakeScreenAction`) are interleaved; the web engine emits them as UI events and keeps the simulation deterministic.
+2. **Damage formula**: base → owner `atDamageGive` → stance → target `atDamageReceive` → owner `atDamageFinalGive` → target `atDamageFinalReceive` → `floor`, clamp ≥ 0, computed in Java `float`. The TS engine uses `Math.fround` at each step to round identically.
+3. **RNG fidelity**: `RandomXS128` (xorshift128+) with a per-stream call counter; separate streams (`aiRng`, `cardRandomRng`, `mapRng`, `monsterRng`, `relicRng`, `potionRng`, `treasureRng`, `eventRng`, `merchantRng`, `shuffleRng`, `cardRng`, `miscRng`) seeded from the run seed. Porting it exactly gives a test oracle: the same seed must yield the same Act 1 map and Neow options as the real game.
+4. **Map generation** (`MapGenerator`, ~250 lines) is a pure algorithm and ports directly; its constants go in `map.json`.
+5. **God objects** `AbstractDungeon` (2,680 lines), `AbstractCard` (2,566), `AbstractPlayer` (2,218) mix state, rendering and input; they are re-partitioned, never ported line-by-line.
+6. **Monster AI** is code, not data (see §5.3); ported per monster in TS.
+
+## 10. Open questions for the user
 
 None blocking. Confirmed: Approach A; StS1 only; text-only representation; no audio; TODO.md as the resumable checklist; architecture review page in the style of `review/index.html`.
