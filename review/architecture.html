@@ -158,6 +158,10 @@
 <section id="s0">
   <h2><span class="num">0</span>已定决策</h2>
   <div class="sub">头脑风暴阶段已确认的选择；改动任何一项都会影响后续设计</div>
+  <div style="border-left:4px solid var(--accent);background:#eff6ff;padding:10px 14px;margin:10px 0 14px;border-radius:0 6px 6px 0;font-size:14px">
+    <b>唯一真值规则：</b>一切数值、枚举、文本、规则以 <code>desktop-1.0.jar</code> 反编译代码为准。仓库现有 wiki 数据、研究文档、记忆中的游戏印象都只是待验证的假设；任何分歧或不确定，打开对应反编译类读代码解决，并把结论记录下来（<code>_baseline-diff.json</code> / 测试 / 规格），同一个问题不二次争论。实体身份 = 类里的 <code>ID</code> 常量，不是类名（29 张 StS1 卡两者不同，如类 <code>Alchemize</code> 的 <code>ID="Venomology"</code>）。
+    已按此规则完成一次全量保真度审计：<a href="../docs/audits/2026-11-09-sts1-fidelity-audit.md">docs/audits/2026-11-09-sts1-fidelity-audit.md</a>——卡 371/371、遗物 193/193、药水 42/42、事件 52/52 全部对上，费用/类型/遗物品级/HP 零错误；需修正的是 15 个诅咒/状态牌稀有度标签、18 个 "event" 遗物品级应为 SPECIAL、3 个缺失的 Masked Bandits 怪物，以及怪物 AI 需从概率摘要改为逐怪移植 <code>getMove</code>。
+  </div>
   <div class="tbl-wrap"><table class="kv">
     <tr><th>议题</th><th>决定</th><th>理由</th></tr>
     <tr><td>总体范围</td><td>两个子项目依次进行：<b>① 加固 StS1 数据层</b> → ② StS1 可玩网页复刻</td><td>引擎消费前数据必须可信</td></tr>
