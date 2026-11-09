@@ -123,7 +123,7 @@
   <div class="head-inner">
     <div class="title-row">
       <h1>杀戮尖塔 1 <span class="accent">数据层架构设计</span></h1>
-      <span class="subtitle">子项目 1 · 方案 A（全量反编译 + 结构化效果 DSL）· 2026-11-09 · 待复审</span>
+      <span class="subtitle">子项目 1 · 方案 A（全量反编译 + 结构化效果 DSL）· 2026-11-09 · 规格审阅已通过（2 轮）· 待你复审</span>
       <div class="nav-links">
         <a href="index.html">← 资料复审 / 实体数据库</a>
         <a href="../docs/superpowers/specs/2026-11-09-sts1-data-layer-design.md">Markdown 规格</a>
@@ -271,7 +271,8 @@
 │   ├─ <span class="new">relics.json / relics.effects.json</span>
 │   ├─ <span class="new">powers.json / powers.effects.json</span>
 │   ├─ <span class="new">potions.json / potions.effects.json</span>
-│   ├─ <span class="new">monsters.json  encounters.json</span>  events.json  neow.json
+│   ├─ <span class="new">monsters.json  encounters.json</span>  neow.json
+│   ├─ events.json / <span class="new">events.effects.json</span>   <span class="c">选项与后果为策展</span>
 │   ├─ <span class="new">keywords.json  characters.json  map.json</span>
 │   ├─ achievements.json  score.json  <span class="c">沿用现有</span>
 │   └─ <span class="gen">_unresolved.json</span>                 <span class="c">提取器残留；必须为空才通过</span>
@@ -358,7 +359,7 @@
 }</pre>
   <div class="tip"><code>!D! !B! !M!</code> 与 <code>NL</code> 占位符<b>原样保留</b>，由引擎在渲染时替换，和原游戏一致；这也让 §8 的「文本 ↔ 数值一致性」测试成为可能。</div>
   <div class="grid g3">
-    <div class="card"><h5>文件划分</h5><p><code>cards/red green blue purple colorless curse status special.json</code>；<code>special.json</code> 收 tempCards / optionCards（小刀、洞察、选项卡等），<code>color:"special"</code>，不可获得者 <code>playable:false</code>。</p></div>
+    <div class="card"><h5>文件划分</h5><p><code>cards/red green blue purple colorless curse status special.json</code>；<code>special.json</code> 收 tempCards / optionCards（小刀、洞察、选项卡等），<code>color</code> 保留游戏真实值，另有提取字段 <code>obtainable:false</code>；<code>playable</code> 仅在 <code>cost=-2</code> 时为 false。</p></div>
     <div class="card"><h5>升级语义（固定）</h5><p><code>upgrade</code> 存增量；<code>upgradeKeywords</code> / <code>upgradeEffects</code> 为 null 表示「与基础相同」，否则是<b>完整替换</b>而非补丁。两者都进 Schema 校验。</p></div>
     <div class="card"><h5>统一溯源对象</h5><p>所有实体同一形状：<code>{ class, jar, jarSha256 }</code>；<code>additionalProperties:false</code> 下只允许这一种。</p></div>
   </div>
@@ -371,7 +372,7 @@
     <tr><td><b>Potion</b></td><td>id · name · description · rarity · targetRequired · potency{base, perAscension} · sacredBarkDoubles · source</td><td><code>effects</code></td></tr>
     <tr><td><b>Monster</b></td><td>id · name · act · tier · <code>hp: Asc&lt;{min,max}&gt;</code> · moves[{ byte, name, intent, <code>damage: Asc&lt;int&gt;</code>, <code>hits</code>, <code>block</code>, powers[{ power, <code>amount: Asc&lt;int&gt;</code> }] }] · source。<br><b><code>Asc&lt;T&gt; = { base: T, asc?: [{ level, value: T }] }</code></b>，level 取类里 <code>ascensionLevel &gt;= N</code> 的阈值（普通 2/7/17、精英 3/8/18、Boss 4/9/19），结构本身不写死阈值</td><td>行为 <code>pattern</code> 沿用现有散文；AI DSL 延后到子项目 2</td></tr>
     <tr><td><b>Encounter</b></td><td>act · kind（weak/normal/elite/boss）· monsters[] · weight</td><td>—</td></tr>
-    <tr><td><b>Event</b></td><td>id · name · pool · text · options[{ text, requirement }]</td><td>options[].outcomes DSL（gold hp maxHp card relic potion curse combat custom）</td></tr>
+    <tr><td><b>Event</b></td><td>id · name · pool · text（eng/zhs DESCRIPTIONS + OPTIONS）· source</td><td><code>events.effects.json</code>：options[{ text, requirement, outcomes[] }] 整体<b>策展</b>（事件类是不规则状态机，不自动解析）；outcomes DSL：gold hp maxHp card relic potion curse combat custom</td></tr>
     <tr><td><b>Neow</b></td><td>四阶段祝福 / 代价选项</td><td>—</td></tr>
     <tr><td><b>Keyword</b></td><td>id · names[] · description{en,zh}</td><td>—</td></tr>
     <tr><td><b>Character</b></td><td>id · startHp · startGold · startingDeck[] · startingRelic · orbSlots · cardColor</td><td>—</td></tr>
@@ -381,7 +382,7 @@
   <h3>5.3 Schema 规则</h3>
   <div class="grid g3">
     <div class="card"><h5>JSON Schema 2020-12</h5><p>每实体一份；<code>additionalProperties:false</code>，拼错字段立刻失败。</p></div>
-    <div class="card"><h5>交叉引用校验</h5><p><code>applyPower.power</code>、<code>addCard.card</code>、<code>encounters.monsters[]</code>、<code>startingRelic</code> 必须真实存在。</p></div>
+    <div class="card"><h5>交叉引用校验</h5><p><code>applyPower.power</code>、怪物 <code>moves[].powers[].power</code>、<code>addCard.card</code>、<code>encounters.monsters[]</code>、<code>startingRelic</code>、<code>startingDeck[]</code> 必须真实存在。Schema 描述的是「提取 + 策展」合并后的形状，validate 自行合并后校验。</p></div>
     <div class="card"><h5>类型自动生成</h5><p>json-schema-to-typescript → <code>packages/sts-data/src/types.ts</code>，引擎零手写类型。</p></div>
   </div>
 </section>

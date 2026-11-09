@@ -1,6 +1,6 @@
 # StS1 Data Layer Design (Sub-project 1)
 
-> Date: 2026-11-09 · Status: Draft for user review · Approach: **A** (full decompile + structured effect DSL)
+> Date: 2026-11-09 · Status: Spec review passed (2 iterations), awaiting user review · Approach: **A** (full decompile + structured effect DSL)
 > Visual companion: `review/architecture.html` (same content, laid out for architecture review).
 
 ## 0. Context and decisions already made
@@ -53,7 +53,8 @@ slay-the-spire-research/
 │   ├─ relics.json / relics.effects.json
 │   ├─ powers.json / powers.effects.json
 │   ├─ potions.json / potions.effects.json
-│   ├─ monsters.json  encounters.json  events.json  neow.json
+│   ├─ monsters.json  encounters.json  neow.json
+│   ├─ events.json / events.effects.json  (option requirements + outcomes are curated)
 │   ├─ keywords.json  characters.json  map.json
 │   ├─ achievements.json  score.json   (kept from current repo)
 │   └─ _unresolved.json             extractor leftovers (must be empty to pass CI)
@@ -129,6 +130,7 @@ Rules:
   "keywords": [],
   "upgradeKeywords": null,
   "playable": true,
+  "obtainable": true,
   "effects": [
     { "op": "damage",     "target": "enemy", "amount": "damage" },
     { "op": "applyPower", "target": "enemy", "power": "Vulnerable", "amount": "magic" }
@@ -138,8 +140,8 @@ Rules:
 }
 ```
 
-- Enums: `color` ∈ red|green|blue|purple|colorless|curse|status|special; `type` ∈ attack|skill|power|status|curse; `rarity` ∈ basic|common|uncommon|rare|special|curse; `target` ∈ enemy|allEnemies|self|none|selfAndEnemy|all.
-- Files: `cards/red.json green.json blue.json purple.json colorless.json curse.json status.json special.json`. `special.json` holds `tempCards` and `optionCards` (e.g. Shiv, Smite, Insight, the Discovery/Attack-Potion option cards) with `playable:false` where the game marks them unobtainable; `color: "special"`.
+- Enums: `color` ∈ red|green|blue|purple|colorless|curse|status; `type` ∈ attack|skill|power|status|curse; `rarity` ∈ basic|common|uncommon|rare|special|curse; `target` ∈ enemy|allEnemies|self|none|selfAndEnemy|all.
+- Files: `cards/red.json green.json blue.json purple.json colorless.json curse.json status.json special.json`. `special.json` holds the jar's `tempCards` and `optionCards` (e.g. Shiv, Smite, Insight, the Discovery/Attack-Potion option cards). Their `color` keeps the game's real `CardColor` (mostly colorless/purple); the file itself is the grouping, and an extracted boolean `obtainable` (false for temp/option cards and for cards the game excludes from pools) replaces any hand-typed marker. `playable` stays `true` unless the class sets `cost = -2`.
 - `cost` is an integer, `-1` for X-cost, `-2` for unplayable (the game's convention).
 - `keywords` ∈ exhaust|ethereal|innate|retain|unplayable|selfRetain; derived from constructor flags.
 - Placeholders `!D! !B! !M!` and `NL` are kept verbatim; the engine substitutes at render time.
@@ -198,12 +200,12 @@ Target: ≤ 10 % of cards use `custom`. The current count is printed by `npm run
 
 | Entity | Extracted fields | Curated |
 |---|---|---|
-| Relic | id, name{en,zh}, flavor, description (joined `DESCRIPTIONS`, `#b` counter substituted), tier (starter\|common\|uncommon\|rare\|boss\|shop\|event\|special\|blight), pool (red\|green\|blue\|purple\|shared), counterStart, landingSound ignored, source | `triggers: [{ on: <hook>, do: [ops] }]` with hooks combatStart\|turnStart\|turnEnd\|cardPlayed\|attackPlayed\|onRest\|onPickup\|onShuffle\|onExhaust\|onVictory\|onChestOpen\|atDamageGive\|atDamageReceive\|modifyBlock\|custom |
+| Relic | id, name{en,zh}, flavor, description (joined `DESCRIPTIONS`, `#b` counter substituted), tier (starter\|common\|uncommon\|rare\|boss\|shop\|event\|special\|blight), pool (red\|green\|blue\|purple\|shared — **from `RelicLibrary.initialize()`'s `addRed/addGreen/addBlue/addPurple/addShared` calls, not the relic class**), counterStart, landingSound ignored, source | `triggers: [{ on: <hook>, do: [ops] }]` with hooks combatStart\|turnStart\|turnEnd\|cardPlayed\|attackPlayed\|onRest\|onPickup\|onShuffle\|onExhaust\|onVictory\|onChestOpen\|atDamageGive\|atDamageReceive\|modifyBlock\|custom |
 | Power | id, name, description, type (buff\|debuff), turnBased, canStack, priority, source | `triggers` (same hook set + `atEndOfRound`, `onApply`, `onRemove`) |
 | Potion | id, name, description, rarity (common\|uncommon\|rare), targetRequired, potency{base, perAscension}, sacredBarkDoubles, source | `effects` |
 | Monster | id, name, act, tier (normal\|elite\|boss), `hp: Asc<{min,max}>`, moves[{ byte, name, intent, `damage: Asc<int>`, `hits: Asc<int>`, `block: Asc<int>`, powers[{ power, `amount: Asc<int>` }] }], source. **`Asc<T>` = `{ base: T, asc?: [{ level: int, value: T }] }`**, where `level` is the `ascensionLevel >= N` threshold found in the class (normal monsters use 2/7/17, elites 3/8/18, bosses 4/9/19; the structure does not hardcode these) | `pattern` prose kept from current data; `ai` DSL deferred to sub-project 2 |
 | Encounter | act, kind (weak\|normal\|elite\|boss), monsters[], weight | none |
-| Event | id, name, act/pool, text, options[{ text, requirement, outcomes[] }] | outcomes DSL (gold, hp, maxHp, card, relic, potion, curse, combat, custom) |
+| Event | id, name, act/pool, text (eng/zhs `events.json`: DESCRIPTIONS + OPTIONS strings), source | `options[{ text, requirement, outcomes[] }]` in `events.effects.json` — event classes are irregular state machines, so option structure is **curated**, not parsed; outcomes DSL ops: gold, hp, maxHp, card, relic, potion, curse, combat, custom |
 | Neow | the four blessing stages with options and drawbacks | none |
 | Keyword | id, names[], description{en,zh} | none |
 | Character | id, startHp, startGold, startingDeck[], startingRelic, orbSlots, cardColor | none |
@@ -211,7 +213,7 @@ Target: ≤ 10 % of cards use `custom`. The current count is printed by `npm run
 
 ### 5.4 Schemas
 
-`schemas/*.schema.json`, draft 2020-12, `additionalProperties: false` everywhere. `tools/validate.ts` uses Ajv and additionally checks cross-references: every `power` in `applyPower`, every `card` in `addCard`, every `monsters[]` entry in encounters, every `startingRelic`, exists.
+`schemas/*.schema.json`, draft 2020-12, `additionalProperties: false` everywhere. **Schemas describe the in-memory join** (extracted record + its `effects`/`triggers` from the sibling `*.effects.json`), which is exactly the shape shown in §5.1 and the shape `merge.ts` writes to `dist/`; `validate.ts` performs that join itself before validating, so it can run before `merge`. The two source files are additionally checked by lightweight structural rules (extracted file: no `effects` key; effects file: object keyed by id, every key must exist in the extracted file). `tools/validate.ts` uses Ajv and additionally checks cross-references: every `power` in `applyPower` and in monster `moves[].powers[].power`, every `card` in `addCard`, every `monsters[]` entry in encounters, every `startingRelic` and `startingDeck[]` id, exists.
 
 ## 6. Workflow
 
@@ -251,7 +253,7 @@ If a file matches none of the expected shapes, the record is emitted with the fi
 
 ### 6.4 Review UI
 
-`review/index.html` is kept, and its **StS1 view is adapted** to the new data shape (this is a rework of the StS1 entity tabs, not a cosmetic addition): entity keys change (`enemies` → `monsters`, `cards_neutral_groups` → per-color files, hash routes `#db/sts1/<entity>` updated), Chinese prose fields are replaced by `name.zh` / `description.zh`, and the following are added: base/upgrade numbers column, DSL rendered as a bullet list, `source.class` in the expanded row, en/zh toggle, validation banner read from `review/validation.json` (written by `tools/validate.ts`).
+`review/index.html` is kept, and its **StS1 view is adapted** to the new data shape (this is a rework of the StS1 entity tabs, not a cosmetic addition). The page currently shares one `ENTITIES` column configuration across both games; it becomes **per-game column definitions** (StS1 reads `name.zh`/`description.zh`/`base`/`upgrade`, StS2 keeps its flat fields). Entity keys change (`enemies` → `monsters`, `cards_neutral_groups` → per-color files, hash routes `#db/sts1/<entity>` updated), Chinese prose fields are replaced by `name.zh` / `description.zh`, and the following are added: base/upgrade numbers column, DSL rendered as a bullet list, `source.class` in the expanded row, en/zh toggle, validation banner read from `review/validation.json` (written by `tools/validate.ts`).
 
 `tools/build-review.ts` replaces `review/build.py` and **must keep bundling `data/sts2/` unchanged** into `window.GAME_DATA.sts2` (porting `flatten_neow`, the envelope unwrapping and the neutral-card grouping logic as they apply to StS2), so the StS2 tab keeps working. `review/architecture.html` added (this document, visual).
 
