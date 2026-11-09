@@ -4917,8 +4917,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "This turn, your next cond:>1?1 Attacks are played an extra time.",
-    "effect_up": "This turn, your next cond:>1?2 Attacks are played an extra time.",
+    "effect": "This turn, your next Attack is played an extra time.",
+    "effect_up": "This turn, your next 2 Attacks are played an extra time.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6584,8 +6584,8 @@
     "type": "attack",
     "rarity": "token",
     "cost": 2,
-    "effect": "Deal 10 damage.",
-    "effect_up": "Deal 10 damage.",
+    "effect": "Deal 10 damage{Repeat:plural:| 1 times.",
+    "effect_up": "Deal 10 damage{Repeat:plural:| 1 times.",
     "keywords": [
       "retain"
     ],
