@@ -1,0 +1,58 @@
+{{Event Infobox
+| Name  = Council of Ghosts
+| Image = Event-Ghosts.png
+}} {{Small Card Infobox|Apparition}}
+{{E|Council of Ghosts}} is an event found exclusively in [[Act 2]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Accept}} {{TS|positive||Receive 5}} {{Asc|15|(3)}} {{C|Apparition|Apparitions}}. {{TS|negative||Lose X Max HP.}}
+* X is equal to 50% of the player's Max HP, rounded up.
+
+{{Frame|Refuse}} Nothing happens.
+<br>
+<br>
+You are then given the option to {{Frame|Leave}}.
+
+== Dialogue ==
+<blockquote>
+<div style="font-style:italic">As you continue your ascent, {{TS|purple|up|thick black smoke}} begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak.
+
+<br>
+{{TS||up|"Another puppet of }} {{TS|gold|up|Neow}} {{TS||up| I think."}}<br>
+{{TS|red|shake|"AGREED! SHE ALWAYS MAKES THE FUNNEST TOYS!"}}
+
+
+You notice an over-sized grin as the third addresses you.
+"Ignore the others... Would you like a taste of our {{TS|gold|up|power?"}}</div>
+
+{{Frame|Accept}}
+<blockquote><div style="font-style:italic">
+{{TS|gold||"Excellent!"}}
+
+As the ghostly shape speaks, you notice its large mouth opening wider and wider. {{TS|purple|up|Thick black smoke}} spews forth and envelops the room. You cannot see or breathe...
+
+
+Just before you lose consciousness, the sensation stops.
+
+
+Whatever those things were, they are gone now. You continue on, feeling rather {{TS|blue||hollow.}}</div>
+</blockquote>
+
+{{Frame|Refuse}}
+<blockquote><div style="font-style:italic">
+"How disappointing..."<br>
+{{TS||up|"You will join us sooner or later."}}<br>
+{{TS|red|shake|"HA HA HA HAHAHA!"}}
+
+The shapes fade away, leaving only the unnerving laughter ringing in your ears.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* This event is internally called Ghosts.
+* {{C|Apparition}} is internally called Ghostly.
+* One of the few events that directly refer to [[Neow]], this event reveals she is female.
+
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,101 @@
+{{Event Infobox
+| Name  = Scrap Ooze
+| Image = Event-ScrapOoze.png
+}}
+{{E|Scrap Ooze}} is an event found exclusively in [[Act 1]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Reach Inside}} {{TS|negative||Lose 3}} {{Asc|15|(5)}} {{TS|negative||HP.}} {{TS|positive||25% chance to find a [[Relic]].}}
+* If you fail to find a [[Relic]], you can try again until you find one. Each time you fail, the HP loss is increased by 1 and the chance to gain a Relic increases by 10%.
+{{Frame|Leave}} Nothing happens.
+
+== Relic Distribution ==
+* {{QueryLink|Relics|rarity:Common|Common Relics}} - 50% chance
+* {{QueryLink|Relics|rarity:Uncommon|Uncommon Relics}} - 33% chance
+* {{QueryLink|Relics|rarity:Rare|Rare Relics}} - 17% chance
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+As you walk into the room you hear a {{TS||up|gurgling}} and the {{TS||shake|grinding}} of metals. Before you is a slime-like creature that ate too much scrap for its own good. From the center of the creature you see glints of strange light, perhaps something magical? It looks like you can get some {{TS|gold||treasure}} if you just reach inside its... opening. However, the acid and sharp objects may {{TS|negative||hurt.}}
+</div>
+
+{{Frame|Reach Inside}}
+<blockquote>
+Found Nothing
+<blockquote><div style="font-style:italic">
+{{TS|negative|shake|Ouch!}} <br>
+All you find is corroded metal and a bit of {{TS|negative|shake|burning pain.}} <br>
+However, you're still convinced there's a {{TS|gold||relic...}} <br>
+</div></blockquote>
+
+Found a Relic
+<blockquote><div style="font-style:italic">
+{{TS|positive||Success!}} <br>
+After rummaging through the metal and burning acid, you finally grab hold of a {{TS|gold||relic}} and yank it out. <br>
+You pull your way out of the ooze {{TS|negative||damaged}} but rewarded.
+</div></blockquote>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You decide to leave the area. <br>
+The slime pays no attention, content with its meal.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+<!--
+Be careful with the math in this table if you plan on rewriting this section! Cumulative probability can be tricky and unintuitive.
+
+NOTE: The chance shown on the in-game button is NOT the real chance.
+The game rolls 0–99 and succeeds if the roll is >= (99 − displayed chance), so it fails on rolls below that threshold.
+The chance to NOT find the relic on an attempt is therefore (0.99 − displayed chance).
+For a displayed 25%, that's 0.99 − 0.25 = 0.74 (rolls 0–73 fail), meaning the real chance to find it is 26%.
+
+The chance for having found the relic by this attempt or earlier is: 1 - ((0.99-A) * (0.99-B) * (0.99-C) * ...)
+where A, B, C, etc. are the subsequent DISPLAYED chances (0.25, 0.35, 0.45, ...).
+
+For example, there is a ~74.43% chance to have found the relic after your third attempt.
+The math is: 1 - ((0.99-0.25) * (0.99-0.35) * (0.99-0.45)) = 1 - (0.74 * 0.64 * 0.54) = 1 - 0.255744 = 0.744256 ~= 74.43%
+
+Another way to think about it: (0.99 − the displayed 25%) = 74% chance to NOT find it on Attempt #1.
+Multiply the "not found" chances for each attempt together, and 1 minus that result is the chance that we HAVE found the relic by that attempt.
+Once the displayed chance reaches 99% or more, the "not found" chance is 0 or below, so the relic is guaranteed (attempt 9, displayed 105%).
+-->
+The chance displayed on the in-game button is one percentage point lower than the actual chance, due to how the roll is calculated. The table below lists the actual chance, with the displayed value in parentheses.
+{| class="wikitable"
+|+ Scrap Ooze Details and Math
+|-
+! Number of Attempts !! HP Lost on This Attempt !! Chance of Finding the [[Relic]]<br>on This Attempt !! Total HP Lost !! Chance of Having Found the [[Relic]]<br>by This Attempt (i.e. Cumulative Chance)
+|-
+| 1 || 3 ({{Asc|15|5}}) || 26% (shown as 25%) || 3 ({{Asc|15|5}}) || 26%
+|-
+| 2 || 4 ({{Asc|15|6}}) || 36% (shown as 35%) || 7 ({{Asc|15|11}}) || 52.64%
+|-
+| 3 || 5 ({{Asc|15|7}}) || 46% (shown as 45%) || 12 ({{Asc|15|18}}) || ~74.43%
+|-
+| 4 || 6 ({{Asc|15|8}}) || 56% (shown as 55%) || 18 ({{Asc|15|26}}) || ~88.75%
+|-
+| 5 || 7 ({{Asc|15|9}}) || 66% (shown as 65%) || 25 ({{Asc|15|35}}) || ~96.17%
+|-
+| 6 || 8 ({{Asc|15|10}}) || 76% (shown as 75%) || 33 ({{Asc|15|45}}) || ~99.08%
+|-
+| 7 || 9 ({{Asc|15|11}}) || 86% (shown as 85%) || 42 ({{Asc|15|56}}) || ~99.87%
+|-
+| 8 || 10 ({{Asc|15|12}}) || 96% (shown as 95%) || 52 ({{Asc|15|68}}) || ~99.99%
+|-
+| 9 || 11 ({{Asc|15|13}}) || 100% (shown as 105%) || 63 ({{Asc|15|81}}) || 100%
+|}
+
+== Update History ==
+* '''Weekly Patch 40: Forethought'''
+** Events: Falling, Secret Portal, Knowing Skull, Golden Idol, and Scrap Ooze receive ambient BGM.
+* '''Weekly Patch 17: Patched in the Face'''
+** Seeds utilized for several events for consistent outcomes: Accursed Blacksmith, Cursed Tome, Scrap Ooze, N'loth.
+* '''Weekly Patch 1: The First of Many!'''
+** Wording improvements to Scrap Ooze event.
+* '''Day 1 Patch'''
+** Scrap Ooze event wording improved for added clarity.
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,71 @@
+{{Event Infobox
+| Name  = Falling
+| Image = Event-Falling.png
+}}
+{{E|Falling}} is an [[Event]] found exclusively in [[Act 3]]. 
+
+== Options ==
+All options will randomly choose a card in the player's deck of a particular type. The option's text will explicitly tell the player which card they would lose. If the player lacks a card of a particular type, then the option relating to that type will be locked (e.g. if the player has no {{QueryLink|Cards|type:Power|Powers}} for the {{Frame|Channel}} option, it is replaced with the option {{Frame|Locked}} Requires: Power Card).
+<br>
+<br>
+{{Frame|Land}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Skill|Skill}}''{{TS|negative||<i>)</i>}}
+* Cannot be a {{QueryLink|Cards|type:Skill|Skill}} targeted by {{R|Bottled Lightning}}.
+
+{{Frame|Channel}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Power|Power}}''{{TS|negative||<i>)</i>}}
+* Cannot be a {{QueryLink|Cards|type:Power|Power}} targeted by {{R|Bottled Tornado}}.
+
+{{Frame|Strike}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Attack|Attack}}''{{TS|negative||<i>)</i>}}
+* Cannot be an {{QueryLink|Cards|type:Attack|Attack}} targeted by {{R|Bottled Flame}}.
+
+If the player somehow manages to lack even a single eligible card (e.g. they have a very small deck containing only bottled cards), then the only option listed is a special {{Frame|Land}} option that has no description.
+
+== Dialogue ==
+<blockquote>
+<i>As you head upwards hopping from one floating shape to another, you slip</i><br>
+<i>You begin to fall.</i><br><br>
+{{Frame|Continue}}
+<br><br>
+<i>While in  free fall you consider your options:</i><br>
+<i>Land safely with your greatest techniques.</i><br>
+<i>Channel a Power to survive the fall.</i><br>
+<i>Strike at the wall to hang on to it.</i><br><br>
+
+{{Frame|Land}}
+<blockquote><i>
+You land with extreme grace before continuing on.
+</i></blockquote>
+
+{{Frame|Channel}}
+<blockquote><i>
+Harnessing and expending some of your raw power, you manage to land unhurt.
+</i></blockquote>
+
+{{Frame|Strike}}
+<blockquote><i>
+You are able to latch on to the wall, and manage to make a short hop onto another stable platform.
+</i></blockquote>
+
+The special {{Frame|Land}} that only occurs if the player's deck has no cards that are eligible for removal;
+<blockquote><i>
+You seem to fall as slow as a feather, reaching the bottom without a scratch.
+</i></blockquote>
+</blockquote>
+
+== Update History ==
+* '''Weekly Patch 40: Forethought'''
+** Events: Falling, Secret Portal, Knowing Skull, Golden Idol, and Scrap Ooze receive ambient BGM.
+* '''Weekly Patch 30: Skewer'''
+** Falling event will no longer softlock the game if you have no valid cards to remove
+* '''Weekly Patch 21: Channel Lightning'''
+** Falling Event now correctly previews upgraded cards.
+** Falling Event's RNG is now seeded.
+* '''Weekly Patch 16: Back to Work'''
+** Falling Event now shows the chosen cards when hovering the event choices.
+* '''Weekly Patch 7: Setting Up All the Things'''
+** Falling event can no longer target bottled cards.
+* '''Weekly Patch 1: The First of Many!'''
+** Falling Event can now hit Strikes and Defends, making the event potentially not as bad.
+
+
+{{EventNav}}
+[[Category:Events]]

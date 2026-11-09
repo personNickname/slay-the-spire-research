@@ -1,0 +1,71 @@
+{{Event Infobox
+| Name  = Designer In-Spire
+| Image = Event-Designer.png
+}}
+{{E|Designer In-Spire}} is a {{QueryLink|Events|shrine:Yes|shrine Event}} found in [[Act 2]] and [[Act 3]]. It will only appear if the player has at least 75 [[Gold]].
+
+== Options ==
+{{Frame|Adjustments}} {{TS|negative||Lose 40}} {{asc|15|(50)}} [[Gold]]{{TS|negative||.}} {{TS|positive||One of the following rewards appears.}}
+* {{TS|positive||[[Upgrade]] a card.}}
+* {{TS|positive||[[Upgrade]] two random cards.}}
+<br>
+{{Frame|Clean Up}} {{TS|negative||Lose 60}} {{asc|15|(75)}} [[Gold]]{{TS|negative||.}} {{TS|positive||One of the following rewards appears.}}
+* {{TS|positive||Remove a card.}}
+* {{TS|positive||[[Transform]] two cards.}}
+<br>
+{{Frame|Full Service}} {{TS|negative||Lose 90}} {{asc|15|(110)}} [[Gold]]{{TS|negative||.}}  {{TS|positive||Remove a card, then [[upgrade]] a random card.}}
+<br>
+<br>
+{{Frame|Punch}} {{TS|negative||Lose 3}} {{asc|15|(5)}} {{TS|negative||HP.}}
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You discover a {{TS|green|up|colorful}} shop with the banner "IN-SPIRE" and walk in to see what's inside.<br>
+"No, no way. Nope. Can't let you in!" <br>
+
+A man with ridiculous clothing appears at the entrance to bar you.
+</div><br><br>
+
+{{Frame|Continue}}
+<br>
+<br>
+<div style="font-style:italic">
+"This will not do, no no. What is this style? {{TS||shake|Disgusting!}} Are you {{TS|negative||bleeeeding?}} {{TS|purple|up|Groooss.}} {{TS||shake|Business??}} You a customer? Fine. {{TS||up|Whaaatever."}} <br>
+He lets out an exaggerated sigh and points at a list of services. <br>
+
+The services seem fine, but you would rather punch this smug man in his smug face.
+</div><br><br>
+
+{{Frame|Adjustments}}, {{Frame|Clean Up}}, and {{Frame|Full Service}}
+<blockquote><div style="font-style:italic">
+"Okay, bye bye now." <br>
+
+...should've punched him.
+</div></blockquote>
+
+{{Frame|Punch}}
+<blockquote><div style="font-style:italic">
+You punch him so hard your fist hurts. <br>
+"My {{TS||shake|FACE!!}} Now I'll have to-" <br>
+
+He fainted. Who's {{TS|purple|up|groooss}} and {{TS|negative||bleeeeding}} now?
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* This event is internally called <code>Designer</code>.
+* If {{Frame|Punch}} is chosen, the Designer's portrait will change. This is the only [[Events|Event]] that changes its portrait.
+<div style="display:flex; flex-direction:row; gap:10px; margin:0 0 10px 10px;">
+[[File:DesignerPunched2.jpg|200px|thumb|The Designer after getting punched.]]
+</div>
+
+== Update History ==
+* '''Patch V2.0: The Watcher'''
+** The Designer event's options are now seeded.
+
+* '''Weekly Patch 39: We Meet Again!'''
+** Hotfix: The Designer event now has invalid options greyed out (caused softlock).
+** Added City/Beyond Event: Designer In-Spire.
+
+{{EventNav}}
+[[Category:Events]]

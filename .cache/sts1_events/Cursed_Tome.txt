@@ -1,0 +1,102 @@
+{{Event Infobox
+| Name  = Cursed Tome
+| Image = Event-CursedTome.png
+}} {{Small Relic Infobox|Enchiridion}} {{Small Relic Infobox|Nilry's Codex}} {{Small Relic Infobox|Necronomicon}}
+{{E|Cursed Tome}} is an [[Event]] found exclusively in [[Act 2]].
+
+== Options ==
+{{Frame|Read}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 1 HP.}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 2 HP.}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 3 HP.}}
+<blockquote>
+{{Frame|Take}} {{TS|positive||Obtain the book.}} {{TS|negative||Lose 10}} {{asc|15|(15)}} {{TS|negative||HP.}}
+* The book may be {{R|Enchiridion}}, {{R|Nilry's Codex}}, or {{R|Necronomicon}}. The player does not know which book they will get until after they choose {{Frame|Take}} and lose their HP.
+<br>
+{{Frame|Stop}} {{TS|negative||Lose 3 HP.}}
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+{{Frame|Leave}} Nothing happens.
+
+=== Practical Options ===
+Because the player can choose to leave the event immediately and lose 0 HP instead of selecting {{Frame|Continue}} 3 times and then backing out with {{Frame|Stop}} while losing a total of 9 HP, there are really only 2 practical ways to navigate the event. The player can either commit to all the HP loss and obtain the book, or leave immediately to do nothing.
+
+For simplicity, the event's options can be thought of in this way instead:
+* {{Frame|Read}}, then all 3 {{Frame|Continue}}, and finally {{Frame|Take}} {{TS|positive||Obtain the book.}} {{TS|negative||Lose 16}} {{asc|15|(21)}} {{TS|negative||HP.}} 
+* {{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+In an abandoned temple, you find a giant book, open, riddled with {{TS|purple|shake|cryptic writings.}} <br>
+
+As you try to interpret the elaborate script, it begins to {{TS|blue|up|shift}} and {{TS|blue|up|morph}} into writing you are familiar with.
+</div>
+<br>
+{{Frame|Read}}
+<blockquote><div style="font-style:italic">
+Odd. The book seems to be about an {{TS|gold||Ancient}} named {{TS|gold||Neow.}} <br>
+
+This piques your interest, but you have a general feeling of {{TS|purple|up|malaise.}}
+</div>
+
+{{Frame|Continue}}
+<blockquote><div style="font-style:italic">
+The Ancient of Resurrection, {{TS|gold||Neow,}} was exiled to the bottom of the Spire. <br>
+
+You feel compelled to read more, but your body begins to {{TS|negative|up|ache.}}
+</div>
+
+{{Frame|Continue}}
+<blockquote><div style="font-style:italic">
+Seeking vengeance, {{TS|gold||Neow}} blesses outsiders, using them for her own purposes. <br>
+
+You are starting to feel very {{TS|negative|up|weak and tired...}}
+</div>
+
+{{Frame|Continue}}
+<blockquote><div style="font-style:italic">
+Those resurrected by {{TS|gold||Neow}} remember only fragments of their past selves, cursed to fight for eternity. <br>
+
+As you near the final page, your {{TS|negative|shake|old wounds begin to reopen!}}
+</div>
+
+{{Frame|Take}}
+<blockquote><div style="font-style:italic">
+Upon finishing the tome, you decide to take it with you. With proof in hand, will you retain your memories?
+</div></blockquote>
+{{Frame|Stop}}
+<blockquote><div style="font-style:italic">
+With incredible strain and willpower, you resist the trance of the tome and {{TS||shake|SLAM}} it shut. <br>
+You turn and exit the temple, feeling {{TS|blue|up|drained...}}
+</div></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You exit, feeling a {{TS|purple|up|dark energy emanating}} from the book on the pedestal.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Tungsten Rod}} will reduce the HP lost for each instance of damage from the event's options. If the player selects {{Frame|Continue}} 3 times and then {{Frame|Take}}, {{R|Tungsten Rod}} reduces the total HP lost by 4 for a total of 12 {{Asc|15|(17)}} HP lost instead of 16 {{Asc|15|(21)}}.
+** If the player selects {{Frame|Stop}} instead of {{Frame|Take}}, {{R|Tungsten Rod}} reduces the total HP lost to 5 instead of 9.
+
+== Update History ==
+* '''Weekly Patch 42: Reboot'''
+** Adding page turn SFX to Cursed Tome event.
+* '''Weekly Patch 17: Patched in the Face'''
+** Seeds utilized for several events for consistent outcomes: Accursed Blacksmith, Cursed Tome, Scrap Ooze, N'loth.
+* '''Weekly Patch 16: Back to Work'''
+** Cursed Tome Event now uses reward screen for the earned book relic (optional pickup).
+
+
+{{EventNav}}
+[[Category:Events]]

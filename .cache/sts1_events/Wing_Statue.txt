@@ -1,0 +1,132 @@
+{{Event Infobox
+| Name  = Wing Statue
+| Image = Event-WingStatue.png
+}}
+{{E|Wing Statue}} is an [[Event]] found in [[Act 1]].
+
+== Options ==
+{{Frame|Pray}} {{TS|positive||Remove a card from your deck.}} {{TS|negative||Lose 7 HP.}}
+<br>
+<br>
+{{Frame|Destroy}} {{TS|positive||Receive 50 - 80 Gold.}}
+* Requires an {{QueryLink|Cards|type:Attack|Attack}} card in the player's deck that deals 10 or more damage '''in a single hit''' (e.g. {{C|Twin Strike}} does not count).
+* If the player's deck does satisfy the condition, this option is replaced with {{Frame|Locked}} Requires: Card with 10 or more damage.
+* See the [[#Notes|Notes]] section for more details on which cards satisfy this requirement.
+<br>
+{{Frame|Leave}} Nothing happens. 
+<br>
+
+== Dialogue ==
+<blockquote>
+<i>Among the stone and boulders, you notice an intricate large blue statue resembling a wing.</i><br>
+<i>You find {{TS|gold||gold}} spilling from its cracks. Maybe there is more inside...</i><br><br>
+
+{{Frame|Pray}}
+<blockquote>
+<i>Someone once told you of a cult that worshipped a giant bird. As you kneel in prayer, you begin to {{TS||up|feel}} ... {{TS||up|lightheaded}} .</i><br> <!-- Yes, there is actually a space between "lightheaded" and the period in the event text -->
+<i>You wake up some time later, feeling strangely fleet of foot.</i><br><br>
+{{Frame|Continue}} Opens the player's deck and has them select a card to remove.
+</blockquote>
+
+{{Frame|Destroy}}
+<blockquote>
+<i>With all your might, you hack away at the statue.</i><br>
+<i>It soon {{TS||shake|crumbles,}} revealing a {{TS|gold||pile of gold.}} You grab as much as you can and continue onwards.</i>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote>
+<i>The statue makes you feel {{TS||up|uneasy.}} You walk past and continue onward.</i>
+</blockquote>
+</blockquote>
+
+== Notes ==
+The event specifically only checks {{QueryLink|Cards|type:Attack|Attack cards}} in the player's deck, despite only stating "Cards" in general. It also only checks whether the card's ''base damage'' is 10 or more. This means that any card that can only achieve 10 or more damage through the use of multi-hits (such as {{C|Twin Strike}} and {{C|Riddle with Holes}}) or that have damage which is dynamically calculated from certain conditions in combat (such as {{C|Perfected Strike}} and {{C|Mind Blast}}) do not meet the requirement.
+
+=== Cards With 10 or More Damage ===
+The following is a list of cards that satisfy the condition of '''"Requires: Card with 10 or more damage."''' for the {{Frame|Destroy}} option:
+* {{C|Clash}}
+* {{C|Clothesline}}
+* {{C|Heavy Blade}}
+* {{C|Wild Strike}}
+* {{C|Blood for Blood}}
+* {{C|Carnage}}
+* {{C|Hemokinesis}}
+* {{C|Searing Blow}}
+* {{C|Sever Soul}}
+* {{C|Uppercut}}
+* {{C|Bludgeon}}
+* {{C|Feed}}
+* {{C|Immolate}}
+* {{C|Bane}}
+* {{C|Flying Knee}}
+* {{C|Sneaky Strike}}
+* {{C|All-Out Attack}}
+* {{C|Backstab}}
+* {{C|Choke}}
+* {{C|Dash}}
+* {{C|Masterful Stab}}
+* {{C|Predator}}
+* {{C|Die Die Die}}
+* {{C|Grand Finale}}
+* {{C|Unload}}
+* {{C|Streamline}}
+* {{C|Doom and Gloom}}
+* {{C|Melter}}
+* {{C|Sunder}}
+* {{C|All for One}}
+* {{C|Core Surge}}
+* {{C|Hyperbeam}}
+* {{C|Meteor Strike}}
+* {{C|Conclude}}
+* {{C|Reach Heaven}}
+* {{C|Sands of Time}}
+* {{C|Signature Move}}
+* {{C|Wheel Kick}}
+* {{C|Brilliance}}
+* {{C|Lesson Learned}}
+* {{C|Hand of Greed}}
+* {{C|Ritual Dagger}}
+
+=== Cards With 10 or More Damage After Being Upgraded ===
+The following is a list of cards that satisfy the condition of '''"Requires: Card with 10 or more damage."''' for the {{Frame|Destroy}} option only after they have been [[Upgrade|Upgraded]] to increase their base damage:
+* {{C|Bash}}
+* {{C|Cleave}}
+* {{C|Headbutt}}
+* {{C|Pommel Strike}}
+* {{C|Reckless Charge}}
+* {{C|Fiend Fire}}
+* {{C|Dagger Throw}}
+* {{C|Quick Slash}}
+* {{C|Skewer}}
+* {{C|Glass Knife}}
+* {{C|Ball Lightning}}
+* {{C|Compile Driver}}
+* {{C|Rebound}}
+* {{C|Bullseye}}
+* {{C|Scrape}}
+* {{C|Bowling Bash}}
+* {{C|Crush Joints}}
+* {{C|Empty Fist}}
+* {{C|Follow-Up}}
+* {{C|Sash Whip}}
+* {{C|Carve Reality}}
+* {{C|Fear No Evil}}
+* {{C|Wallop}}
+* {{C|Windmill Strike}}
+* {{C|Dramatic Entrance}}
+* {{C|Swift Strike}}
+
+== Update History ==
+* '''Weekly Patch 21: Channel Lightning'''
+** Seeds are now utilized for Wing Statue event.
+* '''Weekly Patch 3: Balance Balance Balance'''
+** Fixed a hyphen not being green for the Golden Wing event.
+* '''Day 1 Patch'''
+** Fixed typo for Golden Wing locked option.
+
+== Trivia ==
+* The internal name of this event is <code>Golden_Wing</code>.
+
+{{EventNav}}
+[[Category:Events]]

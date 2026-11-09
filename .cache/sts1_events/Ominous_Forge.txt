@@ -1,0 +1,45 @@
+{{Event Infobox
+| Name  = Ominous Forge
+| Image = Event-OminousForge.png
+}} {{Small Relic Infobox|Warped Tongs}} {{Small Card Infobox|Pain}}
+{{E|Ominous Forge}} is a shrine [[Event]] encountered in all [[Acts]].
+
+== Options ==
+{{Frame|Forge}} {{TS|positive||Upgrade a card in your deck.}}
+<br><br>
+{{Frame|Rummage}} {{TS|positive||Obtain a special relic.}} {{TS|negative||Become Cursed -}} {{C|Pain}}.
+* {{R|Warped Tongs}} - At the start of your turn, {{KW|Upgrade}} a random card in your hand for the rest of combat.
+* {{C|Pain}} - {{KW|Unplayable}}. While in hand, lose 1 HP whenever you play another card.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You duck inside a small hut. Inside you find what appears to be a forge. The smithing tools are covered with dust, yet a fire roars inside the furnace. You feel on edge...
+</div>
+
+{{Frame|Forge}}
+<blockquote><div style="font-style:italic">
+You decide to put the forge to use and... <br>
+{{TS|gold|shake|CLANG CLAAANG CLANG!}} <br>
+...improve your arsenal!
+</div></blockquote>
+
+{{Frame|Rummage}}
+<blockquote><div style="font-style:italic">
+You decide to see if you can find anything of use. After uncovering tarps, looking through boxes, and checking nooks and crannies, you find a dust covered {{TS|gold|up|relic!}} <br>
+
+Taking the relic, you can't shake a sudden feeling of {{TS|negative|up|sharp pain}} as you exit the hut. Maybe you disturbed some sort of spirit?
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+There doesn't seem to be anything of use. You exit the way you came, the flames of the furnace casting {{TS|purple|up|eerie shadows}} on the walls inside the hut...
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* Internally called Accursed_Blacksmith.
+
+{{EventNav}}
+[[Category:Events]]

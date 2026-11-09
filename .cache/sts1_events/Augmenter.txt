@@ -1,0 +1,81 @@
+{{Event Infobox
+| Name  = Augmenter
+| Image = Event-Augmenter.png
+}} {{Small Relic Infobox|Mutagenic Strength}} {{Small Card Infobox|J.A.X.}}
+{{E|Augmenter}} is an [[Event]] found exclusively in [[Act 2]]. This Event is the only way to obtain {{C|J.A.X.}} and {{R|Mutagenic Strength}}.
+
+== Options ==
+{{Frame|Test J.A.X.}} {{TS|positive||Get JAXXED.}}
+* Adds {{C|J.A.X.}} to the player's deck.
+<br>
+{{Frame|Become Test Subject}} {{TS|positive||[[Transform]] 2 cards.}}
+* Read more on Transform rules [[Transform#Rules|here]].
+<br>
+{{Frame|Ingest Mutagens}} {{TS|positive|| Obtain a special relic.}} 
+* Rewards the player with {{R|Mutagenic Strength}}.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+A man with an eyepatch and a devilish grin strides up to you.
+<br>
+"Hey there, stranger. Interested in advancing science? I can make you stronger than any training or blessing. You're gonna need it if you're one of those heroes with a death wish."
+<br><br>
+{{TS||up|"Whad'ya say?"}}
+</div><br><br>
+
+{{Frame|Test J.A.X.}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Excellent."}}
+<br>
+The man hands over a dangerous looking syringe filled with a {{TS|blue|up|glowing liquid}} before skulking off into a shadowy alleyway.
+</div></blockquote>
+
+{{Frame|Become Test Subject}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Marvelous."}}
+<br>
+You quaff the mysterious substance. Immediately, you are invigorated and feel your muscle fibers {{TS||shake|twitch.}}
+</div></blockquote>
+
+{{Frame|Ingest Mutagens}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Superb."}}
+<br>
+The man injects you with three unknown substances and pulls out a notepad. As you begin to feel light-headed, he starts to frantically write down notes.
+<br>
+Losing track of time completely, by the time you regain your senses, the shady character has disappeared.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* Augmenter was originally called "J.A.X. Dealer". It was renamed because, early into Slay the Spire's development, {{E|Pleading Vagrant}} previously accepted {{C|J.A.X.}} from the J.A.X. Dealer but was reworked to accept 85 [[Gold]] instead. Following the change, the old name no longer made sense and had to also be changed. It could have also been changed due to the negative connotations of the word "dealer".
+* Internally called <code>Drug_Dealer</code>.
+
+== Update History ==
+* '''Weekly Patch 51: Recursion'''
+** Minor text cleanup for Augmenter event.
+** Typo fix in Augmenter event.
+
+* '''Weekly Patch 46: Adrenaline'''
+** Fixed punctuation in Augmenter event.
+
+* '''Weekly Patch 44: Chrysalis'''
+** Augmenter event transform option now allows choosing 2 cards to Transform instead of selecting 3 at random.
+
+* '''Weekly Patch 40: Forethought'''
+** Augmenter event no longer incorrectly upgrades transformed cards.
+** Augmenter event will no longer give out duplicate relics on Endless mode.
+
+* '''Weekly Patch 39: We Meet Again!'''
+** J.A.X Dealer event reworked.
+** J.A.X. Dealer event renamed -> Augmenter.
+
+* '''Weekly Patch 21: Channel Lightning'''
+** J.A.X. Dealer event's cost of J.A.X. updated 100 -> 77 Gold.
+
+* '''Weekly Patch 4: Full speed ahead!'''
+** Incorrectly using wavy text in JAX event fixed.
+
+
+{{EventNav}}
+[[Category:Events]]

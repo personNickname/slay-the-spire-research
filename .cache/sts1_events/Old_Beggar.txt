@@ -1,0 +1,53 @@
+{{Event Infobox
+| Name  = Old Beggar
+| Image = Event-Beggar.png
+}}
+{{E|Old Beggar}} is an [[Event]] found exclusively in [[Act 2]]. It will only appear if the player has at least 75 [[Gold]].
+
+== Options ==
+{{Frame|Offer Gold}} {{TS|gold||75 [[Gold]]:}} {{TS|positive||Remove a card from your deck.}} 
+<br>
+<br>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+An old beggar cloaked in fur reaches his hands out towards you as you pass. "Spare some coin, child?"
+</div><br><br>
+
+{{Frame|Offer Gold}}
+<blockquote><div style="font-style:italic">
+The beggar takes off its cloak to reveal that he is {{TS|blue||Cleric!}} <br>
+{{TS||shake|"You are a kind soul. Receive my purification!"}} he screams. <br>
+You are unsure if he is grateful or mad.
+</div><br><br>
+{{Frame|Leave}}
+<blockquote>
+If the player returns from the Map screen instead of progressing to the next floor, the event has extra dialogue:
+<div style="font-style:italic"><br><br>
+{{TS||shake|"I hope you do better this time, friend!"}} he shouts.
+<br>
+Wondering what was implied by this, you push forward.
+</div></blockquote></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+The beggar looks to the floor as you pass. <br>
+"You will never make a difference... You never do."
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* Cleric is also encountered in {{E|The Cleric}} event.
+* {{R|Face of Cleric}} from the {{E|Face Trader}} event references Cleric. There is no special dialogue if the player encounters Cleric while owning his face.
+
+== Update History ==
+* '''Patch V1.1: The Dealer'''
+** You no longer run into The Cleric or Beggar events if you do not have enough gold.
+* '''Weekly Patch 15: Surprise Patch'''
+** Beggar Event now correctly displays the tip for what you are choosing for the card selection screen.
+* '''Weekly Patch 6: We're Back!'''
+** Fixed typo for Cleric event. Wandering -> Wondering.
+
+{{EventNav}}
+[[Category:Events]]

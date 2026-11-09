@@ -1,0 +1,59 @@
+{{Event Infobox
+| Name  = N'loth
+| Image = Event-Nloth.png
+}} {{Small Relic Infobox|N'loth's Gift}}
+{{E|N'loth}} is a {{QueryLink|Events|shrine:Yes|shrine Event}} found exclusively in [[Act 2]]. It will only appear if the player has at least 2 [[Relics]]. This Event is the only way to obtain {{R|N'loth's Gift}}.
+
+== Options ==
+'''Note:''' "Relic A" and "Relic B" will be randomly chosen from the player's currently held [[Relics]].
+<br><br>
+{{Frame|Offer: Relic A}} {{TS|negative||Lose this relic.}} {{TS|positive||Obtain a special relic.}}
+
+{{Frame|Offer: Relic B}} {{TS|negative||Lose this relic.}} {{TS|positive||Obtain a special relic.}}
+* Rewards the player with {{R|N'loth's Gift}}.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+An odd creature with a hunched back sprouting several tentacles is scrounging through a pile of trash and debris in front of you. As you approach, he shuffles towards you in a non-threatening manner.
+<br>
+"N'loth hungry. Feed N'loth."
+</div>
+<br><br>
+
+{{Frame|Offer: Relic A}} or {{Frame|Offer: Relic B}}
+<blockquote><div style="font-style:italic">
+Holding the {{TS|gold||relic}} out towards him, N'loth snatches it out of your hand with his tentacles, dislocates his jaw, and slurps down your offer in one quick gulp.
+<br>
+He gives you a large, toothy grin as more tentacles appear from behind his cloak, these ones brandishing an impossibly neat looking box. He pushes it towards you until you take it.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You shake your head. N'loth hunches even further and sighs, then scuttles away.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* N'loth can pick Relics that activate their effects only upon being picked up, as well as used-up Relics.
+** For example, offering Relics like {{R|Mango}} or {{R|Old Coin}} will not remove the max HP or [[Gold]] granted by them, effectively removing the downside of {{R|N'loth's Gift}}.
+
+== Trivia ==
+* {{R|N'loth's Hungry Face}} from the {{E|Face Trader}} event references N'loth. There is no special dialogue if the player encounters N'loth while owning their face or if N'loth is traded their own face for {{R|N'loth's Gift}}.
+
+== Update History ==
+* '''Weekly Patch 42: Reboot'''
+** Adding ambient sounds for N'Loth event.
+
+* '''Weekly Patch 17: Patched in the Face'''
+** Seeds utilized for several events for consistent outcomes: Accursed Blacksmith, Cursed Tome, Scrap Ooze, N'loth.
+
+* '''Weekly Patch 5: Happy Holidays!'''
+** Nloth's relic choices were alphabetical. Now it's random.
+
+* '''Weekly Patch 4: Full speed ahead!'''
+** Nloth now appears in the City instead of the Exordium.
+
+{{EventNav}}
+[[Category:Events]]

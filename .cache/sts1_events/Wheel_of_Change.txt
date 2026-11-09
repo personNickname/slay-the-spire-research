@@ -1,0 +1,74 @@
+{{Event Infobox
+| Name  = Wheel of Change
+| Image = Event-SpinTheWheel.png
+}}
+{{E|Wheel of Change}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events appear less frequently than other acts.
+{{Clear}}
+== Options ==
+<div style="float:right; display:flex; flex-direction:row; gap:10px; margin:0 0 10px 10px;">
+[[File:SpinButton.png|100px|thumb|Spin Button.]]
+[[File:WheelArrow.png|100px|thumb|Wheel arrow.]]
+[[File:Wheel.png|250px|thumb|Wheel.]]
+</div>
+{{Frame|Play}}
+* Spin a wheel containing the following "prizes" (clockwise starting at 12 o'clock in the image):
+** Take 10% ({{Asc|15|15%}}) of your Max HP as damage.
+** Gain [[Gold]]
+** Gain a random [[Relic]]
+** Heal to full HP
+** Become Cursed - {{C|Decay}}
+** Remove a card from your deck.
+
+{{Clear}}
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You come upon a dapper looking, cheery gremlin. <br>
+"It's time to spin the wheel! Are you {{TS||up|R E A D Y ?}} Of course you are!"
+</div>
+<blockquote>
+When receiving a [[Relic]]
+<blockquote><div style="font-style:italic">
+"Ah, a {{TS|green||gift!}} <br>
+Enjoy!"
+</div></blockquote>
+
+When taking damage
+<blockquote><div style="font-style:italic">
+"Uh oh! <br>
+You lose!" <br>
+You spot him readying a shiv...
+</div></blockquote>
+<blockquote><div style="font-style:italic">
+You slash at the crazy gremlin but he's simply too quick! <br>
+He gets you a few times with a crude shiv. <br>
+"The price has been paid!!" <br>
+and with that, both the gremlin and its wheel disappear in a puff of smoke.
+</div></blockquote>
+
+When obtaining [[Gold]]
+<blockquote><div style="font-style:italic">
+"You win some {{TS|gold||GOLD!}} <br>
+YAY!!!!"
+</div></blockquote>
+
+When obtaining {{C|Decay}}
+<blockquote><div style="font-style:italic">
+"Looks like you won a {{TS|purple||Curse!}} <br>
+That's not good. <br>
+Oh well! Better luck next time!"
+</div></blockquote>
+
+When removing a card from your deck
+<blockquote><div style="font-style:italic">
+"Ohh, the power of {{TS|negative|up|darkness...}} <br>
+Choose a card to remove from your deck!"
+</div></blockquote>
+</blockquote>
+</blockquote>
+
+
+{{EventNav}}
+[[Category:Events]]

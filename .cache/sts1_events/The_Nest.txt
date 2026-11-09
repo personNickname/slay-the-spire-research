@@ -1,0 +1,63 @@
+{{Event Infobox
+| Name  = The Nest
+| Image = Event-TheNest.png
+}} {{Small Card Infobox|Ritual Dagger}}
+{{E|The Nest}} is an event found exclusively in [[Act 2]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Smash and Grab}} {{TS|positive||Obtain 99 {{Asc|15|(50)}} Gold.}}
+<br>
+<br>
+{{Frame|Stay in Line}} {{TS|positive||Obtain {{C|Ritual Dagger}}.}} {{TS|negative||Lose 6 HP.}}
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+A long line of {{TS|blue|up|hooded figures}} can be seen entering an {{TS|purple||unassuming cathedral.}}
+</div><br>
+<div style="font-style:italic">
+Naturally, you join the line and are quickly surrounded by {{TS|negative||Cultists!}} <br>
+They ignore you as they gleefully {{TS||shake|chant}} and {{TS||up|wave}} their weapons around. <br>
+
+{{TS|negative|shake|"MURDER!! MURDER MURDER!!"}} <br>
+{{TS|blue|up|"CAW CAW CAAAAAWWW!"}} <br>
+{{TS|negative|shake|"MURDER! MURDER MURDER!!"}} <br>
+{{TS|blue|up|"CAAW CAW CAAAAAAWW!!"}} <br>
+
+You eye a {{TS|gold||Donation Box...}}
+</div>
+
+{{Frame|Smash and Grab}}
+<blockquote><div style="font-style:italic">
+They didn't even notice.
+</div></blockquote>
+
+{{Frame|Stay in Line}}
+<blockquote><div style="font-style:italic">
+You decide to stay in line (out of fear) to see what will happen. <br>
+
+Eventually, you are face-to-face with the leader. A well-dressed cultist hands you an {{TS|gold||Ornate Dagger.}} Like the others before you, you slash your forearm and let the blood drip into a misshapen bowl. <br>
+
+The cultists {{TS||shake|chant}} and {{TS||shake|holler}} for you! <br>
+
+{{TS|blue|up|"CAAW CAW CAAAAAAWW!!"}} <br>
+
+You chant, too. Why not?
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* {{E|The Nest}} depicts many aspects of the cult of the {{M|Awakened One}} that is encountered throughout the Spire. The {{M|Cultist|Cultists}} waiting in line, the "well-dressed cultist" could be a {{M|Chosen}}, and the {{C|Ritual Dagger}} is identical to the one that can be seen sticking out of the {{M|Awakened One}}'s chest.
+* Internally called <code>Nest</code>.
+
+== Update History ==
+* '''Weekly Patch 37: Darkness'''
+** an -> a typo in the Nest event.
+* '''Weekly Patch 29: TURBO'''
+** In the Nest event, you receive the dagger for 6 damage instead of a downgrade now.
+** In the Nest event, the non-dagger option steals less gold now (150 -> 99). Ascension 15 -> 50.
+* '''Weekly Patch 28: The Ritual'''
+** New Act 2 event: The Nest
+** New Card: Ritual Dagger
+
+{{EventNav}}
+[[Category:Events]]

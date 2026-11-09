@@ -1,0 +1,737 @@
+
+######################################################################
+##### A_Note_For_Yourself
+######################################################################
+
+{{Frame|Take and Give}} {{TS|positive||Receive and Store a Card}}
+* Receive a card that you had stored previously, and store a card in your deck in return.
+** The first time the player encounters this event in their save file, it will have {{C|Iron Wave}} stored.
+{{Frame|Ignore}} Nothing happens.
+<br>
+<br>
+You are then given the option to {{Frame|Leave}}.
+
+
+######################################################################
+##### Bonfire_Spirits
+######################################################################
+
+{{Frame|Offer}} Receive a reward based on the offer.
+* Offer a card in your deck to remove. The reward you receive depends on the rarity of the card you give.
+
+
+######################################################################
+##### Duplicator
+######################################################################
+
+{{Frame|Pray}} {{TS|positive||Duplicate a card in your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Golden_Shrine
+######################################################################
+
+{{Frame|Pray}} {{TS|positive||Gain 100 Gold.}}
+
+{{Frame|Desecrate}} {{TS|positive||Gain 275 Gold.}} {{TS|negative||Become Cursed -}} {{C|Regret}}.
+* {{C|Regret}} - {{KW|Unplayable}}. At the end of your turn, lose HP equal to the number of cards in your hand.
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Lab
+######################################################################
+
+{{Frame|Search}} {{TS|positive||Find some Potions!}}
+* Opens a rewards menu with three ({{Asc|15|two}}) random [[Potions]]. These can be skipped.
+
+
+######################################################################
+##### Match_and_Keep
+######################################################################
+
+{{Frame|Play}} 
+* Play a matching game for cards. Match pairs of cards to add them to your deck. There is always a pair of one {{QueryLink|Cards|color:Colorless|Colorless}} card and one {{QueryLink|Cards|type:Curse|Curse}}.
+
+
+######################################################################
+##### Ominous_Forge
+######################################################################
+
+{{Frame|Forge}} {{TS|positive||Upgrade a card in your deck.}}
+<br><br>
+{{Frame|Rummage}} {{TS|positive||Obtain a special relic.}} {{TS|negative||Become Cursed -}} {{C|Pain}}.
+* {{R|Warped Tongs}} - At the start of your turn, {{KW|Upgrade}} a random card in your hand for the rest of combat.
+* {{C|Pain}} - {{KW|Unplayable}}. While in hand, lose 1 HP whenever you play another card.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Purifier
+######################################################################
+
+{{Frame|Pray}} {{TS|positive||Remove a card from your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Divine_Fountain
+######################################################################
+
+{{Frame|Drink}} {{TS|positive||Remove all}} {{QueryLink|Cards|type:Curse|Curses}} {{TS|positive||from your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Woman_in_Blue
+######################################################################
+
+{{Frame|Buy 1 Potion}} {{TS|gold||20 Gold.}}
+
+{{Frame|Buy 2 Potions}} {{TS|gold||30 Gold.}}
+
+{{Frame|Buy 3 Potions}} {{TS|gold||40 Gold.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Transmogrifier
+######################################################################
+
+{{Frame|Pray}} {{KW|Transform}} {{TS|positive||a card.}}
+* Read more on Transform rules [[Transform#Rules|here]].
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Upgrade_Shrine
+######################################################################
+
+{{Frame|Pray}} {{KW|Upgrade}} {{TS|positive||a card.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### We_Meet_Again_
+######################################################################
+
+{{Frame|Give Potion}} {{TS|negative||Lose a chosen potion.}} {{TS|positive||Obtain a Relic.}}
+* The event will randomly choose a potion upon entry and tell you which one was selected. You will be unable to drink or discard that potion until you leave the event's floor.
+
+{{Frame|Give Gold}} {{TS|negative||Lose Gold.}} {{TS|positive||Obtain a Relic.}}
+* The amount of [[Gold]] lost is between 50 and 150 (or your current amount of [[Gold]]).
+
+{{Frame|Give Card}} {{TS|negative||Lose a chosen card.}} {{TS|positive||Obtain a Relic.}}
+* The chosen card will not be {{QueryLink|Cards|rarity:Basic|Basic}} or a {{QueryLink|Cards|type:Curse|Curse}}.
+
+{{Frame|Attack}} Nothing happens.
+
+
+######################################################################
+##### Wheel_of_Change
+######################################################################
+
+<div style="float:right; display:flex; flex-direction:row; gap:10px; margin:0 0 10px 10px;">
+[[File:SpinButton.png|100px|thumb|Spin Button.]]
+[[File:WheelArrow.png|100px|thumb|Wheel arrow.]]
+[[File:Wheel.png|250px|thumb|Wheel.]]
+</div>
+{{Frame|Play}}
+* Spin a wheel containing the following "prizes" (clockwise starting at 12 o'clock in the image):
+** Take 10% ({{Asc|15|15%}}) of your Max HP as damage.
+** Gain [[Gold]]
+** Gain a random [[Relic]]
+** Heal to full HP
+** Become Cursed - {{C|Decay}}
+** Remove a card from your deck.
+
+{{Clear}}
+
+
+######################################################################
+##### Big_Fish
+######################################################################
+
+{{Frame|Banana}} {{TS|positive||Heal 1/3 of your max HP.}}
+* If the player's HP is not divisble by 3, the HP gain is rounded down.
+<br>
+{{Frame|Donut}} {{TS|positive||Max HP +5.}}
+* Like all HP gain, the extra hit points are healed when you get them.
+<br>
+{{Frame|Box}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||Become Cursed - {{C|Regret}}.}}
+* The {{QueryLink|Relics||Relic}} is a randomly selected {{QueryLink|Relics|rarity:Common|Common}}, {{QueryLink|Relics|rarity:Uncommon|Uncommon}}, or {{QueryLink|Relics|rarity:Rare|Rare}} Relic.
+<br>
+You are then given the option to {{Frame|Leave}}.
+
+
+######################################################################
+##### Dead_Adventurer
+######################################################################
+
+{{Frame|Search}} {{TS|positive||Find Loot.}} {{TS|negative||25%}} {{Asc|15|(35%)}}{{TS|negative||: monster returns.}}
+* Each {{Frame|Search}} attempt will either cause an [[Elites#Act 1 Elites|Act 1 Elite]] to return and fight the player, or yield one of the following rewards:
+** 30 [[Gold]]
+** A random [[Relic]]
+** Nothing
+* Each reward only occurs once - if the player's first search found nothing and the second search found the [[Relic]], the third search will either reward 30 [[Gold]] or start a battle.
+* Each reward that is acquired before fighting the [[Elites#Act 1 Elites|Elite]] will be removed from its combat rewards if the player eventually does fight the [[Elites#Act 1 Elites|Elite]] and defeats it.
+** For example, if the player's first {{Frame|Search}} is a [[Relic]], the [[Elites#Act 1 Elites|Elite]] will not drop a [[Relic]] when it is defeated.
+** This is also the reason why this specific [[Elites#Act 1 Elites|Elite]] fight can drop 30 extra [[Gold]] compared to a normal [[Elite]]; because the 30 [[Gold]] {{Frame|Search}} reward is added to the normal [[Gold]] reward of defeating an [[Elite]].
+* Each subsequent {{Frame|Search}} increases the chance to encounter an [[Elites#Act 1 Elites|Elite]] by 25%.
+* If the player manages to successfully {{Frame|Search}} three times without encountering an  [[Elites#Act 1 Elites|Elite]], the event will end with a short dialogue detailing the success.
+* For the second and third searches (assuming the player is not ambushed), {{Frame|Search}} will be called {{Frame|Continue}} instead. Its behavior and description are unchanged.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Face_Trader
+######################################################################
+
+{{Frame|Touch}} {{TS|negative||Lose X HP,}} {{TS|positive||gain 75 {{Asc|15|(50)}} [[Gold]].}}
+* X is equal to 10% of the player's Max HP, rounded down.
+
+{{Frame|Trade}} {{TS|positive||50%: Good Face.}} {{TS|negative||50%: Bad Face.}}
+* Receive one of the following special [[Relics]]:
+** {{R|Face of Cleric}} ({{TS|positive||good face}})
+** {{R|Ssserpent Head}} ({{TS|positive||good face}})
+** {{R|Gremlin Visage}} ({{TS|negative||bad face}})
+** {{R|N'loth's Hungry Face}} ({{TS|negative||bad face}})
+** {{R|Cultist Headpiece}} (neutral face)
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Golden_Idol__Event_
+######################################################################
+
+{{Frame|Take}} {{TS|positive||Obtain}} {{R|Golden Idol}}{{TS|positive||.}} {{TS|negative||Trigger a trap.}}
+<blockquote>
+{{Frame|Outrun}} {{TS|negative||Become Cursed -}} {{C|Injury}}{{TS|negative||.}}
+
+{{Frame|Smash}} {{TS|negative||Take X Damage.}}
+* X is equal to 25% {{Asc|15|(35%)}} of the player's Max HP.
+
+{{Frame|Hide}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 8% {{Asc|15|(10%)}} of the player's Max HP.
+</blockquote>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Hypnotizing_Colored_Mushrooms
+######################################################################
+
+{{Frame|Stomp}} {{TS|negative||Anger the Mushrooms.}}<br>
+* Enter a battle against 3 {{M|Fungi Beast|Fungi Beasts}}. Winning grants the exclusive [[Relic]] {{R|Odd Mushroom}} along with regular combat rewards.
+<br>
+{{Frame|Eat}} {{TS|positive||Heal X HP.}} {{TS|negative||Become Cursed -}} {{C|Parasite}}{{TS|negative||.}}
+* X is equal to 25% of the player's max HP.
+
+
+######################################################################
+##### Living_Wall
+######################################################################
+
+{{Frame|Forget}} {{TS|positive||Remove a card from your deck.}}
+<br>
+<br>
+{{Frame|Change}} {{TS|positive||[[Transform]] a card in your deck.}}
+<br>
+<br>
+{{Frame|Grow}} {{TS|positive||[[Upgrade]] a card in your deck.}}
+
+
+######################################################################
+##### Scrap_Ooze
+######################################################################
+
+{{Frame|Reach Inside}} {{TS|negative||Lose 3}} {{Asc|15|(5)}} {{TS|negative||HP.}} {{TS|positive||25% chance to find a [[Relic]].}}
+* If you fail to find a [[Relic]], you can try again until you find one. Each time you fail, the HP loss is increased by 1 and the chance to gain a Relic increases by 10%.
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Shining_Light
+######################################################################
+
+{{Frame|Enter}} {{TS|positive||Upgrade 2 random cards.}} {{TS|negative||Lose X HP.}}
+* X is equal to 20% {{Asc|15|(30%)}} of the player's max HP.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Cleric
+######################################################################
+
+{{Frame|Heal}} {{TS|gold||35 [[Gold]]:}} {{TS|positive||Heal X HP.}}
+* X is equal to 25% of the player's Max HP, rounded down.
+
+{{Frame|Purify}} {{TS|gold||50}} {{Asc|15|(75)}} {{TS|gold||[[Gold]]:}} {{TS|positive||Remove a card from your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Ssssserpent
+######################################################################
+
+{{Frame|Agree}} {{TS|positive||Gain 175}} {{Asc|15|(150)}} {{TS|positive||Gold.}} {{TS|negative||Become Cursed -}} {{C|Doubt}}{{TS|negative||.}}
+<br><br>
+{{Frame|Disagree}} Nothing happens.
+<br><br>
+You are then given the option to {{Frame|Leave}}.
+
+
+######################################################################
+##### Wing_Statue
+######################################################################
+
+{{Frame|Pray}} {{TS|positive||Remove a card from your deck.}} {{TS|negative||Lose 7 HP.}}
+<br>
+<br>
+{{Frame|Destroy}} {{TS|positive||Receive 50 - 80 Gold.}}
+* Requires an {{QueryLink|Cards|type:Attack|Attack}} card in the player's deck that deals 10 or more damage '''in a single hit''' (e.g. {{C|Twin Strike}} does not count).
+* If the player's deck does satisfy the condition, this option is replaced with {{Frame|Locked}} Requires: Card with 10 or more damage.
+* See the [[#Notes|Notes]] section for more details on which cards satisfy this requirement.
+<br>
+{{Frame|Leave}} Nothing happens. 
+<br>
+
+
+######################################################################
+##### World_of_Goop
+######################################################################
+
+{{Frame|Gather Gold}} {{TS|positive||Gain 75 Gold.}} {{TS|negative||Lose 11 HP.}}
+<br><br>
+{{Frame|Leave It}} {{TS|negative||Lose X Gold.}}
+* X is a random number between 20 and 50 {{Asc|15|(35 and 75)}} Gold. X cannot be more Gold than the player currently has.
+
+
+######################################################################
+##### Ancient_Writing
+######################################################################
+
+{{Frame|Elegance}} {{TS|positive||Remove a card from your deck.}}
+<br>
+<br>
+{{Frame|Simplicity}} {{TS|positive||[[Upgrade]] all Strikes and Defends.}}
+* Only includes {{QueryLink|Cards|rarity:Basic|Basic}} cards.
+
+
+######################################################################
+##### Augmenter
+######################################################################
+
+{{Frame|Test J.A.X.}} {{TS|positive||Get JAXXED.}}
+* Adds {{C|J.A.X.}} to the player's deck.
+<br>
+{{Frame|Become Test Subject}} {{TS|positive||[[Transform]] 2 cards.}}
+* Read more on Transform rules [[Transform#Rules|here]].
+<br>
+{{Frame|Ingest Mutagens}} {{TS|positive|| Obtain a special relic.}} 
+* Rewards the player with {{R|Mutagenic Strength}}.
+
+
+######################################################################
+##### Council_of_Ghosts
+######################################################################
+
+{{Frame|Accept}} {{TS|positive||Receive 5}} {{Asc|15|(3)}} {{C|Apparition|Apparitions}}. {{TS|negative||Lose X Max HP.}}
+* X is equal to 50% of the player's Max HP, rounded up.
+
+{{Frame|Refuse}} Nothing happens.
+<br>
+<br>
+You are then given the option to {{Frame|Leave}}.
+
+
+######################################################################
+##### Cursed_Tome
+######################################################################
+
+{{Frame|Read}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 1 HP.}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 2 HP.}}
+<blockquote>
+{{Frame|Continue}} {{TS|negative||Lose 3 HP.}}
+<blockquote>
+{{Frame|Take}} {{TS|positive||Obtain the book.}} {{TS|negative||Lose 10}} {{asc|15|(15)}} {{TS|negative||HP.}}
+* The book may be {{R|Enchiridion}}, {{R|Nilry's Codex}}, or {{R|Necronomicon}}. The player does not know which book they will get until after they choose {{Frame|Take}} and lose their HP.
+<br>
+{{Frame|Stop}} {{TS|negative||Lose 3 HP.}}
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+{{Frame|Leave}} Nothing happens.
+
+=== Practical Options ===
+Because the player can choose to leave the event immediately and lose 0 HP instead of selecting {{Frame|Continue}} 3 times and then backing out with {{Frame|Stop}} while losing a total of 9 HP, there are really only 2 practical ways to navigate the event. The player can either commit to all the HP loss and obtain the book, or leave immediately to do nothing.
+
+For simplicity, the event's options can be thought of in this way instead:
+* {{Frame|Read}}, then all 3 {{Frame|Continue}}, and finally {{Frame|Take}} {{TS|positive||Obtain the book.}} {{TS|negative||Lose 16}} {{asc|15|(21)}} {{TS|negative||HP.}} 
+* {{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Designer_In-Spire
+######################################################################
+
+{{Frame|Adjustments}} {{TS|negative||Lose 40}} {{asc|15|(50)}} [[Gold]]{{TS|negative||.}} {{TS|positive||One of the following rewards appears.}}
+* {{TS|positive||[[Upgrade]] a card.}}
+* {{TS|positive||[[Upgrade]] two random cards.}}
+<br>
+{{Frame|Clean Up}} {{TS|negative||Lose 60}} {{asc|15|(75)}} [[Gold]]{{TS|negative||.}} {{TS|positive||One of the following rewards appears.}}
+* {{TS|positive||Remove a card.}}
+* {{TS|positive||[[Transform]] two cards.}}
+<br>
+{{Frame|Full Service}} {{TS|negative||Lose 90}} {{asc|15|(110)}} [[Gold]]{{TS|negative||.}}  {{TS|positive||Remove a card, then [[upgrade]] a random card.}}
+<br>
+<br>
+{{Frame|Punch}} {{TS|negative||Lose 3}} {{asc|15|(5)}} {{TS|negative||HP.}}
+
+
+######################################################################
+##### Forgotten_Altar
+######################################################################
+
+{{Frame|Offer: Golden Idol}} {{TS|positive||Obtain a special}} {{R|Bloody Idol|Relic}}{{TS|positive||.}} {{TS|negative||Lose}} {{R|Golden Idol}}{{TS|negative||.}}
+* If the player does not have {{R|Golden Idol}}, this option is replaced with {{Frame|Locked}} Requires: Golden Idol.
+
+{{Frame|Sacrifice}} {{TS|positive||Gain 5 Max HP.}} {{TS|negative||Lose X HP.}}
+* X is equal to 25% {{Asc|15|(35%)}} of the player's Max HP.
+
+{{Frame|Desecrate}} {{TS|negative||Become Cursed -}}{{C|Decay}}{{TS|negative||.}}
+* {{C|Decay}} - {{KW|Unplayable}}. At the end of your turn, take 2 damage.
+
+
+######################################################################
+##### Knowing_Skull
+######################################################################
+
+The following options are presented to the player until they decide to leave the event. X is equal to 10% of the player's Max HP (minimum of 6 HP) plus the number of times they have chosen that specific option ({{TS|negative||Lose 6 HP}}, then {{TS|negative||Lose 7 HP}}, then {{TS|negative||Lose 8 HP}}, etc.)
+<br>
+<br>
+{{Frame|A Pick Me Up?}} {{TS|positive||Get a [[Potion]].}} {{TS|negative||Lose X HP.}} 
+* A random [[Potion]] is immediately added to the player's left-most empty potion slot.
+* The player is able to select this option even if all their potion slots are full or if they possess {{R|Sozu}}. They still lose HP and this option's HP loss is still increased by 1 even though no potion is obtained.
+
+{{Frame|Riches?}} {{TS|positive||Gain 90 [[Gold]].}} {{TS|negative||Lose X HP.}}
+<br>
+<br>
+{{Frame|Success?}} {{TS|positive||Get a}} {{QueryLink|Cards|color:Colorless|Colorless card}}. {{TS|negative||Lose X HP.}}
+* A random {{QueryLink|Cards|rarity:Uncommon&color:Colorless|Uncommon Colorless card}} is added to the player's deck.
+
+{{Frame|How do I leave?}} {{TS|negative||Lose X HP.}}
+* This event repeats until this option is chosen.
+
+
+######################################################################
+##### Masked_Bandits
+######################################################################
+
+{{Frame|Pay}} {{TS|negative||Lose ALL}} of your {{TS|gold||Gold.}}
+<br>
+<br>
+{{Frame|Fight!}} 
+* Starts a combat against [[#Bandits|the three bandits]] ({{M|Pointy}}, {{M|Romeo}}, and {{M|Bear}}). Upon winning, obtain regular card rewards, 25 - 35 [[Gold]], and {{R|Red Mask}}.
+
+
+######################################################################
+##### N_loth
+######################################################################
+
+'''Note:''' "Relic A" and "Relic B" will be randomly chosen from the player's currently held [[Relics]].
+<br><br>
+{{Frame|Offer: Relic A}} {{TS|negative||Lose this relic.}} {{TS|positive||Obtain a special relic.}}
+
+{{Frame|Offer: Relic B}} {{TS|negative||Lose this relic.}} {{TS|positive||Obtain a special relic.}}
+* Rewards the player with {{R|N'loth's Gift}}.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Old_Beggar
+######################################################################
+
+{{Frame|Offer Gold}} {{TS|gold||75 [[Gold]]:}} {{TS|positive||Remove a card from your deck.}} 
+<br>
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Pleading_Vagrant
+######################################################################
+
+{{Frame|Offer Gold}} {{TS|gold||85 [[Gold]]:}} {{TS|positive||Obtain a [[Relic]].}}
+* If the player does not have enough [[Gold]], this option will be greyed out.
+
+{{Frame|Rob}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||Become Cursed -}} {{C|Shame}}{{TS|negative||.}}
+<br>
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Colosseum
+######################################################################
+
+{{Frame|Fight}}
+* The player enters a fight with a {{M|Blue Slaver}} and {{M|Red Slaver}}. This fight gives no rewards.
+<blockquote>
+After the fight ends, a choice has to be made: 
+
+{{Frame|COWARDICE}} Escape.
+<br>
+<br>
+{{Frame|VICTORY}} A powerful fight with many rewards.
+* The player enters a fight with {{M|Taskmaster}} and {{M|Gremlin Nob}}.
+* The rewards are 100 [[Gold]], 1 {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]], 1 {{QueryLink|Relics|rarity:Uncommon|Uncommon}} [[Relic]], a card reward, and sometimes a [[Potion]].
+</blockquote>
+
+
+######################################################################
+##### The_Joust
+######################################################################
+
+{{Frame|Murderer}} {{TS|gold||Bet 50 Gold}} - {{TS|positive||70%: win 100 Gold.}}
+
+{{Frame|Owner}} {{TS|gold||Bet 50 Gold}} - {{TS|positive||30%: win 250 Gold.}}
+
+There is no option to avoid betting.
+
+
+######################################################################
+##### The_Library
+######################################################################
+
+{{Frame|Read}} {{TS|positive||Choose 1 of 20 cards to add to your deck.}}
+<br>
+<br>
+{{Frame|Sleep}} {{TS|positive||Heal X HP.}}
+* X is equal to 33% {{Asc|15|(20%)}} of the player's Max HP.
+
+
+######################################################################
+##### The_Mausoleum
+######################################################################
+
+{{Frame|Open Coffin}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||50% {{Asc|15|(100%)}}: Become Cursed - {{C|Writhe}}}}
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### The_Nest
+######################################################################
+
+{{Frame|Smash and Grab}} {{TS|positive||Obtain 99 {{Asc|15|(50)}} Gold.}}
+<br>
+<br>
+{{Frame|Stay in Line}} {{TS|positive||Obtain {{C|Ritual Dagger}}.}} {{TS|negative||Lose 6 HP.}}
+
+
+######################################################################
+##### Vampires
+######################################################################
+
+{{Frame|Offer: Blood Vial}} {{TS|negative||Lose}} {{R|Blood Vial}}{{TS|negative||.}} <span class="positive-text"> Remove all</span> {{C|Strike (Ironclad)|Strikes}}{{TS|positive||.}} <span class="positive-text">Receive 5</span> {{C|Bite|Bites}}{{TS|positive||.}}
+* Only present if the player has {{R|Blood Vial}}.
+
+{{Frame|Accept}} <span class="positive-text">Remove all</span> {{C|Strike (Ironclad)|Strikes}}{{TS|positive||.}} <span class="positive-text">Receive 5</span> {{C|Bite|Bites}}{{TS|positive||.}} <span class="negative-text">Lose X Max HP.</span>
+* X is equal to 30% of the player's max HP.
+
+{{Frame|Refuse}} Nothing happens.
+
+You are then given the option to {{Frame|Leave}}.
+
+
+######################################################################
+##### Falling
+######################################################################
+
+All options will randomly choose a card in the player's deck of a particular type. The option's text will explicitly tell the player which card they would lose. If the player lacks a card of a particular type, then the option relating to that type will be locked (e.g. if the player has no {{QueryLink|Cards|type:Power|Powers}} for the {{Frame|Channel}} option, it is replaced with the option {{Frame|Locked}} Requires: Power Card).
+<br>
+<br>
+{{Frame|Land}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Skill|Skill}}''{{TS|negative||<i>)</i>}}
+* Cannot be a {{QueryLink|Cards|type:Skill|Skill}} targeted by {{R|Bottled Lightning}}.
+
+{{Frame|Channel}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Power|Power}}''{{TS|negative||<i>)</i>}}
+* Cannot be a {{QueryLink|Cards|type:Power|Power}} targeted by {{R|Bottled Tornado}}.
+
+{{Frame|Strike}} {{TS|negative||Lose <i>(a random</i>}} ''{{QueryLink|Cards|type:Attack|Attack}}''{{TS|negative||<i>)</i>}}
+* Cannot be an {{QueryLink|Cards|type:Attack|Attack}} targeted by {{R|Bottled Flame}}.
+
+If the player somehow manages to lack even a single eligible card (e.g. they have a very small deck containing only bottled cards), then the only option listed is a special {{Frame|Land}} option that has no description.
+
+
+######################################################################
+##### Mind_Bloom
+######################################################################
+
+{{Frame|I am War}} {{TS|negative||Fight a [[Bosses#Act 1 Bosses|Boss]] from Act 1.}} {{TS|positive||Obtain a {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]].}}
+* The boss is selected at random. It can be the same boss that the player actually fought in [[Act 1]], or one of the two that they did not encounter.
+* In addition to the Boss dropping a {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]], it also drops normal combat rewards and 50 {{Asc|15|(25)}} [[Gold]].
+<br>
+{{Frame|I am Awake}} {{TS|positive||[[Upgrade]] all cards.}} {{TS|negative||You can no longer heal.}}
+* Obtain {{R|Mark of the Bloom}}.
+<br>
+{{Frame|I am Rich}} {{TS|positive||Gain 999 [[Gold]].}} {{TS|negative||Cursed - 2 {{C|Normality}}.}}
+* This option only appears on floors 35 to 40.
+<br>
+{{Frame|I am Healthy}} {{TS|positive||Heal to full HP.}} {{TS|negative||Cursed - {{C|Doubt}}.}}
+* This option replaces {{Frame|I am Rich}} on floor 41 and above.
+
+
+######################################################################
+##### Mysterious_Sphere
+######################################################################
+
+{{Frame|Open Sphere}} {{TS|negative||Fight.}} {{TS|positive||Reward: }} {{QueryLink|Relics|rarity:Rare|Rare}} {{TS|positive||[[Relic]].}}
+* The player enters combat with the 2 {{M|Orb Walker|Orb Walkers}}. In addition to the {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]], the combat rewards also yield 45-55 [[Gold]], a normal card reward, and potentially a [[Potion]] just like a normal combat.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Secret_Portal
+######################################################################
+
+{{Frame|Enter the Portal}} IMMEDIATELY travel to [[Bosses#Act 3 Bosses|the boss]].
+* The player is put directly into combat with the [[Bosses#Act 3 Bosses|Act 3 boss]] at the end of the act.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Sensory_Stone
+######################################################################
+
+{{Frame|Recall}} {{TS|positive||Add 1 {{QueryLink|Cards|color:Colorless|Colorless}} card to your deck.}}
+
+{{Frame|Recall}} {{TS|positive||Add 2 {{QueryLink|Cards|color:Colorless|Colorless}} cards to your deck.}} {{TS|negative||Lose 5 HP.}}
+
+{{Frame|Recall}} {{TS|positive||Add 3 {{QueryLink|Cards|color:Colorless|Colorless}} cards to your deck.}} {{TS|negative||Lose 10 HP.}}
+
+
+######################################################################
+##### The_Moai_Head
+######################################################################
+
+<!-- Fix descriptions to be game-accurate. Use TS colors for positive and negative effects. Put any extra information in indented bullet points. -->
+{{Frame|Jump Inside}} {{TS|positive||Heal to full HP.}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 12.5% {{Asc|15|(18%)}} of the player's Max HP.
+
+{{Frame|Offer: {{R|Golden Idol}}}} {{TS|positive||Receive 333 [[Gold]].}} {{TS|negative||Lose {{R|Golden Idol}}.}}
+* If the player lacks {{R|Golden Idol}}, this option is replaced with {{Frame|Locked}} Requires: {{R|Golden Idol}}.
+
+{{Frame|Leave}} Nothing happens. 
+<br>
+<br>
+
+
+######################################################################
+##### Tomb_of_Lord_Red_Mask
+######################################################################
+
+=== If The Player Owns {{R|Red Mask}} ===
+{{Frame|Don the Red Mask}} {{TS|positive||Gain 222 [[Gold]].}}
+* The player gets to keep {{R|Red Mask}} afterwards. The [[Gold]] is purely a reward for owning the relic.
+
+{{Frame|Leave}} Nothing happens. 
+<br>
+<br>
+
+=== If The Player Does Not Own {{R|Red Mask}} ===
+{{Frame|Locked}} Requires: {{R|Red Mask}}
+<br>
+<br>
+{{Frame|Offer: X Gold}} {{TS|negative||Lose all [[Gold]].}} {{TS|positive||Obtain a Relic.}}
+* X is equal to all of the player's [[Gold]].
+* Rewards the player with {{R|Red Mask}}.
+
+{{Frame|Leave}} Nothing happens.
+
+
+######################################################################
+##### Winding_Halls
+######################################################################
+
+<!-- Fix descriptions to be game accurate. Use TS template for colors. For percentages, replace with X and then in an indented bullet below, explain what X is equal to. -->
+{{Frame|Embrace Madness}} {{TS|positive||Receive 2 {{C|Madness}}.}} {{TS|negative||Lose X HP.}}
+* X is equal to 12.5% {{Asc|15|(18%)}} of the player's Max HP.
+
+{{Frame|Focus}} {{TS|negative||Become Cursed - {{C|Writhe}}.}} {{TS|positive||Heal X HP.}}
+* X is equal to 25% {{Asc|15|(20%)}} of the player's Max HP.
+
+{{Frame|Retrace Your Steps}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 5% of the player's Max HP.
+
+
+######################################################################
+##### Neow
+######################################################################
+
+[NO OPTIONS SECTION]
+
+{{Sequel Disambiguation}}
+[[File:Neow.png|400px|center]]{{#setmainimage:Neow.png|quiet}}Neow is a large whale-like creature with light blue skin and 6 bright yellow eyes. Neow lies at the foot of the Spire and welcomes the player at the beginning of every run.
+
+Neow blesses you based on the success of your previous run, offering [[Gold]], [[Relics]], or [[Cards]], unless you did not reach the [[Boss]] of the [[Acts#Act 1: Exordium|Exordium]], in which case she only offers two options instead of the usual four. 
+
+== Shortlist (Two Blessings) Variant ==
+If you did not reach the [[Boss]] of the [[Acts#Act 1: Exordium|Exordium]] in your last run, the Blessings she will offer are always:
+
+* Max HP +8/6/7/7 {{Asc|14|+7/5/6/6}} ([[Ironclad]] / [[Silent]] / [[Defect]] / [[Watcher]])
+* {{R|Neow's Lament}}: Enemies in the next three combats will have one health.
+** If the map layout allows, you can use this to get a free shot at an [[Elite]] (colloqiually called a 'snipe').
+
+== Standard (Four Blessings) Variant ==
+If you did reach the first boss, Neow will offer you four blessings to choose from.
+
+=== First Blessing ===
+A card-related reward from the list below:
+
+* Remove a card.
+* [[Transform]] a card.
+* [[Upgrade]] a card.
+* Choose a card to obtain. (''Choose one of 3 random cards of your character.'')
+* Choose an {{QueryLink|Cards|rarity:Uncommon|Uncommon}} {{QueryLink|Cards|color:Colorless|Colorless Card}} to obtain.
+* Obtain a random {{QueryLink|Cards|rarity:Rare|Rare Card}}.
+
+=== Second Blessing ===
+A reward from the list below:
+
+* Max HP +8/6/7/7 {{Asc|14|+7/5/6/6}} ([[Ironclad]] / [[Silent]] / [[Defect]] / [[Watcher]]) <!-- To verify Asc info -->
+* {{R|Neow's Lament}}: Enemies in the next three combats will have one health.
+* Obtain a random {{QueryLink|Relics|rarity:Common|Common Relic}}.
+* Receive 100 [[Gold]].
+* Obtain 3 random [[Potions]].
+
+=== Third Blessing ===
+A composite of a disadvantage and a more powerful reward. It can be a combination of any disadvantage and reward below, with any exceptions noted.
+
+'''Disadvantages:'''
+* <span class=negative-text> Lose Max HP. </span> (-8/7/7/7) {{Asc|14|(-7/6/7/6)}} ([[Ironclad]] / [[Silent]] / [[Defect]] / [[Watcher]])
+* <span class=negative-text> Take X damage. </span>
+** X is equal to <code>(Current HP / 10, rounded down) * 3</code>.
+** The amount of damage is also affected by {{Asc|6|Ascension}} and {{Asc|14|Ascension}}.
+* <span class=negative-text> Obtain a {{QueryLink|Cards|type:Curse|Curse}}. </span>
+* 

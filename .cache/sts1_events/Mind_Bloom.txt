@@ -1,0 +1,89 @@
+{{Event Infobox
+| Name  = Mind Bloom
+| Image = Event-MindBloom.png
+}} {{Small Relic Infobox|Mark of the Bloom}} {{Small Card Infobox|Normality}} {{Small Card Infobox|Doubt}}
+{{E|Mind Bloom}} is an [[Event]] found exclusively in [[Act 3]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|I am War}} {{TS|negative||Fight a [[Bosses#Act 1 Bosses|Boss]] from Act 1.}} {{TS|positive||Obtain a {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]].}}
+* The boss is selected at random. It can be the same boss that the player actually fought in [[Act 1]], or one of the two that they did not encounter.
+* In addition to the Boss dropping a {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]], it also drops normal combat rewards and 50 {{Asc|15|(25)}} [[Gold]].
+<br>
+{{Frame|I am Awake}} {{TS|positive||[[Upgrade]] all cards.}} {{TS|negative||You can no longer heal.}}
+* Obtain {{R|Mark of the Bloom}}.
+<br>
+{{Frame|I am Rich}} {{TS|positive||Gain 999 [[Gold]].}} {{TS|negative||Cursed - 2 {{C|Normality}}.}}
+* This option only appears on floors 35 to 40.
+<br>
+{{Frame|I am Healthy}} {{TS|positive||Heal to full HP.}} {{TS|negative||Cursed - {{C|Doubt}}.}}
+* This option replaces {{Frame|I am Rich}} on floor 41 and above.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+While walking and traversing through the chaos of the Spire, your thoughts suddenly begin to feel very... {{TS|purple|up|real...}}<br>
+
+Imaginings of {{TS|red||monsters}} and {{TS|gold||riches}} begin to manifest themselves into reality.<br>
+The sensation is quickly fleeting. What do you do?
+</div><br><br>
+
+{{Frame|I am War}}
+<blockquote>
+(No dialogue; the player immediately enters combat with the random [[Bosses#Act 1 Bosses|Boss from Act 1]])
+</blockquote>
+
+{{Frame|I am Awake}}
+<blockquote><div style="font-style:italic">
+Everything makes sense now.<br>
+The lack of memories, the ascent, the {{TS|gold||Ancient One.}}<br>
+
+This is the way it always was.<br>
+This is the way it always will be.<br>
+All will be forgotten again soon...
+</div></blockquote>
+
+{{Frame|I am Rich}} or {{Frame|I am Healthy}}
+<blockquote><div style="font-style:italic">
+Can it really be this easy?
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* Because the healing prevention of {{Frame|I am Awake}} is implemented as the {{R|Mark of the Bloom}} relic, it can disqualify the player from the [[Achievements|''Who Needs Relics?'' achievement]].
+* The boss fight from {{Frame|I am War}} will trigger {{R|Pantograph}} and {{R|Slaver's Collar}} as if it were a normal end-of-Act boss fight.
+* {{R|Omamori}} can prevent one or both {{C|Normality}} curses from {{Frame|I am Rich}} if it has one or both uses remaining. This allows the player to receive 999 [[Gold]] with practically no downside, especially considering that {{E|Mind Bloom}} is often one of the last opportunities to encounter {{QueryLink|Cards|type:Curse|Curses}} in a run.
+
+== Trivia ==
+* The boss music that plays during the {{Frame|I am War}} fight is a slightly different version of the normal Act 1 Boss music (''The Guardian Emerges'') simply called ''Mind Bloom'' in the Slay the Spire Original Soundtrack.
+
+== Update History ==
+* '''Patch V1.1: The Dealer'''
+** Bottled Cards upgraded from Mind Bloom event have their description updated correctly.
+
+* '''Weekly Patch 50: The Final Act'''
+** Because new music was added into the game, it is now also available in our Official Soundtrack. Newly added tracks include: Mind Bloom
+
+* '''Weekly Patch 47: Metamorphosis'''
+** Mind Bloom event combat now correctly gives appropriate gold for the battle.
+
+* '''Weekly Patch 43: Discovery'''
+** Mind Bloom event now correctly shows curse previews for its event options.
+
+* '''Weekly Patch 42: Reboot'''
+** Adding special BGM when fighting a boss via Mind Bloom event.
+
+* '''Weekly Patch 36: Power Through'''
+** Fixed an incorrect interaction with Mark of the Bloom and the Moai Head event in Act 3.
+
+* '''Weekly Patch 35: Aggregate'''
+** Mind Bloom event's boss battle no longer counts as a boss for scoring or achievements.
+
+* '''Weekly Patch 29: TURBO'''
+** Mind Bloom no longer shows status/curse cards upgrading.
+** Mind Bloom upgrade now only shows up to 20 cards as it's CPU intensive.
+
+* '''Weekly Patch 28: The Ritual'''
+** New Act 3 event: Mind Bloom
+** New Relic: Mark of the Bloom
+
+{{EventNav}}
+[[Category:Events]]

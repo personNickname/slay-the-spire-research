@@ -1,0 +1,373 @@
+[
+  {
+    "id": "ambrosia",
+    "en": "Ambrosia",
+    "zh": "琼浆",
+    "rarity": "rare",
+    "effect": "进入神格姿态。",
+    "target": "自身"
+  },
+  {
+    "id": "ancient_potion",
+    "en": "Ancient Potion",
+    "zh": "远古药水",
+    "rarity": "uncommon",
+    "effect": "获得 1 层魔法守护。",
+    "target": "自身",
+    "notes": "升级（如药剂师事件）后：获得 2 层魔法守护。"
+  },
+  {
+    "id": "attack_potion",
+    "en": "Attack Potion",
+    "zh": "攻击药水",
+    "rarity": "common",
+    "effect": "从 3 张随机攻击牌中选择 1 张加入手牌，本回合其费用为 0。",
+    "target": null,
+    "notes": "升级后：改为加入两张该牌。"
+  },
+  {
+    "id": "blessing_of_the_forge",
+    "en": "Blessing of the Forge",
+    "zh": "锻造祝福",
+    "rarity": "common",
+    "effect": "本场战斗内升级手牌中的所有牌。",
+    "target": null
+  },
+  {
+    "id": "block_potion",
+    "en": "Block Potion",
+    "zh": "格挡药水",
+    "rarity": "common",
+    "effect": "获得 12 点格挡。",
+    "target": "自身",
+    "notes": "升级后：24 点格挡。"
+  },
+  {
+    "id": "blood_potion",
+    "en": "Blood Potion",
+    "zh": "血液药水",
+    "rarity": "common",
+    "effect": "回复相当于最大生命值 20% 的生命。",
+    "target": "自身",
+    "notes": "升级后：40%。"
+  },
+  {
+    "id": "bottled_miracle",
+    "en": "Bottled Miracle",
+    "zh": "瓶装奇迹",
+    "rarity": "common",
+    "effect": "将 2 张「奇迹」加入手牌。",
+    "target": "自身",
+    "notes": "升级后：4 张。"
+  },
+  {
+    "id": "colorless_potion",
+    "en": "Colorless Potion",
+    "zh": "无色药水",
+    "rarity": "common",
+    "effect": "从 3 张随机无色牌中选择 1 张加入手牌，本回合其费用为 0。",
+    "target": null,
+    "notes": "升级后：改为加入两张该牌。"
+  },
+  {
+    "id": "cultist_potion",
+    "en": "Cultist Potion",
+    "zh": "邪教徒药水",
+    "rarity": "rare",
+    "effect": "获得 1 层仪式。",
+    "target": "自身",
+    "notes": "升级后：2 层。"
+  },
+  {
+    "id": "cunning_potion",
+    "en": "Cunning Potion",
+    "zh": "诡诈药水",
+    "rarity": "uncommon",
+    "effect": "将 3 张「袖剑+」加入手牌。",
+    "target": "自身",
+    "notes": "升级后：6 张。"
+  },
+  {
+    "id": "dexterity_potion",
+    "en": "Dexterity Potion",
+    "zh": "敏捷药水",
+    "rarity": "common",
+    "effect": "获得 2 点敏捷。",
+    "target": "自身",
+    "notes": "升级后：4 点。"
+  },
+  {
+    "id": "distilled_chaos",
+    "en": "Distilled Chaos",
+    "zh": "混沌蒸馏液",
+    "rarity": "uncommon",
+    "effect": "打出抽牌堆顶的 3 张牌。",
+    "target": null,
+    "notes": "升级后：打出 6 张。"
+  },
+  {
+    "id": "duplication_potion",
+    "en": "Duplication Potion",
+    "zh": "复制药水",
+    "rarity": "uncommon",
+    "effect": "本回合内，你打出的下一张牌会被打出两次。",
+    "target": null,
+    "notes": "升级后：接下来打出的两张牌各被打出两次。"
+  },
+  {
+    "id": "elixir",
+    "en": "Elixir",
+    "zh": "炼金药剂",
+    "rarity": "uncommon",
+    "effect": "消耗手牌中任意数量的牌。",
+    "target": null
+  },
+  {
+    "id": "energy_potion",
+    "en": "Energy Potion",
+    "zh": "能量药水",
+    "rarity": "common",
+    "effect": "获得 2 点能量。",
+    "target": "自身",
+    "notes": "升级后：4 点。"
+  },
+  {
+    "id": "entropic_brew",
+    "en": "Entropic Brew",
+    "zh": "熵之酿造",
+    "rarity": "rare",
+    "effect": "将所有空的药水槽填满随机药水。",
+    "target": null
+  },
+  {
+    "id": "essence_of_darkness",
+    "en": "Essence of Darkness",
+    "zh": "暗影精华",
+    "rarity": "rare",
+    "effect": "每个空的球体槽位引导 1 个暗影球。",
+    "target": "自身",
+    "notes": "升级后：每槽位引导 2 个。"
+  },
+  {
+    "id": "essence_of_steel",
+    "en": "Essence of Steel",
+    "zh": "钢铁精华",
+    "rarity": "uncommon",
+    "effect": "获得 4 层板甲。",
+    "target": "自身",
+    "notes": "升级后：8 层。"
+  },
+  {
+    "id": "explosive_potion",
+    "en": "Explosive Potion",
+    "zh": "爆炸药水",
+    "rarity": "common",
+    "effect": "对所有敌人造成 10 点伤害。",
+    "target": "自身",
+    "notes": "升级后：20 点伤害。"
+  },
+  {
+    "id": "fairy_in_a_bottle",
+    "en": "Fairy in a Bottle",
+    "zh": "瓶中仙子",
+    "rarity": "rare",
+    "effect": "被动药水：当你即将死亡时，改为回复至最大生命值的 30%，并消耗此药水。",
+    "target": "自身",
+    "notes": "升级后：60%。无法主动使用。"
+  },
+  {
+    "id": "fear_potion",
+    "en": "Fear Potion",
+    "zh": "恐惧药水",
+    "rarity": "common",
+    "effect": "对目标敌人施加 3 层易伤。",
+    "target": "敌人",
+    "notes": "升级后：6 层。"
+  },
+  {
+    "id": "fire_potion",
+    "en": "Fire Potion",
+    "zh": "火焰药水",
+    "rarity": "common",
+    "effect": "对目标敌人造成 20 点伤害。",
+    "target": "敌人",
+    "notes": "升级后：40 点伤害。"
+  },
+  {
+    "id": "flex_potion",
+    "en": "Flex Potion",
+    "zh": "屈伸药水",
+    "rarity": "common",
+    "effect": "获得 5 点力量。回合结束时，失去 5 点力量。",
+    "target": "自身",
+    "notes": "升级后：10/10 点。"
+  },
+  {
+    "id": "focus_potion",
+    "en": "Focus Potion",
+    "zh": "专注药水",
+    "rarity": "common",
+    "effect": "获得 2 点集中。",
+    "target": "自身",
+    "notes": "升级后：4 点。"
+  },
+  {
+    "id": "fruit_juice",
+    "en": "Fruit Juice",
+    "zh": "果汁",
+    "rarity": "rare",
+    "effect": "最大生命值提高 5 点。",
+    "target": "自身",
+    "notes": "升级后：10 点。"
+  },
+  {
+    "id": "gamblers_brew",
+    "en": "Gambler's Brew",
+    "zh": "赌徒之酿",
+    "rarity": "uncommon",
+    "effect": "弃掉任意数量的牌，然后抽等量的牌。",
+    "target": null
+  },
+  {
+    "id": "ghost_in_a_jar",
+    "en": "Ghost in a Jar",
+    "zh": "罐中幽灵",
+    "rarity": "rare",
+    "effect": "获得 1 层虚无。",
+    "target": "自身",
+    "notes": "升级后：2 层。"
+  },
+  {
+    "id": "heart_of_iron",
+    "en": "Heart of Iron",
+    "zh": "钢铁之心",
+    "rarity": "rare",
+    "effect": "获得 6 层金属化。",
+    "target": "自身",
+    "notes": "升级后：12 层。"
+  },
+  {
+    "id": "liquid_bronze",
+    "en": "Liquid Bronze",
+    "zh": "液态青铜",
+    "rarity": "uncommon",
+    "effect": "获得 3 层荆棘。",
+    "target": "自身",
+    "notes": "升级后：6 层。"
+  },
+  {
+    "id": "liquid_memories",
+    "en": "Liquid Memories",
+    "zh": "记忆之液",
+    "rarity": "uncommon",
+    "effect": "从弃牌堆中选择 1 张牌返回手牌，本回合其费用为 0。",
+    "target": null,
+    "notes": "升级后：可选择 2 张牌。"
+  },
+  {
+    "id": "poison_potion",
+    "en": "Poison Potion",
+    "zh": "剧毒药水",
+    "rarity": "common",
+    "effect": "对目标敌人施加 6 层中毒。",
+    "target": "敌人",
+    "notes": "升级后：12 层。"
+  },
+  {
+    "id": "potion_of_capacity",
+    "en": "Potion of Capacity",
+    "zh": "容量药水",
+    "rarity": "uncommon",
+    "effect": "获得 2 个球体槽位。",
+    "target": "自身",
+    "notes": "升级后：4 个。"
+  },
+  {
+    "id": "power_potion",
+    "en": "Power Potion",
+    "zh": "能力药水",
+    "rarity": "common",
+    "effect": "从 3 张随机能力牌中选择 1 张加入手牌，本回合其费用为 0。",
+    "target": null,
+    "notes": "升级后：改为加入两张该牌。"
+  },
+  {
+    "id": "regen_potion",
+    "en": "Regen Potion",
+    "zh": "再生药水",
+    "rarity": "uncommon",
+    "effect": "获得 5 层再生。",
+    "target": "自身",
+    "notes": "升级后：10 层。"
+  },
+  {
+    "id": "skill_potion",
+    "en": "Skill Potion",
+    "zh": "技能药水",
+    "rarity": "common",
+    "effect": "从 3 张随机技能牌中选择 1 张加入手牌，本回合其费用为 0。",
+    "target": null,
+    "notes": "升级后：改为加入两张该牌。"
+  },
+  {
+    "id": "smoke_bomb",
+    "en": "Smoke Bomb",
+    "zh": "烟雾弹",
+    "rarity": "rare",
+    "effect": "逃离一场非首领战斗，不获得任何奖励。",
+    "target": null
+  },
+  {
+    "id": "snecko_oil",
+    "en": "Snecko Oil",
+    "zh": "蛇怪油",
+    "rarity": "rare",
+    "effect": "抽 5 张牌，随机化手牌中所有牌的费用。",
+    "target": "自身",
+    "notes": "升级后：抽 10 张牌。"
+  },
+  {
+    "id": "speed_potion",
+    "en": "Speed Potion",
+    "zh": "迅捷药水",
+    "rarity": "common",
+    "effect": "获得 5 点敏捷。回合结束时，失去 5 点敏捷。",
+    "target": "自身",
+    "notes": "升级后：10/10 点。"
+  },
+  {
+    "id": "stance_potion",
+    "en": "Stance Potion",
+    "zh": "姿态药水",
+    "rarity": "uncommon",
+    "effect": "进入平静或怒火姿态（二选一）。",
+    "target": "自身"
+  },
+  {
+    "id": "strength_potion",
+    "en": "Strength Potion",
+    "zh": "力量药水",
+    "rarity": "common",
+    "effect": "获得 2 点力量。",
+    "target": "自身",
+    "notes": "升级后：4 点。"
+  },
+  {
+    "id": "swift_potion",
+    "en": "Swift Potion",
+    "zh": "疾行药水",
+    "rarity": "common",
+    "effect": "抽 3 张牌。",
+    "target": "自身",
+    "notes": "升级后：抽 6 张牌。"
+  },
+  {
+    "id": "weak_potion",
+    "en": "Weak Potion",
+    "zh": "虚弱药水",
+    "rarity": "common",
+    "effect": "对目标敌人施加 3 层虚弱。",
+    "target": "敌人",
+    "notes": "升级后：6 层。"
+  }
+]

@@ -1,0 +1,82 @@
+{{Ambox
+| color   = brown
+| icon    = Necronomicon.png
+| message = ''This is information about the Event called '''Golden Idol''' in Slay the Spire. For the Golden Shrine event, see [[Golden Shrine]]. For the relic of the same name, see [[Golden Idol (Relic)]].''
+}}
+{{Event Infobox
+| Name  = Golden Idol
+| Image = Event-GoldenIdol.png
+}} {{Small Relic Infobox|Golden Idol}} {{Small Card Infobox|Injury}}
+{{E|Golden Idol}} is an [[Event]] found exclusively in [[Act 1]].  It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Take}} {{TS|positive||Obtain}} {{R|Golden Idol}}{{TS|positive||.}} {{TS|negative||Trigger a trap.}}
+<blockquote>
+{{Frame|Outrun}} {{TS|negative||Become Cursed -}} {{C|Injury}}{{TS|negative||.}}
+
+{{Frame|Smash}} {{TS|negative||Take X Damage.}}
+* X is equal to 25% {{Asc|15|(35%)}} of the player's Max HP.
+
+{{Frame|Hide}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 8% {{Asc|15|(10%)}} of the player's Max HP.
+</blockquote>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You come across an inconspicuous pedestal with a {{TS|gold||shining gold idol}} sitting peacefully atop. It looks incredibly valuable.<br>
+<br>
+You sure don't see any traps nearby.
+</div><br><br>
+
+{{Frame|Take}}
+<blockquote><div style="font-style:italic">
+As you grab the Idol and stow it away, a giant boulder smashes through the ceiling into the ground next to you.
+<br>
+You realize that the floor is slanted downwards as the boulder starts to roll towards you.
+</div><br><br>
+
+{{Frame|Outrun}}
+<blockquote><div style="font-style:italic">
+{{TS||shake|RUUUUUUUUUUN!}}
+<br>
+You barely leap into a side passageway as the boulder rushes by.
+<br>
+Unfortunately it feels like you sprained something however.
+</div></blockquote>
+
+{{Frame|Smash}}
+<blockquote><div style="font-style:italic">
+You throw yourself at the boulder with everything you have. When the dust clears, you can make a safe way out.
+</div></blockquote>
+
+{{Frame|Hide}}
+<blockquote><div style="font-style:italic">
+{{TS||shake|SQUISH!}}
+<br>
+The boulder flattens you a little as it passes by, but otherwise you can get out of here.
+</div></blockquote></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+If there was ever an obvious trap, this would be it.
+<br>
+You decide not to interfere with objects placed upon pedestals.
+</div></blockquote></blockquote>
+
+== Notes ==
+* {{E|Forgotten Altar}} will allow {{R|Golden Idol}} to be exchanged for {{R|Bloody Idol}}.
+* {{E|The Moai Head}} will allow {{R|Golden Idol}} to be exchanged for 333 [[Gold]].
+
+== Trivia ==
+* The Idol's appearance and the boulder trap are both references to ''[https://en.wikipedia.org/wiki/Raiders_of_the_Lost_Ark Raiders of the Lost Ark]'', an ''Indiana Jones'' movie.
+
+== Update History ==
+* '''Weekly Patch 40: Forethought'''
+** Events: Falling, Secret Portal, Knowing Skull, Golden Idol, and Scrap Ooze receive ambient BGM.
+
+* '''Weekly Patch 7: Setting Up All the Things'''
+** Golden Idol Event options are slightly harsher. 20% -> 25% damage and 5% -> 8% Max HP loss.
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,36 @@
+{{Event Infobox
+| Name  = Transmogrifier
+| Image = Event-Transmogrifier.png
+}}
+{{E|Transmogrifier}} is a shrine [[Event]] encountered in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Pray}} {{KW|Transform}} {{TS|positive||a card.}}
+* Read more on Transform rules [[Transform#Rules|here]].
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Before you lies an elaborate shrine to a forgotten spirit.
+</div>
+
+{{Frame|Pray}}
+<blockquote><div style="font-style:italic">
+As the power of the shrine flows through you, your mind feels altered.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You ignore the shrine.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* Internally called <code>Transmorgrifier</code> where it's misspelled with an extra '''r''' before the '''g'''.
+
+
+{{EventNav}}
+[[Category:Events]]

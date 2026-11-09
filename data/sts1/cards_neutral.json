@@ -1,0 +1,995 @@
+{
+  "colorless": [
+    {
+      "id": "bite",
+      "en": "Bite",
+      "zh": "撕咬",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "造成 7 点伤害。回复 2 点生命。",
+      "effect_up": "造成 8 点伤害。回复 3 点生命。",
+      "keywords": [],
+      "notes": "由事件「吸血鬼 Vampires」选择咬人获得，加入卡组"
+    },
+    {
+      "id": "dramatic_entrance",
+      "en": "Dramatic Entrance",
+      "zh": "登场演出",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "固有。对所有敌人造成 8 点伤害。消耗。",
+      "effect_up": "固有。对所有敌人造成 12 点伤害。消耗。",
+      "keywords": [
+        "innate",
+        "exhaust"
+      ]
+    },
+    {
+      "id": "expunger",
+      "en": "Expunger",
+      "zh": "消解者",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "造成 9 点伤害 X 次。",
+      "effect_up": "造成 15 点伤害 X 次。",
+      "keywords": [],
+      "notes": "由 Defect 卡牌「念力刃 Conjure Blade」洗入抽牌堆，X 为其消耗的能量；不可主动获得"
+    },
+    {
+      "id": "flash_of_steel",
+      "en": "Flash of Steel",
+      "zh": "钢铁闪光",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "造成 3 点伤害。抽 1 张牌。",
+      "effect_up": "造成 6 点伤害。抽 1 张牌。",
+      "keywords": []
+    },
+    {
+      "id": "hand_of_greed",
+      "en": "Hand of Greed",
+      "zh": "贪婪之手",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "造成 20 点伤害。若击杀敌人，获得 20 金币。",
+      "effect_up": "造成 25 点伤害。若击杀敌人，获得 25 金币。",
+      "keywords": []
+    },
+    {
+      "id": "mind_blast",
+      "en": "Mind Blast",
+      "zh": "意念冲击",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "uncommon",
+      "cost": 2,
+      "effect": "固有。造成等同于抽牌堆中卡牌数量的伤害。",
+      "effect_up": "固有。造成等同于抽牌堆中卡牌数量的伤害。",
+      "keywords": [
+        "innate"
+      ],
+      "notes": "升级仅将费用降为 1，伤害数值不变"
+    },
+    {
+      "id": "ritual_dagger",
+      "en": "Ritual Dagger",
+      "zh": "仪式匕首",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "造成 15 点伤害。若击杀敌人，本局游戏内该卡的伤害永久提高 3 点。消耗。",
+      "effect_up": "造成 15 点伤害。若击杀敌人，本局游戏内该卡的伤害永久提高 5 点。消耗。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "仅能通过事件「巢穴 The Nest」获得的事件卡"
+    },
+    {
+      "id": "shiv",
+      "en": "Shiv",
+      "zh": "小刀",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 0,
+      "effect": "造成 4 点伤害。消耗。",
+      "effect_up": "造成 6 点伤害。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "smite",
+      "en": "Smite",
+      "zh": "天罚",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "保留。造成 12 点伤害。消耗。",
+      "effect_up": "保留。造成 16 点伤害。消耗。",
+      "keywords": [
+        "retain",
+        "exhaust"
+      ],
+      "notes": "由 Watcher 卡牌「斩切现实 Carve Reality」生成"
+    },
+    {
+      "id": "swift_strike",
+      "en": "Swift Strike",
+      "zh": "迅捷打击",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "造成 7 点伤害。",
+      "effect_up": "造成 10 点伤害。",
+      "keywords": []
+    },
+    {
+      "id": "through_violence",
+      "en": "Through Violence",
+      "zh": "直取要害",
+      "character": "colorless",
+      "type": "attack",
+      "rarity": "special",
+      "cost": 0,
+      "effect": "保留。造成 20 点伤害。消耗。",
+      "effect_up": "保留。造成 30 点伤害。消耗。",
+      "keywords": [
+        "retain",
+        "exhaust"
+      ],
+      "notes": "由 Watcher 卡牌「触及天庭 Reach Heaven」生成"
+    },
+    {
+      "id": "become_almighty",
+      "en": "Become Almighty",
+      "zh": "成为全能",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "special",
+      "cost": null,
+      "effect": "获得 3 点力量。",
+      "effect_up": "获得 4 点力量。",
+      "keywords": [],
+      "notes": "Watcher 卡牌「祈愿 Wish」三选一的选项卡（wiki 记录费用 -2，即不可直接打出）"
+    },
+    {
+      "id": "live_forever",
+      "en": "Live Forever",
+      "zh": "永生",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "special",
+      "cost": null,
+      "effect": "获得 6 层多层护甲。",
+      "effect_up": "获得 8 层多层护甲。",
+      "keywords": [],
+      "notes": "Watcher 卡牌「祈愿 Wish」三选一的选项卡"
+    },
+    {
+      "id": "magnetism",
+      "en": "Magnetism",
+      "zh": "磁力",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "回合开始时，将一张随机无色卡牌加入手牌。",
+      "effect_up": "回合开始时，将一张随机无色卡牌加入手牌。",
+      "keywords": [],
+      "notes": "升级仅将费用降为 1"
+    },
+    {
+      "id": "mayhem",
+      "en": "Mayhem",
+      "zh": "混乱",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "回合开始时，自动打出抽牌堆顶的卡牌。",
+      "effect_up": "回合开始时，自动打出抽牌堆顶的卡牌。",
+      "keywords": [],
+      "notes": "升级仅将费用降为 1"
+    },
+    {
+      "id": "omega",
+      "en": "Omega",
+      "zh": "欧米伽",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "special",
+      "cost": 3,
+      "effect": "回合结束时，对所有敌人造成 50 点伤害。",
+      "effect_up": "回合结束时，对所有敌人造成 60 点伤害。",
+      "keywords": [],
+      "notes": "由「贝塔 Beta」生成，不可主动获得"
+    },
+    {
+      "id": "panache",
+      "en": "Panache",
+      "zh": "潇洒",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "单回合内每打出 5 张牌，对所有敌人造成 10 点伤害。",
+      "effect_up": "单回合内每打出 5 张牌，对所有敌人造成 14 点伤害。",
+      "keywords": []
+    },
+    {
+      "id": "sadistic_nature",
+      "en": "Sadistic Nature",
+      "zh": "施虐天性",
+      "character": "colorless",
+      "type": "power",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "每当你对敌人施加负面状态（debuff），该敌人受到 5 点伤害。",
+      "effect_up": "每当你对敌人施加负面状态（debuff），该敌人受到 7 点伤害。",
+      "keywords": []
+    },
+    {
+      "id": "apparition",
+      "en": "Apparition",
+      "zh": "幻影",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "虚无。获得 1 层无形。消耗。",
+      "effect_up": "获得 1 层无形。消耗。",
+      "keywords": [
+        "ethereal",
+        "exhaust"
+      ],
+      "notes": "由事件「亡灵议会 Council of Ghosts」获得，加入卡组；升级后移除虚无"
+    },
+    {
+      "id": "apotheosis",
+      "en": "Apotheosis",
+      "zh": "神化",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "升级你卡组中所有的卡牌，持续到战斗结束。消耗。",
+      "effect_up": "升级你卡组中所有的卡牌，持续到战斗结束。消耗。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级仅将费用降为 1"
+    },
+    {
+      "id": "bandage_up",
+      "en": "Bandage Up",
+      "zh": "包扎",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "回复 4 点生命。消耗。",
+      "effect_up": "回复 6 点生命。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "beta",
+      "en": "Beta",
+      "zh": "贝塔",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 2,
+      "effect": "将一张「欧米伽 Omega」洗入抽牌堆。消耗。",
+      "effect_up": "将一张「欧米伽 Omega」洗入抽牌堆。消耗。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "由 Watcher 卡牌「阿尔法 Alpha」生成；升级仅将费用降为 1"
+    },
+    {
+      "id": "blind",
+      "en": "Blind",
+      "zh": "致盲",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "对一名敌人施加 2 层虚弱。",
+      "effect_up": "对所有敌人施加 2 层虚弱。",
+      "keywords": []
+    },
+    {
+      "id": "chrysalis",
+      "en": "Chrysalis",
+      "zh": "蛹",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "将 3 张随机技能牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+      "effect_up": "将 5 张随机技能牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "dark_shackles",
+      "en": "Dark Shackles",
+      "zh": "黑暗镣铐",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "一名敌人本回合失去 9 点力量。消耗。",
+      "effect_up": "一名敌人本回合失去 15 点力量。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "deep_breath",
+      "en": "Deep Breath",
+      "zh": "深呼吸",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "将弃牌堆洗回抽牌堆。抽 1 张牌。",
+      "effect_up": "将弃牌堆洗回抽牌堆。抽 2 张牌。",
+      "keywords": []
+    },
+    {
+      "id": "discovery",
+      "en": "Discovery",
+      "zh": "发现",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 1,
+      "effect": "从 3 张随机卡牌中选择 1 张加入手牌。本回合它的费用为 0。消耗。",
+      "effect_up": "从 3 张随机卡牌中选择 1 张加入手牌。本回合它的费用为 0。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级后费用降为 0 且移除消耗"
+    },
+    {
+      "id": "enlightenment",
+      "en": "Enlightenment",
+      "zh": "启迪",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "本回合手牌中所有卡牌费用降为 1。",
+      "effect_up": "手牌中所有卡牌费用降为 1，持续到战斗结束。",
+      "keywords": []
+    },
+    {
+      "id": "fame_and_fortune",
+      "en": "Fame and Fortune",
+      "zh": "名利双收",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": null,
+      "effect": "获得 25 金币。",
+      "effect_up": "获得 30 金币。",
+      "keywords": [],
+      "notes": "Watcher 卡牌「祈愿 Wish」三选一的选项卡"
+    },
+    {
+      "id": "finesse",
+      "en": "Finesse",
+      "zh": "技巧",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "获得 2 点格挡。抽 1 张牌。",
+      "effect_up": "获得 4 点格挡。抽 1 张牌。",
+      "keywords": []
+    },
+    {
+      "id": "forethought",
+      "en": "Forethought",
+      "zh": "深谋远虑",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "将手牌中的一张牌置于抽牌堆底。它在被打出前费用为 0。",
+      "effect_up": "将手牌中任意数量的牌置于抽牌堆底。它们在被打出前费用为 0。",
+      "keywords": []
+    },
+    {
+      "id": "good_instincts",
+      "en": "Good Instincts",
+      "zh": "直觉",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "获得 6 点格挡。",
+      "effect_up": "获得 9 点格挡。",
+      "keywords": []
+    },
+    {
+      "id": "impatience",
+      "en": "Impatience",
+      "zh": "急躁",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "若手牌中没有攻击牌，抽 2 张牌。",
+      "effect_up": "若手牌中没有攻击牌，抽 3 张牌。",
+      "keywords": []
+    },
+    {
+      "id": "insight",
+      "en": "Insight",
+      "zh": "洞见",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 0,
+      "effect": "保留。抽 2 张牌。消耗。",
+      "effect_up": "保留。抽 3 张牌。消耗。",
+      "keywords": [
+        "retain",
+        "exhaust"
+      ],
+      "notes": "由 Watcher 卡牌「评估 Evaluate」「祈祷 Pray」「修行 Study」在战斗中生成"
+    },
+    {
+      "id": "jax",
+      "en": "J.A.X.",
+      "zh": "J.A.X.",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 0,
+      "effect": "失去 3 点生命。获得 2 点力量。",
+      "effect_up": "失去 3 点生命。获得 3 点力量。",
+      "keywords": [],
+      "notes": "仅能通过事件「强化人 Augmenter」选择「测试 J.A.X.」获得，加入卡组"
+    },
+    {
+      "id": "jack_of_all_trades",
+      "en": "Jack of All Trades",
+      "zh": "万金油",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "将 1 张随机无色卡牌加入手牌。消耗。",
+      "effect_up": "将 2 张随机无色卡牌加入手牌。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "madness",
+      "en": "Madness",
+      "zh": "疯狂",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 1,
+      "effect": "使手牌中一张随机卡牌的费用降为 0，持续到战斗结束。消耗。",
+      "effect_up": "使手牌中一张随机卡牌的费用降为 0，持续到战斗结束。消耗。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级仅将费用降为 0"
+    },
+    {
+      "id": "master_of_strategy",
+      "en": "Master of Strategy",
+      "zh": "战略大师",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "抽 3 张牌。消耗。",
+      "effect_up": "抽 4 张牌。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "metamorphosis",
+      "en": "Metamorphosis",
+      "zh": "变形",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "将 3 张随机攻击牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+      "effect_up": "将 5 张随机攻击牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "miracle",
+      "en": "Miracle",
+      "zh": "奇迹",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 0,
+      "effect": "保留。获得 1 点能量。消耗。",
+      "effect_up": "保留。获得 2 点能量。消耗。",
+      "keywords": [
+        "retain",
+        "exhaust"
+      ],
+      "notes": "Watcher 的祈祷体系卡：进入神格 Divinity 姿态时获得，也可由卡牌「机械降神 Deus Ex Machina」生成"
+    },
+    {
+      "id": "panic_button",
+      "en": "Panic Button",
+      "zh": "紧急按钮",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "获得 30 点格挡。之后 2 回合内无法通过卡牌获得格挡。消耗。",
+      "effect_up": "获得 40 点格挡。之后 2 回合内无法通过卡牌获得格挡。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "panacea",
+      "en": "Panacea",
+      "zh": "万灵药",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "获得 1 层守护（Artifact）。消耗。",
+      "effect_up": "获得 2 层守护（Artifact）。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "purity",
+      "en": "Purity",
+      "zh": "净化",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "消耗手牌中最多 3 张牌。消耗。",
+      "effect_up": "消耗手牌中最多 5 张牌。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "secret_technique",
+      "en": "Secret Technique",
+      "zh": "秘技",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "从抽牌堆中选择一张技能牌加入手牌。消耗。",
+      "effect_up": "从抽牌堆中选择一张技能牌加入手牌。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级后移除消耗"
+    },
+    {
+      "id": "secret_weapon",
+      "en": "Secret Weapon",
+      "zh": "秘密武器",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "从抽牌堆中选择一张攻击牌加入手牌。消耗。",
+      "effect_up": "从抽牌堆中选择一张攻击牌加入手牌。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级后移除消耗"
+    },
+    {
+      "id": "safety",
+      "en": "Safety",
+      "zh": "安全",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "保留。获得 12 点格挡。消耗。",
+      "effect_up": "保留。获得 16 点格挡。消耗。",
+      "keywords": [
+        "retain",
+        "exhaust"
+      ],
+      "notes": "由 Watcher 卡牌「欺骗现实 Deceive Reality」生成"
+    },
+    {
+      "id": "the_bomb",
+      "en": "The Bomb",
+      "zh": "炸弹",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 2,
+      "effect": "3 回合后，对所有敌人造成 40 点伤害。",
+      "effect_up": "3 回合后，对所有敌人造成 50 点伤害。",
+      "keywords": []
+    },
+    {
+      "id": "thinking_ahead",
+      "en": "Thinking Ahead",
+      "zh": "未雨绸缪",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "抽 2 张牌。将手牌中的一张牌置于抽牌堆顶。消耗。",
+      "effect_up": "抽 2 张牌。将手牌中的一张牌置于抽牌堆顶。",
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "升级后移除消耗"
+    },
+    {
+      "id": "transmutation",
+      "en": "Transmutation",
+      "zh": "转化",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": "X",
+      "effect": "将 X 张随机无色卡牌加入手牌。它们本回合费用为 0。消耗。",
+      "effect_up": "将 X 张随机的已升级无色卡牌加入手牌。它们本回合费用为 0。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    },
+    {
+      "id": "trip",
+      "en": "Trip",
+      "zh": "绊倒",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "uncommon",
+      "cost": 0,
+      "effect": "对一名敌人施加 2 层易伤。",
+      "effect_up": "对所有敌人施加 2 层易伤。",
+      "keywords": []
+    },
+    {
+      "id": "violence",
+      "en": "Violence",
+      "zh": "暴力",
+      "character": "colorless",
+      "type": "skill",
+      "rarity": "rare",
+      "cost": 0,
+      "effect": "将抽牌堆中 3 张随机攻击牌加入手牌。消耗。",
+      "effect_up": "将抽牌堆中 4 张随机攻击牌加入手牌。消耗。",
+      "keywords": [
+        "exhaust"
+      ]
+    }
+  ],
+  "curses": [
+    {
+      "id": "ascenders_bane",
+      "en": "Ascender's Bane",
+      "zh": "登塔者之灾",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。虚无。无法从卡组中移除。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable",
+        "ethereal"
+      ],
+      "notes": "进阶 10 起每局开始自动加入卡组"
+    },
+    {
+      "id": "clumsy",
+      "en": "Clumsy",
+      "zh": "笨拙",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。虚无。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable",
+        "ethereal"
+      ],
+      "notes": "来源：随机诅咒（Neow 祝福、诅咒钥匙 Cursed Key、Match and Keep、变身诅咒等）"
+    },
+    {
+      "id": "curse_of_the_bell",
+      "en": "Curse of the Bell",
+      "zh": "钟之诅咒",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。无法从卡组中移除。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "拾取 Boss 遗物「召唤铃铛 Calling Bell」时加入卡组"
+    },
+    {
+      "id": "decay",
+      "en": "Decay",
+      "zh": "衰变",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。回合结束时，受到 2 点伤害。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「遗忘祭坛 Forgotten Altar」「命运之轮 Wheel of Change」"
+    },
+    {
+      "id": "doubt",
+      "en": "Doubt",
+      "zh": "疑虑",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。回合结束时，获得 1 层虚弱。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「巨蛇 The Ssssserpent」「心灵绽放 Mind Bloom」（选「我很健康」）"
+    },
+    {
+      "id": "injury",
+      "en": "Injury",
+      "zh": "损伤",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「黄金神像 Golden Idol」（拿取后逃跑）"
+    },
+    {
+      "id": "necronomicurse",
+      "en": "Necronomicurse",
+      "zh": "死灵诅咒",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。你无法摆脱这个诅咒（从手牌中消失后立刻在手牌中重新出现）。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "拾取 Boss 遗物「死灵之书 Necronomicon」时加入卡组，无法移除"
+    },
+    {
+      "id": "normality",
+      "en": "Normality",
+      "zh": "正常",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。在手牌中时，本回合你无法打出超过 3 张牌。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「心灵绽放 Mind Bloom」（选「我很有钱」）"
+    },
+    {
+      "id": "pain",
+      "en": "Pain",
+      "zh": "痛苦",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。在手牌中时，每打出一张其他牌就失去 1 点生命。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「不祥熔炉 Ominous Forge」（选「翻找」）"
+    },
+    {
+      "id": "parasite",
+      "en": "Parasite",
+      "zh": "寄生虫",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。若该卡被变形或从卡组中移除，失去 3 点最大生命。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「七彩迷幻蘑菇 Hypnotizing Colored Mushrooms」及「翻滚血肉 Writhing Mass」战斗"
+    },
+    {
+      "id": "pride",
+      "en": "Pride",
+      "zh": "傲慢",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "固有。回合结束时，将这张牌的一张复制置于抽牌堆顶。消耗。",
+      "effect_up": null,
+      "keywords": [
+        "innate",
+        "exhaust"
+      ],
+      "notes": "可打出的诅咒（打出时无直接效果）；无尽模式专属，由遗物「怪诞战利品 Grotesque Trophy」加入 3 张到卡组"
+    },
+    {
+      "id": "regret",
+      "en": "Regret",
+      "zh": "懊悔",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。回合结束时，失去等同于手牌数量的生命。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「大鱼 Big Fish」（宝箱）、「黄金神殿 Golden Shrine」（亵渎）"
+    },
+    {
+      "id": "shame",
+      "en": "Shame",
+      "zh": "羞耻",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。回合结束时，获得 1 层脆弱。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "来源：随机诅咒；事件「乞求的流浪者 Pleading Vagrant」（抢劫）"
+    },
+    {
+      "id": "writhe",
+      "en": "Writhe",
+      "zh": "挣扎",
+      "character": "curse",
+      "type": "curse",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。固有。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable",
+        "innate"
+      ],
+      "notes": "来源：随机诅咒；事件「陵墓 The Mausoleum」（开棺）、「蜿蜒回廊 Winding Halls」"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "burn",
+      "en": "Burn",
+      "zh": "灼烧",
+      "character": "status",
+      "type": "status",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。回合结束时，受到 2 点伤害。",
+      "effect_up": "不可打出。回合结束时，受到 4 点伤害。",
+      "keywords": [
+        "unplayable"
+      ],
+      "notes": "wiki 标注存在升级版 Burn+（回合结束受到 4 点伤害）"
+    },
+    {
+      "id": "dazed",
+      "en": "Dazed",
+      "zh": "眩晕",
+      "character": "status",
+      "type": "status",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。虚无。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable",
+        "ethereal"
+      ]
+    },
+    {
+      "id": "slimed",
+      "en": "Slimed",
+      "zh": "黏液",
+      "character": "status",
+      "type": "status",
+      "rarity": "special",
+      "cost": 1,
+      "effect": "消耗。",
+      "effect_up": null,
+      "keywords": [
+        "exhaust"
+      ],
+      "notes": "可打出（打出即消耗自身），本身无其他效果"
+    },
+    {
+      "id": "void",
+      "en": "Void",
+      "zh": "虚无",
+      "character": "status",
+      "type": "status",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。虚无。每当抽到这张牌时，失去 1 点能量。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable",
+        "ethereal"
+      ]
+    },
+    {
+      "id": "wound",
+      "en": "Wound",
+      "zh": "伤口",
+      "character": "status",
+      "type": "status",
+      "rarity": "special",
+      "cost": null,
+      "effect": "不可打出。",
+      "effect_up": null,
+      "keywords": [
+        "unplayable"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "name": "涅奥 (Neow)",
+    "name_en": "Neow",
+    "description": "塔底的巨鲸状生物，每次开局（单局开始）给予玩家祝福。上一局未到达第一层(Exordium)首领的玩家只会得到 2 个祝福选项；到达过则得到标准的 4 选 1 祝福。",
+    "generation_rules": {
+      "shortlist_two_blessings": "上一局未击败第一层首领时，涅奥固定提供以下 2 个祝福二选一（无随机）。",
+      "standard_four_blessings": "上一局击败过第一层首领时，涅奥按四个槽位各随机出一个祝福组成 4 选 1：第 1 祝福=卡牌相关（从 6 个卡牌奖励中随机）；第 2 祝福=常规奖励（从 5 个奖励中随机）；第 3 祝福=1 个负面代价 + 1 个强力正面奖励的组合（负面 4 选 1 × 正面 6 选 1，排除互斥组合）；第 4 祝福=固定为起始遗物换随机首领(Boss)遗物。"
+    },
+    "ascension_note": "进阶(Ascension) 14+ 会削弱多个祝福数值；'受到伤害'类祝福数值另受进阶 6 与进阶 14 影响。",
+    "characters_note": "数值顺序：铁甲战士/寂静猎手/故障机器人/观者（Ironclad/Silent/Defect/Watcher）",
+    "source": [
+      "https://slaythespire.wiki.gg/wiki/Neow"
+    ]
+  },
+  "shortlist_blessings": [
+    {
+      "id": "max_hp_bonus_small",
+      "name": "最大生命提升",
+      "name_en": "Max HP +",
+      "category": "正面",
+      "effect": "最大生命 +8/6/7/7（进阶14+ 时为 +7/5/6/6）"
+    },
+    {
+      "id": "neows_lament",
+      "name": "涅奥的哀歌",
+      "name_en": "Neow's Lament",
+      "relic": "Neow's Lament（起始遗物）",
+      "category": "正面",
+      "effect": "接下来 3 场战斗中的敌人只有 1 点生命。若地图允许，可借此免费'狙击'一个精英。"
+    }
+  ],
+  "first_blessing": {
+    "slot": 1,
+    "theme": "卡牌相关奖励（从以下 6 项中随机生成 1 项）",
+    "options": [
+      {
+        "id": "remove_card",
+        "name": "移除一张卡",
+        "name_en": "Remove a card",
+        "category": "正面",
+        "effect": "从卡组中移除一张卡（自选）"
+      },
+      {
+        "id": "transform_card",
+        "name": "转换一张卡",
+        "name_en": "Transform a card",
+        "category": "正面",
+        "effect": "将卡组中一张卡（自选）转换为随机卡牌"
+      },
+      {
+        "id": "upgrade_card",
+        "name": "升级一张卡",
+        "name_en": "Upgrade a card",
+        "category": "正面",
+        "effect": "将卡组中一张卡（自选）升级"
+      },
+      {
+        "id": "choose_card_to_obtain",
+        "name": "选择一张卡获得",
+        "name_en": "Choose a card to obtain",
+        "category": "正面",
+        "effect": "从 3 张本角色的随机卡牌中选择 1 张加入卡组"
+      },
+      {
+        "id": "obtain_uncommon_colorless",
+        "name": "获得一张罕见度'罕见'的无色卡",
+        "name_en": "Choose an Uncommon Colorless card to obtain",
+        "category": "正面",
+        "effect": "选择一张罕见度'罕见(Uncommon)'的无色卡(Colorless)获得"
+      },
+      {
+        "id": "obtain_random_rare",
+        "name": "获得一张随机稀有卡",
+        "name_en": "Obtain a random Rare card",
+        "category": "正面",
+        "effect": "随机获得一张稀有(Rare)卡（不可选择）"
+      }
+    ]
+  },
+  "second_blessing": {
+    "slot": 2,
+    "theme": "常规奖励（从以下 5 项中随机生成 1 项）",
+    "options": [
+      {
+        "id": "max_hp_bonus",
+        "name": "最大生命提升",
+        "name_en": "Max HP +",
+        "category": "正面",
+        "effect": "最大生命 +8/6/7/7（进阶14+ 时为 +7/5/6/6）"
+      },
+      {
+        "id": "neows_lament2",
+        "name": "涅奥的哀歌",
+        "name_en": "Neow's Lament",
+        "category": "正面",
+        "effect": "获得遗物'涅奥的哀歌'：接下来 3 场战斗中的敌人只有 1 点生命"
+      },
+      {
+        "id": "random_common_relic",
+        "name": "获得随机普通遗物",
+        "name_en": "Obtain a random Common relic",
+        "category": "正面",
+        "effect": "随机获得一件普通(Common)遗物"
+      },
+      {
+        "id": "gold_100",
+        "name": "获得 100 金币",
+        "name_en": "Receive 100 Gold",
+        "category": "正面",
+        "effect": "立即获得 100 金币"
+      },
+      {
+        "id": "potions_3",
+        "name": "获得 3 瓶随机药水",
+        "name_en": "Obtain 3 random potions",
+        "category": "正面",
+        "effect": "随机获得 3 瓶药水（可能超出药水栏上限）"
+      }
+    ]
+  },
+  "third_blessing": {
+    "slot": 3,
+    "theme": "负面代价 + 强力正面奖励的组合（负面 4 选 1 × 正面 6 选 1，排除互斥组合）",
+    "disadvantages": [
+      {
+        "id": "lose_max_hp",
+        "name": "失去最大生命",
+        "name_en": "Lose Max HP",
+        "category": "负面",
+        "effect": "最大生命 -8/7/7/7（进阶14+ 时为 -7/6/7/6）"
+      },
+      {
+        "id": "take_damage",
+        "name": "受到伤害",
+        "name_en": "Take damage",
+        "category": "负面",
+        "effect": "受到 X 点伤害，X = (当前生命 ÷ 10 向下取整) × 3；该数值另受进阶6与进阶14影响（wiki 未给出精确修正公式，标注为需验证）"
+      },
+      {
+        "id": "obtain_curse",
+        "name": "获得一张诅咒卡",
+        "name_en": "Obtain a Curse",
+        "category": "负面",
+        "effect": "一张诅咒(Curse)卡加入卡组（诅咒种类随机）"
+      },
+      {
+        "id": "lose_all_gold",
+        "name": "失去所有金币",
+        "name_en": "Lose all Gold",
+        "category": "负面",
+        "effect": "清空当前全部金币"
+      }
+    ],
+    "advantages": [
+      {
+        "id": "remove_2_cards",
+        "name": "移除 2 张卡",
+        "name_en": "Remove 2 cards",
+        "category": "正面",
+        "effect": "从卡组中移除 2 张卡（自选）；不与负面'获得诅咒'配对"
+      },
+      {
+        "id": "transform_2_cards",
+        "name": "转换 2 张卡",
+        "name_en": "Transform 2 cards",
+        "category": "正面",
+        "effect": "将卡组中 2 张卡（自选）转换为随机卡牌"
+      },
+      {
+        "id": "gold_250",
+        "name": "获得 250 金币",
+        "name_en": "Gain 250 Gold",
+        "category": "正面",
+        "effect": "立即获得 250 金币；不与负面'失去所有金币'配对"
+      },
+      {
+        "id": "choose_rare_card",
+        "name": "选择一张稀有卡获得",
+        "name_en": "Choose a Rare card to obtain",
+        "category": "正面",
+        "effect": "从 3 张稀有(Rare)卡中选择 1 张加入卡组"
+      },
+      {
+        "id": "choose_rare_colorless",
+        "name": "选择一张稀有无色卡获得",
+        "name_en": "Choose a Rare Colorless card to obtain",
+        "category": "正面",
+        "effect": "从 3 张稀有(Rare)无色卡中选择 1 张加入卡组"
+      },
+      {
+        "id": "random_rare_relic",
+        "name": "获得随机稀有遗物",
+        "name_en": "Obtain a random Rare relic",
+        "category": "正面",
+        "effect": "随机获得一件稀有(Rare)遗物"
+      },
+      {
+        "id": "gain_max_hp",
+        "name": "大幅提升最大生命",
+        "name_en": "Gain Max HP",
+        "category": "正面",
+        "effect": "最大生命 +16/12/14/14（进阶14+ 时为 +14/10/12/12）；不与负面'失去最大生命'配对"
+      }
+    ],
+    "pairing_exclusions": [
+      "'移除 2 张卡' 不与 '获得诅咒' 组合",
+      "'获得 250 金币' 不与 '失去所有金币' 组合",
+      "'大幅提升最大生命' 不与 '失去最大生命' 组合"
+    ]
+  },
+  "fourth_blessing": {
+    "slot": 4,
+    "theme": "固定祝福（Boss 换遗物）",
+    "options": [
+      {
+        "id": "boss_swap",
+        "name": "首领换遗物 (Boss Swap)",
+        "name_en": "Boss Swap",
+        "category": "特殊",
+        "effect": "将你的起始(Starter)遗物替换为一件随机首领(Boss)遗物。注意：不能换成自己角色基础遗物的强化版。"
+      }
+    ]
+  }
+}

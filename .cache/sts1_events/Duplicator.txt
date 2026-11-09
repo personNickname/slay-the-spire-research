@@ -1,0 +1,32 @@
+{{Event Infobox
+| Name  = Duplicator
+| Image = Event-Duplicator.png
+}}
+{{E|Duplicator}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events appear less frequently than normal events.
+
+== Options ==
+{{Frame|Pray}} {{TS|positive||Duplicate a card in your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Before you lies a decorated altar to some ancient entity.
+</div>
+
+{{Frame|Pray}}
+<blockquote><div style="font-style:italic">
+You kneel respectfully. A ghastly mirror image appears from the shrine and collides into you.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You ignore the shrine, confident in your choice.
+</div></blockquote>
+</blockquote>
+
+
+{{EventNav}}
+[[Category:Events]]

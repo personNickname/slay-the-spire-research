@@ -1,0 +1,32 @@
+{{Event Infobox
+| Name  = Match and Keep
+| Image = Event-MatchAndKeep.png
+}}
+{{E|Match and Keep}} is a shrine [[Event]] encountered in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Play}} 
+* Play a matching game for cards. Match pairs of cards to add them to your deck. There is always a pair of one {{QueryLink|Cards|color:Colorless|Colorless}} card and one {{QueryLink|Cards|type:Curse|Curse}}.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. You approach him out of curiosity.
+</div>
+
+Before selecting {{Frame|Play}}
+<blockquote><div style="font-style:italic">
+"{{TS|blue||Twelve}} cards! Match them to keep them! {{TS|blue||Five}} tries, no do-overs. <br>
+Are you ready? Let's start!"
+</div></blockquote>
+
+After {{Frame|Play}}
+<blockquote><div style="font-style:italic">
+You complete the gremlin's game and look up. <br>
+He disappeared?
+</div></blockquote>
+</blockquote>
+
+{{EventNav}}
+[[Category:Events]]

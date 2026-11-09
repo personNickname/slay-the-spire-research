@@ -1,0 +1,32 @@
+{{Event Infobox
+| Name  = Upgrade Shrine
+| Image = Event-UpgradeShrine.png
+}}
+{{E|Upgrade Shrine}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Pray}} {{KW|Upgrade}} {{TS|positive||a card.}}
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Before you lies an elaborate shrine to a forgotten spirit.
+</div>
+
+{{Frame|Pray}}
+<blockquote><div style="font-style:italic">
+The shrine's energy flows into you, making you stronger.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You ignore the shrine.
+</div></blockquote>
+</blockquote>
+
+
+{{EventNav}}
+[[Category:Events]]

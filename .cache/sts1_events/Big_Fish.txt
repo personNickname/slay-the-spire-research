@@ -1,0 +1,43 @@
+{{Event Infobox
+| Name  = Big Fish
+| Image = Event-BigFish.png
+}} {{Small Card Infobox|Regret}}
+{{E|Big Fish}} is an event found exclusively in [[Act 1]].
+
+== Options ==
+{{Frame|Banana}} {{TS|positive||Heal 1/3 of your max HP.}}
+* If the player's HP is not divisble by 3, the HP gain is rounded down.
+<br>
+{{Frame|Donut}} {{TS|positive||Max HP +5.}}
+* Like all HP gain, the extra hit points are healed when you get them.
+<br>
+{{Frame|Box}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||Become Cursed - {{C|Regret}}.}}
+* The {{QueryLink|Relics||Relic}} is a randomly selected {{QueryLink|Relics|rarity:Common|Common}}, {{QueryLink|Relics|rarity:Uncommon|Uncommon}}, or {{QueryLink|Relics|rarity:Rare|Rare}} Relic.
+<br>
+You are then given the option to {{Frame|Leave}}.
+
+== Dialogue ==
+<blockquote>
+<div style="font-style:italic">As you make your way down a long corridor you see a {{TS|gold||banana}}, a {{TS|gold||donut}}, and a {{TS|gold||box}} {{TS||up|floating}} about. No... upon closer inspection they are tied to strings coming from holes in the ceiling. There is a quiet {{TS||shake|cackling}} from above as you approach the objects.
+What do you do?
+</div>
+<br>
+{{Frame|Banana}}
+<blockquote><div style="font-style:italic">
+You eat the {{TS|gold||banana}}. It is nutritious and slightly {{TS|blue||magical}}, healing you.</div></blockquote>
+
+{{Frame|Donut}}
+<blockquote><div style="font-style:italic">
+You eat the {{TS|gold||donut}}. It really hits the spot! Your Max HP increases.</div>
+</blockquote>
+
+{{Frame|Box}}
+<blockquote><div style="font-style:italic">
+You grab the box. Inside you find a {{TS|gold||relic!}}<br>
+However, you really craved the donut...<br>
+You are filled with {{TS||up|sadness,}} but mostly <span class="negative-text">regret</span>.</div>
+</blockquote>
+</blockquote>
+
+{{EventNav}}
+[[Category:Events]]

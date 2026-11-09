@@ -1,0 +1,437 @@
+[
+  {
+    "id": "attack_potion",
+    "en": "Attack Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Choose 1 of 3 random Attack cards to add into your Hand. It's free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "beetle_juice",
+    "en": "Beetle Juice",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Enemy's attacks deal 30% less damage lural:next turn.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "blessing_of_the_forge",
+    "en": "Blessing of the Forge",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Upgrade all cards in your Hand for the rest of combat.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "block_potion",
+    "en": "Block Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 12 Block.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "bottled_potential",
+    "en": "Bottled Potential",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Shuffle ALL your cards into your Draw Pile. Draw 5 lural:card.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "clarity",
+    "en": "Clarity Extract",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Draw 1 lural:card. At the start of your next lural:turn, draw 1 additional card.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "colorless_potion",
+    "en": "Colorless Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Choose 1 of 3 random Colorless cards to add into your Hand. It's free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "cure_all",
+    "en": "Cure All",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 1. Draw 2 lural:card.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "dexterity_potion",
+    "en": "Dexterity Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 2 Dexterity.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "distilled_chaos",
+    "en": "Distilled Chaos",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Play the top 3 cards of your Draw Pile.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "droplet_of_precognition",
+    "en": "Droplet of Precognition",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Choose a card in your Draw Pile and add it into your Hand.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "duplicator",
+    "en": "Duplicator",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "This turn, your next card is played an extra time.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "energy_potion",
+    "en": "Energy Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 2.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "entropic_brew",
+    "en": "Entropic Brew",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Fill all your empty potion slots with random potions.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "explosive_ampoule",
+    "en": "Explosive Ampoule",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Deal 10 damage to ALL enemies.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "fairy_in_a_bottle",
+    "en": "Fairy in a Bottle",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "When your HP would be reduced to 0, instead this potion is discarded and you heal to 30% of your Max HP.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "fire_potion",
+    "en": "Fire Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Deal 20 damage.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "flex_potion",
+    "en": "Flex Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 5 Strength. At the end of your turn, lose 5 Strength.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "fortifier",
+    "en": "Fortifier",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Triple your Block.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "foul_potion",
+    "en": "Foul Potion",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Deal 12 damage to ALL players and enemies. Can be thrown at the Merchant for 100 Gold instead.",
+    "target": null,
+    "version": "v0.107.1",
+    "character": "event"
+  },
+  {
+    "id": "fruit_juice",
+    "en": "Fruit Juice",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Gain 5 Max HP.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "fysh_oil",
+    "en": "Fysh Oil",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 1 Strength and 1 Dexterity.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "gamblers_brew",
+    "en": "Gambler's Brew",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Discard any number of cards, then draw that many.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "gigantification_potion",
+    "en": "Gigantification Potion",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The next Attack you play deals triple damage.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "glowwater_potion",
+    "en": "Glowwater Potion",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Exhaust your Hand. Draw 10 cards.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "event"
+  },
+  {
+    "id": "heart_of_iron",
+    "en": "Heart of Iron",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 7 Plating.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "liquid_bronze",
+    "en": "Liquid Bronze",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 3 Thorns.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "liquid_memories",
+    "en": "Liquid Memories",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Put a card from your Discard Pile into your Hand. It's free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "lucky_tonic",
+    "en": "Lucky Tonic",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Gain 1 Buffer.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "mazaleths_gift",
+    "en": "Mazaleth's Gift",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Gain 1 Ritual.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "orobic_acid",
+    "en": "Orobic Acid",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Add a random Attack, Skill, and Power into your Hand. They're free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "potion_of_binding",
+    "en": "Potion of Binding",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Apply 1 Weak and 1 Vulnerable to ALL enemies.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "potion_shaped_rock",
+    "en": "Potion-Shaped Rock",
+    "zh": null,
+    "rarity": "token",
+    "effect": "Deal 15 damage.",
+    "target": "敌人",
+    "version": "v0.107.1",
+    "character": "token"
+  },
+  {
+    "id": "powdered_demise",
+    "en": "Powdered Demise",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Enemy loses 9 HP at the end of each of its turns.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "power_potion",
+    "en": "Power Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "radiant_tincture",
+    "en": "Radiant Tincture",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 1. Gain an additional energyPrefix:energyIcons(1) at the start of your next 3 lural:turn.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "regen_potion",
+    "en": "Regen Potion",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 5 Regen.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "shackling_potion",
+    "en": "Shackling Potion",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "ALL enemies lose 7 Strength this turn.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "ship_in_a_bottle",
+    "en": "Ship in a Bottle",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Gain 10 Block. Next turn, gain 10 Block.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "skill_potion",
+    "en": "Skill Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Choose 1 of 3 random Skill cards to add into your Hand. It's free to play this turn.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "snecko_oil",
+    "en": "Snecko Oil",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Draw 7 cards. Randomize the cost of cards in your Hand this turn.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "speed_potion",
+    "en": "Speed Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "stable_serum",
+    "en": "Stable Serum",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Retain your Hand for 2 lural:turn.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "strength_potion",
+    "en": "Strength Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 2 Strength.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "swift_potion",
+    "en": "Swift Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Draw 3 lural:card.",
+    "target": "玩家",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "touch_of_insanity",
+    "en": "Touch of Insanity",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Choose a card in your Hand. It is free to play this combat.",
+    "target": "自身",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "vulnerable_potion",
+    "en": "Vulnerable Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Apply 3 Vulnerable.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  },
+  {
+    "id": "weak_potion",
+    "en": "Weak Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Apply 3 Weak.",
+    "target": "敌人",
+    "version": "v0.107.1"
+  }
+]

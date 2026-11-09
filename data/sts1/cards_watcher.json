@@ -1,0 +1,965 @@
+[
+  {
+    "id": "alpha",
+    "en": "Alpha",
+    "zh": "阿尔法",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "将 1 张贝塔(Beta) 洗入抽牌堆。消耗。",
+    "effect_up": "固有。将 1 张贝塔(Beta) 洗入抽牌堆。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "battle_hymn",
+    "en": "Battle Hymn",
+    "zh": "战歌",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "每回合开始时，将 1 张天谴(Smite) 加入手牌。",
+    "effect_up": "固有。每回合开始时，将 1 张天谴(Smite) 加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "blasphemy",
+    "en": "Blasphemy",
+    "zh": "亵渎",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "进入神性(Divinity) 姿态。下一回合死亡。消耗。",
+    "effect_up": "保留。进入神性(Divinity) 姿态。下一回合死亡。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "bowling_bash",
+    "en": "Bowling Bash",
+    "zh": "保龄猛击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "对战场上的每个敌人造成 7 点伤害。",
+    "effect_up": "对战场上的每个敌人造成 10 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "brilliance",
+    "en": "Brilliance",
+    "zh": "卓越",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "造成 12 点伤害。额外造成等同本场战斗中已获得的颂歌(Mantra) 层数的伤害。",
+    "effect_up": "造成 16 点伤害。额外造成等同本场战斗中已获得的颂歌(Mantra) 层数的伤害。",
+    "keywords": []
+  },
+  {
+    "id": "carve_reality",
+    "en": "Carve Reality",
+    "zh": "切割现实",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "造成 6 点伤害。将 1 张天谴(Smite) 加入手牌。",
+    "effect_up": "造成 10 点伤害。将 1 张天谴(Smite) 加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "collect",
+    "en": "Collect",
+    "zh": "收集",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": "X",
+    "effect": "在你接下来 X 个回合的回合开始时，各将 1 张奇迹+(Miracle+) 放入手牌。消耗。",
+    "effect_up": "在你接下来 X+1 个回合的回合开始时，各将 1 张奇迹+(Miracle+) 放入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "conclude",
+    "en": "Conclude",
+    "zh": "终结",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "对所有敌人造成 12 点伤害。结束你的回合。",
+    "effect_up": "对所有敌人造成 16 点伤害。结束你的回合。",
+    "keywords": []
+  },
+  {
+    "id": "conjure_blade",
+    "en": "Conjure Blade",
+    "zh": "召唤之刃",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": "X",
+    "effect": "将 1 张放逐者(Expurger) 洗入抽牌堆（X 费攻击牌，造成 9 点伤害 X 次）。消耗。",
+    "effect_up": "将 1 张放逐者+(Expunger+) 洗入抽牌堆（X 费攻击牌，造成 15 点伤害 X+1 次）。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "consecrate",
+    "en": "Consecrate",
+    "zh": "圣言",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "对所有敌人造成 5 点伤害。",
+    "effect_up": "对所有敌人造成 8 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "crescendo",
+    "en": "Crescendo",
+    "zh": "渐强",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "保留。进入愤怒(Wrath) 姿态。消耗。",
+    "effect_up": "保留。进入愤怒(Wrath) 姿态。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ],
+    "notes": "升级后费用降为 0。"
+  },
+  {
+    "id": "crush_joints",
+    "en": "Crush Joints",
+    "zh": "碾碎关节",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 8 点伤害。若本场战斗中打出的上一张牌是技能牌，施加 1 层易伤(Vulnerable)。",
+    "effect_up": "造成 10 点伤害。若本场战斗中打出的上一张牌是技能牌，施加 2 层易伤(Vulnerable)。",
+    "keywords": []
+  },
+  {
+    "id": "cut_through_fate",
+    "en": "Cut Through Fate",
+    "zh": "切断命运",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 7 点伤害。占卜(Scry) 2。抽 1 张牌。",
+    "effect_up": "造成 9 点伤害。占卜(Scry) 3。抽 1 张牌。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  {
+    "id": "deceive_reality",
+    "en": "Deceive Reality",
+    "zh": "欺骗现实",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "获得 4 点格挡。将 1 张安全(Safety) 加入手牌。",
+    "effect_up": "获得 7 点格挡。将 1 张安全(Safety) 加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "defend_watcher",
+    "en": "Defend",
+    "zh": "防御",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "basic",
+    "cost": 1,
+    "effect": "获得 5 点格挡。",
+    "effect_up": "获得 8 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "deus_ex_machina",
+    "en": "Deus Ex Machina",
+    "zh": "机械神",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": null,
+    "effect": "不可打出(Unplayable)。抽到该牌时，将 2 张奇迹(Miracle) 加入手牌并消耗。",
+    "effect_up": "不可打出(Unplayable)。抽到该牌时，将 3 张奇迹(Miracle) 加入手牌并消耗。",
+    "keywords": [
+      "unplayable",
+      "exhaust"
+    ]
+  },
+  {
+    "id": "deva_form",
+    "en": "Deva Form",
+    "zh": "天神形态",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "虚无(Ethereal)。回合开始时，获得 1 点能量，且该获得量每回合增加 1。",
+    "effect_up": "回合开始时，获得 1 点能量，且该获得量每回合增加 1。",
+    "keywords": [
+      "ethereal"
+    ],
+    "notes": "升级后失去虚无(Ethereal)。"
+  },
+  {
+    "id": "devotion",
+    "en": "Devotion",
+    "zh": "奉献",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "回合开始时，获得 2 层颂歌(Mantra)。",
+    "effect_up": "回合开始时，获得 3 层颂歌(Mantra)。",
+    "keywords": []
+  },
+  {
+    "id": "empty_body",
+    "en": "Empty Body",
+    "zh": "空之躯",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 7 点格挡。退出当前姿态。",
+    "effect_up": "获得 10 点格挡。退出当前姿态。",
+    "keywords": []
+  },
+  {
+    "id": "empty_fist",
+    "en": "Empty Fist",
+    "zh": "空拳",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 9 点伤害。退出当前姿态。",
+    "effect_up": "造成 14 点伤害。退出当前姿态。",
+    "keywords": []
+  },
+  {
+    "id": "empty_mind",
+    "en": "Empty Mind",
+    "zh": "空心",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "退出当前姿态。抽 2 张牌。",
+    "effect_up": "退出当前姿态。抽 3 张牌。",
+    "keywords": []
+  },
+  {
+    "id": "eruption",
+    "en": "Eruption",
+    "zh": "喷发",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "basic",
+    "cost": 2,
+    "effect": "造成 9 点伤害。进入愤怒(Wrath) 姿态。",
+    "effect_up": "造成 9 点伤害。进入愤怒(Wrath) 姿态。",
+    "keywords": [],
+    "notes": "升级后费用降为 1（伤害不变）。"
+  },
+  {
+    "id": "establishment",
+    "en": "Establishment",
+    "zh": "建制的笃定",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "每当有牌被保留(Retain)，其费用降低 1。",
+    "effect_up": "固有。每当有牌被保留(Retain)，其费用降低 1。",
+    "keywords": []
+  },
+  {
+    "id": "evaluate",
+    "en": "Evaluate",
+    "zh": "评估",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 6 点格挡。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "effect_up": "获得 10 点格挡。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": []
+  },
+  {
+    "id": "fasting",
+    "en": "Fasting",
+    "zh": "斋戒",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "获得 3 点力量(Strength)。获得 3 点敏捷(Dexterity)。每回合开始时获得的能量减少 1 点。",
+    "effect_up": "获得 4 点力量(Strength)。获得 4 点敏捷(Dexterity)。每回合开始时获得的能量减少 1 点。",
+    "keywords": []
+  },
+  {
+    "id": "fear_no_evil",
+    "en": "Fear No Evil",
+    "zh": "敬畏之惧",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "造成 8 点伤害。若敌人意图为攻击，进入平静(Calm) 姿态。",
+    "effect_up": "造成 11 点伤害。若敌人意图为攻击，进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  {
+    "id": "flurry_of_blows",
+    "en": "Flurry of Blows",
+    "zh": "连击拳",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "造成 4 点伤害。每当你切换姿态，将该牌从弃牌堆返回手牌。",
+    "effect_up": "造成 6 点伤害。每当你切换姿态，将该牌从弃牌堆返回手牌。",
+    "keywords": []
+  },
+  {
+    "id": "flying_sleeves",
+    "en": "Flying Sleeves",
+    "zh": "飞袖",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "保留。造成 4 点伤害，连续 2 次。",
+    "effect_up": "保留。造成 6 点伤害，连续 2 次。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "follow_up",
+    "en": "Follow-Up",
+    "zh": "后续追击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 7 点伤害。若打出的上一张牌是攻击牌，获得 1 点能量。",
+    "effect_up": "造成 11 点伤害。若打出的上一张牌是攻击牌，获得 1 点能量。",
+    "keywords": []
+  },
+  {
+    "id": "foreign_influence",
+    "en": "Foreign Influence",
+    "zh": "外来影响",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "从 3 张任意颜色的攻击牌中选择 1 张加入手牌。消耗。",
+    "effect_up": "从 3 张任意颜色的攻击牌中选择 1 张加入手牌，该牌本回合费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "foresight",
+    "en": "Foresight",
+    "zh": "先见之明",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "回合开始时，占卜(Scry) 3。",
+    "effect_up": "回合开始时，占卜(Scry) 4。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  {
+    "id": "halt",
+    "en": "Halt",
+    "zh": "停",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "获得 3 点格挡。若你处于愤怒(Wrath) 姿态，额外获得 9 点格挡。",
+    "effect_up": "获得 4 点格挡。若你处于愤怒(Wrath) 姿态，额外获得 14 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "indignation",
+    "en": "Indignation",
+    "zh": "义愤",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "若你处于愤怒(Wrath) 姿态，对所有敌人施加 3 层易伤(Vulnerable)；否则进入愤怒(Wrath) 姿态。",
+    "effect_up": "若你处于愤怒(Wrath) 姿态，对所有敌人施加 5 层易伤(Vulnerable)；否则进入愤怒(Wrath) 姿态。",
+    "keywords": []
+  },
+  {
+    "id": "inner_peace",
+    "en": "Inner Peace",
+    "zh": "内在平静",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "若你处于平静(Calm) 姿态，抽 3 张牌；否则进入平静(Calm) 姿态。",
+    "effect_up": "若你处于平静(Calm) 姿态，抽 4 张牌；否则进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  {
+    "id": "judgment",
+    "en": "Judgment",
+    "zh": "审判",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "若敌人 HP 不超过 30，将其 HP 置为 0。",
+    "effect_up": "若敌人 HP 不超过 40，将其 HP 置为 0。",
+    "keywords": []
+  },
+  {
+    "id": "just_lucky",
+    "en": "Just Lucky",
+    "zh": "幸运儿",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "占卜(Scry) 1。获得 2 点格挡。造成 3 点伤害。",
+    "effect_up": "占卜(Scry) 2。获得 3 点格挡。造成 4 点伤害。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  {
+    "id": "lesson_learned",
+    "en": "Lesson Learned",
+    "zh": "经验教训",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 2,
+    "effect": "造成 10 点伤害。若此伤害为致命一击，升级你卡组中的 1 张随机牌。消耗。",
+    "effect_up": "造成 13 点伤害。若此伤害为致命一击，升级你卡组中的 1 张随机牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "like_water",
+    "en": "Like Water",
+    "zh": "如水",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "回合结束时，若你处于平静(Calm) 姿态，获得 5 点格挡。",
+    "effect_up": "回合结束时，若你处于平静(Calm) 姿态，获得 7 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "master_reality",
+    "en": "Master Reality",
+    "zh": "现实大师",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "战斗中每当有卡牌被生成，升级该牌。",
+    "effect_up": "战斗中每当有卡牌被生成，升级该牌。",
+    "keywords": [],
+    "notes": "升级后费用降为 0。"
+  },
+  {
+    "id": "meditate",
+    "en": "Meditate",
+    "zh": "冥想",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "将弃牌堆中的 1 张牌放入手牌并保留(Retain) 它。进入平静(Calm) 姿态。结束你的回合。",
+    "effect_up": "将弃牌堆中的 2 张牌放入手牌并保留(Retain) 它们。进入平静(Calm) 姿态。结束你的回合。",
+    "keywords": []
+  },
+  {
+    "id": "mental_fortress",
+    "en": "Mental Fortress",
+    "zh": "心灵堡垒",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "每当你切换姿态，获得 4 点格挡。",
+    "effect_up": "每当你切换姿态，获得 6 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "nirvana",
+    "en": "Nirvana",
+    "zh": "涅槃",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "每当你占卜(Scry)，获得 3 点格挡。",
+    "effect_up": "每当你占卜(Scry)，获得 4 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "omniscience",
+    "en": "Omniscience",
+    "zh": "神威",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 4,
+    "effect": "选择抽牌堆中的 1 张牌。将选中的牌打出两次并消耗。消耗。",
+    "effect_up": "选择抽牌堆中的 1 张牌。将选中的牌打出两次并消耗。消耗。",
+    "keywords": [
+      "exhaust"
+    ],
+    "notes": "升级后费用降为 3。"
+  },
+  {
+    "id": "perseverance",
+    "en": "Perseverance",
+    "zh": "坚韧",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "保留。获得 5 点格挡。每当该牌被保留(Retain)，其格挡提高 2 点。",
+    "effect_up": "保留。获得 7 点格挡。每当该牌被保留(Retain)，其格挡提高 3 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "pray",
+    "en": "Pray",
+    "zh": "祈祷",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "获得 3 层颂歌(Mantra)。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "effect_up": "获得 4 层颂歌(Mantra)。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": []
+  },
+  {
+    "id": "pressure_points",
+    "en": "Pressure Points",
+    "zh": "压力点",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "施加 8 层印记(Mark)。所有敌人失去等同其印记(Mark) 层数的 HP。",
+    "effect_up": "施加 11 层印记(Mark)。所有敌人失去等同其印记(Mark) 层数的 HP。",
+    "keywords": []
+  },
+  {
+    "id": "prostrate",
+    "en": "Prostrate",
+    "zh": "俯卧",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "获得 2 层颂歌(Mantra)。获得 4 点格挡。",
+    "effect_up": "获得 3 层颂歌(Mantra)。获得 4 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "protect",
+    "en": "Protect",
+    "zh": "防护",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 2,
+    "effect": "保留。获得 12 点格挡。",
+    "effect_up": "保留。获得 16 点格挡。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "ragnarok",
+    "en": "Ragnarok",
+    "zh": "诸神黄昏",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "对随机敌人造成 5 点伤害，共 5 次。",
+    "effect_up": "对随机敌人造成 6 点伤害，共 6 次。",
+    "keywords": []
+  },
+  {
+    "id": "reach_heaven",
+    "en": "Reach Heaven",
+    "zh": "抵达天庭",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 10 点伤害。将 1 张穿越暴力(Through Violence) 洗入抽牌堆。",
+    "effect_up": "造成 15 点伤害。将 1 张穿越暴力(Through Violence) 洗入抽牌堆。",
+    "keywords": []
+  },
+  {
+    "id": "rushdown",
+    "en": "Rushdown",
+    "zh": "愤怒冲刺",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "每当你进入愤怒(Wrath) 姿态，抽 2 张牌。",
+    "effect_up": "每当你进入愤怒(Wrath) 姿态，抽 2 张牌。",
+    "keywords": [],
+    "notes": "升级后费用降为 0。"
+  },
+  {
+    "id": "sanctity",
+    "en": "Sanctity",
+    "zh": "圣洁",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "获得 6 点格挡。若本场战斗中打出的上一张牌是技能牌，抽 2 张牌。",
+    "effect_up": "获得 9 点格挡。若本场战斗中打出的上一张牌是技能牌，抽 2 张牌。",
+    "keywords": []
+  },
+  {
+    "id": "sands_of_time",
+    "en": "Sands of Time",
+    "zh": "时间之沙",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 4,
+    "effect": "保留。造成 20 点伤害。当该牌被保留(Retain) 时，本场战斗中其费用降低 1 点。",
+    "effect_up": "保留。造成 26 点伤害。当该牌被保留(Retain) 时，本场战斗中其费用降低 1 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "sash_whip",
+    "en": "Sash Whip",
+    "zh": "腰带鞭击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 8 点伤害。若本场战斗中打出的上一张牌是攻击牌，施加 1 层虚弱(Weak)。",
+    "effect_up": "造成 10 点伤害。若本场战斗中打出的上一张牌是攻击牌，施加 2 层虚弱(Weak)。",
+    "keywords": []
+  },
+  {
+    "id": "scrawl",
+    "en": "Scrawl",
+    "zh": "卷轴",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "抽牌直到手牌达到上限。消耗。",
+    "effect_up": "抽牌直到手牌达到上限。消耗。",
+    "keywords": [
+      "exhaust"
+    ],
+    "notes": "升级后费用降为 0。"
+  },
+  {
+    "id": "signature_move",
+    "en": "Signature Move",
+    "zh": "招牌动作",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "仅当该牌是你手牌中唯一的攻击牌时才能打出。造成 30 点伤害。",
+    "effect_up": "仅当该牌是你手牌中唯一的攻击牌时才能打出。造成 40 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "simmering_fury",
+    "en": "Simmering Fury",
+    "zh": "沸腾怒火",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "下回合开始时，进入愤怒(Wrath) 姿态并抽 2 张牌。",
+    "effect_up": "下回合开始时，进入愤怒(Wrath) 姿态并抽 3 张牌。",
+    "keywords": []
+  },
+  {
+    "id": "spirit_shield",
+    "en": "Spirit Shield",
+    "zh": "精神护盾",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 2,
+    "effect": "手牌中每有 1 张牌，获得 3 点格挡。",
+    "effect_up": "手牌中每有 1 张牌，获得 4 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "strike_watcher",
+    "en": "Strike",
+    "zh": "打击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "basic",
+    "cost": 1,
+    "effect": "造成 6 点伤害。",
+    "effect_up": "造成 9 点伤害。",
+    "keywords": [
+      "strike"
+    ]
+  },
+  {
+    "id": "study",
+    "en": "Study",
+    "zh": "学习",
+    "character": "watcher",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "回合结束时，将 1 张洞察(Insight) 洗入抽牌堆。",
+    "effect_up": "回合结束时，将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": [],
+    "notes": "升级后费用降为 1。"
+  },
+  {
+    "id": "swivel",
+    "en": "Swivel",
+    "zh": "转身",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "获得 8 点格挡。你打出的下一张攻击牌费用为 0。",
+    "effect_up": "获得 11 点格挡。你打出的下一张攻击牌费用为 0。",
+    "keywords": []
+  },
+  {
+    "id": "talk_to_the_hand",
+    "en": "Talk to the Hand",
+    "zh": "握手",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "造成 5 点伤害。每当你攻击该敌人，获得 2 点格挡。消耗。",
+    "effect_up": "造成 7 点伤害。每当你攻击该敌人，获得 3 点格挡。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "tantrum",
+    "en": "Tantrum",
+    "zh": "发怒",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "造成 3 点伤害，共 3 次。进入愤怒(Wrath) 姿态。将该牌洗回抽牌堆。",
+    "effect_up": "造成 3 点伤害，共 4 次。进入愤怒(Wrath) 姿态。将该牌洗回抽牌堆。",
+    "keywords": []
+  },
+  {
+    "id": "third_eye",
+    "en": "Third Eye",
+    "zh": "第三只眼",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 7 点格挡。占卜(Scry) 3。",
+    "effect_up": "获得 9 点格挡。占卜(Scry) 5。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  {
+    "id": "tranquility",
+    "en": "Tranquility",
+    "zh": "恬静",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "保留。进入平静(Calm) 姿态。消耗。",
+    "effect_up": "保留。进入平静(Calm) 姿态。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ],
+    "notes": "升级后费用降为 0。"
+  },
+  {
+    "id": "vault",
+    "en": "Vault",
+    "zh": "跃迁",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "在本回合之后获得一个额外回合。结束你的回合。消耗。",
+    "effect_up": "在本回合之后获得一个额外回合。结束你的回合。消耗。",
+    "keywords": [
+      "exhaust"
+    ],
+    "notes": "升级后费用降为 2。"
+  },
+  {
+    "id": "vigilance",
+    "en": "Vigilance",
+    "zh": "警戒",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "basic",
+    "cost": 2,
+    "effect": "获得 8 点格挡。进入平静(Calm) 姿态。",
+    "effect_up": "获得 12 点格挡。进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  {
+    "id": "wallop",
+    "en": "Wallop",
+    "zh": "痛击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 9 点伤害。获得等同未被格挡的伤害数值的格挡。",
+    "effect_up": "造成 12 点伤害。获得等同未被格挡的伤害数值的格挡。",
+    "keywords": []
+  },
+  {
+    "id": "wave_of_the_hand",
+    "en": "Wave of the Hand",
+    "zh": "挥手",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "本回合中每当你获得格挡，对所有敌人施加 1 层虚弱(Weak)。",
+    "effect_up": "本回合中每当你获得格挡，对所有敌人施加 2 层虚弱(Weak)。",
+    "keywords": []
+  },
+  {
+    "id": "weave",
+    "en": "Weave",
+    "zh": "编织",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "造成 4 点伤害。每当你占卜(Scry)，将该牌从弃牌堆返回手牌。",
+    "effect_up": "造成 6 点伤害。每当你占卜(Scry)，将该牌从弃牌堆返回手牌。",
+    "keywords": []
+  },
+  {
+    "id": "wheel_kick",
+    "en": "Wheel Kick",
+    "zh": "回旋踢",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 15 点伤害。抽 2 张牌。",
+    "effect_up": "造成 20 点伤害。抽 2 张牌。",
+    "keywords": []
+  },
+  {
+    "id": "windmill_strike",
+    "en": "Windmill Strike",
+    "zh": "风车打击",
+    "character": "watcher",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "保留。造成 7 点伤害。当该牌被保留(Retain) 时，本场战斗中其伤害提高 4 点。",
+    "effect_up": "保留。造成 10 点伤害。当该牌被保留(Retain) 时，本场战斗中其伤害提高 5 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "wish",
+    "en": "Wish",
+    "zh": "愿望",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "选择一项：获得 6 层重甲(Plated Armor)、获得 3 点力量(Strength)，或获得 25 金币。消耗。",
+    "effect_up": "选择一项：获得 8 层重甲(Plated Armor)、获得 4 点力量(Strength)，或获得 30 金币。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "worship",
+    "en": "Worship",
+    "zh": "崇拜",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "获得 5 层颂歌(Mantra)。",
+    "effect_up": "保留。获得 5 层颂歌(Mantra)。",
+    "keywords": []
+  },
+  {
+    "id": "wreath_of_flame",
+    "en": "Wreath of Flame",
+    "zh": "火焰之环",
+    "character": "watcher",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "你的下一张攻击牌额外造成 5 点伤害。",
+    "effect_up": "你的下一张攻击牌额外造成 8 点伤害。",
+    "keywords": []
+  }
+]

@@ -1,0 +1,33 @@
+{{Event Infobox
+| Name  = Purifier
+| Image = Event-Purifier.png
+}}
+{{E|Purifier}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events occur less frequently than other events.
+
+== Options ==
+{{Frame|Pray}} {{TS|positive||Remove a card from your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote>
+<i> Before you lies an elaborate shrine to a forgotten spirit. </i>
+
+{{Frame|Pray}}
+<blockquote>
+<i> As you kneel in reverence, you feel a weight lifted off your shoulders.</i>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote>
+<i> You ignore the shrine. </i>
+</blockquote>
+</blockquote>
+
+== Notes ==
+* This probably would not work as an air purifier.
+
+{{EventNav}}
+[[Category:Events]]

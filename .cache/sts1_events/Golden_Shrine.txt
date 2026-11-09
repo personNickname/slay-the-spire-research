@@ -1,0 +1,39 @@
+{{Event Infobox
+| Name  = Golden Shrine
+| Image = Event-GoldenShrine.png
+}} {{Small Card Infobox|Regret}}
+{{E|Golden Shrine}} is a {{QueryLink|Events|shrine:Yes|shrine Event}} encountered in all [[Acts]].
+
+== Options ==
+{{Frame|Pray}} {{TS|positive||Gain 100 Gold.}}
+
+{{Frame|Desecrate}} {{TS|positive||Gain 275 Gold.}} {{TS|negative||Become Cursed -}} {{C|Regret}}.
+* {{C|Regret}} - {{KW|Unplayable}}. At the end of your turn, lose HP equal to the number of cards in your hand.
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Before you lies an elaborate shrine to an ancient spirit.
+</div>
+
+{{Frame|Pray}}
+<blockquote><div style="font-style:italic">
+As your hand touches the shrine, {{TS|gold||gold}} rains from the ceiling {{TS||up|showering you in riches.}}
+</div></blockquote>
+
+{{Frame|Desecrate}}
+<blockquote><div style="font-style:italic">
+Each time you strike the shrine, {{TS|gold||gold}} pours forth again and again! <br>
+
+As you pocket the riches, something {{TS|negative||weighs heavily on you.}}
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You ignore the shrine.
+</div></blockquote>
+</blockquote>
+
+{{EventNav}}
+[[Category:Events]]

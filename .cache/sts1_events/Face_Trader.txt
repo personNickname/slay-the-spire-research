@@ -1,0 +1,92 @@
+{{Event Infobox
+| Name  = Face Trader
+| Image = Event-FaceTrader.png
+}}
+{{E|Face Trader}} is a {{QueryLink|Events|shrine:Yes|shrine Event}} found in  [[Act 1]] and [[Act 2]]. This Event is the only way to obtain {{R|Cultist Headpiece}}, {{R|Face of Cleric}}, {{R|Gremlin Visage}}, {{R|N'loth's Hungry Face}}, and {{R|Ssserpent Head}}. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Touch}} {{TS|negative||Lose X HP,}} {{TS|positive||gain 75 {{Asc|15|(50)}} [[Gold]].}}
+* X is equal to 10% of the player's Max HP, rounded down.
+
+{{Frame|Trade}} {{TS|positive||50%: Good Face.}} {{TS|negative||50%: Bad Face.}}
+* Receive one of the following special [[Relics]]:
+** {{R|Face of Cleric}} ({{TS|positive||good face}})
+** {{R|Ssserpent Head}} ({{TS|positive||good face}})
+** {{R|Gremlin Visage}} ({{TS|negative||bad face}})
+** {{R|N'loth's Hungry Face}} ({{TS|negative||bad face}})
+** {{R|Cultist Headpiece}} (neutral face)
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You walk by an eerie statue holding several masks... <br>
+Something behind you softly whispers, <br>
+{{TS||up|"Stop."}}
+</div>
+
+{{Frame|Continue}}
+
+<div style="font-style:italic">
+You swerve around to face the statue which is now facing you! <br>
+On closer inspection, it's not a statue but a statuesque, gaunt man. Is he even breathing? <br>
+
+{{TS||up|"Face. Let me touch? Maybe trade?"}}
+</div>
+
+{{Frame|Touch}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Compensation? Compensation."}} <br>
+Mechanically, he cranes out a neat stack of {{TS|gold||gold}} and places it in your pouch. <br>
+
+{{TS||up|"What a nice face. Nice face."}} <br>
+While he touches your face, you begin to feel your life drain out of it! <br>
+During this, his mask falls off and shatters. Screaming, he quickly covers his face with all six arms dropping even more masks! Amidst all the screaming and shattering, you escape. <br>
+
+His face was completely blank.
+</div></blockquote>
+
+{{Frame|Trade}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"For me?}} {{TS||shake|FOR ME?}} {{TS||up|Oh yes.. Yes. Yes.. mmm..."}} <br>
+
+You see one of his arms flicker, and your face is in its hand! Your face has been swapped. <br>
+
+{{TS||up|"Nice face. Nice face."}}
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Stop. Stop. Stop. Stop. Stop."}} <br>
+
+This was probably the right call.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* The chances stated by the Event are inaccurate. The actual chances are 40% good face, 40% bad face, and 20% neutral face ({{R|Cultist Headpiece}}).
+** All 5 masks have the same probability of being chosen.
+
+== Trivia ==
+* The masks held by the Face Trader in his portrait resemble other characters seen in the game.
+** From left to right, up to down: [[N'loth]], [[We Meet Again!|Ranwid]], [[The Cleric|Cleric]], the [[The Ssssserpent|Ssserpent]], [[Masked Bandits#Pointy|Pointy]], and [[Masked Bandits#Bear|Bear]].
+
+== Update History ==
+* '''Patch V2.0: The Watcher'''
+** Face Trader event can no longer appear past Act 2.
+
+* '''Weekly Patch 51: Recursion'''
+** Minor text cleanup for Face Trader event.
+
+* '''Weekly Patch 40: Forethought'''
+** Face Trader event will no longer give out duplicate relics on Endless mode.
+
+* '''Weekly Patch 33: Terror'''
+** Improved Face Trader wording for top option to better reflect what happens.
+
+* '''Weekly Patch 32: Face Trader'''
+** Face Trader: It's a new event! This event shows up in any Act and can give you 1 of 5 relics exclusive to this event, we think it's facetastic.
+** Adding the Face Trader event.
+
+{{EventNav}}
+[[Category:Events]]

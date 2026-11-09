@@ -1,0 +1,122 @@
+{{Event Infobox
+| Name  = Sensory Stone
+| Image = Event-SensoryStone.png
+}}
+{{E|Sensory Stone}} is an [[Event]] found exclusively in [[Act 3]]. 
+
+== Options ==
+{{Frame|Recall}} {{TS|positive||Add 1 {{QueryLink|Cards|color:Colorless|Colorless}} card to your deck.}}
+
+{{Frame|Recall}} {{TS|positive||Add 2 {{QueryLink|Cards|color:Colorless|Colorless}} cards to your deck.}} {{TS|negative||Lose 5 HP.}}
+
+{{Frame|Recall}} {{TS|positive||Add 3 {{QueryLink|Cards|color:Colorless|Colorless}} cards to your deck.}} {{TS|negative||Lose 10 HP.}}
+
+== Dialogue ==
+<blockquote>
+<i>Navigating through the Beyond, you discover a {{TS|blue||glowing tesseract}} {{TS||shake|spinning}} and {{TS||up|shifting}} gently in the air.</i><br>
+<br>
+{{Frame|Interact}}
+<br>
+<br>
+<i>You touch it.</i><br>
+<br>
+<i>
+A {{TS|negative|shake|sharp pain}} flows through you, followed by vivid flashes of a distant memory.<br>
+...whose memories are these?
+</i><br>
+<br>
+
+{{Frame|Recall}}
+
+After leaving the card rewards screen, the player is presented with one of four possible dialogue texts. Each contains the memories of one of the four playable characters. The dialogue is chosen randomly, and the current character being played has no effect on which one is presented.<br>
+<br>
+'''[[Ironclad]]'s Memories'''
+<blockquote><i>
+{{TS|red|up|FEAR.}}<br>
+
+A demonic creature towers above you, wings spread wide as it howls with laughter. Dead bodies of a tribe surround you while the village is engulfed in terrible {{TS|purple|up|dark flames.}}<br>
+
+The demon calls out, taunting you.<br>
+
+" {{TS|red|shake|YOU REALLY ARE THE STRONGEST NOW! Haha.. HEHE... HAHAHAAAAH!!}} "<br> <!-- There actually are spaces between the " and the text in-game -->
+
+This laughter echoes forever...
+</i></blockquote>
+
+'''[[Silent]]'s Memories'''
+<blockquote><i>
+{{TS|green|up|TRIUMPH.}}<br>
+
+The remains of a {{TS|purple|up|ghostly creature}} sink slowly into the mud before you, barely visible in the moonlight. You have proven yourself amongst your sisters.<br>
+
+Standing victoriously, you wait in silence as the others ceremoniously place the {{TS|gold||creature's skull}} atop your head. The ritual has concluded.<br>
+
+You head towards the Spire...
+</i></blockquote>
+
+'''[[Defect]]'s Memories'''
+<blockquote><i>
+{{TS|blue|up|CONFUSION.}}<br>
+
+{{TS|gold||[OBJECTIVE]}} {{TS|green||BALANCE must be ENFORCED}}<br>
+{{TS|gold||[DEFINE]}} {{TS|green||BALANCE}}<br>
+{{TS|gold||[ERROR]}} {{TS|green||BALANCE NOT FOUND}}<br>
+{{TS|gold||[DEFINE]}} {{TS|green||BALANCE}}<br>
+{{TS|gold||[ERROR]}} {{TS|green||BALANCE NOT FOUND}}<br>
+{{TS|gold||[WARNING]}} {{TS|red||Large object approaching}}<br>
+
+{{TS||up|"I... ..am ....Neow.."}}
+</i></blockquote>
+
+'''[[Watcher]]'s Memories'''
+<blockquote><i>
+{{TS|purple|up|SERENITY.}}<br>
+
+Two primitive creatures fight over a carcass on the side of the road. You observe, devoid of emotion.<br>
+{{TS|gold||Watch. Remember. Live.}} This is the Watcher's mission.<br>
+
+Recently, one of your peers had stopped reporting on their assignment: a Spire of unknown origin.<br>
+
+As the fight ends, you continue onward, unfazed by the bloody scene that took place.
+</i></blockquote>
+</blockquote>
+
+== Notes ==
+* Since the {{QueryLink|Cards|color:Colorless|Colorless cards}} are actually card rewards, they are affected by [[Relics]] which modify card rewards in some way.
+** {{R|Question Card}} makes each card reward present the player with 1 additional card.
+** {{R|Singing Bowl}} can allow the player to skip each card reward in order to gain +2 Max HP.
+** {{R|Busted Crown}} makes each card reward present the player with 2 fewer cards.
+** {{R|N'loth's Gift}} increases the likelihood of each card being a {{QueryLink|Cards|rarity:Rare&color:Colorless|Rare Colorless card}}.
+
+== Trivia ==
+* [[Ironclad]]'s {{TS|red|up|FEAR}} memory may be a reference to his {{C|Demon Form}} card as it depicts his increased power through his {{C|Burning Pact}} with a demon.
+** {{KW2|Vakuu}} is most likely the demonic creature in Ironclad's memory, it possibly takes place directly after the Epoch, {{2|Timeline#Devastation|Devastation}}.
+* [[Silent]]'s {{TS|green|up|TRIUMPH}} memory may be a reference to her {{C|Wraith Form}} card as it depicts the end of her fight against a "ghostly creature".
+** It is also likely the origin of her iconic skull mask.
+** It may also reference {{M|Nemesis}}; the "ghostly creature" could match the behaviour where the monster gains {{BD|Intangible}} while fighting it. Its green rags may be somewhat reminiscent of the cloak that [[Silent]] wears as well. "Nemesis" is also a somewhat odd name for a monster as a "nemesis" can also be interpreted as an "[https://en.wikipedia.org/wiki/Archenemy archenemy]"; the main enemy of a protagonist.
+* [[Defect]]'s {{TS|blue|up|CONFUSION}} memory may be a reference to its self-aware nature, perhaps triggered by its inability to define or understand "balance", before being found by [[Neow]].
+* [[Watcher]]'s {{TS|purple|up|SERENITY}} memory may be a reference to {{E|The Joust}} as she watches two knights fight over the remains of "Noodles"; the former pet of one of the knights.
+** It is also [[Time Eater#Trivia|one of the hints]] that may indicate that {{M|Time Eater}} used to belong to Watcher's order as it is possible that they were the peer who entered the Spire and never returned.
+
+== Update History ==
+* '''Patch V2.0: The Watcher'''
+** ''NOTE: There are no official patch notes for this change, but the Sensory Stone event gained its fourth dialogue option memory for the Watcher.''
+* '''Weekly Patch 42: Reboot'''
+** Adding ambient SFX for Sensory Stone event.
+* '''Weekly Patch 29: TURBO'''
+** Fix grammar issue in Sensory Stone event.
+* '''Weekly Patch 27: Hello World'''
+** Additional lore in the Sensory Stone event.
+** Egg relics now show pre-upgraded cards for Sensory Stone event's choices.
+* '''Weekly Patch 21: Channel Lightning'''
+** Sensory Stone event wording fix.
+* '''Weekly Patch 20: Immolate'''
+** Wording fixes in Sensory Stone event.
+* '''Weekly Patch 19: Seed'''
+** Grammar improvements for Sensory Stone event.
+* '''Weekly Patch 18: Paranormal'''
+** Hotfix: Fixed issue where Sensory Stone event may give you colored cards.
+** New Event (Beyond): Sensory Stone.
+
+{{EventNav}}
+[[Category:Events]]

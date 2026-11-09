@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>杀戮尖塔 1 & 2 — 资料复审</title>
+<title>杀戮尖塔 1 & 2 — 资料复审 · 实体数据库</title>
 <style>
   :root {
     --bg: #ffffff;
@@ -28,13 +28,11 @@
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
     line-height: 1.75; font-size: 15.5px;
   }
-  /* ---------- 顶部阅读进度条 ---------- */
   #progress {
     position: fixed; top: 0; left: 0; height: 4px; z-index: 300;
     background: var(--accent); width: 0%;
     transition: width .1s linear; border-radius: 0 2px 2px 0;
   }
-  /* ---------- 头部 + Tab ---------- */
   header {
     position: sticky; top: 0; z-index: 200;
     background: rgba(255,255,255,.94); backdrop-filter: blur(8px);
@@ -53,18 +51,15 @@
   }
   .tab:hover { color: var(--text); }
   .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  /* ---------- 布局 ---------- */
   .layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 208px 1fr; gap: 44px; padding: 0 28px; }
-  /* 左侧目录 */
   aside { position: sticky; top: 110px; align-self: start; padding: 28px 0 60px; }
   .toc-title { font-size: 12.5px; font-weight: 700; color: var(--faint); letter-spacing: 2px; margin-bottom: 12px; }
   .toc a {
     display: block; padding: 6px 12px; color: var(--dim); text-decoration: none;
-    font-size: 13.5px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0;
+    font-size: 13.5px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; cursor: pointer;
   }
   .toc a:hover { color: var(--text); background: var(--bg-soft); }
   .toc a.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
-  /* 主内容 */
   main { padding: 34px 0 110px; min-width: 0; }
   .view { display: none; }
   .view.active { display: block; }
@@ -78,7 +73,6 @@
   .sub { color: var(--faint); font-size: 13.5px; margin-bottom: 18px; padding-left: 36px; }
   p { margin: 10px 0; }
   .dim { color: var(--dim); }
-  /* ---------- 卡片 ---------- */
   .grid { display: grid; gap: 14px; }
   .g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .g3 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
@@ -91,17 +85,14 @@
   .card p { font-size: 13.5px; color: var(--dim); margin: 4px 0; }
   .card ul { margin: 6px 0 0 18px; font-size: 13.5px; }
   .card li { margin: 3px 0; }
-  /* 大数字卡 */
   .stat { text-align: center; padding: 18px 12px; }
   .stat .n { font-size: 30px; font-weight: 800; color: var(--accent); line-height: 1.2; }
   .stat .l { font-size: 13px; color: var(--dim); }
-  /* ---------- 表格 ---------- */
   .tbl-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
   th { background: var(--bg-soft); color: var(--text); font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid var(--border); white-space: nowrap; }
   td { padding: 7px 12px; border: 1px solid var(--border); vertical-align: top; }
   tr:nth-child(even) td { background: #fafbfd; }
-  /* ---------- 公式 ---------- */
   .formula {
     background: var(--bg-soft); border: 1px solid var(--border); border-left: 4px solid var(--accent);
     border-radius: 10px; padding: 14px 18px; margin: 12px 0;
@@ -109,12 +100,10 @@
     overflow-x: auto; white-space: nowrap;
   }
   .formula .c { color: var(--faint); }
-  /* ---------- 流程 ---------- */
   .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
   .step { background: #fff; border: 1px solid var(--border); padding: 6px 13px; border-radius: 8px; font-size: 13.5px; }
   .step.acc { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 700; }
   .arr { color: var(--accent); font-weight: 700; }
-  /* ---------- 角色 ---------- */
   .char {
     background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent);
     border-radius: 12px; padding: 16px 18px;
@@ -127,7 +116,6 @@
   .char table { margin: 8px 0; font-size: 13px; }
   .char th, .char td { padding: 4px 10px; }
   .char td:first-child { color: var(--faint); white-space: nowrap; width: 84px; }
-  /* ---------- 徽章 ---------- */
   .badge {
     display: inline-block; padding: 0 9px; border-radius: 12px; font-size: 12px;
     font-weight: 700; vertical-align: 2px; margin-left: 8px;
@@ -139,19 +127,77 @@
   .b-pink { background: #fbeaf3; color: var(--pink); }
   .b-gold { background: #faf3e3; color: var(--gold); }
   .b-gray { background: #eef1f5; color: var(--dim); }
-  /* ---------- 提示框 ---------- */
   .tip {
     background: var(--accent-soft); border: 1px solid #c7dbfb; border-radius: 10px;
     padding: 12px 16px; font-size: 13.5px; color: #24457c; margin: 14px 0;
   }
-  /* ---------- 文档清单 ---------- */
-  .doc { display: flex; justify-content: space-between; gap: 14px; padding: 9px 14px; border: 1px solid var(--border); border-radius: 9px; margin: 8px 0; font-size: 13.5px; background: #fff; flex-wrap: wrap; }
-  .doc code { font-family: "SF Mono", Menlo, monospace; color: var(--accent); font-size: 13px; }
-  .doc .meta { color: var(--faint); white-space: nowrap; }
-  a.doc { color: var(--text); text-decoration: none; transition: border-color .15s; cursor: pointer; }
-  a.doc:hover { border-color: var(--accent); background: var(--accent-soft); }
-  a.doc:hover code { text-decoration: underline; }
+  .open-db {
+    display: inline-block; background: var(--accent); color: #fff; border: none;
+    padding: 9px 20px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 8px;
+  }
+  .open-db:hover { background: #1d4fc4; }
+  details {
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0; margin: 12px 0;
+  }
+  details summary {
+    cursor: pointer; padding: 11px 16px; font-weight: 600; font-size: 14px;
+    list-style: none; color: var(--dim);
+  }
+  details summary::before { content: "▸ "; color: var(--accent); }
+  details[open] summary::before { content: "▾ "; }
+  details .body { padding: 2px 16px 12px; font-size: 13px; color: var(--faint); line-height: 2; }
+  details .body code { font-family: "SF Mono", Menlo, monospace; color: var(--accent); font-size: 12.5px; }
   footer { border-top: 1px solid var(--border); padding: 26px; text-align: center; color: var(--faint); font-size: 13px; }
+  /* ---------- 数据库浏览器 ---------- */
+  .db-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; }
+  .seg button {
+    border: none; background: #fff; padding: 7px 16px; font-size: 13.5px; cursor: pointer;
+    color: var(--dim); font-weight: 600;
+  }
+  .seg button.active { background: var(--accent); color: #fff; }
+  .ent-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .ent-btn {
+    border: 1px solid var(--border); background: #fff; border-radius: 8px;
+    padding: 6px 14px; font-size: 13.5px; cursor: pointer; color: var(--dim); font-weight: 600;
+  }
+  .ent-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .ent-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .ent-btn .cnt { font-size: 12px; color: var(--faint); font-weight: 400; margin-left: 4px; }
+  .ent-btn.pending { opacity: .45; cursor: default; }
+  #db-search {
+    flex: 1; min-width: 180px; border: 1px solid var(--border); border-radius: 9px;
+    padding: 8px 14px; font-size: 14px; outline: none;
+  }
+  #db-search:focus { border-color: var(--accent); }
+  .db-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+  .db-filters select {
+    border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px;
+    font-size: 13px; background: #fff; color: var(--text); outline: none;
+  }
+  .db-count { font-size: 13px; color: var(--faint); margin: 10px 0; }
+  .db-table th { position: sticky; top: 108px; background: #eef3fa; z-index: 5; }
+  .db-table td { font-size: 13.5px; }
+  .db-table .cellname { font-weight: 700; }
+  .db-table .cellname .en { display: block; font-weight: 400; color: var(--faint); font-size: 12px; font-style: italic; }
+  .db-table tr.expandable { cursor: pointer; }
+  .db-table tr.expandable:hover td { background: var(--accent-soft); }
+  .db-detail td { background: #fbfcfe; }
+  .db-detail .moves { margin: 4px 0; }
+  .db-detail .moves b { color: var(--accent); }
+  .db-empty { text-align: center; color: var(--faint); padding: 60px 0; font-size: 14px; }
+  .pill-r {
+    display: inline-block; padding: 1px 9px; border-radius: 10px; font-size: 12px; font-weight: 600;
+    background: #eef1f5; color: var(--dim); white-space: nowrap;
+  }
+  .pill-r.r-common { background: #e7f6ee; color: var(--green); }
+  .pill-r.r-uncommon { background: #faf3e3; color: var(--gold); }
+  .pill-r.r-rare, .pill-r.r-boss { background: #fdeaea; color: var(--red); }
+  .pill-r.r-starter, .pill-r.r-basic { background: #eef1f5; color: var(--faint); }
+  .pill-r.r-shop { background: #e9f3fd; color: var(--blue); }
+  .pill-r.r-event { background: #f1e9fb; color: var(--purple); }
+  .pill-r.r-blight, .pill-r.r-curse { background: #2e2438; color: #d0b8e8; }
   @media (max-width: 900px) {
     .layout { grid-template-columns: 1fr; }
     aside { display: none; }
@@ -171,13 +217,14 @@
     <div class="tabs">
       <button class="tab active" data-view="sts1">杀戮尖塔 1</button>
       <button class="tab" data-view="sts2">杀戮尖塔 2</button>
+      <button class="tab" data-view="db">实体数据库</button>
     </div>
   </div>
 </header>
 
 <div class="layout">
   <aside>
-    <div class="toc-title">本页目录</div>
+    <div class="toc-title" id="side-title">本页目录</div>
     <nav class="toc" id="toc"></nav>
   </aside>
   <main>
@@ -305,7 +352,7 @@
           </table>
         </div>
       </div>
-      <p class="dim" style="font-size:13.5px">解锁顺序：铁甲 → 寂静 → 机器人 → 观者。每角色 70+ 张专属卡、21 个主流流派详表在 <code>docs/sts1/characters.md</code>。</p>
+      <p class="dim" style="font-size:13.5px">解锁顺序：铁甲 → 寂静 → 机器人 → 观者。全部卡牌逐张数值在「实体数据库」的卡牌表里。</p>
     </section>
 
     <section data-t="敌人与意图">
@@ -321,6 +368,7 @@
         <tr><td>隐藏第 4 幕</td><td>尖塔之盾+矛 → <b>腐化之心 750</b></td><td>需要集齐 3 把钥匙；心脏每回合无敌 300 格挡上限</td></tr>
       </table>
       </div>
+      <p class="dim" style="font-size:13.5px">全部 62 个敌人（含普通/精英/Boss/事件敌人）的逐招式数值在「实体数据库」→ 敌人表，点击行展开。</p>
     </section>
 
     <section data-t="地图上有什么">
@@ -346,29 +394,33 @@
     </section>
 
     <section data-t="深入资料">
-      <h2><span class="num">+</span>深入资料在哪</h2>
-      <div class="sub">点条目直接打开对应文档（.md 纯文本，建议用编辑器阅读）</div>
-      <a class="doc" href="../docs/sts1/core-mechanics.md" target="_blank"><code>docs/sts1/core-mechanics.md</code><span class="meta">725 行 · Buff 全表 / 遗物 90 详列 / 药水 42 全表 / 掉落概率</span></a>
-      <a class="doc" href="../docs/sts1/characters.md" target="_blank"><code>docs/sts1/characters.md</code><span class="meta">466 行 · 四角色起始卡组 / 21 流派 / 专属遗物 / 解锁表</span></a>
-      <a class="doc" href="../docs/sts1/enemies.md" target="_blank"><code>docs/sts1/enemies.md</code><span class="meta">418 行 · 意图系统 12 种中断触发器 / 全 BOSS 行动循环</span></a>
-      <a class="doc" href="../docs/sts1/map-events-shop.md" target="_blank"><code>docs/sts1/map-events-shop.md</code><span class="meta">637 行 · 地图生成 / 商店价格 / 事件 / 升阶 20 级</span></a>
-      <h4 style="margin-top:22px">实体完备度自查（一局游戏的全部构成）</h4>
+      <h2><span class="num">+</span>全部实体数据</h2>
+      <div class="sub">实体清单已齐，数据持续落地中 —— 点按钮直接进数据库检索</div>
+      <button class="open-db" data-db="sts1">打开实体数据库（遗物 / 卡牌 / 敌人 / 药水 / 祝福 / 成就）→</button>
       <div class="tbl-wrap">
       <table>
         <tr><th>实体</th><th>规模</th><th>状态</th></tr>
         <tr><td>英雄（角色）</td><td>4</td><td>已全：HP / 起始卡组 / 起始遗物 / 机制 / 解锁</td></tr>
-        <tr><td>卡牌</td><td>约 340 张</td><td><b>全量提取中</b> → data/sts1/cards_*.json（5 个并行任务）</td></tr>
-        <tr><td>遗物</td><td>193</td><td>90 件详表已录入文档；<b>全量提取中</b> → relics.json</td></tr>
-        <tr><td>药水</td><td>42</td><td>效果已全（文档全表）；JSON 化中</td></tr>
-        <tr><td>敌人（普通/精英/Boss/事件）</td><td>约 55+</td><td>名单与行为已全；<b>招式数值提取中</b> → enemies.json</td></tr>
-        <tr><td>事件</td><td>100+</td><td>此前仅 14 详表 —— <b>全量提取中</b> → events.json</td></tr>
-        <tr><td>开局祝福（Neow）</td><td>约 25</td><td>此前缺失 —— <b>提取中</b> → neow.json</td></tr>
-        <tr><td>成就 / 分数</td><td>约 90 / 1 表</td><td>解锁与分数构成已有；成就表提取中</td></tr>
-        <tr><td>地图（节点/路径/种子）</td><td>7×15 规则</td><td>已全（见上方地图节）</td></tr>
-        <tr><td>升阶 20 级 / 模式</td><td>全表</td><td>已全</td></tr>
+        <tr><td>卡牌</td><td>约 340 张</td><td>无色/诅咒/状态 70 + 铁甲 75 <b>已入库</b>；寂静 / 机器人 / 观者提取中</td></tr>
+        <tr><td>遗物</td><td>193</td><td><b>已全入库</b>（180 正常 + 13 Blight + 2 特殊纪念）</td></tr>
+        <tr><td>药水</td><td>42</td><td><b>已全入库</b></td></tr>
+        <tr><td>敌人</td><td>62</td><td><b>已全入库</b>（普通 40 / 精英 11 / Boss 11，含逐招式数值）</td></tr>
+        <tr><td>开局祝福 Neow</td><td>25 选项</td><td><b>已全入库</b>（4 阶段生成规则 + 全选项）</td></tr>
+        <tr><td>成就 / 分数</td><td>46 / 28 项</td><td><b>已全入库</b></td></tr>
+        <tr><td>事件</td><td>100+</td><td>全量提取中 → events.json</td></tr>
+        <tr><td>地图（节点/路径/种子）/ 升阶 20 级 / 模式</td><td>规则</td><td>已全</td></tr>
       </table>
       </div>
-      <p class="dim" style="font-size:13px">JSON 数据到位后此表会更新为最终状态。</p>
+      <details>
+        <summary>底层文档（原始 markdown，供后续开发查阅，非阅读入口）</summary>
+        <div class="body">
+          <code>docs/sts1/core-mechanics.md</code>（战斗机制/Buff/掉落概率）·
+          <code>docs/sts1/characters.md</code>（四角色/流派）·
+          <code>docs/sts1/enemies.md</code>（意图系统/BOSS 建模）·
+          <code>docs/sts1/map-events-shop.md</code>（地图/商店/升阶/解锁）——
+          展示一律走「实体数据库」；markdown 仅作为机制论述的完整底稿保留在仓库里。
+        </div>
+      </details>
     </section>
   </div>
 
@@ -419,7 +471,7 @@
       <div class="grid g3">
         <div class="card"><h5>幕结构</h5><p>3 幕，行数 15 / 14 / 13；幕 1 起手有 3 场弱遭遇（弱敌池专用），幕 2/3 为 2 场。</p></div>
         <div class="card"><h5>交替第 1 幕</h5><p>繁茂之地 / 地下船坞随机二选一，区域、敌人、事件、BOSS 全套更换；幕末有不可战胜的剧情战"建筑师"。</p></div>
-        <div class="card"><h5>生成规则</h5><p>v0.101 整体重做过一次地图；完整生成参数在反编译提取中 → <code>data/sts2/map_config.json</code></p></div>
+        <div class="card"><h5>生成规则</h5><p>v0.101 整体重做过一次地图；完整生成参数提取中 → map_config</p></div>
       </div>
     </section>
 
@@ -486,47 +538,69 @@
     </section>
 
     <section data-t="深入资料">
-      <h2><span class="num">+</span>深入资料在哪</h2>
-      <div class="sub">点条目直接打开对应文档（.md 纯文本，建议用编辑器阅读）</div>
-      <a class="doc" href="../docs/sts2/overview.md" target="_blank"><code>docs/sts2/overview.md</code><span class="meta">186 行 · EA 时间线 / 补丁历史 / 官方路线图</span></a>
-      <a class="doc" href="../docs/sts2/core-mechanics.md" target="_blank"><code>docs/sts2/core-mechanics.md</code><span class="meta">228 行 · 新机制详解 / 与 1 代逐系统对照表</span></a>
-      <a class="doc" href="../docs/sts2/characters.md" target="_blank"><code>docs/sts2/characters.md</code><span class="meta">319 行 · 5 角色反编译级起始卡组 / 新资源系统</span></a>
-      <a class="doc" href="../docs/sts2/content.md" target="_blank"><code>docs/sts2/content.md</code><span class="meta">284 行 · 12 BOSS / 事件 / 遗物药水全统计</span></a>
-      <a class="doc" href="../docs/comparison.md" target="_blank"><code>docs/comparison.md</code><span class="meta">两代总对比 + 复刻策略建议</span></a>
-      <h4 style="margin-top:22px">实体完备度自查（EA 版，v0.107.1 基准）</h4>
+      <h2><span class="num">+</span>全部实体数据</h2>
+      <div class="sub">EA 版实体清单已齐（v0.107.1 基准），全量数据提取中</div>
+      <button class="open-db" data-db="sts2">打开实体数据库（已有数据即可检索）→</button>
       <div class="tbl-wrap">
       <table>
         <tr><th>实体</th><th>规模</th><th>状态</th></tr>
         <tr><td>英雄（角色）</td><td>5（第 6 名制作中）</td><td>已全：起始卡组为源码级数值</td></tr>
-        <tr><td>卡牌</td><td>约 590 张</td><td><b>全量提取中</b> → data/sts2/cards.json</td></tr>
-        <tr><td>遗物</td><td>297</td><td><b>全量提取中</b> → relics.json</td></tr>
-        <tr><td>药水</td><td>64</td><td><b>全量提取中</b> → potions.json</td></tr>
-        <tr><td>敌人（普通/精英/BOSS）</td><td>约 107 定义 / 12 BOSS</td><td>名单已全；<b>招式数值提取中</b> → enemies.json</td></tr>
-        <tr><td>事件</td><td>50</td><td>名单已全（43 已列名）；<b>全选项数值提取中</b> → events.json</td></tr>
-        <tr><td>古代 Ancients + 祝福池</td><td>8 位</td><td>Neow 池已知；<b>全池提取中</b> → ancients.json</td></tr>
-        <tr><td>附魔 Enchantments</td><td>16+</td><td>此前仅实例 —— <b>全表提取中</b> → enchantments.json</td></tr>
-        <tr><td>地图（节点/行数/配置）</td><td>8 种节点</td><td>结构已知；生成配置提取中 → map_config.json</td></tr>
-        <tr><td>升阶 10 级 / 时间线 / 联机规则</td><td>全表</td><td>已全（联机复刻首期不做）</td></tr>
+        <tr><td>卡牌</td><td>约 590 张</td><td>提取中 → cards</td></tr>
+        <tr><td>遗物</td><td>297</td><td>提取中 → relics</td></tr>
+        <tr><td>药水</td><td>64</td><td>提取中 → potions</td></tr>
+        <tr><td>敌人</td><td>约 107 定义 / 12 BOSS</td><td>名单已全；招式数值提取中 → enemies</td></tr>
+        <tr><td>事件</td><td>50</td><td>名单已全；全选项数值提取中 → events</td></tr>
+        <tr><td>古代 Ancients + 祝福池</td><td>8 位</td><td>提取中 → ancients</td></tr>
+        <tr><td>附魔</td><td>16+</td><td>提取中 → enchantments</td></tr>
+        <tr><td>地图配置</td><td>8 种节点</td><td>提取中 → map_config</td></tr>
+        <tr><td>升阶 10 级 / 时间线 / 联机</td><td>规则</td><td>已全（联机复刻首期不做）</td></tr>
       </table>
       </div>
       <p class="dim" style="font-size:13px">2 代数值随补丁变动：2026-11-12 大补丁后所有 data/sts2/ 需复核一遍。</p>
     </section>
   </div>
 
+  <!-- ==================== 实体数据库 ==================== -->
+  <div class="view" id="view-db">
+    <section data-t="数据库">
+      <h2><span class="num">☰</span>实体数据库</h2>
+      <div class="sub">底层一套 JSON（data/ 目录，复刻项目直接引用）· 顶层这套 UI（检索 / 筛选 / 展开）</div>
+      <div class="db-controls">
+        <div class="seg" id="db-game">
+          <button class="active" data-game="sts1">杀戮尖塔 1</button>
+          <button data-game="sts2">杀戮尖塔 2</button>
+        </div>
+        <input id="db-search" type="search" placeholder="搜索：名称 / 效果 / 关键词…">
+      </div>
+      <div class="ent-tabs" id="db-entities"></div>
+      <div class="db-filters" id="db-filters"></div>
+      <div class="db-count" id="db-count"></div>
+      <div class="tbl-wrap" id="db-table"></div>
+      <p class="dim" style="font-size:12.5px;margin-top:18px">点击带箭头的行可展开招式 / 选项详情。数据由 <code>review/build.py</code> 从 <code>data/</code> 目录自动打包，代理每落地一批 JSON 重建一次。</p>
+    </section>
+  </div>
+
   </main>
 </div>
 
-<footer>杀戮尖塔 1 &amp; 2 网页复刻 · 前期研究 · 来源：slaythespire.wiki.gg / megacrit.com / Steam / v0.107.1 反编译</footer>
+<footer>杀戮尖塔 1 &amp; 2 网页复刻 · 前期研究 · 数据源：slaythespire.wiki.gg / megacrit.com / Steam / v0.107.1 反编译仓库</footer>
 
+<script src="data.js"></script>
 <script>
-  // ---------- Tab 切换 ----------
+  // ============ 通用：Tab / 进度条 / TOC ============
   const tabs = document.querySelectorAll('.tab');
-  const views = { sts1: document.getElementById('view-sts1'), sts2: document.getElementById('view-sts2') };
+  const views = {
+    sts1: document.getElementById('view-sts1'),
+    sts2: document.getElementById('view-sts2'),
+    db: document.getElementById('view-db')
+  };
   const tocEl = document.getElementById('toc');
+  const sideTitle = document.getElementById('side-title');
   let active = 'sts1';
 
   function buildToc(name) {
     tocEl.innerHTML = '';
+    sideTitle.textContent = '本页目录';
     views[name].querySelectorAll('section').forEach((sec, i) => {
       const a = document.createElement('a');
       a.href = '#'; a.textContent = sec.dataset.t;
@@ -535,34 +609,159 @@
       tocEl.appendChild(a);
     });
   }
-
-  function switchTab(name) {
+  function switchTab(name, silent) {
     active = name;
     tabs.forEach(t => t.classList.toggle('active', t.dataset.view === name));
     Object.entries(views).forEach(([k, v]) => v.classList.toggle('active', k === name));
-    buildToc(name);
-    window.scrollTo({ top: 0 });
-    updateProgress();
-    updateSpy();
+    if (name === 'db') { renderEntityButtons(); renderFilters(); renderTable(); tocEl.innerHTML = ''; sideTitle.textContent = '数据说明'; tocEl.innerHTML = '<a style="cursor:default;color:var(--faint)">一套 JSON 底层<br>一个统一 UI 顶层<br><br>实体表随代理落地<br>持续扩充</a>'; }
+    else buildToc(name);
+    if (!silent) window.scrollTo({ top: 0 });
+    updateProgress(); updateSpy();
   }
   tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.view)));
+  document.querySelectorAll('.open-db').forEach(b => b.addEventListener('click', () => {
+    switchTab('db', true);
+    setDbGame(b.dataset.db);
+    window.scrollTo({ top: 0 });
+  }));
 
-  // ---------- 阅读进度条 ----------
   const bar = document.getElementById('progress');
   function updateProgress() {
     const h = document.documentElement;
     const max = h.scrollHeight - h.clientHeight;
     bar.style.width = (max > 0 ? (h.scrollTop / max * 100) : 0) + '%';
   }
-  window.addEventListener('scroll', () => { updateProgress(); updateSpy(); }, { passive: true });
+  window.addEventListener('scroll', () => { updateProgress(); if (active !== 'db') updateSpy(); }, { passive: true });
   window.addEventListener('resize', updateProgress);
-
-  // ---------- 目录 scroll-spy ----------
   function updateSpy() {
+    if (active === 'db' || !views[active]) return;
     const secs = views[active].querySelectorAll('section');
     let cur = 0;
     secs.forEach((sec, i) => { if (sec.getBoundingClientRect().top < 160) cur = i; });
     tocEl.querySelectorAll('a').forEach(a => a.classList.toggle('active', +a.dataset.i === cur));
+  }
+
+  // ============ 实体数据库 ============
+  const DB = window.GAME_DATA || { sts1: {}, sts2: {} };
+  const ZH = {
+    rarity: { starter: '起始', basic: '基础', common: '普通', uncommon: '非普通', rare: '稀有', boss: '首领', shop: '商店', event: '事件', blight: 'Blight', special: '特殊', curse: '诅咒' },
+    tier: { normal: '普通', elite: '精英', boss: '首领', event: '事件' },
+    character: { ironclad: '铁甲战士', silent: '寂静猎手', defect: '故障机器人', watcher: '观者', colorless: '无色', curse: '诅咒', status: '状态', none: '通用' },
+    type: { attack: '攻击', skill: '技能', power: '能力', curse: '诅咒', status: '状态' },
+    group: { shortlist_blessings: '候选池', first_blessing: '第一祝福', second_blessing: '第二祝福', third_blessing: '第三祝福', fourth_blessing: '第四祝福' }
+  };
+  const ENT = {
+    relics:    { label: '遗物', filters: ['rarity'], cols: [ ['name', '遗物'], ['rarity', '稀有度'], ['effect', '效果'] ] },
+    cards:     { label: '卡牌', filters: ['character', 'type', 'rarity'], cols: [ ['cost', '费'], ['name', '卡牌'], ['character', '角色'], ['type', '类型'], ['rarity', '稀有度'], ['effect', '效果'], ['effect_up', '升级后'] ] },
+    potions:   { label: '药水', filters: ['rarity'], cols: [ ['name', '药水'], ['rarity', '稀有度'], ['target', '目标'], ['effect', '效果'] ] },
+    enemies:   { label: '敌人', filters: ['act', 'tier'], cols: [ ['act', '幕'], ['tier', '层级'], ['name', '敌人'], ['hp', 'HP'], ['pattern', '行为模式'] ], expand: 'moves' },
+    events:    { label: '事件', filters: ['pool'], cols: [ ['pool', '池'], ['name', '事件'], ['description', '描述'] ], expand: 'options' },
+    neow:      { label: '开局祝福', filters: ['group'], cols: [ ['group', '阶段'], ['name', '祝福'], ['category', '类别'], ['effect', '效果'] ] },
+    achievements: { label: '成就', filters: ['category'], cols: [ ['category', '分类'], ['name', '成就'], ['description', '条件'] ] },
+    score:     { label: '分数', cols: [ ['name', '计分项'], ['condition', '条件'], ['value', '分值'] ] },
+    ancients:  { label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['zh', '称号'] ], expand: 'blessings' },
+    enchantments: { label: '附魔', cols: [ ['name', '附魔'], ['effect', '效果'] ] },
+    map_config: { label: '地图配置', cols: [ ['key', '项'], ['value', '值'] ] }
+  };
+  let dbGame = 'sts1', dbEntity = 'relics', dbFilters = {}, dbQuery = '';
+
+  function zhOf(kind, v) { return (ZH[kind] && ZH[kind][v]) || v; }
+  function itemName(it) { return it.zh || it.name || it.en || it.id; }
+  function fmtVal(v) { return v === null || v === undefined ? '—' : (Array.isArray(v) ? v.join('–') : String(v)); }
+
+  function setDbGame(g) {
+    dbGame = g; dbFilters = {}; dbQuery = ''; document.getElementById('db-search').value = '';
+    document.querySelectorAll('#db-game button').forEach(b => b.classList.toggle('active', b.dataset.game === g));
+    const avail = Object.keys(ENT).filter(k => Array.isArray(DB[g] && DB[g][k]) && DB[g][k].length);
+    const first = avail[0] || 'relics';
+    dbEntity = avail.includes(dbEntity) ? dbEntity : first;
+    renderEntityButtons(); renderFilters(); renderTable();
+  }
+  document.querySelectorAll('#db-game button').forEach(b => b.addEventListener('click', () => setDbGame(b.dataset.game)));
+  document.getElementById('db-search').addEventListener('input', e => { dbQuery = e.target.value.trim().toLowerCase(); renderTable(); });
+
+  function renderEntityButtons() {
+    const wrap = document.getElementById('db-entities'); wrap.innerHTML = '';
+    Object.entries(ENT).forEach(([key, cfg]) => {
+      const data = DB[dbGame] && DB[dbGame][key];
+      const has = Array.isArray(data) && data.length;
+      const btn = document.createElement('button');
+      btn.className = 'ent-btn' + (key === dbEntity ? ' active' : '') + (has ? '' : ' pending');
+      btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + data.length + '</span>' : ' <span class="cnt">提取中</span>');
+      if (has) btn.addEventListener('click', () => { dbEntity = key; dbFilters = {}; renderEntityButtons(); renderFilters(); renderTable(); });
+      else btn.title = '数据提取中，落地后自动出现';
+      wrap.appendChild(btn);
+    });
+  }
+
+  function renderFilters() {
+    const wrap = document.getElementById('db-filters'); wrap.innerHTML = '';
+    const cfg = ENT[dbEntity]; if (!cfg || !cfg.filters) return;
+    const data = (DB[dbGame] && DB[dbGame][dbEntity]) || [];
+    cfg.filters.forEach(f => {
+      const opts = [...new Set(data.map(d => d[f]).filter(v => v !== null && v !== undefined))].sort((a, b) => (typeof a === 'number' ? a - b : String(a).localeCompare(String(b), 'zh')));
+      if (opts.length < 2) return;
+      const sel = document.createElement('select');
+      const all = { rarity: '全部稀有度', character: '全部角色', type: '全部类型', tier: '全部层级', act: '全部幕', pool: '全部池', group: '全部阶段', category: '全部分类' }[f] || '全部';
+      sel.innerHTML = '<option value="">' + all + '</option>' + opts.map(o => '<option value="' + o + '">' + (f === 'act' && typeof o === 'string' ? o : zhOf(f, o)) + (f === 'act' && typeof o === 'number' ? ' 幕' : '') + '</option>').join('');
+      sel.addEventListener('change', () => { dbFilters[f] = sel.value || null; renderTable(); });
+      if (dbFilters[f]) sel.value = dbFilters[f];
+      wrap.appendChild(sel);
+    });
+  }
+
+  function rows() {
+    let data = (DB[dbGame] && DB[dbGame][dbEntity]) || [];
+    const cfg = ENT[dbEntity];
+    if (cfg.filters) cfg.filters.forEach(f => { if (dbFilters[f]) data = data.filter(d => String(d[f]) === String(dbFilters[f])); });
+    if (dbQuery) data = data.filter(d => JSON.stringify(d).toLowerCase().includes(dbQuery));
+    return data;
+  }
+
+  function renderTable() {
+    const cfg = ENT[dbEntity];
+    const data = rows();
+    const box = document.getElementById('db-table');
+    document.getElementById('db-count').textContent = '共 ' + data.length + ' 条' + (dbQuery ? '（命中检索）' : '') + (cfg && cfg.expand ? ' · 点击行展开详情' : '');
+    if (!cfg || !data.length) { box.innerHTML = '<div class="db-empty">' + (data.length === 0 && dbQuery ? '没有命中结果，换个关键词试试' : '该实体数据提取中，落地后此处自动出现') + '</div>'; return; }
+    let html = '<table class="db-table"><tr>' + cfg.cols.map(c => '<th>' + c[1] + '</th>').join('') + '</tr>';
+    data.forEach((it, idx) => {
+      html += '<tr class="' + (cfg.expand ? 'expandable' : '') + '" data-i="' + idx + '">';
+      cfg.cols.forEach(c => {
+        const k = c[0];
+        let v = '';
+        if (k === 'name') v = '<span class="cellname">' + itemName(it) + '<span class="en">' + (it.en || '') + '</span></span>';
+        else if (k === 'rarity') v = '<span class="pill-r r-' + it.rarity + '">' + zhOf('rarity', it.rarity) + '</span>';
+        else if (k === 'tier') v = '<span class="pill-r">' + zhOf('tier', it.tier) + '</span>';
+        else if (k === 'character') v = zhOf('character', it.character);
+        else if (k === 'type') v = zhOf('type', it.type);
+        else if (k === 'group') v = zhOf('group', it.group) || it.group;
+        else if (k === 'cost') v = fmtVal(it.cost);
+        else if (k === 'hp') v = fmtVal(it.hp);
+        else if (k === 'act') v = (typeof it.act === 'string' ? ({ overgrowth: '繁茂之地', underdocks: '地下船坞', hive: '蜂巢', glory: '荣耀' }[it.act] || it.act) : it.act);
+        else if (k === 'effect' || k === 'effect_up' || k === 'description' || k === 'pattern' || k === 'condition' || k === 'value') v = fmtVal(it[k]);
+        else if (k === 'category') v = fmtVal(it.category);
+        else v = fmtVal(it[k]);
+        html += '<td>' + v + '</td>';
+      });
+      html += '</tr>';
+      if (cfg.expand) {
+        const ex = it[cfg.expand];
+        if (ex && ex.length) {
+          html += '<tr class="db-detail" data-for="' + idx + '" style="display:none"><td colspan="' + cfg.cols.length + '">';
+          if (cfg.expand === 'moves') ex.forEach(m => html += '<div class="moves"><b>' + (m.name || '') + '</b>：' + (m.effect || '') + '</div>');
+          else if (Array.isArray(ex)) ex.forEach(o => html += '<div class="moves"><b>' + (o.text || o.name || '选项') + '</b>：' + (o.effect || o.text || '') + '</div>');
+          html += '</td></tr>';
+        }
+      }
+    });
+    box.innerHTML = html + '</table>';
+    if (cfg.expand) {
+      box.querySelectorAll('tr.expandable').forEach(tr => tr.addEventListener('click', () => {
+        const d = box.querySelector('tr.db-detail[data-for="' + tr.dataset.i + '"]');
+        if (d) d.style.display = d.style.display === 'none' ? '' : 'none';
+      }));
+    }
   }
 
   buildToc('sts1');

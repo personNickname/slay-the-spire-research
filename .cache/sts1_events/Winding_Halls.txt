@@ -1,0 +1,69 @@
+{{Event Infobox
+| Name  = Winding Halls
+| Image = Event-WindingHalls.png
+}} {{Small Card Infobox|Madness}} {{Small Card Infobox|Writhe}}
+{{E|Winding Halls}} is an [[Event]] found exclusively in [[Act 3]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+<!-- Fix descriptions to be game accurate. Use TS template for colors. For percentages, replace with X and then in an indented bullet below, explain what X is equal to. -->
+{{Frame|Embrace Madness}} {{TS|positive||Receive 2 {{C|Madness}}.}} {{TS|negative||Lose X HP.}}
+* X is equal to 12.5% {{Asc|15|(18%)}} of the player's Max HP.
+
+{{Frame|Focus}} {{TS|negative||Become Cursed - {{C|Writhe}}.}} {{TS|positive||Heal X HP.}}
+* X is equal to 25% {{Asc|15|(20%)}} of the player's Max HP.
+
+{{Frame|Retrace Your Steps}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 5% of the player's Max HP.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+As you slowly make your way up the twisting pathways, you constantly find yourself losing your way as the walls and ground seem to inexplicably shift before your eyes<br>
+<br>
+The constant {{TS|purple|up|whispering voices}} in the back of your head aren't helping things either.
+</div>
+<br>
+<br>
+{{Frame|...}}
+<br>
+<br>
+Passing by a structure you are certain you have previously seen you start to question if you are going insane, or if the impossible geography of this place is starting to get to you. You need to change something, and soon.<br>
+<br>
+That's what the {{TS|purple|up|voices}} say anyway, and why would they lie?
+
+{{Frame|Embrace Madness}}
+<blockquote><div style="font-style:italic">
+Something in you cracks.<br>
+<br>
+Only the truly mad can understand a place like this, so you give into the chattering voices and continue on with a {{TS|purple|up|"new"}} perspective.<br>
+Things do seem to make so much more sense now.
+</div> </blockquote>
+
+{{Frame|Focus}}
+<blockquote><div style="font-style:italic">
+As you take a moment to stop and carefully observe the undulating landscape around you, the hint of a pattern starts to emerge from within the randomness. Whenever the demented noises begin to interrupt your thoughts, you struggle through the mental pain and ignore it.<br>
+<br>
+Eventually you successfully map out a path forward, and continue on, now resistant to the nefarious nature of this alien place.
+</div> </blockquote>
+
+{{Frame|Retrace Your Steps}}
+<blockquote><div style="font-style:italic">
+You spend what feels like an eternity lost in the maze. Slowly but surely, you are able to retrace your steps, reorient yourself, and make it out of the twisting passages.<br>
+<br>
+You feel {{TS|red|up|drained}} from the experience.
+</div> </blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Omamori}} can be used to prevent the {{C|Writhe}} from {{Frame|Focus}} if it has any charges remaining. This is likely one of the last opportunities for the player to be able to benefit from {{R|Omamori}}.
+
+== Update History ==
+* '''Weekly Patch 42: Reboot'''
+** Adding ambient SFX for Winding Halls event.
+* '''Weekly Patch 40: Forethought'''
+** Winding Hall Event gets a new option and some text improvements. [Retrace Your Steps] Lose HP.
+* '''Weekly Patch 3: Balance Balance Balance'''
+** Winding Halls event reworked.
+
+
+{{EventNav}}
+[[Category:Events]]

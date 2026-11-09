@@ -1,0 +1,78 @@
+{{Event Infobox
+| Name  = The Library
+| Image = Event-Library.png
+}}
+{{E|The Library}} is an [[Event]] found exclusively in [[Act 2]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Read}} {{TS|positive||Choose 1 of 20 cards to add to your deck.}}
+<br>
+<br>
+{{Frame|Sleep}} {{TS|positive||Heal X HP.}}
+* X is equal to 33% {{Asc|15|(20%)}} of the player's Max HP.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You come across an ornate building which appears abandoned. <br>
+A plaque that has been torn free from a wall is on the floor. It reads, {{TS|blue||"THE LIBRARY".}} <br>
+Inside, you find countless rows of scrolls, manuscripts, and books. <br>
+You pick one and cozy yourself into a chair for some quiet time.
+</div><br>
+
+{{Frame|Read}}
+
+There are 3 possible stories that the player can read. One of the following is chosen at random.
+
+<blockquote><div style="font-style:italic">
+The story is about an insect-controlling teenage girl who aspires to become a hero. The book is filled with creative uses of power, combat strategies, and varying perspectives.<br><br>
+Satisfying.
+</div></blockquote>
+
+<blockquote><div style="font-style:italic">
+The story is about a man who journeyed beyond the stars and found himself stuck on a desolate foreign planet. Ingenuity, luck, perseverance, and humor to retain his sanity were his tools to return home.<br><br>
+Fascinating.
+</div></blockquote>
+
+<blockquote><div style="font-style:italic">
+The story takes place in a giant isolated building underground as the outside conditions have become unbearable. The novel is mired with conspiracies, propaganda, and injustice. You ponder if similar dynamics are at play within the Spire.<br><br>
+Unsettling.
+</div></blockquote>
+
+{{Frame|Sleep}}
+<blockquote><div style="font-style:italic">
+Reading is for chumps. <br>
+You doze off in a comfy chair instead. <br>
+{{TS||up|Zzz... zzz... ..Zz...}} <br>
+You wake up feeling refreshed.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* {{Frame|Sleep}} is unaffected by {{R|Regal Pillow}}, does not trigger {{R|Dream Catcher}}, and can still be chosen with {{R|Coffee Dripper}}.
+* {{R|Mark of the Bloom}} makes {{Frame|Sleep}} serve only as a way to skip adding a card to your deck as it will no longer heal you.
+* {{R|N'loth's Gift}} increases the likelihood of each card offered by {{Frame|Read}} being {{QueryLink|Cards|rarity:Rare|Rare}}.
+
+== Trivia ==
+* Each of the stories that can be randomly chosen when {{Frame|Read}} is selected are references to real-world books. They are:
+** [https://en.wikipedia.org/wiki/Worm_(web_serial) Worm, by John C. McCrae]. Referenced by the story about the ''"insect-controlling teenage girl"''.
+** [https://en.wikipedia.org/wiki/The_Martian_(Weir_novel) The Martian, by Andy Weir]. Referenced by the story about the ''"man who journeyed beyond the stars"''.
+** [https://en.wikipedia.org/wiki/Silo_(series) Wool, by Hugh Howey]. Referenced by the story about the ''"giant isolated building underground"''.
+
+== Update History ==
+* '''Patch V1.1: The Dealer'''
+** Library event can no longer contain duplicate cards.
+* '''Weekly Patch 53: Blizzard'''
+** Fix for Egg relics causing an issue with cards in the Library event screen.
+* '''Weekly Patch 18: Paranormal'''
+** Fix for Calling Bell/Library/Pandora's Box exploit.
+* '''Weekly Patch 16: Back to Work'''
+** You can now view your deck or the map when the grid card select screen is up (Such as The Library event)
+* '''Weekly Patch 5: Happy Holidays!'''
+** Insect-controlling -> typo in The Library event's text.
+* '''Weekly Patch 2: Slimes!'''
+** Updating The Library event's option to clarify that you choose 1 of 20 cards rather than the usual 3.
+* '''Day 1 Patch'''
+** Minor wording updates for Library event.
+
+{{EventNav}}
+[[Category:Events]]

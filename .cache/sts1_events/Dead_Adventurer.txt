@@ -1,0 +1,127 @@
+{{Event Infobox
+| Name  = Dead Adventurer
+| Image = Event-DeadAdventurer.png
+}}
+{{E|Dead Adventurer}} is an [[Event]] found exclusively in [[Act 1]].
+
+== Options ==
+{{Frame|Search}} {{TS|positive||Find Loot.}} {{TS|negative||25%}} {{Asc|15|(35%)}}{{TS|negative||: monster returns.}}
+* Each {{Frame|Search}} attempt will either cause an [[Elites#Act 1 Elites|Act 1 Elite]] to return and fight the player, or yield one of the following rewards:
+** 30 [[Gold]]
+** A random [[Relic]]
+** Nothing
+* Each reward only occurs once - if the player's first search found nothing and the second search found the [[Relic]], the third search will either reward 30 [[Gold]] or start a battle.
+* Each reward that is acquired before fighting the [[Elites#Act 1 Elites|Elite]] will be removed from its combat rewards if the player eventually does fight the [[Elites#Act 1 Elites|Elite]] and defeats it.
+** For example, if the player's first {{Frame|Search}} is a [[Relic]], the [[Elites#Act 1 Elites|Elite]] will not drop a [[Relic]] when it is defeated.
+** This is also the reason why this specific [[Elites#Act 1 Elites|Elite]] fight can drop 30 extra [[Gold]] compared to a normal [[Elite]]; because the 30 [[Gold]] {{Frame|Search}} reward is added to the normal [[Gold]] reward of defeating an [[Elite]].
+* Each subsequent {{Frame|Search}} increases the chance to encounter an [[Elites#Act 1 Elites|Elite]] by 25%.
+* If the player manages to successfully {{Frame|Search}} three times without encountering an  [[Elites#Act 1 Elites|Elite]], the event will end with a short dialogue detailing the success.
+* For the second and third searches (assuming the player is not ambushed), {{Frame|Search}} will be called {{Frame|Continue}} instead. Its behavior and description are unchanged.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You come across a {{TS|negative||dead adventurer}} on the floor.<br>
+His {{TS|blue||pants}} have been stolen! Also, <code>(phrasing depends on the Elite)</code>.<br>
+Though his {{TS|gold||possessions are still intact,}} you're in no mind to find out what happened here...
+</div><br><br>
+
+The phrasing on how the adventurer died depends on which [[Elites#Act 1 Elites|Elite]] will be fought if a {{Frame|Search}} attempt fails:
+* '''For {{M|Gremlin Nob}}:''' <i>Also, it looks as though he's been {{TS|negative|shake|gouged and trampled}} by a horned beast.</i>
+* '''For {{M|Sentry|Sentries}}:''' <i>Also, the armor and face appear to be {{TS|negative|shake|scoured by flames.}}</i>
+* '''For {{M|Lagavulin}}:''' <i>Also, he looks to have been {{TS|negative|shake|eviscerated and chopped}} by giant claws.</i>
+** {{M|Lagavulin}} during this event is particularly dangerous as it '''does not''' enter combat {{Int|Lagavulin|Sleep|Asleep}}. It also immediately debuffs the player with its {{Int|Lagavulin|Siphon Soul}} on the first turn of the fight.
+<br>
+
+{{Frame|Search}} (and {{Frame|Continue}} for the second and third searches)
+<blockquote>
+If the player finds [[Gold]]:
+<blockquote><div style="font-style:italic">
+You found some {{TS|gold||gold!}}<br>
+Continue searching?
+</div>
+
+The player is able to {{Frame|Continue}} searching with a +25% chance for the monster to return, or {{Frame|Leave}} and end the event.
+</blockquote>
+
+If the player finds a [[Relic]]:
+<blockquote><div style="font-style:italic">
+You found a {{TS|gold||relic!}}<br>
+Continue searching?
+</div>
+
+The player is able to {{Frame|Continue}} searching with a +25% chance for the monster to return, or {{Frame|Leave}} and end the event.
+</blockquote>
+
+If the player finds nothing:
+<blockquote><div style="font-style:italic">
+Hmm, couldn't find anything...<br>
+Continue searching?
+</div>
+
+The player is able to {{Frame|Continue}} searching with a +25% chance for the monster to return, or {{Frame|Leave}} and end the event.
+</blockquote>
+
+If the player is ambushed by the [[Elites#Act 1 Elites|Elite]]:
+<blockquote>
+<div style="font-style:italic">While searching the adventurer you are caught off guard!</div>
+
+{{Frame|Fight}}
+
+The player enters a fight with the [[Elites#Act 1 Elites|Elite]]. The event ends with no additional dialogue after the [[Elites#Act 1 Elites|Elite]] is defeated.
+</blockquote>
+
+If this is the third successful Search in a row:
+<blockquote>
+<div style="font-style:italic">Looks like you searched all his belongings without a hitch!</div>
+
+{{Frame|Leave}}
+
+The event ends with no additional dialogue.
+</blockquote>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You exit without a sound.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Black Star}} will not cause the [[Elite]] to drop an additional [[Relic]]. However, the other "elite relics" {{R|Preserved Insect}}, {{R|Sling of Courage}}, and {{R|Slaver's Collar}} will work as expected.
+* It is quite unlikely for the player to be able to {{Frame|Search}} three times without being ambushed since they must succeed on all three searches with increasing chances of failure. See the table below for more information:
+<!-- (1 - 0.25) * (1 - 0.5) * (1 - 0.75),   OR   (1 - 0.35) * (1 - 0.6) * (1 - 0.85) -->
+{| class="wikitable"
+|+ Cumulative Chance of Avoiding the Elite
+|-
+! Number of Searches<br>(% chance of Elite returning) !! Before {{Asc|15}} !! {{Asc|15}} and Above
+|-
+| 1 (25% / {{Asc|15|35%}}) || 75% || 65%
+|-
+| 2 (50% / {{Asc|15|60%}}) || 37.5% || 26%
+|-
+| 3 (75% / {{Asc|15|85%}}) || 9.375% || 3.9%
+|}
+
+== Trivia ==
+* The image of the dead adventurer is called <code>nopants.png</code> internally.
+* {{E|Dead Adventurer}} is one of three possible ways to fight an [[Elite]] outside of an [[Map Locations#Elites|Elite floor]]; the others being {{E|The Colosseum}} (with {{M|Taskmaster}} and {{M|Gremlin Nob}}) and the [[Spheric_Guardian#Act_2|Act 2 fight]] with one {{M|Sentry}} and a {{M|Spheric Guardian}}.
+* {{E|Dead Adventurer}}'s {{M|Lagavulin}} is the only case where an [[Elite]] enemy has different behavior compared to its typical encounter on an [[Map Locations#Elites|Elite floor]].
+
+== Update History ==
+* '''Weekly Patch 49: The Designer'''
+** Fixed Dead Adventurer event was not giving the gold correctly (just showing the effect).
+* '''Weekly Patch 46: Adrenaline'''
+** Preserved Insect and Sling should now work in all elite combats including elite battles from events (like dead adventurer event).
+* '''Weekly Patch 39: We Meet Again!'''
+** Minor dialog improvement for Dead Adventurer event.
+* '''Weekly Patch 34: Malaise'''
+** Gold gain effect from things like Dead Adventurer is now a localizeable string.
+* '''Weekly Patch 5: Happy Holidays!'''
+** Fixed a new line character placed incorrectly for dead adventurer's event.
+* '''Weekly Patch 2: Slimes!'''
+** Dead Adventurer event can now only appear on floor 7 and above.
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,43 @@
+{{Event Infobox
+| Name  = The Woman in Blue
+| Image = Event-WomanInBlue.png
+}}
+{{E|The Woman in Blue}} is a shrine [[Event]] encountered in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Buy 1 Potion}} {{TS|gold||20 Gold.}}
+
+{{Frame|Buy 2 Potions}} {{TS|gold||30 Gold.}}
+
+{{Frame|Buy 3 Potions}} {{TS|gold||40 Gold.}}
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+From the darkness, an arm pulls you into a small shop. As your eyes adjust, you see a pale woman in sharp clothes gesturing to a wall of potions. <br>
+"Buy a potion. Now!" she states.
+</div>
+
+{{Frame|Buy}} any amount of potions
+<blockquote><div style="font-style:italic">
+"Good. Now leave." <br>
+You exit the shop cautiously.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+{{TS|negative|shake|WHAM}} <br>
+Her gloved fist collides with your face, nearly knocking you off your feet. <br>
+"Get out before I litter the floor with your guts." You take her word and exit with your guts still safely in your body.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* Even if you skip grabbing the potions you bought, she will still be satisfied.
+
+
+{{EventNav}}
+[[Category:Events]]

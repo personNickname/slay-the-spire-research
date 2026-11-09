@@ -1,0 +1,65 @@
+{{Event Infobox
+| Name  = We Meet Again!
+| Image = Event-WeMeetAgain.png
+}}
+{{E|We Meet Again!}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Give Potion}} {{TS|negative||Lose a chosen potion.}} {{TS|positive||Obtain a Relic.}}
+* The event will randomly choose a potion upon entry and tell you which one was selected. You will be unable to drink or discard that potion until you leave the event's floor.
+
+{{Frame|Give Gold}} {{TS|negative||Lose Gold.}} {{TS|positive||Obtain a Relic.}}
+* The amount of [[Gold]] lost is between 50 and 150 (or your current amount of [[Gold]]).
+
+{{Frame|Give Card}} {{TS|negative||Lose a chosen card.}} {{TS|positive||Obtain a Relic.}}
+* The chosen card will not be {{QueryLink|Cards|rarity:Basic|Basic}} or a {{QueryLink|Cards|type:Curse|Curse}}.
+
+{{Frame|Attack}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+"We meet again!" <br>
+A cheery disheveled fellow approaches you gleefully. You do not know this man. <br>
+
+"It's me! {{TS|gold||Ranwid!}} Have any goods for me today? The usual? A fella like me can't make it alone, you know?" <br>
+You eye him suspiciously and consider your options.
+</div>
+<blockquote>
+{{Frame|Give Potion}}
+<blockquote><div style="font-style:italic">
+"Exquisite! Was feeling parched." <br>
+{{TS|blue|up|Glup glup glup}} <br>
+
+He downs the potion in one go and lets out a satisfied {{TS||shake|burp.}} <br>
+</div></blockquote>
+
+{{Frame|Give Gold}}
+<blockquote><div style="font-style:italic">
+"Magnificent! This will be quite handy if I run into those {{TS|red||mask wearing hoodlums}} again."
+</div></blockquote>
+
+{{Frame|Give Card}}
+<blockquote><div style="font-style:italic">
+"Exemplary! I shall study this further in my chambers."
+</div></blockquote>
+
+<div style="font-style:italic">He rummages around in his various pockets... <br>
+"Here, look what I've got for you today! Take it take it!"</div>
+</blockquote>
+
+{{Frame|Attack}}
+<blockquote><div style="font-style:italic">
+"{{TS||shake|Aaaaagghh!!}} What a jerk you are sometimes!" <br>
+He runs away.
+</div></blockquote>
+
+</blockquote>
+
+== Notes ==
+* "{{TS|red||mask wearing hoodlums}}" likely refers to the group of bandits in the Act 2 event {{E|Masked Bandits}}.
+
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,69 @@
+{{Event Infobox
+| Name  = Pleading Vagrant
+| Image = Event-Vagrant.png
+}} {{Small Card Infobox|Shame}}
+{{E|Pleading Vagrant}} is an [[Event]] found exclusively in [[Act 2]]. It will only appear if the player has at least 75 [[Gold]].
+
+== Options ==
+{{Frame|Offer Gold}} {{TS|gold||85 [[Gold]]:}} {{TS|positive||Obtain a [[Relic]].}}
+* If the player does not have enough [[Gold]], this option will be greyed out.
+
+{{Frame|Rob}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||Become Cursed -}} {{C|Shame}}{{TS|negative||.}}
+<br>
+<br>
+{{Frame|Leave}} Nothing happens. 
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+While sneaking past a group of shrouded figures, one of them approaches you.
+<br>
+"Got anything for me friend? Please... maybe some {{TS|gold||Coin?"}}
+<br>
+"I just need somewhere to stay, I have treasures I can trade..."
+<br>
+He seems delusional, but harmless.
+</div>
+<br><br>
+
+{{Frame|Offer Gold}}
+<blockquote><div style="font-style:italic">
+"Oh yes, {{TS||up|yes!}} Here here, a fair trade!"
+</div></blockquote>
+
+{{Frame|Rob}}
+<blockquote><div style="font-style:italic">
+You snatch the precious {{TS|gold||relic}} from his clutches and walk away.
+<br>
+From behind you hear,
+<br>
+"Have you no shame? {{TS||up|HAVE YOU NO SHAAAAAME?!"}}
+<br>
+You have some {{TS|purple||shame.}}
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote>
+(No dialogue)
+</blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Omamori}} can be used to prevent the {{C|Shame}} from {{Frame|Rob}} if it has any charges remaining.
+
+== Trivia ==
+* The Pleading Vagrant Event was originally called "Addicted". It was renamed because, early into Slay the Spire's development, the vagrant previously accepted {{C|J.A.X.}} from the {{E|Augmenter}} event but was reworked to accept 85 [[Gold]] instead. Following the change, the old name no longer made sense and had to also be changed. It could have also been changed due to the negative connotations and implication of substance abuse.
+* Internally called <code>Addict</code>.
+
+== Update History ==
+* '''Weekly Patch 45: Impatience'''
+** Some events like Pleading Vagrant did not correctly remove remaining event choices when selecting the leave option.
+
+* '''Weekly Patch 40: Forethought'''
+** Typo Fix on Pleading Vagrant event.
+
+* '''Weekly Patch 39: We Meet Again!'''
+** Addict event reworked.
+** Addicted event renamed -> Pleading Vagrant.
+
+{{EventNav}}
+[[Category:Events]]

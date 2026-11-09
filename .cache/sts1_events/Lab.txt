@@ -1,0 +1,21 @@
+{{Event Infobox
+| Name  = Lab
+| Image = Event-Lab.png
+}}
+{{E|Lab}} is a shrine [[Event]] found in all [[Acts]].
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Search}} {{TS|positive||Find some Potions!}}
+* Opens a rewards menu with three ({{Asc|15|two}}) random [[Potions]]. These can be skipped.
+
+== Dialogue ==
+<blockquote><i>
+You find yourself in a room filled with racks of test tubes, beakers, flasks, forceps, pinch clamps, stirring rods, tongs, goggles funnels, pipets, cylinders, condensers, and even a rare spiral tube of glass. <br>
+
+Why do you know the names of all these tools? It doesn't matter, you take a look around.
+</i></blockquote>
+
+{{EventNav}}
+[[Category:Events]]

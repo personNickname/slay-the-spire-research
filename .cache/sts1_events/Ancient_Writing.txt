@@ -1,0 +1,43 @@
+{{Event Infobox
+| Name  = Ancient Writing
+| Image = Event-AncientWriting.png
+}}
+{{E|Ancient Writing}} is an [[Event]] found exclusively in [[Act 2]].
+
+== Options ==
+{{Frame|Elegance}} {{TS|positive||Remove a card from your deck.}}
+<br>
+<br>
+{{Frame|Simplicity}} {{TS|positive||[[Upgrade]] all Strikes and Defends.}}
+* Only includes {{QueryLink|Cards|rarity:Basic|Basic}} cards.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Scaling the city, you notice a wall covered in the writing of {{TS|gold|up|Ancients.}} As you try to wrap your head around what the puzzling symbols and glyphs could mean, the writing begins to {{TS|blue|up|glow.}}<br>
+Suddenly, the message becomes clear...
+</div>
+<br><br>
+{{Frame|Elegance}}
+<blockquote><div style="font-style:italic">
+The answer was elegance.<br>
+Of course.
+</div></blockquote>
+
+{{Frame|Simplicity}}
+<blockquote><div style="font-style:italic">
+The truth is always simple.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* The internal name of this event is <code>Back_to_Basics</code>.
+
+== Update History ==
+* '''Weekly Patch 50: The Final Act'''
+** Fixed softlock caused if you can't remove cards in: Back to Basics, Cleric, and Living Wall events.
+* '''Weekly Patch 17: Patched in the Face'''
+** Ascender's Bane can no longer be removed by Back to Basics event.
+
+
+{{EventNav}}
+[[Category:Events]]

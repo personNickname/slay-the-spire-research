@@ -1,0 +1,1408 @@
+[
+  {
+    "id": "accursed",
+    "en": "Accursed",
+    "zh": "诅咒缠身",
+    "rarity": "blight",
+    "effect": "每当你击败一名首领，获得 2 个随机诅咒。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "akabeko",
+    "en": "Akabeko",
+    "zh": "赤贝牛",
+    "rarity": "common",
+    "effect": "每场战斗中你打出的第一张攻击牌额外造成 8 点伤害。"
+  },
+  {
+    "id": "anchor",
+    "en": "Anchor",
+    "zh": "铁锚",
+    "rarity": "common",
+    "effect": "每场战斗开始时，获得 10 点格挡。"
+  },
+  {
+    "id": "ancient_augmentation",
+    "en": "Ancient Augmentation",
+    "zh": "远古强化",
+    "rarity": "blight",
+    "effect": "敌人战斗开始时获得 1 层魔法守护、10 层板甲和 10 层再生。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "ancient_tea_set",
+    "en": "Ancient Tea Set",
+    "zh": "古董茶具",
+    "rarity": "common",
+    "effect": "每当进入休息处，下一场战斗开始时获得 2 点额外能量。"
+  },
+  {
+    "id": "art_of_war",
+    "en": "Art of War",
+    "zh": "战争艺术",
+    "rarity": "common",
+    "effect": "若你在回合内没有打出任何攻击牌，下回合获得 1 点额外能量。"
+  },
+  {
+    "id": "astrolabe",
+    "en": "Astrolabe",
+    "zh": "星盘",
+    "rarity": "boss",
+    "effect": "拾取时，变化 3 张牌，然后将其升级。"
+  },
+  {
+    "id": "bag_of_marbles",
+    "en": "Bag of Marbles",
+    "zh": "弹珠袋",
+    "rarity": "common",
+    "effect": "每场战斗开始时，对所有敌人施加 1 层易伤。"
+  },
+  {
+    "id": "bag_of_preparation",
+    "en": "Bag of Preparation",
+    "zh": "备战袋",
+    "rarity": "common",
+    "effect": "每场战斗开始时，额外抽 2 张牌。"
+  },
+  {
+    "id": "bird_faced_urn",
+    "en": "Bird-Faced Urn",
+    "zh": "鸟面瓮",
+    "rarity": "rare",
+    "effect": "每当你打出 1 张能力牌，回复 2 点生命。"
+  },
+  {
+    "id": "black_blood",
+    "en": "Black Blood",
+    "zh": "黑血",
+    "rarity": "boss",
+    "effect": "替代「燃烧之血」。每场战斗结束时，回复 12 点生命。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "black_star",
+    "en": "Black Star",
+    "zh": "黑星",
+    "rarity": "boss",
+    "effect": "精英被击败后额外掉落 1 件遗物。"
+  },
+  {
+    "id": "blood_vial",
+    "en": "Blood Vial",
+    "zh": "血瓶",
+    "rarity": "common",
+    "effect": "每场战斗开始时，回复 2 点生命。"
+  },
+  {
+    "id": "bloody_idol",
+    "en": "Bloody Idol",
+    "zh": "染血神像",
+    "rarity": "event",
+    "effect": "每当你获得金币，回复 5 点生命。"
+  },
+  {
+    "id": "blue_candle",
+    "en": "Blue Candle",
+    "zh": "蓝蜡烛",
+    "rarity": "uncommon",
+    "effect": "不可打出的诅咒牌现在可以打出。每打出 1 张诅咒牌，失去 1 点生命并将其消耗。"
+  },
+  {
+    "id": "bottled_flame",
+    "en": "Bottled Flame",
+    "zh": "瓶装火焰",
+    "rarity": "uncommon",
+    "effect": "拾取时选择 1 张攻击牌。每场战斗开始时，该牌在手牌中。"
+  },
+  {
+    "id": "bottled_lightning",
+    "en": "Bottled Lightning",
+    "zh": "瓶装闪电",
+    "rarity": "uncommon",
+    "effect": "拾取时选择 1 张技能牌。每场战斗开始时，该牌在手牌中。"
+  },
+  {
+    "id": "bottled_tornado",
+    "en": "Bottled Tornado",
+    "zh": "瓶装龙卷风",
+    "rarity": "uncommon",
+    "effect": "拾取时选择 1 张能力牌。每场战斗开始时，该牌在手牌中。"
+  },
+  {
+    "id": "brimstone",
+    "en": "Brimstone",
+    "zh": "硫磺",
+    "rarity": "shop",
+    "effect": "回合开始时，你获得 2 点力量，所有敌人获得 1 点力量。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "bronze_scales",
+    "en": "Bronze Scales",
+    "zh": "青铜鳞片",
+    "rarity": "common",
+    "effect": "每场战斗开始时，获得 3 层荆棘。"
+  },
+  {
+    "id": "burning_blood",
+    "en": "Burning Blood",
+    "zh": "燃烧之血",
+    "rarity": "starter",
+    "effect": "每场战斗结束时，回复 6 点生命。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "busted_crown",
+    "en": "Busted Crown",
+    "zh": "破碎王冠",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。后续卡牌奖励少 2 张牌可供选择。"
+  },
+  {
+    "id": "calipers",
+    "en": "Calipers",
+    "zh": "卡尺",
+    "rarity": "rare",
+    "effect": "回合开始时，不再失去全部格挡，改为只失去 15 点格挡。"
+  },
+  {
+    "id": "calling_bell",
+    "en": "Calling Bell",
+    "zh": "召唤之铃",
+    "rarity": "boss",
+    "effect": "拾取时，获得 1 个独特的诅咒和 3 件遗物。"
+  },
+  {
+    "id": "captains_wheel",
+    "en": "Captain's Wheel",
+    "zh": "船长的舵轮",
+    "rarity": "rare",
+    "effect": "第 3 回合开始时，获得 18 点格挡。"
+  },
+  {
+    "id": "cauldron",
+    "en": "Cauldron",
+    "zh": "坩埚",
+    "rarity": "shop",
+    "effect": "获得时，酿出 5 瓶随机药水。"
+  },
+  {
+    "id": "centennial_puzzle",
+    "en": "Centennial Puzzle",
+    "zh": "百年谜题",
+    "rarity": "common",
+    "effect": "每场战斗中你第一次失去生命时，抽 3 张牌。"
+  },
+  {
+    "id": "ceramic_fish",
+    "en": "Ceramic Fish",
+    "zh": "陶瓷鱼",
+    "rarity": "common",
+    "effect": "每当你向卡组加入 1 张牌，获得 9 金币。"
+  },
+  {
+    "id": "champion_belt",
+    "en": "Champion Belt",
+    "zh": "冠军腰带",
+    "rarity": "rare",
+    "effect": "每当你施加易伤，同时施加 1 层虚弱。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "charons_ashes",
+    "en": "Charon's Ashes",
+    "zh": "卡戎之烬",
+    "rarity": "rare",
+    "effect": "每当你消耗 1 张牌，对所有敌人造成 3 点伤害。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "chemical_x",
+    "en": "Chemical X",
+    "zh": "化学物质X",
+    "rarity": "shop",
+    "effect": "你的 X 费用牌的效果提高 2 点。"
+  },
+  {
+    "id": "circlet",
+    "en": "Circlet",
+    "zh": "头环",
+    "rarity": "special",
+    "effect": "尽可能多地收集吧！（集齐其他所有遗物后获得的纪念遗物）",
+    "notes": "特殊/纪念遗物。"
+  },
+  {
+    "id": "cloak_clasp",
+    "en": "Cloak Clasp",
+    "zh": "斗篷搭扣",
+    "rarity": "rare",
+    "effect": "回合结束时，手牌中每有 1 张牌便获得 1 点格挡。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "clockwork_souvenir",
+    "en": "Clockwork Souvenir",
+    "zh": "发条纪念品",
+    "rarity": "shop",
+    "effect": "每场战斗开始时，获得 1 层魔法守护。"
+  },
+  {
+    "id": "coffee_dripper",
+    "en": "Coffee Dripper",
+    "zh": "咖啡滴壶",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你不能再在休息处休息。"
+  },
+  {
+    "id": "cracked_core",
+    "en": "Cracked Core",
+    "zh": "破碎核心",
+    "rarity": "starter",
+    "effect": "每场战斗开始时，引导 1 个闪电球。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "cultist_headpiece",
+    "en": "Cultist Headpiece",
+    "zh": "邪教徒头饰",
+    "rarity": "event",
+    "effect": "你感觉自己变得健谈了。（纪念遗物，无实际效果）"
+  },
+  {
+    "id": "cursed_key",
+    "en": "Cursed Key",
+    "zh": "诅咒钥匙",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。每当你打开非首领宝箱，获得 1 个诅咒。"
+  },
+  {
+    "id": "damaru",
+    "en": "Damaru",
+    "zh": "达玛茹",
+    "rarity": "common",
+    "effect": "回合开始时，获得 1 点真言。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "darkstone_periapt",
+    "en": "Darkstone Periapt",
+    "zh": "暗石护符",
+    "rarity": "uncommon",
+    "effect": "每当你获得 1 个诅咒，最大生命值提高 6 点。"
+  },
+  {
+    "id": "data_disk",
+    "en": "Data Disk",
+    "zh": "数据磁盘",
+    "rarity": "common",
+    "effect": "每场战斗开始时，获得 1 点集中。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "dead_branch",
+    "en": "Dead Branch",
+    "zh": "枯枝",
+    "rarity": "rare",
+    "effect": "每当你消耗 1 张牌，将 1 张随机牌加入手牌。"
+  },
+  {
+    "id": "dollys_mirror",
+    "en": "Dolly's Mirror",
+    "zh": "多莉之镜",
+    "rarity": "shop",
+    "effect": "拾取时，获得卡组中 1 张牌的额外复制。"
+  },
+  {
+    "id": "dream_catcher",
+    "en": "Dream Catcher",
+    "zh": "捕梦网",
+    "rarity": "common",
+    "effect": "每次休息时，可以往卡组加入 1 张牌。"
+  },
+  {
+    "id": "du_vu_doll",
+    "en": "Du-Vu Doll",
+    "zh": "巫毒娃娃",
+    "rarity": "rare",
+    "effect": "卡组中每有 1 个诅咒，每场战斗开始时获得 1 点力量。"
+  },
+  {
+    "id": "duality",
+    "en": "Duality",
+    "zh": "二元性",
+    "rarity": "uncommon",
+    "effect": "每当你打出 1 张攻击牌，获得 1 点临时敏捷。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "ectoplasm",
+    "en": "Ectoplasm",
+    "zh": "灵质",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你不再能获得金币。"
+  },
+  {
+    "id": "emotion_chip",
+    "en": "Emotion Chip",
+    "zh": "情感芯片",
+    "rarity": "rare",
+    "effect": "若上一回合你失去过生命，回合开始时触发所有球体的被动效果。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "empty_cage",
+    "en": "Empty Cage",
+    "zh": "空笼",
+    "rarity": "boss",
+    "effect": "拾取时，从卡组中移除 2 张牌。"
+  },
+  {
+    "id": "enchiridion",
+    "en": "Enchiridion",
+    "zh": "古圣典",
+    "rarity": "event",
+    "effect": "每场战斗开始时，将 1 张随机能力牌加入手牌，该回合其费用为 0。"
+  },
+  {
+    "id": "eternal_feather",
+    "en": "Eternal Feather",
+    "zh": "永恒之羽",
+    "rarity": "uncommon",
+    "effect": "卡组中每有 5 张牌，每次进入休息处时回复 3 点生命。"
+  },
+  {
+    "id": "face_of_cleric",
+    "en": "Face of Cleric",
+    "zh": "牧师之面",
+    "rarity": "event",
+    "effect": "每场战斗结束后，最大生命值提高 1 点。"
+  },
+  {
+    "id": "fossilized_helix",
+    "en": "Fossilized Helix",
+    "zh": "化石螺旋",
+    "rarity": "rare",
+    "effect": "防止战斗中你第一次失去生命。"
+  },
+  {
+    "id": "frozen_core",
+    "en": "Frozen Core",
+    "zh": "冰冻核心",
+    "rarity": "boss",
+    "effect": "替代「破碎核心」。回合结束时若有空的球体槽位，引导 1 个霜寒球。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "frozen_egg",
+    "en": "Frozen Egg",
+    "zh": "冰冻蛋",
+    "rarity": "uncommon",
+    "effect": "每当你向卡组加入 1 张能力牌，将其升级。"
+  },
+  {
+    "id": "frozen_eye",
+    "en": "Frozen Eye",
+    "zh": "冰冻之眼",
+    "rarity": "shop",
+    "effect": "查看抽牌堆时，卡牌按顺序显示。"
+  },
+  {
+    "id": "fusion_hammer",
+    "en": "Fusion Hammer",
+    "zh": "聚变锤",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你不能再在休息处升级卡牌。"
+  },
+  {
+    "id": "gambling_chip",
+    "en": "Gambling Chip",
+    "zh": "赌博筹码",
+    "rarity": "rare",
+    "effect": "每场战斗开始时，弃掉任意数量的牌，然后抽等量的牌。"
+  },
+  {
+    "id": "ginger",
+    "en": "Ginger",
+    "zh": "生姜",
+    "rarity": "rare",
+    "effect": "你不再会陷入虚弱。"
+  },
+  {
+    "id": "girya",
+    "en": "Girya",
+    "zh": "吉里亚",
+    "rarity": "rare",
+    "effect": "现在可以在休息处进行力量训练（最多 3 次，每次 +1 力量）。"
+  },
+  {
+    "id": "gold_plated_cables",
+    "en": "Gold-Plated Cables",
+    "zh": "镀金线缆",
+    "rarity": "uncommon",
+    "effect": "最右侧的球体额外触发一次被动效果。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "golden_eye",
+    "en": "Golden Eye",
+    "zh": "金色之眼",
+    "rarity": "rare",
+    "effect": "每当你预见，额外预见 2 张牌。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "golden_idol",
+    "en": "Golden Idol",
+    "zh": "黄金神像",
+    "rarity": "event",
+    "effect": "敌人掉落的金币增加 25%。"
+  },
+  {
+    "id": "gremlin_horn",
+    "en": "Gremlin Horn",
+    "zh": "小鬼之角",
+    "rarity": "uncommon",
+    "effect": "每当有敌人死亡，获得 1 点能量并抽 1 张牌。"
+  },
+  {
+    "id": "gremlin_visage",
+    "en": "Gremlin Visage",
+    "zh": "小鬼面具",
+    "rarity": "event",
+    "effect": "每场战斗开始时，你获得 1 层虚弱。"
+  },
+  {
+    "id": "grotesque_trophy",
+    "en": "Grotesque Trophy",
+    "zh": "怪异战利品",
+    "rarity": "blight",
+    "effect": "拾取时，获得 3 张「傲慢」。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "hand_drill",
+    "en": "Hand Drill",
+    "zh": "手钻",
+    "rarity": "shop",
+    "effect": "每当你打破一名敌人的格挡（使其格挡归零），施加 2 层易伤。"
+  },
+  {
+    "id": "happy_flower",
+    "en": "Happy Flower",
+    "zh": "快乐花",
+    "rarity": "common",
+    "effect": "每过 3 个回合，获得 1 点能量。"
+  },
+  {
+    "id": "hauntings",
+    "en": "Hauntings",
+    "zh": "闹鬼",
+    "rarity": "blight",
+    "effect": "敌人战斗开始时获得 1 层虚无。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "holy_water",
+    "en": "Holy Water",
+    "zh": "圣水",
+    "rarity": "boss",
+    "effect": "替代「纯净水」。每场战斗开始时，将 3 张「奇迹」加入手牌。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "horn_cleat",
+    "en": "Horn Cleat",
+    "zh": "系船角",
+    "rarity": "uncommon",
+    "effect": "第 2 回合开始时，获得 14 点格挡。"
+  },
+  {
+    "id": "hovering_kite",
+    "en": "Hovering Kite",
+    "zh": "悬浮风筝",
+    "rarity": "boss",
+    "effect": "每回合第一次弃牌时，获得 1 点能量。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "ice_cream",
+    "en": "Ice Cream",
+    "zh": "冰淇淋",
+    "rarity": "rare",
+    "effect": "能量现在可以保留到后续回合。"
+  },
+  {
+    "id": "incense_burner",
+    "en": "Incense Burner",
+    "zh": "香炉",
+    "rarity": "rare",
+    "effect": "每过 6 个回合，获得 1 层虚无。"
+  },
+  {
+    "id": "ink_bottle",
+    "en": "Ink Bottle",
+    "zh": "墨水瓶",
+    "rarity": "uncommon",
+    "effect": "每打出 10 张牌，抽 1 张牌。"
+  },
+  {
+    "id": "inserter",
+    "en": "Inserter",
+    "zh": "嵌入器",
+    "rarity": "boss",
+    "effect": "每过 2 个回合，获得 1 个球体槽位。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "juzu_bracelet",
+    "en": "Juzu Bracelet",
+    "zh": "数珠手链",
+    "rarity": "common",
+    "effect": "在 ? 房间不再遭遇普通敌人战斗。"
+  },
+  {
+    "id": "kunai",
+    "en": "Kunai",
+    "zh": "苦无",
+    "rarity": "uncommon",
+    "effect": "每当你在单回合内打出 3 张攻击牌，获得 1 点敏捷。"
+  },
+  {
+    "id": "lantern",
+    "en": "Lantern",
+    "zh": "灯笼",
+    "rarity": "common",
+    "effect": "每场战斗的第 1 回合获得 1 点能量。"
+  },
+  {
+    "id": "lees_waffle",
+    "en": "Lee's Waffle",
+    "zh": "李的华夫饼",
+    "rarity": "shop",
+    "effect": "拾取时，最大生命值提高 7 点并回复全部生命。"
+  },
+  {
+    "id": "letter_opener",
+    "en": "Letter Opener",
+    "zh": "裁信刀",
+    "rarity": "uncommon",
+    "effect": "每当你在单回合内打出 3 张技能牌，对所有敌人造成 5 点伤害。"
+  },
+  {
+    "id": "lizard_tail",
+    "en": "Lizard Tail",
+    "zh": "蜥蜴尾巴",
+    "rarity": "rare",
+    "effect": "当你即将死亡时，改为回复至 50% 最大生命值（仅生效一次）。"
+  },
+  {
+    "id": "magic_flower",
+    "en": "Magic Flower",
+    "zh": "魔法花",
+    "rarity": "rare",
+    "effect": "战斗中的治疗效果提高 50%。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "mango",
+    "en": "Mango",
+    "zh": "芒果",
+    "rarity": "rare",
+    "effect": "拾取时，最大生命值提高 14 点。"
+  },
+  {
+    "id": "mark_of_pain",
+    "en": "Mark of Pain",
+    "zh": "痛苦烙印",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。每场战斗开始时，将 2 张「伤口」洗入抽牌堆。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "mark_of_the_bloom",
+    "en": "Mark of the Bloom",
+    "zh": "绽放烙印",
+    "rarity": "event",
+    "effect": "你不再能回复生命。"
+  },
+  {
+    "id": "matryoshka",
+    "en": "Matryoshka",
+    "zh": "套娃",
+    "rarity": "uncommon",
+    "effect": "接下来打开的 2 个非首领宝箱各含 2 件遗物。"
+  },
+  {
+    "id": "maw_bank",
+    "en": "Maw Bank",
+    "zh": "巨颚银行",
+    "rarity": "common",
+    "effect": "每爬 1 层楼，获得 12 金币。在商店花费金币后失效。"
+  },
+  {
+    "id": "meal_ticket",
+    "en": "Meal Ticket",
+    "zh": "餐券",
+    "rarity": "common",
+    "effect": "每次进入商店时，回复 15 点生命。"
+  },
+  {
+    "id": "meat_on_the_bone",
+    "en": "Meat on the Bone",
+    "zh": "骨上的肉",
+    "rarity": "uncommon",
+    "effect": "若战斗结束时你的生命值不高于 50%，回复 12 点生命。"
+  },
+  {
+    "id": "medical_kit",
+    "en": "Medical Kit",
+    "zh": "医疗包",
+    "rarity": "shop",
+    "effect": "不可打出的状态牌现在可以打出。每打出 1 张状态牌，将其消耗。"
+  },
+  {
+    "id": "melange",
+    "en": "Melange",
+    "zh": "梅兰格",
+    "rarity": "shop",
+    "effect": "每次洗抽牌堆时，预见 3 张牌。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "membership_card",
+    "en": "Membership Card",
+    "zh": "会员卡",
+    "rarity": "shop",
+    "effect": "所有商品一律 5 折！"
+  },
+  {
+    "id": "mercury_hourglass",
+    "en": "Mercury Hourglass",
+    "zh": "水银沙漏",
+    "rarity": "uncommon",
+    "effect": "回合开始时，对所有敌人造成 3 点伤害。"
+  },
+  {
+    "id": "mimic_infestation",
+    "en": "Mimic Infestation",
+    "zh": "拟态成灾",
+    "rarity": "blight",
+    "effect": "后续章节的宝箱房被精英战斗取代，精英不再掉落遗物。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "molten_egg",
+    "en": "Molten Egg",
+    "zh": "熔岩蛋",
+    "rarity": "uncommon",
+    "effect": "每当你向卡组加入 1 张攻击牌，将其升级。"
+  },
+  {
+    "id": "mummified_hand",
+    "en": "Mummified Hand",
+    "zh": "木乃伊之手",
+    "rarity": "uncommon",
+    "effect": "每当你打出 1 张能力牌，手牌中 1 张随机牌该回合费用变为 0。"
+  },
+  {
+    "id": "mutagenic_strength",
+    "en": "Mutagenic Strength",
+    "zh": "诱变力量",
+    "rarity": "event",
+    "effect": "每场战斗开始时获得 3 点力量，第一回合结束时失去 3 点力量。"
+  },
+  {
+    "id": "muzzle",
+    "en": "Muzzle",
+    "zh": "口枷",
+    "rarity": "blight",
+    "effect": "你不再能提高最大生命值，所有治疗效果减半。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "nloths_gift",
+    "en": "N'loth's Gift",
+    "zh": "尼洛斯的礼物",
+    "rarity": "event",
+    "effect": "战斗奖励中出现稀有牌的概率提高三倍。"
+  },
+  {
+    "id": "nloths_hungry_face",
+    "en": "N'loth's Hungry Face",
+    "zh": "尼洛斯的饥饿面孔",
+    "rarity": "event",
+    "effect": "你打开的下一个非首领宝箱是空的。"
+  },
+  {
+    "id": "necronomicon",
+    "en": "Necronomicon",
+    "zh": "死灵之书",
+    "rarity": "event",
+    "effect": "每回合内你打出的第一张费用不低于 2 的攻击牌会被额外打出一次。拾取时，获得 1 个特殊诅咒。"
+  },
+  {
+    "id": "neows_lament",
+    "en": "Neow's Lament",
+    "zh": "尼奥的哀悼",
+    "rarity": "event",
+    "effect": "你前 3 场战斗中的敌人只有 1 点生命。"
+  },
+  {
+    "id": "nilrys_codex",
+    "en": "Nilry's Codex",
+    "zh": "尼里的法典",
+    "rarity": "event",
+    "effect": "每回合结束时，可以从 3 张随机牌中选择 1 张洗入抽牌堆。"
+  },
+  {
+    "id": "ninja_scroll",
+    "en": "Ninja Scroll",
+    "zh": "忍者卷轴",
+    "rarity": "uncommon",
+    "effect": "每场战斗开始时，将 3 张「袖剑」加入手牌。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "nuclear_battery",
+    "en": "Nuclear Battery",
+    "zh": "核能电池",
+    "rarity": "boss",
+    "effect": "每场战斗开始时，引导 1 个等离子球。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "nunchaku",
+    "en": "Nunchaku",
+    "zh": "双节棍",
+    "rarity": "common",
+    "effect": "每打出 10 张攻击牌，获得 1 点能量。"
+  },
+  {
+    "id": "odd_mushroom",
+    "en": "Odd Mushroom",
+    "zh": "怪异蘑菇",
+    "rarity": "event",
+    "effect": "当你带有易伤时，受到的攻击伤害提高 25% 而非 50%。"
+  },
+  {
+    "id": "oddly_smooth_stone",
+    "en": "Oddly Smooth Stone",
+    "zh": "光滑卵石",
+    "rarity": "common",
+    "effect": "每场战斗开始时，获得 1 点敏捷。"
+  },
+  {
+    "id": "old_coin",
+    "en": "Old Coin",
+    "zh": "古旧硬币",
+    "rarity": "rare",
+    "effect": "拾取时，获得 300 金币。"
+  },
+  {
+    "id": "omamori",
+    "en": "Omamori",
+    "zh": "御守",
+    "rarity": "common",
+    "effect": "抵消接下来获得的 2 个诅咒。"
+  },
+  {
+    "id": "orange_pellets",
+    "en": "Orange Pellets",
+    "zh": "橙色药丸",
+    "rarity": "shop",
+    "effect": "每当你在同一回合内打出能力牌、攻击牌和技能牌，移除你所有的负面状态。"
+  },
+  {
+    "id": "orichalcum",
+    "en": "Orichalcum",
+    "zh": "山铜",
+    "rarity": "common",
+    "effect": "若回合结束时你没有格挡，获得 6 点格挡。"
+  },
+  {
+    "id": "ornamental_fan",
+    "en": "Ornamental Fan",
+    "zh": "华丽折扇",
+    "rarity": "uncommon",
+    "effect": "每当你在单回合内打出 3 张攻击牌，获得 4 点格挡。"
+  },
+  {
+    "id": "orrery",
+    "en": "Orrery",
+    "zh": "星球仪",
+    "rarity": "shop",
+    "effect": "拾取时，选择 5 张牌加入卡组。"
+  },
+  {
+    "id": "pandoras_box",
+    "en": "Pandora's Box",
+    "zh": "潘多拉魔盒",
+    "rarity": "boss",
+    "effect": "拾取时，变化卡组中所有「打击」和「防御」牌。"
+  },
+  {
+    "id": "pantograph",
+    "en": "Pantograph",
+    "zh": "缩放仪",
+    "rarity": "uncommon",
+    "effect": "首领战斗开始时，回复 25 点生命。"
+  },
+  {
+    "id": "paper_krane",
+    "en": "Paper Krane",
+    "zh": "千纸鹤",
+    "rarity": "uncommon",
+    "effect": "带有虚弱的敌人造成的伤害降低 40%（原为 25%）。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "paper_phrog",
+    "en": "Paper Phrog",
+    "zh": "纸蛙",
+    "rarity": "uncommon",
+    "effect": "带有易伤的敌人受到的攻击伤害提高 75%（原为 50%）。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "peace_pipe",
+    "en": "Peace Pipe",
+    "zh": "和平烟斗",
+    "rarity": "rare",
+    "effect": "现在可以在休息处移除卡组中的牌。"
+  },
+  {
+    "id": "pear",
+    "en": "Pear",
+    "zh": "梨",
+    "rarity": "uncommon",
+    "effect": "拾取时，最大生命值提高 10 点。"
+  },
+  {
+    "id": "pen_nib",
+    "en": "Pen Nib",
+    "zh": "钢笔笔尖",
+    "rarity": "common",
+    "effect": "你每打出的第 10 张攻击牌造成双倍伤害。"
+  },
+  {
+    "id": "philosophers_stone",
+    "en": "Philosopher's Stone",
+    "zh": "贤者之石",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。所有敌人战斗开始时获得 1 点力量。"
+  },
+  {
+    "id": "pocketwatch",
+    "en": "Pocketwatch",
+    "zh": "怀表",
+    "rarity": "rare",
+    "effect": "每当你的回合内只打出 3 张或更少的牌，下回合开始时额外抽 3 张牌。"
+  },
+  {
+    "id": "post_durian",
+    "en": "Post-Durian",
+    "zh": "榴莲之殃",
+    "rarity": "blight",
+    "effect": "失去 50% 最大生命值。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "potion_belt",
+    "en": "Potion Belt",
+    "zh": "药水腰带",
+    "rarity": "common",
+    "effect": "拾取时，获得 2 个药水槽。"
+  },
+  {
+    "id": "prayer_wheel",
+    "en": "Prayer Wheel",
+    "zh": "转经轮",
+    "rarity": "rare",
+    "effect": "普通敌人战斗额外掉落 1 个卡牌奖励。"
+  },
+  {
+    "id": "preserved_insect",
+    "en": "Preserved Insect",
+    "zh": "防腐昆虫",
+    "rarity": "common",
+    "effect": "精英战斗中的敌人生命值降低 25%。"
+  },
+  {
+    "id": "prismatic_shard",
+    "en": "Prismatic Shard",
+    "zh": "棱镜碎片",
+    "rarity": "shop",
+    "effect": "战斗奖励界面现在可能出现无色牌和其他角色的牌。"
+  },
+  {
+    "id": "pure_water",
+    "en": "Pure Water",
+    "zh": "纯净水",
+    "rarity": "starter",
+    "effect": "每场战斗开始时，将 1 张「奇迹」加入手牌。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "question_card",
+    "en": "Question Card",
+    "zh": "疑问卡",
+    "rarity": "uncommon",
+    "effect": "后续的卡牌奖励多 1 张牌可供选择。"
+  },
+  {
+    "id": "red_circlet",
+    "en": "Red Circlet",
+    "zh": "红头环",
+    "rarity": "special",
+    "effect": "你的遗物已经拿完了，真厉害！（因游戏代码 bug 实际无法获得）",
+    "notes": "特殊/纪念遗物。"
+  },
+  {
+    "id": "red_mask",
+    "en": "Red Mask",
+    "zh": "红面具",
+    "rarity": "event",
+    "effect": "每场战斗开始时，对所有敌人施加 1 层虚弱。"
+  },
+  {
+    "id": "red_skull",
+    "en": "Red Skull",
+    "zh": "红骷髅",
+    "rarity": "common",
+    "effect": "生命值不高于 50% 时，获得 3 点额外力量。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "regal_pillow",
+    "en": "Regal Pillow",
+    "zh": "华贵枕头",
+    "rarity": "common",
+    "effect": "每次休息时，额外回复 15 点生命。"
+  },
+  {
+    "id": "ring_of_the_serpent",
+    "en": "Ring of the Serpent",
+    "zh": "巨蛇之环",
+    "rarity": "boss",
+    "effect": "替代「蛇之指环」。回合开始时，额外抽 1 张牌。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "ring_of_the_snake",
+    "en": "Ring of the Snake",
+    "zh": "蛇之指环",
+    "rarity": "starter",
+    "effect": "每场战斗开始时，额外抽 2 张牌。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "runic_capacitor",
+    "en": "Runic Capacitor",
+    "zh": "符文电容",
+    "rarity": "shop",
+    "effect": "每场战斗开始时，额外获得 3 个球体槽位。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "runic_cube",
+    "en": "Runic Cube",
+    "zh": "符文立方体",
+    "rarity": "boss",
+    "effect": "每当你失去生命，抽 1 张牌。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "runic_dome",
+    "en": "Runic Dome",
+    "zh": "符文穹顶",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你不再能看到敌人的意图。"
+  },
+  {
+    "id": "runic_pyramid",
+    "en": "Runic Pyramid",
+    "zh": "符文金字塔",
+    "rarity": "boss",
+    "effect": "回合结束时，不再弃掉手牌。"
+  },
+  {
+    "id": "sacred_bark",
+    "en": "Sacred Bark",
+    "zh": "神圣树皮",
+    "rarity": "boss",
+    "effect": "药水的效果翻倍。"
+  },
+  {
+    "id": "scatterbrain",
+    "en": "Scatterbrain",
+    "zh": "心神涣散",
+    "rarity": "blight",
+    "effect": "每回合少抽 1 张牌。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "self_forming_clay",
+    "en": "Self-Forming Clay",
+    "zh": "自塑之泥",
+    "rarity": "uncommon",
+    "effect": "每当你失去生命，下回合获得 3 点格挡。",
+    "notes": "角色专属：铁甲战士（Ironclad）。"
+  },
+  {
+    "id": "shield_of_blight",
+    "en": "Shield of Blight",
+    "zh": "灾祸之盾",
+    "rarity": "blight",
+    "effect": "敌人生命值提高 50%。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "shovel",
+    "en": "Shovel",
+    "zh": "铲子",
+    "rarity": "rare",
+    "effect": "现在可以在休息处挖掘遗物。"
+  },
+  {
+    "id": "shuriken",
+    "en": "Shuriken",
+    "zh": "手里剑",
+    "rarity": "uncommon",
+    "effect": "每当你在单回合内打出 3 张攻击牌，获得 1 点力量。"
+  },
+  {
+    "id": "singing_bowl",
+    "en": "Singing Bowl",
+    "zh": "歌之碗",
+    "rarity": "uncommon",
+    "effect": "选择卡牌奖励时，可以选择将最大生命值提高 2 点来代替拿牌。"
+  },
+  {
+    "id": "slavers_collar",
+    "en": "Slaver's Collar",
+    "zh": "监工的项圈",
+    "rarity": "boss",
+    "effect": "在首领与精英战斗中，回合开始时获得 1 点额外能量。"
+  },
+  {
+    "id": "sling_of_courage",
+    "en": "Sling of Courage",
+    "zh": "勇气投石索",
+    "rarity": "shop",
+    "effect": "每场精英战斗开始时，获得 2 点力量。"
+  },
+  {
+    "id": "smiling_mask",
+    "en": "Smiling Mask",
+    "zh": "微笑面具",
+    "rarity": "common",
+    "effect": "商人的删牌服务固定只花 50 金币。"
+  },
+  {
+    "id": "snecko_eye",
+    "en": "Snecko Eye",
+    "zh": "蛇眼",
+    "rarity": "boss",
+    "effect": "回合开始时，额外抽 2 张牌。每场战斗开始时陷入「混乱」（手牌费用随机化）。"
+  },
+  {
+    "id": "snecko_skull",
+    "en": "Snecko Skull",
+    "zh": "蛇怪颅骨",
+    "rarity": "common",
+    "effect": "每当你施加中毒时，额外施加 1 层中毒。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "sozu",
+    "en": "Sozu",
+    "zh": "添水",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你不再能获得药水。"
+  },
+  {
+    "id": "spear_of_blight",
+    "en": "Spear of Blight",
+    "zh": "灾祸之矛",
+    "rarity": "blight",
+    "effect": "敌人造成 100% 额外伤害。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "spirit_poop",
+    "en": "Spirit Poop",
+    "zh": "幽灵便便",
+    "rarity": "event",
+    "effect": "它令人很不舒服。（纪念遗物，无实际效果）"
+  },
+  {
+    "id": "ssserpent_head",
+    "en": "Ssserpent Head",
+    "zh": "蛇蛇之首",
+    "rarity": "event",
+    "effect": "每次进入 ? 房间，获得 50 金币。"
+  },
+  {
+    "id": "stone_calendar",
+    "en": "Stone Calendar",
+    "zh": "石头日历",
+    "rarity": "rare",
+    "effect": "第 7 回合结束时，对所有敌人造成 52 点伤害。"
+  },
+  {
+    "id": "strange_spoon",
+    "en": "Strange Spoon",
+    "zh": "奇怪的勺子",
+    "rarity": "shop",
+    "effect": "打出后本应被消耗的牌，改为 50% 概率被消耗、50% 概率被弃置。"
+  },
+  {
+    "id": "strawberry",
+    "en": "Strawberry",
+    "zh": "草莓",
+    "rarity": "common",
+    "effect": "拾取时，最大生命值提高 7 点。"
+  },
+  {
+    "id": "strike_dummy",
+    "en": "Strike Dummy",
+    "zh": "打击木偶",
+    "rarity": "uncommon",
+    "effect": "名字中带有「打击」的牌额外造成 3 点伤害。"
+  },
+  {
+    "id": "sundial",
+    "en": "Sundial",
+    "zh": "日晷",
+    "rarity": "uncommon",
+    "effect": "每洗 3 次抽牌堆，获得 2 点能量。"
+  },
+  {
+    "id": "symbiotic_virus",
+    "en": "Symbiotic Virus",
+    "zh": "共生病毒",
+    "rarity": "uncommon",
+    "effect": "每场战斗开始时，引导 1 个暗影球。",
+    "notes": "角色专属：故障机器人（Defect）。"
+  },
+  {
+    "id": "teardrop_locket",
+    "en": "Teardrop Locket",
+    "zh": "泪滴吊坠",
+    "rarity": "uncommon",
+    "effect": "每场战斗以平静姿态开始。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "the_abacus",
+    "en": "The Abacus",
+    "zh": "算盘",
+    "rarity": "shop",
+    "effect": "每次洗抽牌堆时，获得 6 点格挡。"
+  },
+  {
+    "id": "the_boot",
+    "en": "The Boot",
+    "zh": "靴子",
+    "rarity": "common",
+    "effect": "每当你的攻击牌将造成 4 点或更少的未被格挡伤害时，提高至 5 点。"
+  },
+  {
+    "id": "the_courier",
+    "en": "The Courier",
+    "zh": "快递员",
+    "rarity": "uncommon",
+    "effect": "商人的卡牌、遗物和药水都会重新进货，且所有价格降低 20%。"
+  },
+  {
+    "id": "the_specimen",
+    "en": "The Specimen",
+    "zh": "标本",
+    "rarity": "rare",
+    "effect": "每当有敌人死亡，将其身上的所有中毒转移给 1 个随机敌人。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "thread_and_needle",
+    "en": "Thread and Needle",
+    "zh": "丝线与针",
+    "rarity": "rare",
+    "effect": "每场战斗开始时，获得 4 层板甲。"
+  },
+  {
+    "id": "time_maze",
+    "en": "Time Maze",
+    "zh": "时间迷宫",
+    "rarity": "blight",
+    "effect": "你每回合最多打出 15 张牌。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "tingsha",
+    "en": "Tingsha",
+    "zh": "丁夏铜钹",
+    "rarity": "rare",
+    "effect": "每当你在回合内弃 1 张牌，对 1 个随机敌人造成 3 点伤害。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "tiny_chest",
+    "en": "Tiny Chest",
+    "zh": "小宝箱",
+    "rarity": "common",
+    "effect": "每第 4 个 ? 房间是宝箱房。"
+  },
+  {
+    "id": "tiny_house",
+    "en": "Tiny House",
+    "zh": "小房子",
+    "rarity": "boss",
+    "effect": "拾取时，获得 1 瓶药水、50 金币、5 点最大生命值、1 张卡牌，并升级 1 张随机卡牌。"
+  },
+  {
+    "id": "toolbox",
+    "en": "Toolbox",
+    "zh": "工具箱",
+    "rarity": "shop",
+    "effect": "每场战斗开始时，从 3 张随机无色牌中选择 1 张加入手牌。"
+  },
+  {
+    "id": "torii",
+    "en": "Torii",
+    "zh": "鸟居",
+    "rarity": "rare",
+    "effect": "每当攻击将对你造成 5 点或更少的未被格挡伤害时，将其降低至 1 点。"
+  },
+  {
+    "id": "tough_bandages",
+    "en": "Tough Bandages",
+    "zh": "结实绷带",
+    "rarity": "rare",
+    "effect": "每当你在回合内弃 1 张牌，获得 3 点格挡。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "toxic_egg",
+    "en": "Toxic Egg",
+    "zh": "毒性蛋",
+    "rarity": "uncommon",
+    "effect": "每当你向卡组加入 1 张技能牌，将其升级。"
+  },
+  {
+    "id": "toy_ornithopter",
+    "en": "Toy Ornithopter",
+    "zh": "玩具扑翼机",
+    "rarity": "common",
+    "effect": "每次使用药水，回复 5 点生命。"
+  },
+  {
+    "id": "tungsten_rod",
+    "en": "Tungsten Rod",
+    "zh": "钨棒",
+    "rarity": "rare",
+    "effect": "每当你将失去生命，少失去 1 点。"
+  },
+  {
+    "id": "turnip",
+    "en": "Turnip",
+    "zh": "萝卜",
+    "rarity": "rare",
+    "effect": "你不再会陷入脆弱。"
+  },
+  {
+    "id": "twisted_funnel",
+    "en": "Twisted Funnel",
+    "zh": "扭曲漏斗",
+    "rarity": "shop",
+    "effect": "每场战斗开始时，对所有敌人施加 4 层中毒。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  },
+  {
+    "id": "twisting_mind",
+    "en": "Twisting Mind",
+    "zh": "扭曲心智",
+    "rarity": "blight",
+    "effect": "回合结束时，将 1 张随机状态牌置于抽牌堆顶。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "unceasing_top",
+    "en": "Unceasing Top",
+    "zh": "永动陀螺",
+    "rarity": "rare",
+    "effect": "每当你的回合内手牌为空，抽 1 张牌。"
+  },
+  {
+    "id": "vajra",
+    "en": "Vajra",
+    "zh": "金刚杵",
+    "rarity": "common",
+    "effect": "每场战斗开始时，获得 1 点力量。"
+  },
+  {
+    "id": "velvet_choker",
+    "en": "Velvet Choker",
+    "zh": "天鹅绒颈环",
+    "rarity": "boss",
+    "effect": "回合开始时获得 1 点额外能量。你每回合最多打出 6 张牌。"
+  },
+  {
+    "id": "violet_lotus",
+    "en": "Violet Lotus",
+    "zh": "紫罗兰莲花",
+    "rarity": "boss",
+    "effect": "每当你退出平静姿态，获得 1 点额外能量。",
+    "notes": "角色专属：观者（Watcher）。"
+  },
+  {
+    "id": "void_essence",
+    "en": "Void Essence",
+    "zh": "虚空精粹",
+    "rarity": "blight",
+    "effect": "永久失去 1 点能量（每回合基础能量 -1）。",
+    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
+  },
+  {
+    "id": "war_paint",
+    "en": "War Paint",
+    "zh": "战争涂料",
+    "rarity": "common",
+    "effect": "拾取时，升级 2 张随机技能牌。"
+  },
+  {
+    "id": "warped_tongs",
+    "en": "Warped Tongs",
+    "zh": "扭曲火钳",
+    "rarity": "event",
+    "effect": "回合开始时，升级手牌中的 1 张随机牌（本场战斗内持续有效）。"
+  },
+  {
+    "id": "whetstone",
+    "en": "Whetstone",
+    "zh": "磨刀石",
+    "rarity": "common",
+    "effect": "拾取时，升级 2 张随机攻击牌。"
+  },
+  {
+    "id": "white_beast_statue",
+    "en": "White Beast Statue",
+    "zh": "白兽雕像",
+    "rarity": "uncommon",
+    "effect": "战斗奖励中必定出现药水。"
+  },
+  {
+    "id": "wing_boots",
+    "en": "Wing Boots",
+    "zh": "翔空之靴",
+    "rarity": "rare",
+    "effect": "选择下一个房间时可以无视路径限制，共 3 次。"
+  },
+  {
+    "id": "wrist_blade",
+    "en": "Wrist Blade",
+    "zh": "腕刃",
+    "rarity": "boss",
+    "effect": "费用为 0 的攻击牌额外造成 4 点伤害。",
+    "notes": "角色专属：静默猎手（Silent）。"
+  }
+]

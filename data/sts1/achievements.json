@@ -1,0 +1,434 @@
+{
+  "meta": {
+    "name": "成就 (Achievements)",
+    "name_en": "Achievements",
+    "count": 46,
+    "count_note": "Steam 版共 46 个成就（steamcommunity.com 显示'46 achievements'），与 wiki 数据模块条目数完全一致。",
+    "notes": [
+      "成就仅在未开启 Mod 时解锁；成就只计入存档完成度百分比。",
+      "成就本身不解锁卡牌/遗物（卡牌与遗物解锁由角色击败首领的进度单独驱动），故各条目 reward 均为 null。",
+      "中文名称为社区译名（Steam 成就无官方中文），描述为中文翻译。"
+    ],
+    "sources": [
+      "https://slaythespire.wiki.gg/wiki/Achievements",
+      "https://slaythespire.wiki.gg/wiki/Module:Achievements/data",
+      "https://steamcommunity.com/stats/646570/achievements"
+    ]
+  },
+  "achievements": [
+    {
+      "id": "the_guardian",
+      "en": "The Guardian",
+      "zh": "守护者",
+      "category": "Bosses",
+      "description": "击败第一层首领'守护者'(The Guardian)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_ghost",
+      "en": "The Ghost",
+      "zh": "幽魂",
+      "category": "Bosses",
+      "description": "击败'六火灵'(Hexaghost)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_boss",
+      "en": "The Boss",
+      "zh": "头目",
+      "category": "Bosses",
+      "description": "击败'史莱姆老大'(Slime Boss)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_champion",
+      "en": "The Champion",
+      "zh": "角斗士",
+      "category": "Bosses",
+      "description": "击败'拳王'(The Champ)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_automaton",
+      "en": "The Automaton",
+      "zh": "自动机",
+      "category": "Bosses",
+      "description": "击败'青铜自动机'(Bronze Automaton)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_collector",
+      "en": "The Collector",
+      "zh": "收藏家",
+      "category": "Bosses",
+      "description": "击败'收藏家'(The Collector)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_shapes",
+      "en": "The Shapes",
+      "zh": "塑形者",
+      "category": "Bosses",
+      "description": "击败'多努与德卡'(Donu & Deca)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "ooh_donut",
+      "en": "Ooh Donut!",
+      "zh": "哦甜甜圈！",
+      "category": "Bosses",
+      "description": "用卡牌'吞噬'(Feed)终结多努(Donu)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_crow",
+      "en": "The Crow",
+      "zh": "乌鸦",
+      "category": "Bosses",
+      "description": "击败'觉醒者'(Awakened One)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_time_eater",
+      "en": "The Time Eater",
+      "zh": "时噬者",
+      "category": "Bosses",
+      "description": "击败'噬时者'(Time Eater)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_transient",
+      "en": "The Transient",
+      "zh": "短暂者",
+      "category": "Bosses",
+      "description": "在'短暂者'(Transient)自行消逝前将其击败。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "you_are_nothing",
+      "en": "You Are Nothing",
+      "zh": "你什么都不是",
+      "category": "Bosses",
+      "description": "在第 1 回合内击败一个首领。",
+      "note": "若在第一回合杀死'觉醒者'的第一阶段同样会触发该成就。",
+      "reward": null
+    },
+    {
+      "id": "shrug_it_off",
+      "en": "Shrug it Off",
+      "zh": "毫发无损",
+      "category": "Bosses",
+      "description": "以剩余 1 点生命赢得一场战斗。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "perfect",
+      "en": "Perfect",
+      "zh": "完美",
+      "category": "Bosses",
+      "description": "击败首领且未受到任何伤害。",
+      "note": "受到 HP 损失类效果仍会触发；不会在'心之绽放'(Mind Bloom)事件的第一层首领战触发。",
+      "reward": null
+    },
+    {
+      "id": "ascend_0",
+      "en": "Ascend 0",
+      "zh": "飞升 0",
+      "category": "Ascension",
+      "description": "解锁进阶(Ascension)模式。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "ascend_10",
+      "en": "Ascend 10",
+      "zh": "飞升 10",
+      "category": "Ascension",
+      "description": "完成进阶等级 10。",
+      "note": "进阶10：每局开始时卡组中加入一张'登塔者之殇'(Ascender's Bane)。",
+      "reward": null
+    },
+    {
+      "id": "ascend_20",
+      "en": "Ascend 20",
+      "zh": "飞升 20",
+      "category": "Ascension",
+      "description": "完成进阶等级 20。",
+      "note": "进阶20：第三层末将连续与两个首领战斗。",
+      "reward": null
+    },
+    {
+      "id": "ruby",
+      "en": "Ruby",
+      "zh": "红宝石",
+      "category": "Characters",
+      "description": "用铁甲战士(Ironclad)通关游戏。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "ruby_plus",
+      "en": "Ruby+",
+      "zh": "红宝石+",
+      "category": "Characters",
+      "description": "用铁甲战士(Ironclad)完成结局(Ending，击杀腐化之心)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "emerald",
+      "en": "Emerald",
+      "zh": "翡翠",
+      "category": "Characters",
+      "description": "用寂静猎手(Silent)通关游戏。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "emerald_plus",
+      "en": "Emerald+",
+      "zh": "翡翠+",
+      "category": "Characters",
+      "description": "用寂静猎手(Silent)完成结局。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "sapphire",
+      "en": "Sapphire",
+      "zh": "蓝宝石",
+      "category": "Characters",
+      "description": "用故障机器人(Defect)通关游戏。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "sapphire_plus",
+      "en": "Sapphire+",
+      "zh": "蓝宝石+",
+      "category": "Characters",
+      "description": "用故障机器人(Defect)完成结局。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "amethyst",
+      "en": "Amethyst",
+      "zh": "紫水晶",
+      "category": "Characters",
+      "description": "用观者(Watcher)通关游戏。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "amethyst_plus",
+      "en": "Amethyst+",
+      "zh": "紫水晶+",
+      "category": "Characters",
+      "description": "用观者(Watcher)完成结局。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_end",
+      "en": "The End?",
+      "zh": "终局？",
+      "category": "Characters",
+      "description": "分别用铁甲战士、寂静猎手、故障机器人完成结局(Ending)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "adrenaline",
+      "en": "Adrenaline",
+      "zh": "肾上腺素",
+      "category": "Effects",
+      "description": "在单场战斗的某一回合内持有 9 点能量。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "plague",
+      "en": "Plague",
+      "zh": "瘟疫",
+      "category": "Effects",
+      "description": "在单场战斗中用毒素(Poison)击杀 3 名敌人。",
+      "note": "Steam 描述为 3 名敌人；wiki 数据模块写为 2 名，以 Steam/游戏实际为准。",
+      "reward": null
+    },
+    {
+      "id": "catalyst",
+      "en": "Catalyst",
+      "zh": "催化剂",
+      "category": "Effects",
+      "description": "对单个敌人施加 99 层或以上毒素(Poison)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "powerful",
+      "en": "Powerful",
+      "zh": "强大",
+      "category": "Effects",
+      "description": "战斗中同时持有 10 个或以上增益(Buff)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "impervious",
+      "en": "Impervious",
+      "zh": "铜墙铁壁",
+      "category": "Effects",
+      "description": "战斗中持有 99 点或以上格挡(Block)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "barricaded",
+      "en": "Barricaded",
+      "zh": "壁垒森严",
+      "category": "Effects",
+      "description": "战斗中持有 999 点格挡(Block)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "jaxxed",
+      "en": "Jaxxed",
+      "zh": "杰克斯之力",
+      "category": "Effects",
+      "description": "战斗中持有 50 点或以上力量(Strength)。",
+      "note": "成就名源自卡牌'杰克斯之鞋'(Jax Shoes)。",
+      "reward": null
+    },
+    {
+      "id": "focused",
+      "en": "Focused",
+      "zh": "专注",
+      "category": "Effects",
+      "description": "战斗中持有 25 点或以上集中(Focus)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "neon",
+      "en": "Neon",
+      "zh": "霓虹",
+      "category": "Effects",
+      "description": "在单回合内引导(Channel) 9 个等离子(Plasma)充能球。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "come_at_me",
+      "en": "Come At Me",
+      "zh": "来打我啊",
+      "category": "Cards",
+      "description": "不打出任何攻击(Attack)卡赢得一场战斗。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "the_pact",
+      "en": "The Pact",
+      "zh": "契约",
+      "category": "Cards",
+      "description": "在单场战斗中消耗(Exhaust) 20 张卡牌。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "ninja",
+      "en": "Ninja",
+      "zh": "忍者",
+      "category": "Cards",
+      "description": "在单回合内打出 10 张'小刀'(Shiv)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "infinity",
+      "en": "Infinity",
+      "zh": "无限",
+      "category": "Cards",
+      "description": "在单回合内打出 25 张卡牌。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "purity",
+      "en": "Purity",
+      "zh": "纯净",
+      "category": "Cards",
+      "description": "手牌、抽牌堆与弃牌堆的合计卡牌数为 3 张或以下。",
+      "note": "仅在 3 层以上触发；不在手牌/抽牌堆/弃牌堆中的卡（如'周密计划'暂存的卡）不计入。",
+      "reward": null
+    },
+    {
+      "id": "minimalist",
+      "en": "Minimalist",
+      "zh": "极简主义",
+      "category": "Cards",
+      "description": "以 5 张或更少的卡组通关。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "common_sense",
+      "en": "Common Sense",
+      "zh": "常识",
+      "category": "Cards",
+      "description": "卡组中不含任何罕见(Uncommon)或稀有(Rare)卡牌时通关。",
+      "note": "特殊(Special)卡如'咬'(Bite)、'仪式匕首'(Ritual Dagger)不影响达成；仅在胜利结算时检查卡组，战斗中途（如药水）加入的卡不计。",
+      "reward": null
+    },
+    {
+      "id": "who_needs_relics",
+      "en": "Who Needs Relics?",
+      "zh": "谁还需要遗物？",
+      "category": "Other",
+      "description": "只持有 1 件遗物通关。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "my_lucky_day",
+      "en": "My Lucky Day",
+      "zh": "我的幸运日",
+      "category": "Other",
+      "description": "赢下一次每日挑战(Daily Climb)。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "eternal_one",
+      "en": "Eternal One",
+      "zh": "永恒者",
+      "category": "Other",
+      "description": "获得其余全部成就。",
+      "note": null,
+      "reward": null
+    },
+    {
+      "id": "speed_climber",
+      "en": "Speed Climber",
+      "zh": "极速攀登者",
+      "category": "Other",
+      "description": "在 20 分钟内通关。",
+      "note": null,
+      "reward": null
+    }
+  ]
+}

@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "akabeko",
+    "en": "Akabeko",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, gain 8 Vigor.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "alchemical_coffer",
+    "en": "Alchemical Coffer",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 4 potion slots filled with random potions.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "amethyst_aubergine",
+    "en": "Amethyst Aubergine",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Enemies drop 15 additional Gold.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "anchor",
+    "en": "Anchor",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with 10 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "arcane_scroll",
+    "en": "Arcane Scroll",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain a random Rare Card to add to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "archaic_tooth",
+    "en": "Archaic Tooth",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Transform StringValue:cond:? into ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "art_of_war",
+    "en": "Art of War",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "If you do not play any Attacks during your turn, gain an additional 1 next turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "astrolabe",
+    "en": "Astrolabe",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Transform 3 lural:card, then Upgrade them.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "bag_of_marbles",
+    "en": "Bag of Marbles",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "bag_of_preparation",
+    "en": "Bag of Preparation",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, draw 2 additional lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "beating_remnant",
+    "en": "Beating Remnant",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "You cannot lose more than 20 HP in a single turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "beautiful_bracelet",
+    "en": "Beautiful Bracelet",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, choose 3 lural:card in your Deck. Enchant them with Swift 3.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "bellows",
+    "en": "Bellows",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first Hand you draw each combat is Upgraded.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "belt_buckle",
+    "en": "Belt Buckle",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "While you have no potions, you have 2 additional Dexterity.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "big_hat",
+    "en": "Big Hat",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of each combat, add 2 random Ethereal lural:card into your Hand.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "big_mushroom",
+    "en": "Big Mushroom",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Upon pickup, raise your Max HP by 20. At the start of each combat, draw 2 fewer lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "biiig_hug",
+    "en": "Biiig Hug",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 4 cards from your Deck. Whenever you shuffle your Draw Pile, add a Soot into your Draw Pile.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "bing_bong",
+    "en": "Bing Bong",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you add a card to your Deck, add one additional copy.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "black_blood",
+    "en": "Black Blood",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the end of combat, heal 12 HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "black_star",
+    "en": "Black Star",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Elites drop an additional Relic when defeated.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "blessed_antler",
+    "en": "Blessed Antler",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. At the start of each combat, shuffle 3 Dazed into your Draw Pile.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "blood_soaked_rose",
+    "en": "Blood-Soaked Rose",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 1 Enthralled to your Deck. Gain 1 at the start of each turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "blood_vial",
+    "en": "Blood Vial",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, heal 2 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "bone_flute",
+    "en": "Bone Flute",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Whenever Osty attacks, gain 2 Block.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "bone_tea",
+    "en": "Bone Tea",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of the next lural:combat, Upgrade your starting hand.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "book_of_five_rings",
+    "en": "Book of Five Rings",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Every 5 lural:card you add to your Deck, heal 20 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "book_repair_knife",
+    "en": "Book Repair Knife",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever a non-Minion enemy dies to Doom, heal 3 HP.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "bookmark",
+    "en": "Bookmark",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the end of each turn, lower the cost of a random Retained card by 1 until played.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "booming_conch",
+    "en": "Booming Conch",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of Elite combats, draw 2 additional lural:card and gain 1.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "bound_phylactery",
+    "en": "Bound Phylactery",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of your turn, Summon 1.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "bowler_hat",
+    "en": "Bowler Hat",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 1.25% additional Gold.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "bread",
+    "en": "Bread",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "At the start of your first turn, lose LoseEnergy:energyIcons(). At the start of all other turns, gain GainEnergy:energyIcons().",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "brilliant_scarf",
+    "en": "Brilliant Scarf",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "The 5th card you play from your hand each turn is free.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "brimstone",
+    "en": "Brimstone",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "At the start of your turn, gain ? Strength and ALL enemies gain ? Strength.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "bronze_scales",
+    "en": "Bronze Scales",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with 3 Thorns.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "burning_blood",
+    "en": "Burning Blood",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the end of combat, heal 6 HP.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "burning_sticks",
+    "en": "Burning Sticks",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "The first time each combat you Exhaust a Skill, add a copy of it into your Hand.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "byrdpip",
+    "en": "Byrdpip",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Upon pickup, gain the card Byrd Swoop. A Byrdpip will accompany you in battles.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "calling_bell",
+    "en": "Calling Bell",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain a unique Curse and 3 Relics.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "candelabra",
+    "en": "Candelabra",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of your 2nd turn, gain 2.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "captains_wheel",
+    "en": "Captain's Wheel",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of your 3rd turn, gain 18 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "cauldron",
+    "en": "Cauldron",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, brews 5 random lural:potion.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "centennial_puzzle",
+    "en": "Centennial Puzzle",
+    "zh": null,
+    "rarity": "common",
+    "effect": "The first time you lose HP each combat, draw 3 lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "chandelier",
+    "en": "Chandelier",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of your 3rd turn, gain 3.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "charons_ashes",
+    "en": "Charon's Ashes",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you Exhaust a card, deal 3 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "chemical_x",
+    "en": "Chemical X",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "The effects of your cost X cards are increased by 2.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "choices_paradox",
+    "en": "Choices Paradox",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of each combat, add 1 of 5 random cards into your Hand. Add Retain to the chosen card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "chosen_cheese",
+    "en": "The Chosen Cheese",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the end of combat, gain 1 Max HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "claws",
+    "en": "Claws",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Transform up to 6 lural:card into Maul.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "cloak_clasp",
+    "en": "Cloak Clasp",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the end of your turn, gain 1 Block for each card in your Hand.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "cracked_core",
+    "en": "Cracked Core",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, Channel 1 Lightning.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "crossbow",
+    "en": "Crossbow",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, add a random Attack into your Hand. It's free to play this turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "cursed_pearl",
+    "en": "Cursed Pearl",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, receive Greed. Gain 333 Gold.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "darkstone_periapt",
+    "en": "Darkstone Periapt",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you obtain a Curse, raise your Max HP by 6.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "data_disk",
+    "en": "Data Disk",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with 1 Focus.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "daughter_of_the_wind",
+    "en": "Daughter of the Wind",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you play an Attack, gain 1 Block.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "delicate_frond",
+    "en": "Delicate Frond",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of each combat, fill all empty potion slots with random potions.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "demon_tongue",
+    "en": "Demon Tongue",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first time you lose HP on your turn, heal HP equal to the amount lost.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "diamond_diadem",
+    "en": "Diamond Diadem",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Whenever you play 2 or fewer cards in a turn, take half damage from enemies.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "dingy_rug",
+    "en": "Dingy Rug",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Card rewards can now contain Colorless cards.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "distinguished_cape",
+    "en": "Distinguished Cape",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, lose 9 Max HP. Add 3 lural:Apparition to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "divine_destiny",
+    "en": "Divine Destiny",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, gain 6.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "divine_right",
+    "en": "Divine Right",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, gain 3.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "dollys_mirror",
+    "en": "Dolly's Mirror",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, obtain an additional copy of a card in your Deck.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "dragon_fruit",
+    "en": "Dragon Fruit",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Whenever you gain Gold, raise your Max HP by 1.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "dream_catcher",
+    "en": "Dream Catcher",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you Rest, you may add a card to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "driftwood",
+    "en": "Driftwood",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "You may reroll each card reward once.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "dusty_tome",
+    "en": "Dusty Tome",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain StringValue:cond:?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "ectoplasm",
+    "en": "Ectoplasm",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "You can no longer gain Gold. Gain 1 at the start of each turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "electric_shrymp",
+    "en": "Electric Shrymp",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Enchant a Skill with Imbued.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "ember_tea",
+    "en": "Ember Tea",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of the next lural:combat, gain 2 Strength.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "emotion_chip",
+    "en": "Emotion Chip",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "empty_cage",
+    "en": "Empty Cage",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 2 lural:card from your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "eternal_feather",
+    "en": "Eternal Feather",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "For every lural:card in your Deck, heal 3 HP whenever you enter a Rest Site.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "fake_anchor",
+    "en": "Anchor???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Start each combat with 4 Block.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_blood_vial",
+    "en": "Blood Vial???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of each combat, heal 1 HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_happy_flower",
+    "en": "Happy Flower???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Every 5 lural:turn, gain 1.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_lees_waffle",
+    "en": "Lee's Waffle???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Upon pickup, heal 10% of your HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_mango",
+    "en": "Mango???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Upon pickup, raise your Max HP by 3.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_merchants_rug",
+    "en": "The Merchant's Rug???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Poor imitation. Does nothing.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_orichalcum",
+    "en": "Orichalcum???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "If you end your turn without Block, gain 3 Block.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_snecko_eye",
+    "en": "Snecko Eye???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Start each combat Confused.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_strike_dummy",
+    "en": "Strike Dummy???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Cards containing “Strike” deal 1 additional damage.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fake_venerable_tea_set",
+    "en": "Venerable Tea Set???",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 1.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fencing_manual",
+    "en": "Fencing Manual",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, Forge 10.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "festive_popper",
+    "en": "Festive Popper",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, deal 9 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "fiddle",
+    "en": "Fiddle",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of each turn, draw 2 additional lural:card. You may not draw cards during your turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fishing_rod",
+    "en": "Fishing Rod",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Every lural:normal combat, Upgrade a random card in your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "forgotten_soul",
+    "en": "Forgotten Soul",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you Exhaust a card, deal 1 damage to a random enemy.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fragrant_mushroom",
+    "en": "Fragrant Mushroom",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Upon pickup, lose 15 HP and Upgrade 2 random lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "fresnel_lens",
+    "en": "Fresnel Lens",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you add a card that gains Block to your Deck, Enchant it with Nimble 2.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "frozen_egg",
+    "en": "Frozen Egg",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you add a Power into your Deck, Upgrade it.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "funerary_mask",
+    "en": "Funerary Mask",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, add 3 lural:Soul into your Draw Pile.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "fur_coat",
+    "en": "Fur Coat",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, mark 7 random combats. Enemies in those rooms have 1 HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "galactic_dust",
+    "en": "Galactic Dust",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "For every 10 1 Star spent, gain 10 Block.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "gambling_chip",
+    "en": "Gambling Chip",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of each combat, discard any number of cards then draw that many.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "game_piece",
+    "en": "Game Piece",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play a Power, draw 1 lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "ghost_seed",
+    "en": "Ghost Seed",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Strikes and Defends gain Ethereal.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "girya",
+    "en": "Girya",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "You can now gain Strength at Rest Sites. (3 times max)",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "glass_eye",
+    "en": "Glass Eye",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain 2 Common cards, 2 Uncommon cards, and 1 Rare card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "glitter",
+    "en": "Glitter",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Enchant all card rewards with Glam.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "gnarled_hammer",
+    "en": "Gnarled Hammer",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, Enchant up to 3 lural:Attack with Sharp 3.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "gold_plated_cables",
+    "en": "Gold-Plated Cables",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Your rightmost Orb triggers its passive an additional time.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "golden_compass",
+    "en": "Golden Compass",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, replace the Act 2 Map with a single special path.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "golden_pearl",
+    "en": "Golden Pearl",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 150 Gold.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "gorget",
+    "en": "Gorget",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, gain 4 Plating.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "gremlin_horn",
+    "en": "Gremlin Horn",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever an enemy dies, gain 1 and draw 1 lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "hand_drill",
+    "en": "Hand Drill",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you break an enemy's Block, apply 2 Vulnerable.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "happy_flower",
+    "en": "Happy Flower",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Every 3 lural:turn, gain 1.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "hefty_tablet",
+    "en": "Hefty Tablet",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, choose 1 of 3 Rare cards to add to your Deck, and add 1 Injury to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "helical_dart",
+    "en": "Helical Dart",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play a Shiv, gain 1 Dexterity this turn.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "history_course",
+    "en": "History Course",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of your turn, play a copy of your last played Attack or Skill.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "horn_cleat",
+    "en": "Horn Cleat",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of your 2nd turn, gain 14 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "ice_cream",
+    "en": "Ice Cream",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Energy is now conserved between turns.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "infused_core",
+    "en": "Infused Core",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, Channel 3 Lightning. Lightning deals 1 additional damage.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "intimidating_helmet",
+    "en": "Intimidating Helmet",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play a card that costs 2 or more, gain 4 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "iron_club",
+    "en": "Iron Club",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Every 4 lural:card you play, draw 1 card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "ivory_tile",
+    "en": "Ivory Tile",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play a card that costs EnergyThreshold:energyIcons() or more, gain 1.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "jeweled_mask",
+    "en": "Jeweled Mask",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of each combat, put a random Power from your Draw Pile into your Hand. It's free to play this combat.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "jewelry_box",
+    "en": "Jewelry Box",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 1 Apotheosis to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "joss_paper",
+    "en": "Joss Paper",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every 5 times you Exhaust a card, draw 1 lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "juzu_bracelet",
+    "en": "Juzu Bracelet",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Regular enemy combats are no longer encountered in ? rooms.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "kaleidoscope",
+    "en": "Kaleidoscope",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain 2 lural:card reward from other characters.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "kifuda",
+    "en": "Kifuda",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, Enchant up to 3 lural:card with Adroit.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "kunai",
+    "en": "Kunai",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Every time you play 3 Attacks in a single turn, gain 1 Dexterity.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "kusarigama",
+    "en": "Kusarigama",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every time you play 3 lural:Attack in a single turn, deal 6 damage to a random enemy.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lantern",
+    "en": "Lantern",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with an additional 1.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "large_capsule",
+    "en": "Large Capsule",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain ? random lural:Relic. Add an additional Strike and Defend to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lasting_candy",
+    "en": "Lasting Candy",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every other combat, your card rewards gain an additional Power.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lava_lamp",
+    "en": "Lava Lamp",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "At the end of combat, Upgrade all card rewards if you took no damage.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lava_rock",
+    "en": "Lava Rock",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "The Act 1 Boss drops 2 Relics.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lead_paperweight",
+    "en": "Lead Paperweight",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "leafy_poultice",
+    "en": "Leafy Poultice",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lees_waffle",
+    "en": "Lee's Waffle",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, raise your Max HP by 7 and heal all of your HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "letter_opener",
+    "en": "Letter Opener",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every time you play 3 lural:Skill in a single turn, deal 5 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lizard_tail",
+    "en": "Lizard Tail",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "When your HP would be reduced to 0, heal to 50% of your Max HP instead (works once).",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "looming_fruit",
+    "en": "Looming Fruit",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, raise your Max HP by 31.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lords_parasol",
+    "en": "Lord's Parasol",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "When you encounter the Merchant, immediately obtain EVERYTHING he sells.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lost_coffer",
+    "en": "Lost Coffer",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 1 card reward and procure 1 random potion.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lost_wisp",
+    "en": "Lost Wisp",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you play a Power, deal 8 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "lucky_fysh",
+    "en": "Lucky Fysh",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you add a card to your Deck, gain 15 Gold.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "lunar_pastry",
+    "en": "Lunar Pastry",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the end of your turn, gain 1.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "mango",
+    "en": "Mango",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Upon pickup, raise your Max HP by 14.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "massive_scroll",
+    "en": "Massive Scroll",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "maw_bank",
+    "en": "Maw Bank",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you climb a floor, gain 12 Gold. No longer works when you spend any Gold at the shop.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "meal_ticket",
+    "en": "Meal Ticket",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Whenever you enter a shop room, heal 15 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "meat_cleaver",
+    "en": "Meat Cleaver",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "You may Cook at Rest Sites.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "meat_on_the_bone",
+    "en": "Meat on the Bone",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "If your HP is at or below 50% at the end of combat, heal 12 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "membership_card",
+    "en": "Membership Card",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "50% discount on all products!",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "mercury_hourglass",
+    "en": "Mercury Hourglass",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of your turn, deal 3 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "metronome",
+    "en": "Metronome",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first time you Channel 7 Orbs each combat, deal 30 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "mini_regent",
+    "en": "Mini Regent",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first time you spend 1 Star each turn, gain 1 Strength.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "miniature_cannon",
+    "en": "Miniature Cannon",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Upgraded Attacks deal 3 additional damage.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "miniature_tent",
+    "en": "Miniature Tent",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "You may choose any number of options at Rest Sites.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "molten_egg",
+    "en": "Molten Egg",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you add an Attack card to your Deck, Upgrade it.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "mr_struggles",
+    "en": "Mr. Struggles",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of your turn, deal damage equal to the turn number to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "mummified_hand",
+    "en": "Mummified Hand",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play a Power, a random card in your Hand is free to play that turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "music_box",
+    "en": "Music Box",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Create an Ethereal copy of the first Attack you play each turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "mystic_lighter",
+    "en": "Mystic Lighter",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Enchanted Attacks deal 9 additional damage.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "neows_bones",
+    "en": "Neow's Bones",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 2 random Neow lural:Relic. Add 1 random lural:Curse to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "neows_talisman",
+    "en": "Neow's Talisman",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "neows_torment",
+    "en": "Neow's Torment",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 1 Neow's Fury to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "new_leaf",
+    "en": "New Leaf",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Transform 1 lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "ninja_scroll",
+    "en": "Ninja Scroll",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "At the start of each combat, add 3 lural:Shiv into your Hand.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "nunchaku",
+    "en": "Nunchaku",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every time you play 10 Attacks, gain 1.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "nutritious_oyster",
+    "en": "Nutritious Oyster",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, raise your Max HP by 11.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "nutritious_soup",
+    "en": "Nutritious Soup",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "oddly_smooth_stone",
+    "en": "Oddly Smooth Stone",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with 1 Dexterity.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "old_coin",
+    "en": "Old Coin",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Upon pickup, gain 300 Gold.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "orange_dough",
+    "en": "Orange Dough",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of each combat, add 2 random Colorless lural:card into your Hand.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "orichalcum",
+    "en": "Orichalcum",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "If you end your turn without Block, gain 6 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "ornamental_fan",
+    "en": "Ornamental Fan",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every time you play 3 Attacks in a single turn, gain 4 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "orrery",
+    "en": "Orrery",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, gain 5 card lural:reward.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "paels_blood",
+    "en": "Pael's Blood",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, draw 1 additional lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_claw",
+    "en": "Pael's Claw",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Enchant all Defends with ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "paels_eye",
+    "en": "Pael's Eye",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "The first time each combat you end your turn without playing cards, Exhaust your Hand, and take an extra turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_flesh",
+    "en": "Pael's Flesh",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain an additional 1 at the start of your 3rd turn, and every turn after that.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_growth",
+    "en": "Pael's Growth",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Enchant a card with ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "paels_horn",
+    "en": "Pael's Horn",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 2 Relax to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_legion",
+    "en": "Pael's Legion",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Doubles Block gained from a card, then goes to sleep for 2 lural:turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_tears",
+    "en": "Pael's Tears",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "If you end your turn with unspent energyPrefix:energyIcons(1), gain an additional 2 next turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "paels_tooth",
+    "en": "Pael's Tooth",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 5 lural:card from your Deck. After each combat, randomly add 1 back Upgraded.?",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "paels_wing",
+    "en": "Pael's Wing",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "You may sacrifice card rewards to Pael. Every lural:sacrifice, obtain a Relic.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "pandoras_box",
+    "en": "Pandora's Box",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Transform ALL Strikes and Defends.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "pantograph",
+    "en": "Pantograph",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each Boss combat, heal 25 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "paper_krane",
+    "en": "Paper Krane",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Enemies with Weak deal 40% less damage to you rather than 25%.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "paper_phrog",
+    "en": "Paper Phrog",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Enemies with Vulnerable take 75% more damage rather than 50%.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "parrying_shield",
+    "en": "Parrying Shield",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "If you end a turn with at least 10 Block, deal 6 damage to a random enemy.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "pear",
+    "en": "Pear",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Upon pickup, raise your Max HP by 10.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "pen_nib",
+    "en": "Pen Nib",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every 10th Attack you play deals double damage.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "pendulum",
+    "en": "Pendulum",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Every 3 lural:turn, draw 1 lural:card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "permafrost",
+    "en": "Permafrost",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "The first time you play a Power each combat, gain 7 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "petrified_toad",
+    "en": "Petrified Toad",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, procure a Potion-Shaped Rock.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "phial_holster",
+    "en": "Phial Holster",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 1 potion lural:slot and procure 2 random lural:potion.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "philosophers_stone",
+    "en": "Philosopher's Stone",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. ALL enemies start combat with 1 Strength.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "phylactery_unbound",
+    "en": "Phylactery Unbound",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, Summon ?. At the start of your turn, Summon ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "planisphere",
+    "en": "Planisphere",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you enter a ? room, heal 5 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "pocketwatch",
+    "en": "Pocketwatch",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you play 3 or fewer lural:card during your turn, draw 3 additional lural:card at the start of your next turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "pollinous_core",
+    "en": "Pollinous Core",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Every 4 lural:turn, draw 2 additional lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "pomander",
+    "en": "Pomander",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Upgrade a card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "potion_belt",
+    "en": "Potion Belt",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Upon pickup, gain 2 potion lural:slot.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "power_cell",
+    "en": "Power Cell",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of each combat, add 2 zero-cost cards from your Draw Pile into your Hand.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "prayer_wheel",
+    "en": "Prayer Wheel",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Normal enemies drop an additional card reward.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "precarious_shears",
+    "en": "Precarious Shears",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 2 lural:card from your Deck and lose 16 HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "precise_scissors",
+    "en": "Precise Scissors",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 1 lural:card from your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "preserved_fog",
+    "en": "Preserved Fog",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, remove 3 lural:card from your Deck. Add Folly to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "prismatic_gem",
+    "en": "Prismatic Gem",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. Card rewards now contain cards from other colors.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "pumpkin_candle",
+    "en": "Pumpkin Candle",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. Extinguishes after 5 combats. Can be Kindled at Rest Sites.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "punch_dagger",
+    "en": "Punch Dagger",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, Enchant an Attack with Momentum 5.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "radiant_pearl",
+    "en": "Radiant Pearl",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of each combat, add 1 lural:Luminesce into your Hand.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "rainbow_ring",
+    "en": "Rainbow Ring",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first time you play an Attack, Skill, and Power each turn, gain 1 Strength and 1 Dexterity.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "razor_tooth",
+    "en": "Razor Tooth",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Every time you play an Attack or Skill, Upgrade it for the remainder of combat.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "red_mask",
+    "en": "Red Mask",
+    "zh": null,
+    "rarity": "common",
+    "effect": "At the start of each combat, apply 1 Weak to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "red_skull",
+    "en": "Red Skull",
+    "zh": null,
+    "rarity": "common",
+    "effect": "While your HP is at or below 50%, you have 3 additional Strength.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "regal_pillow",
+    "en": "Regal Pillow",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Whenever you Rest, heal an additional 15 HP.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "regalite",
+    "en": "Regalite",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you create a card, gain 2 Block.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "reptile_trinket",
+    "en": "Reptile Trinket",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you use a potion, gain 3 Strength this turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "ring_of_the_drake",
+    "en": "Ring of the Drake",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of your first lural:turn, draw 2 additional lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "ring_of_the_snake",
+    "en": "Ring of the Snake",
+    "zh": null,
+    "rarity": "starter",
+    "effect": "At the start of each combat, draw 2 additional lural:card.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "ringing_triangle",
+    "en": "Ringing Triangle",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Retain your Hand on the first turn of combat.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "ripple_basin",
+    "en": "Ripple Basin",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "If you did not play any Attacks during your turn, gain 4 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "royal_poison",
+    "en": "Royal Poison",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of each combat, lose 4 HP.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "royal_stamp",
+    "en": "Royal Stamp",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "ruined_helmet",
+    "en": "Ruined Helmet",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The first time you gain Strength each combat, double the amount gained.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "runic_capacitor",
+    "en": "Runic Capacitor",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Start each combat with 3 additional Orb Slots.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "runic_pyramid",
+    "en": "Runic Pyramid",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the end of your turn, you no longer discard your Hand.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sai",
+    "en": "Sai",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, gain 7 Block.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sand_castle",
+    "en": "Sand Castle",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Upgrade 6 random lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "screaming_flagon",
+    "en": "Screaming Flagon",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "If you end your turn with no cards in your Hand, deal 20 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "scroll_boxes",
+    "en": "Scroll Boxes",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sea_glass",
+    "en": "Sea Glass",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "See 15 cards from StringValue:cond:?. Choose any number of them to add to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "seal_of_gold",
+    "en": "Seal of Gold",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, spend 5 Gold to gain 1.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "self_forming_clay",
+    "en": "Self-Forming Clay",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you lose HP in combat, gain 3 Block next turn.",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "sere_talon",
+    "en": "Sere Talon",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 2 random Curses and 3 Wishes to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "shovel",
+    "en": "Shovel",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "You can now dig at Rest Sites to obtain a random Relic.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "shuriken",
+    "en": "Shuriken",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Every time you play 3 Attacks in a single turn, gain 1 Strength.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "signet_ring",
+    "en": "Signet Ring",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, gain 999 Gold.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "silken_tress",
+    "en": "Silken Tress",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "silver_crucible",
+    "en": "Silver Crucible",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "The first 3 card rewards you see are Upgraded. The first Treasure Chest you open is empty.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sling_of_courage",
+    "en": "Sling of Courage",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Start each Elite combat with 2 Strength.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "small_capsule",
+    "en": "Small Capsule",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain a random Relic.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "snecko_eye",
+    "en": "Snecko Eye",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, draw 2 additional lural:card. Start each combat Confused.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "snecko_skull",
+    "en": "Snecko Skull",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Whenever you apply Poison, apply an additional 1 Poison.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "sozu",
+    "en": "Sozu",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. You can no longer obtain potions.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sparkling_rouge",
+    "en": "Sparkling Rouge",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of your 3rd turn, gain 1 Strength and 1 Dexterity.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "spiked_gauntlets",
+    "en": "Spiked Gauntlets",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. Powers cost 1 more energyPrefix:energyIcons(1).",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "stone_calendar",
+    "en": "Stone Calendar",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the end of turn 7, deal 52 damage to ALL enemies.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "stone_cracker",
+    "en": "Stone Cracker",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, Upgrade 2 random lural:card in your Draw Pile for the rest of combat.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "stone_humidifier",
+    "en": "Stone Humidifier",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Whenever you Rest at a Rest Site, raise your Max HP by 5.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "storybook",
+    "en": "Storybook",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 1 Brightest Flame to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "strawberry",
+    "en": "Strawberry",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Upon pickup, raise your Max HP by 7.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "strike_dummy",
+    "en": "Strike Dummy",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Cards containing “Strike” deal 3 additional damage.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "sturdy_clamp",
+    "en": "Sturdy Clamp",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Up to 10 Block persists across turns.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "sword_of_jade",
+    "en": "Sword of Jade",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Start each combat with 3 Strength.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "sword_of_stone",
+    "en": "Sword of Stone",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Transforms into a powerful Relic after defeating 5 lural:Elite.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "symbiotic_virus",
+    "en": "Symbiotic Virus",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, Channel 1 Dark.",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "tanxs_whistle",
+    "en": "Tanx's Whistle",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, add 1 Whistle to your Deck.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "tea_of_discourtesy",
+    "en": "Tea of Discourtesy",
+    "zh": null,
+    "rarity": "event",
+    "effect": "At the start of the next combat, shuffle 2 Dazed into your Draw Pile.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "the_abacus",
+    "en": "The Abacus",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Whenever you shuffle your Draw Pile, gain 6 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "the_boot",
+    "en": "The Boot",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Whenever you would deal 4 or less unblocked attack damage, increase it to 5.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "the_courier",
+    "en": "The Courier",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "The merchant no longer runs out of cards, relics, or potions and his prices are reduced by 20%.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "throwing_axe",
+    "en": "Throwing Axe",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "The first card you play each combat is played an extra time.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "tingsha",
+    "en": "Tingsha",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you discard a card during your turn, deal 3 damage to a random enemy for each card discarded.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "tiny_mailbox",
+    "en": "Tiny Mailbox",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Whenever you Rest, procure 2 random potions.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "toasty_mittens",
+    "en": "Toasty Mittens",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "At the start of your turn, Exhaust the top card of your Draw Pile and gain 1 Strength.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "toolbox",
+    "en": "Toolbox",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "At the start of each combat, choose 1 of 3 random Colorless cards and add the chosen card into your Hand.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "touch_of_orobas",
+    "en": "Touch of Orobas",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, replace StringValue:cond:? with ?.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event",
+    "notes": "；描述含动态数值（以 ? 表示）"
+  },
+  {
+    "id": "tough_bandages",
+    "en": "Tough Bandages",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you discard a card during your turn, gain 3 Block.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "toxic_egg",
+    "en": "Toxic Egg",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you add a Skill into your Deck, Upgrade it.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "toy_box",
+    "en": "Toy Box",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, obtain 4 Wax lural:Relic. Every 3 lural:combat, your left-most Wax Relic will melt away.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "tri_boomerang",
+    "en": "Tri-Boomerang",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Choose 3 lural:Attack in your Deck. Enchant them with Instinct.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "tungsten_rod",
+    "en": "Tungsten Rod",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you would lose HP, lose 1 less.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "tuning_fork",
+    "en": "Tuning Fork",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Every time you play 10 Skills, gain 7 Block.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "twisted_funnel",
+    "en": "Twisted Funnel",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "At the start of each combat, apply 4 Poison to ALL enemies.",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "unceasing_top",
+    "en": "Unceasing Top",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Whenever you have no cards in Hand during your turn, draw a card.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "undying_sigil",
+    "en": "Undying Sigil",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Enemies with at least as much Doom as HP deal 50% less damage.",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
+    "id": "unsettling_lamp",
+    "en": "Unsettling Lamp",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Each combat, the first time you play a card that Debuffs an enemy, double its effect.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "vajra",
+    "en": "Vajra",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Start each combat with 1 Strength.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "vambrace",
+    "en": "Vambrace",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "The first time you gain Block from a card each combat, double the amount gained.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "velvet_choker",
+    "en": "Velvet Choker",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. You cannot play more than 6 lural:card per turn.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "venerable_tea_set",
+    "en": "Venerable Tea Set",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 2.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "very_hot_cocoa",
+    "en": "Very Hot Cocoa",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Start each combat with an additional 4.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "vexing_puzzlebox",
+    "en": "Vexing Puzzlebox",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "At the start of each combat, add a random card into your Hand. It's free to play this turn.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "vitruvian_minion",
+    "en": "Vitruvian Minion",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "Cards containing “Minion” deal double damage and gain double Block.",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "war_hammer",
+    "en": "War Hammer",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Whenever you kill an Elite, Upgrade 4 random lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "war_paint",
+    "en": "War Paint",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Upon pickup, Upgrade 2 random lural:Skill.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "whetstone",
+    "en": "Whetstone",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Upon pickup, Upgrade 2 random lural:Attack.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "whispering_earring",
+    "en": "Whispering Earring",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Gain 1 at the start of each turn. Vakuu plays your first turn for you.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "white_beast_statue",
+    "en": "White Beast Statue",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Potions always appear in combat rewards.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "white_star",
+    "en": "White Star",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Elites drop an additional Rare card reward.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "wing_charm",
+    "en": "Wing Charm",
+    "zh": null,
+    "rarity": "shop",
+    "effect": "A random card in each card reward is Enchanted with Swift 1.",
+    "version": "v0.107.1",
+    "character": null
+  },
+  {
+    "id": "winged_boots",
+    "en": "Winged Boots",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "You may ignore paths when choosing the next rooms to travel to 3 times.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "wongo_customer_appreciation_badge",
+    "en": "Wongo Customer Appreciation Badge",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Does nothing.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "wongos_mystery_ticket",
+    "en": "Wongo's Mystery Ticket",
+    "zh": null,
+    "rarity": "event",
+    "effect": "Receive 3 random lural:Relic after 5 lural:combat.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  },
+  {
+    "id": "yummy_cookie",
+    "en": "Yummy Cookie",
+    "zh": null,
+    "rarity": "ancient",
+    "effect": "Upon pickup, Upgrade 4 lural:card.",
+    "version": "v0.107.1",
+    "character": null,
+    "source": "event"
+  }
+]

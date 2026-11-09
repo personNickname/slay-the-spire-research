@@ -1,0 +1,65 @@
+{{Event Infobox
+| Name  = The Ssssserpent
+| Image = Event-Serpent.png
+}} {{Small Card Infobox|Doubt}}
+{{E|The Ssssserpent}} is an [[Event]] encountered exclusively in [[Act 1]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Agree}} {{TS|positive||Gain 175}} {{Asc|15|(150)}} {{TS|positive||Gold.}} {{TS|negative||Become Cursed -}} {{C|Doubt}}{{TS|negative||.}}
+<br><br>
+{{Frame|Disagree}} Nothing happens.
+<br><br>
+You are then given the option to {{Frame|Leave}}.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within.
+<br>
+{{TS||up|"Ho hooo! Hello hello! what have we got here?}} Hello adventurer, I ask a simple question.
+<br>
+The most fulfilling of lives is that in which you can {{TS|gold|up|buy anything!}}
+<br>
+Do you agree?"
+</div>
+
+{{Frame|Agree}}
+<blockquote><div style="font-style:italic">
+{{TS||up|"Yeeeeeeesssssssssssessss!
+<br>
+Thissss will all be worthhh it.
+<br>
+..ssSSs..... ss... sssss....!"}}
+</div>
+
+{{Frame|Continue}}
+<blockquote><div style="font-style:italic">
+The serpent rears its head and blasts a stream of {{TS|gold||gold}} upwards!
+<br>
+It is amazing and terrifying simultaneously.
+<br>
+You gather all the {{TS|gold||gold,}} thank the snake, and get going.
+</div></blockquote>
+</blockquote>
+
+{{Frame|Disagree}}
+<blockquote><div style="font-style:italic">
+The serpent stares at you with a look of extreme disappointment.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* {{R|Ssserpent Head}} from the {{E|Face Trader}} event references this event. There is no special dialogue if the player encounters {{E|The Ssssserpent}} while owning their face.
+* The internal name of this event is <code>Liars_Game</code>.
+** This is a reference to the manga [https://en.wikipedia.org/wiki/Liar_Game ''Liar Game''], as confirmed by one of the developers on Discord<ref>https://ptb.discord.com/channels/309399445785673728/309399445785673728/780191500973375488</ref>.
+
+== Update History ==
+* '''Weekly Patch 42: Reboot'''
+** Adding ambient SFX for Sssserpent event.
+* '''Weekly Patch 1: The First of Many!'''
+** Fixed typo in Sssserpent event text.
+* '''Day 1 Patch'''
+** The Serpent's offer is now more compelling.
+<br>
+
+{{EventNav}}
+[[Category:Events]]

@@ -1,0 +1,45 @@
+{{Event Infobox
+| Name  = World of Goop
+| Image = Event-Goop.png
+}}
+{{E|World of Goop}} is an [[Event]] encountered exclusively in [[Act 1]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Gather Gold}} {{TS|positive||Gain 75 Gold.}} {{TS|negative||Lose 11 HP.}}
+<br><br>
+{{Frame|Leave It}} {{TS|negative||Lose X Gold.}}
+* X is a random number between 20 and 50 {{Asc|15|(35 and 75)}} Gold. X cannot be more Gold than the player currently has.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You fall into a puddle.
+<br>
+{{TS||shake|IT'S MADE OF}} {{TS|green|shake|SLIME GOOP!!}}
+<br>
+Frantically, you claw yourself out over several minutes as you feel the goop starting to burn.
+<br>
+You can feel goop in your ears, goop in your nose, goop everywhere.
+<br><br>
+Climbing out, you notice that some of your {{TS|gold||gold}} is missing. Looking back to the puddle you see your missing coins combined with {{TS|gold||gold}} from unfortunate adventurers mixed together in the puddle.
+</div>
+
+{{Frame|Gather Gold}}
+<blockquote><div style="font-style:italic">
+Feeling the sting of the goop as the prolonged exposure starts to melt away at your skin, you manage to fish out the {{TS|gold||gold.}}
+</div></blockquote>
+
+{{Frame|Leave It}}
+<blockquote><div style="font-style:italic">
+You decide that mess is not worth it.
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* The name "World of Goop" is a reference to the puzzle game [https://en.wikipedia.org/wiki/World_of_Goo World of Goo].
+
+== Update History ==
+* '''Day 1 Patch'''
+** Goop Puddle event slightly reworked to be more interesting.
+
+{{EventNav}}
+[[Category:Events]]

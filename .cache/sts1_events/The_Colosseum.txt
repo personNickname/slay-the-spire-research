@@ -1,0 +1,96 @@
+{{Event Infobox
+| Name  = The Colosseum
+| Image = Event-Colosseum.png
+}}
+{{E|The Colosseum}} is an [[Event]] found exclusively in [[Act 2]]. It only appears after the guaranteed [[Map Locations#Treasure Room|Treasure Room]] on the 6th floor.
+
+== Options ==
+{{Frame|Fight}}
+* The player enters a fight with a {{M|Blue Slaver}} and {{M|Red Slaver}}. This fight gives no rewards.
+<blockquote>
+After the fight ends, a choice has to be made: 
+
+{{Frame|COWARDICE}} Escape.
+<br>
+<br>
+{{Frame|VICTORY}} A powerful fight with many rewards.
+* The player enters a fight with {{M|Taskmaster}} and {{M|Gremlin Nob}}.
+* The rewards are 100 [[Gold]], 1 {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]], 1 {{QueryLink|Relics|rarity:Uncommon|Uncommon}} [[Relic]], a card reward, and sometimes a [[Potion]].
+</blockquote>
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+{{TS||shake|Thwack!!!}} <br>
+.. <br>
+...... <br>
+... <br>
+{{TS||up|You were knocked unconscious...}}
+</div> <br><br>
+
+{{Frame|Continue}}
+<br><br>
+
+<div style="font-style:italic">
+{{TS||up|Groggy}} and with a {{TS||shake|throbbing}} head, you awaken to find yourself thrown in the center of a massive stadium with an overflowing audience of {{TS|blue||Slavers,}} {{TS|purple||Cultists,}} and other denizens of the City! <br>
+
+An armored giant with a {{TS|gold||golden crown}} bellows at you from atop, <br>
+{{TS||shake|"WE NOW BEGIN THE 4200TH COMBAT!!!!"}} <br>
+A gate on the opposite side opens...
+</div>
+
+{{Frame|Fight}}
+<blockquote>
+(The player enters combat with a {{M|Blue Slaver}} and {{M|Red Slaver}}. After ending the fight, more dialogue is presented.)<br>
+<br>
+<div style="font-style:italic">
+{{TS||shake|"WELL DONE, WEAKLING!"}} <br>
+The giant mock claps whilst he riles up the crowd with exaggerated gestures. <br>
+{{TS|gold|up|Gold}} {{TS||up|and}} {{TS|gold|up|confetti}} {{TS||up|shower you!}} <br>
+{{TS||shake|"TIME FOR THE REAL CHALLENGE!!"}} <br>
+<br>
+The last battle left a small hole in the Colosseum's wall, you can easily escape through there while everyone is distracted. <br>
+Do you stay and fight?
+</div></blockquote>
+
+{{Frame|COWARDICE}}
+<blockquote>
+(No dialogue)
+</blockquote>
+{{Frame|VICTORY}}
+<blockquote>
+(No dialogue, the player enters combat with {{M|Taskmaster}} and {{M|Gremlin Nob}})
+</blockquote>
+</blockquote>
+
+== Notes ==
+Some mechanics behave strangely during the two fights in this event due to their atypical nature:
+* {{Frame|Fight}} is treated as a normal combat.
+** {{P|Smoke Bomb}} can be used to escape the fight and the player will still be prompted to choose either {{Frame|COWARDICE}} or {{Frame|VICTORY}} afterwards as normal.
+** The game still rolls to drop a [[Potion]], but never presents the player with it even if a [[Potion]] would be dropped. This means it is impossible to know if the [[Potions#Sources|potion chance]] has increased or decreased, and this uncertainty will persist until the [[Potions#Sources|potion chance]] resets at start of the next act.
+** While it has no combat rewards and transitions to the next dialogue of the event very quickly, end-of-combat effects like {{R|Burning Blood}} and {{C|Self Repair}} will still trigger.
+* {{Frame|VICTORY}} is treated as an [[Elite]] combat for ''most'' effects.
+** {{R|Preserved Insect}}, {{R|Sling of Courage}}, and {{R|Slaver's Collar}} will all trigger their effects as expected.
+** The only exception is {{R|Black Star}}, which has no effect on the [[Relics]] dropped as rewards. This combat will ''always'' drop exactly 1 {{QueryLink|Relics|rarity:Rare|Rare}} [[Relic]] and 1 {{QueryLink|Relics|rarity:Uncommon|Uncommon}} [[Relic]].
+
+== Trivia ==
+* The "armored giant with a {{TS|gold||golden crown}}" is likely {{M|The Champ}}.
+
+== Update History ==
+* '''Patch V1.1: The Dealer'''
+** Colosseum event now appears only at the top half of Act 2.
+* '''Slay the Spire 1.0: Farewell Early Access'''
+** Colossuem Nob fight ordering swapped so that the Nob can apply Vulnerable.
+* '''Weekly Patch 56: The Collector'''
+** Colosseum event's second fight is now a Gremlin Nob + Taskmaster (rather than 2 Gremlin Nobs)
+* '''Weekly Patch 42: Reboot'''
+** Orb VFX no longer render in the background of the Colosseum event.
+* '''Weekly Patch 41: Chill'''
+** Colosseum Nobs no longer play double music.
+** Fixed bug causing block to maintain between colosseum combats.
+** Fixed Smoke Bomb and Colosseum bug that caused the player to go invisible.
+** Killing a Colosseum Nob no longer causes the music to stop.
+* '''Weekly Patch 39: We Meet Again!'''
+** Added City Event: The Colosseum.
+
+{{EventNav}}
+[[Category:Events]]

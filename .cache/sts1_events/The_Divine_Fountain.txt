@@ -1,0 +1,35 @@
+{{Event Infobox
+| Name  = Divine Fountain
+| Image = Event-DivineFountain.png
+}}
+{{E|The Divine Fountain}} is a shrine [[Event]] found in all [[Acts]]. This event can only appear if you have a {{QueryLink|Cards|type:Curse|Curse}} in your deck.
+
+Shrine events appear less frequently than other events.
+
+== Options ==
+{{Frame|Drink}} {{TS|positive||Remove all}} {{QueryLink|Cards|type:Curse|Curses}} {{TS|positive||from your deck.}}
+
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You come across {{TS|blue|up|shimmering water}} flowing endlessly from a fountain on a nearby wall.
+</div>
+
+{{Frame|Drink}}
+<blockquote><div style="font-style:italic">
+As you drink the {{TS|blue|up|water,}} you feel a {{TS|purple||dark grasp}} loosen.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+Unsure of the nature of this water, you continue on your way, parched.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* Removing all Curses may not be beneficial if you are relying on the {{BD|Strength}} from {{R|Du-Vu Doll}}.
+* The Max HP gain from {{R|Darkstone Periapt}} is kept even when the Curses are removed.
+
+{{EventNav}}
+[[Category:Events]]

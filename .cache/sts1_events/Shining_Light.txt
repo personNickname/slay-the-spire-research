@@ -1,0 +1,40 @@
+{{Event Infobox
+| Name  = Shining Light
+| Image = Event-ShiningLight.png
+}}
+{{E|Shining Light}} is an [[Event]] encountered exclusively in [[Act 1]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Enter}} {{TS|positive||Upgrade 2 random cards.}} {{TS|negative||Lose X HP.}}
+* X is equal to 20% {{Asc|15|(30%)}} of the player's max HP.
+<br>
+{{Frame|Leave}} Nothing happens.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You find a shimmering {{TS|gold||mass of light}} encompassing the center of the room.
+<br>
+Its {{TS||up|warm glow}} and {{TS||up|enchanting patterns}} invite you in.
+</div>
+
+{{Frame|Enter}}
+<blockquote><div style="font-style:italic">
+As you walk through the light, you notice that the light is absorbed into you.
+<br>
+It's {{TS|negative|shake|scorching hot}} ! However, the pain quickly recedes.
+<br>
+You feel {{TS|blue||invigorated,}} as though you received a well deserved slap.
+</div></blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You walk around it, wondering what could have been.
+</div></blockquote>
+</blockquote>
+
+== Update History ==
+* '''Weekly Patch 1: The First of Many!'''
+** Cards from Shining Light event are now positioned correctly.
+
+{{EventNav}}
+[[Category:Events]]

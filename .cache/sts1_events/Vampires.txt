@@ -1,0 +1,84 @@
+{{Event Infobox
+| Name  = Vampires
+| Image = Event-Vampires.png
+}} {{Small Card Infobox|Bite}} {{Small Relic Infobox|Blood Vial}}
+{{E|Vampires}} is an [[Event]] found exclusively in [[Act 2]].
+
+== Options ==
+{{Frame|Offer: Blood Vial}} {{TS|negative||Lose}} {{R|Blood Vial}}{{TS|negative||.}} <span class="positive-text"> Remove all</span> {{C|Strike (Ironclad)|Strikes}}{{TS|positive||.}} <span class="positive-text">Receive 5</span> {{C|Bite|Bites}}{{TS|positive||.}}
+* Only present if the player has {{R|Blood Vial}}.
+
+{{Frame|Accept}} <span class="positive-text">Remove all</span> {{C|Strike (Ironclad)|Strikes}}{{TS|positive||.}} <span class="positive-text">Receive 5</span> {{C|Bite|Bites}}{{TS|positive||.}} <span class="negative-text">Lose X Max HP.</span>
+* X is equal to 30% of the player's max HP.
+
+{{Frame|Refuse}} Nothing happens.
+
+You are then given the option to {{Frame|Leave}}.
+
+== Dialogue ==
+<blockquote><i>
+Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you.
+<br>
+{{TS||up|"Join us brother, and feel the warmth of the Spire."}}
+</i></blockquote><blockquote><br><br>
+
+{{Frame|Offer: Blood Vial}}
+<blockquote><i>
+The pale figures gasp as you take out the {{TS|gold||Blood Vial.}}
+<br>
+{{TS||up|"The master's blood... the master's blood!}} {{TS||shake|THE MASTER'S BLOOD!"}}
+<br>
+They all chant fervently as the tall one bows before you. "Drink from His blood, and become one with {{TS|gold|up|Him."}}
+<br>
+The chant growing louder, you consume the contents of the vial. Your vision immediately {{TS||up|warps}} and fades to darkness.
+<br>
+<br>
+You wake up some time later, alone. An intense {{TS||up|hunger}} passes through your belly. You {{TS|red||must feed...}}
+</i></blockquote>
+
+{{Frame|Accept}}
+<blockquote><i>
+The tall figure grabs your arm, pulls you forward, and sinks his fangs into your neck. You feel a {{TS||shake|dark force}} pour into your neck and {{TS||shake|course}} through your body.
+<br>
+...
+<br>
+You wake up some time later, alone. An intense {{TS||up|hunger}} passes through your belly. You {{TS|red||must feed...}}
+</i></blockquote>
+
+{{Frame|Refuse}}
+<blockquote><i>
+You step back and raise your weapon in defiance. The tall figure sighs.
+<br>
+"Very well." The entire group of hooded figures morph into a thick black fog that flows away from you.
+<br>
+You are alone once more.
+</i></blockquote>
+</blockquote>
+
+== Trivia ==
+* The ''{{TS||up|"Join us"}}'' line of dialogue changes depending on the player's current character.
+** For the [[Ironclad]] it reads, ''{{TS||up|"Join us brother"}}''.
+** For the [[Silent]] and the [[Watcher]] it reads, ''{{TS||up|"Join us sister"}}''.
+** For the [[Defect]] it reads, ''{{TS||up|"Join us broken one"}}''.
+== Update History ==
+* '''Patch V1.1: The Dealer'''
+** Vampires and Council of Ghosts events now show how much Max HP is lost (rather than showing %)
+
+* '''Weekly Patch 51: Recursion'''
+** Minor text cleanup for Vampires event.
+
+* '''Weekly Patch 40: Forethought'''
+** When accepting to become a vampire, a SFX now plays.
+
+* '''Weekly Patch 30: Skewer'''
+** Fix for Vampire and Ghost Council event which could set your HP to 0.
+
+* '''Weekly Patch 5: Happy Holidays!'''
+** Vampires event dialog option is slightly shortened so it fits in the option.
+
+* '''Weekly Patch 1: The First of Many!'''
+** Vampires event text now displays the correct options if you reject them.
+
+
+{{EventNav}}
+[[Category:Events]]

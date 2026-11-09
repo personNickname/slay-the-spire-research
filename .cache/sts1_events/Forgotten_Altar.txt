@@ -1,0 +1,69 @@
+{{Event Infobox
+| Name  = Forgotten Altar
+| Image = Event-ForgottenAltar.png
+}} {{Small Relic Infobox|Bloody Idol}} {{Small Card Infobox|Decay}}
+{{E|Forgotten Altar}} is an [[Event]] found exclusively in [[Act 2]]. This Event is the only way to obtain {{R|Bloody Idol}}. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Offer: Golden Idol}} {{TS|positive||Obtain a special}} {{R|Bloody Idol|Relic}}{{TS|positive||.}} {{TS|negative||Lose}} {{R|Golden Idol}}{{TS|negative||.}}
+* If the player does not have {{R|Golden Idol}}, this option is replaced with {{Frame|Locked}} Requires: Golden Idol.
+
+{{Frame|Sacrifice}} {{TS|positive||Gain 5 Max HP.}} {{TS|negative||Lose X HP.}}
+* X is equal to 25% {{Asc|15|(35%)}} of the player's Max HP.
+
+{{Frame|Desecrate}} {{TS|negative||Become Cursed -}}{{C|Decay}}{{TS|negative||.}}
+* {{C|Decay}} - {{KW|Unplayable}}. At the end of your turn, take 2 damage.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+In front of you sits an altar to a forgotten god.
+<br>
+Atop the altar sits an ornate female statue with arms outstretched.
+<br>
+She calls out to you, demanding sacrifice.
+</div><br><br>
+
+{{Frame|Offer: Golden Idol}}
+<blockquote><div style="font-style:italic">
+As you gently set the idol onto the altar a {{TS|blue||cold}} wind swirls throughout the room.
+<br>
+The arms of the statue begin to discolor and crumble.
+<br><br>
+Your {{TS|gold||golden idol}} begins to dull in color and begins bleeding from its eyes.
+<br>
+The bleeding never ceases.
+</div></blockquote>
+
+{{Frame|Sacrifice}}
+<blockquote><div style="font-style:italic">
+You stand on the altar and cut your wrists.
+<br>
+As the {{TS|negative||blood}} spills out in sacrifice, the arms of the statue reach out and close around your eyes.
+<br>
+Everything goes dark.
+<br>
+You wake up a short time later feeling a new potential surging through you.
+</div></blockquote>
+
+{{Frame|Desecrate}}
+<blockquote><div style="font-style:italic">
+You lash out and smash the statue in front of you, breaking the magical hold the room had placed upon you.
+<br>
+A dark wail echoes all around you, and you can feel the {{TS|purple|up|cursed magic}} seep into your bones.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Golden Idol}} is only obtained from the {{E|Golden Idol}} Event.
+* If the {{R|Golden Idol}} is turned into the {{R|Bloody Idol}}, {{E|The Moai Head}} Event in Act 3 will no longer accept it as an offering.
+
+== Update History ==
+* '''Weekly Patch 5: Happy Holidays!'''
+** Forgotten Altar now gives you the Max HP before damaging you. This way you won't die if the damage hits you first.
+
+* '''Weekly Patch 4: Full speed ahead!'''
+** Forgotten altar displays correct HP loss for the Silent now.
+
+
+{{EventNav}}
+[[Category:Events]]

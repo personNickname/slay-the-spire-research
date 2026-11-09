@@ -1,0 +1,62 @@
+{{Event Infobox
+| Name  = The Moai Head
+| Image = Event-MoaiHead.png
+}} {{Small Relic Infobox|Golden Idol}}
+{{E|The Moai Head}} is an [[Event]] found in [[Act 3]]. It is one of the events affected by {{Asc|15|Ascension}}. It can only be encountered if the player either has {{R|Golden Idol}}, or their HP is at or below 50%.
+
+== Options ==
+<!-- Fix descriptions to be game-accurate. Use TS colors for positive and negative effects. Put any extra information in indented bullet points. -->
+{{Frame|Jump Inside}} {{TS|positive||Heal to full HP.}} {{TS|negative||Lose X Max HP.}}
+* X is equal to 12.5% {{Asc|15|(18%)}} of the player's Max HP.
+
+{{Frame|Offer: {{R|Golden Idol}}}} {{TS|positive||Receive 333 [[Gold]].}} {{TS|negative||Lose {{R|Golden Idol}}.}}
+* If the player lacks {{R|Golden Idol}}, this option is replaced with {{Frame|Locked}} Requires: {{R|Golden Idol}}.
+
+{{Frame|Leave}} Nothing happens. 
+<br>
+<br>
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You stumble across something that feels * very* out of place. Before you, an enormous stony head emerges from a large wall segment that does not shift and change like the rest of this area.<br>
+The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the status is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured. Why would anyone do that?
+</div>
+
+{{Frame|Jump Inside}}
+<blockquote><div style="font-style:italic">
+At first when you step into the mouth of the statue, nothing happens.<br>
+As you start to feel more than a little foolish, the huge molars slam down from above, crushing you whole.<br>
+{{TS||shake|Darkness.}}<br>
+Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards.<br>
+<br>
+<br>
+You leave confused.
+</div> </blockquote>
+
+{{Frame|Offer: {{R|Golden Idol}}}}
+<blockquote><div style="font-style:italic">
+You jump back a little as the gigantic molars smash down on the idol, smashing it to dust. As the teeth start to rise up again, {{TS|gold||gold}} pours forth in a torrent from the opening, flooding you with riches.
+</div> </blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You leave, wondering what could have been.
+</div> </blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Golden Idol}} is acquired from the [[Act 1]] event of the same name; {{E|Golden Idol}}.
+* {{E|The Moai Head}} is the last opportunity to trade the {{R|Golden Idol}}, the other being the {{E|Forgotten Altar}} event in [[Act 2]].
+* The 333 [[Gold]] from {{Frame|Offer: Golden Idol}} easily outperforms any remaining [[Gold]] the player could gain from combats by keeping the {{R|Golden Idol}}, especially since they likely do not have many combats left in the run by the time they reach this [[Act 3]] event.
+* The healing from {{Frame|Jump Inside}} will be prevented if the player has {{R|Mark of the Bloom}}.
+
+== Trivia ==
+* The real world [https://en.wikipedia.org/wiki/Moai Moai] are a set of stone human-like statues constructed by the [https://en.wikipedia.org/wiki/Rapa_Nui_people Rapa Nui people] on [https://en.wikipedia.org/wiki/Easter_Island Rapa Nui (commonly known as Easter Island)].
+* This event may be a reference to the [https://spelunky.fandom.com/wiki/Moai_(HD) Moai from Spelunky], where they are a key component in accessing the City of Gold by entering the Moai's mouth.
+
+== Update History ==
+* '''Weekly Patch 36: Power Through'''
+** Fixed an incorrect interaction with the Mark of the Bloom and the Moai Head event in Act 3.
+
+{{EventNav}}
+[[Category:Events]]

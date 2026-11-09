@@ -1,0 +1,59 @@
+{{Event Infobox
+| Name  = The Mausoleum
+| Image = Event-Mausoleum.png
+}} {{Small Card Infobox|Writhe}}
+{{E|The Mausoleum}} is an [[Event]] found in [[Act 2]]. It is one of the events affected by {{Asc|15|Ascension}}.
+
+== Options ==
+{{Frame|Open Coffin}} {{TS|positive||Obtain a [[Relic]].}} {{TS|negative||50% {{Asc|15|(100%)}}: Become Cursed - {{C|Writhe}}}}
+
+{{Frame|Leave}} Nothing happens. 
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+Venturing through a series of tombs, you are faced with a large sarcophagus {{TS||up|studded with gems}} in the center of a circular room. <br>
+You cannot make out the writing on the coffin, however, you do notice {{TS|purple|up|black fog}} seeping out from the sides.
+</div><br><br>
+
+{{Frame|Open Coffin}}
+
+The dialogue changes depending on whether the player becomes cursed with {{C|Writhe}} or not.
+
+'''If the player does not receive {{C|Writhe}}:'''
+
+<blockquote>
+<div style="font-style:italic">
+You push open the coffin. The fog dissipates harmlessly. Inside, you find the mortal remains of a decorated soldier grasping an old {{TS|gold||relic.}} You pilfer it and move on.
+</div>
+</blockquote>
+
+'''If the player receives {{C|Writhe}}:'''
+
+<blockquote>
+<div style="font-style:italic">
+You push open the coffin. As you do, {{TS|purple|up|black fog}} spews forth and covers the entire room! Inside, you find no body, only a {{TS|gold|up|relic.}} You take it and move onwards, {{TS|negative|shake|coughing violently.}}
+</div>
+</blockquote>
+
+{{Frame|Leave}}
+<blockquote><div style="font-style:italic">
+You continue on your way, leaving the forgotten dead undisturbed.
+</div></blockquote>
+</blockquote>
+
+== Notes ==
+<!-- I originally didn't trust this information from the Fandom wiki, but I confirmed it was correct using Basemod to repeatedly enter the event and claim the relic until it yielded Matryoshka and Darkstone Periapt -->
+* If the player receives {{R|Omamori}} as the [[Relic]] reward, it '''will not''' prevent the {{C|Writhe}} from being gained.
+* If the player receives {{R|Darkstone Periapt}} as the [[Relic]] reward, it '''will''' grant the +6 Max HP.
+
+== Trivia ==
+* A [https://en.wikipedia.org/wiki/Mausoleum mausoleum] is a building that encloses and protects the burial chamber of one or more deceased. The term "mausoleum" comes from the burial chamber of [https://en.wikipedia.org/wiki/Mausolus King Mausolus] as enclosed by the [https://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus Mausoleum at Halicarnassus].
+
+== Update History ==
+* '''Weekly Patch 42: Reboot'''
+** Adding ambient SFX for Mausoleum event. 
+* '''Weekly Patch 21: Channel Lightning'''
+** Seeds are now utilized for The Mausoleum event.
+
+{{EventNav}}
+[[Category:Events]]

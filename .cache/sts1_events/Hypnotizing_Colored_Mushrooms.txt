@@ -1,0 +1,46 @@
+{{Event Infobox
+| Name  = Hypnotizing Colored Mushrooms
+| Image = Event-Mushrooms.png
+}} {{Small Relic Infobox|Odd Mushroom}} {{Small Card Infobox|Parasite}}
+{{E|Hypnotizing Colored Mushrooms}} is an [[Event]] encountered exclusively in [[Act 1]]. It will only appear if the player is on floor 7 or above. This Event is the only way to obtain {{R|Odd Mushroom}}.
+
+== Options ==
+{{Frame|Stomp}} {{TS|negative||Anger the Mushrooms.}}<br>
+* Enter a battle against 3 {{M|Fungi Beast|Fungi Beasts}}. Winning grants the exclusive [[Relic]] {{R|Odd Mushroom}} along with regular combat rewards.
+<br>
+{{Frame|Eat}} {{TS|positive||Heal X HP.}} {{TS|negative||Become Cursed -}} {{C|Parasite}}{{TS|negative||.}}
+* X is equal to 25% of the player's max HP.
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+You enter a corridor full of {{TS|blue|up|hypnotizing colored mushrooms.}}
+<br>
+Due to your lack of specialization in mycology you are unable to identify the specimens.
+<br>
+You want to escape, but feel oddly compelled to eat a {{TS|blue|up|mushroom...}}
+</div><br><br>
+
+{{Frame|Stomp}}
+<blockquote><div style="font-style:italic">
+{{TS|negative|shake|Ambushed!!}}
+<br>
+Rodents infested by the mushrooms appear out of nowhere!
+</div></blockquote>
+
+{{Frame|Eat}}
+<blockquote><div style="font-style:italic">
+You give in to the unnatural desire to eat. As you consume mushroom after mushroom, you feel yourself entering into a daze and pass out. As you awake, you feel very odd. You {{TS|green||Heal}} {{TS|blue||25%}} of your HP, but you also get {{TS|negative||infected.}}
+</div></blockquote>
+</blockquote>
+
+== Trivia ==
+* This Event features unique graphics of mushrooms sprouting out of the floor in the background and foreground, as seen below.
+<div style="display:flex; flex-direction:row; gap:10px; margin:0 0 10px 10px;">
+[[File:BgShrooms.png|200px|thumb|Background.]][[File:FgShrooms.png|200px|thumb|Foreground.]]
+</div>
+== Update History ==
+* '''Weekly Patch 44: Chrysalis'''
+** Mushroom event now correctly shows card preview for Parasite curse.
+
+{{EventNav}}
+[[Category:Events]]

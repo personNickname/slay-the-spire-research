@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "name": "分数 (Score)",
+    "name_en": "Score",
+    "description": "每局结束时的得分构成。得分用于解锁更多卡牌与遗物。",
+    "sources": [
+      "https://slaythespire.wiki.gg/wiki/Score"
+    ]
+  },
+  "bonuses": [
+    {
+      "id": "floors_climbed",
+      "en": "Floors Climbed",
+      "zh": "攀登层数",
+      "condition": "每到达一层",
+      "value": "5 分/层",
+      "notes": null
+    },
+    {
+      "id": "enemies_slain",
+      "en": "Enemies Slain",
+      "zh": "击杀敌人",
+      "condition": "每击杀一名敌人",
+      "value": "2 分/名",
+      "notes": null
+    },
+    {
+      "id": "exordium_elites",
+      "en": "Exordium Elites Killed",
+      "zh": "第一层精英击杀",
+      "condition": "每击杀一名第一层(Exordium)精英",
+      "value": "10 分/名",
+      "notes": null
+    },
+    {
+      "id": "city_elites",
+      "en": "City Elites Killed",
+      "zh": "第二层精英击杀",
+      "condition": "每击杀一名第二层(City)精英",
+      "value": "20 分/名",
+      "notes": null
+    },
+    {
+      "id": "beyond_elites",
+      "en": "Beyond Elites Killed",
+      "zh": "第三层精英击杀",
+      "condition": "每击杀一名第三层(Beyond)精英",
+      "value": "30 分/名",
+      "notes": null
+    },
+    {
+      "id": "bosses_slain",
+      "en": "Bosses Slain",
+      "zh": "击杀首领",
+      "condition": "每击败一名首领",
+      "value": "第 1 个首领 50 分，第 2 个 100 分，第 3 个 150 分，依此递增（+50/个）",
+      "notes": null
+    },
+    {
+      "id": "champion",
+      "en": "Champion",
+      "zh": "斗士",
+      "condition": "未受到任何伤害击败一名精英",
+      "value": "25 分/名",
+      "notes": null
+    },
+    {
+      "id": "perfect",
+      "en": "Perfect",
+      "zh": "完美",
+      "condition": "未受到任何伤害击败一名首领",
+      "value": "50 分/名",
+      "notes": null
+    },
+    {
+      "id": "beyond_perfect",
+      "en": "Beyond Perfect",
+      "zh": "超凡完美",
+      "condition": "全程 3 名首领均未受到任何伤害通关",
+      "value": "200 分（覆盖'完美 Perfect'的分数而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "heartbreaker",
+      "en": "Heartbreaker",
+      "zh": "碎心者",
+      "condition": "击败腐化之心",
+      "value": "250 分",
+      "notes": null
+    },
+    {
+      "id": "overkill",
+      "en": "Overkill",
+      "zh": "过度击杀",
+      "condition": "用单次攻击造成 99 点伤害",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "combo",
+      "en": "C-c-c-combo",
+      "zh": "连击",
+      "condition": "在单回合内打出 20 张卡牌",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "speedster",
+      "en": "Speedster",
+      "zh": "竞速者",
+      "condition": "60 分钟内获胜",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "light_speed",
+      "en": "Light Speed",
+      "zh": "光速",
+      "condition": "45 分钟内获胜",
+      "value": "50 分（覆盖'竞速者'而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "money_money",
+      "en": "Money Money",
+      "zh": "金钱金钱",
+      "condition": "单局累计获得 1,000 金币",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "raining_money",
+      "en": "Raining Money",
+      "zh": "金币如雨",
+      "condition": "单局累计获得 2,000 金币",
+      "value": "50 分（覆盖'金钱金钱'而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "i_like_gold",
+      "en": "I Like Gold",
+      "zh": "我爱金币",
+      "condition": "单局累计获得 3,000 金币",
+      "value": "75 分（覆盖'金币如雨'而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "highlander",
+      "en": "Highlander",
+      "zh": "高地人",
+      "condition": "卡组中无任何重复卡牌",
+      "value": "100 分（基础(Basic)卡不计入）",
+      "notes": null
+    },
+    {
+      "id": "i_like_shiny",
+      "en": "I Like Shiny",
+      "zh": "我爱闪亮",
+      "condition": "持有 25 件或以上遗物",
+      "value": "50 分",
+      "notes": null
+    },
+    {
+      "id": "collector",
+      "en": "Collector",
+      "zh": "收藏家",
+      "condition": "拥有任意 4 张相同非基础卡牌",
+      "value": "25 分/套",
+      "notes": null
+    },
+    {
+      "id": "pauper",
+      "en": "Pauper",
+      "zh": "穷光蛋",
+      "condition": "卡组中没有任何稀有(Rare)卡牌",
+      "value": "50 分",
+      "notes": null
+    },
+    {
+      "id": "librarian",
+      "en": "Librarian",
+      "zh": "图书管理员",
+      "condition": "卡组至少 35 张卡",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "encyclopedian",
+      "en": "Encyclopedian",
+      "zh": "百科全书",
+      "condition": "卡组至少 50 张卡",
+      "value": "50 分（覆盖'图书管理员'而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "well_fed",
+      "en": "Well Fed",
+      "zh": "吃得好",
+      "condition": "最大生命提升 15 点或以上",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "stuffed",
+      "en": "Stuffed",
+      "zh": "吃撑了",
+      "condition": "最大生命提升 30 点或以上",
+      "value": "50 分（覆盖'吃得好'而非叠加）",
+      "notes": null
+    },
+    {
+      "id": "curses",
+      "en": "Curses!",
+      "zh": "诅咒缠身",
+      "condition": "卡组中含 5 张或以上诅咒(Curse)卡",
+      "value": "100 分",
+      "notes": null
+    },
+    {
+      "id": "mystery_machine",
+      "en": "Mystery Machine",
+      "zh": "神秘机器",
+      "condition": "进入 15 个或以上未知(Unknown)房间",
+      "value": "25 分",
+      "notes": null
+    },
+    {
+      "id": "poopy",
+      "en": "Poopy",
+      "zh": "便便",
+      "condition": "获得遗物'灵便'(Spirit Poop)",
+      "value": "-1 分（在'篝火之灵'(Bonfire Spirits)事件中献祭诅咒获得）",
+      "notes": null
+    }
+  ],
+  "ascension_modifier": {
+    "id": "ascension_bonus",
+    "en": "Ascension",
+    "zh": "进阶",
+    "effect": "每级进阶使最终得分 +5%（按进阶等级乘算）"
+  },
+  "unlock_note": "得分用于解锁更多卡牌与遗物；各角色的解锁清单见 Ironclad/Silent/Defect/Watcher 页面的 Unlocks 小节。"
+}

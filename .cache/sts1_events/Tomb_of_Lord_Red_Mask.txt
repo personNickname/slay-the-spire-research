@@ -1,0 +1,54 @@
+{{Event Infobox
+| Name  = Tomb of Lord Red Mask
+| Image = Event-RedMaskTomb.png
+}} {{Small Relic Infobox|Red Mask}}
+{{E|Tomb of Lord Red Mask}} is an [[Event]] found in [[Act 3]].
+
+== Options ==
+=== If The Player Owns {{R|Red Mask}} ===
+{{Frame|Don the Red Mask}} {{TS|positive||Gain 222 [[Gold]].}}
+* The player gets to keep {{R|Red Mask}} afterwards. The [[Gold]] is purely a reward for owning the relic.
+
+{{Frame|Leave}} Nothing happens. 
+<br>
+<br>
+
+=== If The Player Does Not Own {{R|Red Mask}} ===
+{{Frame|Locked}} Requires: {{R|Red Mask}}
+<br>
+<br>
+{{Frame|Offer: X Gold}} {{TS|negative||Lose all [[Gold]].}} {{TS|positive||Obtain a Relic.}}
+* X is equal to all of the player's [[Gold]].
+* Rewards the player with {{R|Red Mask}}.
+
+{{Frame|Leave}} Nothing happens. 
+
+== Dialogue ==
+<blockquote><div style="font-style:italic">
+A highly ornamented tomb can be seen on the other side of a floating path. Upon reaching the tomb, you notice a slot for {{TS|gold||gold}} coins with a scratched out inscription above it.
+</div> 
+
+{{Frame|Don the Red Mask}}
+<blockquote><div style="font-style:italic">
+You don the mask and the tomb starts to {{TS||up|flake away...}} a secret passage!<br>
+<br>
+The passage is lined with countless stolen goods and mounds of {{TS|gold||gold!}}
+</div> </blockquote>
+
+{{Frame|Offer: X Gold}}
+<blockquote><div style="font-style:italic">
+An opening appears in the tomb and out slides a small red mask with a note attached. "Take from others as I have taken from you!"
+</div> </blockquote>
+
+{{Frame|Leave}}
+<blockquote>
+(No dialogue)
+</blockquote>
+</blockquote>
+
+== Notes ==
+* {{R|Red Mask}} is obtained from the [[Act 2]] event {{E|Masked Bandits}}.
+
+
+{{EventNav}}
+[[Category:Events]]
