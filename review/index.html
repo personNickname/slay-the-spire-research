@@ -414,16 +414,6 @@
         <tr><td>地图（节点/路径/种子）/ 升阶 20 级 / 模式</td><td>规则</td><td>已全</td></tr>
       </table>
       </div>
-      <details>
-        <summary>底层文档（原始 markdown，供后续开发查阅，非阅读入口）</summary>
-        <div class="body">
-          <code>docs/sts1/core-mechanics.md</code>（战斗机制/Buff/掉落概率）·
-          <code>docs/sts1/characters.md</code>（四角色/流派）·
-          <code>docs/sts1/enemies.md</code>（意图系统/BOSS 建模）·
-          <code>docs/sts1/map-events-shop.md</code>（地图/商店/升阶/解锁）——
-          展示一律走「实体数据库」；markdown 仅作为机制论述的完整底稿保留在仓库里。
-        </div>
-      </details>
     </section>
   </div>
 
@@ -641,7 +631,7 @@
   function buildDbLinks(game, id) {
     const el = document.getElementById(id);
     if (!el) return;
-    Object.entries(ENT).forEach(([key, cfg]) => {
+    entsFor(game).forEach(([key, cfg]) => {
       const data = DB[game] && DB[game][key];
       const has = (Array.isArray(data) && data.length) || (!Array.isArray(data) && data);
       if (!has) return;
@@ -679,18 +669,19 @@
     group: { shortlist_blessings: '候选池', first_blessing: '第一祝福', second_blessing: '第二祝福', third_blessing: '第三祝福', fourth_blessing: '第四祝福' }
   };
   const ENT = {
-    relics:    { label: '遗物', filters: ['rarity'], cols: [ ['name', '遗物'], ['rarity', '稀有度'], ['effect', '效果'] ] },
-    cards:     { label: '卡牌', filters: ['character', 'type', 'rarity'], cols: [ ['cost', '费'], ['name', '卡牌'], ['character', '角色'], ['type', '类型'], ['rarity', '稀有度'], ['effect', '效果'], ['effect_up', '升级后'] ] },
-    potions:   { label: '药水', filters: ['rarity'], cols: [ ['name', '药水'], ['rarity', '稀有度'], ['target', '目标'], ['effect', '效果'] ] },
-    enemies:   { label: '敌人', filters: ['act', 'tier'], cols: [ ['act', '幕'], ['tier', '层级'], ['name', '敌人'], ['hp', 'HP'], ['pattern', '行为模式'] ], expand: 'moves' },
-    events:    { label: '事件', filters: ['pool'], cols: [ ['pool', '池'], ['name', '事件'], ['description', '描述'] ], expand: 'options' },
-    neow:      { label: '开局祝福', filters: ['group'], cols: [ ['group', '阶段'], ['name', '祝福'], ['category', '类别'], ['effect', '效果'] ] },
-    achievements: { label: '成就', filters: ['category'], cols: [ ['category', '分类'], ['name', '成就'], ['description', '条件'] ] },
-    score:     { label: '分数', cols: [ ['name', '计分项'], ['condition', '条件'], ['value', '分值'] ] },
-    ancients:  { label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['epithet', '称号'], ['selection_note', '选择规则'] ], expand: 'blessings' },
-    enchantments: { label: '附魔', cols: [ ['name', '附魔'], ['effect', '效果'] ] },
-    map_config: { label: '地图配置', cols: [ ['key', '项'], ['value', '值'] ] }
+    relics:    { games: ['sts1','sts2'], label: '遗物', filters: ['rarity'], cols: [ ['name', '遗物'], ['rarity', '稀有度'], ['effect', '效果'] ] },
+    cards:     { games: ['sts1','sts2'], label: '卡牌', filters: ['character', 'type', 'rarity'], cols: [ ['cost', '费'], ['name', '卡牌'], ['character', '角色'], ['type', '类型'], ['rarity', '稀有度'], ['effect', '效果'], ['effect_up', '升级后'] ] },
+    potions:   { games: ['sts1','sts2'], label: '药水', filters: ['rarity'], cols: [ ['name', '药水'], ['rarity', '稀有度'], ['target', '目标'], ['effect', '效果'] ] },
+    enemies:   { games: ['sts1','sts2'], label: '敌人', filters: ['act', 'tier'], cols: [ ['act', '幕'], ['tier', '层级'], ['name', '敌人'], ['hp', 'HP'], ['pattern', '行为模式'] ], expand: 'moves' },
+    events:    { games: ['sts1','sts2'], label: '事件', filters: ['pool'], cols: [ ['pool', '池'], ['name', '事件'], ['description', '描述'] ], expand: 'options' },
+    neow:      { games: ['sts1'], label: '开局祝福', filters: ['group'], cols: [ ['group', '阶段'], ['name', '祝福'], ['category', '类别'], ['effect', '效果'] ] },
+    achievements: { games: ['sts1'], label: '成就', filters: ['category'], cols: [ ['category', '分类'], ['name', '成就'], ['description', '条件'] ] },
+    score:     { games: ['sts1'], label: '分数', cols: [ ['name', '计分项'], ['condition', '条件'], ['value', '分值'] ] },
+    ancients:  { games: ['sts2'], label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['epithet', '称号'], ['selection_note', '选择规则'] ], expand: 'blessings' },
+    enchantments: { games: ['sts2'], label: '附魔', cols: [ ['name', '附魔'], ['effect', '效果'] ] },
+    map_config: { games: ['sts2'], label: '地图配置', cols: [ ['key', '项'], ['value', '值'] ] }
   };
+  function entsFor(game) { return Object.entries(ENT).filter(([k, c]) => !c.games || c.games.includes(game)); }
   let dbGame = 'sts1', dbEntity = 'relics', dbFilters = {}, dbQuery = '';
 
   function zhOf(kind, v) { return (ZH[kind] && ZH[kind][v]) || v; }
@@ -705,24 +696,25 @@
   function setDbGame(g) {
     dbGame = g; dbFilters = {}; dbQuery = ''; document.getElementById('db-search').value = '';
     document.querySelectorAll('#db-game button').forEach(b => b.classList.toggle('active', b.dataset.game === g));
-    const avail = Object.keys(ENT).filter(k => {
+    const avail = entsFor(g).filter(([k, c]) => {
       const d = DB[g] && DB[g][k];
       return (Array.isArray(d) && d.length) || (!Array.isArray(d) && d);
-    });
+    }).map(([k]) => k);
     const first = avail[0] || 'relics';
     dbEntity = avail.includes(dbEntity) ? dbEntity : first;
     renderEntityButtons(); renderFilters(); renderTable();
     syncHash();
   }
+  document.querySelectorAll('#db-game button').forEach(b => b.addEventListener('click', () => setDbGame(b.dataset.game)));
 
   function renderEntityButtons() {
     const wrap = document.getElementById('db-entities'); wrap.innerHTML = '';
-    Object.entries(ENT).forEach(([key, cfg]) => {
+    entsFor(dbGame).forEach(([key, cfg]) => {
       const data = DB[dbGame] && DB[dbGame][key];
       const has = (Array.isArray(data) && data.length) || (!Array.isArray(data) && data);
       const btn = document.createElement('button');
       btn.className = 'ent-btn' + (key === dbEntity ? ' active' : '') + (has ? '' : ' pending');
-      btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + (Array.isArray(data) ? data.length : '配置') + '</span>' : ' <span class="cnt">提取中</span>');
+      btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + (Array.isArray(data) ? data.length : '') + '</span>' : ' <span class="cnt">提取中</span>');
       if (has) btn.addEventListener('click', () => setDbEntity(key));
       else btn.title = '数据提取中，落地后自动出现';
       wrap.appendChild(btn);
