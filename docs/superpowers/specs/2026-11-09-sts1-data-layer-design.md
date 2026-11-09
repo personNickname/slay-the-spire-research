@@ -5,6 +5,8 @@
 
 ## 0. Context and decisions already made
 
+**Ground-truth rule (applies to every task in this project).** The decompiled game code in `desktop-1.0.jar` is the only source of truth for numbers, enumerations, text and rules. The wiki-derived data in the repo, the research docs, and anyone's memory of the game are hypotheses to be checked against it. Whenever two sources disagree or something is unclear, the resolution is to open the decompiled class and read it; the finding is then recorded (in `_baseline-diff.json`, a test, or the spec) so the same question is never re-litigated. Entity identity is the class's `ID` string constant, never the class name (29 StS1 cards differ, e.g. class `Alchemize` has `ID = "Venomology"`).
+
 | Decision | Choice | Why |
 |---|---|---|
 | Overall scope | Two sub-projects in order: (1) harden the StS1 data layer, (2) build the StS1 playable web remake | Data must be dependable before an engine consumes it |
