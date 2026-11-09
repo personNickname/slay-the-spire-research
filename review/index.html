@@ -131,11 +131,14 @@
     background: var(--accent-soft); border: 1px solid #c7dbfb; border-radius: 10px;
     padding: 12px 16px; font-size: 13.5px; color: #24457c; margin: 14px 0;
   }
-  .open-db {
-    display: inline-block; background: var(--accent); color: #fff; border: none;
-    padding: 9px 20px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 8px;
+  .db-links { display: flex; flex-wrap: wrap; gap: 9px; margin: 12px 0 18px; }
+  .ent-link {
+    border: 1px solid var(--border); border-radius: 9px; padding: 7px 15px;
+    font-size: 13.5px; font-weight: 600; text-decoration: none; color: var(--accent);
+    background: #fff; transition: all .15s;
   }
-  .open-db:hover { background: #1d4fc4; }
+  .ent-link b { font-size: 12.5px; font-weight: 800; color: var(--text); }
+  .ent-link:hover { border-color: var(--accent); background: var(--accent-soft); }
   details {
     background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px;
     padding: 0; margin: 12px 0;
@@ -396,7 +399,7 @@
     <section data-t="深入资料">
       <h2><span class="num">+</span>全部实体数据</h2>
       <div class="sub">实体清单已齐，数据持续落地中 —— 点按钮直接进数据库检索</div>
-      <button class="open-db" data-db="sts1">打开实体数据库（遗物 / 卡牌 / 敌人 / 药水 / 祝福 / 成就）→</button>
+      <div class="db-links" id="db-links-sts1"></div>
       <div class="tbl-wrap">
       <table>
         <tr><th>实体</th><th>规模</th><th>状态</th></tr>
@@ -540,7 +543,7 @@
     <section data-t="深入资料">
       <h2><span class="num">+</span>全部实体数据</h2>
       <div class="sub">EA 版实体清单已齐（v0.107.1 基准），全量数据提取中</div>
-      <button class="open-db" data-db="sts2">打开实体数据库（已有数据即可检索）→</button>
+      <div class="db-links" id="db-links-sts2"></div>
       <div class="tbl-wrap">
       <table>
         <tr><th>实体</th><th>规模</th><th>状态</th></tr>
@@ -613,17 +616,42 @@
     active = name;
     tabs.forEach(t => t.classList.toggle('active', t.dataset.view === name));
     Object.entries(views).forEach(([k, v]) => v.classList.toggle('active', k === name));
-    if (name === 'db') { renderEntityButtons(); renderFilters(); renderTable(); tocEl.innerHTML = ''; sideTitle.textContent = '数据说明'; tocEl.innerHTML = '<a style="cursor:default;color:var(--faint)">一套 JSON 底层<br>一个统一 UI 顶层<br><br>实体表随代理落地<br>持续扩充</a>'; }
+    if (name === 'db') { renderEntityButtons(); renderFilters(); renderTable(); tocEl.innerHTML = ''; sideTitle.textContent = '数据说明'; tocEl.innerHTML = '<a style="cursor:default;color:var(--faint)">一套 JSON 底层<br>一个统一 UI 顶层<br><br>每张表有独立链接<br>（地址栏 #db/...）</a>'; syncHash(); }
     else buildToc(name);
     if (!silent) window.scrollTo({ top: 0 });
     updateProgress(); updateSpy();
   }
   tabs.forEach(t => t.addEventListener('click', () => switchTab(t.dataset.view)));
-  document.querySelectorAll('.open-db').forEach(b => b.addEventListener('click', () => {
+  // ---- 实体直连：hash 路由（#db/<game>/<entity>）+ 链接网格 ----
+  function syncHash() {
+    if (active === 'db') history.replaceState(null, '', '#db/' + dbGame + '/' + dbEntity);
+  }
+  function openEntity(game, key) {
     switchTab('db', true);
-    setDbGame(b.dataset.db);
+    setDbGame(game);
+    const data = DB[game] && DB[game][key];
+    if (data && (Array.isArray(data) ? data.length : true)) setDbEntity(key);
     window.scrollTo({ top: 0 });
-  }));
+  }
+  function route() {
+    const m = location.hash.match(/^#db\/(sts1|sts2)\/([a-z_]+)$/);
+    if (m) openEntity(m[1], m[2]);
+  }
+  window.addEventListener('hashchange', route);
+  function buildDbLinks(game, id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    Object.entries(ENT).forEach(([key, cfg]) => {
+      const data = DB[game] && DB[game][key];
+      const has = (Array.isArray(data) && data.length) || (!Array.isArray(data) && data);
+      if (!has) return;
+      const a = document.createElement('a');
+      a.className = 'ent-link';
+      a.href = '#db/' + game + '/' + key;
+      a.innerHTML = cfg.label + (Array.isArray(data) ? ' <b>' + data.length + '</b>' : '') + ' →';
+      el.appendChild(a);
+    });
+  }
 
   const bar = document.getElementById('progress');
   function updateProgress() {
@@ -669,16 +697,23 @@
   function itemName(it) { return it.zh || it.name || it.en || it.id; }
   function fmtVal(v) { return v === null || v === undefined ? '—' : (Array.isArray(v) ? v.join('–') : String(v)); }
 
+  function setDbEntity(key) {
+    dbEntity = key; dbFilters = {};
+    renderEntityButtons(); renderFilters(); renderTable();
+    syncHash();
+  }
   function setDbGame(g) {
     dbGame = g; dbFilters = {}; dbQuery = ''; document.getElementById('db-search').value = '';
     document.querySelectorAll('#db-game button').forEach(b => b.classList.toggle('active', b.dataset.game === g));
-    const avail = Object.keys(ENT).filter(k => Array.isArray(DB[g] && DB[g][k]) && DB[g][k].length);
+    const avail = Object.keys(ENT).filter(k => {
+      const d = DB[g] && DB[g][k];
+      return (Array.isArray(d) && d.length) || (!Array.isArray(d) && d);
+    });
     const first = avail[0] || 'relics';
     dbEntity = avail.includes(dbEntity) ? dbEntity : first;
     renderEntityButtons(); renderFilters(); renderTable();
+    syncHash();
   }
-  document.querySelectorAll('#db-game button').forEach(b => b.addEventListener('click', () => setDbGame(b.dataset.game)));
-  document.getElementById('db-search').addEventListener('input', e => { dbQuery = e.target.value.trim().toLowerCase(); renderTable(); });
 
   function renderEntityButtons() {
     const wrap = document.getElementById('db-entities'); wrap.innerHTML = '';
@@ -688,7 +723,7 @@
       const btn = document.createElement('button');
       btn.className = 'ent-btn' + (key === dbEntity ? ' active' : '') + (has ? '' : ' pending');
       btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + (Array.isArray(data) ? data.length : '配置') + '</span>' : ' <span class="cnt">提取中</span>');
-      if (has) btn.addEventListener('click', () => { dbEntity = key; dbFilters = {}; renderEntityButtons(); renderFilters(); renderTable(); });
+      if (has) btn.addEventListener('click', () => setDbEntity(key));
       else btn.title = '数据提取中，落地后自动出现';
       wrap.appendChild(btn);
     });
@@ -774,6 +809,9 @@
   }
 
   buildToc('sts1');
+  buildDbLinks('sts1', 'db-links-sts1');
+  buildDbLinks('sts2', 'db-links-sts2');
+  route();
   updateProgress();
   updateSpy();
 </script>
