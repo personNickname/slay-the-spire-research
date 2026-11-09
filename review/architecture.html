@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杀戮尖塔 1 — 数据层架构设计复审</title>
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f7f9fc; --text: #1f2733; --dim: #5b6675; --faint: #8a94a6;
+    --accent: #2563eb; --accent-soft: #eaf1fe; --border: #e3e8ef;
+    --red: #d64545; --green: #2e9e5b; --blue: #2b7fd4; --purple: #8a4fd3; --pink: #d05a9e; --gold: #b8860b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; line-height: 1.75; font-size: 15.5px; }
+  #progress { position: fixed; top: 0; left: 0; height: 4px; z-index: 300; background: var(--accent); width: 0%; transition: width .1s linear; border-radius: 0 2px 2px 0; }
+  header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  .head-inner { max-width: 1180px; margin: 0 auto; padding: 18px 28px 14px; }
+  .title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  h1 { font-size: 22px; letter-spacing: .5px; }
+  h1 .accent { color: var(--accent); }
+  .subtitle { color: var(--faint); font-size: 13.5px; }
+  .nav-links { margin-left: auto; display: flex; gap: 14px; font-size: 13.5px; }
+  .nav-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 208px 1fr; gap: 44px; padding: 0 28px; }
+  aside { position: sticky; top: 84px; align-self: start; padding: 28px 0 60px; }
+  .toc-title { font-size: 12.5px; font-weight: 700; color: var(--faint); letter-spacing: 2px; margin-bottom: 12px; }
+  .toc a { display: block; padding: 6px 12px; color: var(--dim); text-decoration: none; font-size: 13.5px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; }
+  .toc a:hover { color: var(--text); background: var(--bg-soft); }
+  .toc a.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+  main { padding: 34px 0 110px; min-width: 0; }
+  section { margin-bottom: 62px; scroll-margin-top: 100px; }
+  h2 { font-size: 21px; margin-bottom: 4px; }
+  h2 .num { display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; background: var(--accent); color: #fff; border-radius: 7px; font-size: 14px; margin-right: 10px; vertical-align: 2px; }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
+  .sub { color: var(--faint); font-size: 13.5px; margin-bottom: 18px; padding-left: 36px; }
+  p { margin: 10px 0; }
+  .dim { color: var(--dim); }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 13px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 5px; padding: 0 5px; color: #24457c; }
+  .grid { display: grid; gap: 14px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .g4 { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+  .card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .card h5 { font-size: 15px; margin-bottom: 4px; }
+  .card p { font-size: 13.5px; color: var(--dim); margin: 4px 0; }
+  .card ul { margin: 6px 0 0 18px; font-size: 13.5px; }
+  .card li { margin: 3px 0; }
+  .stat { text-align: center; padding: 18px 12px; }
+  .stat .n { font-size: 30px; font-weight: 800; color: var(--accent); line-height: 1.2; }
+  .stat .l { font-size: 13px; color: var(--dim); }
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+  th { background: var(--bg-soft); font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 7px 12px; border: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: #fafbfd; }
+  pre.formula, .formula { background: var(--bg-soft); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 18px; margin: 12px 0; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 13px; color: var(--text); overflow-x: auto; white-space: pre; line-height: 1.6; }
+  .formula .c { color: var(--faint); }
+  .formula .k { color: var(--accent); }
+  .formula .s { color: var(--green); }
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+  .step { background: #fff; border: 1px solid var(--border); padding: 6px 13px; border-radius: 8px; font-size: 13.5px; }
+  .step.acc { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  .step.warn { background: #fdeaea; border-color: var(--red); color: var(--red); font-weight: 700; }
+  .arr { color: var(--accent); font-weight: 700; }
+  .char { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; padding: 16px 18px; }
+  .char.red { border-left-color: var(--red); } .char.green { border-left-color: var(--green); }
+  .char.blue { border-left-color: var(--blue); } .char.purple { border-left-color: var(--purple); }
+  .char.gold { border-left-color: var(--gold); } .char.pink { border-left-color: var(--pink); }
+  .char .role { font-size: 16px; font-weight: 800; }
+  .char .en { color: var(--faint); font-size: 12.5px; font-style: italic; }
+  .char ul { margin: 8px 0 0 18px; font-size: 13.5px; color: var(--dim); }
+  .badge { display: inline-block; padding: 0 9px; border-radius: 12px; font-size: 12px; font-weight: 700; vertical-align: 2px; margin-left: 8px; }
+  .b-red { background: #fdeaea; color: var(--red); } .b-green { background: #e7f6ee; color: var(--green); }
+  .b-blue { background: #e9f3fd; color: var(--blue); } .b-purple { background: #f1e9fb; color: var(--purple); }
+  .b-gold { background: #faf3e3; color: var(--gold); } .b-gray { background: #eef1f5; color: var(--dim); }
+  .tip { background: var(--accent-soft); border: 1px solid #c7dbfb; border-radius: 10px; padding: 12px 16px; font-size: 13.5px; color: #24457c; margin: 14px 0; }
+  .tip.warn { background: #fdf3f3; border-color: #f1c4c4; color: #7a2a2a; }
+  details { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; margin: 12px 0; }
+  details summary { cursor: pointer; padding: 11px 16px; font-weight: 600; font-size: 14px; list-style: none; color: var(--dim); }
+  details summary::before { content: "▸ "; color: var(--accent); }
+  details[open] summary::before { content: "▾ "; }
+  details .body { padding: 2px 16px 12px; font-size: 13.5px; color: var(--dim); }
+  footer { border-top: 1px solid var(--border); padding: 26px; text-align: center; color: var(--faint); font-size: 13px; }
+
+  /* ---------- 架构图 ---------- */
+  .arch { display: grid; gap: 10px; margin: 16px 0; }
+  .layer { border: 1px dashed var(--border); border-radius: 14px; padding: 12px 14px 14px; background: #fff; position: relative; }
+  .layer > .lbl { position: absolute; top: -10px; left: 16px; background: #fff; padding: 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: var(--faint); }
+  .boxes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .box { flex: 1 1 150px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+  .box b { display: block; font-size: 13.5px; color: var(--text); font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .box span { color: var(--faint); font-size: 12.5px; }
+  .box.src { border-left: 4px solid var(--gold); }
+  .box.tool { border-left: 4px solid var(--accent); }
+  .box.data { border-left: 4px solid var(--green); }
+  .box.curated { border-left: 4px solid var(--purple); }
+  .box.out { border-left: 4px solid var(--blue); }
+  .box.ignored { border-style: dashed; opacity: .75; }
+  .down { text-align: center; color: var(--accent); font-weight: 800; font-size: 18px; line-height: 1; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--dim); margin: 6px 0 0; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+
+  /* ---------- 目录树 ---------- */
+  .tree { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 13px; line-height: 1.7; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; overflow-x: auto; white-space: pre; }
+  .tree .new { color: var(--green); font-weight: 700; }
+  .tree .gen { color: var(--blue); }
+  .tree .ign { color: var(--faint); font-style: italic; }
+  .tree .c { color: var(--faint); }
+
+  /* ---------- 决策/状态 ---------- */
+  .kv td:first-child { color: var(--faint); white-space: nowrap; width: 160px; }
+  .ok { color: var(--green); font-weight: 700; }
+  .todo { color: var(--gold); font-weight: 700; }
+
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } aside { display: none; } }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header>
+  <div class="head-inner">
+    <div class="title-row">
+      <h1>杀戮尖塔 1 <span class="accent">数据层架构设计</span></h1>
+      <span class="subtitle">子项目 1 · 方案 A（全量反编译 + 结构化效果 DSL）· 2026-11-09 · 待复审</span>
+      <div class="nav-links">
+        <a href="index.html">← 资料复审 / 实体数据库</a>
+        <a href="../docs/superpowers/specs/2026-11-09-sts1-data-layer-design.md">Markdown 规格</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside>
+  <div class="toc-title">目录</div>
+  <nav class="toc" id="toc">
+    <a href="#s0">0 · 已定决策</a>
+    <a href="#s1">1 · 目标与范围</a>
+    <a href="#s2">2 · 架构全景</a>
+    <a href="#s3">3 · 仓库结构</a>
+    <a href="#s4">4 · 数据流水线</a>
+    <a href="#s5">5 · 数据模型</a>
+    <a href="#s6">6 · 效果 DSL</a>
+    <a href="#s7">7 · 提取与策展</a>
+    <a href="#s8">8 · 测试与校验</a>
+    <a href="#s9">9 · Review UI 与 TODO.md</a>
+    <a href="#s10">10 · 风险与延后项</a>
+    <a href="#s11">11 · 复审清单</a>
+  </nav>
+</aside>
+
+<main>
+
+<!-- ================= 0 决策 ================= -->
+<section id="s0">
+  <h2><span class="num">0</span>已定决策</h2>
+  <div class="sub">头脑风暴阶段已确认的选择；改动任何一项都会影响后续设计</div>
+  <div class="tbl-wrap"><table class="kv">
+    <tr><th>议题</th><th>决定</th><th>理由</th></tr>
+    <tr><td>总体范围</td><td>两个子项目依次进行：<b>① 加固 StS1 数据层</b> → ② StS1 可玩网页复刻</td><td>引擎消费前数据必须可信</td></tr>
+    <tr><td>复刻技术栈</td><td>TypeScript + Vite + React，测试 Vitest</td><td>类型化数据导入、生态成熟</td></tr>
+    <tr><td>数据来源</td><td>本机安装 <code>desktop-1.0.jar</code>（Java/libGDX），用 CFR 0.152 + 游戏自带 JRE 8 反编译</td><td>一手数值 + 官方 eng/zhs 文本，取代 wiki 抄录</td></tr>
+    <tr><td>StS2</td><td>本子项目不动 <code>data/sts2/</code></td><td>EA 仍在变；复刻先做 1 代</td></tr>
+    <tr><td>素材</td><td>不要音频、不要图片；卡牌/遗物用纯文本表示；素材提取延后，记入 TODO.md</td><td>版权；仓库保持轻量</td></tr>
+    <tr><td>工具链</td><td>Node 26 LTS · .NET 8 SDK + ilspycmd 9.1（供 StS2 日后使用）· Python 3.12（过渡）· Git 2.56 · CFR jar 于 <code>F:\Project\_tools</code></td><td>2026-11-09 已全部安装</td></tr>
+    <tr><td>可续作性</td><td>仓库根目录 <code>TODO.md</code>，任何人/代理都能据此接手</td><td>用户要求</td></tr>
+  </table></div>
+</section>
+
+<!-- ================= 1 目标 ================= -->
+<section id="s1">
+  <h2><span class="num">1</span>目标与范围</h2>
+  <div class="sub">把 wiki 抄录的中文描述，变成一手、可校验、机器可执行的数据集</div>
+
+  <div class="grid g4" style="margin-bottom:18px">
+    <div class="card stat"><div class="n">371</div><div class="l">可玩卡牌（+临时/选项卡）</div></div>
+    <div class="card stat"><div class="n">193</div><div class="l">遗物 180 + Blight 13</div></div>
+    <div class="card stat"><div class="n">~150</div><div class="l">Power（Buff/Debuff）</div></div>
+    <div class="card stat"><div class="n">42</div><div class="l">药水</div></div>
+    <div class="card stat"><div class="n">62</div><div class="l">敌人（逐进阶分档招式）</div></div>
+    <div class="card stat"><div class="n">52</div><div class="l">事件（含 Neow）</div></div>
+    <div class="card stat"><div class="n">2</div><div class="l">语言 eng / zhs（官方）</div></div>
+    <div class="card stat"><div class="n">0</div><div class="l">图片 / 音频</div></div>
+  </div>
+
+  <h3>完成标准（全部满足）</h3>
+  <div class="grid g2">
+    <div class="card"><h5>① 一一对应</h5><p>jar 内每个 StS1 实体类在 <code>data/sts1/</code> 恰有一条记录；数量由测试断言。</p></div>
+    <div class="card"><h5>② 数值全部一手</h5><p>费用/伤害/格挡/魔法数/HP/招式/遗物计数器全部来自反编译类，带 <code>source.class</code> 溯源，不允许手敲。</p></div>
+    <div class="card"><h5>③ 效果可执行</h5><p>每张卡/遗物/Power/药水有 <code>effects</code> 或 <code>triggers</code> DSL，或显式 <code>custom</code> 标记；custom 占比写入 TODO.md。</p></div>
+    <div class="card"><h5>④ <code>npm test</code> 全绿</h5><p>Schema、交叉引用、数量、黄金值、文本与数值一致性。</p></div>
+    <div class="card"><h5>⑤ Review 页可用</h5><p><code>review/index.html</code> 展示新字段；<code>data.js</code> 由 Node 脚本生成，Python 移除。</p></div>
+    <div class="card"><h5>⑥ 可接手</h5><p><code>TODO.md</code> 列出剩余工作与精确的续作命令。</p></div>
+  </div>
+
+  <div class="tip warn"><b>明确不做（记入 TODO.md → Deferred）：</b>卡面/遗物/UI 美术、音频、StS2 与 <code>sts2.dll</code> 核对、StS2 效果 DSL、2026-11-12 补丁后复核、VFX、成就/分数重提取（沿用现有数据）。</div>
+</section>
+
+<!-- ================= 2 架构全景 ================= -->
+<section id="s2">
+  <h2><span class="num">2</span>架构全景</h2>
+  <div class="sub">五层：来源 → 工具 → 数据（提取 + 策展）→ 产物 → 消费方。只有「策展」层是人工/代理写入，其余全部可再生</div>
+
+  <div class="arch">
+    <div class="layer"><div class="lbl">SOURCE · 只读，不入库</div>
+      <div class="boxes">
+        <div class="box src"><b>desktop-1.0.jar</b><span>365 MB · com/megacrit/cardcrawl/** .class（478 卡 / 198 遗物 / 167 Power / 85 怪 / 135 事件）</span></div>
+        <div class="box src"><b>localization/eng + zhs/*.json</b><span>cards / relics / powers / potions / monsters / events / keywords / characters</span></div>
+        <div class="box src ignored"><b>images/ · audio/</b><span>本子项目忽略 → TODO.md Deferred</span></div>
+      </div>
+    </div>
+    <div class="down">▼</div>
+    <div class="layer"><div class="lbl">TOOLS · tools/*.ts（Node + tsx）</div>
+      <div class="boxes">
+        <div class="box tool"><b>decompile.ts</b><span>CFR → decompiled/sts1/**/*.java（git-ignored）</span></div>
+        <div class="box tool"><b>extract/*.ts</b><span>正则/模式解析 .java + 本地化 → data/sts1/*.json；解析不了的进 _unresolved.json</span></div>
+        <div class="box tool"><b>validate.ts</b><span>Ajv Schema + 交叉引用 + 数量 → 任一失败即阻断</span></div>
+        <div class="box tool"><b>merge.ts · build-review.ts · status.ts</b><span>合并策展层 → 产物；生成 data.js；更新 TODO.md 状态块</span></div>
+      </div>
+    </div>
+    <div class="down">▼</div>
+    <div class="layer"><div class="lbl">DATA · data/sts1/ + schemas/</div>
+      <div class="boxes">
+        <div class="box data"><b>*.json（提取）</b><span>id · name{en,zh} · description · 枚举 · base/upgrade 数值 · source。<br>幂等再生，机器拥有</span></div>
+        <div class="box curated"><b>*.effects.json（策展）</b><span>按 id 键入的效果/触发 DSL。<br>代理分批编写，机器永不覆盖</span></div>
+        <div class="box data"><b>schemas/*.schema.json</b><span>JSON Schema 2020-12，additionalProperties:false；dsl.schema.json 定义闭合 op 枚举</span></div>
+      </div>
+    </div>
+    <div class="down">▼</div>
+    <div class="layer"><div class="lbl">OUTPUT · 生成产物</div>
+      <div class="boxes">
+        <div class="box out"><b>packages/sts-data（@sts/data）</b><span>合并后的 JSON + 由 Schema 生成的 TS 类型 + 类型化 loader</span></div>
+        <div class="box out"><b>review/data.js</b><span>单一打包数据源，提交入库以便离线/GitHub 直接打开</span></div>
+        <div class="box out"><b>TODO.md Status 块</b><span>提取数 / 策展数 / custom 数 自动刷新</span></div>
+      </div>
+    </div>
+    <div class="down">▼</div>
+    <div class="layer"><div class="lbl">CONSUMERS</div>
+      <div class="boxes">
+        <div class="box"><b>review/index.html</b><span>检索 / 筛选 / 展开，新增数值列、DSL 渲染、溯源、en/zh 切换、校验横幅</span></div>
+        <div class="box"><b>子项目 2 · 网页复刻引擎</b><span>import '@sts/data'；按 DSL 执行卡牌；custom 按 id 手写</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--gold)"></i>来源（只读）</span>
+    <span><i style="background:var(--accent)"></i>工具（可再生）</span>
+    <span><i style="background:var(--green)"></i>提取数据（机器拥有）</span>
+    <span><i style="background:var(--purple)"></i>策展数据（人工/代理拥有）</span>
+    <span><i style="background:var(--blue)"></i>产物</span>
+  </div>
+
+  <h3>边界原则</h3>
+  <div class="grid g3">
+    <div class="card"><h5>机器与人工分文件</h5><p>提取结果与策展结果永不写进同一个文件，重跑提取不可能破坏手写 DSL。</p></div>
+    <div class="card"><h5>失败即大声</h5><p>解析不了的模式进 <code>_unresolved.json</code> 并让 CI 失败，不允许默认值兜底。</p></div>
+    <div class="card"><h5>每条记录可溯源</h5><p><code>source.class</code> + jar sha256，任何数字都能回到那一行 Java。</p></div>
+  </div>
+</section>
+
+<!-- ================= 3 仓库结构 ================= -->
+<section id="s3">
+  <h2><span class="num">3</span>仓库结构</h2>
+  <div class="sub"><span class="new">绿色</span> 为新增，<span class="gen" style="color:var(--blue)">蓝色</span> 为生成产物，<span class="ign">灰斜体</span> 为 git-ignored</div>
+<div class="tree">slay-the-spire-research/
+├─ data/sts1/                       <span class="c">提取 + 策展（§5）</span>
+│   ├─ <span class="new">cards/&lt;color&gt;.json</span>              <span class="c">提取：red green blue purple colorless curse status</span>
+│   ├─ <span class="new">cards/&lt;color&gt;.effects.json</span>      <span class="c">策展：按卡 id 键入的 DSL</span>
+│   ├─ <span class="new">relics.json / relics.effects.json</span>
+│   ├─ <span class="new">powers.json / powers.effects.json</span>
+│   ├─ <span class="new">potions.json / potions.effects.json</span>
+│   ├─ <span class="new">monsters.json  encounters.json</span>  events.json  neow.json
+│   ├─ <span class="new">keywords.json  characters.json  map.json</span>
+│   ├─ achievements.json  score.json  <span class="c">沿用现有</span>
+│   └─ <span class="gen">_unresolved.json</span>                 <span class="c">提取器残留；必须为空才通过</span>
+├─ data/sts2/                       <span class="c">不动</span>
+├─ <span class="new">schemas/</span>                           <span class="c">每实体一份 + dsl.schema.json</span>
+├─ <span class="new">tools/</span>                             <span class="c">Node + TypeScript（tsx），无 Python</span>
+│   ├─ decompile.ts  merge.ts  validate.ts  status.ts  build-review.ts
+│   └─ extract/ localization.ts cards.ts relics.ts powers.ts potions.ts monsters.ts events.ts characters.ts map.ts keywords.ts java-parse.ts
+├─ <span class="new">packages/sts-data/</span>                 <span class="c">npm workspace：@sts/data（types.ts 由 schema 生成）</span>
+├─ <span class="ign">decompiled/</span>                        <span class="c">CFR 输出，git-ignored</span>
+├─ review/
+│   ├─ index.html                   <span class="c">现有 UI，扩展</span>
+│   ├─ <span class="new">architecture.html</span>              <span class="c">本页</span>
+│   ├─ <span class="gen">data.js</span>                        <span class="c">生成，仍提交</span>
+│   └─ <s>build.py</s>                     <span class="c">删除</span>
+├─ <span class="new">docs/superpowers/{specs,plans}/</span>
+├─ <span class="new">TODO.md</span>                            <span class="c">可续作清单</span>
+├─ <span class="new">package.json  tsconfig.json  vitest.config.ts</span>
+└─ .gitignore                       <span class="c">+ decompiled/ node_modules/ assets/</span>
+</div>
+</section>
+
+<!-- ================= 4 流水线 ================= -->
+<section id="s4">
+  <h2><span class="num">4</span>数据流水线</h2>
+  <div class="sub">npm scripts 串联；<code>npm run all</code> = extract → validate → merge → build:review → status</div>
+
+  <div class="flow">
+    <span class="step">desktop-1.0.jar</span><span class="arr">→</span>
+    <span class="step acc">decompile</span><span class="arr">→</span>
+    <span class="step">decompiled/*.java + localization</span><span class="arr">→</span>
+    <span class="step acc">extract</span><span class="arr">→</span>
+    <span class="step">data/sts1/*.json</span>
+  </div>
+  <div class="flow">
+    <span class="step">data/sts1/*.json</span><span class="step" style="border-color:var(--purple);color:var(--purple)">+ *.effects.json</span><span class="arr">→</span>
+    <span class="step acc">validate</span><span class="arr">→</span>
+    <span class="step warn">失败：退出非零，列出违规项</span>
+  </div>
+  <div class="flow">
+    <span class="step acc">validate ✓</span><span class="arr">→</span>
+    <span class="step acc">merge</span><span class="arr">→</span><span class="step">packages/sts-data/dist</span>
+    <span class="arr">→</span><span class="step acc">build:review</span><span class="arr">→</span><span class="step">review/data.js</span>
+    <span class="arr">→</span><span class="step acc">status</span><span class="arr">→</span><span class="step">TODO.md 状态块</span>
+  </div>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>脚本</th><th>输入</th><th>输出</th><th>失败条件</th></tr>
+    <tr><td><code>decompile</code></td><td>jar 路径（env <code>STS1_JAR</code>，默认 Steam 路径）</td><td><code>decompiled/sts1/**</code></td><td>jar 不存在 / CFR 退出非零</td></tr>
+    <tr><td><code>extract</code></td><td>decompiled + 本地化 JSON</td><td><code>data/sts1/*.json</code>、<code>_unresolved.json</code>、found/expected 计数</td><td>found ≠ expected</td></tr>
+    <tr><td><code>validate</code></td><td>data/sts1 + schemas</td><td>报告 / <code>review/validation.json</code></td><td>Schema 不符、引用悬空、数量不符、_unresolved 非空</td></tr>
+    <tr><td><code>merge</code></td><td>提取 + 策展</td><td><code>packages/sts-data/dist</code> + 类型</td><td>validate 未通过</td></tr>
+    <tr><td><code>build:review</code></td><td>merge 产物</td><td><code>review/data.js</code></td><td>同上</td></tr>
+    <tr><td><code>status</code></td><td>merge 产物</td><td><code>TODO.md</code> Status 块</td><td>同上</td></tr>
+    <tr><td><code>test</code></td><td>全部</td><td>Vitest 报告</td><td>见 §8</td></tr>
+  </table></div>
+</section>
+
+<!-- ================= 5 数据模型 ================= -->
+<section id="s5">
+  <h2><span class="num">5</span>数据模型</h2>
+  <div class="sub">以卡牌为主示例；其余实体同一套「提取字段 + source + 策展 DSL」模式</div>
+
+  <h3>5.1 卡牌记录（<code>data/sts1/cards/red.json</code> 中的一条）</h3>
+<pre class="formula">{
+  <span class="k">"id"</span>: <span class="s">"Bash"</span>,                                   <span class="c">// 游戏字符串 ID，全局主键</span>
+  <span class="k">"name"</span>: { <span class="k">"en"</span>: <span class="s">"Bash"</span>, <span class="k">"zh"</span>: <span class="s">"痛击"</span> },
+  <span class="k">"description"</span>: { <span class="k">"en"</span>: <span class="s">"Deal !D! damage. NL Apply !M! #yVulnerable."</span>, <span class="k">"zh"</span>: <span class="s">"造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"</span> },
+  <span class="k">"upgradeDescription"</span>: { <span class="k">"en"</span>: null, <span class="k">"zh"</span>: null },   <span class="c">// 仅当类覆盖了升级描述</span>
+  <span class="k">"color"</span>: <span class="s">"red"</span>, <span class="k">"type"</span>: <span class="s">"attack"</span>, <span class="k">"rarity"</span>: <span class="s">"basic"</span>, <span class="k">"target"</span>: <span class="s">"enemy"</span>,
+  <span class="k">"cost"</span>: 2,                                        <span class="c">// -1 = X 费，-2 = 不可打出（沿用游戏约定）</span>
+  <span class="k">"base"</span>:    { <span class="k">"damage"</span>: 8,    <span class="k">"block"</span>: null, <span class="k">"magic"</span>: 2 },
+  <span class="k">"upgrade"</span>: { <span class="k">"cost"</span>: null, <span class="k">"damage"</span>: 2, <span class="k">"block"</span>: null, <span class="k">"magic"</span>: 1 },   <span class="c">// upgrade() 解析出的增量</span>
+  <span class="k">"keywords"</span>: [],                                   <span class="c">// exhaust ethereal innate retain unplayable</span>
+  <span class="k">"playable"</span>: true,
+  <span class="k">"effects"</span>: [                                      <span class="c">// ← 来自 red.effects.json（策展）</span>
+    { <span class="k">"op"</span>: <span class="s">"damage"</span>,     <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"amount"</span>: <span class="s">"damage"</span> },
+    { <span class="k">"op"</span>: <span class="s">"applyPower"</span>, <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"power"</span>: <span class="s">"Vulnerable"</span>, <span class="k">"amount"</span>: <span class="s">"magic"</span> }
+  ],
+  <span class="k">"upgradeEffects"</span>: null,                           <span class="c">// 升级改变行为（非仅数值）时覆盖</span>
+  <span class="k">"source"</span>: { <span class="k">"class"</span>: <span class="s">"com.megacrit.cardcrawl.cards.red.Bash"</span> }
+}</pre>
+  <div class="tip"><code>!D! !B! !M!</code> 与 <code>NL</code> 占位符<b>原样保留</b>，由引擎在渲染时替换，和原游戏一致；这也让 §8 的「文本 ↔ 数值一致性」测试成为可能。</div>
+
+  <h3>5.2 其余实体</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>实体</th><th>提取字段（机器）</th><th>策展字段（代理）</th></tr>
+    <tr><td><b>Relic</b></td><td>id · name · flavor · description（DESCRIPTIONS 拼接，<code>#b</code> 替换为计数器）· tier（starter/common/uncommon/rare/boss/shop/event/special/blight）· pool（red/green/blue/purple/shared）· counterStart · source</td><td><code>triggers: [{ on, do: [ops] }]</code>；hook：combatStart turnStart turnEnd cardPlayed attackPlayed onRest onPickup onShuffle onExhaust onVictory onChestOpen atDamageGive atDamageReceive modifyBlock custom</td></tr>
+    <tr><td><b>Power</b></td><td>id · name · description · type（buff/debuff）· turnBased · canStack · priority · source</td><td><code>triggers</code>（同上 + atEndOfRound onApply onRemove）</td></tr>
+    <tr><td><b>Potion</b></td><td>id · name · description · rarity · targetRequired · potency{base, perAscension} · sacredBarkDoubles · source</td><td><code>effects</code></td></tr>
+    <tr><td><b>Monster</b></td><td>id · name · act · tier · hp{min,max} · hpA7 · moves[{ byte, name, intent, damage, hits, block, powers[], 进阶分档 }] · source</td><td>行为 <code>pattern</code> 沿用现有散文；AI DSL 延后到子项目 2</td></tr>
+    <tr><td><b>Encounter</b></td><td>act · kind（weak/normal/elite/boss）· monsters[] · weight</td><td>—</td></tr>
+    <tr><td><b>Event</b></td><td>id · name · pool · text · options[{ text, requirement }]</td><td>options[].outcomes DSL（gold hp maxHp card relic potion curse combat custom）</td></tr>
+    <tr><td><b>Neow</b></td><td>四阶段祝福 / 代价选项</td><td>—</td></tr>
+    <tr><td><b>Keyword</b></td><td>id · names[] · description{en,zh}</td><td>—</td></tr>
+    <tr><td><b>Character</b></td><td>id · startHp · startGold · startingDeck[] · startingRelic · orbSlots · cardColor</td><td>—</td></tr>
+    <tr><td><b>Map</b></td><td>网格尺寸 · 路径数 · 房间权重 · 固定行（宝箱 9 / 篝火 15）· 各幕 Boss 池 · 商店价格</td><td>—</td></tr>
+  </table></div>
+
+  <h3>5.3 Schema 规则</h3>
+  <div class="grid g3">
+    <div class="card"><h5>JSON Schema 2020-12</h5><p>每实体一份；<code>additionalProperties:false</code>，拼错字段立刻失败。</p></div>
+    <div class="card"><h5>交叉引用校验</h5><p><code>applyPower.power</code>、<code>addCard.card</code>、<code>encounters.monsters[]</code>、<code>startingRelic</code> 必须真实存在。</p></div>
+    <div class="card"><h5>类型自动生成</h5><p>json-schema-to-typescript → <code>packages/sts-data/src/types.ts</code>，引擎零手写类型。</p></div>
+  </div>
+</section>
+
+<!-- ================= 6 DSL ================= -->
+<section id="s6">
+  <h2><span class="num">6</span>效果 DSL</h2>
+  <div class="sub">扁平 op 列表，闭合枚举；目标 custom ≤ 10%</div>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>op</th><th>必填</th><th>说明</th></tr>
+    <tr><td><code>damage</code></td><td>target, amount</td><td>单次；<code>repeat</code> 表示多段</td></tr>
+    <tr><td><code>damageAll</code></td><td>amount</td><td>全体敌人</td></tr>
+    <tr><td><code>block</code></td><td>amount</td><td>自身</td></tr>
+    <tr><td><code>applyPower</code></td><td>target, power, amount</td><td>power 需存在于 powers.json</td></tr>
+    <tr><td><code>draw</code> / <code>discard</code> / <code>exhaust</code></td><td>amount（+ choose / from）</td><td>from ∈ hand drawPile discardPile</td></tr>
+    <tr><td><code>gainEnergy</code> / <code>heal</code> / <code>loseHp</code></td><td>amount（+ target）</td><td></td></tr>
+    <tr><td><code>addCard</code></td><td>card, count, to, upgraded</td><td>to ∈ hand drawPile discardPile exhaust</td></tr>
+    <tr><td><code>channelOrb</code> / <code>evokeOrb</code></td><td>orb / count</td><td>故障机器人</td></tr>
+    <tr><td><code>enterStance</code> / <code>scry</code></td><td>stance / amount</td><td>观者</td></tr>
+    <tr><td><code>removeDebuffs</code> <code>upgradeCards</code> <code>shuffle</code> <code>playTopCard</code> <code>setCost</code> <code>doubleBlock</code> <code>doubleStrength</code></td><td>逐 op 定义</td><td></td></tr>
+    <tr><td><code>custom</code></td><td>id, note</td><td>逃生口；引擎按 id 手写；数量被统计</td></tr>
+  </table></div>
+
+  <div class="grid g3">
+    <div class="card"><h5>amount</h5><p>整数，或引用：<code>"damage" "block" "magic" "x" "energy"</code>。引用在运行时解析到卡牌当前数值（含升级、力量、易伤）。</p></div>
+    <div class="card"><h5>target</h5><p><code>self enemy allEnemies randomEnemy none</code></p></div>
+    <div class="card"><h5>修饰</h5><p><code>repeat</code>（整数或 amount 引用）；<code>if</code> 为闭合条件枚举：<code>targetHasPower:X</code> <code>handEmpty</code> <code>inStance:X</code> <code>lastCardType:X</code> <code>hpBelowHalf</code> …</p></div>
+  </div>
+
+  <details><summary>示例：多段攻击 + 条件</summary><div class="body">
+<pre class="formula"><span class="c">// Twin Strike：造成 5 点伤害两次</span>
+[{ <span class="k">"op"</span>: <span class="s">"damage"</span>, <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"amount"</span>: <span class="s">"damage"</span>, <span class="k">"repeat"</span>: 2 }]
+
+<span class="c">// Clash：手牌全为攻击牌时才能打出 —— 可打出条件走 custom 或 playableIf 扩展，由计划阶段决定</span>
+[{ <span class="k">"op"</span>: <span class="s">"damage"</span>, <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"amount"</span>: <span class="s">"damage"</span>, <span class="k">"if"</span>: <span class="s">"handAllAttacks"</span> }]
+
+<span class="c">// Apotheosis：升级牌库中所有牌 —— 词表够用</span>
+[{ <span class="k">"op"</span>: <span class="s">"upgradeCards"</span>, <span class="k">"from"</span>: <span class="s">"all"</span>, <span class="k">"count"</span>: <span class="s">"all"</span> }]
+
+<span class="c">// 真正无法表达的卡</span>
+[{ <span class="k">"op"</span>: <span class="s">"custom"</span>, <span class="k">"id"</span>: <span class="s">"Omniscience"</span>, <span class="k">"note"</span>: <span class="s">"选择抽牌堆一张牌打出两次并消耗"</span> }]</pre>
+  </div></details>
+</section>
+
+<!-- ================= 7 工作流 ================= -->
+<section id="s7">
+  <h2><span class="num">7</span>提取与策展工作流</h2>
+  <div class="sub">提取是自动的；策展由代理分批完成并经审阅</div>
+
+  <h3>7.1 提取器识别的 Java 模式</h3>
+<pre class="formula"><span class="c">// 卡牌构造器</span>
+super(ID, cardStrings.NAME, <span class="s">"red/attack/bash"</span>, <span class="k">2</span>, cardStrings.DESCRIPTION,
+      CardType.<span class="k">ATTACK</span>, CardColor.<span class="k">RED</span>, CardRarity.<span class="k">BASIC</span>, CardTarget.<span class="k">ENEMY</span>);
+this.baseDamage = <span class="k">8</span>;   this.baseBlock = <span class="k">N</span>;   this.magicNumber = this.baseMagicNumber = <span class="k">2</span>;
+this.exhaust = true;   this.isEthereal = true;   this.isInnate = true;   this.selfRetain = true;
+
+<span class="c">// upgrade()</span>
+upgradeDamage(<span class="k">2</span>);  upgradeBlock(<span class="k">N</span>);  upgradeMagicNumber(<span class="k">1</span>);  upgradeBaseCost(<span class="k">N</span>);
+
+<span class="c">// 怪物</span>
+setHp(<span class="k">40</span>, <span class="k">44</span>);  if (AbstractDungeon.ascensionLevel &gt;= <span class="k">7</span>) setHp(<span class="k">42</span>, <span class="k">46</span>);
+setMove((byte)<span class="k">1</span>, Intent.<span class="k">ATTACK</span>, damage, hits, isMulti);   new DamageInfo(this, <span class="k">11</span>);
+
+<span class="c">// 遗物</span>
+super(ID, <span class="s">"anchor.png"</span>, RelicTier.<span class="k">COMMON</span>, LandingSound.<span class="k">HEAVY</span>);  this.counter = <span class="k">N</span>;</pre>
+  <p class="dim">不匹配任何模式的文件：输出已识别字段 + 写入 <code>_unresolved.json</code>（类路径 + 行号），由人工决定是补模式还是补数据。</p>
+
+  <h3>7.2 策展批次</h3>
+  <div class="flow">
+    <span class="step char red" style="border-left:4px solid var(--red)">铁甲战士 76</span><span class="arr">→</span>
+    <span class="step" style="border-left:4px solid var(--green)">寂静猎手 76</span><span class="arr">→</span>
+    <span class="step" style="border-left:4px solid var(--blue)">故障机器人 77</span><span class="arr">→</span>
+    <span class="step" style="border-left:4px solid var(--purple)">观者 78</span><span class="arr">→</span>
+    <span class="step">无色/诅咒/状态 61</span><span class="arr">→</span>
+    <span class="step">遗物 193</span><span class="arr">→</span>
+    <span class="step">Power ~150</span><span class="arr">→</span>
+    <span class="step">药水 42</span><span class="arr">→</span>
+    <span class="step">事件 52</span>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h5>输入</h5><p>该批次的反编译 .java、<code>dsl.schema.json</code>、两个已完成范例。每批 ≈ 25 个实体。</p></div>
+    <div class="card"><h5>输出</h5><p>一个 <code>*.effects.json</code> 分片 + 每个 <code>custom</code> 的一句说明。</p></div>
+    <div class="card"><h5>验收</h5><p><code>npm run validate</code> 通过；审阅代理随机抽 20% 从 Java 重新推导，任何数值不符即整批打回。</p></div>
+  </div>
+</section>
+
+<!-- ================= 8 测试 ================= -->
+<section id="s8">
+  <h2><span class="num">8</span>测试与校验（Vitest · <code>npm test</code>）</h2>
+  <div class="sub">七类测试；前六类任一失败即红</div>
+  <div class="tbl-wrap"><table>
+    <tr><th>#</th><th>测试</th><th>防住什么</th></tr>
+    <tr><td>1</td><td>Schema 校验全部数据文件</td><td>字段拼错、类型错、枚举外值</td></tr>
+    <tr><td>2</td><td>交叉引用完整性</td><td>引用不存在的 Power / 卡 / 怪 / 遗物</td></tr>
+    <tr><td>3</td><td>数量断言：371 卡 · 180+13 遗物 · 42 药水 · 62 怪 · 52 事件，与 jar 类列表比对</td><td>漏提取、重复</td></tr>
+    <tr><td>4</td><td>黄金值 ~30 条：Bash 8/2→10/3 · Strike 6→9 · Defend 5→8 · Jaw Worm 40–44（A7 42–46）· Chomp 11（A2 12）· Anchor 10 · Burning Blood 6 · Fire Potion 20 · Cultist Ritual 3/4/5</td><td>正则回归时给出有名字的失败</td></tr>
+    <tr><td>5</td><td>文本 ↔ 数值一致性：描述里出现 <code>!M!</code> 则 <code>base.magic</code> 非空；样本集替换占位符后与已知数值一致</td><td>字段映射错位</td></tr>
+    <tr><td>6</td><td><code>_unresolved.json</code> 为空</td><td>静默跳过</td></tr>
+    <tr><td>7</td><td>DSL 覆盖率报告（不失败，写入 TODO.md）</td><td>custom 悄悄膨胀</td></tr>
+  </table></div>
+</section>
+
+<!-- ================= 9 Review UI / TODO ================= -->
+<section id="s9">
+  <h2><span class="num">9</span>Review UI 与 TODO.md</h2>
+  <div class="sub">现有页面保留并扩展；TODO.md 是整个项目的续作入口</div>
+
+  <h3>9.1 review/index.html 新增</h3>
+  <div class="grid g4">
+    <div class="card"><h5>数值列</h5><p>base / upgrade 并排显示</p></div>
+    <div class="card"><h5>DSL 渲染</h5><p>展开行里以项目符号列出 ops</p></div>
+    <div class="card"><h5>溯源</h5><p>显示 <code>source.class</code></p></div>
+    <div class="card"><h5>en / zh 切换</h5><p>官方双语文本</p></div>
+    <div class="card"><h5>校验横幅</h5><p>读取 <code>review/validation.json</code></p></div>
+    <div class="card"><h5>build.py → build-review.ts</h5><p>Python 移除</p></div>
+  </div>
+
+  <h3>9.2 TODO.md 固定结构</h3>
+<pre class="formula"># Project TODO
+## Status <span class="c">（npm run status 自动刷新）</span>
+- Cards: 371/371 extracted · 260/371 effects curated · 18 custom
+## Sub-project 1 — StS1 data layer        <span class="c">[ ] / [x]，链接到 plan 文件的任务</span>
+## Sub-project 2 — StS1 web remake        <span class="c">占位，待其自身头脑风暴后填充</span>
+## Deferred
+- [ ] 从 desktop-1.0.jar 提取卡面/遗物/UI 美术（images/）— git-ignored
+- [ ] 提取音频（audio/）— git-ignored
+- [ ] StS2：用 sts2.dll v0.107.1 核对 data/sts2（ilspycmd 已装）
+- [ ] StS2：2026-11-12 补丁后复核
+- [ ] StS2：效果 DSL
+- [ ] 怪物 AI DSL（招式选择逻辑）— 子项目 2
+## How to resume
+<span class="c">精确命令：前置依赖 · decompile · extract · validate · test · build:review</span></pre>
+
+  <h3>9.3 Git</h3>
+  <p class="dim">分支 <code>sts1-data-layer</code>；每个提取器 / 每个策展批次一个小提交；<code>decompiled/</code>、<code>node_modules/</code>、<code>assets/</code> 忽略；jar 永不入库。远端仍为 <code>personNickname/slay-the-spire-research</code>，推送需用户凭据。</p>
+</section>
+
+<!-- ================= 10 风险 ================= -->
+<section id="s10">
+  <h2><span class="num">10</span>风险与延后项</h2>
+  <div class="sub">已知风险及其对策；延后项全部进 TODO.md</div>
+  <div class="tbl-wrap"><table>
+    <tr><th>风险</th><th>对策</th></tr>
+    <tr><td>CFR 输出因类而异（常量内联、进阶分支写成三元式）</td><td><code>java-parse.ts</code> 归一化；解析不了的显式进 _unresolved，不猜</td></tr>
+    <tr><td>DSL 词表对怪卡不够用</td><td><code>custom</code> 逃生口并计数；词表可在后续小版本扩充</td></tr>
+    <tr><td>zhs 与类 ID 键不一致</td><td>StS1 各语言键同为字符串 ID；测试断言每个 eng 键都有 zhs 键</td></tr>
+    <tr><td>版权</td><td>只分发机制与数值（及 wiki 早已公开的本地化文本）；素材本地保留且 git-ignored</td></tr>
+    <tr><td>范围蔓延到引擎</td><td>怪物 AI、VFX、素材加载明确延后</td></tr>
+  </table></div>
+</section>
+
+<!-- ================= 11 复审清单 ================= -->
+<section id="s11">
+  <h2><span class="num">11</span>复审清单</h2>
+  <div class="sub">请逐项确认；任一项不同意请指出编号</div>
+  <div class="grid g2">
+    <div class="card"><h5>A · 分层与边界（§2）</h5><p>提取与策展分文件、失败即大声、逐条溯源 —— 这三个原则接受吗？</p></div>
+    <div class="card"><h5>B · 仓库结构（§3）</h5><p>新增 <code>schemas/ tools/ packages/sts-data/ TODO.md</code>，删除 <code>build.py</code>，<code>data.js</code> 继续提交。</p></div>
+    <div class="card"><h5>C · 卡牌模型（§5.1）</h5><p>占位符原样保留、<code>upgrade</code> 存增量、<code>cost</code> 沿用 -1/-2 约定。</p></div>
+    <div class="card"><h5>D · DSL 词表（§6）</h5><p>闭合枚举 + <code>custom</code> ≤ 10%；条件为枚举而非表达式语言。</p></div>
+    <div class="card"><h5>E · 策展顺序与验收（§7.2）</h5><p>铁甲 → 寂静 → 故障 → 观者 → 无色 → 遗物 → Power → 药水 → 事件；20% 抽检。</p></div>
+    <div class="card"><h5>F · 延后项（§10）</h5><p>美术、音频、StS2、怪物 AI 全部延后，进 TODO.md。</p></div>
+  </div>
+  <div class="tip">确认后下一步：规格审阅（代理）→ 你复审 Markdown 规格 → <b>writing-plans</b> 生成逐任务实施计划 → 执行。</div>
+</section>
+
+</main>
+</div>
+
+<footer>杀戮尖塔 1 数据层架构设计 · 子项目 1 · 2026-11-09 · 配套 Markdown：docs/superpowers/specs/2026-11-09-sts1-data-layer-design.md</footer>
+
+<script>
+  // 阅读进度条
+  const bar = document.getElementById('progress');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    // 目录高亮
+    const secs = [...document.querySelectorAll('main section')];
+    let cur = secs[0];
+    for (const s of secs) { if (s.getBoundingClientRect().top <= 120) cur = s; }
+    document.querySelectorAll('#toc a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur.id));
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
