@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杀戮尖塔 1 & 2 — 复刻前期资料 Review</title>
+<style>
+  :root {
+    --bg: #14121f;
+    --bg2: #1a1730;
+    --card: #1f1b33;
+    --card2: #252040;
+    --border: #35305a;
+    --text: #ded9f2;
+    --dim: #9b94c0;
+    --gold: #c9a84c;
+    --gold-dim: #8a7433;
+    --red: #e05c5c;
+    --green: #52c98a;
+    --blue: #58a6e8;
+    --purple: #a875e8;
+    --pink: #e07ac0;
+    --accent: #7e6fd4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    background-image: radial-gradient(ellipse 80% 50% at 50% -10%, #2a2350 0%, transparent 60%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.7;
+    font-size: 15.5px;
+  }
+  /* ---------- 顶部导航 ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(20, 18, 31, .92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex; gap: 4px; align-items: center;
+    overflow-x: auto; white-space: nowrap;
+  }
+  nav .brand {
+    color: var(--gold); font-weight: 700; margin-right: 16px;
+    padding: 12px 0; letter-spacing: 1px; flex-shrink: 0;
+  }
+  nav a {
+    color: var(--dim); text-decoration: none; font-size: 13.5px;
+    padding: 14px 10px; display: inline-block; flex-shrink: 0;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover { color: var(--text); border-bottom-color: var(--gold); }
+  /* ---------- 布局 ---------- */
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 28px 100px; }
+  section { margin-top: 72px; }
+  .kicker {
+    color: var(--gold); font-size: 13px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px;
+  }
+  h2 {
+    font-size: 30px; margin-bottom: 6px; letter-spacing: 1px;
+    border-left: 5px solid var(--gold); padding-left: 16px;
+  }
+  .sub { color: var(--dim); margin-bottom: 28px; padding-left: 21px; font-size: 14.5px; }
+  h3 { font-size: 19px; color: var(--gold); margin: 36px 0 14px; }
+  h4 { font-size: 16px; color: var(--text); margin: 20px 0 10px; }
+  p { margin: 10px 0; color: var(--text); }
+  .dim { color: var(--dim); }
+  .note {
+    background: #2a2032; border: 1px solid #5a3a6a; border-radius: 8px;
+    padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #d8b8e0;
+  }
+  /* ---------- Hero ---------- */
+  .hero { margin-top: 12px; }
+  .hero h1 {
+    font-size: 42px; line-height: 1.25; letter-spacing: 2px; margin: 10px 0 4px;
+  }
+  .hero h1 .gold { color: var(--gold); }
+  .hero .tagline { color: var(--dim); font-size: 17px; margin-bottom: 30px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 30px 0; }
+  .stat {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; text-align: center;
+  }
+  .stat .num { font-size: 30px; font-weight: 800; color: var(--gold); }
+  .stat .lbl { color: var(--dim); font-size: 13px; margin-top: 2px; }
+  /* ---------- 卡片 & 网格 ---------- */
+  .grid { display: grid; gap: 16px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .g4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 22px;
+  }
+  .card.hl { border-color: var(--gold-dim); background: linear-gradient(160deg, #2a2447, var(--card)); }
+  .card h5 { font-size: 16px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--dim); margin: 6px 0; }
+  .card ul { margin: 8px 0 0 18px; font-size: 14px; color: var(--text); }
+  .card li { margin: 4px 0; }
+  /* ---------- 表格 ---------- */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 14px; }
+  th {
+    background: var(--card2); color: var(--gold); text-align: left;
+    padding: 9px 12px; border: 1px solid var(--border); white-space: nowrap;
+  }
+  td { padding: 8px 12px; border: 1px solid var(--border); color: var(--text); vertical-align: top; }
+  tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+  .tbl-wrap { overflow-x: auto; }
+  /* ---------- 公式块 ---------- */
+  .formula {
+    background: #101a24; border: 1px solid #2a4a6a; border-radius: 10px;
+    padding: 16px 20px; margin: 14px 0;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14.5px; color: #8ecbf5; overflow-x: auto; white-space: nowrap;
+  }
+  .formula .cm { color: #5a7a95; }
+  /* ---------- 徽章 ---------- */
+  .badge {
+    display: inline-block; padding: 1px 10px; border-radius: 20px;
+    font-size: 12px; font-weight: 700; margin-right: 6px; vertical-align: 2px;
+  }
+  .b-red { background: #3a1a1a; color: #ff8a8a; }
+  .b-green { background: #16301f; color: #6fe0a5; }
+  .b-blue { background: #16283a; color: #7ab8f0; }
+  .b-purple { background: #26163a; color: #c49af0; }
+  .b-pink { background: #36162a; color: #f09ac8; }
+  .b-gold { background: #33290f; color: #e8c96a; }
+  .b-gray { background: #2a2a3a; color: #b0b0c8; }
+  /* ---------- 流程图 ---------- */
+  .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
+  .flow .step {
+    background: var(--card2); border: 1px solid var(--border);
+    padding: 7px 14px; border-radius: 8px; font-size: 13.5px; white-space: nowrap;
+  }
+  .flow .step.gold { border-color: var(--gold-dim); color: var(--gold); font-weight: 700; }
+  .flow .arr { color: var(--gold); font-size: 16px; }
+  /* ---------- 角色 ---------- */
+  .char {
+    border-radius: 14px; padding: 22px 24px; position: relative; overflow: hidden;
+    background: var(--card); border: 1px solid var(--border);
+  }
+  .char::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .char.red::before { background: var(--red); } .char.green::before { background: var(--green); }
+  .char.blue::before { background: var(--blue); } .char.purple::before { background: var(--purple); }
+  .char.pink::before { background: var(--pink); } .char.gold::before { background: var(--gold); }
+  .char .role { font-size: 20px; font-weight: 800; }
+  .char .en { color: var(--dim); font-size: 13px; font-style: italic; }
+  .char dl { display: grid; grid-template-columns: 82px 1fr; gap: 3px 10px; margin: 12px 0; font-size: 13.5px; }
+  .char dt { color: var(--dim); }
+  .char dd { color: var(--text); }
+  .char .mech {
+    background: rgba(255,255,255,.03); border-radius: 8px; padding: 10px 14px;
+    font-size: 13.5px; margin: 10px 0; border-left: 3px solid var(--gold);
+  }
+  .arch { font-size: 13px; color: var(--dim); }
+  .arch b { color: var(--text); }
+  /* ---------- 时间线 ---------- */
+  .timeline { border-left: 2px solid var(--gold-dim); margin: 18px 0 18px 6px; padding-left: 22px; }
+  .tl-item { margin: 14px 0; position: relative; }
+  .tl-item::before {
+    content: ""; position: absolute; left: -27px; top: 7px;
+    width: 9px; height: 9px; border-radius: 50%; background: var(--gold);
+  }
+  .tl-item .date { color: var(--gold); font-weight: 700; font-size: 13.5px; }
+  .tl-item .desc { font-size: 14px; }
+  /* ---------- details ---------- */
+  details {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0; margin: 10px 0;
+  }
+  details summary {
+    cursor: pointer; padding: 12px 18px; font-weight: 700; font-size: 14.5px;
+    list-style: none; color: var(--text); border-radius: 10px;
+  }
+  details summary::before { content: "▸ "; color: var(--gold); }
+  details[open] summary::before { content: "▾ "; }
+  details .body { padding: 2px 18px 14px; font-size: 14px; color: var(--dim); }
+  details .body table { font-size: 13px; }
+  /* ---------- 文件树 ---------- */
+  .tree {
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 13.5px;
+    background: #16131f; border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 22px; line-height: 2; overflow-x: auto;
+  }
+  .tree .dir { color: var(--gold); font-weight: 700; }
+  .tree .lines { color: var(--dim); }
+  .tree .src { color: #6fae62; }
+  /* ---------- 待办清单 ---------- */
+  .check { list-style: none; margin: 10px 0; }
+  .check li { padding: 7px 0 7px 34px; position: relative; border-bottom: 1px dashed #2e2a4a; }
+  .check li::before {
+    content: "✓"; position: absolute; left: 4px; top: 7px;
+    color: var(--gold); font-weight: 800; font-size: 15px;
+  }
+  .warn { background: #33230f; border: 1px solid #6a4a15; border-radius: 10px; padding: 16px 20px; font-size: 14px; margin: 16px 0; }
+  .warn b { color: var(--gold); }
+  .warn ul { margin: 6px 0 0 20px; }
+  .warn li { margin: 4px 0; }
+  footer { margin-top: 90px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--dim); font-size: 13.5px; text-align: center; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+  .pill {
+    background: var(--card2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 12px; font-size: 13px;
+  }
+  .pill b { color: var(--gold); }
+  @media (max-width: 640px) { .hero h1 { font-size: 30px; } h2 { font-size: 24px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand">杀戮尖塔 · 资料复审</span>
+  <a href="#overview">总览</a>
+  <a href="#mech1">StS1 机制</a>
+  <a href="#chars1">StS1 角色</a>
+  <a href="#enemy1">StS1 敌人</a>
+  <a href="#struct1">地图/事件/升阶</a>
+  <a href="#sts2">StS2</a>
+  <a href="#compare">两代对比</a>
+  <a href="#clone">复刻要点</a>
+  <a href="#files">文档清单</a>
+  <a href="#caveat">信息边界</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="kicker">SLAY THE SPIRE 1 & 2 · WEB CLONE PRE-RESEARCH</div>
+  <h1>杀戮尖塔 <span class="gold">资料搜集成果复审</span></h1>
+  <div class="tagline">为「网页复刻两代杀戮尖塔」项目准备的前期研究 —— 请审阅我对游戏机制、内容与角色的理解是否到位</div>
+  <div class="stats">
+    <div class="stat"><div class="num">9</div><div class="lbl">研究文档</div></div>
+    <div class="stat"><div class="num">3700+</div><div class="lbl">文档总行数</div></div>
+    <div class="stat"><div class="num">150+</div><div class="lbl">来源 URL</div></div>
+    <div class="stat"><div class="num">2</div><div class="lbl">游戏版本</div></div>
+    <div class="stat"><div class="num">6</div><div class="lbl">并行研究代理</div></div>
+  </div>
+  <div class="note">
+    <b>这页怎么用：</b>下面按「核心循环 → 一代机制 → 一代角色 → 一代敌人 → 地图结构 → 二代 → 对比 → 复刻要点」组织。
+    每一节对应仓库 <code>docs/</code> 里的完整文档（导航见文末<a href="#files" style="color:var(--gold)">文档清单</a>）。
+    觉得哪块理解错了 / 挖得不够深，直接指出来，我回炉补研究。
+  </div>
+</div>
+
+<!-- ============ 总览 / 核心循环 ============ -->
+<section id="overview">
+  <div class="kicker">1 · OVERVIEW</div>
+  <h2>先对齐：这游戏到底是什么循环</h2>
+  <div class="sub">单局 Roguelike 卡牌构筑（Deckbuilding Roguelike）：爬塔一局 = 一条 RUN</div>
+
+  <div class="card hl">
+    <h5>一局（RUN）的宏观循环</h5>
+    <div class="flow">
+      <span class="step gold">涅奥开局祝福</span><span class="arr">→</span>
+      <span class="step">第 1 幕 地图选路</span><span class="arr">↻</span>
+      <span class="step">战斗/事件/商店/篝火</span><span class="arr">→</span>
+      <span class="step gold">幕 BOSS</span><span class="arr">→</span>
+      <span class="step">下一幕</span><span class="arr">→</span>
+      <span class="step gold">第 3 幕 BOSS</span><span class="arr">→</span>
+      <span class="step">结局 / 心脏(第4幕)</span>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h5>单场战斗的回合循环（两代通用）</h5>
+      <div class="flow">
+        <span class="step">回合开始<br><span class="dim">能量重置3 · 抽5张 · 结算回合开始效果</span></span><span class="arr">→</span>
+        <span class="step">玩家出牌<br><span class="dim">消耗能量 · 攻击/技能/能力</span></span><span class="arr">→</span>
+        <span class="step">点结束回合<br><span class="dim">弃掉手牌 · 结算遗物→Buff→卡牌效果</span></span><span class="arr">→</span>
+        <span class="step">敌人行动<br><span class="dim">按上方意图逐个结算（左→右）</span></span><span class="arr">↻</span>
+      </div>
+    </div>
+    <div class="card">
+      <h5>构筑循环：卡组怎么变强</h5>
+      <ul>
+        <li><b>战斗胜利</b> → 卡牌奖励 3 选 1（或跳过）</li>
+        <li><b>商店</b> → 买卡 / 买遗物 / 删卡（卡组瘦身同样是构筑）</li>
+        <li><b>篝火</b> → 升级卡牌（+数值强化）或休息回血 30%</li>
+        <li><b>事件</b> → 高风险高回报：换血、拿诅咒换奖励、删卡……</li>
+        <li>核心张力：<b>删卡 &gt; 选卡 &gt; 升卡</b> —— 卡组越小越稳定，这是本游戏构筑论的基石</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>两代一句话定位</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h5><span class="badge b-gold">1 代 · 2019</span>公理体系的最小完备集</h5>
+      <p>4 角色 · 3+1 幕 · 193 遗物 · 42 药水 · 升阶 20 级。数值全部稳定，社区已把地图生成算法逆向出来 —— <b>复刻首选目标</b>。</p>
+    </div>
+    <div class="card">
+      <h5><span class="badge b-pink">2 代 · EA</span>机制大重构的试验场</h5>
+      <p>2026-03-05 进 EA（并非网传 2025 年底 —— 官方 2025-09-11 延期官宣），当前主线 v0.107.1。5 角色、Ancients 取代 Boss 遗物、附魔、任务卡、交替区域、4 人联机。内容随补丁剧烈变动。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ StS1 机制 ============ -->
+<section id="mech1">
+  <div class="kicker">2 · STS1 CORE MECHANICS</div>
+  <h2>StS1 战斗核心机制 —— 复刻的物理定律</h2>
+  <div class="sub">数据来源：docs/sts1/core-mechanics.md（725 行）</div>
+
+  <div class="grid g4">
+    <div class="card"><h5 style="color:var(--gold)">3</h5><p>每回合基础能量（回合开始重置，可被遗物/卡牌增减）</p></div>
+    <div class="card"><h5 style="color:var(--gold)">5</h5><p>每回合抽牌数（首回合也抽 5）</p></div>
+    <div class="card"><h5 style="color:var(--gold)">10</h5><p>手牌硬上限（不可突破，多抽直接烧掉）</p></div>
+    <div class="card"><h5 style="color:var(--gold)">先手</h5><p>玩家永远先手；敌人从左到右依次结算</p></div>
+  </div>
+
+  <h3>伤害 & 格挡公式（多段攻击每段独立计算）</h3>
+  <div class="formula">
+攻击伤害 = floor( ( 基础伤害 + 力量<span class="cm">(Strength)</span> ) × 易伤<span class="cm">(Vulnerable)</span> × 虚弱<span class="cm">(Weak)</span> )
+<span class="cm">; 其中 易伤 = 1.5（纸青蛙 1.75） · 虚弱 = 0.75（纸鹤 0.60）</span>
+<br>
+格挡值   = floor( ( 基础格挡 + 敏捷<span class="cm">(Dexterity)</span> ) × 脆弱<span class="cm">(Frail)</span>0.75 )
+  </div>
+  <p class="dim">关键细节：StS1 中<b style="color:var(--text)">不存在无视格挡的攻击</b>；绕过格挡的全部是 HP 直接损失类（中毒/灼烧/Beat of Death/HP 交换类）。这两类伤害在复刻时必须走不同的结算管线。格挡在<b style="color:var(--text)">玩家回合开始时清零</b>。</p>
+
+  <h3>牌堆状态机 —— 复刻的核心数据结构</h3>
+  <div class="card">
+    <div class="flow">
+      <span class="step">抽牌堆 Draw</span><span class="arr">⇄ 抽牌</span>
+      <span class="step gold">手牌 Hand (≤10)</span><span class="arr">打出/弃置 →</span>
+      <span class="step">弃牌堆 Discard</span>
+      <span class="arr">; 弃牌堆 ↩ 洗回（仅当抽牌堆被抽空时整体洗回）</span>
+    </div>
+    <ul>
+      <li>能力(Power)卡打出后<b>彻底消失</b>，不进任何堆 —— 状态机里要有第四个隐式去处「在场效果」</li>
+      <li>消耗(Exhaust)卡进消耗堆，<b>不参与洗牌</b>；全游戏唯一回收手段是卡牌 Exhume</li>
+      <li>回合结束的结算顺序有讲究：<b>遗物 → Buff → 卡牌</b>（例：山铜先于镀层装甲先于灼烧）—— 复刻要按固定管线顺序触发</li>
+    </ul>
+  </div>
+
+  <h3>Buff/Debuff：三层属性模型</h3>
+  <p>研究文档将全部状态效果归纳为 <b>强度(Intensity)</b> / <b>持续(Duration)</b> / <b>计数(Counter)</b> 三层模型 —— 比逐个硬编码更适合做数据驱动。例如：</p>
+  <div class="pill-row">
+    <span class="pill"><b>力量</b> 力量层数 = 攻击伤害加值（强度型）</span>
+    <span class="pill"><b>易伤</b> 受伤×1.5（持续 N 回合）</span>
+    <span class="pill"><b>虚弱</b> 造成伤害×0.75（持续 N）</span>
+    <span class="pill"><b>中毒</b> 回合开始掉等量 HP 后层数−1（唯一双属性 debuff）</span>
+    <span class="pill"><b>再生</b> 回合开始回 HP 后层数−1（唯一双属性 buff）</span>
+    <span class="pill"><b>金属化</b> 回合结束获得 N 格挡</span>
+    <span class="pill"><b>Shackled</b> "Debuff 壳 + Buff 逻辑"的实现陷阱</span>
+  </div>
+  <p class="dim">完整清单（含约 20 个敌人专属 Buff）和全部关键词（消耗/虚无/固有/保留/预见 Scry/X 费）见文档 §2.4、§6。</p>
+
+  <h3>掉落与概率（数值全查自 wiki）</h3>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>项</th><th>数值</th></tr>
+    <tr><td>卡牌奖励稀有度（普通战 / 精英 / 商店）</td><td>稀有 3% / 10% / 9%；非普通 37% / 40% / 37%；普通 60% / 50% / 54%</td></tr>
+    <tr><td>隐藏稀有度偏移</td><td>稀有率起点 = 基准 −5%，每 roll 出 1 张普通卡 +1%，出稀有后重置 → <b>每幕第一层奖励不可能出稀有</b></td></tr>
+    <tr><td>战斗金币</td><td>普通 10–20 · 精英 25–35 · BOSS 95–105（A13 降为 71–79）</td></tr>
+    <tr><td>遗物掉落权重</td><td>普通 50% / 非普通 33% / 稀有 17%（宝箱按大中小分权重表）</td></tr>
+    <tr><td>药水掉率</td><td>基础 40%，掉落一次 −10%、未掉 +10%，每幕重置；稀有度权重 65/25/10</td></tr>
+    <tr><td>药水槽</td><td>默认 3 槽（A11 为 2），使用不耗能量不算出牌</td></tr>
+  </table>
+  </div>
+  <p class="dim">代表性遗物详表约 90 个（共 193 个）、全 42 款药水详表都在 core-mechanics.md。</p>
+</section>
+
+<!-- ============ StS1 角色 ============ -->
+<section id="chars1">
+  <div class="kicker">3 · STS1 CHARACTERS</div>
+  <h2>StS1 四名角色 —— 起始卡组逐张核对过</h2>
+  <div class="sub">数据来源：docs/sts1/characters.md（466 行，约 150 个卡牌/遗物 wiki 页逐张查证）</div>
+
+  <div class="grid g2">
+    <div class="char red">
+      <div class="role">铁甲战士 <span class="badge b-red">IRONCLAD</span></div>
+      <div class="en">The Ironclad · 红 · 初始可用</div>
+      <dl>
+        <dt>初始 HP</dt><dd>80（A14: 75）</dd>
+        <dt>起始卡组</dt><dd>10 张：5×打击 + 4×防御 + 1×猛击(Bash)（2费 · 8伤 · 2层易伤）</dd>
+        <dt>起始遗物</dt><dd>燃烧之血 Burning Blood：战斗结束回 6 HP</dd>
+      </dl>
+      <div class="mech">机制理解：<b>力量堆叠 + HP 换资源 + 格挡永驻</b>。注意 —— 一代铁甲<b>没有"怒气槽"</b>，Rage 只是一张 0 费技能卡（本回合每打 1 张攻击牌得 3/5 格挡）。</div>
+      <p class="arch">流派：<b>力量战</b>（Inflame/Heavy Blade）· <b>Barricade 格挡流</b> · <b>消耗流</b>(Corruption) · <b>完美打击流</b>(Limitless) · <b>HP 消耗流</b>(Rupture)</p>
+    </div>
+
+    <div class="char green">
+      <div class="role">寂静猎手 <span class="badge b-green">SILENT</span></div>
+      <div class="en">The Silent · 绿 · 用铁甲完成一局解锁</div>
+      <dl>
+        <dt>初始 HP</dt><dd>70（A14: 66）</dd>
+        <dt>起始卡组</dt><dd><b>12 张</b>（比其他角色多 2 张）：5×打击 + 5×防御 + 1×中和(Neutralize，0费3伤1虚弱) + 1×幸存者(Survivor)</dd>
+        <dt>起始遗物</dt><dd>蛇戒 Ring of the Snake：首回合多抽 2</dd>
+      </dl>
+      <div class="mech">机制理解：<b>中毒(Poison) · Shiv 无实体刀 · 弃牌(Discard) 联动</b>。起始 12 张是独立核对出的关键事实 —— 网传"全员10张"是错的。</div>
+      <p class="arch">流派：<b>中毒流</b>(Noxious Fumes/Catalyst) · <b>Shiv 风暴</b>(Blade Dance) · <b>弃牌流</b>(Prepared) · <b>暗杀爆发</b>(Adrenaline)</p>
+    </div>
+
+    <div class="char blue">
+      <div class="role">故障机器人 <span class="badge b-blue">DEFECT</span></div>
+      <div class="en">The Defect · 蓝 · 用寂静完成一局解锁</div>
+      <dl>
+        <dt>初始 HP</dt><dd>75（A14: 71）</dd>
+        <dt>起始卡组</dt><dd>10 张：4×打击 + 4×防御 + 1×电击(Zap) + 1×双重施法(Dualcast)</dd>
+        <dt>起始遗物</dt><dd>破裂核心 Cracked Core：开局引导 1 闪电球</dd>
+      </dl>
+      <div class="mech">机制理解：<b>充能球(Orb)系统</b> —— 闪电(被动3伤/激发8伤) · 冰霜(被动2挡/激发5挡) · 黑暗(每回合存储+6/激发全额释放) · 等离子体(回合开始+1能量/激发+2)。槽位 <b>FIFO</b>：满槽引导新球自动激发最旧的。<b>聚焦(Focus)</b> 每层全局+1 被动。</div>
+      <p class="arch">流派：<b>闪电风暴</b>(Storm) · <b>冰霜龟缩</b>(Defrag+冰墙) · <b>黑暗核弹</b>(Recursion) · <b>0费牌海</b>(Claw/Allfor)</p>
+    </div>
+
+    <div class="char purple">
+      <div class="role">观者 <span class="badge b-purple">WATCHER</span></div>
+      <div class="en">The Watcher · 紫 · 用任意基础角色击败第 3 幕 Boss 解锁</div>
+      <dl>
+        <dt>初始 HP</dt><dd>72（A14: 68）</dd>
+        <dt>起始卡组</dt><dd>10 张：4×打击 + 4×防御 + 1×喷发(Eruption) + 1×警戒(Vigilance)</dd>
+        <dt>起始遗物</dt><dd>圣水 Pure Water：开局 1 张奇迹(Miracle)</dd>
+      </dl>
+      <div class="mech">机制理解：<b>姿态(Stance)</b> —— 愤怒(Wrath) 攻伤×2 且受击×2 · 平静(Calm) 退出回 2 能量 · 神性(Divinity) 攻伤×3 且进入得 3 能量（下回合开始自动退出）· 颂歌满 10 层入神性。配合 <b>保留(Retain)</b> 和 <b>预见(Scry)</b>（弃置不触发弃牌效果）。</div>
+      <p class="arch">流派：<b>怒进怒出</b>(Eruption/Rushhead) · <b>神性爆发</b>(Worship) · <b>保留蓄爆</b>(Patience) · <b>预见</b>(Foresight)</p>
+    </div>
+  </div>
+  <p class="dim">每角色 4–6 个成熟流派（全角色共 21 个）、专属遗物 11/11/9/9 件、每角色 5 级解锁表 —— 全部在文档里。中文译名为意译，每张卡保留英文原名，开发时直接用英文名做数据字段。</p>
+</section>
+
+<!-- ============ StS1 敌人 ============ -->
+<section id="enemy1">
+  <div class="kicker">4 · STS1 ENEMIES</div>
+  <h2>StS1 敌人 & BOSS —— 意图系统 + 行为建模</h2>
+  <div class="sub">数据来源：docs/sts1/enemies.md（418 行，BOSS 归属幕数逐个查证纠正）</div>
+
+  <h3>意图(Intent)系统：玩家决策的信息来源</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h5>显示规则</h5>
+      <ul>
+        <li>7 档攻击图标（伤害值 + 段数）、组合图标、增益图标（Mystic/Time Eater/Darkling 挪用为治疗显示）</li>
+        <li>意图伤害<b>随敌人力量/虚弱/易伤实时修正显示</b>，但不预扣玩家格挡</li>
+        <li>未知图标的 5 类用途：分裂 / 爆炸 / 召唤 / 重生 / 什么都不做</li>
+        <li>遗物 Runic Dome 隐藏全部意图 —— 需要做成可配置</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>意图中断的 12 种触发器（复刻难点）</h5>
+      <p>血量阈值（守护者失血 30 改写意图、史莱姆老大 50% 分裂）· 受击触发 · 击落飞行 · 板甲击碎 · 死亡重生 …… 逐条在文档 §1.3。设计敌人 AI 时：<b>意图 = 计划 + 可被事件打断重算</b>，不能写成死循环。</p>
+    </div>
+  </div>
+
+  <h3>BOSS 名录（已纠正网络常见错误归属）</h3>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>幕</th><th>BOSS（HP）</th><th>行为模式要点</th></tr>
+    <tr><td rowspan="3">第 1 幕<br>外域 Exordium</td><td>史莱姆老大 Slime Boss (140)</td><td>固定循环；<b>50% 血量即时分裂</b>为大中小三史莱姆（打断重算意图的典型）</td></tr>
+    <tr><td>六火幽灵 Hexaghost (250)</td><td>固定 9 步循环，第 9 回合烈焰地狱大招</td></tr>
+    <tr><td>守卫者 The Guardian (240)</td><td>固定 4 步循环 + <b>失血 30 触发模式切换</b>（攻击/搓防姿态互切）</td></tr>
+    <tr><td rowspan="3">第 2 幕<br>城市 The City</td><td>青铜自动机 Bronze Automaton (300)</td><td>孵化青铜核心 → 蓄力 → 全屏重击</td></tr>
+    <tr><td>收集者 The Collector (282)</td><td>召唤火精灵，本体后排施法</td></tr>
+    <tr><td>冠军 The Champ (420)</td><td>两阶段：<b>50% 血切换</b>为纯进攻连招</td></tr>
+    <tr><td rowspan="3">第 3 幕<br>彼岸 The Beyond</td><td>多努与德卡 Donu &amp; Deca (250×2)</td><td>双体协作：一个上力量之环、一个上格挡</td></tr>
+    <tr><td>时间吞噬者 Time Eater (456)</td><td>玩家每打 12 张牌它 +2 力量并<b>强制结束你的回合</b>（惩罚速攻）</td></tr>
+    <tr><td>觉醒者 Awakened One (300)</td><td>死亡后<b>满状态复活</b>，击杀要一次到位</td></tr>
+    <tr><td>第 4 幕<br>终局 The Ending</td><td>尖塔之盾+尖塔之矛 (110+160)</td><td>精英战：盾矛组合，先拆矛</td></tr>
+    <tr><td>最终 BOSS</td><td>腐化之心 Corrupt Heart (750)</td><td>每回合无敌 300 格挡上限 · 第 4/7/10…回合递进式增益 · 死亡节拍 —— 世代血限机制需单独管线</td></tr>
+  </table>
+  </div>
+
+  <h3>BOSS 行为的 8 种建模原语（文档 §7 直接可抄）</h3>
+  <div class="pill-row">
+    <span class="pill">① 固定循环（六火）</span>
+    <span class="pill">② 概率循环+不连用约束</span>
+    <span class="pill">③ 马尔可夫链</span>
+    <span class="pill">④ 固定回合号大招</span>
+    <span class="pill">⑤ 血量阈值阶段切换</span>
+    <span class="pill">⑥ 计数器成长（时间吞噬者）</span>
+    <span class="pill">⑦ 玩家行为反制</span>
+    <span class="pill">⑧ 场面状态驱动</span>
+  </div>
+  <p class="dim">普通敌人 / 精英（拉格维林、哥布林头目、哨卫、刺击之书、监工、复仇女神、巨头、蜥蜴术士）+ 特殊遭遇（竞技场、Mind Bloom 复现幕1 BOSS、神秘法球）全收录。</p>
+</section>
+
+<!-- ============ StS1 结构 ============ -->
+<section id="struct1">
+  <div class="kicker">5 · STS1 STRUCTURE</div>
+  <h2>地图 · 事件 · 商店 · 升阶 · 解锁</h2>
+  <div class="sub">数据来源：docs/sts1/map-events-shop.md（637 行）</div>
+
+  <div class="grid g3">
+    <div class="card">
+      <h5>幕结构</h5>
+      <ul>
+        <li>3 常规幕：每幕 15 行节点 + Boss 层 + Boss 宝箱层 = 17 层</li>
+        <li>隐藏第 4 幕：集齐 3 把钥匙（篝火 Recall / 超级精英 / 宝箱换钥匙）→ 固定 4 房间：篝火→商店→精英→腐化之心</li>
+        <li>7 种节点类型：战斗/精英/事件?/商店/篝火/宝箱/Boss</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>地图生成（社区逆向 [RE]）</h5>
+      <ul>
+        <li>7×15 网格、6 条路径链不交叉</li>
+        <li>第 1 层全战斗、<b>第 9 层全宝箱</b>、<b>第 15 层全篝火</b></li>
+        <li>权重：普通 53% / 精英 8% / 篝火 12% / 商店 5% / 事件 22%</li>
+        <li>种子固定 → 复刻可实现每日固定种子玩法</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>商店价格</h5>
+      <ul>
+        <li>卡牌：普通 45–55 / 非凡 68–83 / 稀有 135–165（无色 +20%）</li>
+        <li>删卡：75 金起步每张 +25</li>
+        <li>会员卡全场 5 折；A16 全场 +10%</li>
+        <li>开局 99 金</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>事件系统 —— 14 个代表事件全选项后果已录</h3>
+  <p class="dim">黄金偶像 / 克莱里克 / 大鱼 / 闪光之光 / 翼像 / 营火之灵 / 黄金神龛 / 蓝衣女人 / 吸血鬼 / 图书馆 / 幽灵议会 / 竞技场 / 心灵绽放 / 摩艾石像 + 20 余事件简表 + 诅咒卡 5 大获取途径。A15 起事件选项恶化。</p>
+
+  <h3>升阶(Ascension) 1–20 级 —— 难度系统的完整规则</h3>
+  <details>
+    <summary>展开 20 级逐级规则（节选，全表见文档 §7）</summary>
+    <div class="body tbl-wrap">
+    <table>
+      <tr><th>等级</th><th>效果</th><th>等级</th><th>效果</th></tr>
+      <tr><td>A1</td><td>精英出现概率提高约 +60%</td><td>A11</td><td>药水槽 3→2</td></tr>
+      <tr><td>A2</td><td>普通敌人更难</td><td>A12</td><td>每幕首层敌人加强</td></tr>
+      <tr><td>A3</td><td>精英更难</td><td>A13</td><td>Boss 金币减少</td></tr>
+      <tr><td>A4</td><td>BOSS 更难</td><td>A14</td><td>初始 HP 降（80→75 等）</td></tr>
+      <tr><td>A5</td><td>战斗回血减半</td><td>A15</td><td>事件选项恶化</td></tr>
+      <tr><td>A6</td><td>开局挂受伤减益（Downgrade 卡）</td><td>A16</td><td>商店涨价 10%</td></tr>
+      <tr><td>A7</td><td>普通敌人血量 +</td><td>A17</td><td>普通敌人更狠</td></tr>
+      <tr><td>A8</td><td>精英血量 +</td><td>A18</td><td>精英更狠</td></tr>
+      <tr><td>A9</td><td>BOSS 血量 +</td><td>A19</td><td>BOSS 更狠</td></tr>
+      <tr><td>A10</td><td>开局 Ascender's Bane 诅咒</td><td>A20</td><td>每幕要打两个 BOSS</td></tr>
+    </table>
+    <p>注：A2/A3/A4 与 A17–19 的具体伤害倍率官方未公开，文档已标注建议复刻时自定。</p>
+    </div>
+  </details>
+
+  <h3>局外进度</h3>
+  <div class="grid g2">
+    <div class="card">
+      <h5>解锁</h5>
+      <p>角色顺序：铁甲→寂静→故障机器人→观者。每角色 5 级专属解锁（新卡/新遗物），由<b>局末分数(Score)</b>累计驱动；成就与解锁关联表在文档 §8。</p>
+    </div>
+    <div class="card">
+      <h5>模式</h5>
+      <p>标准模式 · 每日攀登（3 个随机修改器）· 自定义模式（24 个每日修改器 + 10 个自定义修改器全表已录）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ StS2 ============ -->
+<section id="sts2">
+  <div class="kicker">6 · STS2 (EARLY ACCESS)</div>
+  <h2>杀戮尖塔 2 —— EA 八个月的现状</h2>
+  <div class="sub">数据来源：docs/sts2/ 四份文档 · 版本基准 v0.107.1（反编译快照）+ v0.111 Beta 补丁日志</div>
+
+  <div class="timeline">
+    <div class="tl-item"><div class="date">2025-09-11</div><div class="desc">官方官宣延期（原计划 2025 年底 EA）—— <b>纠正了"EA 已一年"的常见误解</b></div></div>
+    <div class="tl-item"><div class="date">2026-03-05</div><div class="desc">Steam EA 上线：$24.99 · Godot 引擎（一代是 libGDX）· Win/Mac/Linux · 16 语言 · 5 角色全员可用</div></div>
+    <div class="tl-item"><div class="date">2026-06-18</div><div class="desc">Major Update #2（v0.107.1）：删 BOSS 造门者换 Aeonglass · RNG 重构为 xoshiro256** · Steam 创意工坊 · 图鉴</div></div>
+    <div class="tl-item"><div class="date">2026-08-14</div><div class="desc">Beta v0.111.0（联机专属卡 15 张等）；期间 v0.100 差评潮 → v0.101 大规模回滚</div></div>
+    <div class="tl-item"><div class="date">2026-11-12（定档）</div><div class="desc">下一大型 Beta 补丁（实验模式单人/多人通用，内容 REDACTED）—— <b>资料需在它之后复核</b></div></div>
+  </div>
+
+  <h3>五名已实装角色</h3>
+  <div class="grid g3">
+    <div class="char red">
+      <div class="role">铁甲战士 <span class="badge b-red">回归·重做</span></div>
+      <dl>
+        <dt>HP</dt><dd>80 · 99金 · 3能量</dd>
+        <dt>起始卡组</dt><dd>10 张：5打击/4防御/痛击(2费8伤+2易伤)</dd>
+        <dt>起始遗物</dt><dd>燃烧之血（同一代）</dd>
+      </dl>
+      <div class="mech">卡池 87 张；联机专属卡若干。整体骨架承袭一代，数值重做。</div>
+    </div>
+    <div class="char green">
+      <div class="role">寂静猎手 <span class="badge b-green">回归·重做</span></div>
+      <dl>
+        <dt>HP</dt><dd>70 · 起始卡组 12 张（5/5/中和/幸存者）</dd>
+        <dt>起始遗物</dt><dd>蛇环（开局+2抽）</dd>
+      </dl>
+      <div class="mech"><b>新机制：灵巧 Sly</b> —— 弃牌时自动打出的卡牌子集，把"弃牌"从代价变成引擎。</div>
+    </div>
+    <div class="char gold">
+      <div class="role">摄政王 <span class="badge b-gold">全新</span></div>
+      <dl>
+        <dt>HP</dt><dd>75 · 起始：4打击/4防御/陨星(0费8伤+弱+易伤,耗2星)/虔敬(1费+2星)</dd>
+        <dt>起始遗物</dt><dd>神授王权：开局 3 星</dd>
+      </dl>
+      <div class="mech"><b>星辰 Stars</b>：跨回合持久资源（打破一代"能量不留存"的公理）+ <b>Forge 君王之刃</b> + 仆从(Minion)系统。</div>
+    </div>
+    <div class="char pink">
+      <div class="role">亡灵缚师 <span class="badge b-pink">全新</span></div>
+      <dl>
+        <dt>HP</dt><dd>66（全角色最低）· 起始：4打击/4防御/保镖(1费重召 Osty 5HP)/释放(1费,6+1×Osty当前HP)</dd>
+        <dt>起始遗物</dt><dd>缚魂圣物匣：每回合召 Osty 1HP</dd>
+      </dl>
+      <div class="mech"><b>Osty 召唤体</b>（挡伤单位）+ <b>末日 Doom</b>（回合末 ≥ 当前 HP 即处决，主动终结技）+ <b>Souls</b>（0 费抽 2 消耗）。</div>
+    </div>
+    <div class="char blue">
+      <div class="role">故障机器人 <span class="badge b-blue">回归·重做</span></div>
+      <dl>
+        <dt>HP</dt><dd>75 · 起始：4打击/4防御/电击/双重施法</dd>
+        <dt>起始遗物</dt><dd>破损核心（引导1闪电）</dd>
+      </dl>
+      <div class="mech">充能球系统升级 + <b>玻璃宝珠</b>（消耗型高威力球）；Orb 被动结算先于 Doom 处决 —— 结算顺序本身是机制。</div>
+    </div>
+    <div class="card hl">
+      <h5>解锁链（2代）</h5>
+      <p style="color:var(--text)">铁甲(默认) → 寂静 → <b>摄政王</b> → <b>亡灵缚师</b> → 故障机器人</p>
+      <p>第 6 名角色制作中（官方剪影预告：紫色利爪脚）；Steam 成就与真结局留待 v1.0。</p>
+    </div>
+  </div>
+
+  <h3>全局新机制 —— 二代的身份</h3>
+  <div class="grid g3">
+    <div class="card hl"><h5>古代存在 Ancients（取代 Boss 遗物）</h5><p>开局 Neow 三选一（2 正面 + 1 诅咒遗物）；每幕"古代"节点从 8 位古代（Neow/Orobas/Pael/Tezcatara/Nonupeipe/Tanx/Vakuu/Darv）领祝福，祝福带代价（黄金单路、4 个蜡遗物倒计时、不可移除的降费 Strike）。Boss 遗物这个"代价值换强度"系统被做成了一整个叙事层。</p></div>
+    <div class="card"><h5>附魔 Enchantment</h5><p>整局生效的卡牌修饰（Sharp/Favored/Corrupted/Imbued/Replay 等 16+），官方明令禁叠加。</p></div>
+    <div class="card"><h5>任务卡 Quest</h5><p>新卡牌类型：如 Byrdonis 蛋在休息处孵化成战斗鸟伴随整局。</p></div>
+    <div class="card"><h5>折磨 Affliction</h5><p>敌人塞进你卡组的污染卡（一代诅咒的敌方化变体）。</p></div>
+    <div class="card"><h5>交替区域</h5><p>第 1 幕二选一：繁茂之地(Overgrowth) / 地下船坞(Underdocks)，各配独立 BOSS 池与事件池；交替第 2 幕开发中。</p></div>
+    <div class="card"><h5>4 人合作 Co-op</h5><p>好友制无匹配；联机敌人血量/伤害缩放（1.1/1.2/1.2 + 三幕 BOSS 1.3）；v0.108 起 15+ 张联机专属卡。</p></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h5>结构变化</h5>
+      <ul>
+        <li>3 幕（15/14/13 行）+ 幕末<b>剧情战"建筑师"（不可战胜）</b></li>
+        <li>事件 50 个，<b>取消"无后果离开"</b> —— 每个选择都算数</li>
+        <li>升阶压缩为 10 级（A5 Ascender's Bane / A8 敌硬 / A9 攻狠 / A10 三幕双 Boss）</li>
+        <li>世界观：尖塔关闭 1000 年后重开；主菜单 Timeline 时间线碎片叙事</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>BOSS 阵容（12 个，每区域 3）</h5>
+      <ul>
+        <li><b>繁茂之地</b>：范托姆 173 / 仪式巨兽 252 / 亲族(主教190+随从58×2)</li>
+        <li><b>地下船坞</b>：瀑布巨人 240 / 魂鱼 211 / 拉加威林之母 222</li>
+        <li><b>蜂巢(幕2)</b>：凯撒蟹(209+199) / 知识恶魔 379 / 饕餮者 321</li>
+        <li><b>荣耀(幕3)</b>：万世镜 512（替代已删的造门者 489）/ 女王 400 / 实验体(100→200→300 三形态)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 对比 ============ -->
+<section id="compare">
+  <div class="kicker">7 · COMPARISON</div>
+  <h2>两代对比总表</h2>
+  <div class="sub">数据来源：docs/comparison.md</div>
+  <div class="tbl-wrap">
+  <table>
+    <tr><th>维度</th><th>StS1</th><th>StS2 (EA)</th></tr>
+    <tr><td>引擎</td><td>libGDX (Java)</td><td>Godot</td></tr>
+    <tr><td>角色</td><td>4 名（铁甲/寂静/机器人/观者）</td><td>5 名（+摄政王/亡灵缚师，−观者未实装）</td></tr>
+    <tr><td>角色卡池</td><td>每角色 70+</td><td>铁甲 87、其余 88（含联机卡）+ 无色 64</td></tr>
+    <tr><td>幕结构</td><td>3 幕(15行) + 隐藏第4幕</td><td>3 幕(15/14/13) + 交替第1幕二选一 + Act4 开发中</td></tr>
+    <tr><td>节点类型</td><td>7 种</td><td>+ 古代(Ancient) 节点</td></tr>
+    <tr><td>BOSS 遗物</td><td>幕 Boss 后三选一</td><td><b>被 Ancients 祝福系统取代</b>（开局+每幕）</td></tr>
+    <tr><td>遗物 / 药水</td><td>193 / 42</td><td>297 / 64（每角色专属 1 药水）</td></tr>
+    <tr><td>事件</td><td>100+（可无后果离开）</td><td>50（<b>全部有后果</b>）</td></tr>
+    <tr><td>升阶</td><td>1–20 级</td><td>1–10 级</td></tr>
+    <tr><td>删卡价格</td><td>75 起，每张 +25</td><td>Inflation(A6)：100 起每张 +50（常规价未核验）</td></tr>
+    <tr><td>联机</td><td>无</td><td>4 人合作</td></tr>
+    <tr><td>叙事</td><td>事件碎片化</td><td>Timeline 时间线、幕末剧情战、真结局留 v1.0</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 复刻要点 ============ -->
+<section id="clone">
+  <div class="kicker">8 · WEB CLONE NOTES</div>
+  <h2>面向网页复刻的落点 —— 我从资料里读出的开发蓝图</h2>
+  <div class="sub">这一节是理解深度的自证：能否把研究变成可实现的设计</div>
+
+  <h3>复刻顺序建议</h3>
+  <ul class="check">
+    <li><b>先做 1 代</b>：数值稳定、资料完备（社区连地图生成算法都逆向了），是这套玩法的"公理全集"</li>
+    <li><b>架构数据驱动</b>：卡牌/遗物/敌人/事件全部走表结构（JSON），引擎核心两代共用</li>
+    <li><b>2 代按 v0.107.1 反编译快照建模</b>，版本易变字段（数值/BOSS/Ancients 池）隔离成版本化数据层，2026-11-12 大补丁后复核</li>
+    <li><b>引擎核心优先级</b>（两代交集）：回合状态机 → 牌堆状态机 → 意图系统 → 地图生成 → 事件系统 → 商店/篝火 → 药水 → 升阶</li>
+    <li><b>2 代专属系统延后</b>：附魔、任务卡、Ancients、交替区域、联机（复刻成本极高，首期不做）</li>
+  </ul>
+
+  <h3>最容易被写错的 8 个系统（资料里挖出来的坑）</h3>
+  <div class="grid g2">
+    <div class="card"><h5>① 牌堆状态机</h5><p>弃牌堆<b>只在抽牌堆抽空时</b>整体洗回；Power 卡打出后消失（第四去处）；Exhume 是唯一回收消耗堆的手段。</p></div>
+    <div class="card"><h5>② 回合结束触发顺序</h5><p>遗物 → Buff → 卡牌（山铜 &gt; 镀层装甲 &gt; 灼烧）。自由发挥顺序会产生规则级 bug。</p></div>
+    <div class="card"><h5>③ 两类伤害管线</h5><p>攻击伤害吃格挡/易伤/虚弱/力量；HP 损失类（中毒/灼烧/Beat of Death）全部绕过 —— 必须分开结算。</p></div>
+    <div class="card"><h5>④ 意图可被中断重算</h5><p>12 种触发器（血量阈值/受击/分裂/重生…）。BOSS AI = 8 种建模原语的组合，不是简单循环。</p></div>
+    <div class="card"><h5>⑤ 卡牌奖励的隐藏偏移</h5><p>稀有率起点 −5%、每张普通 +1%、出稀有重置 → 每幕首层不可能出稀有。直接抄基准概率会复刻出错误手感。</p></div>
+    <div class="card"><h5>⑥ 寂静猎手起始 12 张</h5><p>不是 10 张。同理各角色起始遗物/HP 逐项核对过，别按"常识"写。</p></div>
+    <div class="card"><h5>⑦ 观者姿态 ×2 是双向</h5><p>Wrath 打人 ×2 也被打 ×2；Calm 退出回 2 能量（紫莲 3）；Divinity 下回合开始自动退出。</p></div>
+    <div class="card"><h5>⑧ 时间吞噬者类反制</h5><p>玩家每打 12 张牌 → 敌人 +2 力量且<b>强制结束玩家回合</b>。敌人要能反向操作玩家回合 —— 引擎需支持。</p></div>
+  </div>
+</section>
+
+<!-- ============ 文档清单 ============ -->
+<section id="files">
+  <div class="kicker">9 · DELIVERABLES</div>
+  <h2>交付物清单 —— docs/ 全量</h2>
+  <div class="sub">每份文档文末都有分组参考来源与"不确定项"章节</div>
+
+  <div class="tree">
+<span class="dir">slay-the-spire-research/</span>
+├── README.md                                <span class="lines">总览导航</span>
+├── <span class="dir">docs/</span>
+│   ├── <span class="dir">sts1/</span>   <span class="src"># 杀戮尖塔 1</span>
+│   │   ├── core-mechanics.md        <span class="lines">725 行 · 战斗机制/伤害公式/Buff全表/遗物/药水</span>
+│   │   ├── characters.md            <span class="lines">466 行 · 四角色起始卡组/机制/21流派/专属遗物/解锁</span>
+│   │   ├── map-events-shop.md       <span class="lines">637 行 · 幕结构/地图生成/商店/14事件/升阶20/解锁/模式</span>
+│   │   └── enemies.md               <span class="lines">418 行 · 意图系统/全部敌人/BOSS行为循环/8种建模原语</span>
+│   ├── <span class="dir">sts2/</span>   <span class="src"># 杀戮尖塔 2（EA）</span>
+│   │   ├── overview.md              <span class="lines">186 行 · EA时间线/版本状态/路线图/世界观</span>
+│   │   ├── core-mechanics.md        <span class="lines">228 行 · 新机制/Ancients/附魔/升阶10/差异对照表</span>
+│   │   ├── characters.md            <span class="lines">319 行 · 5角色反编译级起始卡组/新资源系统/流派</span>
+│   │   └── content.md               <span class="lines">284 行 · 12 BOSS/事件/遗物297/药水64/规模统计</span>
+│   └── comparison.md                <span class="lines">两代对比 + 复刻策略建议</span>
+└── <span class="dir">review/</span>
+    └── index.html                  <span class="lines">本页面（单文件离线可用）</span>
+  </div>
+
+  <h3>来源质量说明</h3>
+  <div class="grid g3">
+    <div class="card"><h5>StS1</h5><p>slaythespire.wiki.gg 为主（150+ 页面逐页拉取，含 MediaWiki API 原始 wikitext），官方 Steam/Mega Crit 佐证。</p></div>
+    <div class="card"><h5>StS2</h5><p>官方 Neowsletter + 补丁日志 + PCGamesN 专题 + <b>v0.107.1 客户端反编译仓库</b>（起始卡组等拿到的是源码级数值，比 wiki 更权威）。</p></div>
+    <div class="card"><h5>可信度分级</h5><p>官方 &gt; 反编译快照 &gt; 社区 wiki &gt; 社区逆向 [RE]（地图生成等已明确标记）。全部不确定项见下方。</p></div>
+  </div>
+</section>
+
+<!-- ============ 信息边界 ============ -->
+<section id="caveat">
+  <div class="kicker">10 · CAVEATS</div>
+  <h2>信息边界 —— 我没查实的东西（诚实清单）</h2>
+  <div class="sub">研究是给开发打底的，边界必须先讲清楚</div>
+
+  <div class="warn">
+    <b>StS1 待核验（实机/复刻时验证即可）：</b>
+    <ul>
+      <li>官方简中译名未逐一核对（中文 wiki 403），文档用社区译名 + 英文原名双轨 —— 开发直接用英文名做字段</li>
+      <li>升阶 2/3/4 与 17–19 级的伤害/血量具体倍率官方未公开，文档未编造，复刻时自定参数</li>
+      <li>地图生成覆盖规则来自社区逆向工程（已标 [RE]）：首 5 层无精英/篝火、第 9 层全宝箱等</li>
+      <li>充能球槽绝对上限（社区记忆 10）、少数卡牌升级效果的 wiki 双值记法需实测</li>
+      <li>多努与德卡谁先出手无官方记载，按 wiki 列举顺序推断</li>
+    </ul>
+  </div>
+
+  <div class="warn">
+    <b>StS2 待核验（EA 版本变动剧烈）：</b>
+    <ul>
+      <li>基础数值（能量3/抽5/手牌上限）无官方文档，为社区推定 + 升阶 4 文本反推</li>
+      <li>数值基准是 v0.107.1 反编译快照，v0.108–v0.111 改动已按补丁日志标注，但 2026-11-12 大补丁后需整体复核</li>
+      <li>地下船坞（Underdocks）幕专属事件名单、附魔完整清单与部分数值未公开</li>
+      <li>官方中文译名未发布，全部中文译名为本项目自拟</li>
+      <li>第 6 角色 / 交替第 2 幕 / 实验模式 / 合作结算细节未公布</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  杀戮尖塔 1 &amp; 2 网页复刻 · 前期资料研究 · 2026-11-09<br>
+  检索来源：slaythespire.wiki.gg · megacrit.com · Steam · PCGamesN · sts2-rl-agent 反编译仓库
+</footer>
+
+</div>
+</body>
+</html>
