@@ -532,7 +532,7 @@
       <div class="grid g4">
         <div class="card stat"><div class="n">297</div><div class="l">遗物（1 代 193）</div></div>
         <div class="card stat"><div class="n">64</div><div class="l">药水（1 代 42）</div></div>
-        <div class="card stat"><div class="n">50</div><div class="l">事件（1 代 52，已去重）</div></div>
+        <div class="card stat"><div class="n">57</div><div class="l">事件（1 代 52，已去重）</div></div>
         <div class="card stat"><div class="n">10</div><div class="l">升阶级数（1 代 20）</div></div>
       </div>
     </section>
@@ -545,14 +545,14 @@
       <table>
         <tr><th>实体</th><th>规模</th><th>状态</th></tr>
         <tr><td>英雄（角色）</td><td>5（第 6 名制作中）</td><td>已全：起始卡组为源码级数值</td></tr>
-        <tr><td>卡牌</td><td>约 590 张</td><td>提取中 → cards</td></tr>
-        <tr><td>遗物</td><td>297</td><td>提取中 → relics</td></tr>
-        <tr><td>药水</td><td>64</td><td>提取中 → potions</td></tr>
-        <tr><td>敌人</td><td>约 107 定义 / 12 BOSS</td><td>名单已全；招式数值提取中 → enemies</td></tr>
-        <tr><td>事件</td><td>50</td><td>名单已全；全选项数值提取中 → events</td></tr>
-        <tr><td>古代 Ancients + 祝福池</td><td>8 位</td><td>提取中 → ancients</td></tr>
-        <tr><td>附魔</td><td>16+</td><td>提取中 → enchantments</td></tr>
-        <tr><td>地图配置</td><td>8 种节点</td><td>提取中 → map_config</td></tr>
+        <tr><td>卡牌</td><td>577 张</td><td><b>已全入库</b>（铁甲 87 / 其余角色 88×4 / 无色 64 / 诅咒 18 / 状态 12 / 事件·任务·生成 44，源码级数值）</td></tr>
+        <tr><td>遗物</td><td>295</td><td><b>已全入库</b>（295/298 可获得，另 3 个为弃用/辅助类；含 100 件古代祝福遗物）</td></tr>
+        <tr><td>药水</td><td>63</td><td><b>已全入库</b>（63/64 可获得，弃用 1）</td></tr>
+        <tr><td>敌人</td><td>120 实体 / 357 招式</td><td><b>已全入库</b>（普通 70 / 精英 17 / BOSS 18 含 12 个现行 BOSS 全招式，数值经 C# 源码仲裁）</td></tr>
+        <tr><td>事件</td><td>57</td><td><b>已全入库</b>（共享 18 + 繁茂 13 + 船坞 10 + 蜂巢 10 + 荣耀 7，全选项数值）</td></tr>
+        <tr><td>古代 Ancients + 祝福池</td><td>8 位 / 100 条祝福</td><td><b>已全入库</b></td></tr>
+        <tr><td>附魔</td><td>22</td><td><b>已全入库</b>（全部真实附魔，弃用占位已排除）</td></tr>
+        <tr><td>地图配置</td><td>14 配置块</td><td><b>已全入库</b>（网格/路径生成/节点数量公式/放置规则/固定行/弱遭遇/黄金路径——复刻地图生成器的直接依据）</td></tr>
         <tr><td>升阶 10 级 / 时间线 / 联机</td><td>规则</td><td>已全（联机复刻首期不做）</td></tr>
       </table>
       </div>
@@ -563,7 +563,7 @@
   <!-- ==================== 实体数据库 ==================== -->
   <div class="view" id="view-db">
     <section data-t="数据库">
-      <h2><span class="num">☰</span>实体数据库</h2>
+      <h2><span class="num">D</span>实体数据库</h2>
       <div class="sub">底层一套 JSON（data/ 目录，复刻项目直接引用）· 顶层这套 UI（检索 / 筛选 / 展开）</div>
       <div class="db-controls">
         <div class="seg" id="db-game">
@@ -684,10 +684,10 @@
     const wrap = document.getElementById('db-entities'); wrap.innerHTML = '';
     Object.entries(ENT).forEach(([key, cfg]) => {
       const data = DB[dbGame] && DB[dbGame][key];
-      const has = Array.isArray(data) && data.length;
+      const has = (Array.isArray(data) && data.length) || (!Array.isArray(data) && data);
       const btn = document.createElement('button');
       btn.className = 'ent-btn' + (key === dbEntity ? ' active' : '') + (has ? '' : ' pending');
-      btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + data.length + '</span>' : ' <span class="cnt">提取中</span>');
+      btn.innerHTML = cfg.label + (has ? ' <span class="cnt">' + (Array.isArray(data) ? data.length : '配置') + '</span>' : ' <span class="cnt">提取中</span>');
       if (has) btn.addEventListener('click', () => { dbEntity = key; dbFilters = {}; renderEntityButtons(); renderFilters(); renderTable(); });
       else btn.title = '数据提取中，落地后自动出现';
       wrap.appendChild(btn);
@@ -720,8 +720,17 @@
 
   function renderTable() {
     const cfg = ENT[dbEntity];
-    const data = rows();
     const box = document.getElementById('db-table');
+    // 配置类实体（对象）：分块渲染
+    const raw = DB[dbGame] && DB[dbGame][dbEntity];
+    if (raw && !Array.isArray(raw)) {
+      document.getElementById('db-count').textContent = '配置对象（' + Object.keys(raw).length + ' 个配置块）';
+      box.innerHTML = Object.entries(raw).filter(([, v]) => v !== null && v !== undefined).map(([k, v]) =>
+        '<div class="card" style="margin:10px 0"><h5 style="font-family:SF Mono,Menlo,monospace;font-size:14px">' + k + '</h5><pre style="white-space:pre-wrap;font-size:12.5px;line-height:1.6;color:var(--dim);background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 12px;overflow:auto;margin:6px 0 0">' + JSON.stringify(v, null, 1).replace(/</g, '&lt;') + '</pre></div>'
+      ).join('');
+      return;
+    }
+    const data = rows();
     document.getElementById('db-count').textContent = '共 ' + data.length + ' 条' + (dbQuery ? '（命中检索）' : '') + (cfg && cfg.expand ? ' · 点击行展开详情' : '');
     if (!cfg || !data.length) { box.innerHTML = '<div class="db-empty">' + (data.length === 0 && dbQuery ? '没有命中结果，换个关键词试试' : '该实体数据提取中，落地后此处自动出现') + '</div>'; return; }
     let html = '<table class="db-table"><tr>' + cfg.cols.map(c => '<th>' + c[1] + '</th>').join('') + '</tr>';

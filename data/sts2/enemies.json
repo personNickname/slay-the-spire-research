@@ -1,0 +1,3434 @@
+[
+  {
+    "id": "assassin_ruby_raider",
+    "en": "Assassin Raider",
+    "zh": "刺客红宝石掠盗者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      18,
+      23
+    ],
+    "hp_asc": [
+      19,
+      24
+    ],
+    "moves": [
+      {
+        "name": "Killshot",
+        "effect": "造成 10（进阶 11） 点伤害"
+      }
+    ],
+    "pattern": "每回合 Killshot",
+    "notes": "红宝石掠盗团成员"
+  },
+  {
+    "id": "axe_ruby_raider",
+    "en": "Axe Raider",
+    "zh": "斧手红宝石掠盗者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      20,
+      22
+    ],
+    "hp_asc": [
+      21,
+      23
+    ],
+    "moves": [
+      {
+        "name": "Swing 1",
+        "effect": "造成 5（进阶 6） 点伤害；获得 5（进阶 6） 点格挡"
+      },
+      {
+        "name": "Swing 2",
+        "effect": "造成 5（进阶 6） 点伤害；获得 5（进阶 6） 点格挡"
+      },
+      {
+        "name": "Big Swing",
+        "effect": "造成 12（进阶 13） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Swing → Swing → Big Swing → Swing…（Swing 附带 5/进阶 6 格挡）",
+    "notes": "红宝石掠盗团成员"
+  },
+  {
+    "id": "brute_ruby_raider",
+    "en": "Brute Raider",
+    "zh": "蛮兵红宝石掠盗者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      30,
+      33
+    ],
+    "hp_asc": [
+      31,
+      34
+    ],
+    "moves": [
+      {
+        "name": "Beat",
+        "effect": "造成 7（进阶 8） 点伤害"
+      },
+      {
+        "name": "Roar",
+        "effect": "获得 3 点力量"
+      }
+    ],
+    "pattern": "固定交替：Beat ↔ Roar（+3 力量）",
+    "notes": "红宝石掠盗团成员；开局自带 3 点力量"
+  },
+  {
+    "id": "crossbow_ruby_raider",
+    "en": "Crossbow Raider",
+    "zh": "弩手红宝石掠盗者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      18,
+      21
+    ],
+    "hp_asc": [
+      19,
+      22
+    ],
+    "moves": [
+      {
+        "name": "Reload",
+        "effect": "获得 3 点格挡"
+      },
+      {
+        "name": "Fire!",
+        "effect": "造成 14（进阶 16） 点伤害"
+      }
+    ],
+    "pattern": "固定交替：Reload（3 格挡）↔ Fire!",
+    "notes": "红宝石掠盗团成员"
+  },
+  {
+    "id": "cubex_construct",
+    "en": "Cubex Construct",
+    "zh": "立方构装体",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 65,
+    "hp_asc": 70,
+    "moves": [
+      {
+        "name": "Charge Up",
+        "effect": "获得 2 点力量"
+      },
+      {
+        "name": "Repeater",
+        "effect": "造成 7（进阶 8） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Repeater",
+        "effect": "造成 7（进阶 8） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Expel Blast",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次"
+      },
+      {
+        "name": "Submerge",
+        "effect": "获得 15 点格挡"
+      }
+    ],
+    "pattern": "固定循环：Charge Up → Repeater → Repeater → Expel Blast ×2 → Repeater…（受击时 Submerge 获得 15 格挡）",
+    "notes": "开局获得 13 点格挡与 1 层神器"
+  },
+  {
+    "id": "eye_with_teeth",
+    "en": "Eye with Teeth",
+    "zh": "带牙之眼",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 6,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Distract",
+        "effect": "将 3 张茫然（Dazed）加入玩家弃牌堆"
+      }
+    ],
+    "pattern": "每回合 Distract（塞 3 张茫然）",
+    "notes": "雾眼召唤的 6 HP 幻象小怪（自带幻象与仆从）"
+  },
+  {
+    "id": "flyconid",
+    "en": "Flyconid",
+    "zh": "飞翼蝠",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      47,
+      49
+    ],
+    "hp_asc": [
+      51,
+      53
+    ],
+    "moves": [
+      {
+        "name": "Vulnerable Spores",
+        "effect": "对玩家施加 2 层易伤"
+      },
+      {
+        "name": "Frail Spores",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Smash",
+        "effect": "造成 11（进阶 12） 点伤害"
+      }
+    ],
+    "pattern": "首回合从 Frail Spores/Smash 随机起手；随后 Vulnerable Spores/Frail Spores/Smash 随机（不连续重复）",
+    "notes": null
+  },
+  {
+    "id": "fogmog",
+    "en": "Fogmog",
+    "zh": "雾眼",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 74,
+    "hp_asc": 78,
+    "moves": [
+      {
+        "name": "Illusory Spores",
+        "effect": "召唤 1 只带牙之眼（Eye with Teeth，6 HP 幻象）"
+      },
+      {
+        "name": "Thwack",
+        "effect": "造成 8（进阶 9） 点伤害；获得 1 点力量"
+      },
+      {
+        "name": "Swipe Random",
+        "effect": "造成 8（进阶 9） 点伤害；获得 1 点力量"
+      },
+      {
+        "name": "Headbutt",
+        "effect": "造成 14（进阶 16） 点伤害"
+      }
+    ],
+    "pattern": "首回合召唤带牙之眼，随后 Thwack ↔（Thwack/Headbutt 随机，不连续重复）",
+    "notes": "开局召唤带牙之眼"
+  },
+  {
+    "id": "fuzzy_wurm_crawler",
+    "en": "Fuzzy Wurm Crawler",
+    "zh": "绒毛蠕虫爬行者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      55,
+      57
+    ],
+    "hp_asc": [
+      58,
+      59
+    ],
+    "moves": [
+      {
+        "name": "First Acid Goop",
+        "effect": "造成 4（进阶 6） 点伤害"
+      },
+      {
+        "name": "Inhale",
+        "effect": "获得 7 点力量"
+      },
+      {
+        "name": "Acid Goop",
+        "effect": "造成 4（进阶 6） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Acid Goop → Inhale（+7 力量）→ Acid Goop → Inhale…（首次 Acid Goop 起手）",
+    "notes": "开局自带 7 点力量"
+  },
+  {
+    "id": "inklet",
+    "en": "Inklet",
+    "zh": "墨滴小怪",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      11,
+      17
+    ],
+    "hp_asc": [
+      12,
+      18
+    ],
+    "moves": [
+      {
+        "name": "Jab",
+        "effect": "造成 3（进阶 4） 点伤害"
+      },
+      {
+        "name": "Whirlwind",
+        "effect": "造成 2（进阶 3） 点伤害，共 3 次"
+      },
+      {
+        "name": "Piercing Gaze",
+        "effect": "造成 10（进阶 11） 点伤害"
+      }
+    ],
+    "pattern": "依站位起手；随后 Jab/Whirlwind/Piercing Gaze 随机（不连续重复）",
+    "notes": "开局自带 1 层滑溜（Slippery）"
+  },
+  {
+    "id": "leaf_slime_m",
+    "en": "Leaf Slime (M)",
+    "zh": "叶史莱姆（中）",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      32,
+      35
+    ],
+    "hp_asc": [
+      33,
+      36
+    ],
+    "moves": [
+      {
+        "name": "Sticky Shot",
+        "effect": "将 2 张粘液（Slimed）加入玩家弃牌堆"
+      },
+      {
+        "name": "Clump Shot",
+        "effect": "造成 8（进阶 9） 点伤害"
+      }
+    ],
+    "pattern": "固定交替：Sticky Shot（塞 2 张粘液）↔ Clump Shot；死亡分裂为 2 只小叶史莱姆",
+    "notes": "死亡时分裂为 2 只小叶史莱姆"
+  },
+  {
+    "id": "leaf_slime_s",
+    "en": "Leaf Slime (S)",
+    "zh": "叶史莱姆（小）",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      11,
+      15
+    ],
+    "hp_asc": [
+      12,
+      16
+    ],
+    "moves": [
+      {
+        "name": "Butt",
+        "effect": "造成 3（进阶 4） 点伤害"
+      },
+      {
+        "name": "Goop",
+        "effect": "将 1 张粘液（Slimed）加入玩家弃牌堆"
+      }
+    ],
+    "pattern": "随机：Butt 或 Goop（不连续重复）",
+    "notes": "由中型叶史莱姆死亡分裂产生"
+  },
+  {
+    "id": "mawler",
+    "en": "Mawler",
+    "zh": "撕咬者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 72,
+    "hp_asc": 76,
+    "moves": [
+      {
+        "name": "Rip and Tear",
+        "effect": "造成 14（进阶 16） 点伤害"
+      },
+      {
+        "name": "Roar",
+        "effect": "对玩家施加 3 层易伤"
+      },
+      {
+        "name": "Claw",
+        "effect": "造成 4（进阶 5） 点伤害，共 2 次"
+      }
+    ],
+    "pattern": "随机轮换：Rip and Tear / Claw ×2（不连续重复）；Roar（+3 易伤）每场仅一次",
+    "notes": null
+  },
+  {
+    "id": "nibbit",
+    "en": "Nibbit",
+    "zh": "灵兔草",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      42,
+      46
+    ],
+    "hp_asc": [
+      44,
+      48
+    ],
+    "moves": [
+      {
+        "name": "Butt",
+        "effect": "造成 12（进阶 13） 点伤害"
+      },
+      {
+        "name": "Slice",
+        "effect": "造成 6 点伤害；获得 5 点格挡"
+      },
+      {
+        "name": "Hiss",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "固定循环：Butt → Slice → Hiss（+2 力量）→ Butt…",
+    "notes": "开局自带 2 点力量"
+  },
+  {
+    "id": "shrinker_beetle",
+    "en": "Shrinker Beetle",
+    "zh": "缩壳甲虫",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      38,
+      40
+    ],
+    "hp_asc": [
+      40,
+      42
+    ],
+    "moves": [
+      {
+        "name": "Shrinker",
+        "effect": "对玩家施加 1 层缩小（Shrink）"
+      },
+      {
+        "name": "Chomp",
+        "effect": "造成 7（进阶 8） 点伤害"
+      },
+      {
+        "name": "Stomp",
+        "effect": "造成 13（进阶 14） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Shrinker → Chomp → Stomp → Chomp → Stomp…（Shrinker 使玩家缩小）",
+    "notes": null
+  },
+  {
+    "id": "slithering_strangler",
+    "en": "Slithering Strangler",
+    "zh": "蜿蜒绞杀藤",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      53,
+      55
+    ],
+    "hp_asc": [
+      54,
+      56
+    ],
+    "moves": [
+      {
+        "name": "Constrict",
+        "effect": "对玩家施加 3 层紧勒"
+      },
+      {
+        "name": "Twack",
+        "effect": "造成 7（进阶 8） 点伤害；获得 5 点格挡"
+      },
+      {
+        "name": "Lash",
+        "effect": "造成 12（进阶 13） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Constrict（3 层紧勒）→ Twack → Lash → Constrict…",
+    "notes": "开局自带 3 层紧勒"
+  },
+  {
+    "id": "snapping_jaxfruit",
+    "en": "Snapping Jaxfruit",
+    "zh": "咬人贾克斯果",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      31,
+      33
+    ],
+    "hp_asc": [
+      34,
+      36
+    ],
+    "moves": [
+      {
+        "name": "Energy Orb",
+        "effect": "造成 3（进阶 4） 点伤害；获得 2 点力量"
+      }
+    ],
+    "pattern": "每回合 Energy Orb（3/进阶 4 伤害并 +2 力量）",
+    "notes": "v0.107.1 中仅有能量球单一行动"
+  },
+  {
+    "id": "tracker_ruby_raider",
+    "en": "Tracker Raider",
+    "zh": "追踪者红宝石掠盗者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      21,
+      25
+    ],
+    "hp_asc": [
+      22,
+      26
+    ],
+    "moves": [
+      {
+        "name": "Track",
+        "effect": "对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Unleash the Hounds",
+        "effect": "造成 1 点伤害，共 8 次（进阶 9 次）"
+      }
+    ],
+    "pattern": "固定：Track（2 层脆弱）后 Unleash the Hounds（1×8/进阶 9）永续",
+    "notes": "红宝石掠盗团成员"
+  },
+  {
+    "id": "twig_slime_m",
+    "en": "Twig Slime (M)",
+    "zh": "枝史莱姆（中）",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      26,
+      28
+    ],
+    "hp_asc": [
+      27,
+      29
+    ],
+    "moves": [
+      {
+        "name": "Sticky Shot",
+        "effect": "将 1 张粘液（Slimed）加入玩家弃牌堆"
+      },
+      {
+        "name": "Clump Shot",
+        "effect": "造成 11（进阶 12） 点伤害"
+      }
+    ],
+    "pattern": "随机：Sticky Shot（塞 1 张粘液）或 Clump Shot（不连续重复）",
+    "notes": "死亡时分裂为 2 只小枝史莱姆"
+  },
+  {
+    "id": "twig_slime_s",
+    "en": "Twig Slime (S)",
+    "zh": "枝史莱姆（小）",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      7,
+      11
+    ],
+    "hp_asc": [
+      8,
+      12
+    ],
+    "moves": [
+      {
+        "name": "Butt",
+        "effect": "造成 4（进阶 5） 点伤害"
+      }
+    ],
+    "pattern": "每回合 Butt",
+    "notes": "由中型枝史莱姆死亡分裂产生"
+  },
+  {
+    "id": "vine_shambler",
+    "en": "Vine Shambler",
+    "zh": "藤蔓游荡者",
+    "act": "overgrowth",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 61,
+    "hp_asc": 64,
+    "moves": [
+      {
+        "name": "Swipe",
+        "effect": "造成 6（进阶 7） 点伤害，共 2 次"
+      },
+      {
+        "name": "Grasping Vines",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层缠绕"
+      },
+      {
+        "name": "Chomp",
+        "effect": "造成 16（进阶 18） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Swipe ×2 → Grasping Vines → Chomp → Swipe…",
+    "notes": "开局获得 3 点荆棘"
+  },
+  {
+    "id": "bygone_effigy",
+    "en": "Bygone Effigy",
+    "zh": "远古雕像",
+    "act": "overgrowth",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 127,
+    "hp_asc": 132,
+    "moves": [
+      {
+        "name": "Initial Sleep",
+        "effect": "无动作（沉睡）"
+      },
+      {
+        "name": "Wake",
+        "effect": "获得 10 点力量"
+      },
+      {
+        "name": "Sleep",
+        "effect": "无动作（沉睡）"
+      },
+      {
+        "name": "Slashes",
+        "effect": "造成 13（进阶 15） 点伤害"
+      }
+    ],
+    "pattern": "首回合沉睡 → Wake（+10 力量）→ Slashes 永续攻击",
+    "notes": "开局自带 1 层迟缓；沉睡→苏醒+10 力量"
+  },
+  {
+    "id": "byrdonis",
+    "en": "Byrdonis",
+    "zh": "伯多尼斯鸟",
+    "act": "overgrowth",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      81,
+      84
+    ],
+    "hp_asc": [
+      90,
+      90
+    ],
+    "moves": [
+      {
+        "name": "Swoop",
+        "effect": "造成 17（进阶 19） 点伤害"
+      },
+      {
+        "name": "Peck",
+        "effect": "造成 3（进阶 4） 点伤害，共 3 次"
+      }
+    ],
+    "pattern": "固定交替：Swoop → Peck ×3 → Swoop…",
+    "notes": "开局自带领地意识（Territorial）1 层"
+  },
+  {
+    "id": "phrog_parasite",
+    "en": "Phrog Parasite",
+    "zh": "蛙噬寄生体",
+    "act": "overgrowth",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      61,
+      64
+    ],
+    "hp_asc": [
+      66,
+      68
+    ],
+    "moves": [
+      {
+        "name": "Infect",
+        "effect": "将 3 张感染（Infection）加入玩家弃牌堆"
+      },
+      {
+        "name": "Lash",
+        "effect": "造成 4（进阶 5） 点伤害，共 4 次"
+      }
+    ],
+    "pattern": "固定循环：Infect（塞 3 张感染）→ Lash ×4 → Infect…；开局自带 4 层侵染（Infested）",
+    "notes": "开局自带 4 层侵染（Infested）"
+  },
+  {
+    "id": "ceremonial_beast",
+    "en": "Ceremonial Beast",
+    "zh": "仪式巨兽",
+    "act": "overgrowth",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 252,
+    "hp_asc": 262,
+    "moves": [
+      {
+        "name": "Stamp",
+        "effect": "获得 150（进阶 160） 层犁头"
+      },
+      {
+        "name": "Plow",
+        "effect": "造成 18（进阶 20） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Stun",
+        "effect": "无动作（眩晕：犁头护甲被击破后眩晕一轮）"
+      },
+      {
+        "name": "Beast Cry",
+        "effect": "对玩家施加 1 层耳鸣"
+      },
+      {
+        "name": "Stomp",
+        "effect": "造成 15（进阶 17） 点伤害"
+      },
+      {
+        "name": "Crush",
+        "effect": "造成 17（进阶 19） 点伤害；获得 3（进阶 4） 点力量"
+      }
+    ],
+    "pattern": "一阶段：Stamp（获得 150/进阶 160 犁头护甲）→ Plow 循环，犁头被击破后眩晕；二阶段：Beast Cry → Stomp → Crush → Beast Cry 循环",
+    "notes": null
+  },
+  {
+    "id": "kin_follower",
+    "en": "Kin Follower",
+    "zh": "亲族随从",
+    "act": "overgrowth",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": [
+      58,
+      59
+    ],
+    "hp_asc": [
+      62,
+      63
+    ],
+    "moves": [
+      {
+        "name": "Quick Slash",
+        "effect": "造成 5 点伤害"
+      },
+      {
+        "name": "Boomerang",
+        "effect": "造成 2 点伤害，共 2 次"
+      },
+      {
+        "name": "Power Dance",
+        "effect": "获得 2（进阶 3） 点力量"
+      }
+    ],
+    "pattern": "固定循环：Quick Slash → Boomerang → Power Dance（+2/进阶 3 力量）→ 循环",
+    "notes": "亲族 BOSS 战随从×2；C# 中开局自带亲族烙印（MarkOfTheKin）"
+  },
+  {
+    "id": "kin_priest",
+    "en": "Kin Priest",
+    "zh": "亲族主教",
+    "act": "overgrowth",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 190,
+    "hp_asc": 199,
+    "moves": [
+      {
+        "name": "Orb of Frailty",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层脆弱"
+      },
+      {
+        "name": "Orb of Weakness",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Soul Beam",
+        "effect": "造成 3 点伤害，共 3 次"
+      },
+      {
+        "name": "Dark Ritual",
+        "effect": "获得 2（进阶 3） 点力量"
+      }
+    ],
+    "pattern": "固定循环：Orb of Frailty → Orb of Weakness → Soul Beam → Dark Ritual → 循环",
+    "notes": "亲族 BOSS 战主单位；C# 中开局自带黑暗技艺（DarkArts）与亲族烙印（MarkOfTheKin）"
+  },
+  {
+    "id": "parafright",
+    "en": "Parafright",
+    "zh": "恐光体",
+    "act": "overgrowth",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 21,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Slam",
+        "effect": "造成 16（进阶 17） 点伤害"
+      }
+    ],
+    "pattern": "每回合 Slam",
+    "notes": "范托姆与幽暗者召唤的 21 HP 幻象副体（自带幻象与仆从）"
+  },
+  {
+    "id": "vantom",
+    "en": "Vantom",
+    "zh": "范托姆",
+    "act": "overgrowth",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 173,
+    "hp_asc": 183,
+    "moves": [
+      {
+        "name": "Ink Blot",
+        "effect": "造成 7（进阶 8） 点伤害"
+      },
+      {
+        "name": "Inky Lance",
+        "effect": "造成 6（进阶 7） 点伤害，共 2 次"
+      },
+      {
+        "name": "Dismember",
+        "effect": "造成 26（进阶 30） 点伤害；将 3 张伤口（Wound）加入玩家弃牌堆"
+      },
+      {
+        "name": "Prepare",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "固定循环：Ink Blot → Inky Lance ×2 → Dismember → Prepare（+2 力量）→ Ink Blot…",
+    "notes": "开局自带 8 层滑溜（Slippery，进阶 9）"
+  },
+  {
+    "id": "calcified_cultist",
+    "en": "Calcified Cultist",
+    "zh": "钙化信徒",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      38,
+      41
+    ],
+    "hp_asc": [
+      39,
+      42
+    ],
+    "moves": [
+      {
+        "name": "Incantation",
+        "effect": "获得 2 层仪式"
+      },
+      {
+        "name": "Dark Strike",
+        "effect": "造成 9（进阶 11） 点伤害"
+      }
+    ],
+    "pattern": "首回合 Incantation（+2 仪式）后 Dark Strike 永续",
+    "notes": "邪教徒群体成员"
+  },
+  {
+    "id": "corpse_slug",
+    "en": "Corpse Slug",
+    "zh": "尸鼻涕虫",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      25,
+      27
+    ],
+    "hp_asc": [
+      27,
+      29
+    ],
+    "moves": [
+      {
+        "name": "Whip Slap",
+        "effect": "造成 3 点伤害，共 2 次"
+      },
+      {
+        "name": "Glomp",
+        "effect": "造成 8（进阶 9） 点伤害"
+      },
+      {
+        "name": "Goop",
+        "effect": "对玩家施加 2 层脆弱"
+      }
+    ],
+    "pattern": "按站位起手，随后固定循环：Whip Slap ×2 → Glomp → Goop → Whip Slap…",
+    "notes": "开局自带 4/进阶 5 层贪婪（Ravenous）"
+  },
+  {
+    "id": "damp_cultist",
+    "en": "Damp Cultist",
+    "zh": "潮湿信徒",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      51,
+      53
+    ],
+    "hp_asc": [
+      52,
+      54
+    ],
+    "moves": [
+      {
+        "name": "Incantation",
+        "effect": "获得 5（进阶 6） 层仪式"
+      },
+      {
+        "name": "Dark Strike",
+        "effect": "造成 1（进阶 3） 点伤害"
+      }
+    ],
+    "pattern": "首回合 Incantation（+5/进阶 6 仪式）后 Dark Strike 永续",
+    "notes": "邪教徒强化型：极高仪式成长"
+  },
+  {
+    "id": "fat_gremlin",
+    "en": "Fat Gremlin",
+    "zh": "胖哥布林",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      13,
+      17
+    ],
+    "hp_asc": [
+      14,
+      18
+    ],
+    "moves": [
+      {
+        "name": "Wake Up",
+        "effect": "无动作（苏醒）"
+      },
+      {
+        "name": "Flee",
+        "effect": "逃离战斗"
+      }
+    ],
+    "pattern": "苏醒一回合后 Flee 逃离（击杀可得金币）",
+    "notes": "佣兵哥布林伴从；苏醒后试图逃离"
+  },
+  {
+    "id": "fossil_stalker",
+    "en": "Fossil Stalker",
+    "zh": "化石潜伏者",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      51,
+      53
+    ],
+    "hp_asc": [
+      54,
+      56
+    ],
+    "moves": [
+      {
+        "name": "Tackle",
+        "effect": "造成 9（进阶 11） 点伤害；对玩家施加 1 层脆弱"
+      },
+      {
+        "name": "Latch",
+        "effect": "造成 12（进阶 14） 点伤害"
+      },
+      {
+        "name": "Lash",
+        "effect": "造成 3（进阶 4） 点伤害，共 2 次"
+      }
+    ],
+    "pattern": "随机轮换：Tackle / Latch / Lash ×2（权重各 2）",
+    "notes": "开局自带 3 层吸取（Suck）"
+  },
+  {
+    "id": "gas_bomb",
+    "en": "Gas Bomb",
+    "zh": "毒气弹",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 7,
+    "hp_asc": 8,
+    "moves": [
+      {
+        "name": "Explode",
+        "effect": "造成 8（进阶 9） 点伤害；自毁"
+      }
+    ],
+    "pattern": "登场当回合 Explode（8/进阶 9 伤害）并自毁",
+    "notes": "活雾召唤的自爆小怪（自带仆从）"
+  },
+  {
+    "id": "gremlin_merc",
+    "en": "Gremlin Merc",
+    "zh": "佣兵哥布林",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      47,
+      49
+    ],
+    "hp_asc": [
+      51,
+      53
+    ],
+    "moves": [
+      {
+        "name": "Gimme",
+        "effect": "造成 7（进阶 8） 点伤害，共 2 次"
+      },
+      {
+        "name": "Double Smash",
+        "effect": "造成 6（进阶 7） 点伤害，共 2 次；对玩家施加 2 层虚弱"
+      },
+      {
+        "name": "Hehe",
+        "effect": "造成 8（进阶 9） 点伤害；获得 2 点力量"
+      }
+    ],
+    "pattern": "固定循环：Gimme ×2 → Double Smash → Hehe → Gimme…（每次攻击偷金币）",
+    "notes": "开局自带突袭（Surprise）1 层与偷窃（Thievery）20；每次攻击偷金币"
+  },
+  {
+    "id": "haunted_ship",
+    "en": "Haunted Ship",
+    "zh": "幽灵船",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 63,
+    "hp_asc": 67,
+    "moves": [
+      {
+        "name": "Swipe",
+        "effect": "造成 13（进阶 14） 点伤害"
+      },
+      {
+        "name": "Stomp",
+        "effect": "造成 4（进阶 5） 点伤害，共 3 次"
+      },
+      {
+        "name": "Haunt",
+        "effect": "对玩家施加 3 层虚弱；将 5 张茫然（Dazed）加入玩家弃牌堆"
+      }
+    ],
+    "pattern": "随机轮换：Ramming Speed/Swipe/Stomp（不连续重复）；偶数回合 Haunt（3 层虚弱+5 张茫然，仅一次）",
+    "notes": null
+  },
+  {
+    "id": "living_fog",
+    "en": "Living Fog",
+    "zh": "活雾",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 80,
+    "hp_asc": 82,
+    "moves": [
+      {
+        "name": "Advanced Gas",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层烟霾"
+      },
+      {
+        "name": "Bloat",
+        "effect": "召唤毒气弹（首次 1 只，逐次 +1，上限 5）并造成 5（进阶 6）点伤害"
+      },
+      {
+        "name": "Super Gas Blast",
+        "effect": "造成 8（进阶 9） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Advanced Gas → Bloat（召唤毒气弹递增）↔ Super Gas Blast 交替",
+    "notes": "不断召唤毒气弹"
+  },
+  {
+    "id": "punch_construct",
+    "en": "Punch Construct",
+    "zh": "冲拳构装体",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 55,
+    "hp_asc": 60,
+    "moves": [
+      {
+        "name": "READY",
+        "effect": "获得 10 点格挡"
+      },
+      {
+        "name": "Strong Punch",
+        "effect": "造成 14（进阶 16） 点伤害"
+      },
+      {
+        "name": "Fast Punch",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次；对玩家施加 1 层脆弱"
+      }
+    ],
+    "pattern": "固定循环：Ready（10 格挡）→ Strong Punch → Fast Punch ×2 → Ready…",
+    "notes": "开局自带 1 层神器"
+  },
+  {
+    "id": "seapunk",
+    "en": "Seapunk",
+    "zh": "海灵",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      44,
+      46
+    ],
+    "hp_asc": [
+      47,
+      49
+    ],
+    "moves": [
+      {
+        "name": "Sea Kick",
+        "effect": "造成 11（进阶 13） 点伤害"
+      },
+      {
+        "name": "Spinning Kick",
+        "effect": "造成 2 点伤害，共 4 次"
+      },
+      {
+        "name": "Bubble Burp",
+        "effect": "获得 7（进阶 8） 点格挡；获得 1（进阶 2） 点力量"
+      }
+    ],
+    "pattern": "固定循环：Sea Kick → Spinning Kick ×4 → Bubble Burp → Sea Kick…",
+    "notes": null
+  },
+  {
+    "id": "sewer_clam",
+    "en": "Sewer Clam",
+    "zh": "下水道蛤",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 56,
+    "hp_asc": 58,
+    "moves": [
+      {
+        "name": "Pressurize",
+        "effect": "获得 4 点力量"
+      },
+      {
+        "name": "Jet",
+        "effect": "造成 10（进阶 11） 点伤害"
+      }
+    ],
+    "pattern": "固定交替：Jet ↔ Pressurize（+4 力量）",
+    "notes": "开局自带 8/进阶 9 层镀层"
+  },
+  {
+    "id": "sludge_spinner",
+    "en": "Sludge Spinner",
+    "zh": "淤泥纺轮",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      37,
+      39
+    ],
+    "hp_asc": [
+      41,
+      42
+    ],
+    "moves": [
+      {
+        "name": "Oil Spray",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Slam",
+        "effect": "造成 11（进阶 12） 点伤害"
+      },
+      {
+        "name": "Rage",
+        "effect": "造成 6（进阶 7） 点伤害；获得 3 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Oil Spray / Slam / Rage（不连续重复）",
+    "notes": null
+  },
+  {
+    "id": "sneaky_gremlin",
+    "en": "Sneaky Gremlin",
+    "zh": "鬼祟哥布林",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      10,
+      14
+    ],
+    "hp_asc": [
+      11,
+      15
+    ],
+    "moves": [
+      {
+        "name": "Wake Up",
+        "effect": "无动作（苏醒）"
+      },
+      {
+        "name": "Tackle",
+        "effect": "造成 9（进阶 10） 点伤害"
+      }
+    ],
+    "pattern": "苏醒一回合后 Tackle 永续攻击",
+    "notes": "佣兵哥布林伴从"
+  },
+  {
+    "id": "toadpole",
+    "en": "Toadpole",
+    "zh": "蝌蚪",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      21,
+      25
+    ],
+    "hp_asc": [
+      22,
+      26
+    ],
+    "moves": [
+      {
+        "name": "Spike Spit",
+        "effect": "失去 2 点荆棘，随后造成 3（进阶 4）点伤害，共 3 次"
+      },
+      {
+        "name": "Whirl",
+        "effect": "造成 7（进阶 8） 点伤害"
+      },
+      {
+        "name": "Spiken",
+        "effect": "获得 2 点荆棘"
+      }
+    ],
+    "pattern": "固定循环：Spiken（+2 荆棘）→ Spike Spit ×3 → Whirl → Spiken…（后排起手 Whirl）",
+    "notes": null
+  },
+  {
+    "id": "two_tailed_rat",
+    "en": "Two-Tailed Rat",
+    "zh": "双尾鼠",
+    "act": "underdocks",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      17,
+      21
+    ],
+    "hp_asc": [
+      18,
+      22
+    ],
+    "moves": [
+      {
+        "name": "Scratch",
+        "effect": "造成 8（进阶 9） 点伤害"
+      },
+      {
+        "name": "Disease Bite",
+        "effect": "造成 6（进阶 7） 点伤害"
+      },
+      {
+        "name": "Screech",
+        "effect": "对玩家施加 1 层脆弱"
+      },
+      {
+        "name": "Call for Backup",
+        "effect": "召唤 1 只双尾鼠增援（有空位时）"
+      }
+    ],
+    "pattern": "随机轮换：Scratch/Disease Bite/Screech（不连续重复），可呼叫同伴（Call for Backup）召唤增援",
+    "notes": "可呼叫同伴增援"
+  },
+  {
+    "id": "phantasmal_gardener",
+    "en": "Phantasmal Gardener",
+    "zh": "幻影园丁",
+    "act": "underdocks",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      26,
+      31
+    ],
+    "hp_asc": [
+      27,
+      32
+    ],
+    "moves": [
+      {
+        "name": "Bite",
+        "effect": "造成 5 点伤害"
+      },
+      {
+        "name": "Lash",
+        "effect": "造成 7 点伤害"
+      },
+      {
+        "name": "Flail",
+        "effect": "造成 1 点伤害，共 3 次"
+      },
+      {
+        "name": "Enlarge",
+        "effect": "获得 2（进阶 3） 点力量"
+      }
+    ],
+    "pattern": "按站位起手不同，随后固定循环：Bite → Lash → Flail ×3 → Enlarge → Bite…；开局自带 6/进阶 7 层胆小（Skittish）",
+    "notes": "开局自带 6/进阶 7 层胆小（Skittish）；成群出现"
+  },
+  {
+    "id": "skulking_colony",
+    "en": "Skulking Colony",
+    "zh": "潜行蟹群",
+    "act": "underdocks",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 75,
+    "hp_asc": 80,
+    "moves": [
+      {
+        "name": "Zoom",
+        "effect": "造成 14（进阶 16） 点伤害"
+      },
+      {
+        "name": "Zoom",
+        "effect": "造成 14（进阶 16） 点伤害"
+      },
+      {
+        "name": "Inertia",
+        "effect": "造成 9（进阶 11） 点伤害；获得 2（进阶 4） 点力量"
+      },
+      {
+        "name": "Piercing Stabs",
+        "effect": "造成 7（进阶 8） 点伤害，共 2 次"
+      }
+    ],
+    "pattern": "固定循环：Zoom → Zoom → Inertia → Piercing Stabs → Zoom…",
+    "notes": "开局自带 20 层硬化甲壳（HardenedShell）"
+  },
+  {
+    "id": "terror_eel",
+    "en": "Terror Eel",
+    "zh": "恐怖鳗",
+    "act": "underdocks",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 140,
+    "hp_asc": 150,
+    "moves": [
+      {
+        "name": "Crash",
+        "effect": "造成 16（进阶 18） 点伤害"
+      },
+      {
+        "name": "Thrash",
+        "effect": "造成 3（进阶 4） 点伤害，共 3 次；获得 7 层活力"
+      },
+      {
+        "name": "Stun",
+        "effect": "无动作"
+      },
+      {
+        "name": "Terrorize",
+        "effect": "对玩家施加 99 层易伤"
+      }
+    ],
+    "pattern": "固定循环：Crash ↔ Thrash（×3 并获得 7 层活力）；尖啸（70/进阶 75 层）触发：Stun → Terrorize（99 层易伤）→ Crash",
+    "notes": "开局自带 70/进阶 75 层尖啸（Shriek）"
+  },
+  {
+    "id": "lagavulin_matriarch",
+    "en": "Lagavulin Matriarch",
+    "zh": "拉加威林之母",
+    "act": "underdocks",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 222,
+    "hp_asc": 233,
+    "moves": [
+      {
+        "name": "Sleep",
+        "effect": "无动作（沉睡 3 回合；被打醒后进入攻击循环）"
+      },
+      {
+        "name": "Slash",
+        "effect": "造成 19（进阶 21） 点伤害"
+      },
+      {
+        "name": "Disembowel",
+        "effect": "造成 9（进阶 10） 点伤害，共 2 次"
+      },
+      {
+        "name": "Slash2",
+        "effect": "造成 12（进阶 14） 点伤害；获得 12（进阶 14） 点格挡"
+      },
+      {
+        "name": "Soul Siphon",
+        "effect": "使玩家力量、敏捷各 -2；自身获得 2 点力量"
+      }
+    ],
+    "pattern": "沉睡 3 回合（或被打醒）后固定循环：Slash → Disembowel ×2 → Slash2 → Soul Siphon → Slash…",
+    "notes": "开局自带 12 层镀层与沉睡（Asleep）3 层"
+  },
+  {
+    "id": "soul_fysh",
+    "en": "Soul Fysh",
+    "zh": "魂鱼",
+    "act": "underdocks",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 211,
+    "hp_asc": 221,
+    "moves": [
+      {
+        "name": "Beckon",
+        "effect": "将 1 张召唤（Beckon）加入抽牌堆；将 1 张召唤（Beckon）加入弃牌堆"
+      },
+      {
+        "name": "De-Gas",
+        "effect": "造成 16（进阶 17） 点伤害"
+      },
+      {
+        "name": "Gaze",
+        "effect": "造成 7（进阶 8） 点伤害；将 1 张召唤（Beckon）加入弃牌堆"
+      },
+      {
+        "name": "Fade",
+        "effect": "获得 2 层虚无"
+      },
+      {
+        "name": "Scream",
+        "effect": "造成 13（进阶 15） 点伤害；对玩家施加 3 层易伤"
+      }
+    ],
+    "pattern": "固定循环：Beckon → De-Gas → Gaze → Fade（虚无 2）→ Scream → Beckon…",
+    "notes": "名字玩一代社区热梗\"fysh\""
+  },
+  {
+    "id": "waterfall_giant",
+    "en": "Waterfall Giant",
+    "zh": "瀑布巨人",
+    "act": "underdocks",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 240,
+    "hp_asc": 250,
+    "moves": [
+      {
+        "name": "Pressurize",
+        "effect": "获得 15（进阶 20）层蒸汽爆发（Steam Eruption）"
+      },
+      {
+        "name": "Stomp",
+        "effect": "造成 15（进阶 16）点伤害；施加 1 层虚弱；蒸汽爆发 +3"
+      },
+      {
+        "name": "Ram",
+        "effect": "造成 10（进阶 11）点伤害；蒸汽爆发 +3"
+      },
+      {
+        "name": "Siphon",
+        "effect": "每存活玩家回复自身 10（进阶 15）点生命；蒸汽爆发 +3"
+      },
+      {
+        "name": "Pressure Gun",
+        "effect": "造成当前水压枪伤害（初始 20/进阶 23，每次使用后 +5）；蒸汽爆发 +3"
+      },
+      {
+        "name": "Pressure Up",
+        "effect": "造成 13（进阶 14）点伤害；蒸汽爆发 +3"
+      },
+      {
+        "name": "About to Blow",
+        "effect": "无动作：记录蒸汽爆发层数并移除该力量（蒸汽爆发被击破时触发）"
+      },
+      {
+        "name": "Explode",
+        "effect": "造成已记录层数的蒸汽爆发伤害并自毁"
+      }
+    ],
+    "pattern": "固定循环：Pressurize → Stomp → Ram → Siphon → Pressure Gun → Pressure Up → Stomp…；蒸汽爆发被击破时：About to Blow → Explode（自爆）",
+    "notes": "蒸汽爆发机制 BOSS"
+  },
+  {
+    "id": "bowlbug_egg",
+    "en": "Bowlbug (Egg)",
+    "zh": "碗虫（蛋）",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      21,
+      22
+    ],
+    "hp_asc": [
+      23,
+      24
+    ],
+    "moves": [
+      {
+        "name": "Bite",
+        "effect": "造成 7（进阶 8） 点伤害；获得 7（进阶 8） 点格挡"
+      }
+    ],
+    "pattern": "每回合 Bite（伤害+格挡）",
+    "notes": "碗虫遭遇成员"
+  },
+  {
+    "id": "bowlbug_nectar",
+    "en": "Bowlbug (Nectar)",
+    "zh": "碗虫（蜜）",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      35,
+      38
+    ],
+    "hp_asc": [
+      36,
+      39
+    ],
+    "moves": [
+      {
+        "name": "Thrash",
+        "effect": "造成 3 点伤害"
+      },
+      {
+        "name": "Buff",
+        "effect": "获得 15（进阶 16） 点力量"
+      },
+      {
+        "name": "Thrash2",
+        "effect": "造成 3 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Thrash → Buff（+15/进阶 16 力量）→ Thrash → Thrash…",
+    "notes": "碗虫遭遇成员"
+  },
+  {
+    "id": "bowlbug_rock",
+    "en": "Bowlbug (Rock)",
+    "zh": "碗虫（石）",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      45,
+      48
+    ],
+    "hp_asc": [
+      46,
+      49
+    ],
+    "moves": [
+      {
+        "name": "Headbutt",
+        "effect": "造成 15（进阶 16） 点伤害"
+      },
+      {
+        "name": "Dizzy",
+        "effect": "无动作（失衡眩晕中）"
+      }
+    ],
+    "pattern": "Headbutt 永续；失衡时 Dizzy 眩晕一轮",
+    "notes": "开局自带 1 层失衡（Imbalanced）"
+  },
+  {
+    "id": "bowlbug_silk",
+    "en": "Bowlbug (Silk)",
+    "zh": "碗虫（丝）",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      40,
+      43
+    ],
+    "hp_asc": [
+      41,
+      44
+    ],
+    "moves": [
+      {
+        "name": "Trash",
+        "effect": "造成 4（进阶 5） 点伤害，共 2 次"
+      },
+      {
+        "name": "Toxic Spit",
+        "effect": "对玩家施加 1 层虚弱"
+      }
+    ],
+    "pattern": "固定交替：Toxic Spit（1 层虚弱）↔ Trash ×2",
+    "notes": "碗虫遭遇成员"
+  },
+  {
+    "id": "chomper",
+    "en": "Chomper",
+    "zh": "噬咬者",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      60,
+      64
+    ],
+    "hp_asc": [
+      63,
+      67
+    ],
+    "moves": [
+      {
+        "name": "Clamp",
+        "effect": "造成 8（进阶 9） 点伤害，共 2 次"
+      },
+      {
+        "name": "Screech",
+        "effect": "将 3 张茫然（Dazed）加入玩家弃牌堆"
+      }
+    ],
+    "pattern": "固定交替：Clamp ×2 ↔ Screech（部分遭遇先手尖叫）",
+    "notes": "开局自带 2 层神器"
+  },
+  {
+    "id": "exoskeleton",
+    "en": "Exoskeleton",
+    "zh": "外骨骼虫",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      24,
+      28
+    ],
+    "hp_asc": [
+      25,
+      29
+    ],
+    "moves": [
+      {
+        "name": "Skitter",
+        "effect": "造成 1 点伤害，共 3 次（进阶 4 次）"
+      },
+      {
+        "name": "Mandible",
+        "effect": "造成 8（进阶 9） 点伤害"
+      },
+      {
+        "name": "Enrage",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "按站位起手；随机轮换：Skitter（1×3/进阶 4）/ Mandible / Enrage（+2 力量）",
+    "notes": "开局自带 9 点难杀（HardToKill）"
+  },
+  {
+    "id": "hunter_killer",
+    "en": "Hunter Killer",
+    "zh": "猎杀者",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 121,
+    "hp_asc": 126,
+    "moves": [
+      {
+        "name": "Tenderizing Goop",
+        "effect": "对玩家施加 1 层娇嫩"
+      },
+      {
+        "name": "Bite",
+        "effect": "造成 17（进阶 19） 点伤害"
+      },
+      {
+        "name": "Puncture",
+        "effect": "造成 7（进阶 8） 点伤害，共 3 次"
+      }
+    ],
+    "pattern": "固定循环：Tenderizing Goop → Bite → Puncture ×3 → Tenderizing Goop…",
+    "notes": "开局自带 1 层伪装"
+  },
+  {
+    "id": "louse_progenitor",
+    "en": "Louse Progenitor",
+    "zh": "虱母",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      134,
+      136
+    ],
+    "hp_asc": [
+      138,
+      141
+    ],
+    "moves": [
+      {
+        "name": "Web Cannon",
+        "effect": "造成 9（进阶 10） 点伤害；对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Curl and Grow",
+        "effect": "获得 14（进阶 18） 点格挡；获得 5 点力量"
+      },
+      {
+        "name": "Pounce",
+        "effect": "造成 14（进阶 16） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Web Cannon → Curl and Grow → Pounce → Web Cannon…（开局自带 14/进阶 18 层蜷缩）",
+    "notes": "开局自带 14/进阶 18 层蜷缩（CurlUp）"
+  },
+  {
+    "id": "myte",
+    "en": "Myte",
+    "zh": "螨虫",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      61,
+      67
+    ],
+    "hp_asc": [
+      64,
+      69
+    ],
+    "moves": [
+      {
+        "name": "Toxic Cornucopia",
+        "effect": "将 1 张毒卡（Toxic）加入手牌"
+      },
+      {
+        "name": "Bite",
+        "effect": "造成 13（进阶 15） 点伤害"
+      },
+      {
+        "name": "Suck",
+        "effect": "造成 4（进阶 6） 点伤害；获得 2（进阶 3） 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Toxic（塞毒卡）/ Bite / Suck；开局自带 6/进阶 7 层蜷缩",
+    "notes": "开局自带 6/进阶 7 层蜷缩"
+  },
+  {
+    "id": "ovicopter",
+    "en": "Ovicopter",
+    "zh": "孵卵机",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      124,
+      130
+    ],
+    "hp_asc": [
+      126,
+      132
+    ],
+    "moves": [
+      {
+        "name": "Lay Eggs",
+        "effect": "召唤最多 3 只硬蛋（场上存活队友过多时停止产卵）"
+      },
+      {
+        "name": "Smash",
+        "effect": "造成 16（进阶 17） 点伤害"
+      },
+      {
+        "name": "Tenderizer",
+        "effect": "造成 7（进阶 8） 点伤害；对玩家施加 2 层易伤"
+      },
+      {
+        "name": "Nutritional Paste",
+        "effect": "获得 3（进阶 4） 点力量"
+      }
+    ],
+    "pattern": "固定循环：Lay Eggs（最多 3 只）→ Smash → Tenderizer → Nutritional Paste → Lay Eggs…",
+    "notes": null
+  },
+  {
+    "id": "slumbering_beetle",
+    "en": "Slumbering Beetle",
+    "zh": "沉睡甲虫",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 86,
+    "hp_asc": 89,
+    "moves": [
+      {
+        "name": "Snore",
+        "effect": "无动作（沉睡 3 回合或受攻击后惊醒）"
+      },
+      {
+        "name": "Roll Out",
+        "effect": "造成 16（进阶 18） 点伤害；获得 2 点力量"
+      }
+    ],
+    "pattern": "沉睡至被攻击（Snore 无动作），惊醒后 Roll Out 永续攻击；开局自带 15/进阶 18 层镀层",
+    "notes": "开局自带 15/进阶 18 层镀层与沉睡（Slumber）3 层"
+  },
+  {
+    "id": "spiny_toad",
+    "en": "Spiny Toad",
+    "zh": "棘背蟾",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      116,
+      119
+    ],
+    "hp_asc": [
+      121,
+      124
+    ],
+    "moves": [
+      {
+        "name": "Protruding Spikes",
+        "effect": "获得 5 点荆棘"
+      },
+      {
+        "name": "Spike Explosion",
+        "effect": "造成 23（进阶 25）点伤害；失去 5 点荆棘"
+      },
+      {
+        "name": "Tongue Lash",
+        "effect": "造成 17（进阶 19） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Tongue Lash → Protruding Spikes（+5 荆棘）→ Tongue Lash → Spike Explosion → Tongue Lash…",
+    "notes": null
+  },
+  {
+    "id": "the_obscura",
+    "en": "The Obscura",
+    "zh": "幽暗者",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 123,
+    "hp_asc": 129,
+    "moves": [
+      {
+        "name": "Illusion",
+        "effect": "召唤 1 只恐光体（Parafright，1 HP 幻象）"
+      },
+      {
+        "name": "Piercing Gaze",
+        "effect": "造成 10（进阶 11） 点伤害"
+      },
+      {
+        "name": "Sail",
+        "effect": "为所有存活队友提供 3 点力量"
+      },
+      {
+        "name": "Hardening Strike",
+        "effect": "造成 6（进阶 7） 点伤害；获得 6（进阶 7） 点格挡"
+      }
+    ],
+    "pattern": "首回合召唤恐光体，随后随机：Piercing Gaze / Hardening Strike / Sail（+3 力量给队友）/ Chomp",
+    "notes": null
+  },
+  {
+    "id": "thieving_hopper",
+    "en": "Thieving Hopper",
+    "zh": "盗跳者",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 79,
+    "hp_asc": 84,
+    "moves": [
+      {
+        "name": "Thievery",
+        "effect": "挥击并偷取玩家 1 张手牌"
+      },
+      {
+        "name": "Flutter",
+        "effect": "获得 5 层振翅（Flutter）"
+      },
+      {
+        "name": "Hat Trick",
+        "effect": "造成 21（进阶 23） 点伤害"
+      },
+      {
+        "name": "Nab",
+        "effect": "造成 14（进阶 16） 点伤害"
+      },
+      {
+        "name": "Escape",
+        "effect": "逃离战斗"
+      }
+    ],
+    "pattern": "依存活条件分支：Thievery（偷卡）/ Flutter / Hat Trick / Nab，生命过低时 Escape 逃离",
+    "notes": "开局自带 5 层逃脱专家（EscapeArtist）"
+  },
+  {
+    "id": "tough_egg",
+    "en": "Tough Egg",
+    "zh": "硬蛋",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      14,
+      18
+    ],
+    "hp_asc": [
+      15,
+      19
+    ],
+    "moves": [
+      {
+        "name": "Hatch",
+        "effect": "孵化（未被击杀时触发，变身为更强的敌人）"
+      },
+      {
+        "name": "Nibble",
+        "effect": "造成 4（进阶 5） 点伤害"
+      }
+    ],
+    "pattern": "Wait→Hatch（未被击杀则孵化）；Nibble 攻击",
+    "notes": "孵卵机召唤的蛋；未被击杀则孵化为更强的敌人"
+  },
+  {
+    "id": "tunneler",
+    "en": "Tunneler",
+    "zh": "钻掘者",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 87,
+    "hp_asc": 92,
+    "moves": [
+      {
+        "name": "Bite",
+        "effect": "造成 13（进阶 15） 点伤害"
+      },
+      {
+        "name": "Burrow",
+        "effect": "获得 1 层钻地（Burrowed）与 32（进阶 37）点格挡"
+      },
+      {
+        "name": "Below Move 1",
+        "effect": "造成 23（进阶 26） 点伤害"
+      },
+      {
+        "name": "Dizzy",
+        "effect": "无动作（眩晕恢复）"
+      }
+    ],
+    "pattern": "固定交替：Burrow（钻地+格挡）↔ Bite；眩晕后 Dizzy 恢复",
+    "notes": null
+  },
+  {
+    "id": "wriggler",
+    "en": "Wriggler",
+    "zh": "蠕虫仔",
+    "act": "hive",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      17,
+      21
+    ],
+    "hp_asc": [
+      18,
+      22
+    ],
+    "moves": [
+      {
+        "name": "Spawned",
+        "effect": "无动作（被召唤登场）"
+      },
+      {
+        "name": "Nasty Bite",
+        "effect": "造成 6（进阶 7） 点伤害"
+      },
+      {
+        "name": "Wriggle",
+        "effect": "将 1 张感染（Infection）加入玩家弃牌堆；获得 2 点力量"
+      }
+    ],
+    "pattern": "登场回合无动作，随后固定循环：Nasty Bite → Wriggle（塞感染+2 力量）→ Nasty Bite…",
+    "notes": "虱母召唤的仆从小怪"
+  },
+  {
+    "id": "decimillipede_segment",
+    "en": "Decimillipede",
+    "zh": "十毫千足虫（节）",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      40,
+      46
+    ],
+    "hp_asc": [
+      46,
+      52
+    ],
+    "moves": [
+      {
+        "name": "Writhe",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次"
+      },
+      {
+        "name": "Constrict",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Bulk",
+        "effect": "造成 6（进阶 7） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Dead",
+        "effect": "无动作"
+      },
+      {
+        "name": "Reattach",
+        "effect": "回复 25 点生命（接驳 Reattach）"
+      }
+    ],
+    "pattern": "固定循环：Writhe ×2 → Constrict → Bulk → Writhe…；死亡后经 Reattach（回复 25）复活",
+    "notes": "三节体共享同一行动逻辑；各自 HP 不同"
+  },
+  {
+    "id": "decimillipede_segment_back",
+    "en": "Decimillipede Segment Back",
+    "zh": "十毫千足虫（后节）",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      40,
+      46
+    ],
+    "hp_asc": [
+      46,
+      52
+    ],
+    "moves": [
+      {
+        "name": "Writhe",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次"
+      },
+      {
+        "name": "Constrict",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Bulk",
+        "effect": "造成 6（进阶 7） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Dead",
+        "effect": "无动作"
+      },
+      {
+        "name": "Reattach",
+        "effect": "回复 25 点生命（接驳 Reattach）"
+      }
+    ],
+    "pattern": "同十毫千足虫（节）：Writhe → Constrict → Bulk 循环；死亡后可经接驳复活",
+    "notes": "三节体之一"
+  },
+  {
+    "id": "decimillipede_segment_front",
+    "en": "Decimillipede Segment Front",
+    "zh": "十毫千足虫（前节）",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      40,
+      46
+    ],
+    "hp_asc": [
+      46,
+      52
+    ],
+    "moves": [
+      {
+        "name": "Writhe",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次"
+      },
+      {
+        "name": "Constrict",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Bulk",
+        "effect": "造成 6（进阶 7） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Dead",
+        "effect": "无动作"
+      },
+      {
+        "name": "Reattach",
+        "effect": "回复 25 点生命（接驳 Reattach）"
+      }
+    ],
+    "pattern": "同十毫千足虫（节）：Writhe → Constrict → Bulk 循环；死亡后可经接驳复活",
+    "notes": "三节体之一；HP 最高"
+  },
+  {
+    "id": "decimillipede_segment_middle",
+    "en": "Decimillipede Segment Middle",
+    "zh": "十毫千足虫（中节）",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": [
+      40,
+      46
+    ],
+    "hp_asc": [
+      46,
+      52
+    ],
+    "moves": [
+      {
+        "name": "Writhe",
+        "effect": "造成 5（进阶 6） 点伤害，共 2 次"
+      },
+      {
+        "name": "Constrict",
+        "effect": "造成 8（进阶 9） 点伤害；对玩家施加 1 层虚弱"
+      },
+      {
+        "name": "Bulk",
+        "effect": "造成 6（进阶 7） 点伤害；获得 2 点力量"
+      },
+      {
+        "name": "Dead",
+        "effect": "无动作"
+      },
+      {
+        "name": "Reattach",
+        "effect": "回复 25 点生命（接驳 Reattach）"
+      }
+    ],
+    "pattern": "同十毫千足虫（节）：Writhe → Constrict → Bulk 循环；死亡后可经接驳复活",
+    "notes": "三节体之一"
+  },
+  {
+    "id": "entomancer",
+    "en": "Entomancer",
+    "zh": "昆虫术士",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 145,
+    "hp_asc": 155,
+    "moves": [
+      {
+        "name": "Beeeees!",
+        "effect": "造成 3 点伤害，共 7 次（进阶 8 次）"
+      },
+      {
+        "name": "Spear!",
+        "effect": "造成 18（进阶 20） 点伤害"
+      },
+      {
+        "name": "Pheromone Spit",
+        "effect": "私人蜂巢不足 3 层时：+1 层私人蜂巢并 +1 力量；否则 +2 力量"
+      }
+    ],
+    "pattern": "固定循环：Beeeees!（3×7/进阶 8）→ Spear! → Pheromone Spit → 循环",
+    "notes": "开局自带 1 层私人蜂巢"
+  },
+  {
+    "id": "infested_prism",
+    "en": "Infested Prism",
+    "zh": "孕育棱镜",
+    "act": "hive",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 161,
+    "hp_asc": 171,
+    "moves": [
+      {
+        "name": "Jab",
+        "effect": "造成 15（进阶 17） 点伤害"
+      },
+      {
+        "name": "Radiate",
+        "effect": "造成 11（进阶 13） 点伤害；获得 11（进阶 13） 点格挡"
+      },
+      {
+        "name": "Whirlwind",
+        "effect": "造成 5（进阶 6） 点伤害，共 3 次"
+      },
+      {
+        "name": "Pulsate",
+        "effect": "造成 8（进阶 10） 点伤害；获得 20（进阶 22） 点格挡；获得 2（进阶 3） 层生命火花"
+      }
+    ],
+    "pattern": "固定循环：Jab → Radiate → Whirlwind ×3 → Pulsate → 循环；开局自带 2/进阶 3 层生命火花与 1 层转化",
+    "notes": "开局自带 2/进阶 3 层生命火花（VitalSpark）与 1 层转化（Shifting）"
+  },
+  {
+    "id": "crusher",
+    "en": "Crusher",
+    "zh": "碎壳者",
+    "act": "hive",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 209,
+    "hp_asc": 219,
+    "moves": [
+      {
+        "name": "Thrash",
+        "effect": "造成 12（进阶 14） 点伤害"
+      },
+      {
+        "name": "Enlarging Strike",
+        "effect": "造成 4 点伤害"
+      },
+      {
+        "name": "Bug Sting",
+        "effect": "造成 6（进阶 7） 点伤害，共 2 次；对玩家施加 2 层虚弱；对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Adapt",
+        "effect": "获得 2 点力量"
+      },
+      {
+        "name": "Guarded Strike",
+        "effect": "造成 12（进阶 14） 点伤害；获得 18 点格挡"
+      }
+    ],
+    "pattern": "固定循环：Thrash → Enlarging Strike → Bug Sting → Adapt → Guarded Strike → 循环",
+    "notes": "凯撒蟹 BOSS 左钳；开局自带背袭（左）与蟹怒（CrabRage）"
+  },
+  {
+    "id": "knowledge_demon",
+    "en": "Knowledge Demon",
+    "zh": "知识恶魔",
+    "act": "hive",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 379,
+    "hp_asc": 399,
+    "moves": [
+      {
+        "name": "Curse of Knowledge",
+        "effect": "施放知识诅咒：让每名玩家选择一组诅咒状态卡加入其卡组（组合随使用次数递进）"
+      },
+      {
+        "name": "Slap",
+        "effect": "造成 17（进阶 18） 点伤害"
+      },
+      {
+        "name": "Knowledge Overwhelming",
+        "effect": "造成 8（进阶 9） 点伤害，共 3 次"
+      },
+      {
+        "name": "Ponder",
+        "effect": "造成 11（进阶 13）点伤害；每存活玩家回复自身 30 点生命；获得 2（进阶 3）点力量"
+      }
+    ],
+    "pattern": "固定循环：Curse of Knowledge → Slap → Knowledge Overwhelming ×3 → Ponder →（再次 Curse of Knowledge）",
+    "notes": null
+  },
+  {
+    "id": "rocket",
+    "en": "Rocket",
+    "zh": "火箭体",
+    "act": "hive",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 199,
+    "hp_asc": 209,
+    "moves": [
+      {
+        "name": "Targeting Reticle",
+        "effect": "造成 3（进阶 4） 点伤害"
+      },
+      {
+        "name": "Precision Beam",
+        "effect": "造成 18（进阶 20） 点伤害"
+      },
+      {
+        "name": "Charge Up",
+        "effect": "获得 2 点力量"
+      },
+      {
+        "name": "Laser",
+        "effect": "造成 31（进阶 35） 点伤害"
+      },
+      {
+        "name": "Recharge",
+        "effect": "无动作（蓄能待机回合）"
+      }
+    ],
+    "pattern": "固定循环：Targeting Reticle → Precision Beam → Charge Up → Laser → Recharge → 循环",
+    "notes": "凯撒蟹 BOSS 右钳；开局自带背袭（右）与蟹怒（CrabRage）；Recharge 回复后循环"
+  },
+  {
+    "id": "the_insatiable",
+    "en": "The Insatiable",
+    "zh": "饕餮者",
+    "act": "hive",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 321,
+    "hp_asc": 341,
+    "moves": [
+      {
+        "name": "Liquify Ground",
+        "effect": "将 3 张FRANTIC_ESCAPE加入抽牌堆；将 3 张FRANTIC_ESCAPE加入弃牌堆"
+      },
+      {
+        "name": "Thrash Move 1",
+        "effect": "造成 8（进阶 9） 点伤害，共 2 次"
+      },
+      {
+        "name": "Lunging Bite",
+        "effect": "造成 28（进阶 31） 点伤害"
+      },
+      {
+        "name": "Salivate",
+        "effect": "获得 2（进阶 3） 点力量"
+      },
+      {
+        "name": "Thrash",
+        "effect": "造成 8（进阶 9） 点伤害，共 2 次"
+      }
+    ],
+    "pattern": "固定循环：Liquify Ground → Thrash → Lunging Bite → Salivate → Thrash → Lunging Bite…（半血时进化）",
+    "notes": "开局自带贪食之力；半血阶段进化"
+  },
+  {
+    "id": "axebot",
+    "en": "Axebot",
+    "zh": "斧头机器人",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      70,
+      78
+    ],
+    "hp_asc": [
+      76,
+      86
+    ],
+    "moves": [
+      {
+        "name": "Boot Up",
+        "effect": "获得 10（进阶 15）点格挡；按已消耗的库存层数获得力量（每层 3/进阶 4 点）"
+      },
+      {
+        "name": "The One-Two",
+        "effect": "造成 9（进阶 10） 点伤害，共 2 次"
+      },
+      {
+        "name": "Hammer Uppercut",
+        "effect": "造成 12（进阶 14） 点伤害；对玩家施加 2 层虚弱；对玩家施加 2 层脆弱"
+      }
+    ],
+    "pattern": "随机轮换：The One-Two ×2 / Hammer Uppercut / Sharpen?（不连续重复）；由制造者生成时先 Boot Up",
+    "notes": "开局自带 2 层库存（Stock）"
+  },
+  {
+    "id": "devoted_sculptor",
+    "en": "Devoted Sculptor",
+    "zh": "虔敬雕塑师",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 162,
+    "hp_asc": 172,
+    "moves": [
+      {
+        "name": "Forbidden Incantation",
+        "effect": "获得 9 层仪式"
+      },
+      {
+        "name": "Savage",
+        "effect": "造成 12（进阶 15） 点伤害"
+      }
+    ],
+    "pattern": "首回合 Forbidden Incantation（+9 仪式）后 Savage 永续",
+    "notes": "高仪式成长，需尽快击杀"
+  },
+  {
+    "id": "fabricator",
+    "en": "Fabricator",
+    "zh": "制造者",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 150,
+    "hp_asc": 155,
+    "moves": [
+      {
+        "name": "Fabricate",
+        "effect": "召唤 1 台防御子机（护卫/噪音机器人）与 1 台进攻子机（电击/刺杀机器人），不与上次类型重复"
+      },
+      {
+        "name": "Fabricating Strike",
+        "effect": "造成 18（进阶 21）点伤害并召唤 1 台进攻子机"
+      },
+      {
+        "name": "Disintegrate",
+        "effect": "造成 11（进阶 13） 点伤害"
+      }
+    ],
+    "pattern": "依场上友军数条件分支：<4 时 Fabricate（双召唤）或 Fabricating Strike 随机；满 4 时 Disintegrate",
+    "notes": "召唤四种子机；友军达 4 个后停止制造"
+  },
+  {
+    "id": "frog_knight",
+    "en": "Frog Knight",
+    "zh": "蛙骑士",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 191,
+    "hp_asc": 199,
+    "moves": [
+      {
+        "name": "Tongue Lash",
+        "effect": "造成 13（进阶 14） 点伤害；对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Strike Down Evil",
+        "effect": "造成 21（进阶 23） 点伤害"
+      },
+      {
+        "name": "For the Queen",
+        "effect": "获得 5 点力量"
+      },
+      {
+        "name": "Beetle Charge",
+        "effect": "造成 35（进阶 40） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Tongue Lash → Strike Down Evil → For the Queen（+5 力量）→ Tongue Lash…；半血且未冲锋时插入一次 Beetle Charge",
+    "notes": "开局自带 15/进阶 19 层镀层（Plating）"
+  },
+  {
+    "id": "globe_head",
+    "en": "Globe Head",
+    "zh": "球头",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 148,
+    "hp_asc": 158,
+    "moves": [
+      {
+        "name": "Shocking Slap",
+        "effect": "造成 13（进阶 14） 点伤害；对玩家施加 2 层脆弱"
+      },
+      {
+        "name": "Channel Lightning",
+        "effect": "造成 6（进阶 7） 点伤害，共 3 次"
+      },
+      {
+        "name": "Galvanic Burst",
+        "effect": "造成 16（进阶 17） 点伤害；获得 2 点力量"
+      }
+    ],
+    "pattern": "固定循环：Shocking Slap → Channel Lightning ×3 → Galvanic Burst → Shocking Slap…",
+    "notes": "开局自带 6 层感电（Galvanic）"
+  },
+  {
+    "id": "guardbot",
+    "en": "Guardbot",
+    "zh": "护卫机器人",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      16,
+      20
+    ],
+    "hp_asc": [
+      17,
+      21
+    ],
+    "moves": [
+      {
+        "name": "Guard",
+        "effect": "为友方制造者提供 15 点格挡"
+      }
+    ],
+    "pattern": "每回合 Guard（为制造者提供 15 格挡）",
+    "notes": "制造者召唤的防御子机，为制造者提供格挡"
+  },
+  {
+    "id": "noisebot",
+    "en": "Noisebot",
+    "zh": "噪音机器人",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      18,
+      23
+    ],
+    "hp_asc": [
+      19,
+      24
+    ],
+    "moves": [
+      {
+        "name": "Noise",
+        "effect": "将 1 张茫然（Dazed）加入弃牌堆；将 1 张茫然（Dazed）加入抽牌堆"
+      }
+    ],
+    "pattern": "每回合 Noise（塞茫然卡）",
+    "notes": "制造者召唤的干扰子机"
+  },
+  {
+    "id": "osty",
+    "en": "Osty",
+    "zh": "奥斯提",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 1,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作（1 HP 幻象）"
+      }
+    ],
+    "pattern": "无动作（灵魂锚召唤的幻象）",
+    "notes": "灵魂锚召唤的 1 HP 幻象小怪"
+  },
+  {
+    "id": "owl_magistrate",
+    "en": "Owl Magistrate",
+    "zh": "猫头鹰判官",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 231,
+    "hp_asc": 247,
+    "moves": [
+      {
+        "name": "Magistrate Scrutiny",
+        "effect": "造成 16（进阶 17） 点伤害"
+      },
+      {
+        "name": "Peck Assault",
+        "effect": "造成 4 点伤害，共 6 次"
+      },
+      {
+        "name": "Judicial Flight",
+        "effect": "获得 1 层翱翔"
+      },
+      {
+        "name": "Verdict",
+        "effect": "造成 33（进阶 36） 点伤害；对玩家施加 4 层易伤"
+      }
+    ],
+    "pattern": "固定循环：Magistrate Scrutiny → Peck Assault ×6 → Verdict → Magistrate Scrutiny…（Verdict 前用 Judicial Flight 获得翱翔）",
+    "notes": "开局自带判决（Verdict）之力"
+  },
+  {
+    "id": "scroll_of_biting",
+    "en": "Scroll of Biting",
+    "zh": "噬文卷轴",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      31,
+      37
+    ],
+    "hp_asc": [
+      33,
+      39
+    ],
+    "moves": [
+      {
+        "name": "Chomp",
+        "effect": "造成 14 点伤害"
+      },
+      {
+        "name": "Chew",
+        "effect": "造成 5 点伤害，共 2 次"
+      },
+      {
+        "name": "More Teeth",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Chomp（不连续重复）/ Chew（至多连用 2 次），穿插 More Teeth（+2 力量）",
+    "notes": "开局自带 2 层纸割（PaperCuts）；HP 31-37（进阶 33-39，按 C#）"
+  },
+  {
+    "id": "slimed_berserker",
+    "en": "Slimed Berserker",
+    "zh": "史莱姆狂战士",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 261,
+    "hp_asc": 281,
+    "moves": [
+      {
+        "name": "Vomit Ichor",
+        "effect": "将 1 张粘液（Slimed）加入弃牌堆"
+      },
+      {
+        "name": "Furious Pummeling",
+        "effect": "造成 4（进阶 5） 点伤害，共 4 次"
+      },
+      {
+        "name": "Leeching Hug",
+        "effect": "对玩家施加 3 层虚弱；获得 3 点力量"
+      },
+      {
+        "name": "Smother",
+        "effect": "造成 30（进阶 33） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Vomit Ichor（塞粘液）→ Furious Pummeling ×4 → Leeching Hug → Smother → Vomit Ichor…",
+    "notes": "开局自带狂暴（Berserk）"
+  },
+  {
+    "id": "stabbot",
+    "en": "Stabbot",
+    "zh": "刺杀机器人",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      18,
+      23
+    ],
+    "hp_asc": [
+      19,
+      24
+    ],
+    "moves": [
+      {
+        "name": "Stab",
+        "effect": "造成 11（进阶 12） 点伤害；对玩家施加 1 层脆弱"
+      }
+    ],
+    "pattern": "每回合 Stab",
+    "notes": "制造者召唤的进攻子机"
+  },
+  {
+    "id": "the_forgotten",
+    "en": "The Forgotten",
+    "zh": "遗忘者",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 106,
+    "hp_asc": 111,
+    "moves": [
+      {
+        "name": "Miasma",
+        "effect": "对玩家施加 -2 层敏捷；获得 8 点格挡；获得 2 点敏捷"
+      },
+      {
+        "name": "Dread",
+        "effect": "造成 15（进阶 17） 点伤害"
+      }
+    ],
+    "pattern": "固定交替：Miasma（玩家敏捷 -2）↔ Dread",
+    "notes": "开局自带支配速度（PossessSpeed）1 层"
+  },
+  {
+    "id": "the_lost",
+    "en": "The Lost",
+    "zh": "迷失者",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 93,
+    "hp_asc": 99,
+    "moves": [
+      {
+        "name": "Debilitating Smog",
+        "effect": "对玩家施加 -2 层力量；获得 2 点力量"
+      },
+      {
+        "name": "Eye Lasers",
+        "effect": "造成 4（进阶 5） 点伤害，共 2 次"
+      }
+    ],
+    "pattern": "固定交替：Debilitating Smog（玩家力量 -2）↔ Eye Lasers ×2",
+    "notes": "开局自带支配力量（PossessStrength）1 层"
+  },
+  {
+    "id": "turret_operator",
+    "en": "Turret Operator",
+    "zh": "炮塔操作员",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": 41,
+    "hp_asc": 51,
+    "moves": [
+      {
+        "name": "Unload Move 1",
+        "effect": "造成 3（进阶 4） 点伤害，共 5 次"
+      },
+      {
+        "name": "Unload!",
+        "effect": "造成 3（进阶 4） 点伤害，共 5 次"
+      },
+      {
+        "name": "Reload",
+        "effect": "获得 1 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Unload ×5（不连续重复）/ Reload（+1 力量）",
+    "notes": "首回合部署炮塔"
+  },
+  {
+    "id": "zapbot",
+    "en": "Zapbot",
+    "zh": "电击机器人",
+    "act": "glory",
+    "tier": "normal",
+    "version": "v0.107.1",
+    "hp": [
+      18,
+      23
+    ],
+    "hp_asc": [
+      19,
+      24
+    ],
+    "moves": [
+      {
+        "name": "Zap",
+        "effect": "造成 14（进阶 15） 点伤害"
+      }
+    ],
+    "pattern": "每回合 Zap",
+    "notes": "制造者召唤的进攻子机；自带 2 层高压"
+  },
+  {
+    "id": "flail_knight",
+    "en": "Flail Knight",
+    "zh": "链锤骑士",
+    "act": "glory",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 101,
+    "hp_asc": 108,
+    "moves": [
+      {
+        "name": "War Chant",
+        "effect": "获得 3 点力量"
+      },
+      {
+        "name": "Flail",
+        "effect": "造成 9（进阶 10） 点伤害，共 2 次"
+      },
+      {
+        "name": "Ram",
+        "effect": "造成 15（进阶 17） 点伤害"
+      }
+    ],
+    "pattern": "随机轮换：War Chant（不连续重复）/ Flail ×2 / Ram",
+    "notes": "骑士三人组成员"
+  },
+  {
+    "id": "magi_knight",
+    "en": "Magi Knight",
+    "zh": "法师骑士",
+    "act": "glory",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 82,
+    "hp_asc": 89,
+    "moves": [
+      {
+        "name": "First Power Shield",
+        "effect": "造成 6（进阶 7） 点伤害；获得 5（进阶 9） 点格挡"
+      },
+      {
+        "name": "Dampen",
+        "effect": "对玩家施加 1 层潮润"
+      },
+      {
+        "name": "Ram",
+        "effect": "造成 10（进阶 11） 点伤害"
+      },
+      {
+        "name": "Prep",
+        "effect": "获得 5（进阶 9） 点格挡"
+      },
+      {
+        "name": "Magic Bomb",
+        "effect": "造成 35（进阶 40） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Power Shield → Dampen → Ram → Prep → Magic Bomb → Ram → Prep…",
+    "notes": "骑士三人组成员"
+  },
+  {
+    "id": "mecha_knight",
+    "en": "Mecha Knight",
+    "zh": "机甲骑士",
+    "act": "glory",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 300,
+    "hp_asc": 320,
+    "moves": [
+      {
+        "name": "Charge",
+        "effect": "造成 25（进阶 30） 点伤害"
+      },
+      {
+        "name": "Flamethrower",
+        "effect": "将 1 张灼烧（Burn）加入手牌"
+      },
+      {
+        "name": "Windup",
+        "effect": "获得 15 点格挡；获得 5 点力量"
+      },
+      {
+        "name": "Heavy Cleave",
+        "effect": "造成 35（进阶 40） 点伤害"
+      }
+    ],
+    "pattern": "固定循环：Charge → Flamethrower（塞灼烧）→ Windup → Heavy Cleave → Flamethrower…；开局自带 3 层神器",
+    "notes": "开局自带 3 层神器"
+  },
+  {
+    "id": "soul_nexus",
+    "en": "Soul Nexus",
+    "zh": "灵魂锚",
+    "act": "glory",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 234,
+    "hp_asc": 254,
+    "moves": [
+      {
+        "name": "Soul Burn",
+        "effect": "造成 29（进阶 31） 点伤害"
+      },
+      {
+        "name": "Maelstrom",
+        "effect": "造成 6（进阶 7） 点伤害，共 4 次"
+      },
+      {
+        "name": "Drain Life",
+        "effect": "造成 18（进阶 19） 点伤害；对玩家施加 2 层易伤；对玩家施加 2 层虚弱"
+      }
+    ],
+    "pattern": "随机轮换：Soul Burn / Maelstrom ×4 / Drain Life，周期性召唤奥斯提",
+    "notes": "开局周期性召唤奥斯提（Osty，1 HP 幻象）"
+  },
+  {
+    "id": "spectral_knight",
+    "en": "Spectral Knight",
+    "zh": "幽灵骑士",
+    "act": "glory",
+    "tier": "elite",
+    "version": "v0.107.1",
+    "hp": 93,
+    "hp_asc": 97,
+    "moves": [
+      {
+        "name": "Hex",
+        "effect": "对玩家施加 2 层妖咒"
+      },
+      {
+        "name": "Soul Slash",
+        "effect": "造成 15（进阶 17） 点伤害"
+      },
+      {
+        "name": "Soul Flame",
+        "effect": "造成 3（进阶 4） 点伤害，共 3 次"
+      }
+    ],
+    "pattern": "随机轮换：Hex（不连续重复）/ Soul Slash / Soul Flame ×3",
+    "notes": "骑士三人组成员"
+  },
+  {
+    "id": "aeonglass",
+    "en": "Aeonglass",
+    "zh": "万世镜",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 512,
+    "hp_asc": 535,
+    "moves": [
+      {
+        "name": "Ebb",
+        "effect": "造成 26（进阶 32） 点伤害；获得 33 点格挡"
+      },
+      {
+        "name": "Eye Lasers",
+        "effect": "造成 11（进阶 12） 点伤害，共 2 次"
+      },
+      {
+        "name": "Increasing Intensity",
+        "effect": "将 1（进阶 2）张凋零（Wither）加入玩家弃牌堆；将玩家所有凋零卡\"伪升级\"（伤害+3）；获得 3（进阶 4）点力量，且此后每次使用额外再+1 力量"
+      }
+    ],
+    "pattern": "固定循环：Ebb → Eye Lasers ×2 → Increasing Intensity → Ebb…（开场自带神器 3 层与凋零领域 6）",
+    "notes": "v0.105 起替补造门者加入荣耀 BOSS 池"
+  },
+  {
+    "id": "door",
+    "en": "Door",
+    "zh": "门",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 155,
+    "hp_asc": 165,
+    "moves": [
+      {
+        "name": "Dramatic Open",
+        "effect": "造成 25（进阶 28） 点伤害"
+      },
+      {
+        "name": "Door Slam",
+        "effect": "造成 15 点伤害，共 2 次"
+      },
+      {
+        "name": "Enforce",
+        "effect": "造成 20 点伤害；获得 3（进阶 4） 点力量"
+      },
+      {
+        "name": "Dead",
+        "effect": "无动作（倒下，等待造门者复活）"
+      }
+    ],
+    "pattern": "固定循环：Dramatic Open → Door Slam ×2 → Enforce → 循环；被击倒后可被造门者复活",
+    "notes": "v0.105 补丁已移除的旧 BOSS 组件；开局自带门之复生（DoorRevival）"
+  },
+  {
+    "id": "doormaker",
+    "en": "Doormaker",
+    "zh": "造门者",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 489,
+    "hp_asc": 512,
+    "moves": [
+      {
+        "name": "What Is It",
+        "effect": "无动作（说话）"
+      },
+      {
+        "name": "Beam",
+        "effect": "造成 31（进阶 34） 点伤害"
+      },
+      {
+        "name": "Get Back In",
+        "effect": "造成 40（进阶 45）点伤害；获得 5 点力量；复活门并逃离战斗（门力量 +3/进阶 4、血量 +20/进阶 25，按返回次数叠加）"
+      }
+    ],
+    "pattern": "固定循环：What Is It（说话）→ Beam → Get Back In（复活门后逃离）",
+    "notes": "v0.105 补丁已移除的旧 BOSS（槽位由万世镜填补）；每次 Get Back In 复活门时门力量 +3/进阶 4、血量 +20/进阶 25（按返回次数叠加）"
+  },
+  {
+    "id": "queen",
+    "en": "Queen",
+    "zh": "女王",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 400,
+    "hp_asc": 419,
+    "moves": [
+      {
+        "name": "Puppet Strings",
+        "effect": "对玩家施加 3 层束缚锁链"
+      },
+      {
+        "name": "Your Mine",
+        "effect": "对玩家施加 99 层脆弱；对玩家施加 99 层虚弱；对玩家施加 99 层易伤"
+      },
+      {
+        "name": "Burn Bright for Me",
+        "effect": "获得 20 点格挡；全体敌方（含皇家卫兵）获得 1 点力量"
+      },
+      {
+        "name": "Off with Your Head",
+        "effect": "造成 3（进阶 4） 点伤害，共 5 次"
+      },
+      {
+        "name": "Execution",
+        "effect": "造成 15（进阶 18） 点伤害"
+      },
+      {
+        "name": "Enrage",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "提线傀儡/你是我的了（条件触发，99 层特殊负面）后：Off with Your Head ×5 → Execution → Enrage（+2 力量）→ 循环；夹在循环间使用 Burn Bright for Me",
+    "notes": "开局自带 2 点力量"
+  },
+  {
+    "id": "royal_guard",
+    "en": "Royal Guard",
+    "zh": "皇家卫兵",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 40,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Strike",
+        "effect": "造成 15 点伤害"
+      }
+    ],
+    "pattern": "每回合 Strike",
+    "notes": "女王召唤的 40 HP 卫兵（自带仆从）"
+  },
+  {
+    "id": "test_subject",
+    "en": "Test Subject #C{Count}",
+    "zh": "实验体",
+    "act": "glory",
+    "tier": "boss",
+    "version": "v0.107.1",
+    "hp": 100,
+    "hp_asc": 111,
+    "moves": [
+      {
+        "name": "Respawn",
+        "effect": "阶段复活：变身为下一阶段（血量重置），获得 1 层痛苦戳刺与 1 层宿敌"
+      },
+      {
+        "name": "Bite",
+        "effect": "造成 20（进阶 22） 点伤害"
+      },
+      {
+        "name": "Skull Bash",
+        "effect": "造成 14（进阶 16） 点伤害；对玩家施加 1 层易伤"
+      },
+      {
+        "name": "Multi-Claw",
+        "effect": "造成 10（进阶 11） 点伤害"
+      },
+      {
+        "name": "Lacerate",
+        "effect": "造成 10（进阶 11） 点伤害，共 3 次"
+      },
+      {
+        "name": "Big Pounce",
+        "effect": "造成 45 点伤害"
+      },
+      {
+        "name": "Burning Growl",
+        "effect": "将 3（进阶 5） 张灼烧（Burn）加入弃牌堆；获得 2（进阶 3） 点力量"
+      }
+    ],
+    "pattern": "阶段一：Bite ↔ Skull Bash；阶段二：Multi-Claw 循环；阶段三：Lacerate ×3 → Big Pounce → Burning Growl → 循环",
+    "notes": "三阶段变身：100/111 → 200/212 → 300/313（阶段转换血量重置并强化）；开局自带适应（Adaptable）1 层与激怒 2/进阶 3 层"
+  },
+  {
+    "id": "living_shield",
+    "en": "Living Shield",
+    "zh": "活体护盾",
+    "act": "glory",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 55,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Shield Slam",
+        "effect": "造成 6 点伤害"
+      },
+      {
+        "name": "Smash",
+        "effect": "造成 16 点伤害；获得 3 点力量"
+      }
+    ],
+    "pattern": "有队友存活时 Shield Slam；独自时 Smash（16 伤+3 力量）",
+    "notes": "事件战斗单位；开局自带 25 层壁垒（Rampart）"
+  },
+  {
+    "id": "mysterious_knight",
+    "en": "Mysterious Knight",
+    "zh": "神秘骑士",
+    "act": "glory",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 101,
+    "hp_asc": 108,
+    "moves": [
+      {
+        "name": "War Chant",
+        "effect": "获得 3 点力量"
+      },
+      {
+        "name": "Flail",
+        "effect": "造成 9（进阶 10） 点伤害，共 2 次"
+      },
+      {
+        "name": "Ram",
+        "effect": "造成 15（进阶 17） 点伤害"
+      }
+    ],
+    "pattern": "随机轮换：War Chant（不连续重复）/ Flail ×2 / Ram；开局自带 6 力量与 6 层镀层",
+    "notes": "\"提灯钥匙\"事件专属；与链锤骑士共享行动逻辑但开局自带 6 力量与 6 层镀层"
+  },
+  {
+    "id": "architect",
+    "en": "The Architect",
+    "zh": "建筑师",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 9999,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（剧情单位，战斗必然以剧情击杀结束）",
+    "notes": "第三幕 BOSS 后的不可战胜剧情战斗（9999 HP，无论伤害多少都会被剧情击杀）"
+  },
+  {
+    "id": "battle_friend_v1",
+    "en": "Battle Friend V1.0",
+    "zh": "战斗伙伴 V1",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 75,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（时限内尽情输出）",
+    "notes": "教学假人事件：开局自带 3 回合时限（BattlewornDummyTimeLimit）"
+  },
+  {
+    "id": "battle_friend_v2",
+    "en": "Battle Friend V2.0",
+    "zh": "战斗伙伴 V2",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 150,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（时限内尽情输出）",
+    "notes": "教学假人事件：开局自带 3 回合时限"
+  },
+  {
+    "id": "battle_friend_v3",
+    "en": "Battle Friend V3.0",
+    "zh": "战斗伙伴 V3",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 300,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（时限内尽情输出）",
+    "notes": "教学假人事件：开局自带 3 回合时限"
+  },
+  {
+    "id": "big_dummy",
+    "en": "Big Dummy",
+    "zh": "大假人",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 9999,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作",
+    "notes": "测试/调试用假人（9999 HP）"
+  },
+  {
+    "id": "byrdpip",
+    "en": "Byrdpip",
+    "zh": "伯德皮普",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 9999,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（宠物）",
+    "notes": "遗物宠物（伯多尼斯雏鸟）"
+  },
+  {
+    "id": "dense_vegetation_wriggler",
+    "en": "Wriggler",
+    "zh": "浓密植被蠕虫仔",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": [
+      17,
+      21
+    ],
+    "hp_asc": [
+      17,
+      21
+    ],
+    "moves": [
+      {
+        "name": "Nasty Bite",
+        "effect": "造成 6 点伤害"
+      },
+      {
+        "name": "Wriggle",
+        "effect": "将 1 张感染（Infection）加入玩家弃牌堆；获得 2 点力量"
+      }
+    ],
+    "pattern": "按站位决定起手，随后固定循环：Nasty Bite ↔ Wriggle",
+    "notes": "浓密植被事件召唤的蠕虫仔（不自带蜷缩）"
+  },
+  {
+    "id": "fake_merchant_monster",
+    "en": "The Merchant???",
+    "zh": "假商人",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 165,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Swipe",
+        "effect": "造成 13 点伤害"
+      },
+      {
+        "name": "Spew Coins",
+        "effect": "造成 2 点伤害，共 8 次"
+      },
+      {
+        "name": "Throw Relic",
+        "effect": "造成 13 点伤害；对玩家施加 1 层脆弱"
+      },
+      {
+        "name": "Enrage",
+        "effect": "获得 2 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Swipe / Spew Coins ×8 / Throw Relic / Enrage",
+    "notes": "假商人事件的战斗单位"
+  },
+  {
+    "id": "paels_legion",
+    "en": "Pael's Legion",
+    "zh": "佩尔军团",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 9999,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Nothing",
+        "effect": "无动作"
+      }
+    ],
+    "pattern": "无动作（古代事件演出单位）",
+    "notes": "古代佩尔事件战斗单位，HP/伤害数值随事件配置变化"
+  },
+  {
+    "id": "the_adversary_mk_one",
+    "en": "The Adversary Mk 1",
+    "zh": "对抗者 Mk I",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 100,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Smash",
+        "effect": "造成 12 点伤害"
+      },
+      {
+        "name": "Beam",
+        "effect": "造成 15 点伤害"
+      },
+      {
+        "name": "Barrage",
+        "effect": "造成 8 点伤害，共 2 次；获得 2 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Smash / Beam / Barrage ×2（+2 力量）",
+    "notes": "试炼事件战斗单位"
+  },
+  {
+    "id": "the_adversary_mk_three",
+    "en": "The Adversary Mk 3",
+    "zh": "对抗者 Mk III",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 300,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Crash",
+        "effect": "造成 15 点伤害"
+      },
+      {
+        "name": "Flame Beam",
+        "effect": "造成 18 点伤害"
+      },
+      {
+        "name": "Barrage",
+        "effect": "造成 10 点伤害，共 2 次；获得 4 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Crash / Flame Beam / Barrage ×2（+4 力量）；自带 2 层神器",
+    "notes": "试炼事件单位；自带 2 层神器"
+  },
+  {
+    "id": "the_adversary_mk_two",
+    "en": "The Adversary Mk 2",
+    "zh": "对抗者 Mk II",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 200,
+    "hp_asc": null,
+    "moves": [
+      {
+        "name": "Bash",
+        "effect": "造成 13 点伤害"
+      },
+      {
+        "name": "Flame Beam",
+        "effect": "造成 16 点伤害"
+      },
+      {
+        "name": "Barrage",
+        "effect": "造成 9 点伤害，共 2 次；获得 3 点力量"
+      }
+    ],
+    "pattern": "随机轮换：Bash / Flame Beam / Barrage ×2（+3 力量）；自带 1 层神器",
+    "notes": "试炼事件单位；自带 1 层神器"
+  },
+  {
+    "id": "torch_head_amalgam",
+    "en": "Torch Head Amalgam",
+    "zh": "火炬头聚合体",
+    "act": "event",
+    "tier": "event",
+    "version": "v0.107.1",
+    "hp": 199,
+    "hp_asc": 211,
+    "moves": [
+      {
+        "name": "Tackle 1",
+        "effect": "造成 18（进阶 19） 点伤害"
+      },
+      {
+        "name": "Tackle 2",
+        "effect": "造成 18（进阶 19） 点伤害"
+      },
+      {
+        "name": "Beam",
+        "effect": "造成 8 点伤害，共 3 次"
+      },
+      {
+        "name": "Tackle 3",
+        "effect": "造成 14（进阶 15） 点伤害"
+      },
+      {
+        "name": "Tackle 4",
+        "effect": "造成 14（进阶 15） 点伤害"
+      }
+    ],
+    "pattern": "随机轮换：Tackle 18 / Beam ×3 / Tackle 14（融合器事件生成，数值随融合成分变化）",
+    "notes": "融合器事件创造的聚合怪，数值随融合成分变化；自带仆从"
+  }
+]

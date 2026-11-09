@@ -82,16 +82,13 @@ def build_game(game_dir):
             out["score_meta"] = {k: v for k, v in data.items() if k != "bonuses"}
         else:
             # 信封结构（{version, source, ..., <实体名>: [...]}）→ 抽出列表 + 保留 meta
+            # 信封结构（{version, source, ..., <同名实体键>: [...]}）→ 仅当存在与文件同名的列表键时抽出
             if isinstance(data, dict):
-                list_keys = [k for k, v in data.items() if isinstance(v, list)]
-                preferred = [k for k in list_keys if k == key] or list_keys
-                if preferred:
-                    items = [it for k in preferred for it in data[k]]
-                    out[key] = items
-                    out[key + "_meta"] = {k: v for k, v in data.items()
-                                          if not isinstance(v, list)}
+                if key in data and isinstance(data[key], list):
+                    out[key] = data[key]
+                    out[key + "_meta"] = {k: v for k, v in data.items() if k != key}
                 else:
-                    out[key] = data  # map_config 等本来就是纯对象的
+                    out[key] = data  # map_config 等本身就是配置对象
             else:
                 out[key] = data  # relics / potions / enemies / events ...
     return out

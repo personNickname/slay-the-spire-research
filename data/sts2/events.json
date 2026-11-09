@@ -17,7 +17,8 @@
       "事件池会受纪元 (Epoch) 解锁门槛剔除：未解锁 Event1Epoch 时 TrashHeap 不出现、未解锁 Event2Epoch 时 Reflections 不出现、未解锁 Event3Epoch 时 ColorfulPhilosophers 不出现（ActModel.GenerateRooms）。",
       "WarHistorianRepy 的 IsAllowed 恒为 false：它不在随机事件池出现，由 The Lantern Key 任务链在下一幕触发（持有 Lantern Key 卡）。",
       "每幕事件池 = 幕专属事件 + 18 个共享事件；第一幕从繁茂之地/地下船坞二选一，各配独立专属事件池。",
-      "多人联机时部分事件的伤害/奖励按玩家分别结算；FakeMerchant 仅单人出现。"
+      "多人联机时部分事件的伤害/奖励按玩家分别结算；FakeMerchant 仅单人出现。",
+      "zh 字段为英文名的中文参考译名（官方未随反编译仓库发布事件本地化文本，事件文案以游戏内中文为准）；description 与 options.text/effect 为基于反编译逻辑的中文机制描述，非官方原文。"
     ],
     "sources": [
       "https://github.com/zhiyue/sts2-rl-agent （decompiled/MegaCrit.Sts2.Core.Models.Events/、Models.Acts/、ModelDb.cs、Timeline.Epochs/，v0.107.1）",
@@ -416,7 +417,7 @@
     {
       "id": "whispering_hollow",
       "en": "Whispering Hollow",
-      "zh": "低语 hollow",
+      "zh": "低语空谷",
       "pool": "overgrowth",
       "version": "v0.107.1",
       "condition": "所有玩家金币 ≥ 44。",

@@ -5,6 +5,8 @@
 > **版本基准**：Steam EA 版，2026-03-05 上线；截至 **2026-11-09** 主分支为 **v0.111.0**。敌人血量/行动数值取自社区对 **v0.107.1**（2026-06-18 构建）客户端的反编译数据（sts2-rl-agent 仓库），并以 v0.105–v0.111 官方补丁日志标注后续改动；v0.108–v0.111 期间无新怪物种类加入（仅数值调整），故敌人名单与 v0.111 一致。
 >
 > **血量格式**：`基础 / 进阶8+`（进阶 8"敌人更硬"提升血量，进阶 9"攻击更狠"提升伤害，见进阶等级）。范围值表示随机区间。
+>
+> **数值权威来源声明（2026-11-09 第二波提取后）**：本文件为叙事性参考；所有实体的逐条精确数值以 `data/sts2/` 下的 JSON 数据库为准（经 v0.107.1 反编译 C# 源码逐条仲裁）。已知修正：繁茂之地幕专属事件实为 **13 个**（C# `Overgrowth.AllEvents`，下文 15 为旧名单带"等"的不完整计数）；`MONSTERS_REFERENCE.md` 旧快照中部分敌人 HP 与源码不符（如 TurretOperator 41/51、Ovicopter 124-130、InfestedPrism 161/171、MechaKnight 300/320），一律以 `data/sts2/enemies.json` 为准。
 
 ## 1. 敌人清单概览
 
@@ -140,7 +142,7 @@
 ### 2.1 结构
 - 地图 `?` 节点触发。每幕事件池 = 幕专属事件 + **18 个全塔共享事件 (Shared pool)**。
 - 共享事件池（v0.107.1 C# `ModelDb.AllSharedEvents`，18 个）：BrainLeech（脑蛭）、CrystalSphere（水晶球）、DollRoom（玩偶房）、FakeMerchant（假商人/商人??）、PotionCourier（药水快递）、RanwidTheElder（兰维德长老）、RelicTrader（遗物商人）、RoomFullOfCheese（满屋奶酪）、SelfHelpBook（自助之书）、SlipperyBridge（湿滑之桥）、StoneOfAllTime（万世之石）、Symbiote（共生体）、TeaMaster（茶道大师）、TheFutureOfPotions（药水的未来）、TheLegendsWereTrue（传说是真）、ThisOrThat（非此即彼）、WarHistorianRepy（战争史家雷皮）、WelcomeToWongos（欢迎来到翁戈斯）。
-- 幕专属事件：**繁茂之地 15 个**（AromaOfChaos、ByrdonisNest、DenseVegetation、JungleMazeAdventure、LuminousChoir、MorphicGrove、SapphireSeed、SunkenStatue、TabletOfTruth、UnrestSite、Wellspring、WhisperingHollow、WoodCarvings 等）；**蜂巢 10 个**（Amalgamator、Bugslayer、ColorfulPhilosophers、ColossalFlower、FieldOfManSizedHoles、InfestedAutomaton、LostWisp、SpiritGrafter、TheLanternKey、ZenWeaver）；**荣耀 7 个**（BattlewornDummy、GraveOfTheForgotten、HungryForMushrooms、Reflections、RoundTeaParty、TinkerTime、Trial）。
+- 幕专属事件：**繁茂之地 13 个**（AromaOfChaos、ByrdonisNest、DenseVegetation、JungleMazeAdventure、LuminousChoir、MorphicGrove、SapphireSeed、SunkenStatue、TabletOfTruth、UnrestSite、Wellspring、WhisperingHollow、WoodCarvings）；**地下船坞 10 个**（AbyssalBaths、DrowningBeacon、EndlessConveyor、PunchOff、SpiralingWhirlpool、SunkenStatue、SunkenTreasury、DoorsOfLightAndDark、TrashHeap、WaterloggedScriptorium）；**蜂巢 10 个**（Amalgamator、Bugslayer、ColorfulPhilosophers、ColossalFlower、FieldOfManSizedHoles、InfestedAutomaton、LostWisp、SpiritGrafter、TheLanternKey、ZenWeaver）；**荣耀 7 个**（BattlewornDummy、GraveOfTheForgotten、Hun... 见 events.json）
 - **古代 (Ancients) 不在随机事件池内**：它们以每幕一个的**古代节点 (Ancient)** 专属地图节点出现（见 2.3）。
 
 ### 2.2 代表事件与选项（精确数值）
@@ -228,7 +230,7 @@
 | 联机专属卡 | ≥20 张（v0.108 一次性新增 15 张 + 先前已有） | v0.108 补丁日志 |
 | 遗物 | **297 件已注册**（枚举 307） | v0.107.1 反编译 |
 | 药水 | **64 种** | v0.107.1 反编译 |
-| 事件（非古代） | **50 个**（繁茂 15 + 蜂巢 10 + 荣耀 7 + 共享 18）+ 开局 Neow 事件 + 每幕古代事件 | v0.107.1 反编译 C# AllEvents 池 |
+| 事件（非古代） | **57 个**（繁茂 13 + 船坞 10 + 蜂巢 10 + 荣耀 7 + 共享 18，SunkenStatue 跨两池去重）+ 开局 Neow 事件 + 每幕古代事件 | v0.107.1 反编译 C# AllEvents 池（详见 data/sts2/events.json）|
 | 进阶等级 | 每角色 10 级（全局共享同一套效果） | PCGamesN ascension 专文 |
 | 语言 | 官方本地化含中文（简/繁）、日、韩、俄、泰、法、意、土等，v0.111 新增印尼语 | v0.111 补丁日志 |
 | Steam 创意工坊 (Mod 支持) | v0.107.1（Major Update #2，2026-06-18）起实装 | 补丁日志 |

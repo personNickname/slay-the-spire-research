@@ -301,8 +301,7 @@
     "keywords": [
       "strike"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "assassinate",
@@ -430,8 +429,7 @@
     "effect": "Deal 5 damage for each Channeled Orb. (Hits ? times)",
     "effect_up": "Deal 7 damage for each Channeled Orb. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "barricade",
@@ -524,8 +522,7 @@
     "effect": "Deal 5 damage. Forge ?. Forges an additional 5 for every other time you've hit the enemy this turn.",
     "effect_up": "Deal 7 damage. Forge ?. Forges an additional 7 for every other time you've hit the enemy this turn.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "beckon",
@@ -715,7 +712,7 @@
     "effect_up": "Deal damage equal to your Block. (Deals ? damage)",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "bodyguard",
@@ -944,8 +941,7 @@
     "effect": "Deal ? damage. Deals 2 additional damage for each Vulnerable on the enemy.",
     "effect_up": "Deal ? damage. Deals 3 additional damage for each Vulnerable on the enemy.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "bulwark",
@@ -1156,7 +1152,7 @@
     "character": "ironclad",
     "type": "skill",
     "rarity": "rare",
-    "cost": null,
+    "cost": "X",
     "effect": "Play the top X cards of your Draw Pile.",
     "effect_up": "Play the top X+1 cards of your Draw Pile.",
     "keywords": [],
@@ -1427,8 +1423,7 @@
     "effect": "Deal 7 damage. Draw 1 card for each unique Orb you have. (Draw ? cards)",
     "effect_up": "Deal 10 damage. Draw 1 card for each unique Orb you have. (Draw ? cards)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "conflagration",
@@ -1613,7 +1608,7 @@
     "effect_up": "Deal ? damage. Deals 3 additional damage for ALL your cards that have a 1 Star cost.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗 1（star cost，不消耗能量）；另有能量费用 1；描述中含动态计算数值（以 ? 表示）"
+    "notes": "星辰消耗 1（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "crimson_mantle",
@@ -1802,8 +1797,7 @@
     "effect": "Deal ? damage. Deals 4 additional damage for each card drawn during your turn.",
     "effect_up": "Deal ? damage. Deals 6 additional damage for each card drawn during your turn.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "deathbringer",
@@ -2088,7 +2082,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "devastate",
@@ -2584,7 +2578,7 @@
     "effect_up": "Gain Energy for each Attack in your Hand. You cannot gain additional Energy this turn. (Gain ? Energy)",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "expertise",
@@ -2819,8 +2813,7 @@
     "effect": "Deal 6 damage for each Attack already played this turn. (Hits ? times)",
     "effect_up": "Deal 8 damage for each Attack already played this turn. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "fisticuffs",
@@ -2846,8 +2839,7 @@
     "effect": "Exhaust ALL your Status cards. Deal 8 damage to a random enemy for each card Exhausted. (Hits ? times)",
     "effect_up": "Exhaust ALL your Status cards. Deal 11 damage to a random enemy for each card Exhausted. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "flame_barrier",
@@ -2915,8 +2907,7 @@
     "effect": "Deal 5 damage for each Skill in your Hand. (Hits ? times)",
     "effect_up": "Deal 7 damage for each Skill in your Hand. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "flick_flack",
@@ -3130,8 +3121,7 @@
     "effect": "Deal ? damage. Deals 5 additional damage for each time another player has attacked the enemy this turn.",
     "effect_up": "Deal ? damage. Deals 7 additional damage for each time another player has attacked the enemy this turn.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "gather_light",
@@ -3292,7 +3282,7 @@
     "effect_up": "Deal damage equal to the number of cards played this combat. (Deals ? damage)",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "grand_finale",
@@ -3577,8 +3567,7 @@
     "effect": "Deal 3 damage for each Energy previously spent this turn. (Hits ? times)",
     "effect_up": "Deal 5 damage for each Energy previously spent this turn. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "hello_world",
@@ -4046,8 +4035,7 @@
     "keywords": [
       "shiv"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "knockdown",
@@ -4254,8 +4242,7 @@
     "effect": "Deal 4 damage for each Skill already played this turn. (Hits ? times)",
     "effect_up": "Deal 5 damage for each Skill already played this turn. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "machine_learning",
@@ -4419,8 +4406,7 @@
     "effect": "Deal ? damage. Deals 4 additional damage for each card discarded this turn.",
     "effect_up": "Deal ? damage. Deals 5 additional damage for each card discarded this turn.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "metamorphosis",
@@ -4480,7 +4466,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "mind_blast",
@@ -4496,7 +4482,7 @@
       "innate"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "mind_rot",
@@ -4574,7 +4560,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "misery",
@@ -4686,7 +4672,7 @@
     "effect_up": "Deal ? damage. Deals 1 additional damage for each card drawn this combat.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "necro_mastery",
@@ -4796,8 +4782,7 @@
     "effect": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
     "effect_up": "Apply 15 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "normality",
@@ -4810,8 +4795,7 @@
     "effect": "You cannot play more than 3 cards this turn. (? cards left)",
     "effect_up": "You cannot play more than 3 cards this turn. (? cards left)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "nostalgia",
@@ -5124,8 +5108,7 @@
     "keywords": [
       "strike"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "phantom_blades",
@@ -5289,8 +5272,7 @@
     "effect": "Deal ? damage. Deals 2 less damage for each other card in your Hand.",
     "effect_up": "Deal ? damage. Deals 2 less damage for each other card in your Hand.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "predator",
@@ -5402,7 +5384,7 @@
       "ostyattack"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "prowess",
@@ -5441,8 +5423,7 @@
     "effect": "Deal 5 damage for each Ethereal card played this combat. (Hits ? times)",
     "effect_up": "Deal 7 damage for each Ethereal card played this combat. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "purity",
@@ -5527,8 +5508,7 @@
     "effect": "Deal 3 damage to ALL enemies for each 1 Star gained this turn. (Hits ? times)",
     "effect_up": "Deal 4 damage to ALL enemies for each 1 Star gained this turn. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "rage",
@@ -5598,8 +5578,7 @@
     "keywords": [
       "ostyattack"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "reanimate",
@@ -5780,8 +5759,7 @@
     "effect": "Deal ? damage. Deals 5 additional damage for each unique debuff on the enemy.",
     "effect_up": "Deal ? damage. Deals 8 additional damage for each unique debuff on the enemy.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "resonance",
@@ -5937,7 +5915,7 @@
       "retain"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "salvo",
@@ -6573,8 +6551,7 @@
     "effect": "Deal ? damage. Deals 2 additional damage for each Soul in your Exhaust Pile.",
     "effect_up": "Deal ? damage. Deals 3 additional damage for each Soul in your Exhaust Pile.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "sovereign_blade",
@@ -6769,8 +6746,7 @@
     "keywords": [
       "ostyattack"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "stack",
@@ -7060,8 +7036,7 @@
     "effect": "Deal ? damage. Deals 3 additional damage for each card you created this combat.",
     "effect_up": "Deal ? damage. Deals 4 additional damage for each card you created this combat.",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "suppress",
@@ -7162,7 +7137,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "synthesis",
@@ -7243,8 +7218,7 @@
     "effect": "Deal 5 damage. Hits an additional time for each time you lost HP this combat. (Hits ? times)",
     "effect_up": "Deal 7 damage. Hits an additional time for each time you lost HP this combat. (Hits ? times)",
     "keywords": [],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "tempest",
@@ -7451,7 +7425,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "tools_of_the_trade",
@@ -7665,8 +7639,7 @@
     "keywords": [
       "ostyattack"
     ],
-    "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）"
+    "version": "v0.107.1"
   },
   {
     "id": "unmovable",
@@ -7846,7 +7819,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "waste_away",

@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "name": "地图生成配置 (Map Generation Config)",
+    "name_en": "Map Generation Config",
+    "version": "v0.107.1",
+    "description": "杀戮尖塔2 (StS2) v0.107.1 地图生成算法配置：每幕行数、路径生成、节点类型数量与放置规则、弱遭遇数、后处理流程。全部数值取自反编译 C#（MegaCrit.Sts2.Core.Map/StandardActMap.cs、MapPointTypeCounts.cs、MegaCrit.Sts2.Core.Models/ActModel.cs、Models.Acts/*.cs）及其 sts2_env/map Python 移植版。",
+    "notes": [
+      "本文件为机制提取，不包含地图视觉资源/颜色/音乐等表现层配置。",
+      "未知数/篝火数使用 NextGaussianInt(均值, 标准差, 最小值, 最大值) 的高斯分布随机；精英/商店数为固定值。",
+      "进阶 1（SwarmingElites）将精英数从 5 提升为 round(5×1.6)=8。",
+      "联机（isMultiplayer）时每幕房间数 −1（GetNumberOfRooms）；层数 = 房间数 + 2（含古代节点层与 BOSS 层）。",
+      "v0.101 版本对地图做过一次整体重做（官方补丁日志），本表数值为 v0.107.1 快照。",
+      "未提取到/不适用字段均以 null 填写；本次目标字段（每幕行数/路径数/节点类型数量/弱遭遇数/放置规则）全部找到，无缺失。"
+    ],
+    "sources": [
+      "https://github.com/zhiyue/sts2-rl-agent （decompiled/MegaCrit.Sts2.Core.Map/StandardActMap.cs、MapPointTypeCounts.cs、MapPointType.cs；MegaCrit.Sts2.Core.Models/ActModel.cs、Models.Acts/Overgrowth.cs、Underdocks.cs、Hive.cs、Glory.cs；v0.107.1）",
+      "https://github.com/zhiyue/sts2-rl-agent （sts2_env/map/generator.py、acts.py、map_point.py、path_pruning.py、post_processing.py，Python 移植版，用于交叉核对）"
+    ]
+  },
+  "map_point_types": {
+    "enum_order": ["Unassigned", "Unknown", "Shop", "Treasure", "RestSite", "Monster", "Elite", "Boss", "Ancient"],
+    "zh": {
+      "Unassigned": "未分配",
+      "Unknown": "未知节点（?，事件或随机房间）",
+      "Shop": "商店",
+      "Treasure": "宝箱",
+      "RestSite": "篝火",
+      "Monster": "怪物战斗",
+      "Elite": "精英战斗",
+      "Boss": "BOSS",
+      "Ancient": "古代节点（2代新增，每幕一个的古代神）"
+    }
+  },
+  "grid": {
+    "map_width_columns": 7,
+    "path_iterations": 7,
+    "max_elites_cap": 15,
+    "start_point": "位于第 0 行中央（col=3），类型为 Ancient（古代节点）",
+    "boss_point": "位于最末行（col=3），类型为 Boss；顶层所有节点连向 BOSS",
+    "row_structure": "第 0 行 = 古代节点；第 1 至 N 行 = 房间行；第 N+1 行 = BOSS",
+    "map_length_formula": "mapLength = 房间数(num_rooms) + 1"
+  },
+  "path_generation": {
+    "description": "生成 7 条随机路径：每条路径从第 1 行随机列出发，逐行向上；每步从 [-1, 0, +1] 三个方向中随机选（不能出 7 列边界），并检测交叉边（若目标列同行的邻点存在反向边则禁止，防止路径交叉）；第 2 条路径必须从与第 1 条不同的起点出发。",
+    "connections": "起点（古代节点）连向第 1 行全部节点；最末房间行全部节点连向 BOSS。",
+    "crossover_prevention": "斜向移动若会与相邻列的点形成 X 交叉边则回退为直上（HasInvalidCrossover）。"
+  },
+  "global_node_counts": {
+    "num_shops": 3,
+    "num_elites_base": 5,
+    "num_elites_ascension_1": 8,
+    "num_elites_formula": "round(5 × (进阶1(SwarmingElites) ? 1.6 : 1))",
+    "standard_random_unknown_count": "NextGaussianInt(均值=12, 标准差=1, 最小=10, 最大=14)"
+  },
+  "acts": [
+    {
+      "id": "overgrowth",
+      "en": "Overgrowth",
+      "zh": "繁茂之地",
+      "act_index": 0,
+      "is_default_act1": true,
+      "base_number_of_rooms": 15,
+      "multiplayer_rooms": 14,
+      "total_floors_solo": 17,
+      "number_of_weak_encounters": 3,
+      "node_counts": {
+        "rest_sites": "NextGaussianInt(均值=7, 标准差=1, 最小=6, 最大=7) → 6 或 7 个",
+        "unknowns": "标准随机数 NextGaussianInt(12,1,10,14) → 10–14 个",
+        "shops": 3,
+        "elites": "5（进阶 1：8）"
+      },
+      "ancient": "Neow（内乌）",
+      "ancients_pool": ["Neow"],
+      "bosses": ["Vantom", "Ceremonial Beast", "The Kin"],
+      "elites_pool": ["Bygone Effigy", "Byrdonis", "Phrog Parasite"],
+      "first_run_scripted_rooms": "首次游玩（NumberOfRuns==0）时按固定顺序呈现：NibbitsWeak → SlimesWeak → ShrinkerBeetleWeak → InkletsNormal → MawlerNormal → RubyRaidersNormal → NibbitsNormal，事件固定 ByrdonisNest、SapphireSeed，精英固定 Byrdonis、PhrogParasite"
+    },
+    {
+      "id": "underdocks",
+      "en": "Underdocks",
+      "zh": "地下船坞",
+      "act_index": 0,
+      "is_default_act1": false,
+      "is_alternate_act1": true,
+      "unlock_condition": "需解锁 UnderdocksEpoch 纪元（IsUnlocked）",
+      "base_number_of_rooms": 15,
+      "multiplayer_rooms": 14,
+      "total_floors_solo": 17,
+      "number_of_weak_encounters": 3,
+      "node_counts": {
+        "rest_sites": "NextGaussianInt(均值=7, 标准差=1, 最小=6, 最大=7) → 6 或 7 个（与繁茂之地同式）",
+        "unknowns": "标准随机数 NextGaussianInt(12,1,10,14) → 10–14 个",
+        "shops": 3,
+        "elites": "5（进阶 1：8）"
+      },
+      "ancient": "Neow（内乌）",
+      "ancients_pool": ["Neow"],
+      "bosses": ["Waterfall Giant", "Soul Fysh", "Lagavulin Matriarch"],
+      "elites_pool": ["Phantasmal Gardener", "Skulking Colony", "Terror Eel"]
+    },
+    {
+      "id": "hive",
+      "en": "The Hive",
+      "zh": "蜂巢",
+      "act_index": 1,
+      "base_number_of_rooms": 14,
+      "multiplayer_rooms": 13,
+      "total_floors_solo": 16,
+      "number_of_weak_encounters": 2,
+      "node_counts": {
+        "rest_sites": "NextGaussianInt(均值=6, 标准差=1, 最小=6, 最大=7) → 6 或 7 个",
+        "unknowns": "标准随机数 − 1 → 9–13 个",
+        "shops": 3,
+        "elites": "5（进阶 1：8）"
+      },
+      "ancients_pool": ["Orobas", "Pael", "Tezcatara"],
+      "bosses": ["Kaiser Crab", "Knowledge Demon", "The Insatiable"],
+      "elites_pool": ["Decimillipede", "Entomancer", "Infested Prism"]
+    },
+    {
+      "id": "glory",
+      "en": "Glory",
+      "zh": "荣耀",
+      "act_index": 2,
+      "base_number_of_rooms": 13,
+      "multiplayer_rooms": 12,
+      "total_floors_solo": 15,
+      "number_of_weak_encounters": 2,
+      "node_counts": {
+        "rest_sites": "NextInt(5, 7) → 5 或 6 个",
+        "unknowns": "标准随机数 − 1 → 9–13 个",
+        "shops": 3,
+        "elites": "5（进阶 1：8）"
+      },
+      "ancients_pool": ["Nonupeipe", "Tanx", "Vakuu"],
+      "bosses": ["Aeonglass", "Queen", "Test Subject"],
+      "elites_pool": ["Knights (Flail/Magi/Spectral)", "Mecha Knight", "Soul Nexus"]
+    }
+  ],
+  "weak_encounters": {
+    "description": "每局开局前几层的低强度战斗由专属弱敌池供给，按幕配置组数（GrabBag 无放回抽取）",
+    "act1_overgrowth": 3,
+    "act1_underdocks": 3,
+    "act2_hive": 2,
+    "act3_glory": 2,
+    "deprecated_act_default": 3
+  },
+  "fixed_rows": {
+    "first_room_row": "第 1 行所有节点固定为 Monster（不可被修复流程改动）",
+    "treasure_row": "第 (行数−7) 行所有节点固定为 Treasure（宝箱行）；若行号 ≤0 则无固定宝箱行",
+    "last_room_row": "最末房间行所有节点固定为 RestSite（篝火行）",
+    "start_and_boss": "第 0 行古代节点与最末行 BOSS 在类型分配完成后最后指定"
+  },
+  "placement_rules": [
+    "规则 1（下半图）：行号 < 6 的节点不能是 RestSite 或 Elite。",
+    "规则 2（上半图）：行号 ≥ mapLength−3 的节点不能是 RestSite（保证 BOSS 前篝火行不被稀释）。",
+    "规则 3（父邻接）：Elite、RestSite、Treasure、Shop 不能与任一父节点的类型相同。",
+    "规则 4（子邻接）：Elite、RestSite、Treasure、Shop 不能与任一子节点的类型相同。",
+    "规则 5（兄弟唯一）：RestSite、Monster、Unknown、Elite、Shop 在同一父节点的全部子节点（兄弟）中不得重复。",
+    "例外：MapPointTypeCounts.PointTypesThatIgnoreRules 中的类型（如 Custom Run 修饰词 BigGameHunter 的 Elite）可无视全部规则。"
+  ],
+  "type_assignment_algorithm": {
+    "description": "固定行先赋值；剩余类型（篝火×N、商店×3、精英×N、未知×N）入队；未分配节点按（列,行）稳定洗牌后逐个尝试从队列取首个合法类型（失败则把该类型移到队尾重试，整个队列循环一次），最多 3 轮；仍未分配的节点全部变为 Monster。",
+    "queue_order": ["RestSite ×num_rests", "Shop ×3", "Elite ×num_elites", "Unknown ×num_unknowns"]
+  },
+  "post_processing": [
+    "MapPathPruning.PruneAndRepair：检测并删除重复路径段，然后修复低于目标数量的节点类型（最多 3 轮；单轮剪枝迭代上限 50）。",
+    "MapPostProcessing.CenterGrid：最左/最右两列空且对侧不空时整图横移居中。",
+    "MapPostProcessing.SpreadAdjacentMapPoints：相邻节点视觉展开。",
+    "MapPostProcessing.StraightenPaths：路径拉直美化。"
+  ],
+  "golden_path_map": {
+    "description": "固定线性地图（教学/首局等场景使用），单列直线路径，节点类型序列如下；多人模式会移除第 3 个节点（下标 2 的 Monster）",
+    "sequence_solo": ["Monster", "Unknown", "Monster", "RestSite", "Monster", "RestSite", "Unknown", "Treasure", "Unknown", "Treasure", "Unknown", "Shop", "Elite", "RestSite", "Elite", "RestSite"],
+    "sequence_multiplayer": ["Monster", "Unknown", "RestSite", "Monster", "RestSite", "Unknown", "Treasure", "Unknown", "Treasure", "Unknown", "Shop", "Elite", "RestSite", "Elite", "RestSite"]
+  },
+  "event_pooling": {
+    "description": "每幕地图的 ? 事件池 = 该幕 AllEvents + ModelDb.AllSharedEvents（18 个共享事件），再按纪元解锁状态剔除 Event1/2/3Epoch 门槛事件（TrashHeap、Reflections、ColorfulPhilosophers），最后无放回乱序铺入事件节点。",
+    "shared_events_count": 18,
+    "act_specific_counts": {"overgrowth": 13, "underdocks": 10, "hive": 10, "glory": 7},
+    "overlapping_events": ["SunkenStatue（同时属于繁茂之地与地下船坞池）"]
+  },
+  "not_extracted": null
+}
