@@ -1009,8 +1009,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "This turn, your next {Skills:plural:Skill is|1 played an extra time.",
-    "effect_up": "This turn, your next {Skills:plural:Skill is|2 played an extra time.",
+    "effect": "This turn, your next Skill is played an extra time.",
+    "effect_up": "This turn, your next 2 played an extra time.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4209,8 +4209,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 4 Block. At the start of the next {LightningRodPower:plural:turn|2, Channel 1 Lightning.",
-    "effect_up": "Gain 7 Block. At the start of the next {LightningRodPower:plural:turn|2, Channel 1 Lightning.",
+    "effect": "Gain 4 Block. At the start of the next 2, Channel 1 Lightning.",
+    "effect_up": "Gain 7 Block. At the start of the next 2, Channel 1 Lightning.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6584,8 +6584,8 @@
     "type": "attack",
     "rarity": "token",
     "cost": 2,
-    "effect": "Deal 10 damage{Repeat:plural:| 1 times.",
-    "effect_up": "Deal 10 damage{Repeat:plural:| 1 times.",
+    "effect": "Deal 10 damage.",
+    "effect_up": "Deal 10 damage.",
     "keywords": [
       "retain"
     ],

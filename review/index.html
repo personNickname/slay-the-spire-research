@@ -659,7 +659,7 @@
     neow:      { label: '开局祝福', filters: ['group'], cols: [ ['group', '阶段'], ['name', '祝福'], ['category', '类别'], ['effect', '效果'] ] },
     achievements: { label: '成就', filters: ['category'], cols: [ ['category', '分类'], ['name', '成就'], ['description', '条件'] ] },
     score:     { label: '分数', cols: [ ['name', '计分项'], ['condition', '条件'], ['value', '分值'] ] },
-    ancients:  { label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['zh', '称号'] ], expand: 'blessings' },
+    ancients:  { label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['epithet', '称号'], ['selection_note', '选择规则'] ], expand: 'blessings' },
     enchantments: { label: '附魔', cols: [ ['name', '附魔'], ['effect', '效果'] ] },
     map_config: { label: '地图配置', cols: [ ['key', '项'], ['value', '值'] ] }
   };
@@ -750,7 +750,7 @@
         if (ex && ex.length) {
           html += '<tr class="db-detail" data-for="' + idx + '" style="display:none"><td colspan="' + cfg.cols.length + '">';
           if (cfg.expand === 'moves') ex.forEach(m => html += '<div class="moves"><b>' + (m.name || '') + '</b>：' + (m.effect || '') + '</div>');
-          else if (Array.isArray(ex)) ex.forEach(o => html += '<div class="moves"><b>' + (o.text || o.name || '选项') + '</b>：' + (o.effect || o.text || '') + '</div>');
+          else if (Array.isArray(ex)) ex.forEach(o => html += '<div class="moves"><b>' + (o.text || o.name || o.en || '选项') + '</b>：' + (o.effect || o.text || '') + (o.cost && o.cost !== '无（祝福免费给予）' ? ' <span style="color:var(--red)">（代价：' + o.cost + '）</span>' : '') + '</div>');
           html += '</td></tr>';
         }
       }

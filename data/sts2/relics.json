@@ -233,7 +233,7 @@
     "en": "Bone Tea",
     "zh": null,
     "rarity": "event",
-    "effect": "At the start of the next {Combats:plural:combat|1 combats, Upgrade your starting hand.",
+    "effect": "At the start of the next combat, Upgrade your starting hand.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -669,7 +669,7 @@
     "en": "Ember Tea",
     "zh": null,
     "rarity": "event",
-    "effect": "At the start of the next {Combats:plural:combat|5 combats, gain 2 Strength.",
+    "effect": "At the start of the next 5 combats, gain 2 Strength.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -698,7 +698,7 @@
     "en": "Eternal Feather",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "For every {Cards:plural:card|5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
+    "effect": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
     "version": "v0.107.1",
     "character": null
   },
@@ -835,7 +835,7 @@
     "en": "Fishing Rod",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Every {Combats:plural:normal combat|3 normal combats, Upgrade a random card in your Deck.",
+    "effect": "Every 3 normal combats, Upgrade a random card in your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1736,7 +1736,7 @@
     "en": "Pael's Wing",
     "zh": null,
     "rarity": "ancient",
-    "effect": "You may sacrifice card rewards to Pael. Every {Sacrifices:plural:sacrifice|2 sacrifices, obtain a Relic.",
+    "effect": "You may sacrifice card rewards to Pael. Every 2 sacrifices, obtain a Relic.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2064,7 +2064,7 @@
     "en": "Ring of the Drake",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of your first {Turns:plural:turn|3 turns, draw 2 additional cards.",
+    "effect": "At the start of your first 3 turns, draw 2 additional cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"

@@ -1,0 +1,799 @@
+{
+  "meta": {
+    "name": "事件 (Events)",
+    "name_en": "Events",
+    "version": "v0.107.1",
+    "count": 57,
+    "pool_counts": {
+      "shared": 18,
+      "overgrowth": 13,
+      "underdocks": 10,
+      "hive": 10,
+      "glory": 7
+    },
+    "count_note": "池分配直接取自反编译 C# 各幕 AllEvents + ModelDb.AllSharedEvents（v0.107.1）：繁茂之地 13 个（文档此前写 15 系笔误）、地下船坞 10 个（本次补齐，此前文档缺失）、蜂巢 10 个、荣耀 7 个、全塔共享 18 个；SunkenStatue 同时挂在繁茂之地与地下船坞两池（pool 标为 overgrowth+underdocks），去重后共 57 个唯一事件。古代神（Neow/Darv/Orobas/Pael/Tezcatara/Nonupeipe/Tanx/Vakuu）不在随机事件池，走每幕古代节点，故不收录本表。",
+    "notes": [
+      "所有选项数值取自反编译 C# MegaCrit.Sts2.Core.Models.Events/*.cs 的常量与 DynamicVar 基值；随机区间为 C# Rng.NextInt(min,max) 半开区间 [min, max)。",
+      "事件池会受纪元 (Epoch) 解锁门槛剔除：未解锁 Event1Epoch 时 TrashHeap 不出现、未解锁 Event2Epoch 时 Reflections 不出现、未解锁 Event3Epoch 时 ColorfulPhilosophers 不出现（ActModel.GenerateRooms）。",
+      "WarHistorianRepy 的 IsAllowed 恒为 false：它不在随机事件池出现，由 The Lantern Key 任务链在下一幕触发（持有 Lantern Key 卡）。",
+      "每幕事件池 = 幕专属事件 + 18 个共享事件；第一幕从繁茂之地/地下船坞二选一，各配独立专属事件池。",
+      "多人联机时部分事件的伤害/奖励按玩家分别结算；FakeMerchant 仅单人出现。"
+    ],
+    "sources": [
+      "https://github.com/zhiyue/sts2-rl-agent （decompiled/MegaCrit.Sts2.Core.Models.Events/、Models.Acts/、ModelDb.cs、Timeline.Epochs/，v0.107.1）",
+      "https://github.com/zhiyue/sts2-rl-agent （sts2_env/events/ Python 移植版，用于交叉核对；与 C# 不一致处以 C# 为准）",
+      "https://github.com/zhiyue/sts2-rl-agent （decompiled/MegaCrit.Sts2.Core.Models.Cards/MadScience.cs，TinkerTime 事件卡数值）"
+    ]
+  },
+  "events": [
+    {
+      "id": "brain_leech",
+      "en": "Brain Leech",
+      "zh": "脑蛭",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第一、二幕出现（CurrentActIndex < 2）。",
+      "description": "一只巨大的脑蛭缠上来，可以分享它的知识，也可以直接撕开它。",
+      "options": [
+        {"text": "Share Knowledge（分享知识）", "effect": "从 5 张随机本角色卡牌中选择 1 张加入卡组。"},
+        {"text": "Rip（撕开）", "effect": "受到 5 点伤害，获得一次 3 选 1 的无色卡牌奖励。"}
+      ]
+    },
+    {
+      "id": "crystal_sphere",
+      "en": "Crystal Sphere",
+      "zh": "水晶球",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现；所有玩家金币 ≥ 100。",
+      "description": "一颗水晶球可占卜未来，付现或赊账。",
+      "options": [
+        {"text": "Uncover Future（揭示未来）", "effect": "支付 51–99 金币（50 + 随机 1–49），获得 3 次水晶球占卜（Prophesize）抽取机会。"},
+        {"text": "Payment Plan（分期付款）", "effect": "获得 Debt（负债）诅咒卡，获得 6 次占卜抽取机会。"}
+      ]
+    },
+    {
+      "id": "doll_room",
+      "en": "Doll Room",
+      "zh": "玩偶房",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第二幕（蜂巢）出现。",
+      "description": "三姐妹的玩偶房，付代价可以挑选想要的玩偶遗物。",
+      "options": [
+        {"text": "Random（随机）", "effect": "免费随机获得 3 件玩偶遗物之一（Daughter of the Wind / Mr Struggles / Bing Bong）。"},
+        {"text": "Take Some Time（细看）", "effect": "受到 5 点伤害，从随机展示的 2 件玩偶遗物中选择 1 件。"},
+        {"text": "Examine（端详）", "effect": "受到 15 点伤害，从全部 3 件玩偶遗物中选择 1 件。"}
+      ]
+    },
+    {
+      "id": "fake_merchant",
+      "en": "Fake Merchant",
+      "zh": "假商人",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现；仅单人局；金币 ≥ 100 或持有 Foul Potion（臭药水）。",
+      "description": "可疑商人兜售假遗物，掷出臭药水会激怒他并引发战斗。",
+      "options": [
+        {"text": "Buy a Relic（购买遗物）", "effect": "花 50 金币购买 1 件假遗物；库存从 9 种假遗物（Fake Anchor、Fake Blood Vial、Fake Happy Flower、Fake Lees Waffle、Fake Mango、Fake Orichalcum、Fake Snecko Eye、Fake Strike Dummy、Fake Venerable Tea Set）中随机上架 6 件，可反复购买。"},
+        {"text": "Throw Foul Potion（掷出臭药水）", "effect": "消耗 1 瓶 Foul Potion 并进入事件战斗，胜利奖励为 Fake Merchant's Rug 遗物 + 货架上剩余的全部假遗物。"},
+        {"text": "Leave（离开）", "effect": "直接离开，无任何后果。"}
+      ]
+    },
+    {
+      "id": "potion_courier",
+      "en": "Potion Courier",
+      "zh": "药水快递",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现（CurrentActIndex > 0）。",
+      "description": "药水快递员打翻了货箱，捡臭药水或洗劫一件好货。",
+      "options": [
+        {"text": "Grab Potions（抓药水）", "effect": "获得 3 瓶 Foul Potion（臭药水；事件药水，商店出售可得 100 金）。"},
+        {"text": "Ransack（洗劫）", "effect": "获得 1 瓶随机罕见（uncommon）药水。"}
+      ]
+    },
+    {
+      "id": "ranwid_the_elder",
+      "en": "Ranwid the Elder",
+      "zh": "兰维德长老",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现；所有玩家金币 ≥ 100、至少持有 1 瓶药水、且拥有可交易遗物。",
+      "description": "长者兰维德想用遗物换取你的药水、金币或遗物。",
+      "options": [
+        {"text": "Give a Potion（交出药水）", "effect": "交出 1 瓶（事件随机选定的）药水，获得 1 件随机遗物。"},
+        {"text": "Give 100 Gold（交出金币）", "effect": "失去 100 金币，获得 1 件随机遗物。"},
+        {"text": "Give a Relic（交出遗物）", "effect": "交出 1 件（事件随机选定的）可交易遗物，获得 2 件随机遗物。"}
+      ]
+    },
+    {
+      "id": "relic_trader",
+      "en": "Relic Trader",
+      "zh": "遗物商人",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现；所有玩家可交易遗物 ≥ 5 件。",
+      "description": "遗物贩子提供以旧换新交易。",
+      "options": [
+        {"text": "Trade Relic（交换遗物，最多 3 组）", "effect": "从你拥有的可交易遗物中随机抽出 3 件作为候选，每组可将其中 1 件换成 1 件新随机遗物；三组交易彼此独立，只能选择其中一组。"}
+      ]
+    },
+    {
+      "id": "room_full_of_cheese",
+      "en": "Room Full of Cheese",
+      "zh": "满屋奶酪",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第一、二幕出现（CurrentActIndex < 2）。",
+      "description": "满屋奶酪，饱餐一顿或翻找隐藏的宝物。",
+      "options": [
+        {"text": "Gorge（大吃）", "effect": "从 8 张随机普通稀有度的本角色卡牌中选择 2 张加入卡组。"},
+        {"text": "Search（搜寻）", "effect": "受到 14 点伤害，获得 Chosen Cheese（天选奶酪）遗物。"}
+      ]
+    },
+    {
+      "id": "self_help_book",
+      "en": "Self Help Book",
+      "zh": "自助之书",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "一本自助之书传授附魔之道，按卡牌类型选择附魔。",
+      "options": [
+        {"text": "Read the Back（读封底）", "effect": "为 1 张攻击牌附魔 Sharp（锋利）+2。"},
+        {"text": "Read a Passage（读一段）", "effect": "为 1 张技能牌附魔 Nimble（灵巧）+2。"},
+        {"text": "Read Entire Book（通读全书）", "effect": "为 1 张能力牌附魔 Swift（迅捷）+2。"}
+      ],
+      "notes": "某类卡没有可附魔对象时对应选项锁定；三类全部不可用时只剩翻合书本选项。"
+    },
+    {
+      "id": "slippery_bridge",
+      "en": "Slippery Bridge",
+      "zh": "湿滑之桥",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "总层数 > 6；所有玩家卡组存在可移除卡。",
+      "description": "湿滑之桥下是深渊，过桥要么放弃一张牌，要么硬撑着挨摔。",
+      "options": [
+        {"text": "Overcome（跨越）", "effect": "失去 1 张随机非基础（非 Basic）可移除卡（选项上会预览将失去哪张）。"},
+        {"text": "Hold On（坚持）", "effect": "受到 3 点伤害并重新随机将失去的卡；每次坚持伤害递增 +1。"}
+      ]
+    },
+    {
+      "id": "stone_of_all_time",
+      "en": "Stone of All Time",
+      "zh": "万世之石",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第二幕（蜂巢）出现；所有玩家至少持有 1 瓶药水。",
+      "description": "万世之石沉在浅水中，抬起它或推开它。",
+      "options": [
+        {"text": "Lift（抬起）", "effect": "丢弃 1 瓶（事件随机选定的）持有药水，+10 最大生命。"},
+        {"text": "Push（推开）", "effect": "受到 6 点伤害，为 1 张卡附魔 Vigorous（旺盛）+8。"}
+      ]
+    },
+    {
+      "id": "symbiote",
+      "en": "Symbiote",
+      "zh": "共生体",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "第二幕起出现（CurrentActIndex > 0）。",
+      "description": "一只共生体请求依附你的卡牌。",
+      "options": [
+        {"text": "Approach（接近）", "effect": "为 1 张卡附魔 Corrupted（腐化）+1。"},
+        {"text": "Kill with Fire（火烧）", "effect": "转化 1 张卡。"}
+      ]
+    },
+    {
+      "id": "tea_master",
+      "en": "Tea Master",
+      "zh": "茶道大师",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第一、二幕出现；所有玩家金币 ≥ 150。",
+      "description": "茶道大师烹了三盏茶，两盏收钱，一盏失敬。",
+      "options": [
+        {"text": "Bone Tea（骨茶）", "effect": "花 50 金币获得 Bone Tea 遗物。"},
+        {"text": "Ember Tea（烬茶）", "effect": "花 150 金币获得 Ember Tea 遗物。"},
+        {"text": "Tea of Discourtesy（失敬茶）", "effect": "免费获得 Tea of Discourtesy 遗物。"}
+      ]
+    },
+    {
+      "id": "the_future_of_potions",
+      "en": "The Future of Potions",
+      "zh": "药水的未来",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "所有玩家至少持有 2 瓶药水。",
+      "description": "占卜师用药水换取卡牌的未来。",
+      "options": [
+        {"text": "Trade Potion（交易药水，最多展示前 3 瓶）", "effect": "丢弃 1 瓶药水，获得一次与药水稀有度对应的 3 选 1 卡牌奖励（普通→普通卡、罕见→罕见卡、稀有/事件→稀有卡，类型随机，普通与代币药水不出能力牌），奖励卡全部为升级状态。"}
+      ]
+    },
+    {
+      "id": "the_legends_were_true",
+      "en": "The Legends Were True",
+      "zh": "传说是真",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第一幕出现；卡组非空；所有玩家 HP ≥ 10。",
+      "description": "传说里的密道确实存在，可以夺走地图或慢慢摸出去。",
+      "options": [
+        {"text": "Nab the Map（夺图）", "effect": "获得 Spoils Map（战利品地图）卡。"},
+        {"text": "Slowly Find an Exit（缓慢寻路）", "effect": "受到 8 点伤害，获得 1 瓶随机药水。"}
+      ]
+    },
+    {
+      "id": "this_or_that",
+      "en": "This or That",
+      "zh": "非此即彼",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "两个盒子摆在面前，一个朴素一个华丽。",
+      "options": [
+        {"text": "Plain（朴素盒）", "effect": "受到 6 点伤害，获得 41–68 金币。"},
+        {"text": "Ornate（华丽盒）", "effect": "获得 1 件随机遗物，并加入 1 张 Clumsy（笨拙）诅咒。"}
+      ]
+    },
+    {
+      "id": "war_historian_repy",
+      "en": "War Historian Repy",
+      "zh": "战争史家雷皮",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "IsAllowed 恒为 false：不在随机事件池出现；由 The Lantern Key（提灯钥匙）任务链在后续幕持有 Lantern Key 卡时触发。",
+      "description": "战争史家雷皮被锁在笼中，笼边还有一只上锁的宝箱。",
+      "options": [
+        {"text": "Unlock Cage（开笼）", "effect": "消耗 1 张 Lantern Key 卡释放雷皮，获得 History Course（历史课）遗物。"},
+        {"text": "Unlock Chest（开箱）", "effect": "消耗 1 张 Lantern Key 卡，获得 2 瓶随机药水 + 2 件随机遗物。"}
+      ],
+      "notes": "单人局若持有第二张 Lantern Key，两个选项可依次各兑现一次（多钥匙连开）。"
+    },
+    {
+      "id": "welcome_to_wongos",
+      "en": "Welcome to Wongos",
+      "zh": "欢迎来到翁戈斯",
+      "pool": "shared",
+      "version": "v0.107.1",
+      "condition": "仅第二幕（蜂巢）出现；所有玩家金币 ≥ 100。",
+      "description": "翁戈斯的杂货铺，购物可积攒 Wongo 积分。",
+      "options": [
+        {"text": "Bargain Bin（廉价筐）", "effect": "花 100 金币获得 1 件普通遗物（+32 Wongo 积分）。"},
+        {"text": "Featured Item（招牌货）", "effect": "花 200 金币获得 1 件稀有遗物（+16 积分）。"},
+        {"text": "Mystery Box（神秘盒）", "effect": "花 300 金币获得 Wongos Mystery Ticket（神秘门票）遗物（+8 积分）。"},
+        {"text": "Leave（离开）", "effect": "离开时随机降级 1 张已升级的卡。"}
+      ],
+      "notes": "Wongo 积分累计达 2000 时获得 Wongo Customer Appreciation Badge 遗物（跨局存档累计；廉价筐 32/招牌 16/神秘盒 8 分）。神秘门票的奖励机制由遗物定义（事件中仅见配置常量 MysteryBoxRelicCount=3、MysteryBoxCombatCount=5），具体效果见遗物表。"
+    },
+    {
+      "id": "aroma_of_chaos",
+      "en": "Aroma of Chaos",
+      "zh": "混沌之香",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "香气缭绕，要么放任混乱，要么保持掌控。",
+      "options": [
+        {"text": "Let Go（放手）", "effect": "转化 1 张卡。"},
+        {"text": "Maintain Control（保持掌控）", "effect": "升级 1 张卡。"}
+      ]
+    },
+    {
+      "id": "byrdonis_nest",
+      "en": "Byrdonis Nest",
+      "zh": "伯多尼斯巢",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家均未持有任务宠物卡（HasEventPet 为假）。",
+      "description": "伯多尼斯鸟的巢里有一颗蛋，吃掉或带走。",
+      "options": [
+        {"text": "Eat（吃掉）", "effect": "+7 最大生命。"},
+        {"text": "Take the Egg（带走鸟蛋）", "effect": "获得 Byrdonis Egg（伯多尼斯蛋）任务卡；可在篝火选择孵蛋，替换为 Byrd Swoop（俯冲鸟击）卡（0 费无色攻击，14 伤害，据社区资料）。"}
+      ]
+    },
+    {
+      "id": "dense_vegetation",
+      "en": "Dense Vegetation",
+      "zh": "茂密植被",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "多人时所有玩家 HP > 8（否则不出现）；单人无条件限制。",
+      "description": "茂密的植被挡住去路，硬闯会受伤但能捡到钱，休息则会被惊扰。",
+      "options": [
+        {"text": "Trudge On（跋涉）", "effect": "受到 8 点伤害，获得 61–99 金币。"},
+        {"text": "Rest（休息）", "effect": "按篝火回复量治疗（基础 30% 最大生命），随后被迫进行一场事件战斗（无额外奖励）。"}
+      ]
+    },
+    {
+      "id": "jungle_maze_adventure",
+      "en": "Jungle Maze Adventure",
+      "zh": "丛林迷宫冒险",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "丛林迷宫里藏着金子，独自深入或结伴同行。",
+      "options": [
+        {"text": "Solo Quest（独自探索）", "effect": "受到 18 点伤害，获得 135–165 金币。"},
+        {"text": "Join Forces（结伴同行）", "effect": "安全通过，获得 35–65 金币。"}
+      ]
+    },
+    {
+      "id": "luminous_choir",
+      "en": "Luminous Choir",
+      "zh": "光耀唱诗班",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 贡献价（100–149 随机）且尚有可获得遗物。",
+      "description": "发光的唱诗班索要供奉，也可把手伸进血肉。",
+      "options": [
+        {"text": "Reach Into the Flesh（伸入血肉）", "effect": "移除 2 张卡，并获得 1 张 Spore Mind（孢子精神）诅咒。"},
+        {"text": "Offer Tribute（献上供奉）", "effect": "支付 100–149 金币（149 − 随机 0–49），获得 1 件随机遗物。"}
+      ]
+    },
+    {
+      "id": "morphic_grove",
+      "en": "Morphic Grove",
+      "zh": "变形树丛",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 100 且至少有 2 张可转化卡。",
+      "description": "变形树丛与旅人做交易：结群者变形，独行者健壮。",
+      "options": [
+        {"text": "Group（结群）", "effect": "失去当前全部金币，转化 2 张卡。"},
+        {"text": "Loner（独行）", "effect": "+5 最大生命。"}
+      ]
+    },
+    {
+      "id": "sapphire_seed",
+      "en": "Sapphire Seed",
+      "zh": "蓝宝石种子",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "一颗蓝宝石种子，吃掉或种下。",
+      "options": [
+        {"text": "Eat（吃掉）", "effect": "回复 9 点生命，并升级 1 张卡。"},
+        {"text": "Plant the Seed（种下）", "effect": "为 1 张卡附魔 Sown（播种）+1。"}
+      ]
+    },
+    {
+      "id": "sunken_statue",
+      "en": "Sunken Statue",
+      "zh": "沉没雕像",
+      "pool": "overgrowth+underdocks",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "沉在水中的雕像手握石剑，水下还有金币。",
+      "options": [
+        {"text": "Grab the Sword（拔剑）", "effect": "获得 Sword of Stone（石中之剑）遗物。"},
+        {"text": "Dive Into Water（潜入水中）", "effect": "获得 101–121 金币（111±10），受到 7 点伤害。"}
+      ],
+      "notes": "同时登记在繁茂之地与地下船坞两幕的专属事件池中（C# Overgrowth.AllEvents 与 Underdocks.AllEvents 均含此事件）。"
+    },
+    {
+      "id": "tablet_of_truth",
+      "en": "Tablet of Truth",
+      "zh": "真理石板",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "真理石板可以逐步破译（以最大生命为代价），也可直接砸碎。",
+      "options": [
+        {"text": "Decipher（破译，多页事件）", "effect": "依次失去 3/6/12/24/（最大生命−1）点最大生命，每次破译升级 1 张随机卡；第 5 次破译升级卡组中全部可升级卡；任意中间时刻可选择放弃。若代价 ≥ 当前最大生命则直接死亡。"},
+        {"text": "Smash（砸碎）", "effect": "回复 20 点生命。"},
+        {"text": "Give Up（放弃，破译后出现）", "effect": "停止破译，保留已获升级。"}
+      ]
+    },
+    {
+      "id": "unrest_site",
+      "en": "Unrest Site",
+      "zh": "不宁营地",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家当前 HP ≤ 70% 最大生命（不满足则不出现）。",
+      "description": "闹鬼的营地可以休息，但睡不安稳。",
+      "options": [
+        {"text": "Rest（休息）", "effect": "回复至满血，并获得 1 张 Poor Sleep（睡眠不佳）诅咒。"},
+        {"text": "Kill（杀死怨灵）", "effect": "失去 8 点最大生命，获得 1 件随机遗物。"}
+      ]
+    },
+    {
+      "id": "wellspring",
+      "en": "Wellspring",
+      "zh": "灵泉",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "一眼灵泉，装一瓶水或入水沐浴。",
+      "options": [
+        {"text": "Bottle（装瓶）", "effect": "获得 1 瓶随机药水。"},
+        {"text": "Bathe（沐浴）", "effect": "移除 1 张卡，并获得 1 张 Guilty（内疚）诅咒。"}
+      ]
+    },
+    {
+      "id": "whispering_hollow",
+      "en": "Whispering Hollow",
+      "zh": "低语 hollow",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 44。",
+      "description": "低语的山谷用金币换药水，或拥抱转化。",
+      "options": [
+        {"text": "Pay Gold（支付金币）", "effect": "支付 26–44 金币（35±9），获得 2 瓶随机药水。"},
+        {"text": "Hug（拥抱）", "effect": "受到 9 点伤害，转化 1 张卡。"}
+      ]
+    },
+    {
+      "id": "wood_carvings",
+      "en": "Wood Carvings",
+      "zh": "木雕",
+      "pool": "overgrowth",
+      "version": "v0.107.1",
+      "condition": "所有玩家卡组均有可移除的基础（Basic）卡。",
+      "description": "三件木雕各有神力：鸟、蛇与环。",
+      "options": [
+        {"text": "Bird（鸟）", "effect": "将 1 张基础卡变形为 Peck（啄击）。"},
+        {"text": "Snake（蛇）", "effect": "为 1 张卡附魔 Slither（滑行）+1（无可附魔卡时锁定）。"},
+        {"text": "Torus（环）", "effect": "将 1 张基础卡变形为 Toric Toughness（环形坚韧）。"}
+      ]
+    },
+    {
+      "id": "abyssal_baths",
+      "en": "Abyssal Baths",
+      "zh": "深渊浴场",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "深渊浴场的热泉可强健体魄，但每次浸泡伤害递增。",
+      "options": [
+        {"text": "Immerse（浸泡）", "effect": "+2 最大生命，受到 3 点伤害；之后可继续浸泡。"},
+        {"text": "Linger（逗留，浸泡后出现）", "effect": "每次再 +2 最大生命并受到递增伤害（4、5、6……最多可逗留 9 次）；若下次伤害会致死则出现死亡警告页。"},
+        {"text": "Exit Baths（离开浴场）", "effect": "带着已获最大生命加成离开。"},
+        {"text": "Abstain（不泡）", "effect": "回复 10 点生命。"}
+      ]
+    },
+    {
+      "id": "drowning_beacon",
+      "en": "Drowning Beacon",
+      "zh": "溺亡信标",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "灯塔下的水中有微光：装瓶或攀爬。",
+      "options": [
+        {"text": "Bottle the Water（装瓶）", "effect": "获得 Glowwater Potion（荧光水药水）。"},
+        {"text": "Climb（攀爬）", "effect": "失去 13 点最大生命，获得 Fresnel Lens（菲涅尔透镜）遗物。"}
+      ]
+    },
+    {
+      "id": "endless_conveyor",
+      "en": "Endless Conveyor",
+      "zh": "无尽传送带",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 120。",
+      "description": "回转寿司式的无尽传送带，每次抓取 40 金币（黄金鱼免费），菜品随机。",
+      "options": [
+        {"text": "Grab Something（抓一盘，40 金币）", "effect": "随机获得一盘菜品，可反复抓取：鱼子酱（Caviar，+4 最大生命，权重 6）、辣脆卷（Spicy Snappy，升级 1 张随机卡，权重 3）、水母肝（Jelly Liver，转化 1 张卡，权重 3）、炸鳗（Fried Eel，获得 1 张随机无色卡，权重 3）、可疑调料（Suspicious Condiment，获得 1 瓶随机药水，需有空药水槽，权重 3）、蛤蜊卷（Clam Roll，回复 10 生命，需未满血，权重 6）、黄金鱼（Golden Fysh，免费且 +75 金币，仅第 2 次抓取后出现，权重 1）；每第 5 次抓取固定为海灵沙拉（Seapunk Salad，获得 Feeding Frenzy 卡）；同一菜品不会连续出现。"},
+        {"text": "Observe Chef（观察大厨）", "effect": "免费升级 1 张随机可升级卡。"},
+        {"text": "Leave（离开）", "effect": "用完餐后离开。"}
+      ]
+    },
+    {
+      "id": "punch_off",
+      "en": "Punch Off",
+      "zh": "互殴",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": "总层数 ≥ 6。",
+      "description": "两台构装体在互殴，可以趁乱捞一把或亲自下场。",
+      "options": [
+        {"text": "Nab（顺手牵羊）", "effect": "获得 1 张 Injury（创伤）诅咒 + 1 件随机遗物。"},
+        {"text": "I Can Take Them（我能打他们）", "effect": "进入事件战斗（构装体互殴现场），胜利后获得 1 件随机遗物 + 1 瓶随机药水（联机时每名玩家各一份）。"}
+      ]
+    },
+    {
+      "id": "spiraling_whirlpool",
+      "en": "Spiraling Whirlpool",
+      "zh": "螺旋漩涡",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": "所有玩家卡组中存在可附魔 Spiral 的卡。",
+      "description": "旋转的漩涡蕴含规律，观察它或饮下它。",
+      "options": [
+        {"text": "Observe the Spiral（观察漩涡）", "effect": "为 1 张卡附魔 Spiral（螺旋）+1。"},
+        {"text": "Drink（饮用）", "effect": "回复 33% 最大生命的生命。"}
+      ]
+    },
+    {
+      "id": "sunken_treasury",
+      "en": "Sunken Treasury",
+      "zh": "沉没金库",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "沉没的金库里有小宝箱和大宝箱各一只。",
+      "options": [
+        {"text": "Small Chest（小宝箱）", "effect": "获得 52–67 金币（60±8）。"},
+        {"text": "Large Chest（大宝箱）", "effect": "获得 303–363 金币（333±30），并加入 1 张 Greed（贪婪）诅咒。"}
+      ]
+    },
+    {
+      "id": "doors_of_light_and_dark",
+      "en": "Doors of Light and Dark",
+      "zh": "光暗之门",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "一扇光门一扇暗门，各通向不同的强化。",
+      "options": [
+        {"text": "Door of Light（光之门）", "effect": "随机升级 2 张可升级卡。"},
+        {"text": "Door of Dark（暗之门）", "effect": "移除 1 张卡。"}
+      ]
+    },
+    {
+      "id": "trash_heap",
+      "en": "Trash Heap",
+      "zh": "垃圾堆",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": "所有玩家 HP > 5；另受 Event1Epoch 纪元解锁门槛（未解锁时不出现）。",
+      "description": "垃圾堆里埋着遗物，旁边还散落着金币和卡。",
+      "options": [
+        {"text": "Dive In（扎进去）", "effect": "受到 8 点伤害，从 5 件固定遗物池（Darkstone Periapt、Dream Catcher、Hand Drill、Maw Bank、The Boot）中随机获得 1 件。"},
+        {"text": "Grab（抓取）", "effect": "获得 100 金币 + 1 张指定卡池中的卡（Caltrops、Clash、Distraction、Dual Wield、Entrench、Hello World、Outmaneuver、Rebound、Rip and Tear、Stack 十选一随机）。"}
+      ]
+    },
+    {
+      "id": "waterlogged_scriptorium",
+      "en": "Waterlogged Scriptorium",
+      "zh": "泡水缮写室",
+      "pool": "underdocks",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 55。",
+      "description": "泡水的缮写室里，墨水、羽毛笔与海绵各有妙用。",
+      "options": [
+        {"text": "Bloody Ink（血墨）", "effect": "+6 最大生命。"},
+        {"text": "Tentacle Quill（触手羽笔，55 金币）", "effect": "为 1 张卡附魔 Steady（稳固）+1。"},
+        {"text": "Prickly Sponge（刺海绵，99 金币）", "effect": "为 2 张卡各附魔 Steady（稳固）+1。"}
+      ]
+    },
+    {
+      "id": "amalgamator",
+      "en": "Amalgamator",
+      "zh": "聚合机",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": "所有玩家卡组中各有 ≥ 2 张可移除的打击（Strike）卡且 ≥ 2 张可移除的防御（Defend）卡。",
+      "description": "聚合机可以把基础牌两两合一。",
+      "options": [
+        {"text": "Combine Strikes（聚合打击）", "effect": "移除 2 张打击卡，获得 1 张 Ultimate Strike（究极打击）。"},
+        {"text": "Combine Defends（聚合防御）", "effect": "移除 2 张防御卡，获得 1 张 Ultimate Defend（究极防御）。"}
+      ]
+    },
+    {
+      "id": "bugslayer",
+      "en": "Bugslayer",
+      "zh": "屠虫者",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "屠虫者的武器库对外开放两件。",
+      "options": [
+        {"text": "Extermination（灭虫）", "effect": "获得 1 张 Exterminate（灭虫令）卡。"},
+        {"text": "Squash（碾碎）", "effect": "获得 1 张 Squash（碾碎）卡。"}
+      ]
+    },
+    {
+      "id": "colorful_philosophers",
+      "en": "Colorful Philosophers",
+      "zh": "彩色哲学家",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": "所有玩家已解锁的角色卡池 > 1；另受 Event3Epoch 纪元解锁门槛（未解锁时不出现）。",
+      "description": "五位彩衣哲学家代表五个角色卡池，各授一套卡。",
+      "options": [
+        {"text": "选择一位哲学家（随机展示至多 3 位，不含自己当前角色）", "effect": "获得 3 组卡牌奖励（普通/罕见/稀有各一组，每组 3 选 1，均匀概率），全部来自所选角色的卡池。"}
+      ]
+    },
+    {
+      "id": "colossal_flower",
+      "en": "Colossal Flower",
+      "zh": "巨花",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": "所有玩家 HP ≥ 19。",
+      "description": "三段式贪心事件：巨花的花蜜一层比一层值钱，代价也逐层递增。",
+      "options": [
+        {"text": "Extract Prize 1（掏取花蜜·一档）", "effect": "获得 35 金币并离开。"},
+        {"text": "Reach Deeper 1（深入·一层）", "effect": "受到 5 点伤害，进入下一档。"},
+        {"text": "Extract Prize 2（掏取花蜜·二档）", "effect": "获得 75 金币并离开。"},
+        {"text": "Reach Deeper 2（深入·二层）", "effect": "受到 6 点伤害，进入下一档。"},
+        {"text": "Extract Prize 3（掏取花蜜·三档）", "effect": "获得 135 金币并离开。"},
+        {"text": "Pollinous Core（花心）", "effect": "受到 7 点伤害，获得 Pollinous Core（多粉核心）遗物（每 4 回合额外抽 2 张牌）。全程坚持到底共需承受 18 点伤害。"}
+      ]
+    },
+    {
+      "id": "field_of_man_sized_holes",
+      "en": "Field of Man-Sized Holes",
+      "zh": "人形坑洞原野",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": "所有玩家卡组中存在可附魔 Perfect Fit 的卡。",
+      "description": "原野上布满人形坑洞，抗拒会受伤，躺进去则完美贴合。",
+      "options": [
+        {"text": "Resist（抗拒）", "effect": "移除 2 张卡，并获得 1 张 Normality（常态）诅咒。"},
+        {"text": "Enter Your Hole（进入你的坑洞）", "effect": "为 1 张卡附魔 Perfect Fit（完美贴合）+1。"}
+      ]
+    },
+    {
+      "id": "infested_automaton",
+      "en": "Infested Automaton",
+      "zh": "虫蛀构装体",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "虫蛀的构装体内藏有知识。",
+      "options": [
+        {"text": "Study（研究）", "effect": "获得 1 张随机能力（Power）卡。"},
+        {"text": "Touch Core（触碰核心）", "effect": "获得 1 张随机 0 费卡（非 X 费）。"}
+      ]
+    },
+    {
+      "id": "lost_wisp",
+      "en": "Lost Wisp",
+      "zh": "迷途幽光",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "一缕迷途的幽光许诺回报，或直接搜走它的金币。",
+      "options": [
+        {"text": "Claim（索取）", "effect": "获得 Lost Wisp（迷途幽光）遗物 + 1 张 Decay（衰朽）诅咒。"},
+        {"text": "Search（搜查）", "effect": "获得 45–75 金币（60±15）。"}
+      ]
+    },
+    {
+      "id": "spirit_grafter",
+      "en": "Spirit Grafter",
+      "zh": "灵体嫁接师",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "灵体嫁接师请求进入你的身体。",
+      "options": [
+        {"text": "Let It In（让它进来）", "effect": "回复 25 点生命，并获得 1 张 Metamorphosis（变态）诅咒。"},
+        {"text": "Rejection（拒绝）", "effect": "升级 1 张卡，受到 10 点伤害。"}
+      ]
+    },
+    {
+      "id": "the_lantern_key",
+      "en": "The Lantern Key",
+      "zh": "提灯钥匙",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "拾取发光钥匙后神秘骑士现身索要，可交还或战斗。",
+      "options": [
+        {"text": "Return the Key（交还钥匙）", "effect": "获得 100 金币。"},
+        {"text": "Keep the Key → Fight（保留钥匙并战斗）", "effect": "与神秘骑士（Mysterious Knight，事件战斗，101 HP）战斗，胜利后获得 Lantern Key（提灯钥匙）任务卡；该卡带入后续幕，用于触发 War Historian Repy 事件。"}
+      ]
+    },
+    {
+      "id": "zen_weaver",
+      "en": "Zen Weaver",
+      "zh": "禅织蛛",
+      "pool": "hive",
+      "version": "v0.107.1",
+      "condition": "所有玩家金币 ≥ 125。",
+      "description": "禅意蜘蛛提供三种收费服务。",
+      "options": [
+        {"text": "Breathing Techniques（吐纳功法，50 金币）", "effect": "获得 2 张 Enlightenment（顿悟）卡。"},
+        {"text": "Emotional Awareness（情绪觉察，125 金币）", "effect": "移除 1 张卡。"},
+        {"text": "Arachnid Acupuncture（蛛针砭法，250 金币）", "effect": "移除 2 张卡。"}
+      ]
+    },
+    {
+      "id": "battleworn_dummy",
+      "en": "Battleworn Dummy",
+      "zh": "破旧训练假人",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "破旧的训练假人提供三档难度试炼，难度越高奖励越好。",
+      "options": [
+        {"text": "Setting 1（难度一）", "effect": "事件战斗（BattleFriend V1，血量随难度显示），胜利获得 1 瓶随机药水。"},
+        {"text": "Setting 2（难度二）", "effect": "事件战斗（BattleFriend V2），胜利随机升级 2 张卡。"},
+        {"text": "Setting 3（难度三）", "effect": "事件战斗（BattleFriend V3），胜利获得 1 件随机遗物。"}
+      ],
+      "notes": "战斗超时（RanOutOfTime）按失败结算，无奖励。"
+    },
+    {
+      "id": "grave_of_the_forgotten",
+      "en": "Grave of the Forgotten",
+      "zh": "被遗忘者之墓",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": "所有玩家卡组中存在可附魔 Souls Power 的卡。",
+      "description": "被遗忘者之墓中 confront 墓主或接受馈赠。",
+      "options": [
+        {"text": "Confront（直面）", "effect": "获得 1 张 Decay（衰朽）诅咒，并为 1 张卡附魔 Soul's Power（灵魂之力）+1（无可附魔卡时锁定）。"},
+        {"text": "Accept（接受）", "effect": "获得 Forgotten Soul（被遗忘者的灵魂）遗物。"}
+      ]
+    },
+    {
+      "id": "hungry_for_mushrooms",
+      "en": "Hungry for Mushrooms",
+      "zh": "饥肠辘辘的蘑菇",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "两只饥饿的蘑菇任你处置。",
+      "options": [
+        {"text": "Big Mushroom（大蘑菇）", "effect": "获得 Big Mushroom 遗物。"},
+        {"text": "Fragrant Mushroom（香蘑菇）", "effect": "受到 15 点伤害，获得 Fragrant Mushroom 遗物。"}
+      ]
+    },
+    {
+      "id": "reflections",
+      "en": "Reflections",
+      "zh": "镜中倒影",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": "受 Event2Epoch 纪元解锁门槛（未解锁时不出现）。",
+      "description": "满屋镜子映出你的卡组。",
+      "options": [
+        {"text": "Touch a Mirror（触碰镜子）", "effect": "随机降级 2 张已升级卡，并随机升级 4 张可升级卡。"},
+        {"text": "Shatter（打碎）", "effect": "复制整个卡组（所有卡各 +1 份），并获得 1 张 Bad Luck（厄运）诅咒。"}
+      ]
+    },
+    {
+      "id": "round_tea_party",
+      "en": "Round Tea Party",
+      "zh": "环形茶会",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": "所有玩家 HP ≥ 12。",
+      "description": "环桌的茶会宾客有毒茶招待，掀桌则要见血。",
+      "options": [
+        {"text": "Enjoy Tea（品茶）", "effect": "获得 Royal Poison（皇家毒药）遗物，回复至满血。"},
+        {"text": "Pick a Fight → Continue Fight（挑事）", "effect": "受到 11 点伤害，获得 1 件随机遗物。"}
+      ]
+    },
+    {
+      "id": "tinker_time",
+      "en": "Tinker Time",
+      "zh": "工匠时间",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "工匠帮你现场造一张疯狂科学（Mad Science）卡：先选卡牌类型，再选附加效果。",
+      "options": [
+        {"text": "选择卡牌类型（随机展示 3 类中的 2 类）", "effect": "攻击型：1 费，造成 12 点伤害；技能型：1 费，获得 8 点格挡；能力型：1 费，效果由附加效果决定。"},
+        {"text": "选择附加效果（对应类型的 3 选 2）", "effect": "攻击型附加：Sapping（虚弱 2 + 易伤 2）/ Violence（改为连击 3 次，每次 12 伤）/ Choking（勒扼 6）；技能型附加：Energized（+2 能量）/ Wisdom（抽 3 张卡）/ Chaos（往手中加入 1 张随机本角色卡，本回合免费）；能力型附加：Expertise（力量 2 + 敏捷 2）/ Curious（好奇 1）/ Improvement（改良 1）。"}
+      ],
+      "notes": "Mad Science 为 1 费事件卡；升级后获得固有（Innate）。"
+    },
+    {
+      "id": "trial",
+      "en": "Trial",
+      "zh": "审判",
+      "pool": "glory",
+      "version": "v0.107.1",
+      "condition": null,
+      "description": "法庭邀请你担任法官，审判随机到庭的一名被告。",
+      "options": [
+        {"text": "Accept the Trial（接受审判）", "effect": "随机审理商人/贵族/无名氏之一（各 1/3 概率），并作出判决（见下）。"},
+        {"text": "Reject（拒绝）", "effect": "犹豫页：可回心转意接受审判，或选择 Double Down 孤注一掷——直接放弃本局（弹出确认框）。"},
+        {"text": "商人·Guilty（判商有罪）", "effect": "获得 1 张 Regret（悔恨）诅咒 + 2 件随机遗物。"},
+        {"text": "商人·Innocent（判商无罪）", "effect": "获得 1 张 Shame（羞耻）诅咒，升级 2 张卡。"},
+        {"text": "贵族·Guilty（判贵族有罪）", "effect": "回复 10 点生命。"},
+        {"text": "贵族·Innocent（判贵族无罪）", "effect": "获得 1 张 Regret（悔恨）诅咒 + 300 金币。"},
+        {"text": "无名氏·Guilty（判无名有罪）", "effect": "获得 1 张 Doubt（疑虑）诅咒 + 2 次普通 3 选 1 卡牌奖励。"},
+        {"text": "无名氏·Innocent（判无名无罪）", "effect": "获得 1 张 Doubt（疑虑）诅咒，转化 2 张卡。"}
+      ]
+    }
+  ]
+}

@@ -81,7 +81,19 @@ def build_game(game_dir):
             out["score"] = data.get("bonuses", [])
             out["score_meta"] = {k: v for k, v in data.items() if k != "bonuses"}
         else:
-            out[key] = data  # relics / potions / enemies / events / ancients / enchantments / map_config ...
+            # 信封结构（{version, source, ..., <实体名>: [...]}）→ 抽出列表 + 保留 meta
+            if isinstance(data, dict):
+                list_keys = [k for k, v in data.items() if isinstance(v, list)]
+                preferred = [k for k in list_keys if k == key] or list_keys
+                if preferred:
+                    items = [it for k in preferred for it in data[k]]
+                    out[key] = items
+                    out[key + "_meta"] = {k: v for k, v in data.items()
+                                          if not isinstance(v, list)}
+                else:
+                    out[key] = data  # map_config 等本来就是纯对象的
+            else:
+                out[key] = data  # relics / potions / enemies / events ...
     return out
 
 

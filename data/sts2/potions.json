@@ -23,7 +23,7 @@
     "en": "Beetle Juice",
     "zh": null,
     "rarity": "rare",
-    "effect": "Enemy's attacks deal 30% less damage {Repeat:plural:next turn|for the next 4 turns.",
+    "effect": "Enemy's attacks deal 30% less damage for the next 4 turns.",
     "target": "敌人",
     "version": "v0.107.1"
   },
@@ -79,7 +79,7 @@
     "en": "Clarity Extract",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Draw 1 card. At the start of your next {ClarityPower:plural:turn|3 turns, draw 1 additional card.",
+    "effect": "Draw 1 card. At the start of your next 3 turns, draw 1 additional card.",
     "target": "玩家",
     "version": "v0.107.1"
   },
