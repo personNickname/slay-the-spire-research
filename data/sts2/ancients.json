@@ -1,0 +1,798 @@
+{
+  "version": "v0.107.1",
+  "source": "https://github.com/zhiyue/sts2-rl-agent (反编译 v0.107.1) — decompiled/MegaCrit.Sts2.Core.Models.Events/*.cs + bridge_mod localization eng/{ancients,relics,cards}.json；中文名对照 docs/sts2/content.md §2.3",
+  "mechanics_note": "取代一代 Boss 遗物三选一：每幕入口的古代(Ancient)节点提供带代价的祝福（实为 Ancient 稀有度遗物）。每张卡牌同一时间只能持有一个附魔/祝福类效果存在（AncientEventModel 机制详见各条 notes）。附加魔(enchantment)表见 enchantments.json。",
+  "ancients": [
+    {
+      "id": "neow",
+      "en": "Neow",
+      "zh": "内乌",
+      "epithet": "Mother of Resurrection (Exiled) / 复活之母（流放形态）",
+      "act": 1,
+      "act_note": "开局古代：每局开始时给予祝福（三选一：2 个正面 + 1 个诅咒）",
+      "blessings": [
+        {
+          "id": "arcane_scroll",
+          "en": "Arcane Scroll",
+          "effect": "拾取时获得 1 张随机稀有卡加入卡组。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "booming_conch",
+          "en": "Booming Conch",
+          "effect": "精英战斗开始时额外抽 2 张牌并获得 1 点能量。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "fishing_rod",
+          "en": "Fishing Rod",
+          "effect": "每经过 3 场普通战斗，随机升级卡组中的 1 张牌。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "golden_pearl",
+          "en": "Golden Pearl",
+          "effect": "拾取时获得 150 金币。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "与诅咒池 Cursed Pearl 互斥：本轮诅咒为 Cursed Pearl 时不会出现。"
+        },
+        {
+          "id": "kaleidoscope",
+          "en": "Kaleidoscope",
+          "effect": "拾取时获得 2 张来自其他角色的卡牌奖励。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "lead_paperweight",
+          "en": "Lead Paperweight",
+          "effect": "拾取时从 2 张无色卡中选择 1 张加入卡组。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "lost_coffer",
+          "en": "Lost Coffer",
+          "effect": "拾取时获得 1 份卡牌奖励和 1 瓶随机药水。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "massive_scroll",
+          "en": "Massive Scroll",
+          "effect": "拾取时从 3 张多人(Multiplayer)卡中选择 1 张加入卡组。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "多人模式内容。"
+        },
+        {
+          "id": "neows_torment",
+          "en": "Neow's Torment",
+          "effect": "拾取时向卡组加入 1 张「内乌之怒 (Neow's Fury)」（造成伤害，并将弃牌堆至多数张卡放回抽牌堆）。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "new_leaf",
+          "en": "New Leaf",
+          "effect": "拾取时变形(Transform)1 张卡。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "与诅咒池 Leafy Poultice 互斥。"
+        },
+        {
+          "id": "phial_holster",
+          "en": "Phial Holster",
+          "effect": "拾取时获得 1 个药水槽和 2 瓶随机药水。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "precise_scissors",
+          "en": "Precise Scissors",
+          "effect": "拾取时从卡组移除 1 张卡。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "与诅咒池 Precarious Shears 互斥。"
+        },
+        {
+          "id": "scroll_boxes",
+          "en": "Scroll Boxes",
+          "effect": "拾取时从 2 组卡牌包(pack)中选择 1 组加入卡组。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面"
+        },
+        {
+          "id": "winged_boots",
+          "en": "Winged Boots",
+          "effect": "选择下一个房间时可无视路径限制，共 3 次。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "单人模式限定（IsAllowedAtNeow）。"
+        },
+        {
+          "id": "lava_rock",
+          "en": "Lava Rock",
+          "effect": "第 1 幕 Boss 被击败时掉落 2 件遗物。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Small Capsule 互斥，随机加入其一。"
+        },
+        {
+          "id": "small_capsule",
+          "en": "Small Capsule",
+          "effect": "拾取时获得 1 件随机遗物。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Lava Rock 互斥；本轮诅咒为 Large Capsule 时本组不加入。"
+        },
+        {
+          "id": "nutritious_oyster",
+          "en": "Nutritious Oyster",
+          "effect": "拾取时最大生命 +11。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Stone Humidifier 互斥。"
+        },
+        {
+          "id": "stone_humidifier",
+          "en": "Stone Humidifier",
+          "effect": "每次在篝火休息(Rest)时最大生命 +5。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Nutritious Oyster 互斥。"
+        },
+        {
+          "id": "neows_talisman",
+          "en": "Neow's Talisman",
+          "effect": "拾取时升级 1 张打击(Strike)和 1 张防御(Defend)。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Pomander 互斥。"
+        },
+        {
+          "id": "pomander",
+          "en": "Pomander",
+          "effect": "拾取时升级 1 张（随机）卡。",
+          "cost": "无（祝福免费给予）",
+          "category": "正面",
+          "notes": "三组二选一之一：与 Neow's Talisman 互斥。"
+        },
+        {
+          "id": "cursed_pearl",
+          "en": "Cursed Pearl",
+          "effect": "拾取时获得 333 金币。",
+          "cost": "向卡组加入 1 张诅咒「贪婪 (Greed)」。",
+          "category": "诅咒",
+          "notes": "诅咒池每局必出一个（经 IsAllowedAtNeow 过滤后随机）。"
+        },
+        {
+          "id": "hefty_tablet",
+          "en": "Hefty Tablet",
+          "effect": "从 3 张稀有卡中选择 1 张加入卡组。",
+          "cost": "向卡组加入 1 张「创伤 (Injury)」诅咒。",
+          "category": "诅咒",
+          "notes": "与正面 Arcane Scroll 互斥（诅咒为它时正面池移除 Arcane Scroll）。"
+        },
+        {
+          "id": "large_capsule",
+          "en": "Large Capsule",
+          "effect": "拾取时获得 2 件随机遗物。",
+          "cost": "向卡组额外加入 1 张打击(Strike)和 1 张防御(Defend)；且本轮正面池不加入 Lava Rock/Small Capsule 组。",
+          "category": "诅咒"
+        },
+        {
+          "id": "leafy_poultice",
+          "en": "Leafy Poultice",
+          "effect": "变形(Transform)1 张打击和 1 张防御。",
+          "cost": "失去 12 点最大生命。",
+          "category": "诅咒",
+          "notes": "与正面 New Leaf 互斥。"
+        },
+        {
+          "id": "neows_bones",
+          "en": "Neow's Bones",
+          "effect": "拾取时获得 2 件随机内乌(Neow)系遗物。",
+          "cost": "向卡组加入 1 张随机诅咒。",
+          "category": "诅咒",
+          "notes": "代码中其完成页描述使用正面文案，但位于诅咒选项槽（Neow.cs CurseOptions）。"
+        },
+        {
+          "id": "precarious_shears",
+          "en": "Precarious Shears",
+          "effect": "从卡组移除 2 张卡。",
+          "cost": "失去 16 点 HP。",
+          "category": "诅咒",
+          "notes": "与正面 Precise Scissors 互斥。"
+        },
+        {
+          "id": "silken_tress",
+          "en": "Silken Tress",
+          "effect": "第一份卡牌奖励中的所有卡牌获得「魅惑 (Glam)」附魔（每场战斗首次打出时重放 1 次）。",
+          "cost": "拾取时失去全部金币。",
+          "category": "诅咒"
+        },
+        {
+          "id": "silver_crucible",
+          "en": "Silver Crucible",
+          "effect": "前 3 次卡牌奖励全部为已升级卡。",
+          "cost": "第一个打开的宝箱是空的。",
+          "category": "诅咒",
+          "notes": "单人模式限定。"
+        }
+      ],
+      "selection_note": "每局展示 2 个正面 + 1 个诅咒三选一：诅咒槽从诅咒池随机 1 个；正面槽从 14 张主池（扣除互斥项）+ 三组二选一各 1 项中洗牌后取 2。自定义修改器(Modifier)存在时选项改由修改器生成。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "orobas",
+      "en": "Orobas",
+      "zh": "奥罗巴斯",
+      "epithet": "Living Rainbow / 活体彩虹",
+      "act": 2,
+      "act_note": "蜂巢(Hive)幕古代之一（纪元解锁门槛），三选一",
+      "blessings": [
+        {
+          "id": "electric_shrymp",
+          "en": "Electric Shrymp",
+          "effect": "拾取时为 1 张技能牌附魔「灌能 (Imbued)」（每场战斗开始时自动打出，置于抽牌堆底部）。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "glass_eye",
+          "en": "Glass Eye",
+          "effect": "拾取时获得 2 张普通(Common)、2 张罕见(Uncommon)、1 张稀有(Rare)卡。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "sand_castle",
+          "en": "Sand Castle",
+          "effect": "拾取时随机升级 6 张卡。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "sea_glass",
+          "en": "Sea Glass",
+          "effect": "看到另一（随机已解锁）角色的 15 张卡，任选任意数量加入卡组。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1 附加项（非 Prismatic Gem 时必占其一）。"
+        },
+        {
+          "id": "prismatic_gem",
+          "en": "Prismatic Gem",
+          "effect": "每回合开始时 +1 能量；此后的卡牌奖励包含其他角色颜色的卡。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1 附加项，约 33.3% 概率替换 Sea Glass。"
+        },
+        {
+          "id": "alchemical_coffer",
+          "en": "Alchemical Coffer",
+          "effect": "拾取时获得 4 个药水槽，并全部填入随机药水。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2（三选一必含其一）。"
+        },
+        {
+          "id": "driftwood",
+          "en": "Driftwood",
+          "effect": "每份卡牌奖励可以重掷(reroll)一次。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2。"
+        },
+        {
+          "id": "radiant_pearl",
+          "en": "Radiant Pearl",
+          "effect": "每场战斗开始时将 1 张「微光 (Luminesce)」（获得 1 能量）加入手牌。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2。"
+        },
+        {
+          "id": "touch_of_orobas",
+          "en": "Touch of Orobas",
+          "effect": "拾取时将你的起始遗物替换为其升级(Ancient)版本。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3（无起始遗物时此池锁定，显示 Locked 选项）。"
+        },
+        {
+          "id": "archaic_tooth",
+          "en": "Archaic Tooth",
+          "effect": "拾取时将一张起始卡变形(Transform)为其远古(Ancient)版本。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3（无起始卡时此池锁定）。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "pael",
+      "en": "Pael",
+      "zh": "佩尔",
+      "epithet": "Melting Dragon / 熔化之龙",
+      "act": 2,
+      "act_note": "蜂巢(Hive)幕古代之一，三选一",
+      "blessings": [
+        {
+          "id": "paels_flesh",
+          "en": "Pael's Flesh",
+          "effect": "从第 3 回合开始，每回合开始时额外 +1 能量。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "paels_horn",
+          "en": "Pael's Horn",
+          "effect": "拾取时向卡组加入 2 张「放松 (Relax)」（获得格挡；下回合抽牌并获得能量）。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "paels_tears",
+          "en": "Pael's Tears",
+          "effect": "回合结束时有未花费的能量 → 下回合开始时额外 +2 能量。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "paels_wing",
+          "en": "Pael's Wing",
+          "effect": "可将卡牌奖励献给(sacrifice)佩尔；每 2 次献祭获得 1 件遗物。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2 基础项。"
+        },
+        {
+          "id": "paels_claw",
+          "en": "Pael's Claw",
+          "effect": "拾取时所有防御(Defend)牌附魔「黏稠 (Goopy)」：获得消耗(Exhaust)，每次打出后该卡格挡永久 +1。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2 条件项：卡组中 ≥3 张防御牌时才会出现。"
+        },
+        {
+          "id": "paels_tooth",
+          "en": "Pael's Tooth",
+          "effect": "从卡组移除 5 张卡；每场战斗结束后随机将其中 1 张升级后加回卡组。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2 条件项：≥5 张可移除卡时才出现。"
+        },
+        {
+          "id": "paels_growth",
+          "en": "Pael's Growth",
+          "effect": "拾取时选 1 张卡附魔「复制 (Clone)」(4 层)：该卡可在篝火复制（4 次），并解锁篝火 Clone 选项。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2 条件项：卡组中 ≥3 张可附魔牌（Goopy 判定）时出现。"
+        },
+        {
+          "id": "paels_eye",
+          "en": "Pael's Eye",
+          "effect": "每场战斗中第一次以不出牌结束回合时：消耗(Exhaust)整个手牌并获得一个额外回合。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "paels_blood",
+          "en": "Pael's Blood",
+          "effect": "每回合开始时额外抽 1 张牌。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "paels_legion",
+          "en": "Pael's Legion",
+          "effect": "使一张卡获得的格挡翻倍，随后沉睡 2 回合（周期性生效的宠物型祝福）。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3 条件项：当前没有事件宠物时才出现。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "tezcatara",
+      "en": "Tezcatara",
+      "zh": "特兹卡特",
+      "epithet": "It Which Feeds the Fire / 饲火者",
+      "act": 2,
+      "act_note": "蜂巢(Hive)幕古代之一，三选一",
+      "blessings": [
+        {
+          "id": "very_hot_cocoa",
+          "en": "Very Hot Cocoa",
+          "effect": "每场战斗第 1 回合开始时额外获得 4 点能量。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "yummy_cookie",
+          "en": "Yummy Cookie",
+          "effect": "拾取时随机升级 4 张卡。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1。"
+        },
+        {
+          "id": "nutritious_soup",
+          "en": "Nutritious Soup",
+          "effect": "拾取时所有打击(Strike)附魔「特兹卡特之烬」：费用降为 0、伤害 +3、获得永恒(Eternal，不可从卡组移除或变形)。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 1 条件项：卡组中有基础打击(Basic+Strike 标签)时才出现。"
+        },
+        {
+          "id": "biiig_hug",
+          "en": "Biiig Hug",
+          "effect": "拾取时从卡组移除 4 张卡。",
+          "cost": "每次洗牌抽牌堆时向抽牌堆加入 1 张「煤烟 (Soot)」诅咒。",
+          "notes": "池 2。"
+        },
+        {
+          "id": "storybook",
+          "en": "Storybook",
+          "effect": "拾取时向卡组加入 1 张「至亮之焰 (Brightest Flame)」（获得能量、抽牌，失去最大生命）。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2。"
+        },
+        {
+          "id": "toasty_mittens",
+          "en": "Toasty Mittens",
+          "effect": "每回合开始时消耗(Exhaust)抽牌堆顶 1 张牌并获得 1 点力量。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 2。"
+        },
+        {
+          "id": "golden_compass",
+          "en": "Golden Compass",
+          "effect": "拾取时将第 2 幕地图替换为一条单一特殊路径。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "pumpkin_candle",
+          "en": "Pumpkin Candle",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "5 场战斗后熄灭（失效）；可在篝火点燃(Kindle)重燃。",
+          "notes": "池 3。"
+        },
+        {
+          "id": "toy_box",
+          "en": "Toy Box",
+          "effect": "拾取时获得 4 件蜡(Wax)遗物。",
+          "cost": "每 3 场战斗，最左边的 1 件蜡遗物融化消失。",
+          "notes": "池 3。"
+        },
+        {
+          "id": "seal_of_gold",
+          "en": "Seal of Gold",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "每回合开始时强制花费 5 金币。",
+          "notes": "池 3。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "nonupeipe",
+      "en": "Nonupeipe",
+      "zh": "诺努佩",
+      "epithet": "Serendipity Incarnate / 机缘化身",
+      "act": 3,
+      "act_note": "荣耀(Glory)幕古代之一，三选一（9 项基础池随机洗牌取 3）",
+      "blessings": [
+        {
+          "id": "blessed_antler",
+          "en": "Blessed Antler",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "每场战斗开始时洗 3 张「眩晕 (Dazed)」进入抽牌堆。"
+        },
+        {
+          "id": "brilliant_scarf",
+          "en": "Brilliant Scarf",
+          "effect": "每回合你从手牌打出的第 5 张牌免费。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "delicate_frond",
+          "en": "Delicate Frond",
+          "effect": "每场战斗开始时空的药水槽全部填入随机药水。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "diamond_diadem",
+          "en": "Diamond Diadem",
+          "effect": "若某回合打出的卡 ≤2 张，该回合你受到的敌人伤害减半。",
+          "cost": "无（祝福免费给予）",
+          "notes": "阈值 CardThreshold=2。"
+        },
+        {
+          "id": "fur_coat",
+          "en": "Fur Coat",
+          "effect": "拾取时随机标记 7 场战斗，那些房间的敌人只有 1 点 HP。",
+          "cost": "无（祝福免费给予）",
+          "notes": "Combats=7。"
+        },
+        {
+          "id": "glitter",
+          "en": "Glitter",
+          "effect": "此后所有卡牌奖励中的卡牌获得「魅惑 (Glam)」附魔（每场战斗首次打出时重放 1 次）。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "jewelry_box",
+          "en": "Jewelry Box",
+          "effect": "拾取时向卡组加入 1 张「神化 (Apotheosis)」（升级你的所有卡牌）。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "looming_fruit",
+          "en": "Looming Fruit",
+          "effect": "拾取时最大生命 +31。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "signet_ring",
+          "en": "Signet Ring",
+          "effect": "拾取时获得 999 金币。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "beautiful_bracelet",
+          "en": "Beautiful Bracelet",
+          "effect": "拾取时选择 3 张卡，为它们附魔「迅捷 (Swift)」(3 层)：每场战斗首次打出该牌时抽 3 张牌。",
+          "cost": "无（祝福免费给予）",
+          "notes": "条件项：卡组中 ≥4 张可附魔迅捷的卡时才出现。v0.111 补丁改为随机 4 张卡+Swift 2（本表为 v0.107.1 数据）。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "tanx",
+      "en": "Tanx",
+      "zh": "坦克斯",
+      "epithet": "Khimera King / 奇美拉之王",
+      "act": 3,
+      "act_note": "荣耀(Glory)幕古代之一，三选一（9 项基础池随机洗牌取 3）",
+      "blessings": [
+        {
+          "id": "claws",
+          "en": "Claws",
+          "effect": "拾取时将至多 6 张卡变形(Transform)为「重锤 (Maul)」（造成伤害两次；战斗中打出会提升所有重锤的伤害）。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "crossbow",
+          "en": "Crossbow",
+          "effect": "每回合开始时将 1 张随机攻击牌加入手牌，该牌本回合免费打出。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "iron_club",
+          "en": "Iron Club",
+          "effect": "每打出 4 张牌，抽 1 张牌。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "meat_cleaver",
+          "en": "Meat Cleaver",
+          "effect": "解锁篝火「烹饪 (Cook)」选项：移除 2 张卡并获得 +9 最大生命。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "sai",
+          "en": "Sai",
+          "effect": "每回合开始时获得 7 点格挡。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "spiked_gauntlets",
+          "en": "Spiked Gauntlets",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "能力(Power)卡费用 +1。"
+        },
+        {
+          "id": "tanxs_whistle",
+          "en": "Tanx's Whistle",
+          "effect": "拾取时向卡组加入 1 张「哨声 (Whistle)」（造成伤害并眩晕(Stun)敌人）。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "throwing_axe",
+          "en": "Throwing Axe",
+          "effect": "每场战斗中你打出的第一张牌额外打出一次（重放）。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "war_hammer",
+          "en": "War Hammer",
+          "effect": "每击败 1 个精英，随机升级 4 张卡。",
+          "cost": "无（祝福免费给予）"
+        },
+        {
+          "id": "tri_boomerang",
+          "en": "Tri-Boomerang",
+          "effect": "拾取时选 3 张攻击牌，为它们附魔「本能 (Instinct)」：该牌攻击伤害翻倍。",
+          "cost": "无（祝福免费给予）",
+          "notes": "条件项：卡组中 ≥3 张攻击牌时才出现。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "vakuu",
+      "en": "Vakuu",
+      "zh": "瓦库",
+      "epithet": "The First Demon / 初代恶魔",
+      "act": 3,
+      "act_note": "荣耀(Glory)幕古代之一，三选一（每池各 1）；运行历史中其选项标记为「took a bad deal」",
+      "blessings": [
+        {
+          "id": "blood_soaked_rose",
+          "en": "Blood-Soaked Rose",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "向卡组加入 1 张「魅惑 (Enthralled)」：在手牌中时必须先于其他卡打出。",
+          "notes": "池 1。"
+        },
+        {
+          "id": "whispering_earring",
+          "en": "Whispering Earring",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "每场战斗的第一回合由瓦库替你打出。",
+          "notes": "池 1。"
+        },
+        {
+          "id": "fiddle",
+          "en": "Fiddle",
+          "effect": "每回合开始时额外抽 2 张牌。",
+          "cost": "你的回合中无法再主动抽牌。",
+          "notes": "池 1。"
+        },
+        {
+          "id": "preserved_fog",
+          "en": "Preserved Fog",
+          "effect": "拾取时从卡组移除 3 张卡。",
+          "cost": "向卡组加入 1 张「愚行 (Folly)」诅咒。",
+          "notes": "池 2。"
+        },
+        {
+          "id": "sere_talon",
+          "en": "Sere Talon",
+          "effect": "向卡组加入 3 个「愿望 (Wish)」（将抽牌堆中 1 张卡放入手牌）。",
+          "cost": "向卡组加入 2 张随机诅咒。",
+          "notes": "池 2。"
+        },
+        {
+          "id": "distinguished_cape",
+          "en": "Distinguished Cape",
+          "effect": "拾取时向卡组加入 3 张「幻影 (Apparition)」（获得无实体(Intangible)）。",
+          "cost": "失去 9 点最大生命。",
+          "notes": "池 2。"
+        },
+        {
+          "id": "choices_paradox",
+          "en": "Choices Paradox",
+          "effect": "每场战斗开始时从 5 张随机卡牌中选择 1 张加入手牌，该卡获得保留(Retain)。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "music_box",
+          "en": "Music Box",
+          "effect": "每回合你打出的第一张攻击牌会创造一个其虚影(Ethereal)复制。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "lords_parasol",
+          "en": "Lord's Parasol",
+          "effect": "遇到商人(Merchant)时立即免费获得他出售的一切商品。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        },
+        {
+          "id": "jeweled_mask",
+          "en": "Jeweled Mask",
+          "effect": "每场战斗开始时从抽牌堆随机选 1 张能力(Power)卡加入手牌，该卡本场战斗免费打出。",
+          "cost": "无（祝福免费给予）",
+          "notes": "池 3。"
+        }
+      ],
+      "version": "v0.107.1"
+    },
+    {
+      "id": "darv",
+      "en": "Darv",
+      "zh": "达尔弗",
+      "epithet": "The Hoarder / 囤积者",
+      "act": null,
+      "act_note": "共享古代：可在多个幕的古代节点出现（「收藏家」，免费给予旧一代 Boss 级遗物）",
+      "blessings": [
+        {
+          "id": "astrolabe",
+          "en": "Astrolabe",
+          "effect": "拾取时变形(Transform)3 张卡，然后升级它们。",
+          "cost": "无（祝福免费给予）",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "black_star",
+          "en": "Black Star",
+          "effect": "精英被击败时额外掉落 1 件遗物。",
+          "cost": "无（祝福免费给予）",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "calling_bell",
+          "en": "Calling Bell",
+          "effect": "拾取时获得 3 件遗物。",
+          "cost": "获得 1 个独特诅咒。",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "empty_cage",
+          "en": "Empty Cage",
+          "effect": "拾取时从卡组移除 2 张卡。",
+          "cost": "无（祝福免费给予）",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "pandoras_box",
+          "en": "Pandora's Box",
+          "effect": "变形(Transform)所有打击(Strike)与防御(Defend)。",
+          "cost": "卡组根基改变（无额外诅咒）。",
+          "notes": "九组遗物池之一；存在会清空卡组的自定义修改器(Modifier)时不出现在池中。"
+        },
+        {
+          "id": "runic_pyramid",
+          "en": "Runic Pyramid",
+          "effect": "回合结束时不再弃掉手牌。",
+          "cost": "无（祝福免费给予）",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "snecko_eye",
+          "en": "Snecko Eye",
+          "effect": "每回合开始时额外抽 2 张牌。",
+          "cost": "每场战斗开始时陷入混乱(Confused)（卡牌费用随机化）。",
+          "notes": "九组遗物池之一。"
+        },
+        {
+          "id": "ectoplasm",
+          "en": "Ectoplasm",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "无法再获得金币。",
+          "notes": "仅 CurrentActIndex==1 的幕出现（按 0 起算即第 2 幕，[推断] 与一代 Boss 遗物分布一致）。"
+        },
+        {
+          "id": "sozu",
+          "en": "Sozu",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "无法再获得药水。",
+          "notes": "仅 CurrentActIndex==1 的幕出现（同上[推断]第 2 幕）。"
+        },
+        {
+          "id": "philosophers_stone",
+          "en": "Philosopher's Stone",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "所有敌人战斗开始时获得 1 点力量。",
+          "notes": "仅 CurrentActIndex==2 的幕出现（[推断]第 3 幕）。"
+        },
+        {
+          "id": "velvet_choker",
+          "en": "Velvet Choker",
+          "effect": "每回合开始时 +1 能量。",
+          "cost": "每回合最多打出 6 张牌。",
+          "notes": "仅 CurrentActIndex==2 的幕出现（[推断]第 3 幕）。"
+        },
+        {
+          "id": "dusty_tome",
+          "en": "Dusty Tome",
+          "effect": "拾取时获得 1 张远古(Ancient)卡（随机）。",
+          "cost": "无（祝福免费给予）",
+          "notes": "50% 概率作为第三个选项出现（SetupForPlayer 定内容）。"
+        }
+      ],
+      "selection_note": "九组遗物池（经当前幕过滤）各随机取 1 件后洗牌，取前 3 件为三选一；50% 概率改为取前 2 件 + 尘封书卷(Dusty Tome)。",
+      "version": "v0.107.1"
+    }
+  ]
+}

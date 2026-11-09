@@ -233,7 +233,7 @@
     "en": "Bone Tea",
     "zh": null,
     "rarity": "event",
-    "effect": "At the start of the next ? combats, Upgrade your starting hand.",
+    "effect": "At the start of the next combat, Upgrade your starting hand.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -298,7 +298,7 @@
     "en": "Bread",
     "zh": null,
     "rarity": "shop",
-    "effect": "At the start of your first turn, lose ? Energy. At the start of all other turns, gain ? Energy.",
+    "effect": "At the start of your first turn, lose 2 Energy. At the start of all other turns, gain 1 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -317,7 +317,7 @@
     "en": "Brimstone",
     "zh": null,
     "rarity": "shop",
-    "effect": "At the start of your turn, gain ? Strength and ALL enemies gain ? Strength.",
+    "effect": "At the start of your turn, gain 2 Strength and ALL enemies gain 1 Strength.",
     "version": "v0.107.1",
     "character": "ironclad"
   },
@@ -1118,7 +1118,7 @@
     "en": "Ivory Tile",
     "zh": null,
     "rarity": "rare",
-    "effect": "Whenever you play a card that costs ? Energy or more, gain 1 Energy.",
+    "effect": "Whenever you play a card that costs 3 Energy or more, gain 1 Energy.",
     "version": "v0.107.1",
     "character": "necrobinder"
   },
@@ -1211,7 +1211,7 @@
     "en": "Large Capsule",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, obtain ? random Relics. Add an additional Strike and Defend to your Deck.",
+    "effect": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1857,7 +1857,7 @@
     "en": "Phylactery Unbound",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of each combat, Summon ?. At the start of your turn, Summon ?.",
+    "effect": "At the start of each combat, Summon 5. At the start of your turn, Summon 2.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"

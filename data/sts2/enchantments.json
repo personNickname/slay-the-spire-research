@@ -1,0 +1,183 @@
+{
+  "version": "v0.107.1",
+  "source": "https://github.com/zhiyue/sts2-rl-agent (反编译 v0.107.1) — decompiled/MegaCrit.Sts2.Core.Models.Enchantments/*.cs + bridge_mod localization eng/enchantments.json",
+  "mechanics_note": "附魔(Enchantment)持久附着于卡牌：一张卡同一时间只能持有一个附魔（EnchantmentModel.IsStackable 默认 false，重复附魔会被拒绝）。大多数附魔带 Amount 数值，来源不同数值不同（如 SelfHelpBook 事件给 Sharp/Nimble/Swift +2）。附魔来源：事件、古代祝福、商店/事件遗物。Deprecated（已移除）与 Mock Free Enchantment（测试占位）两个占位条目未列入。",
+  "enchantments": [
+    {
+      "id": "sharp",
+      "en": "Sharp",
+      "zh": null,
+      "effect": "该攻击牌的伤害 +Amount（随附魔来源数值不同：SelfHelpBook 事件 +2、Gnarled Hammer 遗物 +3）。仅可附魔攻击牌。",
+      "notes": "攻击牌限定。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "nimble",
+      "en": "Nimble",
+      "zh": null,
+      "effect": "该牌获得的格挡 +Amount（SelfHelpBook 事件 +2、Fresnel Lens 遗物 +2）。仅可附魔会获得格挡的牌。",
+      "notes": "格挡牌限定。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "swift",
+      "en": "Swift",
+      "zh": null,
+      "effect": "每场战斗中首次打出该牌时，抽 Amount 张牌（Wing Charm 遗物 +1、SelfHelpBook 事件 +2、美丽手镯 Beautiful Bracelet +3）。",
+      "notes": "每场战斗一次；数值随来源不同。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "sown",
+      "en": "Sown",
+      "zh": null,
+      "effect": "每场战斗中首次打出该牌时，获得 Amount 点能量（蓝宝石种子 Sapphire Seed 事件 +1）。",
+      "notes": "每场战斗一次。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "momentum",
+      "en": "Momentum",
+      "zh": null,
+      "effect": "本次战斗中每次打出该攻击牌，其伤害 +Amount（同场多次打出可叠加）。",
+      "notes": "攻击牌限定；仅本场战斗内生效。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "vigorous",
+      "en": "Vigorous",
+      "zh": null,
+      "effect": "每场战斗中首次打出该攻击牌时，其伤害 +Amount。",
+      "notes": "攻击牌限定；每场战斗一次。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "corrupted",
+      "en": "Corrupted",
+      "zh": null,
+      "effect": "该攻击牌的伤害 ×1.5，但每次打出时失去 2 点 HP。",
+      "notes": "攻击牌限定；来源：Symbiote 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "instinct",
+      "en": "Instinct",
+      "zh": null,
+      "effect": "该攻击牌的攻击伤害 ×2（翻倍）。",
+      "notes": "攻击牌限定；来源：三重回旋镖 Tri-Boomerang（选 3 张攻击牌，+1 层）。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "glam",
+      "en": "Glam",
+      "zh": null,
+      "effect": "该牌每场战斗首次打出时获得重放(Replay)1 次（自动额外打出一次）。",
+      "notes": "每场战斗一次；来源：闪光 Glitter、丝缕 Silken Tress（附魔卡牌奖励/首份奖励）。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "spiral",
+      "en": "Spiral",
+      "zh": null,
+      "effect": "该牌获得重放(Replay)+1（每次打出都额外打出一次）。仅可附魔基础(Basic)的打击(Strike)/防御(Defend)牌。",
+      "notes": "来源：螺旋漩涡 Spiraling Whirlpool 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "imbued",
+      "en": "Imbued",
+      "zh": null,
+      "effect": "该牌在每场战斗开始时自动打出；开局置于抽牌堆底部。仅可附魔技能牌。",
+      "notes": "技能牌限定；来源：电螯虾 Electric Shrymp。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "inky",
+      "en": "Inky",
+      "zh": null,
+      "effect": "该牌伤害 +1，并施加 1 层虚弱(Weak)（全体攻击时对全体敌人施加）。",
+      "notes": "来源：墨之刃 Blade of Ink。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "goopy",
+      "en": "Goopy",
+      "zh": null,
+      "effect": "该牌获得消耗(Exhaust)；每次打出后该牌的格挡永久 +1（数值随打出次数累积）。仅可附魔防御(Defend)牌。",
+      "notes": "防御牌限定；来源：佩尔之爪 Paels Claw（所有防御 +1 层）。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "clone",
+      "en": "Clone",
+      "zh": null,
+      "effect": "该牌可在篝火复制(Clone)：拾取后解锁篝火 Clone 选项，复制所有带本附魔的卡。",
+      "notes": "数值 4（可复制 4 次，佩尔之生长）；来源：佩尔之生长 Paels Growth。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "adroit",
+      "en": "Adroit",
+      "zh": null,
+      "effect": "打出该牌时获得 Amount 点格挡（Kifuda 遗物 +3）。",
+      "notes": "数值随来源不同。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "perfect_fit",
+      "en": "Perfect Fit",
+      "zh": null,
+      "effect": "该牌每次将要被洗牌进抽牌堆时，改为置于抽牌堆顶。",
+      "notes": "来源：人形坑洞 Field of Man-Sized Holes 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "slither",
+      "en": "Slither",
+      "zh": null,
+      "effect": "每次抽到该牌时，其费用在 0~3 之间随机。",
+      "notes": "来源：木雕 Wood Carvings 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "slumbering_essence",
+      "en": "Slumbering Essence",
+      "zh": null,
+      "effect": "回合结束时若该牌在手牌中，其费用 -1（直到打出前持续生效，多个回合可叠加降低）。",
+      "notes": "X 费卡不受影响。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "steady",
+      "en": "Steady",
+      "zh": null,
+      "effect": "该牌获得保留(Retain)：回合结束时不因弃牌阶段被弃掉。",
+      "notes": "来源：浸水抄本 Waterlogged Scriptorium 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "royally_approved",
+      "en": "Royally Approved",
+      "zh": null,
+      "effect": "该牌获得固有(Innate，开局在手)与保留(Retain)。",
+      "notes": "来源：皇家印记 Royal Stamp 遗物。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "souls_power",
+      "en": "Soul's Power",
+      "zh": null,
+      "effect": "该牌失去(移除)消耗(Exhaust)关键字。",
+      "notes": "仅可附魔本身自带消耗的牌；来源：被遗忘者之墓 Grave of the Forgotten 事件。",
+      "version": "v0.107.1"
+    },
+    {
+      "id": "tezcataras_ember",
+      "en": "Tezcatara's Ember",
+      "zh": null,
+      "effect": "该牌费用降为 0、伤害 +3，并获得永恒(Eternal)：不可从卡组移除或变形。仅可附魔基础打击(Strike)牌。",
+      "notes": "基础 Strike 限定；来源：营养汤 Nutritious Soup（特兹卡特祝福，附魔所有打击）。",
+      "version": "v0.107.1"
+    }
+  ]
+}

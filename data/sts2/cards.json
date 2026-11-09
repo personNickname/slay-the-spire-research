@@ -810,8 +810,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain 4 Energy. Cards cost an additional ? Energy this turn.",
-    "effect_up": "Gain 6 Energy. Cards cost an additional ? Energy this turn.",
+    "effect": "Gain 4 Energy. Cards cost an additional 1 Energy this turn.",
+    "effect_up": "Gain 6 Energy. Cards cost an additional 1 Energy this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1009,8 +1009,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "This turn, your next Skill is played an extra time.",
-    "effect_up": "This turn, your next ? Skills are played an extra time.",
+    "effect": "This turn, your next {Skills:plural:Skill is|1 played an extra time.",
+    "effect_up": "This turn, your next {Skills:plural:Skill is|2 played an extra time.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -2649,8 +2649,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Shivs now hit ALL enemies. Add ? Shivs into your Hand.",
-    "effect_up": "Shivs now hit ALL enemies. Add 1 Shivs into your Hand.",
+    "effect": "Shivs now hit ALL enemies. Add 4 Shivs into your Hand.",
+    "effect_up": "Shivs now hit ALL enemies. Add 5 Shivs into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3056,8 +3056,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal 5 damage. If you have played fewer than ? cards this turn, draw 1 card.",
-    "effect_up": "Deal 6 damage. If you have played fewer than 1 cards this turn, draw 1 card.",
+    "effect": "Deal 5 damage. If you have played fewer than 3 cards this turn, draw 1 card.",
+    "effect_up": "Deal 6 damage. If you have played fewer than 4 cards this turn, draw 1 card.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3167,8 +3167,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Gain ? Block. Permanently increase this card's Block by ?.",
-    "effect_up": "Gain ? Block. Permanently increase this card's Block by 1.",
+    "effect": "Gain 1 Block. Permanently increase this card's Block by 3.",
+    "effect_up": "Gain 1 Block. Permanently increase this card's Block by 4.",
     "keywords": [
       "exhaust"
     ],
@@ -3249,8 +3249,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 2,
-    "effect": "Gain 11 Block. Next turn, gain ? Block.",
-    "effect_up": "Gain 13 Block. Next turn, gain 2 Block.",
+    "effect": "Gain 11 Block. Next turn, gain 5 Block.",
+    "effect_up": "Gain 13 Block. Next turn, gain 7 Block.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3655,8 +3655,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "A random card without Replay in your Draw Pile gains Replay ?.",
-    "effect_up": "A random card without Replay in your Draw Pile gains Replay 1.",
+    "effect": "A random card without Replay in your Draw Pile gains Replay 2.",
+    "effect_up": "A random card without Replay in your Draw Pile gains Replay 3.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4125,8 +4125,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 3 damage. Add ? Shivs into your Hand.",
-    "effect_up": "Deal 6 damage. Add ? Shivs into your Hand.",
+    "effect": "Deal 3 damage. Add 2 Shivs into your Hand.",
+    "effect_up": "Deal 6 damage. Add 2 Shivs into your Hand.",
     "keywords": [
       "strike"
     ],
@@ -4209,8 +4209,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 4 Block. At the start of the next ? turns, Channel 1 Lightning.",
-    "effect_up": "Gain 7 Block. At the start of the next ? turns, Channel 1 Lightning.",
+    "effect": "Gain 4 Block. At the start of the next {LightningRodPower:plural:turn|2, Channel 1 Lightning.",
+    "effect_up": "Gain 7 Block. At the start of the next {LightningRodPower:plural:turn|2, Channel 1 Lightning.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7334,8 +7334,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal ? damage. Permanently increase this card's damage by ?.",
-    "effect_up": "Deal ? damage. Permanently increase this card's damage by 1.",
+    "effect": "Deal 13 damage. Permanently increase this card's damage by 4.",
+    "effect_up": "Deal 13 damage. Permanently increase this card's damage by 5.",
     "keywords": [
       "exhaust"
     ],
