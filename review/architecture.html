@@ -266,7 +266,7 @@
   <div class="sub"><span class="new">绿色</span> 为新增，<span class="gen" style="color:var(--blue)">蓝色</span> 为生成产物，<span class="ign">灰斜体</span> 为 git-ignored</div>
 <div class="tree">slay-the-spire-research/
 ├─ data/sts1/                       <span class="c">提取 + 策展（§5）</span>
-│   ├─ <span class="new">cards/&lt;color&gt;.json</span>              <span class="c">提取：red green blue purple colorless curse status</span>
+│   ├─ <span class="new">cards/&lt;color&gt;.json</span>              <span class="c">提取：red green blue purple colorless curse status special</span>
 │   ├─ <span class="new">cards/&lt;color&gt;.effects.json</span>      <span class="c">策展：按卡 id 键入的 DSL</span>
 │   ├─ <span class="new">relics.json / relics.effects.json</span>
 │   ├─ <span class="new">powers.json / powers.effects.json</span>
@@ -278,13 +278,14 @@
 ├─ data/sts2/                       <span class="c">不动</span>
 ├─ <span class="new">schemas/</span>                           <span class="c">每实体一份 + dsl.schema.json</span>
 ├─ <span class="new">tools/</span>                             <span class="c">Node + TypeScript（tsx），无 Python</span>
-│   ├─ decompile.ts  merge.ts  validate.ts  status.ts  build-review.ts
-│   └─ extract/ localization.ts cards.ts relics.ts powers.ts potions.ts monsters.ts events.ts characters.ts map.ts keywords.ts java-parse.ts
-├─ <span class="new">packages/sts-data/</span>                 <span class="c">npm workspace：@sts/data（types.ts 由 schema 生成）</span>
+│   ├─ decompile.ts  merge.ts  validate.ts（写 review/validation.json）  status.ts  build-review.ts
+│   └─ extract/ localization.ts cards.ts relics.ts powers.ts potions.ts monsters.ts events.ts characters.ts map.ts keywords.ts class-filter.ts java-parse.ts
+├─ <span class="new">packages/sts-data/</span>                 <span class="c">npm workspace：@sts/data（types.ts 由 schema 生成并提交；<span class="ign">dist/</span> git-ignored）</span>
 ├─ <span class="ign">decompiled/</span>                        <span class="c">CFR 输出，git-ignored</span>
 ├─ review/
-│   ├─ index.html                   <span class="c">现有 UI，扩展</span>
+│   ├─ index.html                   <span class="c">现有 UI，StS1 视图改造</span>
 │   ├─ <span class="new">architecture.html</span>              <span class="c">本页</span>
+│   ├─ <span class="gen">validation.json</span>                <span class="c">validate.ts 写出，提交</span>
 │   ├─ <span class="gen">data.js</span>                        <span class="c">生成，仍提交</span>
 │   └─ <s>build.py</s>                     <span class="c">删除</span>
 ├─ <span class="new">docs/superpowers/{specs,plans}/</span>
@@ -346,15 +347,21 @@
   <span class="k">"base"</span>:    { <span class="k">"damage"</span>: 8,    <span class="k">"block"</span>: null, <span class="k">"magic"</span>: 2 },
   <span class="k">"upgrade"</span>: { <span class="k">"cost"</span>: null, <span class="k">"damage"</span>: 2, <span class="k">"block"</span>: null, <span class="k">"magic"</span>: 1 },   <span class="c">// upgrade() 解析出的增量</span>
   <span class="k">"keywords"</span>: [],                                   <span class="c">// exhaust ethereal innate retain unplayable</span>
+  <span class="k">"upgradeKeywords"</span>: null,                          <span class="c">// null = 同 keywords；否则为升级后的完整数组</span>
   <span class="k">"playable"</span>: true,
   <span class="k">"effects"</span>: [                                      <span class="c">// ← 来自 red.effects.json（策展）</span>
     { <span class="k">"op"</span>: <span class="s">"damage"</span>,     <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"amount"</span>: <span class="s">"damage"</span> },
     { <span class="k">"op"</span>: <span class="s">"applyPower"</span>, <span class="k">"target"</span>: <span class="s">"enemy"</span>, <span class="k">"power"</span>: <span class="s">"Vulnerable"</span>, <span class="k">"amount"</span>: <span class="s">"magic"</span> }
   ],
-  <span class="k">"upgradeEffects"</span>: null,                           <span class="c">// 升级改变行为（非仅数值）时覆盖</span>
-  <span class="k">"source"</span>: { <span class="k">"class"</span>: <span class="s">"com.megacrit.cardcrawl.cards.red.Bash"</span> }
+  <span class="k">"upgradeEffects"</span>: null,                           <span class="c">// null = 同 effects（引用自动取升级数值）；否则为完整替换列表，不是补丁</span>
+  <span class="k">"source"</span>: { <span class="k">"class"</span>: <span class="s">"com.megacrit.cardcrawl.cards.red.Bash"</span>, <span class="k">"jar"</span>: <span class="s">"desktop-1.0"</span>, <span class="k">"jarSha256"</span>: <span class="s">"…"</span> }
 }</pre>
   <div class="tip"><code>!D! !B! !M!</code> 与 <code>NL</code> 占位符<b>原样保留</b>，由引擎在渲染时替换，和原游戏一致；这也让 §8 的「文本 ↔ 数值一致性」测试成为可能。</div>
+  <div class="grid g3">
+    <div class="card"><h5>文件划分</h5><p><code>cards/red green blue purple colorless curse status special.json</code>；<code>special.json</code> 收 tempCards / optionCards（小刀、洞察、选项卡等），<code>color:"special"</code>，不可获得者 <code>playable:false</code>。</p></div>
+    <div class="card"><h5>升级语义（固定）</h5><p><code>upgrade</code> 存增量；<code>upgradeKeywords</code> / <code>upgradeEffects</code> 为 null 表示「与基础相同」，否则是<b>完整替换</b>而非补丁。两者都进 Schema 校验。</p></div>
+    <div class="card"><h5>统一溯源对象</h5><p>所有实体同一形状：<code>{ class, jar, jarSha256 }</code>；<code>additionalProperties:false</code> 下只允许这一种。</p></div>
+  </div>
 
   <h3>5.2 其余实体</h3>
   <div class="tbl-wrap"><table>
@@ -362,7 +369,7 @@
     <tr><td><b>Relic</b></td><td>id · name · flavor · description（DESCRIPTIONS 拼接，<code>#b</code> 替换为计数器）· tier（starter/common/uncommon/rare/boss/shop/event/special/blight）· pool（red/green/blue/purple/shared）· counterStart · source</td><td><code>triggers: [{ on, do: [ops] }]</code>；hook：combatStart turnStart turnEnd cardPlayed attackPlayed onRest onPickup onShuffle onExhaust onVictory onChestOpen atDamageGive atDamageReceive modifyBlock custom</td></tr>
     <tr><td><b>Power</b></td><td>id · name · description · type（buff/debuff）· turnBased · canStack · priority · source</td><td><code>triggers</code>（同上 + atEndOfRound onApply onRemove）</td></tr>
     <tr><td><b>Potion</b></td><td>id · name · description · rarity · targetRequired · potency{base, perAscension} · sacredBarkDoubles · source</td><td><code>effects</code></td></tr>
-    <tr><td><b>Monster</b></td><td>id · name · act · tier · hp{min,max} · hpA7 · moves[{ byte, name, intent, damage, hits, block, powers[], 进阶分档 }] · source</td><td>行为 <code>pattern</code> 沿用现有散文；AI DSL 延后到子项目 2</td></tr>
+    <tr><td><b>Monster</b></td><td>id · name · act · tier · <code>hp: Asc&lt;{min,max}&gt;</code> · moves[{ byte, name, intent, <code>damage: Asc&lt;int&gt;</code>, <code>hits</code>, <code>block</code>, powers[{ power, <code>amount: Asc&lt;int&gt;</code> }] }] · source。<br><b><code>Asc&lt;T&gt; = { base: T, asc?: [{ level, value: T }] }</code></b>，level 取类里 <code>ascensionLevel &gt;= N</code> 的阈值（普通 2/7/17、精英 3/8/18、Boss 4/9/19），结构本身不写死阈值</td><td>行为 <code>pattern</code> 沿用现有散文；AI DSL 延后到子项目 2</td></tr>
     <tr><td><b>Encounter</b></td><td>act · kind（weak/normal/elite/boss）· monsters[] · weight</td><td>—</td></tr>
     <tr><td><b>Event</b></td><td>id · name · pool · text · options[{ text, requirement }]</td><td>options[].outcomes DSL（gold hp maxHp card relic potion curse combat custom）</td></tr>
     <tr><td><b>Neow</b></td><td>四阶段祝福 / 代价选项</td><td>—</td></tr>
@@ -399,10 +406,19 @@
     <tr><td><code>custom</code></td><td>id, note</td><td>逃生口；引擎按 id 手写；数量被统计</td></tr>
   </table></div>
 
+  <div class="tbl-wrap"><table>
+    <tr><th>amount 引用</th><th>适用实体</th><th>运行时解析为</th></tr>
+    <tr><td><code>"damage" "block" "magic"</code></td><td>卡牌</td><td>卡牌当前（含升级）基础值，再经 Power/遗物修正</td></tr>
+    <tr><td><code>"x"</code></td><td>卡牌</td><td>X 费卡消耗的能量</td></tr>
+    <tr><td><code>"energy"</code></td><td>卡牌 · 遗物</td><td>玩家当前能量</td></tr>
+    <tr><td><code>"potency"</code></td><td>药水</td><td><code>potency.base</code> 按进阶调整，<code>sacredBarkDoubles</code> 时翻倍</td></tr>
+    <tr><td><code>"stacks"</code></td><td>Power</td><td>该 Power 当前层数</td></tr>
+    <tr><td><code>"counter"</code></td><td>遗物</td><td>该遗物当前计数器</td></tr>
+  </table></div>
   <div class="grid g3">
-    <div class="card"><h5>amount</h5><p>整数，或引用：<code>"damage" "block" "magic" "x" "energy"</code>。引用在运行时解析到卡牌当前数值（含升级、力量、易伤）。</p></div>
     <div class="card"><h5>target</h5><p><code>self enemy allEnemies randomEnemy none</code></p></div>
-    <div class="card"><h5>修饰</h5><p><code>repeat</code>（整数或 amount 引用）；<code>if</code> 为闭合条件枚举：<code>targetHasPower:X</code> <code>handEmpty</code> <code>inStance:X</code> <code>lastCardType:X</code> <code>hpBelowHalf</code> …</p></div>
+    <div class="card"><h5>修饰</h5><p><code>repeat</code>（整数或 amount 引用）；<code>if</code> 为<b>闭合</b>条件枚举，初始：<code>targetHasPower:X selfHasPower:X handEmpty handAllAttacks inStance:X lastCardType:X hpBelowHalf targetIntent:attack drawPileEmpty firstCardThisTurn</code></p></div>
+    <div class="card"><h5>词表治理</h5><p>敲定 <code>dsl.schema.json</code> 是实施计划的<b>第一个任务</b>；策展期间新增 op/条件 → 小版本号 +1，<code>validate</code> 重跑全部已完成批次。</p></div>
   </div>
 
   <details><summary>示例：多段攻击 + 条件</summary><div class="body">
@@ -424,6 +440,13 @@
 <section id="s7">
   <h2><span class="num">7</span>提取与策展工作流</h2>
   <div class="sub">提取是自动的；策展由代理分批完成并经审阅</div>
+
+  <div class="flow">
+    <span class="step acc">Phase A · 流水线</span><span class="dim" style="font-size:13px">工具链 → decompile → class-filter → 全部提取器 → Schema（含敲定的 dsl.schema.json）→ validate / merge / build-review（保留 StS2 打包）→ StS1 视图改造 → 测试 1–6 → TODO.md。结束态：全部实体已提取，effects 全空</span>
+  </div>
+  <div class="flow">
+    <span class="step acc">Phase B · 策展</span><span class="dim" style="font-size:13px">§7.2 的 DSL 批次，每批一个小提交，<code>status</code> 随批次刷新 TODO.md</span>
+  </div>
 
   <h3>7.1 提取器识别的 Java 模式</h3>
 <pre class="formula"><span class="c">// 卡牌构造器</span>
@@ -470,8 +493,8 @@ super(ID, <span class="s">"anchor.png"</span>, RelicTier.<span class="k">COMMON<
     <tr><th>#</th><th>测试</th><th>防住什么</th></tr>
     <tr><td>1</td><td>Schema 校验全部数据文件</td><td>字段拼错、类型错、枚举外值</td></tr>
     <tr><td>2</td><td>交叉引用完整性</td><td>引用不存在的 Power / 卡 / 怪 / 遗物</td></tr>
-    <tr><td>3</td><td>数量断言：371 卡 · 180+13 遗物 · 42 药水 · 62 怪 · 52 事件，与 jar 类列表比对</td><td>漏提取、重复</td></tr>
-    <tr><td>4</td><td>黄金值 ~30 条：Bash 8/2→10/3 · Strike 6→9 · Defend 5→8 · Jaw Worm 40–44（A7 42–46）· Chomp 11（A2 12）· Anchor 10 · Burning Blood 6 · Fire Potion 20 · Cultist Ritual 3/4/5</td><td>正则回归时给出有名字的失败</td></tr>
+    <tr><td>3</td><td>数量断言：期望值由 <code>class-filter.ts</code> 过滤后的 jar 类列表<b>推导</b>（排除 Abstract*/PotionSlot/MonsterGroup/内部类/deprecated，纳入 exordium|city|beyond|ending|shrines 子包）；371 卡 · 180+13 遗物 · 42 药水 · 62 怪 · 52 事件 仅作一条 sanity 断言，不一致时同时报出两个数</td><td>漏提取、重复、规格数字写错</td></tr>
+    <tr><td>4</td><td>黄金值 ~30 条，覆盖三档怪物：Bash 8/2→10/3 · Strike 6→9 · Defend 5→8 · Jaw Worm 40–44（A7 42–46）· Chomp 11（A2 12）· Gremlin Nob（精英）82–86（A8 85–90）· Guardian（Boss）240（A9 250）· Anchor 10 · Burning Blood 6 · Fire Potion 20 · Cultist Ritual 3/4/5</td><td>正则回归时给出有名字的失败；进阶阈值按档位验证</td></tr>
     <tr><td>5</td><td>文本 ↔ 数值一致性：描述里出现 <code>!M!</code> 则 <code>base.magic</code> 非空；样本集替换占位符后与已知数值一致</td><td>字段映射错位</td></tr>
     <tr><td>6</td><td><code>_unresolved.json</code> 为空</td><td>静默跳过</td></tr>
     <tr><td>7</td><td>DSL 覆盖率报告（不失败，写入 TODO.md）</td><td>custom 悄悄膨胀</td></tr>
@@ -489,9 +512,10 @@ super(ID, <span class="s">"anchor.png"</span>, RelicTier.<span class="k">COMMON<
     <div class="card"><h5>DSL 渲染</h5><p>展开行里以项目符号列出 ops</p></div>
     <div class="card"><h5>溯源</h5><p>显示 <code>source.class</code></p></div>
     <div class="card"><h5>en / zh 切换</h5><p>官方双语文本</p></div>
-    <div class="card"><h5>校验横幅</h5><p>读取 <code>review/validation.json</code></p></div>
-    <div class="card"><h5>build.py → build-review.ts</h5><p>Python 移除</p></div>
+    <div class="card"><h5>校验横幅</h5><p>读取 <code>review/validation.json</code>（由 validate.ts 写出）</p></div>
+    <div class="card"><h5>build.py → build-review.ts</h5><p>Python 移除；<b>继续原样打包 data/sts2</b>（移植 flatten_neow / 信封解包），StS2 Tab 不受影响</p></div>
   </div>
+  <div class="tip warn">这是对 StS1 视图的<b>改造</b>而非点缀：实体键 <code>enemies → monsters</code>、<code>cards_neutral_groups → 按颜色文件</code>、hash 路由 <code>#db/sts1/&lt;entity&gt;</code> 更新、中文散文字段改为 <code>name.zh / description.zh</code>。</div>
 
   <h3>9.2 TODO.md 固定结构</h3>
 <pre class="formula"># Project TODO
