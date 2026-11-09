@@ -97,8 +97,9 @@
     "id": "bloody_idol",
     "en": "Bloody Idol",
     "zh": "染血神像",
-    "rarity": "event",
-    "effect": "每当你获得金币，回复 5 点生命。"
+    "rarity": "special",
+    "effect": "每当你获得金币，回复 5 点生命。",
+    "source": "event"
   },
   {
     "id": "blue_candle",
@@ -265,8 +266,9 @@
     "id": "cultist_headpiece",
     "en": "Cultist Headpiece",
     "zh": "邪教徒头饰",
-    "rarity": "event",
-    "effect": "你感觉自己变得健谈了。（纪念遗物，无实际效果）"
+    "rarity": "special",
+    "effect": "你感觉自己变得健谈了。（纪念遗物，无实际效果）",
+    "source": "event"
   },
   {
     "id": "cursed_key",
@@ -360,8 +362,9 @@
     "id": "enchiridion",
     "en": "Enchiridion",
     "zh": "古圣典",
-    "rarity": "event",
-    "effect": "每场战斗开始时，将 1 张随机能力牌加入手牌，该回合其费用为 0。"
+    "rarity": "special",
+    "effect": "每场战斗开始时，将 1 张随机能力牌加入手牌，该回合其费用为 0。",
+    "source": "event"
   },
   {
     "id": "eternal_feather",
@@ -374,8 +377,9 @@
     "id": "face_of_cleric",
     "en": "Face of Cleric",
     "zh": "牧师之面",
-    "rarity": "event",
-    "effect": "每场战斗结束后，最大生命值提高 1 点。"
+    "rarity": "special",
+    "effect": "每场战斗结束后，最大生命值提高 1 点。",
+    "source": "event"
   },
   {
     "id": "fossilized_helix",
@@ -454,8 +458,9 @@
     "id": "golden_idol",
     "en": "Golden Idol",
     "zh": "黄金神像",
-    "rarity": "event",
-    "effect": "敌人掉落的金币增加 25%。"
+    "rarity": "special",
+    "effect": "敌人掉落的金币增加 25%。",
+    "source": "event"
   },
   {
     "id": "gremlin_horn",
@@ -468,8 +473,9 @@
     "id": "gremlin_visage",
     "en": "Gremlin Visage",
     "zh": "小鬼面具",
-    "rarity": "event",
-    "effect": "每场战斗开始时，你获得 1 层虚弱。"
+    "rarity": "special",
+    "effect": "每场战斗开始时，你获得 1 层虚弱。",
+    "source": "event"
   },
   {
     "id": "grotesque_trophy",
@@ -622,8 +628,9 @@
     "id": "mark_of_the_bloom",
     "en": "Mark of the Bloom",
     "zh": "绽放烙印",
-    "rarity": "event",
-    "effect": "你不再能回复生命。"
+    "rarity": "special",
+    "effect": "你不再能回复生命。",
+    "source": "event"
   },
   {
     "id": "matryoshka",
@@ -708,8 +715,9 @@
     "id": "mutagenic_strength",
     "en": "Mutagenic Strength",
     "zh": "诱变力量",
-    "rarity": "event",
-    "effect": "每场战斗开始时获得 3 点力量，第一回合结束时失去 3 点力量。"
+    "rarity": "special",
+    "effect": "每场战斗开始时获得 3 点力量，第一回合结束时失去 3 点力量。",
+    "source": "event"
   },
   {
     "id": "muzzle",
@@ -723,36 +731,41 @@
     "id": "nloths_gift",
     "en": "N'loth's Gift",
     "zh": "尼洛斯的礼物",
-    "rarity": "event",
-    "effect": "战斗奖励中出现稀有牌的概率提高三倍。"
+    "rarity": "special",
+    "effect": "战斗奖励中出现稀有牌的概率提高三倍。",
+    "source": "event"
   },
   {
     "id": "nloths_hungry_face",
     "en": "N'loth's Hungry Face",
     "zh": "尼洛斯的饥饿面孔",
-    "rarity": "event",
-    "effect": "你打开的下一个非首领宝箱是空的。"
+    "rarity": "special",
+    "effect": "你打开的下一个非首领宝箱是空的。",
+    "source": "event"
   },
   {
     "id": "necronomicon",
     "en": "Necronomicon",
     "zh": "死灵之书",
-    "rarity": "event",
-    "effect": "每回合内你打出的第一张费用不低于 2 的攻击牌会被额外打出一次。拾取时，获得 1 个特殊诅咒。"
+    "rarity": "special",
+    "effect": "每回合内你打出的第一张费用不低于 2 的攻击牌会被额外打出一次。拾取时，获得 1 个特殊诅咒。",
+    "source": "event"
   },
   {
     "id": "neows_lament",
     "en": "Neow's Lament",
     "zh": "尼奥的哀悼",
-    "rarity": "event",
-    "effect": "你前 3 场战斗中的敌人只有 1 点生命。"
+    "rarity": "special",
+    "effect": "你前 3 场战斗中的敌人只有 1 点生命。",
+    "source": "event"
   },
   {
     "id": "nilrys_codex",
     "en": "Nilry's Codex",
     "zh": "尼里的法典",
-    "rarity": "event",
-    "effect": "每回合结束时，可以从 3 张随机牌中选择 1 张洗入抽牌堆。"
+    "rarity": "special",
+    "effect": "每回合结束时，可以从 3 张随机牌中选择 1 张洗入抽牌堆。",
+    "source": "event"
   },
   {
     "id": "ninja_scroll",
@@ -781,8 +794,9 @@
     "id": "odd_mushroom",
     "en": "Odd Mushroom",
     "zh": "怪异蘑菇",
-    "rarity": "event",
-    "effect": "当你带有易伤时，受到的攻击伤害提高 25% 而非 50%。"
+    "rarity": "special",
+    "effect": "当你带有易伤时，受到的攻击伤害提高 25% 而非 50%。",
+    "source": "event"
   },
   {
     "id": "oddly_smooth_stone",
@@ -961,8 +975,9 @@
     "id": "red_mask",
     "en": "Red Mask",
     "zh": "红面具",
-    "rarity": "event",
-    "effect": "每场战斗开始时，对所有敌人施加 1 层虚弱。"
+    "rarity": "special",
+    "effect": "每场战斗开始时，对所有敌人施加 1 层虚弱。",
+    "source": "event"
   },
   {
     "id": "red_skull",
@@ -1132,15 +1147,17 @@
     "id": "spirit_poop",
     "en": "Spirit Poop",
     "zh": "幽灵便便",
-    "rarity": "event",
-    "effect": "它令人很不舒服。（纪念遗物，无实际效果）"
+    "rarity": "special",
+    "effect": "它令人很不舒服。（纪念遗物，无实际效果）",
+    "source": "event"
   },
   {
     "id": "ssserpent_head",
     "en": "Ssserpent Head",
     "zh": "蛇蛇之首",
-    "rarity": "event",
-    "effect": "每次进入 ? 房间，获得 50 金币。"
+    "rarity": "special",
+    "effect": "每次进入 ? 房间，获得 50 金币。",
+    "source": "event"
   },
   {
     "id": "stone_calendar",
@@ -1373,8 +1390,9 @@
     "id": "warped_tongs",
     "en": "Warped Tongs",
     "zh": "扭曲火钳",
-    "rarity": "event",
-    "effect": "回合开始时，升级手牌中的 1 张随机牌（本场战斗内持续有效）。"
+    "rarity": "special",
+    "effect": "回合开始时，升级手牌中的 1 张随机牌（本场战斗内持续有效）。",
+    "source": "event"
   },
   {
     "id": "whetstone",
