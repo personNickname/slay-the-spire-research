@@ -1,0 +1,1066 @@
+[
+  {
+    "id": "neow",
+    "en": "Neow",
+    "zh": "喵呜",
+    "act": 0,
+    "pool": "neow",
+    "description": "每局开始时塔底的巨鲸生物喵呜按上一局成绩给予祝福：上一局未到达第1幕Boss时仅提供2个固定祝福，否则提供四阶段各选一项的标准祝福。",
+    "options": [
+      {
+        "text": "二选一变体·最大生命（Max HP Bonus）",
+        "effect": "最大生命上限 +8/6/7/7（按铁甲战士/寂静猎手/缺陷机器人/观者），[A14] +7/5/6/6。仅上一局未到达第1幕Boss时出现。"
+      },
+      {
+        "text": "二选一变体·喵呜的哀伤（Neow's Lament）",
+        "effect": "获得遗物喵呜的哀伤：接下来 3 场战斗中敌人只有 1 点 HP。仅上一局未到达第1幕Boss时出现。"
+      },
+      {
+        "text": "标准第一祝福（卡牌类，六选一）",
+        "effect": "移除 1 张卡 / 变形 1 张卡 / 升级 1 张卡 / 从 3 张本角色随机卡中选择 1 张获得 / 选择获得 1 张随机非凡(Uncommon)无色卡 / 获得随机 1 张稀有(Rare)卡。"
+      },
+      {
+        "text": "标准第二祝福（五选一）",
+        "effect": "最大生命 +8/6/7/7（按角色，[A14] +7/5/6/6）/ 获得喵呜的哀伤（接下来3场战斗敌人仅1HP）/ 获得随机普通(Common)遗物 / +100 金 / 获得 3 瓶随机药水。"
+      },
+      {
+        "text": "标准第三祝福（代价+更强奖励）",
+        "effect": "随机一项代价：最大生命 -8/7/7/7（按角色，[A14] -7/6/7/6）、受到 ⌊当前HP/10⌋×3 的伤害（数值受 A6/A14 影响）、获得 1 张随机诅咒、失去所有金币；搭配随机一项奖励：移除 2 张卡（不与诅咒组合）、变形 2 张卡、+250 金（不与失去金币组合）、从3张随机稀有卡中选择1张获得、选择获得1张稀有无色卡、获得随机稀有遗物、最大生命 +16/12/14/14（按角色，[A14] +14/10/12/12，不与失去最大生命组合）。"
+      },
+      {
+        "text": "标准第四祝福（Boss交换，Boss Swap）",
+        "effect": "将初始遗物随机替换为 1 件 Boss 遗物（不能换成角色初始遗物的强化版）。"
+      }
+    ]
+  },
+  {
+    "id": "a_note_for_yourself",
+    "en": "A Note For Yourself",
+    "zh": "给自己的便条",
+    "act": null,
+    "pool": "shrine",
+    "description": "柱中松动的砖里塞着一张自己笔迹的便条和一张卡：可取出存储的卡并存入卡组中一张卡供以后的局取回（跨局、跨角色共享；A15起不再出现，A14及以下需在所选角色上通过当前升阶等级才会遇到；每日爬塔禁用此事件）。",
+    "options": [
+      {
+        "text": "取走并存入（Take and Give）",
+        "effect": "获得便条中存储的卡（本存档首次遇到时内置铁波 Iron Wave；存的升级卡取回时保留升级状态），并从卡组中选择 1 张卡存入便条。"
+      },
+      {
+        "text": "无视（Ignore）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "bonfire_spirits",
+    "en": "Bonfire Spirits",
+    "zh": "营火之灵",
+    "act": null,
+    "pool": "shrine",
+    "description": "紫色火灵围绕篝火起舞，向火中献祭一张卡，按其稀有度获得相应回报。",
+    "options": [
+      {
+        "text": "献祭（Offer）",
+        "effect": "移除所选卡牌并获得回报：基础(Basic)卡→无效果；普通(Common)卡→回复 5 HP；非凡(Uncommon)卡→回满 HP；稀有(Rare)卡→最大生命 +10 并回满 HP；诅咒卡→获得遗物便便(Spirit Poop)（无任何效果，仅使分数 -1）。"
+      }
+    ]
+  },
+  {
+    "id": "duplicator",
+    "en": "Duplicator",
+    "zh": "复制器",
+    "act": null,
+    "pool": "shrine",
+    "description": "古老华丽祭坛可以复制卡组中的一张卡。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "选择卡组中 1 张卡，将其 1 张副本加入卡组。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "golden_shrine",
+    "en": "Golden Shrine",
+    "zh": "黄金神龛",
+    "act": null,
+    "pool": "shrine",
+    "description": "黄金打造的华丽神龛：可以祈祷获得金币，或亵渎它得到更多金币但染上诅咒。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "+100 金（[A15] +50 金）。"
+      },
+      {
+        "text": "亵渎（Desecrate）",
+        "effect": "+275 金，获得诅咒 Regret（懊悔：无法打出；回合结束时失去等同于手牌数量的 HP）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "lab",
+    "en": "Lab",
+    "zh": "实验室",
+    "act": null,
+    "pool": "shrine",
+    "description": "满是试管和漏斗的实验室，搜索后可获得数瓶随机药水。",
+    "options": [
+      {
+        "text": "搜索（Search）",
+        "effect": "弹出含 3 瓶（[A15] 2 瓶）随机药水的奖励界面，可逐一选择或跳过。"
+      }
+    ]
+  },
+  {
+    "id": "match_and_keep",
+    "en": "Match and Keep",
+    "zh": "配对保留",
+    "act": null,
+    "pool": "shrine",
+    "description": "无害的小鬼摆出 12 张背面朝下的卡牌翻牌配对游戏，共 5 次尝试，配对成功的卡（含诅咒）会加入卡组。",
+    "options": [
+      {
+        "text": "开始游戏（Play）",
+        "effect": "翻牌配对：12 张卡中必含 1 对无色卡与 1 对诅咒卡；5 次尝试内配对成功的所有卡加入卡组。"
+      }
+    ]
+  },
+  {
+    "id": "ominous_forge",
+    "en": "Ominous Forge",
+    "zh": "阴森熔炉",
+    "act": null,
+    "pool": "shrine",
+    "description": "小屋内的阴森熔炉（内部名 Accursed_Blacksmith）：可以升级一张卡，或翻找废料获得特殊遗物但染上诅咒。",
+    "options": [
+      {
+        "text": "锻造（Forge）",
+        "effect": "升级卡组中 1 张卡。"
+      },
+      {
+        "text": "翻找（Rummage）",
+        "effect": "获得遗物扭曲钳(Warped Tongs)（每回合开始时随机升级手牌中 1 张卡，本场战斗内持续），并获得诅咒 Pain（疼痛：无法打出；在手牌中时，每打出另一张卡失去 1 HP）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "purifier",
+    "en": "Purifier",
+    "zh": "净化者",
+    "act": null,
+    "pool": "shrine",
+    "description": "被遗忘之灵的华丽祭坛，可以移除卡组中的一张卡。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "divine_fountain",
+    "en": "The Divine Fountain",
+    "zh": "洁净之泉",
+    "act": null,
+    "pool": "shrine",
+    "description": "墙壁上不停流淌圣光的泉水，可以洗净卡组中所有诅咒（仅当卡组中已有诅咒时出现）。",
+    "options": [
+      {
+        "text": "饮用（Drink）",
+        "effect": "移除卡组中所有诅咒卡。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "woman_in_blue",
+    "en": "The Woman in Blue",
+    "zh": "蓝衣女人",
+    "act": null,
+    "pool": "shrine",
+    "description": "苍白利落的蓝衣女人将你拉进小商店，强制向你卖药水：三档价格 20/30/40 金逐档递增，每档各可购买一次。",
+    "options": [
+      {
+        "text": "买 1 瓶（Buy 1 Potion）",
+        "effect": "花 20 金获得 1 瓶随机药水（价格随购买档位递增 20→30→40）。"
+      },
+      {
+        "text": "买 2 瓶（Buy 2 Potions）",
+        "effect": "花 30 金获得 1 瓶随机药水（价格随购买档位递增 20→30→40）。"
+      },
+      {
+        "text": "买 3 瓶（Buy 3 Potions）",
+        "effect": "花 40 金获得 1 瓶随机药水（价格随购买档位递增 20→30→40）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "transmogrifier",
+    "en": "Transmogrifier",
+    "zh": "变形者",
+    "act": null,
+    "pool": "shrine",
+    "description": "被遗忘之灵的华丽祭坛，可以变形卡组中的一张卡。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "变形(Transform)卡组中 1 张卡（移除并以同稀有度随机新卡替换）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "upgrade_shrine",
+    "en": "Upgrade Shrine",
+    "zh": "升级神龛",
+    "act": null,
+    "pool": "shrine",
+    "description": "被遗忘之灵的华丽祭坛，可以升级卡组中的一张卡。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "升级卡组中 1 张卡。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "we_meet_again",
+    "en": "We Meet Again!",
+    "zh": "我们又见面了！",
+    "act": null,
+    "pool": "shrine",
+    "description": "自称认识你的邋遢熟人 Ranwid 再次出现，索要药水、金币或卡牌来换一件随机遗物。",
+    "options": [
+      {
+        "text": "给药水（Give Potion）",
+        "effect": "事件进场时随机指定 1 瓶你持有的药水（离开本层前无法喝掉或丢弃它）；交出该药水，获得 1 件随机遗物。"
+      },
+      {
+        "text": "给金币（Give Gold）",
+        "effect": "失去 50~150 金（不超过持有量），获得 1 件随机遗物。"
+      },
+      {
+        "text": "给卡牌（Give Card）",
+        "effect": "交出卡组中 1 张卡（不能是基础卡或诅咒卡），获得 1 件随机遗物。"
+      },
+      {
+        "text": "攻击（Attack）",
+        "effect": "无事发生，他直接跑掉。"
+      }
+    ]
+  },
+  {
+    "id": "wheel_of_change",
+    "en": "Wheel of Change",
+    "zh": "命运之轮",
+    "act": null,
+    "pool": "shrine",
+    "description": "衣着光鲜的小鬼招呼你强制转动命运转盘，六种结果好坏参半。",
+    "options": [
+      {
+        "text": "转动（Play）",
+        "effect": "随机获得以下之一：受到最大生命 10%（[A15] 15%）的伤害 / 获得金币（第1/2/3幕分别为 100/200/300 金）/ 获得 1 件随机遗物 / 回满 HP / 获得诅咒 Decay（衰退：无法打出；回合结束时受到 2 点伤害）/ 从卡组移除 1 张卡。"
+      }
+    ]
+  },
+  {
+    "id": "big_fish",
+    "en": "Big Fish",
+    "zh": "大鱼",
+    "act": 1,
+    "pool": "act1",
+    "description": "走廊上空用绳子吊着香蕉、甜甜圈和盒子：治疗、最大生命提升或遗物加诅咒三选一。",
+    "options": [
+      {
+        "text": "香蕉（Banana）",
+        "effect": "回复最大生命 1/3 的 HP（向下取整）。"
+      },
+      {
+        "text": "甜甜圈（Donut）",
+        "effect": "最大生命 +5（同时回复 5 HP）。"
+      },
+      {
+        "text": "盒子（Box）",
+        "effect": "获得 1 件随机普通/非凡/稀有遗物，并获得诅咒 Regret（懊悔：无法打出；回合结束时失去等同于手牌数量的 HP）。"
+      }
+    ]
+  },
+  {
+    "id": "dead_adventurer",
+    "en": "Dead Adventurer",
+    "zh": "死亡冒险者",
+    "act": 1,
+    "pool": "act1",
+    "description": "被精英杀死的冒险者倒在路边，财物完好（仅第7层起出现）：可反复搜尸摸取奖励，但每次都有概率让凶手精英回来。",
+    "options": [
+      {
+        "text": "搜身（Search）",
+        "effect": "每次搜身有 25%（[A15] 35%）概率触发与 1 个随机第1幕精英的战斗（胜利获得精英战奖励，但已通过搜身拿到的金币/遗物会从战斗奖励中扣除）；否则随机获得 30 金、1 件随机遗物或一无所有（每种奖励最多出现一次，可连续搜身，第2、3次精英概率递增为 50%/75%，[A15] 60%/85%）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "face_trader",
+    "en": "Face Trader",
+    "zh": "脸颊商人",
+    "act": null,
+    "pool": "shared",
+    "description": "手持数张面具的诡异雕像商贩（第1-2幕神龛，五种面具遗物的唯一来源）：可交易一张随机面具，或伸手触摸它换金币。",
+    "options": [
+      {
+        "text": "触摸（Touch）",
+        "effect": "受到最大生命 10%（向下取整）的伤害，+75 金（[A15] +50 金）。"
+      },
+      {
+        "text": "交易（Trade）",
+        "effect": "随机获得 5 种面具遗物之一：教士面容(Face of Cleric)（每场战斗结束时最大生命+1，好脸）/ 蛇头(Ssserpent Head)（每次进入?房间+50金，好脸）/ 小鬼面相(Gremlin Visage)（每场战斗开始时获得1层虚弱，坏脸）/ 恩洛斯饥饿之颜(N'loth's Hungry Face)（下一个非Boss宝箱为空，坏脸）/ 邪教徒头饰(Cultist Headpiece)（无实际效果，仅战斗开始时大喊 CAW!，中性脸）。事件文本称50%好/50%坏，实际概率为好脸40%/坏脸40%/中性20%，5 种面具等概率。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "golden_idol",
+    "en": "Golden Idol",
+    "zh": "黄金偶像",
+    "act": 1,
+    "pool": "act1",
+    "description": "不起眼基座上放着价值连城的黄金偶像：拿取会触发巨石陷阱，需在诅咒、伤害与失去上限之间抉择。",
+    "options": [
+      {
+        "text": "拿取（Take）",
+        "effect": "获得遗物黄金偶像（敌人金币掉落 +25%），触发巨石陷阱，强制从以下三项中选择其一。"
+      },
+      {
+        "text": "陷阱→跑赢（Outrun）",
+        "effect": "逃出陷阱，获得诅咒 Injury（伤病：无法打出，仅占据卡组与手牌位）。"
+      },
+      {
+        "text": "陷阱→砸碎（Smash）",
+        "effect": "受到最大生命 25%（[A15] 35%）的伤害。"
+      },
+      {
+        "text": "陷阱→躲藏（Hide）",
+        "effect": "失去最大生命 8%（[A15] 10%）的最大生命上限。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "hypnotizing_mushrooms",
+    "en": "Hypnotizing Colored Mushrooms",
+    "zh": "催眠彩色蘑菇",
+    "act": 1,
+    "pool": "act1",
+    "description": "走廊里满是催眠彩色蘑菇（仅第7层起出现，奇特蘑菇遗物的唯一来源）：吃蘑菇回血但染上寄生诅咒，或踩踏与三只真菌兽战斗。",
+    "options": [
+      {
+        "text": "踩踏（Stomp）",
+        "effect": "激怒蘑菇，与 3 只真菌兽(Fungi Beast)战斗；胜利获得专属遗物奇特蘑菇(Odd Mushroom)（处于易伤时受到的攻击伤害为+25%而非+50%）及常规战斗奖励。"
+      },
+      {
+        "text": "吃下（Eat）",
+        "effect": "回复最大生命 25% 的 HP，并获得诅咒 Parasite（寄生：无法打出；若从卡组中被移除或变形，失去 3 点最大生命）。"
+      }
+    ]
+  },
+  {
+    "id": "living_wall",
+    "en": "Living Wall",
+    "zh": "活体墙",
+    "act": 1,
+    "pool": "act1",
+    "description": "死路尽头墙壁轰然砸下围住你，交出一张卡作为代价才能通过：移除、变形或升级三选一。",
+    "options": [
+      {
+        "text": "遗忘（Forget）",
+        "effect": "从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "改变（Change）",
+        "effect": "变形(Transform)卡组中 1 张卡。"
+      },
+      {
+        "text": "成长（Grow）",
+        "effect": "升级卡组中 1 张卡。"
+      }
+    ]
+  },
+  {
+    "id": "scrap_ooze",
+    "en": "Scrap Ooze",
+    "zh": "废料粘泥",
+    "act": 1,
+    "pool": "act1",
+    "description": "吞下太多废料的粘泥状生物：可以反复把手伸进它体内摸取随机遗物，越摸代价越高、成功率也越高。",
+    "options": [
+      {
+        "text": "伸手（Reach Inside）",
+        "effect": "失去 3（[A15] 5）HP，25% 概率摸出 1 件随机遗物；失败可继续尝试，每次失败后 HP 代价 +1、成功率 +10%（界面显示的概率比实际低 1%）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "shining_light",
+    "en": "Shining Light",
+    "zh": "闪光之光",
+    "act": 1,
+    "pool": "act1",
+    "description": "房间中央是一团邀请你进入的温暖迷光：可承受最大生命20%的伤害来升级两张随机卡牌。",
+    "options": [
+      {
+        "text": "进入（Enter）",
+        "effect": "受到最大生命 20%（[A15] 30%）的伤害，升级 2 张随机卡牌。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "cleric",
+    "en": "The Cleric",
+    "zh": "克莱里克",
+    "act": 1,
+    "pool": "act1",
+    "description": "喧闹友善的教士提供付费服务：治疗或净化卡组（需持有至少 35 金才会出现）。",
+    "options": [
+      {
+        "text": "治疗（Heal）",
+        "effect": "花 35 金，回复最大生命 25% 的 HP（向下取整）。"
+      },
+      {
+        "text": "净化（Purify）",
+        "effect": "花 50 金（[A15] 75 金），从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "ssssserpent",
+    "en": "The Ssssserpent",
+    "zh": "蛇人",
+    "act": 1,
+    "pool": "act1",
+    "description": "巨蛇鼓吹金钱万能：同意它的说法可得到金币，但会染上疑虑诅咒。",
+    "options": [
+      {
+        "text": "同意（Agree）",
+        "effect": "+175 金（[A15] 150 金），并获得诅咒 Doubt（疑虑：无法打出；回合结束时获得 1 层虚弱）。"
+      },
+      {
+        "text": "不同意（Disagree）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "wing_statue",
+    "en": "Wing Statue",
+    "zh": "翼像",
+    "act": 1,
+    "pool": "act1",
+    "description": "巨石间溢出金币的蓝色翼形雕像（内部名 Golden Wing）：可祈祷以少量生命删卡，或摧毁雕像换取金币。",
+    "options": [
+      {
+        "text": "祈祷（Pray）",
+        "effect": "失去 7 HP，从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "摧毁（Destroy）",
+        "effect": "获得 50~80 金；需卡组中有基础伤害（单次）≥10 的攻击卡，否则显示为锁定(Locked)。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "world_of_goop",
+    "en": "World of Goop",
+    "zh": "世界粘液",
+    "act": 1,
+    "pool": "act1",
+    "description": "你跌入灼热粘液坑并爬了出来：可以忍痛回去捞金币，或者任由粘液带走一些金币。",
+    "options": [
+      {
+        "text": "捞金币（Gather Gold）",
+        "effect": "+75 金，失去 11 HP。"
+      },
+      {
+        "text": "留下（Leave It）",
+        "effect": "失去 20~50（[A15] 35~75）金（不超过持有量）。"
+      }
+    ]
+  },
+  {
+    "id": "ancient_writing",
+    "en": "Ancient Writing",
+    "zh": "远古文字",
+    "act": 2,
+    "pool": "act2",
+    "description": "攀登之城的路上发现刻满远古文字的发光墙壁：可删一张卡，或领悟并升级所有打击与防御。",
+    "options": [
+      {
+        "text": "优雅（Elegance）",
+        "effect": "从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "简朴（Simplicity）",
+        "effect": "升级卡组中所有打击(Strike)和防御(Defend)（仅基础卡）。"
+      }
+    ]
+  },
+  {
+    "id": "augmenter",
+    "en": "Augmenter",
+    "zh": "增幅者",
+    "act": 2,
+    "pool": "act2",
+    "description": "可疑的实验爱好者要拿你做实验推进科学：注射J.A.X.血清、变形两张卡，或摄入诱变剂（J.A.X.卡与突变力量遗物的唯一来源）。",
+    "options": [
+      {
+        "text": "测试 J.A.X.（Test J.A.X.）",
+        "effect": "将无色技能卡 J.A.X.（0费：失去 3 HP，获得 2 力量；升级后获得 3 力量）加入卡组。"
+      },
+      {
+        "text": "成为实验对象（Become Test Subject）",
+        "effect": "变形(Transform)卡组中 2 张卡。"
+      },
+      {
+        "text": "摄入诱变剂（Ingest Mutagens）",
+        "effect": "获得遗物突变力量(Mutagenic Strength)（每场战斗开始时获得 3 力量，第一回合结束时失去 3 力量）。"
+      }
+    ]
+  },
+  {
+    "id": "council_of_ghosts",
+    "en": "Council of Ghosts",
+    "zh": "幽灵议会",
+    "act": 2,
+    "pool": "act2",
+    "description": "黑烟凝成的三个戴面具幽灵其中之一请你品尝它们的力量：以一半最大生命上限换取幻影卡牌。",
+    "options": [
+      {
+        "text": "接受（Accept）",
+        "effect": "获得 5 张（[A15] 3 张）幻影(Apparition)（1费技能：虚体；获得 1 层无形(Intangible)；消耗），失去最大生命 50%（向上取整）的生命上限。"
+      },
+      {
+        "text": "拒绝（Refuse）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "cursed_tome",
+    "en": "Cursed Tome",
+    "zh": "诅咒书典",
+    "act": 2,
+    "pool": "act2",
+    "description": "废弃神殿中记载喵呜起源的巨型书典，翻读会持续被其力量灼伤；坚持读完可随机获得三大书典遗物之一。",
+    "options": [
+      {
+        "text": "阅读→继续→继续→继续→拿取（Read/Continue×3/Take）",
+        "effect": "阅读中每次继续分别失去 1、2、3 HP；选择拿取再失去 10（[A15] 15）HP（全程合计 16 [A15] 21 HP），随机获得死灵之书(Necronomicon)（每回合打出的首张≥2费的攻击牌结算两次，拾取时获得无法移除/变形/消耗的诅咒 Necronomicurse）/ 恩奇里迪翁(Enchiridion)（每场战斗开始时将 1 张随机能力卡以 0 费加入手牌，仅当回合有效）/ 尼尔里法典(Nilry's Codex)（每回合结束时可将 3 张随机卡之一洗入抽牌堆）之一；拿到前不知道是哪本。"
+      },
+      {
+        "text": "阅读后停止（Stop）",
+        "effect": "读完三层后放弃：再失去 3 HP（全程合计 9 HP）离开，不获得书典。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "designer_in_spire",
+    "en": "Designer In-Spire",
+    "zh": "尖塔设计师",
+    "act": null,
+    "pool": "shared",
+    "description": "挑剔势利的设计师勉强提供有偿改卡服务（第2-3幕神龛，需持有至少 75 金才会出现）：升级、清理、全套服务，或付钱挨一拳。",
+    "options": [
+      {
+        "text": "调整（Adjustments）",
+        "effect": "花 40（[A15] 50）金，随机获得以下之一：升级 1 张卡 / 升级 2 张随机卡。"
+      },
+      {
+        "text": "清理（Clean Up）",
+        "effect": "花 60（[A15] 75）金，随机获得以下之一：移除 1 张卡 / 变形 2 张卡。"
+      },
+      {
+        "text": "全套服务（Full Service）",
+        "effect": "花 90（[A15] 110）金，移除 1 张卡并升级 1 张随机卡。"
+      },
+      {
+        "text": "挥拳（Punch）",
+        "effect": "失去 3（[A15] 5）HP，没有其他效果。"
+      }
+    ]
+  },
+  {
+    "id": "forgotten_altar",
+    "en": "Forgotten Altar",
+    "zh": "遗忘祭坛",
+    "act": 2,
+    "pool": "act2",
+    "description": "被遗忘神明的祭坛上伸着双臂的女雕像索要祭品：黄金偶像换血腥偶像、以HP换最大生命，或亵渎它染上诅咒。",
+    "options": [
+      {
+        "text": "献上黄金偶像（Offer: Golden Idol）",
+        "effect": "失去黄金偶像遗物，获得血腥偶像(Bloody Idol)（每次获得金币回复 5 HP）；未持有黄金偶像时显示为锁定(Locked)。"
+      },
+      {
+        "text": "献祭（Sacrifice）",
+        "effect": "最大生命 +5，受到最大生命 25%（[A15] 35%）的伤害。"
+      },
+      {
+        "text": "亵渎（Desecrate）",
+        "effect": "获得诅咒 Decay（衰退：无法打出；回合结束时受到 2 点伤害）。"
+      }
+    ]
+  },
+  {
+    "id": "knowing_skull",
+    "en": "Knowing Skull",
+    "zh": "知识头骨",
+    "act": 2,
+    "pool": "act2",
+    "description": "燃烧的知识头骨逐一提供药水、金币和无色卡，但每次索取都要以递增的生命为代价，直到你问它怎么离开（需 HP≥13 才会出现）。",
+    "options": [
+      {
+        "text": "来点提神的？（A Pick Me Up?）",
+        "effect": "失去 X HP，获得 1 瓶随机药水。可反复选择。"
+      },
+      {
+        "text": "财富？（Riches?）",
+        "effect": "失去 X HP，+90 金。可反复选择。"
+      },
+      {
+        "text": "成功？（Success?）",
+        "effect": "失去 X HP，获得 1 张随机非凡(Uncommon)无色卡。可反复选择。"
+      },
+      {
+        "text": "我怎么离开？（How do I leave?）",
+        "effect": "失去 X HP，事件结束。X 的计算：每项 HP 代价 = 最大生命的 10%（至少 6），且同一选项每选一次 X +1（如 6→7→8）。"
+      }
+    ]
+  },
+  {
+    "id": "masked_bandits",
+    "en": "Masked Bandits",
+    "zh": "面具强盗",
+    "act": 2,
+    "pool": "act2",
+    "description": "戴大红面具的强盗团伙拦路收费：交出全部金币通过，或者开战（胜利可获得红面具，红面具遗物的两个来源之一）。",
+    "options": [
+      {
+        "text": "交钱（Pay）",
+        "effect": "失去全部金币。"
+      },
+      {
+        "text": "战斗（Fight!）",
+        "effect": "与 3 名强盗（Pointy、Romeo、Bear）战斗（按普通战斗而非精英结算）；胜利获得常规卡牌奖励、25~35 金和遗物红面具(Red Mask)（每场战斗开始时对所有敌人施加 1 层虚弱）。"
+      }
+    ]
+  },
+  {
+    "id": "nloth",
+    "en": "N'loth",
+    "zh": "恩洛斯",
+    "act": 2,
+    "pool": "act2",
+    "description": "背着触手的驼背生物恩洛斯翻着垃圾堆喊饿：喂给它一件你持有的遗物，换取恩洛斯之礼（需持有至少 2 件遗物才会出现）。",
+    "options": [
+      {
+        "text": "献上遗物A（Offer: Relic A）",
+        "effect": "事件从你持有的遗物中随机选出两件候选；失去所选遗物，获得恩洛斯之礼(N'loth's Gift)（战斗卡牌奖励中出现稀有卡的概率变为 3 倍）。"
+      },
+      {
+        "text": "献上遗物B（Offer: Relic B）",
+        "effect": "失去另一件候选遗物，同样获得恩洛斯之礼(N'loth's Gift)。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "old_beggar",
+    "en": "Old Beggar",
+    "zh": "老乞丐",
+    "act": 2,
+    "pool": "act2",
+    "description": "披着毛皮的老乞丐伸手乞求施舍：给 75 金他帮你删一张卡（需持有至少 75 金才会出现）。",
+    "options": [
+      {
+        "text": "给金币（Offer Gold）",
+        "effect": "花 75 金，从卡组中移除 1 张卡。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "pleading_vagrant",
+    "en": "Pleading Vagrant",
+    "zh": "恳求流浪者",
+    "act": 2,
+    "pool": "act2",
+    "description": "裹衣流浪者兜售遗物换金币：可以老实买下，或直接抢劫但染上诅咒（需持有至少 75 金才会出现）。",
+    "options": [
+      {
+        "text": "给金币（Offer Gold）",
+        "effect": "花 85 金，获得 1 件随机遗物（金币不足时选项置灰）。"
+      },
+      {
+        "text": "抢劫（Rob）",
+        "effect": "获得 1 件随机遗物，并获得诅咒 Shame（羞耻：无法打出；回合结束时获得 1 层脆弱）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "colosseum",
+    "en": "The Colosseum",
+    "zh": "竞技场",
+    "act": 2,
+    "pool": "act2",
+    "description": "你被绑架进座无虚席的竞技场（仅在第2幕保证宝箱层即第6行/全局第23层之后出现）：先强制打一场表演赛，再选择怯懦退场或挑战冠军赢取大奖。",
+    "options": [
+      {
+        "text": "战斗（Fight）",
+        "effect": "与蓝奴役者(Blue Slaver)和红奴役者(Red Slaver)战斗，无任何战斗奖励；战斗结束后必须从以下两项中选择其一。"
+      },
+      {
+        "text": "表演赛后→怯懦（COWARDICE）",
+        "effect": "逃离竞技场，事件结束。"
+      },
+      {
+        "text": "表演赛后→胜利（VICTORY）",
+        "effect": "与监工(Taskmaster)和小鬼首领(Gremlin Nob)战斗（对绝大多数遗物效果按精英战结算，黑星除外）；胜利奖励 100 金、1 件稀有遗物、1 件非凡遗物、1 次卡牌奖励和概率药水。"
+      }
+    ]
+  },
+  {
+    "id": "joust",
+    "en": "The Joust",
+    "zh": "骑士比武",
+    "act": 2,
+    "pool": "act2",
+    "description": "骑士为被谋杀的爱宠 Noodles 与凶手决斗，并强迫你下注 50 金：押凶手更稳，押主人赔率更高（需持有超过 50 金才会出现；没有不下注的选项）。",
+    "options": [
+      {
+        "text": "押凶手（Murderer）",
+        "effect": "下注 50 金：70% 概率获得 100 金（净赚 50），30% 概率血本无归。"
+      },
+      {
+        "text": "押主人（Owner）",
+        "effect": "下注 50 金：30% 概率获得 250 金（净赚 200），70% 概率血本无归。"
+      }
+    ]
+  },
+  {
+    "id": "library",
+    "en": "The Library",
+    "zh": "图书馆",
+    "act": 2,
+    "pool": "act2",
+    "description": "铭牌脱落的废弃图书馆：可以从 20 张卡中挑一张加入卡组，也可以睡一觉回复生命。",
+    "options": [
+      {
+        "text": "阅读（Read）",
+        "effect": "从 20 张卡中选择 1 张加入卡组。"
+      },
+      {
+        "text": "睡觉（Sleep）",
+        "effect": "回复最大生命 33%（[A15] 20%）的 HP。"
+      }
+    ]
+  },
+  {
+    "id": "mausoleum",
+    "en": "The Mausoleum",
+    "zh": "陵墓",
+    "act": 2,
+    "pool": "act2",
+    "description": "穿行墓穴时发现渗出黑泥、镶满宝石的大石棺：开棺可获随机遗物，但可能染上挣扎诅咒。",
+    "options": [
+      {
+        "text": "打开棺材（Open Coffin）",
+        "effect": "获得 1 件随机遗物，并有 50%（[A15] 100%）概率获得诅咒 Writhe（挣扎：无法打出；固有(Innate)，每局开始必定在手牌）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "nest",
+    "en": "The Nest",
+    "zh": "巢穴",
+    "act": 2,
+    "pool": "act2",
+    "description": "你混入排向大教堂的长队教徒中：可以打砸捐赠箱抢钱，或随队参加仪式偷取仪式匕首。",
+    "options": [
+      {
+        "text": "打砸抢（Smash and Grab）",
+        "effect": "+99 金（[A15] 50 金）。"
+      },
+      {
+        "text": "继续排队（Stay in Line）",
+        "effect": "失去 6 HP，获得无色攻击卡仪式匕首(Ritual Dagger)（1费 15 伤；以此卡击杀敌人则本局内其伤害永久 +3，升级后 +5；消耗）。"
+      }
+    ]
+  },
+  {
+    "id": "vampires",
+    "en": "Vampires",
+    "zh": "吸血鬼",
+    "act": 2,
+    "pool": "act2",
+    "description": "进行黑暗仪式的兜帽吸血鬼邀请你入教：移除所有打击换成 5 张撕咬，代价是 30% 最大生命上限（或血瓶遗物）。",
+    "options": [
+      {
+        "text": "献上血瓶（Offer: Blood Vial）",
+        "effect": "仅持有血瓶(Blood Vial)时出现：失去血瓶遗物；移除卡组中所有打击(Strike)，获得 5 张撕咬(Bite)（1费攻击：造成 7 伤并吸血 2 HP，升级后 8 伤 3 HP）。"
+      },
+      {
+        "text": "接受（Accept）",
+        "effect": "移除卡组中所有打击(Strike)，获得 5 张撕咬(Bite)，失去最大生命 30% 的生命上限。"
+      },
+      {
+        "text": "拒绝（Refuse）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "falling",
+    "en": "Falling",
+    "zh": "坠落",
+    "act": 3,
+    "pool": "act3",
+    "description": "在彼岸的浮空平台上失足坠落：必须献祭一张随机卡牌才能安全落地，选项会明示将失去哪张卡。",
+    "options": [
+      {
+        "text": "降落（Land）",
+        "effect": "失去 1 张随机技能(Skill)卡（被瓶颈闪电(Bottled Lightning)选中的卡除外）；卡组中无技能卡时此选项锁定。"
+      },
+      {
+        "text": "引导（Channel）",
+        "effect": "失去 1 张随机能力(Power)卡（被瓶颈龙卷风(Bottled Tornado)选中的卡除外）；卡组中无能力卡时此选项锁定。"
+      },
+      {
+        "text": "打击（Strike）",
+        "effect": "失去 1 张随机攻击(Attack)卡（被瓶颈烈焰(Bottled Flame)选中的卡除外）；卡组中无攻击卡时此选项锁定。"
+      }
+    ]
+  },
+  {
+    "id": "mind_bloom",
+    "en": "Mind Bloom",
+    "zh": "心灵绽放",
+    "act": 3,
+    "pool": "act3",
+    "description": "思绪在彼岸化作现实：与Boss一战、升级全部卡牌、999金或回满血，每个愿望都伴随代价。",
+    "options": [
+      {
+        "text": "我是战争（I am War）",
+        "effect": "与随机 1 个第1幕Boss战斗；胜利获得 1 件稀有遗物、常规战斗奖励和 50（[A15] 25）金。"
+      },
+      {
+        "text": "我已觉醒（I am Awake）",
+        "effect": "升级卡组中所有卡牌，获得遗物绽放烙印(Mark of the Bloom)（本局无法再以任何方式回复生命）。"
+      },
+      {
+        "text": "我是富豪（I am Rich）",
+        "effect": "仅在第 35~40 层出现：+999 金，获得 2 张诅咒 Normality（常态：无法打出；在手牌中时本回合最多只能打出 3 张牌）。"
+      },
+      {
+        "text": "我很健康（I am Healthy）",
+        "effect": "第 41 层起替代「我是富豪」：回满 HP，获得诅咒 Doubt（疑虑：无法打出；回合结束时获得 1 层虚弱）。"
+      }
+    ]
+  },
+  {
+    "id": "mysterious_sphere",
+    "en": "Mysterious Sphere",
+    "zh": "神秘球体",
+    "act": 3,
+    "pool": "act3",
+    "description": "骨质球体封存着发光的宝物，守卫机兵在旁巡逻：打破球体开战可赢取稀有遗物。",
+    "options": [
+      {
+        "text": "打开球体（Open Sphere）",
+        "effect": "与 2 个宝珠行者(Orb Walker)战斗；胜利获得 1 件稀有遗物、45~55 金、1 次卡牌奖励和概率药水。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "secret_portal",
+    "en": "Secret Portal",
+    "zh": "秘密传送门",
+    "act": 3,
+    "pool": "act3",
+    "description": "彼岸墙壁中嵌入的魔法传送门直达本幕Boss，可跳过第3幕剩余路程（需局内时间经过 800 秒即13分20秒才会出现）。",
+    "options": [
+      {
+        "text": "进入传送门（Enter the Portal）",
+        "effect": "立刻与第3幕Boss开战（当前楼层仅 +1，比常规提前抵达Boss层；A20 时打完双Boss）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "sensory_stone",
+    "en": "Sensory Stone",
+    "zh": "感官之石",
+    "act": 3,
+    "pool": "act3",
+    "description": "旋转的光之超立方体让你触碰到他人的记忆：想要越多无色卡，就要承受越重的痛苦。",
+    "options": [
+      {
+        "text": "回忆×1（Recall）",
+        "effect": "获得 1 张随机无色卡。"
+      },
+      {
+        "text": "回忆×2（Recall）",
+        "effect": "获得 2 张随机无色卡，失去 5 HP。"
+      },
+      {
+        "text": "回忆×3（Recall）",
+        "effect": "获得 3 张随机无色卡，失去 10 HP。"
+      }
+    ]
+  },
+  {
+    "id": "moai_head",
+    "en": "The Moai Head",
+    "zh": "摩艾石像",
+    "act": 3,
+    "pool": "act3",
+    "description": "与不断变位的彼岸格格不入的巨型摩艾石像，表面刻着跳进它嘴里的人（需持有黄金偶像或 HP≤50% 才会出现）。",
+    "options": [
+      {
+        "text": "跳进去（Jump Inside）",
+        "effect": "回满 HP，失去最大生命 12.5%（[A15] 18%）的生命上限。"
+      },
+      {
+        "text": "献上黄金偶像（Offer: Golden Idol）",
+        "effect": "失去黄金偶像遗物，+333 金；未持有黄金偶像时显示为锁定(Locked)。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "tomb_of_lord_red_mask",
+    "en": "Tomb of Lord Red Mask",
+    "zh": "红面具领主之墓",
+    "act": 3,
+    "pool": "act3",
+    "description": "浮空小径尽头的华美墓穴上方刻着被刮掉的铭文，只留下一个投币口：献上金币可换红面具；已持有红面具者可白拿金币。",
+    "options": [
+      {
+        "text": "戴上红面具（Don the Red Mask）",
+        "effect": "仅已持有红面具(Red Mask)时出现：+222 金（保留红面具）。"
+      },
+      {
+        "text": "献上金币（Offer: X Gold）",
+        "effect": "未持有红面具时出现：失去全部金币，获得红面具(Red Mask)（每场战斗开始时对所有敌人施加 1 层虚弱）。"
+      },
+      {
+        "text": "离开（Leave）",
+        "effect": "无事发生。"
+      }
+    ]
+  },
+  {
+    "id": "winding_halls",
+    "en": "Winding Halls",
+    "zh": "迷途大厅",
+    "act": 3,
+    "pool": "act3",
+    "description": "不断变位的蜿蜒回廊与无形的低语使你发狂：拥抱疯狂、专注或折返原路，三条路各有代价。",
+    "options": [
+      {
+        "text": "拥抱疯狂（Embrace Madness）",
+        "effect": "获得 2 张疯狂(Madness)（1费技能：将手牌中 1 张随机卡的费用在本场战斗中降为 0；消耗），受到最大生命 12.5%（[A15] 18%）的伤害。"
+      },
+      {
+        "text": "专注（Focus）",
+        "effect": "获得诅咒 Writhe（挣扎：无法打出；固有(Innate)），回复最大生命 25%（[A15] 20%）的 HP。"
+      },
+      {
+        "text": "折返原路（Retrace Your Steps）",
+        "effect": "失去最大生命 5% 的生命上限。"
+      }
+    ]
+  }
+]

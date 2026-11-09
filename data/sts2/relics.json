@@ -51,18 +51,18 @@
     "en": "Archaic Tooth",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Transform StringValue:cond:? into ?.",
+    "effect": "Upon pickup, Transform ?.",
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "art_of_war",
     "en": "Art of War",
     "zh": null,
     "rarity": "rare",
-    "effect": "If you do not play any Attacks during your turn, gain an additional 1 next turn.",
+    "effect": "If you do not play any Attacks during your turn, gain an additional 1 Energy next turn.",
     "version": "v0.107.1",
     "character": null
   },
@@ -71,7 +71,7 @@
     "en": "Astrolabe",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Transform 3 lural:card, then Upgrade them.",
+    "effect": "Upon pickup, Transform 3 cards, then Upgrade them.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -90,7 +90,7 @@
     "en": "Bag of Preparation",
     "zh": null,
     "rarity": "common",
-    "effect": "At the start of each combat, draw 2 additional lural:card.",
+    "effect": "At the start of each combat, draw 2 additional cards.",
     "version": "v0.107.1",
     "character": null
   },
@@ -108,7 +108,7 @@
     "en": "Beautiful Bracelet",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, choose 3 lural:card in your Deck. Enchant them with Swift 3.",
+    "effect": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -136,7 +136,7 @@
     "en": "Big Hat",
     "zh": null,
     "rarity": "rare",
-    "effect": "At the start of each combat, add 2 random Ethereal lural:card into your Hand.",
+    "effect": "At the start of each combat, add 2 random Ethereal cards into your Hand.",
     "version": "v0.107.1",
     "character": "necrobinder"
   },
@@ -145,7 +145,7 @@
     "en": "Big Mushroom",
     "zh": null,
     "rarity": "event",
-    "effect": "Upon pickup, raise your Max HP by 20. At the start of each combat, draw 2 fewer lural:card.",
+    "effect": "Upon pickup, raise your Max HP by 20. At the start of each combat, draw 2 fewer cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -195,7 +195,7 @@
     "en": "Blessed Antler",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. At the start of each combat, shuffle 3 Dazed into your Draw Pile.",
+    "effect": "Gain 1 Energy at the start of each turn. At the start of each combat, shuffle 3 Dazed into your Draw Pile.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -205,7 +205,7 @@
     "en": "Blood-Soaked Rose",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, add 1 Enthralled to your Deck. Gain 1 at the start of each turn.",
+    "effect": "Upon pickup, add 1 Enthralled to your Deck. Gain 1 Energy at the start of each turn.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -233,7 +233,7 @@
     "en": "Bone Tea",
     "zh": null,
     "rarity": "event",
-    "effect": "At the start of the next lural:combat, Upgrade your starting hand.",
+    "effect": "At the start of the next ? combats, Upgrade your starting hand.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -243,7 +243,7 @@
     "en": "Book of Five Rings",
     "zh": null,
     "rarity": "common",
-    "effect": "Every 5 lural:card you add to your Deck, heal 20 HP.",
+    "effect": "Every 5 cards you add to your Deck, heal 20 HP.",
     "version": "v0.107.1",
     "character": null
   },
@@ -270,7 +270,7 @@
     "en": "Booming Conch",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of Elite combats, draw 2 additional lural:card and gain 1.",
+    "effect": "At the start of Elite combats, draw 2 additional cards and gain 1 Energy.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -289,7 +289,7 @@
     "en": "Bowler Hat",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Gain 1.25% additional Gold.",
+    "effect": "Gain 1.25% more% additional Gold.",
     "version": "v0.107.1",
     "character": null
   },
@@ -298,7 +298,7 @@
     "en": "Bread",
     "zh": null,
     "rarity": "shop",
-    "effect": "At the start of your first turn, lose LoseEnergy:energyIcons(). At the start of all other turns, gain GainEnergy:energyIcons().",
+    "effect": "At the start of your first turn, lose ? Energy. At the start of all other turns, gain ? Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -373,7 +373,7 @@
     "en": "Candelabra",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "At the start of your 2nd turn, gain 2.",
+    "effect": "At the start of your 2nd turn, gain 2 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -391,7 +391,7 @@
     "en": "Cauldron",
     "zh": null,
     "rarity": "shop",
-    "effect": "Upon pickup, brews 5 random lural:potion.",
+    "effect": "Upon pickup, brews 5 random potions.",
     "version": "v0.107.1",
     "character": null
   },
@@ -400,7 +400,7 @@
     "en": "Centennial Puzzle",
     "zh": null,
     "rarity": "common",
-    "effect": "The first time you lose HP each combat, draw 3 lural:card.",
+    "effect": "The first time you lose HP each combat, draw 3 cards.",
     "version": "v0.107.1",
     "character": null
   },
@@ -409,7 +409,7 @@
     "en": "Chandelier",
     "zh": null,
     "rarity": "rare",
-    "effect": "At the start of your 3rd turn, gain 3.",
+    "effect": "At the start of your 3rd turn, gain 3 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -456,7 +456,7 @@
     "en": "Claws",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Transform up to 6 lural:card into Maul.",
+    "effect": "Upon pickup, Transform up to 6 cards into Maul.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -571,7 +571,7 @@
     "en": "Distinguished Cape",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, lose 9 Max HP. Add 3 lural:Apparition to your Deck.",
+    "effect": "Upon pickup, lose 9 Max HP. Add 3 Apparitions to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -581,7 +581,7 @@
     "en": "Divine Destiny",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of each combat, gain 6.",
+    "effect": "At the start of each combat, gain 6 Stars.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -591,7 +591,7 @@
     "en": "Divine Right",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of each combat, gain 3.",
+    "effect": "At the start of each combat, gain 3 Stars.",
     "version": "v0.107.1",
     "character": "regent"
   },
@@ -638,18 +638,18 @@
     "en": "Dusty Tome",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, obtain StringValue:cond:?.",
+    "effect": "Upon pickup, obtain ?.",
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "ectoplasm",
     "en": "Ectoplasm",
     "zh": null,
     "rarity": "ancient",
-    "effect": "You can no longer gain Gold. Gain 1 at the start of each turn.",
+    "effect": "You can no longer gain Gold. Gain 1 Energy at the start of each turn.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -669,7 +669,7 @@
     "en": "Ember Tea",
     "zh": null,
     "rarity": "event",
-    "effect": "At the start of the next lural:combat, gain 2 Strength.",
+    "effect": "At the start of the next ? combats, gain 2 Strength.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -688,7 +688,7 @@
     "en": "Empty Cage",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, remove 2 lural:card from your Deck.",
+    "effect": "Upon pickup, remove 2 cards from your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -698,7 +698,7 @@
     "en": "Eternal Feather",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "For every lural:card in your Deck, heal 3 HP whenever you enter a Rest Site.",
+    "effect": "For every ? cards in your Deck, heal 3 HP whenever you enter a Rest Site.",
     "version": "v0.107.1",
     "character": null
   },
@@ -727,7 +727,7 @@
     "en": "Happy Flower???",
     "zh": null,
     "rarity": "event",
-    "effect": "Every 5 lural:turn, gain 1.",
+    "effect": "Every 5 turns, gain 1 Energy.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -797,7 +797,7 @@
     "en": "Venerable Tea Set???",
     "zh": null,
     "rarity": "event",
-    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 1.",
+    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 1 Energy.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -825,7 +825,7 @@
     "en": "Fiddle",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of each turn, draw 2 additional lural:card. You may not draw cards during your turn.",
+    "effect": "At the start of each turn, draw 2 additional cards. You may not draw cards during your turn.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -835,7 +835,7 @@
     "en": "Fishing Rod",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Every lural:normal combat, Upgrade a random card in your Deck.",
+    "effect": "Every ? normal combats, Upgrade a random card in your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -855,7 +855,7 @@
     "en": "Fragrant Mushroom",
     "zh": null,
     "rarity": "event",
-    "effect": "Upon pickup, lose 15 HP and Upgrade 2 random lural:card.",
+    "effect": "Upon pickup, lose 15 HP and Upgrade 2 random cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -883,7 +883,7 @@
     "en": "Funerary Mask",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "At the start of each combat, add 3 lural:Soul into your Draw Pile.",
+    "effect": "At the start of each combat, add 3 Souls into your Draw Pile.",
     "version": "v0.107.1",
     "character": "necrobinder"
   },
@@ -920,7 +920,7 @@
     "en": "Game Piece",
     "zh": null,
     "rarity": "rare",
-    "effect": "Whenever you play a Power, draw 1 lural:card.",
+    "effect": "Whenever you play a Power, draw 1 card.",
     "version": "v0.107.1",
     "character": null
   },
@@ -967,7 +967,7 @@
     "en": "Gnarled Hammer",
     "zh": null,
     "rarity": "shop",
-    "effect": "Upon pickup, Enchant up to 3 lural:Attack with Sharp 3.",
+    "effect": "Upon pickup, Enchant up to 3 Attacks with Sharp 3.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1014,7 +1014,7 @@
     "en": "Gremlin Horn",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Whenever an enemy dies, gain 1 and draw 1 lural:card.",
+    "effect": "Whenever an enemy dies, gain 1 Energy and draw 1 card.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1033,7 +1033,7 @@
     "en": "Happy Flower",
     "zh": null,
     "rarity": "common",
-    "effect": "Every 3 lural:turn, gain 1.",
+    "effect": "Every 3 turns, gain 1 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1099,7 +1099,7 @@
     "en": "Intimidating Helmet",
     "zh": null,
     "rarity": "rare",
-    "effect": "Whenever you play a card that costs 2 or more, gain 4 Block.",
+    "effect": "Whenever you play a card that costs 2 Energy or more, gain 4 Block.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1108,7 +1108,7 @@
     "en": "Iron Club",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Every 4 lural:card you play, draw 1 card.",
+    "effect": "Every 4 cards you play, draw 1 card.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1118,7 +1118,7 @@
     "en": "Ivory Tile",
     "zh": null,
     "rarity": "rare",
-    "effect": "Whenever you play a card that costs EnergyThreshold:energyIcons() or more, gain 1.",
+    "effect": "Whenever you play a card that costs ? Energy or more, gain 1 Energy.",
     "version": "v0.107.1",
     "character": "necrobinder"
   },
@@ -1147,7 +1147,7 @@
     "en": "Joss Paper",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Every 5 times you Exhaust a card, draw 1 lural:card.",
+    "effect": "Every 5 times you Exhaust a card, draw 1 card.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1165,7 +1165,7 @@
     "en": "Kaleidoscope",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, obtain 2 lural:card reward from other characters.",
+    "effect": "Upon pickup, obtain 2 card rewards from other characters.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1175,7 +1175,7 @@
     "en": "Kifuda",
     "zh": null,
     "rarity": "shop",
-    "effect": "Upon pickup, Enchant up to 3 lural:card with Adroit.",
+    "effect": "Upon pickup, Enchant up to 3 cards with Adroit.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1193,7 +1193,7 @@
     "en": "Kusarigama",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Every time you play 3 lural:Attack in a single turn, deal 6 damage to a random enemy.",
+    "effect": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1202,7 +1202,7 @@
     "en": "Lantern",
     "zh": null,
     "rarity": "common",
-    "effect": "Start each combat with an additional 1.",
+    "effect": "Start each combat with an additional 1 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1211,7 +1211,7 @@
     "en": "Large Capsule",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, obtain ? random lural:Relic. Add an additional Strike and Defend to your Deck.",
+    "effect": "Upon pickup, obtain ? random Relics. Add an additional Strike and Defend to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1278,7 +1278,7 @@
     "en": "Letter Opener",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Every time you play 3 lural:Skill in a single turn, deal 5 damage to ALL enemies.",
+    "effect": "Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1344,7 +1344,7 @@
     "en": "Lunar Pastry",
     "zh": null,
     "rarity": "rare",
-    "effect": "At the end of your turn, gain 1.",
+    "effect": "At the end of your turn, gain 1 Star.",
     "version": "v0.107.1",
     "character": "regent"
   },
@@ -1511,7 +1511,7 @@
     "en": "Neow's Bones",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, gain 2 random Neow lural:Relic. Add 1 random lural:Curse to your Deck.",
+    "effect": "Upon pickup, gain 2 random Neow Relics. Add 1 random Curse to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1541,7 +1541,7 @@
     "en": "New Leaf",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Transform 1 lural:card.",
+    "effect": "Upon pickup, Transform 1 card.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1551,7 +1551,7 @@
     "en": "Ninja Scroll",
     "zh": null,
     "rarity": "shop",
-    "effect": "At the start of each combat, add 3 lural:Shiv into your Hand.",
+    "effect": "At the start of each combat, add 3 Shivs into your Hand.",
     "version": "v0.107.1",
     "character": "silent"
   },
@@ -1560,7 +1560,7 @@
     "en": "Nunchaku",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Every time you play 10 Attacks, gain 1.",
+    "effect": "Every time you play 10 Attacks, gain 1 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1607,7 +1607,7 @@
     "en": "Orange Dough",
     "zh": null,
     "rarity": "rare",
-    "effect": "At the start of each combat, add 2 random Colorless lural:card into your Hand.",
+    "effect": "At the start of each combat, add 2 random Colorless cards into your Hand.",
     "version": "v0.107.1",
     "character": "regent"
   },
@@ -1634,7 +1634,7 @@
     "en": "Orrery",
     "zh": null,
     "rarity": "shop",
-    "effect": "Upon pickup, gain 5 card lural:reward.",
+    "effect": "Upon pickup, gain 5 card rewards.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1643,7 +1643,7 @@
     "en": "Pael's Blood",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of your turn, draw 1 additional lural:card.",
+    "effect": "At the start of your turn, draw 1 additional card.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1657,7 +1657,7 @@
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "paels_eye",
@@ -1674,7 +1674,7 @@
     "en": "Pael's Flesh",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain an additional 1 at the start of your 3rd turn, and every turn after that.",
+    "effect": "Gain an additional 1 Energy at the start of your 3rd turn, and every turn after that.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1688,7 +1688,7 @@
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "paels_horn",
@@ -1705,7 +1705,7 @@
     "en": "Pael's Legion",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Doubles Block gained from a card, then goes to sleep for 2 lural:turn.",
+    "effect": "Doubles Block gained from a card, then goes to sleep for 2 turns.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1715,7 +1715,7 @@
     "en": "Pael's Tears",
     "zh": null,
     "rarity": "ancient",
-    "effect": "If you end your turn with unspent energyPrefix:energyIcons(1), gain an additional 2 next turn.",
+    "effect": "If you end your turn with unspent Energy, gain an additional 2 Energy next turn.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1725,18 +1725,18 @@
     "en": "Pael's Tooth",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, remove 5 lural:card from your Deck. After each combat, randomly add 1 back Upgraded.?",
+    "effect": "Upon pickup, remove 5 cards from your Deck. After each combat, randomly add 1 back Upgraded.?",
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "paels_wing",
     "en": "Pael's Wing",
     "zh": null,
     "rarity": "ancient",
-    "effect": "You may sacrifice card rewards to Pael. Every lural:sacrifice, obtain a Relic.",
+    "effect": "You may sacrifice card rewards to Pael. Every ? sacrifices, obtain a Relic.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1810,7 +1810,7 @@
     "en": "Pendulum",
     "zh": null,
     "rarity": "common",
-    "effect": "Every 3 lural:turn, draw 1 lural:card.",
+    "effect": "Every 3 turns, draw 1 card.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1837,7 +1837,7 @@
     "en": "Phial Holster",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, gain 1 potion lural:slot and procure 2 random lural:potion.",
+    "effect": "Upon pickup, gain 1 potion slot and procure 2 random potions.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1847,7 +1847,7 @@
     "en": "Philosopher's Stone",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. ALL enemies start combat with 1 Strength.",
+    "effect": "Gain 1 Energy at the start of each turn. ALL enemies start combat with 1 Strength.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1876,7 +1876,7 @@
     "en": "Pocketwatch",
     "zh": null,
     "rarity": "rare",
-    "effect": "Whenever you play 3 or fewer lural:card during your turn, draw 3 additional lural:card at the start of your next turn.",
+    "effect": "Whenever you play 3 or fewer cards during your turn, draw 3 additional cards at the start of your next turn.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1885,7 +1885,7 @@
     "en": "Pollinous Core",
     "zh": null,
     "rarity": "event",
-    "effect": "Every 4 lural:turn, draw 2 additional lural:card.",
+    "effect": "Every 4 turns, draw 2 additional cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1905,7 +1905,7 @@
     "en": "Potion Belt",
     "zh": null,
     "rarity": "common",
-    "effect": "Upon pickup, gain 2 potion lural:slot.",
+    "effect": "Upon pickup, gain 2 potion slots.",
     "version": "v0.107.1",
     "character": null
   },
@@ -1932,7 +1932,7 @@
     "en": "Precarious Shears",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, remove 2 lural:card from your Deck and lose 16 HP.",
+    "effect": "Upon pickup, remove 2 cards from your Deck and lose 16 HP.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1942,7 +1942,7 @@
     "en": "Precise Scissors",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, remove 1 lural:card from your Deck.",
+    "effect": "Upon pickup, remove 1 card from your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1952,7 +1952,7 @@
     "en": "Preserved Fog",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, remove 3 lural:card from your Deck. Add Folly to your Deck.",
+    "effect": "Upon pickup, remove 3 cards from your Deck. Add Folly to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1962,7 +1962,7 @@
     "en": "Prismatic Gem",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. Card rewards now contain cards from other colors.",
+    "effect": "Gain 1 Energy at the start of each turn. Card rewards now contain cards from other colors.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1972,7 +1972,7 @@
     "en": "Pumpkin Candle",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. Extinguishes after 5 combats. Can be Kindled at Rest Sites.",
+    "effect": "Gain 1 Energy at the start of each turn. Extinguishes after 5 combats. Can be Kindled at Rest Sites.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -1991,7 +1991,7 @@
     "en": "Radiant Pearl",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of each combat, add 1 lural:Luminesce into your Hand.",
+    "effect": "At the start of each combat, add 1 Luminesce into your Hand.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2064,7 +2064,7 @@
     "en": "Ring of the Drake",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of your first lural:turn, draw 2 additional lural:card.",
+    "effect": "At the start of your first ? turns, draw 2 additional cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2074,7 +2074,7 @@
     "en": "Ring of the Snake",
     "zh": null,
     "rarity": "starter",
-    "effect": "At the start of each combat, draw 2 additional lural:card.",
+    "effect": "At the start of each combat, draw 2 additional cards.",
     "version": "v0.107.1",
     "character": "silent"
   },
@@ -2114,7 +2114,7 @@
     "effect": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with ?.",
     "version": "v0.107.1",
     "character": null,
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "ruined_helmet",
@@ -2159,7 +2159,7 @@
     "en": "Sand Castle",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Upgrade 6 random lural:card.",
+    "effect": "Upon pickup, Upgrade 6 random cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2188,18 +2188,18 @@
     "en": "Sea Glass",
     "zh": null,
     "rarity": "ancient",
-    "effect": "See 15 cards from StringValue:cond:?. Choose any number of them to add to your Deck.",
+    "effect": "See 15 cards from ?. Choose any number of them to add to your Deck.",
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "seal_of_gold",
     "en": "Seal of Gold",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of your turn, spend 5 Gold to gain 1.",
+    "effect": "At the start of your turn, spend 5 Gold to gain 1 Energy.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2295,7 +2295,7 @@
     "en": "Snecko Eye",
     "zh": null,
     "rarity": "ancient",
-    "effect": "At the start of your turn, draw 2 additional lural:card. Start each combat Confused.",
+    "effect": "At the start of your turn, draw 2 additional cards. Start each combat Confused.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2314,7 +2314,7 @@
     "en": "Sozu",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. You can no longer obtain potions.",
+    "effect": "Gain 1 Energy at the start of each turn. You can no longer obtain potions.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2333,7 +2333,7 @@
     "en": "Spiked Gauntlets",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. Powers cost 1 more energyPrefix:energyIcons(1).",
+    "effect": "Gain 1 Energy at the start of each turn. Powers cost 1 more Energy.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2352,7 +2352,7 @@
     "en": "Stone Cracker",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "At the start of each combat, Upgrade 2 random lural:card in your Draw Pile for the rest of combat.",
+    "effect": "At the start of each combat, Upgrade 2 random cards in your Draw Pile for the rest of combat.",
     "version": "v0.107.1",
     "character": null
   },
@@ -2418,7 +2418,7 @@
     "en": "Sword of Stone",
     "zh": null,
     "rarity": "event",
-    "effect": "Transforms into a powerful Relic after defeating 5 lural:Elite.",
+    "effect": "Transforms into a powerful Relic after defeating 5 Elites.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2532,11 +2532,11 @@
     "en": "Touch of Orobas",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, replace StringValue:cond:? with ?.",
+    "effect": "Upon pickup, replace ?.",
     "version": "v0.107.1",
     "character": null,
     "source": "event",
-    "notes": "；描述含动态数值（以 ? 表示）"
+    "notes": "描述含动态数值（以 ? 表示）"
   },
   {
     "id": "tough_bandages",
@@ -2561,7 +2561,7 @@
     "en": "Toy Box",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, obtain 4 Wax lural:Relic. Every 3 lural:combat, your left-most Wax Relic will melt away.",
+    "effect": "Upon pickup, obtain 4 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2571,7 +2571,7 @@
     "en": "Tri-Boomerang",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Choose 3 lural:Attack in your Deck. Enchant them with Instinct.",
+    "effect": "Choose 3 Attacks in your Deck. Enchant them with Instinct.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2653,7 +2653,7 @@
     "en": "Velvet Choker",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. You cannot play more than 6 lural:card per turn.",
+    "effect": "Gain 1 Energy at the start of each turn. You cannot play more than 6 cards per turn.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2663,7 +2663,7 @@
     "en": "Venerable Tea Set",
     "zh": null,
     "rarity": "common",
-    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 2.",
+    "effect": "Whenever you enter a Rest Site, start the next combat with an additional 2 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -2672,7 +2672,7 @@
     "en": "Very Hot Cocoa",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Start each combat with an additional 4.",
+    "effect": "Start each combat with an additional 4 Energy.",
     "version": "v0.107.1",
     "character": null
   },
@@ -2699,7 +2699,7 @@
     "en": "War Hammer",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Whenever you kill an Elite, Upgrade 4 random lural:card.",
+    "effect": "Whenever you kill an Elite, Upgrade 4 random cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2709,7 +2709,7 @@
     "en": "War Paint",
     "zh": null,
     "rarity": "common",
-    "effect": "Upon pickup, Upgrade 2 random lural:Skill.",
+    "effect": "Upon pickup, Upgrade 2 random Skills.",
     "version": "v0.107.1",
     "character": null
   },
@@ -2718,7 +2718,7 @@
     "en": "Whetstone",
     "zh": null,
     "rarity": "common",
-    "effect": "Upon pickup, Upgrade 2 random lural:Attack.",
+    "effect": "Upon pickup, Upgrade 2 random Attacks.",
     "version": "v0.107.1",
     "character": null
   },
@@ -2727,7 +2727,7 @@
     "en": "Whispering Earring",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Gain 1 at the start of each turn. Vakuu plays your first turn for you.",
+    "effect": "Gain 1 Energy at the start of each turn. Vakuu plays your first turn for you.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2784,7 +2784,7 @@
     "en": "Wongo's Mystery Ticket",
     "zh": null,
     "rarity": "event",
-    "effect": "Receive 3 random lural:Relic after 5 lural:combat.",
+    "effect": "Receive 3 random Relics after 5 combats.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"
@@ -2794,7 +2794,7 @@
     "en": "Yummy Cookie",
     "zh": null,
     "rarity": "ancient",
-    "effect": "Upon pickup, Upgrade 4 lural:card.",
+    "effect": "Upon pickup, Upgrade 4 cards.",
     "version": "v0.107.1",
     "character": null,
     "source": "event"

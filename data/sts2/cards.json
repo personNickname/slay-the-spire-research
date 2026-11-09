@@ -22,8 +22,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Poison is triggered 1 additional lural:time.",
-    "effect_up": "Poison is triggered 2 additional lural:time.",
+    "effect": "Poison is triggered 1 additional time.",
+    "effect_up": "Poison is triggered 2 additional times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -61,8 +61,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal 18 damage. Add a 0energyPrefix:energyIcons(1) copy of this card into your Discard Pile.",
-    "effect_up": "Deal 23 damage. Add a 0energyPrefix:energyIcons(1) copy of this card into your Discard Pile.",
+    "effect": "Deal 18 damage. Add a 0Energy copy of this card into your Discard Pile.",
+    "effect_up": "Deal 23 damage. Add a 0Energy copy of this card into your Discard Pile.",
     "keywords": [
       "strike"
     ],
@@ -76,8 +76,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Gain 1. Draw 2 cards.",
-    "effect_up": "Gain 2. Draw 2 cards.",
+    "effect": "Gain 1 Energy. Draw 2 cards.",
+    "effect_up": "Gain 2 Energy. Draw 2 cards.",
     "keywords": [
       "exhaust"
     ],
@@ -93,11 +93,9 @@
     "cost": 1,
     "effect": "Whenever you play a card, gain 1 Block.",
     "effect_up": "Whenever you play a card, gain 1 Block.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "afterlife",
@@ -124,11 +122,9 @@
     "cost": 1,
     "effect": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it.",
     "effect_up": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "alchemize",
@@ -144,7 +140,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "alignment",
@@ -154,11 +150,11 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Gain 2.",
-    "effect_up": "Gain 3.",
+    "effect": "Gain 2 Energy.",
+    "effect_up": "Gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）"
   },
   {
     "id": "all_for_one",
@@ -168,8 +164,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal 10 damage. Put ALL 0energyPrefix:energyIcons(1) cards from your Discard Pile into your Hand.",
-    "effect_up": "Deal 14 damage. Put ALL 0energyPrefix:energyIcons(1) cards from your Discard Pile into your Hand.",
+    "effect": "Deal 10 damage. Put ALL 0Energy cards from your Discard Pile into your Hand.",
+    "effect_up": "Deal 14 damage. Put ALL 0Energy cards from your Discard Pile into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -197,11 +193,10 @@
     "effect": "Put every Rare card from your Draw Pile into your Hand.",
     "effect_up": "Put every Rare card from your Draw Pile into your Hand.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "anticipate",
@@ -231,7 +226,7 @@
       "innate"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "apparition",
@@ -248,7 +243,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Ethereal"
+    "notes": "升级后移除关键词 ethereal"
   },
   {
     "id": "armaments",
@@ -259,7 +254,7 @@
     "rarity": "common",
     "cost": 1,
     "effect": "Gain 5 Block. Upgrade a card in your Hand.",
-    "effect_up": "Gain 5 Block. Upgrade how:ALL cards in your Hand.",
+    "effect_up": "Gain 5 Block. Upgrade ALL cards in your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -273,11 +268,9 @@
     "cost": 1,
     "effect": "Whenever you create a card, gain 1 Strength.",
     "effect_up": "Whenever you create a card, gain 1 Strength.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "ascenders_bane",
@@ -303,10 +296,9 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for each card in your Exhaust Pile.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 4 additional damage for each card in your Exhaust Pile.",
+    "effect": "Deal ? damage. Deals 3 additional damage for each card in your Exhaust Pile.",
+    "effect_up": "Deal ? damage. Deals 4 additional damage for each card in your Exhaust Pile.",
     "keywords": [
-      "exhaust",
       "strike"
     ],
     "version": "v0.107.1",
@@ -340,7 +332,7 @@
     "effect_up": "Deal 8 damage to ALL enemies twice.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）"
   },
   {
     "id": "automation",
@@ -350,11 +342,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Every 10 cards you draw, gain 1.",
-    "effect_up": "Every 10 cards you draw, gain 1.",
+    "effect": "Every 10 cards you draw, gain 1 Energy.",
+    "effect_up": "Every 10 cards you draw, gain 1 Energy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "backflip",
@@ -421,13 +413,11 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 9,
-    "effect": "Deal 33 damage to ALL enemies. Costs 2 less for each Ethereal card played this combat.",
-    "effect_up": "Deal 33 damage to ALL enemies. Costs 2 less for each Ethereal card played this combat.",
-    "keywords": [
-      "ethereal"
-    ],
+    "effect": "Deal 33 damage to ALL enemies. Costs 2 Energy less for each Ethereal card played this combat.",
+    "effect_up": "Deal 33 damage to ALL enemies. Costs 2 Energy less for each Ethereal card played this combat.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-2"
+    "notes": "升级后费用变化 -2"
   },
   {
     "id": "barrage",
@@ -437,8 +427,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 5 damage for each Channeled Orb.?",
-    "effect_up": "Deal 7 damage for each Channeled Orb.?",
+    "effect": "Deal 5 damage for each Channeled Orb. (Hits ? times)",
+    "effect_up": "Deal 7 damage for each Channeled Orb. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -455,7 +445,7 @@
     "effect_up": "Block is not removed at the start of your turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "bash",
@@ -493,11 +483,9 @@
     "cost": 1,
     "effect": "Whenever you gain Block on your turn, other players gain half that much Block.",
     "effect_up": "Whenever you gain Block on your turn, other players gain half that much Block.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "beam_cell",
@@ -519,7 +507,7 @@
     "character": "colorless",
     "type": "skill",
     "rarity": "rare",
-    "cost": null,
+    "cost": 3,
     "effect": "Play 3 random Attacks from your Discard Pile.",
     "effect_up": "Play 4 random Attacks from your Discard Pile.",
     "keywords": [],
@@ -533,8 +521,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Deal 5 damage. Forge CalculatedForge:diff(). Forges an additional 5 for every other time you've hit the enemy this turn.",
-    "effect_up": "Deal 7 damage. Forge CalculatedForge:diff(). Forges an additional 7 for every other time you've hit the enemy this turn.",
+    "effect": "Deal 5 damage. Forge ?. Forges an additional 5 for every other time you've hit the enemy this turn.",
+    "effect_up": "Deal 7 damage. Forge ?. Forges an additional 7 for every other time you've hit the enemy this turn.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -561,7 +549,7 @@
     "rarity": "common",
     "cost": 1,
     "effect": "Choose a card in your Hand to Transform into Minion Strike.",
-    "effect_up": "Choose a card in your Hand to Transform into how:Minion Strike+.",
+    "effect_up": "Choose a card in your Hand to Transform into Minion Strike+.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -573,8 +561,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Another player gains 2.",
-    "effect_up": "Another player gains 3.",
+    "effect": "Another player gains 2 Energy.",
+    "effect_up": "Another player gains 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -599,14 +587,13 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Draw 1 lural:card. Gain 1. Gain 1. Forge 5.",
-    "effect_up": "Draw 1 lural:card. Gain 1. Gain 1. Forge 5.",
+    "effect": "Draw 1 card. Gain 1 Energy. Gain 1 Star. Forge 5.",
+    "effect_up": "Draw 1 card. Gain 1 Energy. Gain 1 Star. Forge 5.",
     "keywords": [
-      "exhaust",
-      "innate"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "black_hole",
@@ -629,8 +616,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Add 3 lural:Shiv into your Hand.",
-    "effect_up": "Add 4 lural:Shiv into your Hand.",
+    "effect": "Add 3 Shivs into your Hand.",
+    "effect_up": "Add 4 Shivs into your Hand.",
     "keywords": [
       "exhaust"
     ],
@@ -644,8 +631,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Add 2 Inky lural:Shiv into your Hand.",
-    "effect_up": "Add 3 Inky lural:Shiv into your Hand.",
+    "effect": "Add 2 Inky Shivs into your Hand.",
+    "effect_up": "Add 3 Inky Shivs into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -685,8 +672,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 0,
-    "effect": "Lose 3 HP. Gain 2.",
-    "effect_up": "Lose 3 HP. Gain 3.",
+    "effect": "Lose 3 HP. Gain 2 Energy.",
+    "effect_up": "Lose 3 HP. Gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -724,11 +711,11 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal damage equal to your Block.?",
-    "effect_up": "Deal damage equal to your Block.?",
+    "effect": "Deal damage equal to your Block. (Deals ? damage)",
+    "effect_up": "Deal damage equal to your Block. (Deals ? damage)",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "bodyguard",
@@ -823,8 +810,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain 4. Cards cost an additional ExtraCost:energyIcons() this turn.",
-    "effect_up": "Gain 6. Cards cost an additional ExtraCost:energyIcons() this turn.",
+    "effect": "Gain 4 Energy. Cards cost an additional ? Energy this turn.",
+    "effect_up": "Gain 6 Energy. Cards cost an additional ? Energy this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -851,9 +838,7 @@
     "cost": 0,
     "effect": "Lose 1 HP. Exhaust 1 card. Gain 1 Strength.",
     "effect_up": "Lose 1 HP. Exhaust 1 card. Gain 2 Strength.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -890,8 +875,8 @@
     "type": "skill",
     "rarity": "ancient",
     "cost": 0,
-    "effect": "Gain 2. Draw 2 lural:card. Lose 1 Max HP.",
-    "effect_up": "Gain 3. Draw 3 lural:card. Lose 1 Max HP.",
+    "effect": "Gain 2 Energy. Draw 2 cards. Lose 1 Max HP.",
+    "effect_up": "Gain 3 Energy. Draw 3 cards. Lose 1 Max HP.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -916,8 +901,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Prevent the next lural:time you would lose HP.",
-    "effect_up": "Prevent the next lural:time you would lose HP.",
+    "effect": "Prevent the next time you would lose HP.",
+    "effect_up": "Prevent the next 2 times you would lose HP.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -929,8 +914,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Lose 1 Orb lural:Slot. Gain 2 Strength. Gain 2 Dexterity.",
-    "effect_up": "Lose 1 Orb lural:Slot. Gain 3 Strength. Gain 3 Dexterity.",
+    "effect": "Lose 1 Orb Slot. Gain 2 Strength. Gain 2 Dexterity.",
+    "effect_up": "Lose 1 Orb Slot. Gain 3 Strength. Gain 3 Dexterity.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -946,7 +931,7 @@
     "effect_up": "You cannot draw additional cards this turn. ALL cards in your Hand are free to play this turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "bully",
@@ -956,8 +941,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 2 additional damage for each Vulnerable on the enemy.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for each Vulnerable on the enemy.",
+    "effect": "Deal ? damage. Deals 2 additional damage for each Vulnerable on the enemy.",
+    "effect_up": "Deal ? damage. Deals 3 additional damage for each Vulnerable on the enemy.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -983,8 +968,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Add 3 random Colorless lural:card into your Hand.",
-    "effect_up": "Add 4 random Colorless lural:card into your Hand.",
+    "effect": "Add 3 random Colorless cards into your Hand.",
+    "effect_up": "Add 4 random Colorless cards into your Hand.",
     "keywords": [
       "exhaust"
     ],
@@ -1013,9 +998,7 @@
     "cost": 1,
     "effect": "Exhaust 1 card. Draw 2 cards.",
     "effect_up": "Exhaust 1 card. Draw 3 cards.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -1026,8 +1009,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "This turn, your next lural:Skill is played an extra time.",
-    "effect_up": "This turn, your next lural:Skill is played an extra time.",
+    "effect": "This turn, your next Skill is played an extra time.",
+    "effect_up": "This turn, your next ? Skills are played an extra time.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1082,7 +1065,7 @@
     "effect_up": "Whenever you play an Attack, add a random Attack into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "calcify",
@@ -1108,11 +1091,10 @@
     "effect": "Discard your Hand, then draw that many cards.",
     "effect_up": "Discard your Hand, then draw that many cards.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "call_of_the_void",
@@ -1122,14 +1104,11 @@
     "type": "power",
     "rarity": "rare",
     "cost": 1,
-    "effect": "At the start of your turn, add 1 random lural:card into your Hand. lural:It gains Ethereal.",
-    "effect_up": "At the start of your turn, add 1 random lural:card into your Hand. lural:It gains Ethereal.",
-    "keywords": [
-      "ethereal",
-      "innate"
-    ],
+    "effect": "At the start of your turn, add 1 random card into your Hand. It gains Ethereal.",
+    "effect_up": "At the start of your turn, add 1 random card into your Hand. It gains Ethereal.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "caltrops",
@@ -1165,8 +1144,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Enemy loses 3 HP. Add 3 lural:Soul into your Draw Pile.",
-    "effect_up": "Enemy loses 4 HP. Add 4 lural:Soul into your Draw Pile.",
+    "effect": "Enemy loses 3 HP. Add 3 Souls into your Draw Pile.",
+    "effect_up": "Enemy loses 4 HP. Add 4 Souls into your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1178,8 +1157,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": null,
-    "effect": "Play the top Xhow:+1 cards of your Draw Pile.",
-    "effect_up": "Play the top Xhow:+1 cards of your Draw Pile.",
+    "effect": "Play the top X cards of your Draw Pile.",
+    "effect_up": "Play the top X+1 cards of your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1190,9 +1169,9 @@
     "character": "colorless",
     "type": "skill",
     "rarity": "uncommon",
-    "cost": null,
-    "effect": "Play 2 random lural:card from your Draw Pile.",
-    "effect_up": "Play 3 random lural:card from your Draw Pile.",
+    "cost": 2,
+    "effect": "Play 2 random cards from your Draw Pile.",
+    "effect_up": "Play 3 random cards from your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1204,8 +1183,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 2,
-    "effect": "Deal 6 damage 3 lural:time.",
-    "effect_up": "Deal 6 damage 4 lural:time.",
+    "effect": "Deal 6 damage 3 times.",
+    "effect_up": "Deal 6 damage 4 times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1217,8 +1196,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Channel 1 random lural:Orb.",
-    "effect_up": "Channel 2 random lural:Orb.",
+    "effect": "Channel 1 random Orb.",
+    "effect_up": "Channel 2 random Orbs.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1230,8 +1209,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Choose 2 lural:card in your Draw Pile to Transform into lural:Minion Dive Bomb.",
-    "effect_up": "Choose 2 lural:card in your Draw Pile to Transform into lural:how:Minion Dive Bomb+.",
+    "effect": "Choose 2 cards in your Draw Pile to Transform into Minion Dive Bombs.",
+    "effect_up": "Choose 2 cards in your Draw Pile to Transform into Minion Dive Bombs+.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1243,8 +1222,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 7 Block. Next turn, gain 1.",
-    "effect_up": "Gain 10 Block. Next turn, gain 1.",
+    "effect": "Gain 7 Block. Next turn, gain 1 Energy.",
+    "effect_up": "Gain 10 Block. Next turn, gain 1 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1275,7 +1254,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "cinder",
@@ -1287,9 +1266,7 @@
     "cost": 2,
     "effect": "Deal 18 damage. Exhaust 1 card at random.",
     "effect_up": "Deal 24 damage. Exhaust 1 card at random.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -1328,9 +1305,7 @@
     "cost": 1,
     "effect": "Summon 3. Exhaust 1 card from your Draw Pile.",
     "effect_up": "Summon 5. Exhaust 1 card from your Draw Pile.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -1341,8 +1316,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 6 Block. Add 1 lural:Shiv into your Hand.",
-    "effect_up": "Gain 6 Block. Add 2 lural:Shiv into your Hand.",
+    "effect": "Gain 6 Block. Add 1 Shiv into your Hand.",
+    "effect_up": "Gain 6 Block. Add 2 Shivs into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1358,7 +1333,7 @@
     "effect_up": "Gain 10 Block.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 1，不消耗能量）"
+    "notes": "星辰消耗 1（star cost，不消耗能量）"
   },
   {
     "id": "clumsy",
@@ -1426,7 +1401,7 @@
     "effect_up": "Deal 44 damage. Apply 3 Weak. Apply 3 Vulnerable.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 5，不消耗能量）"
+    "notes": "星辰消耗 5（star cost，不消耗能量）"
   },
   {
     "id": "compact",
@@ -1437,7 +1412,7 @@
     "rarity": "uncommon",
     "cost": 1,
     "effect": "Gain 6 Block. Transform all Status cards in your Hand into Fuel.",
-    "effect_up": "Gain 7 Block. Transform all Status cards in your Hand into how:Fuel+.",
+    "effect_up": "Gain 7 Block. Transform all Status cards in your Hand into Fuel+.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1449,8 +1424,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 7 damage. Draw 1 card for each unique Orb you have.?",
-    "effect_up": "Deal 10 damage. Draw 1 card for each unique Orb you have.?",
+    "effect": "Deal 7 damage. Draw 1 card for each unique Orb you have. (Draw ? cards)",
+    "effect_up": "Deal 10 damage. Draw 1 card for each unique Orb you have. (Draw ? cards)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -1463,8 +1438,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Deal 2 damage to ALL enemies 4 lural:time.",
-    "effect_up": "Deal 2 damage to ALL enemies 5 lural:time.",
+    "effect": "Deal 2 damage to ALL enemies 4 times.",
+    "effect_up": "Deal 2 damage to ALL enemies 5 times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1502,11 +1477,9 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Next turn, gain 1 and 1. Retain your Hand this turn.",
-    "effect_up": "Next turn, gain 1 and 2. Retain your Hand this turn.",
-    "keywords": [
-      "retain"
-    ],
+    "effect": "Next turn, gain 1 Energy and 1 Star. Retain your Hand this turn.",
+    "effect_up": "Next turn, gain 1 Energy and 2 Stars. Retain your Hand this turn.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -1530,8 +1503,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Channel 1 Frost. Draw 1 lural:card.",
-    "effect_up": "Channel 1 Frost. Draw 2 lural:card.",
+    "effect": "Channel 1 Frost. Draw 1 card.",
+    "effect_up": "Channel 1 Frost. Draw 2 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1569,13 +1542,11 @@
     "type": "power",
     "rarity": "ancient",
     "cost": 3,
-    "effect": "Skills cost 0 energyPrefix:energyIcons(1). Whenever you play a Skill, Exhaust it.",
-    "effect_up": "Skills cost 0 energyPrefix:energyIcons(1). Whenever you play a Skill, Exhaust it.",
-    "keywords": [
-      "exhaust"
-    ],
+    "effect": "Skills cost 0 Energy. Whenever you play a Skill, Exhaust it.",
+    "effect_up": "Skills cost 0 Energy. Whenever you play a Skill, Exhaust it.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "cosmic_indifference",
@@ -1628,7 +1599,7 @@
     "effect_up": "At the start of your turn, add a random Power into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "crescent_spear",
@@ -1638,11 +1609,11 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 2 additional damage for ALL your cards that have a 1 Star cost.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for ALL your cards that have a 1 Star cost.",
+    "effect": "Deal ? damage. Deals 2 additional damage for ALL your cards that have a 1 Star cost.",
+    "effect_up": "Deal ? damage. Deals 3 additional damage for ALL your cards that have a 1 Star cost.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 1，不消耗能量）；描述中含动态计算数值（以 ? 表示）"
+    "notes": "星辰消耗 1（star cost，不消耗能量）；另有能量费用 1；描述中含动态计算数值（以 ? 表示）"
   },
   {
     "id": "crimson_mantle",
@@ -1732,8 +1703,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Whenever you play a card that costs 2 or more, gain 4 Block.",
-    "effect_up": "Whenever you play a card that costs 2 or more, gain 6 Block.",
+    "effect": "Whenever you play a card that costs 2 Energy or more, gain 4 Block.",
+    "effect_up": "Whenever you play a card that costs 2 Energy or more, gain 6 Block.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1747,11 +1718,9 @@
     "cost": 2,
     "effect": "Whenever a card is Exhausted, draw 1 card.",
     "effect_up": "Whenever a card is Exhausted, draw 1 card.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "dark_shackles",
@@ -1777,7 +1746,7 @@
     "rarity": "uncommon",
     "cost": 1,
     "effect": "Channel 1 Dark. Trigger the passive ability of all Dark Orbs.",
-    "effect_up": "Channel 1 Dark. Trigger the passive ability of all Dark Orbshow: twice.",
+    "effect_up": "Channel 1 Dark. Trigger the passive ability of all Dark Orbs twice.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1830,8 +1799,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 4 additional damage for each card drawn during your turn.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 6 additional damage for each card drawn during your turn.",
+    "effect": "Deal ? damage. Deals 4 additional damage for each card drawn during your turn.",
+    "effect_up": "Deal ? damage. Deals 6 additional damage for each card drawn during your turn.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -1857,8 +1826,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain 6 Block. If you applied Doom this turn, gain Block 2 additional lural:time.",
-    "effect_up": "Gain 7 Block. If you applied Doom this turn, gain Block 2 additional lural:time.",
+    "effect": "Gain 6 Block. If you applied Doom this turn, gain Block 2 additional times.",
+    "effect_up": "Gain 7 Block. If you applied Doom this turn, gain Block 2 additional times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1870,8 +1839,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 10 damage. Vulnerable and Weak are twice as effective against the enemy for the next 2 lural:turn.",
-    "effect_up": "Deal 12 damage. Vulnerable and Weak are twice as effective against the enemy for the next 3 lural:turn.",
+    "effect": "Deal 10 damage. Vulnerable and Weak are twice as effective against the enemy for the next 2 turns.",
+    "effect_up": "Deal 12 damage. Vulnerable and Weak are twice as effective against the enemy for the next 3 turns.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -1923,14 +1892,14 @@
     "character": "regent",
     "type": "skill",
     "rarity": "rare",
-    "cost": null,
+    "cost": 6,
     "effect": "Draw 3 cards. Choose a Skill in your Hand and play it 3 times.",
     "effect_up": "Draw 5 cards. Choose a Skill in your Hand and play it 3 times.",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 6，不消耗能量）"
+    "notes": "星辰消耗 6（star cost，不消耗能量）"
   },
   {
     "id": "defend_defect",
@@ -2071,8 +2040,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Gain 11 Block. Next turn, gain 1.",
-    "effect_up": "Gain 13 Block. Next turn, gain 2.",
+    "effect": "Gain 11 Block. Next turn, gain 1 Energy.",
+    "effect_up": "Gain 13 Block. Next turn, gain 2 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -2084,13 +2053,13 @@
     "type": "power",
     "rarity": "rare",
     "cost": 3,
-    "effect": "At the start of your turn, gain 1 and draw 1 additional lural:card.",
-    "effect_up": "At the start of your turn, gain 1 and draw 1 additional lural:card.",
+    "effect": "At the start of your turn, gain 1 Energy and draw 1 additional card.",
+    "effect_up": "At the start of your turn, gain 1 Energy and draw 1 additional card.",
     "keywords": [
       "ethereal"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "demon_form",
@@ -2113,13 +2082,13 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Lose 1 HP. Give another player Block equal to your Block.?",
-    "effect_up": "Lose 1 HP. Give another player Block equal to your Block.?",
+    "effect": "Lose 1 HP. Give another player Block equal to your Block. (Gives ? Block)",
+    "effect_up": "Lose 1 HP. Give another player Block equal to your Block. (Gives ? Block)",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 Exhaust"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
   },
   {
     "id": "devastate",
@@ -2133,7 +2102,7 @@
     "effect_up": "Deal 40 damage.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 4，不消耗能量）"
+    "notes": "星辰消耗 4（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "devour_life",
@@ -2157,7 +2126,7 @@
     "rarity": "uncommon",
     "cost": "X",
     "effect": "Summon 3 X times. Add X Souls into your Draw Pile.",
-    "effect_up": "Summon 4 X times. Add X how:Souls+ into your Draw Pile.",
+    "effect_up": "Summon 4 X times. Add X Souls+ into your Draw Pile.",
     "keywords": [
       "exhaust"
     ],
@@ -2177,7 +2146,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "disintegration",
@@ -2219,7 +2188,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "dodge_and_roll",
@@ -2263,7 +2232,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "doubt",
@@ -2286,8 +2255,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 10 damage. Upgrade 2 random lural:card in your Discard Pile.",
-    "effect_up": "Deal 12 damage. Upgrade 3 random lural:card in your Discard Pile.",
+    "effect": "Deal 10 damage. Upgrade 2 random cards in your Discard Pile.",
+    "effect_up": "Deal 12 damage. Upgrade 3 random cards in your Discard Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -2315,14 +2284,13 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Put 3 lural:card from your Discard Pile into your Hand.",
-    "effect_up": "Put 3 lural:card from your Discard Pile into your Hand.",
+    "effect": "Put 3 cards from your Discard Pile into your Hand.",
+    "effect_up": "Put 3 cards from your Discard Pile into your Hand.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "drum_of_battle",
@@ -2332,11 +2300,9 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Draw 2 lural:card. When this card is Exhausted, gain 2.",
-    "effect_up": "Draw 2 lural:card. When this card is Exhausted, gain 3.",
-    "keywords": [
-      "exhaust"
-    ],
+    "effect": "Draw 2 cards. When this card is Exhausted, gain 2 Energy.",
+    "effect_up": "Draw 2 cards. When this card is Exhausted, gain 3 Energy.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -2348,7 +2314,7 @@
     "rarity": "event",
     "cost": 1,
     "effect": "Choose an Attack or Power card. Add a copy of that card into your Hand.",
-    "effect_up": "Choose an Attack or Power card. Add how:2 copies of that card into your Hand.",
+    "effect_up": "Choose an Attack or Power card. Add 2 copies of that card into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -2364,7 +2330,7 @@
     "effect_up": "Evoke your rightmost Orb twice.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "dying_star",
@@ -2380,7 +2346,7 @@
       "ethereal"
     ],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "echo_form",
@@ -2396,7 +2362,7 @@
       "ethereal"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Ethereal"
+    "notes": "升级后移除关键词 ethereal"
   },
   {
     "id": "echoing_slash",
@@ -2421,11 +2387,9 @@
     "cost": 2,
     "effect": "Exhaust your Hand. If 9 cards were Exhausted this way, gain 1 Intangible.",
     "effect_up": "Exhaust your Hand. If 9 cards were Exhausted this way, gain 1 Intangible.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "end_of_days",
@@ -2448,8 +2412,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "ALL players gain 2.",
-    "effect_up": "ALL players gain 3.",
+    "effect": "ALL players gain 2 Energy.",
+    "effect_up": "ALL players gain 3 Energy.",
     "keywords": [
       "exhaust"
     ],
@@ -2479,7 +2443,7 @@
     "rarity": "event",
     "cost": 0,
     "effect": "Reduce the cost of ALL cards in your Hand to 1 this turn.",
-    "effect_up": "Reduce the cost of ALL cards in your Hand to 1 this how:combat.",
+    "effect_up": "Reduce the cost of ALL cards in your Hand to 1 this combat.",
     "keywords": [
       "exhaust"
     ],
@@ -2512,7 +2476,7 @@
     "effect_up": "Double your Block.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "entropy",
@@ -2522,13 +2486,11 @@
     "type": "power",
     "rarity": "rare",
     "cost": 1,
-    "effect": "At the start of your turn, Transform 1 lural:card in your Hand.",
-    "effect_up": "At the start of your turn, Transform 1 lural:card in your Hand.",
-    "keywords": [
-      "innate"
-    ],
+    "effect": "At the start of your turn, Transform 1 card in your Hand.",
+    "effect_up": "At the start of your turn, Transform 1 card in your Hand.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "envenom",
@@ -2553,9 +2515,7 @@
     "cost": 2,
     "effect": "Gain 13 Block. Retain your Hand this turn.",
     "effect_up": "Gain 16 Block. Retain your Hand this turn.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -2609,9 +2569,7 @@
     "cost": 1,
     "effect": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn.",
     "effect_up": "Gain 11 Block. Gain another 11 Block if you have Exhausted a card this turn.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -2622,11 +2580,11 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Gain energyPrefix:energyIcons(1) for each Attack in your Hand. You cannot gain additional energyPrefix:energyIcons(1) this turn.?",
-    "effect_up": "Gain energyPrefix:energyIcons(1) for each Attack in your Hand. You cannot gain additional energyPrefix:energyIcons(1) this turn.?",
+    "effect": "Gain Energy for each Attack in your Hand. You cannot gain additional Energy this turn. (Gain ? Energy)",
+    "effect_up": "Gain Energy for each Attack in your Hand. You cannot gain additional Energy this turn. (Gain ? Energy)",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "expertise",
@@ -2681,7 +2639,7 @@
     "effect_up": "Deal 12 damage. Apply 1 Weak. Apply 1 Vulnerable.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 2，不消耗能量）"
+    "notes": "星辰消耗 2（star cost，不消耗能量）"
   },
   {
     "id": "fan_of_knives",
@@ -2691,7 +2649,7 @@
     "type": "power",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Shivs now hit ALL enemies. Add Shivs:diff() Shivs into your Hand.",
+    "effect": "Shivs now hit ALL enemies. Add ? Shivs into your Hand.",
     "effect_up": "Shivs now hit ALL enemies. Add 1 Shivs into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
@@ -2764,9 +2722,7 @@
     "cost": 1,
     "effect": "Whenever a card is Exhausted, gain 3 Block.",
     "effect_up": "Whenever a card is Exhausted, gain 4 Block.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -2777,11 +2733,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "The first lural:time you play a 0energyPrefix:energyIcons(1) Attack each turn, return it to your Hand.",
-    "effect_up": "The first lural:time you play a 0energyPrefix:energyIcons(1) Attack each turn, return it to your Hand.",
+    "effect": "The first time you play a 0Energy Attack each turn, return it to your Hand.",
+    "effect_up": "The first time you play a 0Energy Attack each turn, return it to your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "fetch",
@@ -2791,8 +2747,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Osty deals 3 damage. If this is the first time this card has been played this turn, draw 1 lural:card.",
-    "effect_up": "Osty deals 6 damage. If this is the first time this card has been played this turn, draw 1 lural:card.",
+    "effect": "Osty deals 3 damage. If this is the first time this card has been played this turn, draw 1 card.",
+    "effect_up": "Osty deals 6 damage. If this is the first time this card has been played this turn, draw 1 card.",
     "keywords": [
       "ostyattack"
     ],
@@ -2860,8 +2816,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 6 damage for each Attack already played this turn.?",
-    "effect_up": "Deal 8 damage for each Attack already played this turn.?",
+    "effect": "Deal 6 damage for each Attack already played this turn. (Hits ? times)",
+    "effect_up": "Deal 8 damage for each Attack already played this turn. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -2887,11 +2843,9 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Exhaust ALL your Status cards. Deal 8 damage to a random enemy for each card Exhausted.?",
-    "effect_up": "Exhaust ALL your Status cards. Deal 11 damage to a random enemy for each card Exhausted.?",
-    "keywords": [
-      "exhaust"
-    ],
+    "effect": "Exhaust ALL your Status cards. Deal 8 damage to a random enemy for each card Exhausted. (Hits ? times)",
+    "effect_up": "Exhaust ALL your Status cards. Deal 11 damage to a random enemy for each card Exhausted. (Hits ? times)",
+    "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
   },
@@ -2920,7 +2874,7 @@
     "effect_up": "The enemy takes double attack damage from other players this turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "flash_of_steel",
@@ -2943,8 +2897,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 2,
-    "effect": "Osty deals 12 damage. This card costs 0 energyPrefix:energyIcons(1) if Osty has attacked this turn.",
-    "effect_up": "Osty deals 16 damage. This card costs 0 energyPrefix:energyIcons(1) if Osty has attacked this turn.",
+    "effect": "Osty deals 12 damage. This card costs 0 Energy if Osty has attacked this turn.",
+    "effect_up": "Osty deals 16 damage. This card costs 0 Energy if Osty has attacked this turn.",
     "keywords": [
       "ostyattack"
     ],
@@ -2958,8 +2912,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 5 damage for each Skill in your Hand.?",
-    "effect_up": "Deal 7 damage for each Skill in your Hand.?",
+    "effect": "Deal 5 damage for each Skill in your Hand. (Hits ? times)",
+    "effect_up": "Deal 7 damage for each Skill in your Hand. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -3038,7 +2992,7 @@
       "eternal"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "foregone_conclusion",
@@ -3061,8 +3015,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "If you Exhausted a card this turn, gain 3.",
-    "effect_up": "If you Exhausted a card this turn, gain 4.",
+    "effect": "If you Exhausted a card this turn, gain 3 Energy.",
+    "effect_up": "If you Exhausted a card this turn, gain 4 Energy.",
     "keywords": [
       "exhaust"
     ],
@@ -3089,8 +3043,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Lose 2 Strength. Gain 1 at the start of each turn.",
-    "effect_up": "Lose 1 Strength. Gain 1 at the start of each turn.",
+    "effect": "Lose 2 Strength. Gain 1 Energy at the start of each turn.",
+    "effect_up": "Lose 1 Strength. Gain 1 Energy at the start of each turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3102,7 +3056,7 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal 5 damage. If you have played fewer than PlayMax:diff() cards this turn, draw 1 card.",
+    "effect": "Deal 5 damage. If you have played fewer than ? cards this turn, draw 1 card.",
     "effect_up": "Deal 6 damage. If you have played fewer than 1 cards this turn, draw 1 card.",
     "keywords": [],
     "version": "v0.107.1"
@@ -3115,8 +3069,8 @@
     "type": "skill",
     "rarity": "token",
     "cost": 0,
-    "effect": "Gain 1. Draw 1 lural:card.",
-    "effect_up": "Gain 1. Draw 2 lural:card.",
+    "effect": "Gain 1 Energy. Draw 1 card.",
+    "effect_up": "Gain 1 Energy. Draw 2 cards.",
     "keywords": [
       "exhaust"
     ],
@@ -3149,7 +3103,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "gamma_blast",
@@ -3163,7 +3117,7 @@
     "effect_up": "Deal 18 damage. Apply 2 Weak. Apply 2 Vulnerable.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）"
   },
   {
     "id": "gang_up",
@@ -3173,8 +3127,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 5 additional damage for each time another player has attacked the enemy this turn.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 7 additional damage for each time another player has attacked the enemy this turn.",
+    "effect": "Deal ? damage. Deals 5 additional damage for each time another player has attacked the enemy this turn.",
+    "effect_up": "Deal ? damage. Deals 7 additional damage for each time another player has attacked the enemy this turn.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -3187,8 +3141,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 8 Block. Gain 1.",
-    "effect_up": "Gain 11 Block. Gain 1.",
+    "effect": "Gain 8 Block. Gain 1 Star.",
+    "effect_up": "Gain 11 Block. Gain 1 Star.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3200,8 +3154,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 2,
-    "effect": "At the start of your turn, gain 2.",
-    "effect_up": "At the start of your turn, gain 3.",
+    "effect": "At the start of your turn, gain 2 Stars.",
+    "effect_up": "At the start of your turn, gain 3 Stars.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3213,8 +3167,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Gain Block:diff() Block. Permanently increase this card's Block by Increase:diff().",
-    "effect_up": "Gain Block:diff() Block. Permanently increase this card's Block by 1.",
+    "effect": "Gain ? Block. Permanently increase this card's Block by ?.",
+    "effect_up": "Gain ? Block. Permanently increase this card's Block by 1.",
     "keywords": [
       "exhaust"
     ],
@@ -3267,8 +3221,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Draw 3 lural:card. Put 1 lural:card from your Hand on top of your Draw Pile.",
-    "effect_up": "Draw 4 lural:card. Put 1 lural:card from your Hand on top of your Draw Pile.",
+    "effect": "Draw 3 cards. Put 1 card from your Hand on top of your Draw Pile.",
+    "effect_up": "Draw 4 cards. Put 1 card from your Hand on top of your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3280,8 +3234,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "ALL players add 3 lural:Soul into their Draw Pile.",
-    "effect_up": "ALL players add 4 lural:Soul into their Draw Pile.",
+    "effect": "ALL players add 3 Souls into their Draw Pile.",
+    "effect_up": "ALL players add 4 Souls into their Draw Pile.",
     "keywords": [
       "exhaust"
     ],
@@ -3295,7 +3249,7 @@
     "type": "skill",
     "rarity": "common",
     "cost": 2,
-    "effect": "Gain 11 Block. Next turn, gain BlockNextTurn:diff() Block.",
+    "effect": "Gain 11 Block. Next turn, gain ? Block.",
     "effect_up": "Gain 13 Block. Next turn, gain 2 Block.",
     "keywords": [],
     "version": "v0.107.1"
@@ -3308,8 +3262,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 1. Draw 1 lural:card. Next turn, draw 1 lural:card.",
-    "effect_up": "Gain 2. Draw 1 lural:card. Next turn, draw 1 lural:card.",
+    "effect": "Gain 1 Star. Draw 1 card. Next turn, draw 1 card.",
+    "effect_up": "Gain 2 Stars. Draw 1 card. Next turn, draw 1 card.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3334,13 +3288,11 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Deal damage equal to the number of cards played this combat.?",
-    "effect_up": "Deal damage equal to the number of cards played this combat.?",
-    "keywords": [
-      "retain"
-    ],
+    "effect": "Deal damage equal to the number of cards played this combat. (Deals ? damage)",
+    "effect_up": "Deal damage equal to the number of cards played this combat. (Deals ? damage)",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 Retain"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 retain"
   },
   {
     "id": "grand_finale",
@@ -3382,7 +3334,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "greed",
@@ -3408,7 +3360,7 @@
     "rarity": "rare",
     "cost": 2,
     "effect": "Transform any number of cards in your Hand into Minion Sacrifice.",
-    "effect_up": "Transform any number of cards in your Hand into how:Minion Sacrifice+.",
+    "effect_up": "Transform any number of cards in your Hand into Minion Sacrifice+.",
     "keywords": [
       "exhaust"
     ],
@@ -3422,11 +3374,11 @@
     "type": "attack",
     "rarity": "common",
     "cost": 2,
-    "effect": "Deal 12 damage. Draw 2 lural:card.",
-    "effect_up": "Deal 13 damage. Draw 3 lural:card.",
+    "effect": "Deal 12 damage. Draw 2 cards.",
+    "effect_up": "Deal 13 damage. Draw 3 cards.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 2，不消耗能量）"
+    "notes": "星辰消耗 2（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "guilty",
@@ -3436,8 +3388,8 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": "Removed from your Deck after 5 lural:combat.",
-    "effect_up": "Removed from your Deck after 5 lural:combat.",
+    "effect": "Removed from your Deck after 5 combats.",
+    "effect_up": "Removed from your Deck after 5 combats.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3449,8 +3401,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 4 damage 3 lural:time. Add a Slimed into your Discard Pile.",
-    "effect_up": "Deal 5 damage 3 lural:time. Add a Slimed into your Discard Pile.",
+    "effect": "Deal 4 damage 3 times. Add a Slimed into your Discard Pile.",
+    "effect_up": "Deal 5 damage 3 times. Add a Slimed into your Discard Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3479,7 +3431,7 @@
     "effect_up": "Whenever you Forge, all allies Forge as well.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "hand_of_greed",
@@ -3504,9 +3456,7 @@
     "cost": 1,
     "effect": "Gain 7 Block. Add Sly to a Skill in your Hand this turn.",
     "effect_up": "Gain 10 Block. Add Sly to a Skill in your Hand this turn.",
-    "keywords": [
-      "sly"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -3545,11 +3495,9 @@
     "cost": 1,
     "effect": "Play the top card of your Draw Pile and Exhaust it.",
     "effect_up": "Play the top card of your Draw Pile and Exhaust it.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "haze",
@@ -3600,8 +3548,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Deal 15 damage. Next turn, gain 2.",
-    "effect_up": "Deal 18 damage. Next turn, gain 3.",
+    "effect": "Deal 15 damage. Next turn, gain 2 Energy.",
+    "effect_up": "Deal 18 damage. Next turn, gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3626,8 +3574,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Deal 3 damage for each energyPrefix:energyIcons(1) previously spent this turn.?",
-    "effect_up": "Deal 5 damage for each energyPrefix:energyIcons(1) previously spent this turn.?",
+    "effect": "Deal 3 damage for each Energy previously spent this turn. (Hits ? times)",
+    "effect_up": "Deal 5 damage for each Energy previously spent this turn. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -3642,11 +3590,9 @@
     "cost": 1,
     "effect": "At the start of your turn, add a random Common card into your Hand.",
     "effect_up": "At the start of your turn, add a random Common card into your Hand.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "hellraiser",
@@ -3660,7 +3606,7 @@
     "effect_up": "Whenever you draw a card containing “Strike”, it is played against a random enemy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "hemokinesis",
@@ -3683,8 +3629,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 1. Next turn, gain 3.",
-    "effect_up": "Gain 1. Next turn, gain 4.",
+    "effect": "Gain 1 Star. Next turn, gain 3 Stars.",
+    "effect_up": "Gain 1 Star. Next turn, gain 4 Stars.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3696,8 +3642,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Discard 2 lural:card. Add 2 lural:Shiv into your Hand.",
-    "effect_up": "Discard 2 lural:card. Add 2 lural:how:Shiv+ into your Hand.",
+    "effect": "Discard 2 cards. Add 2 Shivs into your Hand.",
+    "effect_up": "Discard 2 cards. Add 2 Shivs+ into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -3708,8 +3654,8 @@
     "character": "colorless",
     "type": "skill",
     "rarity": "rare",
-    "cost": null,
-    "effect": "A random card without Replay in your Draw Pile gains Replay Replay:diff().",
+    "cost": 1,
+    "effect": "A random card without Replay in your Draw Pile gains Replay ?.",
     "effect_up": "A random card without Replay in your Draw Pile gains Replay 1.",
     "keywords": [],
     "version": "v0.107.1"
@@ -3743,7 +3689,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "hotfix",
@@ -3759,7 +3705,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "howl_from_beyond",
@@ -3771,9 +3717,7 @@
     "cost": 3,
     "effect": "Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it.",
     "effect_up": "Deal 21 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -3844,7 +3788,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "impatience",
@@ -3901,7 +3845,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "inferno",
@@ -3926,11 +3870,9 @@
     "cost": 1,
     "effect": "At the start of your turn, add 1 Shiv into your Hand.",
     "effect_up": "At the start of your turn, add 1 Shiv into your Hand.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "inflame",
@@ -3979,8 +3921,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Next turn, Summon 2 and gain 2.",
-    "effect_up": "Next turn, Summon 3 and gain 3.",
+    "effect": "Next turn, Summon 2 and gain 2 Energy.",
+    "effect_up": "Next turn, Summon 3 and gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4005,8 +3947,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "The first time you draw a Status each turn, draw 2 lural:card.",
-    "effect_up": "The first time you draw a Status each turn, draw 3 lural:card.",
+    "effect": "The first time you draw a Status each turn, draw 2 cards.",
+    "effect_up": "The first time you draw a Status each turn, draw 3 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4018,8 +3960,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Add 1 random Colorless lural:card into your Hand.",
-    "effect_up": "Add 2 random Colorless lural:card into your Hand.",
+    "effect": "Add 1 random Colorless card into your Hand.",
+    "effect_up": "Add 2 random Colorless cards into your Hand.",
     "keywords": [
       "exhaust"
     ],
@@ -4033,8 +3975,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 3,
-    "effect": "Deal 25 damage. Add 3 randomhow: Upgraded 0energyPrefix:energyIcons(1) lural:card into your Hand.",
-    "effect_up": "Deal 30 damage. Add 3 randomhow: Upgraded 0energyPrefix:energyIcons(1) lural:card into your Hand.",
+    "effect": "Deal 25 damage. Add 3 random 0Energy cards into your Hand.",
+    "effect_up": "Deal 30 damage. Add 3 random Upgraded 0Energy cards into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4061,11 +4003,9 @@
     "cost": 1,
     "effect": "Add a copy of the third Attack you play each turn into your Hand.",
     "effect_up": "Add a copy of the third Attack you play each turn into your Hand.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "kingly_kick",
@@ -4101,8 +4041,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Play every Shiv in your Exhaust Pile on the enemy.?",
-    "effect_up": "how:Upgrade and play every Shiv in your Exhaust Pile on the enemy.?",
+    "effect": "Play every Shiv in your Exhaust Pile on the enemy. (Plays ? Shivs)",
+    "effect_up": "Upgrade and play every Shiv in your Exhaust Pile on the enemy. (Plays ? Shivs)",
     "keywords": [
       "shiv"
     ],
@@ -4118,7 +4058,7 @@
     "rarity": "rare",
     "cost": 3,
     "effect": "Deal 10 damage. The enemy takes double damage from other players this turn.",
-    "effect_up": "Deal 14 damage. The enemy takes how:triple damage from other players this turn.",
+    "effect_up": "Deal 14 damage. The enemy takes triple damage from other players this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4130,8 +4070,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Deal 30 damage. If this kills an enemy, gain 5.",
-    "effect_up": "Deal 38 damage. If this kills an enemy, gain 5.",
+    "effect": "Deal 30 damage. If this kills an enemy, gain 5 Stars.",
+    "effect_up": "Deal 38 damage. If this kills an enemy, gain 5 Stars.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4149,7 +4089,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "lantern_key",
@@ -4172,8 +4112,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Another player adds 1 randomhow: Upgraded Colorless card to their Hand.",
-    "effect_up": "Another player adds 1 randomhow: Upgraded Colorless card to their Hand.",
+    "effect": "Another player adds 1 random Colorless card to their Hand.",
+    "effect_up": "Another player adds 1 random Upgraded Colorless card to their Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4185,8 +4125,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 3 damage. Add Shivs:diff() lural:Shiv into your Hand.",
-    "effect_up": "Deal 6 damage. Add Shivs:diff() lural:Shiv into your Hand.",
+    "effect": "Deal 3 damage. Add ? Shivs into your Hand.",
+    "effect_up": "Deal 6 damage. Add ? Shivs into your Hand.",
     "keywords": [
       "strike"
     ],
@@ -4269,8 +4209,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Gain 4 Block. At the start of the next lural:turn, Channel 1 Lightning.",
-    "effect_up": "Gain 7 Block. At the start of the next lural:turn, Channel 1 Lightning.",
+    "effect": "Gain 4 Block. At the start of the next ? turns, Channel 1 Lightning.",
+    "effect_up": "Gain 7 Block. At the start of the next ? turns, Channel 1 Lightning.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4282,8 +4222,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "At the start of your turn, trigger the passive ability of your rightmost Orbhow: 2 times.",
-    "effect_up": "At the start of your turn, trigger the passive ability of your rightmost Orbhow: 2 times.",
+    "effect": "At the start of your turn, trigger the passive ability of your rightmost Orb.",
+    "effect_up": "At the start of your turn, trigger the passive ability of your rightmost Orb 2 times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4295,8 +4235,8 @@
     "type": "skill",
     "rarity": "token",
     "cost": 0,
-    "effect": "Gain 2.",
-    "effect_up": "Gain 3.",
+    "effect": "Gain 2 Energy.",
+    "effect_up": "Gain 3 Energy.",
     "keywords": [
       "exhaust",
       "retain"
@@ -4311,8 +4251,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal 4 damage for each Skill already played this turn.?",
-    "effect_up": "Deal 5 damage for each Skill already played this turn.?",
+    "effect": "Deal 4 damage for each Skill already played this turn. (Hits ? times)",
+    "effect_up": "Deal 5 damage for each Skill already played this turn. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -4325,13 +4265,11 @@
     "type": "power",
     "rarity": "rare",
     "cost": 1,
-    "effect": "At the start of your turn, draw 1 additional lural:card.",
-    "effect_up": "At the start of your turn, draw 1 additional lural:card.",
-    "keywords": [
-      "innate"
-    ],
+    "effect": "At the start of your turn, draw 1 additional card.",
+    "effect_up": "At the start of your turn, draw 1 additional card.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "mad_science",
@@ -4341,13 +4279,11 @@
     "type": "attack",
     "rarity": "event",
     "cost": 1,
-    "effect": "hoose(Attack{HasRider:?{Choking: Whenever you play a card this turn, the enemy loses {ChokingDamage:diff()} HP.|}{Energized: Gain {EnergizedEnergy:energyIcons()}.|}{Wisdom: Draw {WisdomCards:diff()} cards.|}{Chaos: Add a random card into your Hand. It's free to play this turn.|}{Expertise:Gain {ExpertiseStrength:diff()} Strength. Gain {ExpertiseDexterity:diff()} Dexterity.|}{Curious:Powers cost {CuriousReduction:diff()} {energyPrefix:energyIcons(1)} less.|}{Improvement:At the end of combat, Upgrade a random card.|}|{CardType:choose(Attack|Skill|Power): ???| ???|???|???}}",
-    "effect_up": "hoose(Attack{HasRider:?{Choking: Whenever you play a card this turn, the enemy loses {ChokingDamage:diff()} HP.|}{Energized: Gain {EnergizedEnergy:energyIcons()}.|}{Wisdom: Draw {WisdomCards:diff()} cards.|}{Chaos: Add a random card into your Hand. It's free to play this turn.|}{Expertise:Gain {ExpertiseStrength:diff()} Strength. Gain {ExpertiseDexterity:diff()} Dexterity.|}{Curious:Powers cost {CuriousReduction:diff()} {energyPrefix:energyIcons(1)} less.|}{Improvement:At the end of combat, Upgrade a random card.|}|{CardType:choose(Attack|Skill|Power): ???| ???|???|???}}",
-    "keywords": [
-      "innate"
-    ],
+    "effect": "Deal 12 damage (Attack form, possibly 3 times) / Gain 8 Block (Skill form) / Power form effect varies. Also gains a random Rider effect: Sapping: Apply 2 Weak and 2 Vulnerable; Choking: whenever you play a card this turn, the enemy loses 6 HP; Energized: Gain 2 Energy; Wisdom: Draw 3 cards; Chaos: Add a random card into your Hand, free to play this turn; Expertise: Gain 2 Strength and 2 Dexterity; Curious: Powers cost 1 less Energy; Improvement: At the end of combat, Upgrade a random card.",
+    "effect_up": "Deal 12 damage (Attack form, possibly 3 times) / Gain 8 Block (Skill form) / Power form effect varies. Also gains a random Rider effect: Sapping: Apply 2 Weak and 2 Vulnerable; Choking: whenever you play a card this turn, the enemy loses 6 HP; Energized: Gain 2 Energy; Wisdom: Draw 3 cards; Chaos: Add a random card into your Hand, free to play this turn; Expertise: Gain 2 Strength and 2 Dexterity; Curious: Powers cost 1 less Energy; Improvement: At the end of combat, Upgrade a random card.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "多态模板卡：卡牌类型与附加效果随机生成；升级后获得关键词 innate"
   },
   {
     "id": "make_it_so",
@@ -4357,8 +4293,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Deal 6 damage. Every 3 lural:Skill you play in a turn, put this into your Hand.",
-    "effect_up": "Deal 9 damage. Every 3 lural:Skill you play in a turn, put this into your Hand.",
+    "effect": "Deal 6 damage. Every 3 Skills you play in a turn, put this into your Hand.",
+    "effect_up": "Deal 9 damage. Every 3 Skills you play in a turn, put this into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4370,8 +4306,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": "X",
-    "effect": "Enemy loses Xhow:+1 Strength. Apply Xhow:+1 Weak.",
-    "effect_up": "Enemy loses Xhow:+1 Strength. Apply Xhow:+1 Weak.",
+    "effect": "Enemy loses X Strength. Apply X Weak.",
+    "effect_up": "Enemy loses X+1 Strength. Apply X+1 Weak.",
     "keywords": [
       "exhaust"
     ],
@@ -4398,8 +4334,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain 7 Block. Add 1 randomhow: Upgraded Colorless card into your Hand.",
-    "effect_up": "Gain 8 Block. Add 1 randomhow: Upgraded Colorless card into your Hand.",
+    "effect": "Gain 7 Block. Add 1 random Colorless card into your Hand.",
+    "effect_up": "Gain 8 Block. Add 1 random Upgraded Colorless card into your Hand.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4428,11 +4364,9 @@
     "cost": 2,
     "effect": "When you play a Skill, it gains Sly.",
     "effect_up": "When you play a Skill, it gains Sly.",
-    "keywords": [
-      "sly"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "maul",
@@ -4459,7 +4393,7 @@
     "effect_up": "At the start of your turn, play the top card of your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "melancholy",
@@ -4469,8 +4403,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Gain 13 Block. Reduce this card's cost by 1 whenever ANYONE dies.",
-    "effect_up": "Gain 17 Block. Reduce this card's cost by 1 whenever ANYONE dies.",
+    "effect": "Gain 13 Block. Reduce this card's cost by 1 Energy whenever ANYONE dies.",
+    "effect_up": "Gain 17 Block. Reduce this card's cost by 1 Energy whenever ANYONE dies.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4482,8 +4416,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 4 additional damage for each card discarded this turn.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 5 additional damage for each card discarded this turn.",
+    "effect": "Deal ? damage. Deals 4 additional damage for each card discarded this turn.",
+    "effect_up": "Deal ? damage. Deals 5 additional damage for each card discarded this turn.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -4515,7 +4449,7 @@
     "effect_up": "Deal 21 damage to ALL enemies. Apply 2 Weak and Vulnerable to ALL enemies.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 2，不消耗能量）"
+    "notes": "星辰消耗 2（star cost，不消耗能量）"
   },
   {
     "id": "meteor_strike",
@@ -4546,7 +4480,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 Exhaust"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
   },
   {
     "id": "mind_blast",
@@ -4556,13 +4490,13 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal damage equal to the number of cards in your Draw Pile.?",
-    "effect_up": "Deal damage equal to the number of cards in your Draw Pile.?",
+    "effect": "Deal damage equal to the number of cards in your Draw Pile. (Deals ? damage)",
+    "effect_up": "Deal damage equal to the number of cards in your Draw Pile. (Deals ? damage)",
     "keywords": [
       "innate"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "mind_rot",
@@ -4572,8 +4506,8 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": "Draw 1 fewer lural:card each turn.",
-    "effect_up": "Draw 1 fewer lural:card each turn.",
+    "effect": "Draw 1 fewer card each turn.",
+    "effect_up": "Draw 1 fewer card each turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4617,8 +4551,8 @@
     "type": "attack",
     "rarity": "token",
     "cost": 0,
-    "effect": "Deal 6 damage. Draw 1 lural:card.",
-    "effect_up": "Deal 9 damage. Draw 1 lural:card.",
+    "effect": "Deal 6 damage. Draw 1 card.",
+    "effect_up": "Deal 9 damage. Draw 1 card.",
     "keywords": [
       "exhaust",
       "minion",
@@ -4634,13 +4568,13 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain Block equal to Poison on ALL enemies.?",
-    "effect_up": "Gain Block equal to Poison on ALL enemies.?",
+    "effect": "Gain Block equal to Poison on ALL enemies. (Gain ? Block)",
+    "effect_up": "Gain Block equal to Poison on ALL enemies. (Gain ? Block)",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "misery",
@@ -4652,11 +4586,9 @@
     "cost": 0,
     "effect": "Deal 7 damage. Apply any debuffs on the enemy to ALL other enemies.",
     "effect_up": "Deal 9 damage. Apply any debuffs on the enemy to ALL other enemies.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "modded",
@@ -4666,8 +4598,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Gain 1 Orb lural:Slot. Draw 1 lural:card. Increase this card's cost by 1.",
-    "effect_up": "Gain 1 Orb lural:Slot. Draw 2 lural:card. Increase this card's cost by 1.",
+    "effect": "Gain 1 Orb Slot. Draw 1 card. Increase this card's cost by 1.",
+    "effect_up": "Gain 1 Orb Slot. Draw 2 cards. Increase this card's cost by 1.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4694,8 +4626,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 10 damage. Reduce this card's cost to 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 13 damage. Reduce this card's cost to 0 energyPrefix:energyIcons(1).",
+    "effect": "Deal 10 damage. Reduce this card's cost to 0 Energy.",
+    "effect_up": "Deal 13 damage. Reduce this card's cost to 0 Energy.",
     "keywords": [
       "strike"
     ],
@@ -4713,7 +4645,7 @@
     "effect_up": "Whenever you attack an enemy, it loses 1 Strength this turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "monologue",
@@ -4725,11 +4657,9 @@
     "cost": 0,
     "effect": "Whenever you play a card this turn, gain 1 Strength this turn.",
     "effect_up": "Whenever you play a card this turn, gain 1 Strength this turn.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "multi_cast",
@@ -4740,7 +4670,7 @@
     "rarity": "rare",
     "cost": "X",
     "effect": "Evoke your rightmost Orb X times.",
-    "effect_up": "Evoke your rightmost Orb how:X+1 times.",
+    "effect_up": "Evoke your rightmost Orb X+1 times.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4752,11 +4682,11 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 3,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 1 additional damage for each card drawn this combat.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 1 additional damage for each card drawn this combat.",
+    "effect": "Deal ? damage. Deals 1 additional damage for each card drawn this combat.",
+    "effect_up": "Deal ? damage. Deals 1 additional damage for each card drawn this combat.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "necro_mastery",
@@ -4792,8 +4722,8 @@
     "type": "attack",
     "rarity": "ancient",
     "cost": 1,
-    "effect": "Deal 10 damage. Put up to 2 lural:card from your Discard Pile into your Hand.",
-    "effect_up": "Deal 14 damage. Put up to 3 lural:card from your Discard Pile into your Hand.",
+    "effect": "Deal 10 damage. Put up to 2 cards from your Discard Pile into your Hand.",
+    "effect_up": "Deal 14 damage. Put up to 3 cards from your Discard Pile into your Hand.",
     "keywords": [
       "exhaust"
     ],
@@ -4807,8 +4737,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Gain 3. Draw 2 lural:card. At the start of your turn, apply 3 Doom to yourself.",
-    "effect_up": "Gain 4. Draw 2 lural:card. At the start of your turn, apply 3 Doom to yourself.",
+    "effect": "Gain 3 Energy. Draw 2 cards. At the start of your turn, apply 3 Doom to yourself.",
+    "effect_up": "Gain 4 Energy. Draw 2 cards. At the start of your turn, apply 3 Doom to yourself.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -4837,7 +4767,7 @@
     "effect_up": "Gain 11 Plating.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 5，不消耗能量）"
+    "notes": "星辰消耗 5（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "nightmare",
@@ -4853,7 +4783,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "no_escape",
@@ -4863,8 +4793,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.?",
-    "effect_up": "Apply 15 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.?",
+    "effect": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
+    "effect_up": "Apply 15 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -4877,8 +4807,8 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": "You cannot play more than 3 cards this turn.?",
-    "effect_up": "You cannot play more than 3 cards this turn.?",
+    "effect": "You cannot play more than 3 cards this turn. (? cards left)",
+    "effect_up": "You cannot play more than 3 cards this turn. (? cards left)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -4895,7 +4825,7 @@
     "effect_up": "The first Attack or Skill you play each turn is placed on top of your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "not_yet",
@@ -4959,8 +4889,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Lose 6 HP. Gain 2. Draw 3 cards.",
-    "effect_up": "Lose 6 HP. Gain 2. Draw 5 cards.",
+    "effect": "Lose 6 HP. Gain 2 Energy. Draw 3 cards.",
+    "effect_up": "Lose 6 HP. Gain 2 Energy. Draw 5 cards.",
     "keywords": [
       "exhaust"
     ],
@@ -4987,8 +4917,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "This turn, your next ond:>1?1 Attacks are played an extra time.",
-    "effect_up": "This turn, your next ond:>1?2 Attacks are played an extra time.",
+    "effect": "This turn, your next cond:>1?1 Attacks are played an extra time.",
+    "effect_up": "This turn, your next cond:>1?2 Attacks are played an extra time.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5000,11 +4930,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Every energyPrefix:energyIcons(4) you spend, gain 1.",
-    "effect_up": "Every energyPrefix:energyIcons(4) you spend, gain 1.",
+    "effect": "Every 4 Energy you spend, gain 1 Energy.",
+    "effect_up": "Every 4 Energy you spend, gain 1 Energy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "outbreak",
@@ -5014,8 +4944,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Every lural:time you apply Poison, deal 11 damage to ALL enemies.",
-    "effect_up": "Every lural:time you apply Poison, deal 15 damage to ALL enemies.",
+    "effect": "Every 3 times you apply Poison, deal 11 damage to ALL enemies.",
+    "effect_up": "Every 3 times you apply Poison, deal 15 damage to ALL enemies.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5027,8 +4957,8 @@
     "type": "skill",
     "rarity": "event",
     "cost": 1,
-    "effect": "Next turn, gain 2.",
-    "effect_up": "Next turn, gain 3.",
+    "effect": "Next turn, gain 2 Energy.",
+    "effect_up": "Next turn, gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5053,8 +4983,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 0,
-    "effect": "If you have 3 or more lural:card in your Exhaust Pile, deal 17 damage to ALL enemies.",
-    "effect_up": "If you have 3 or more lural:card in your Exhaust Pile, deal 23 damage to ALL enemies.",
+    "effect": "If you have 3 or more cards in your Exhaust Pile, deal 17 damage to ALL enemies.",
+    "effect_up": "If you have 3 or more cards in your Exhaust Pile, deal 23 damage to ALL enemies.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5066,13 +4996,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Whenever you draw an Ethereal card, draw 1 lural:card.",
-    "effect_up": "Whenever you draw an Ethereal card, draw 1 lural:card.",
-    "keywords": [
-      "ethereal"
-    ],
+    "effect": "Whenever you draw an Ethereal card, draw 1 card.",
+    "effect_up": "Whenever you draw an Ethereal card, draw 1 card.",
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "pale_blue_dot",
@@ -5082,8 +5010,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "If you play 5 or more cards in a turn, draw 1 lural:card at the start of your next turn.",
-    "effect_up": "If you play 5 or more cards in a turn, draw 2 lural:card at the start of your next turn.",
+    "effect": "If you play 5 or more cards in a turn, draw 1 card at the start of your next turn.",
+    "effect_up": "If you play 5 or more cards in a turn, draw 2 cards at the start of your next turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5108,8 +5036,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Gain 30 Block. You cannot gain Block from cards for 2 lural:turn.",
-    "effect_up": "Gain 40 Block. You cannot gain Block from cards for 2 lural:turn.",
+    "effect": "Gain 30 Block. You cannot gain Block from cards for 2 turns.",
+    "effect_up": "Gain 40 Block. You cannot gain Block from cards for 2 turns.",
     "keywords": [
       "exhaust"
     ],
@@ -5155,7 +5083,7 @@
     "effect_up": "Gain 12 Block. Return this card to your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 2，不消耗能量）"
+    "notes": "星辰消耗 2（star cost，不消耗能量）"
   },
   {
     "id": "patter",
@@ -5191,8 +5119,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 2,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 2 additional damage for ALL your cards containing “Strike”.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for ALL your cards containing “Strike”.",
+    "effect": "Deal ? damage. Deals 2 additional damage for ALL your cards containing “Strike”.",
+    "effect_up": "Deal ? damage. Deals 3 additional damage for ALL your cards containing “Strike”.",
     "keywords": [
       "strike"
     ],
@@ -5209,9 +5137,7 @@
     "cost": 1,
     "effect": "Shivs gain Retain. The first Shiv you play each turn deals 9 additional damage.",
     "effect_up": "Shivs gain Retain. The first Shiv you play each turn deals 12 additional damage.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -5222,8 +5148,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 10 damage. Draw 1 lural:card. Put 1 card from your Hand on top of your Draw Pile.",
-    "effect_up": "Deal 13 damage. Draw 2 lural:card. Put 1 card from your Hand on top of your Draw Pile.",
+    "effect": "Deal 10 damage. Draw 1 card. Put 1 card from your Hand on top of your Draw Pile.",
+    "effect_up": "Deal 13 damage. Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5276,8 +5202,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Deal 15 damage. Costs 1 less energyPrefix:energyIcons(1) for each Skill played this turn.",
-    "effect_up": "Deal 19 damage. Costs 1 less energyPrefix:energyIcons(1) for each Skill played this turn.",
+    "effect": "Deal 15 damage. Costs 1 less Energy for each Skill played this turn.",
+    "effect_up": "Deal 19 damage. Costs 1 less Energy for each Skill played this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5317,8 +5243,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 9 damage. Draw 1 lural:card.",
-    "effect_up": "Deal 10 damage. Draw 2 lural:card.",
+    "effect": "Deal 9 damage. Draw 1 card.",
+    "effect_up": "Deal 10 damage. Draw 2 cards.",
     "keywords": [
       "strike"
     ],
@@ -5347,8 +5273,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Deal 14 damage. The next Skill you play costs 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 20 damage. The next Skill you play costs 0 energyPrefix:energyIcons(1).",
+    "effect": "Deal 14 damage. The next Skill you play costs 0 Energy.",
+    "effect_up": "Deal 20 damage. The next Skill you play costs 0 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5360,8 +5286,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 2 less damage for each other card in your Hand.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 2 less damage for each other card in your Hand.",
+    "effect": "Deal ? damage. Deals 2 less damage for each other card in your Hand.",
+    "effect_up": "Deal ? damage. Deals 2 less damage for each other card in your Hand.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -5400,8 +5326,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 0,
-    "effect": "Draw 1 lural:card. Discard 1 lural:card.",
-    "effect_up": "Draw 2 lural:card. Discard 2 lural:card.",
+    "effect": "Draw 1 card. Discard 1 card.",
+    "effect_up": "Draw 2 cards. Discard 2 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5414,7 +5340,7 @@
     "rarity": "rare",
     "cost": 0,
     "effect": "Transform all Attacks in your Hand into Giant Rock.",
-    "effect_up": "Transform all Attacks in your Hand into how:Giant Rock+.",
+    "effect_up": "Transform all Attacks in your Hand into Giant Rock+.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5426,8 +5352,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Gain 2.",
-    "effect_up": "Gain 3.",
+    "effect": "Gain 2 Energy.",
+    "effect_up": "Gain 3 Energy.",
     "keywords": [
       "exhaust"
     ],
@@ -5447,7 +5373,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "prophesize",
@@ -5457,8 +5383,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Draw 6 lural:card.",
-    "effect_up": "Draw 9 lural:card.",
+    "effect": "Draw 6 cards.",
+    "effect_up": "Draw 9 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5470,13 +5396,13 @@
     "type": "attack",
     "rarity": "ancient",
     "cost": 1,
-    "effect": "Osty deals CalculatedDamage:diff() damage. Deals additional damage equal to Osty's Max HP.",
-    "effect_up": "Osty deals CalculatedDamage:diff() damage. Deals additional damage equal to Osty's Max HP.",
+    "effect": "Osty deals ? damage. Deals additional damage equal to Osty's Max HP.",
+    "effect_up": "Osty deals ? damage. Deals additional damage equal to Osty's Max HP.",
     "keywords": [
       "ostyattack"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "prowess",
@@ -5512,11 +5438,9 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 5 damage for each Ethereal card played this combat.?",
-    "effect_up": "Deal 7 damage for each Ethereal card played this combat.?",
-    "keywords": [
-      "ethereal"
-    ],
+    "effect": "Deal 5 damage for each Ethereal card played this combat. (Hits ? times)",
+    "effect_up": "Deal 7 damage for each Ethereal card played this combat. (Hits ? times)",
+    "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
   },
@@ -5559,8 +5483,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Gain 1 at the start of each turn.",
-    "effect_up": "Gain 2 at the start of each turn.",
+    "effect": "Gain 1 Energy at the start of each turn.",
+    "effect_up": "Gain 2 Energy at the start of each turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5572,11 +5496,11 @@
     "type": "skill",
     "rarity": "ancient",
     "cost": 1,
-    "effect": "Evoke your rightmost Orb 4 lural:time.",
-    "effect_up": "Evoke your rightmost Orb 4 lural:time.",
+    "effect": "Evoke your rightmost Orb 4 times.",
+    "effect_up": "Evoke your rightmost Orb 4 times.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "quasar",
@@ -5587,10 +5511,10 @@
     "rarity": "uncommon",
     "cost": 2,
     "effect": "Choose 1 of 3 random Colorless cards to add into your Hand.",
-    "effect_up": "Choose 1 of 3 randomhow: Upgraded Colorless cards to add into your Hand.",
+    "effect_up": "Choose 1 of 3 random Upgraded Colorless cards to add into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 2，不消耗能量）"
+    "notes": "星辰消耗 2（star cost，不消耗能量）"
   },
   {
     "id": "radiate",
@@ -5600,8 +5524,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Deal 3 damage to ALL enemies for each 1 gained this turn.?",
-    "effect_up": "Deal 4 damage to ALL enemies for each 1 gained this turn.?",
+    "effect": "Deal 3 damage to ALL enemies for each 1 Star gained this turn. (Hits ? times)",
+    "effect_up": "Deal 4 damage to ALL enemies for each 1 Star gained this turn. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -5633,7 +5557,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "rally",
@@ -5669,8 +5593,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Osty deals 7 damage. Hits an additional time for each other time he has attacked this turn.?",
-    "effect_up": "Osty deals 9 damage. Hits an additional time for each other time he has attacked this turn.?",
+    "effect": "Osty deals 7 damage. Hits an additional time for each other time he has attacked this turn. (Hits ? times)",
+    "effect_up": "Osty deals 9 damage. Hits an additional time for each other time he has attacked this turn. (Hits ? times)",
     "keywords": [
       "ostyattack"
     ],
@@ -5717,11 +5641,9 @@
     "cost": 3,
     "effect": "Whenever Attacks deal damage, apply that much Doom.",
     "effect_up": "Whenever Attacks deal damage, apply that much Doom.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "reave",
@@ -5732,7 +5654,7 @@
     "rarity": "common",
     "cost": 1,
     "effect": "Deal 9 damage. Add a Soul into your Draw Pile.",
-    "effect_up": "Deal 11 damage. Add a how:Soul+ into your Draw Pile.",
+    "effect_up": "Deal 11 damage. Add a Soul+ into your Draw Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5744,8 +5666,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Shuffle ALL your cards into your Draw Pile. Draw 4 lural:card.",
-    "effect_up": "Shuffle ALL your cards into your Draw Pile. Draw 6 lural:card.",
+    "effect": "Shuffle ALL your cards into your Draw Pile. Draw 4 cards.",
+    "effect_up": "Shuffle ALL your cards into your Draw Pile. Draw 6 cards.",
     "keywords": [
       "exhaust"
     ],
@@ -5772,8 +5694,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Forge 9. Next turn, gain 1.",
-    "effect_up": "Forge 13. Next turn, gain 1.",
+    "effect": "Forge 9. Next turn, gain 1 Energy.",
+    "effect_up": "Forge 13. Next turn, gain 1 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5789,7 +5711,7 @@
     "effect_up": "Gain 20 Block. Blocked attack damage is reflected to your attacker this turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "reflex",
@@ -5840,8 +5762,8 @@
     "type": "skill",
     "rarity": "ancient",
     "cost": 3,
-    "effect": "Gain 15 Block. Next turn, draw 2 lural:card and gain 2.",
-    "effect_up": "Gain 17 Block. Next turn, draw 3 lural:card and gain 3.",
+    "effect": "Gain 15 Block. Next turn, draw 2 cards and gain 2 Energy.",
+    "effect_up": "Gain 17 Block. Next turn, draw 3 cards and gain 3 Energy.",
     "keywords": [
       "exhaust"
     ],
@@ -5855,8 +5777,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 5 additional damage for each unique debuff on the enemy.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 8 additional damage for each unique debuff on the enemy.",
+    "effect": "Deal ? damage. Deals 5 additional damage for each unique debuff on the enemy.",
+    "effect_up": "Deal ? damage. Deals 8 additional damage for each unique debuff on the enemy.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -5873,7 +5795,7 @@
     "effect_up": "Gain 2 Strength. ALL enemies lose 1 Strength.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）"
+    "notes": "星辰消耗 3（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "restlessness",
@@ -5883,8 +5805,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "If your Hand is empty, draw 2 cards and gain 2.",
-    "effect_up": "If your Hand is empty, draw 3 cards and gain 3.",
+    "effect": "If your Hand is empty, draw 2 cards and gain 2 Energy.",
+    "effect_up": "If your Hand is empty, draw 3 cards and gain 3 Energy.",
     "keywords": [
       "retain"
     ],
@@ -5913,8 +5835,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Osty deals 4 damage. Whenever you play a card that costs 2 or more, return this to your Hand from the Discard Pile.",
-    "effect_up": "Osty deals 6 damage. Whenever you play a card that costs 2 or more, return this to your Hand from the Discard Pile.",
+    "effect": "Osty deals 4 damage. Whenever you play a card that costs 2 Energy or more, return this to your Hand from the Discard Pile.",
+    "effect_up": "Osty deals 6 damage. Whenever you play a card that costs 2 Energy or more, return this to your Hand from the Discard Pile.",
     "keywords": [
       "ostyattack"
     ],
@@ -5941,8 +5863,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Deal 13 damage. Draw 1 lural:card. Whenever you create a Status, reduce this card's cost to 0 energyPrefix:energyIcons(1) until played.",
-    "effect_up": "Deal 14 damage. Draw 2 lural:card. Whenever you create a Status, reduce this card's cost to 0 energyPrefix:energyIcons(1) until played.",
+    "effect": "Deal 13 damage. Draw 1 card. Whenever you create a Status, reduce this card's cost to 0 Energy until played.",
+    "effect_up": "Deal 14 damage. Draw 2 cards. Whenever you create a Status, reduce this card's cost to 0 Energy until played.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -5970,11 +5892,10 @@
     "effect": "Gain 9 1 Star.",
     "effect_up": "Gain 9 1 Star.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 5，不消耗能量）；升级后获得关键词 Retain"
+    "notes": "星辰消耗 5（star cost，不消耗能量）；升级后获得关键词 retain"
   },
   {
     "id": "royalties",
@@ -6010,13 +5931,13 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "If Osty is alive, he dies and you gain Block equal to double his Max HP.?",
-    "effect_up": "If Osty is alive, he dies and you gain Block equal to double his Max HP.?",
+    "effect": "If Osty is alive, he dies and you gain Block equal to double his Max HP. (Gain 0 Block)",
+    "effect_up": "If Osty is alive, he dies and you gain Block equal to double his Max HP. (Gain 0 Block)",
     "keywords": [
       "retain"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "salvo",
@@ -6028,9 +5949,7 @@
     "cost": 1,
     "effect": "Deal 12 damage. Retain your Hand this turn.",
     "effect_up": "Deal 16 damage. Retain your Hand this turn.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -6047,7 +5966,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "scavenge",
@@ -6057,11 +5976,9 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Exhaust a card. Next turn, gain 2.",
-    "effect_up": "Exhaust a card. Next turn, gain 3.",
-    "keywords": [
-      "exhaust"
-    ],
+    "effect": "Exhaust a card. Next turn, gain 2 Energy.",
+    "effect_up": "Exhaust a card. Next turn, gain 3 Energy.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -6072,8 +5989,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Apply 13 Doom. Draw 1 lural:card.",
-    "effect_up": "Apply 16 Doom. Draw 2 lural:card.",
+    "effect": "Apply 13 Doom. Draw 1 card.",
+    "effect_up": "Apply 16 Doom. Draw 2 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6085,8 +6002,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 7 damage. Draw 4 cards. Discard all cards drawn this way that do not cost 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 10 damage. Draw 5 cards. Discard all cards drawn this way that do not cost 0 energyPrefix:energyIcons(1).",
+    "effect": "Deal 7 damage. Draw 4 cards. Discard all cards drawn this way that do not cost 0 Energy.",
+    "effect_up": "Deal 10 damage. Draw 5 cards. Discard all cards drawn this way that do not cost 0 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6101,11 +6018,10 @@
     "effect": "Draw cards until your Hand is full.",
     "effect_up": "Draw cards until your Hand is full.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "sculpting_strike",
@@ -6118,7 +6034,6 @@
     "effect": "Deal 9 damage. Add Ethereal to a card in your Hand.",
     "effect_up": "Deal 12 damage. Add Ethereal to a card in your Hand.",
     "keywords": [
-      "ethereal",
       "strike"
     ],
     "version": "v0.107.1"
@@ -6137,7 +6052,7 @@
       "ethereal"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "second_wind",
@@ -6149,9 +6064,7 @@
     "cost": 1,
     "effect": "Exhaust all non-Attack cards in your Hand. Gain 5 Block for each card Exhausted.",
     "effect_up": "Exhaust all non-Attack cards in your Hand. Gain 7 Block for each card Exhausted.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -6168,7 +6081,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "secret_weapon",
@@ -6184,7 +6097,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "seeker_strike",
@@ -6226,7 +6139,7 @@
     "effect_up": "At the start of your turn, add 1 Sweeping Gaze into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "serpent_form",
@@ -6264,11 +6177,11 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 7,
-    "effect": "Deal 7 damage to ALL enemies 7 lural:time.",
-    "effect_up": "Deal 7 damage to ALL enemies 7 lural:time.",
+    "effect": "Deal 7 damage to ALL enemies 7 times.",
+    "effect_up": "Deal 7 damage to ALL enemies 7 times.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 7，不消耗能量）；升级后费用变化：-1"
+    "notes": "星辰消耗 7（star cost，不消耗能量）；另有能量费用 2；升级后费用变化 -1"
   },
   {
     "id": "severance",
@@ -6308,7 +6221,7 @@
     "effect_up": "Discard your Hand. Next turn, Attacks deal double damage.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "shadowmeld",
@@ -6322,7 +6235,7 @@
     "effect_up": "Double your Block gain this turn.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "shame",
@@ -6373,10 +6286,9 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 8 damage. Gain 2. Put this card on top of your Draw Pile.",
-    "effect_up": "Deal 11 damage. Gain 2. Put this card on top of your Draw Pile.",
+    "effect": "Deal 8 damage. Gain 2 Stars. Put this card on top of your Draw Pile.",
+    "effect_up": "Deal 11 damage. Gain 2 Stars. Put this card on top of your Draw Pile.",
     "keywords": [
-      "exhaust",
       "strike"
     ],
     "version": "v0.107.1"
@@ -6389,8 +6301,8 @@
     "type": "attack",
     "rarity": "token",
     "cost": 0,
-    "effect": "Deal 4 damagehoose(AllEnemies): to ALL enemies.",
-    "effect_up": "Deal 6 damagehoose(AllEnemies): to ALL enemies.",
+    "effect": "Deal 4 damage.",
+    "effect_up": "Deal 6 damage.",
     "keywords": [
       "exhaust",
       "shiv"
@@ -6467,7 +6379,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "skewer",
@@ -6544,8 +6456,8 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": "You cannot play more than 3 lural:card each turn.",
-    "effect_up": "You cannot play more than 3 lural:card each turn.",
+    "effect": "You cannot play more than 3 cards each turn.",
+    "effect_up": "You cannot play more than 3 cards each turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6588,8 +6500,7 @@
     "effect": "Osty deals 7 damage. Add Retain to a card in your Hand.",
     "effect_up": "Osty deals 10 damage. Add Retain to a card in your Hand.",
     "keywords": [
-      "ostyattack",
-      "retain"
+      "ostyattack"
     ],
     "version": "v0.107.1"
   },
@@ -6616,8 +6527,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 9 damage. Gain 1.",
-    "effect_up": "Deal 10 damage. Gain 2.",
+    "effect": "Deal 9 damage. Gain 1 Star.",
+    "effect_up": "Deal 10 damage. Gain 2 Stars.",
     "keywords": [
       "strike"
     ],
@@ -6644,8 +6555,8 @@
     "type": "skill",
     "rarity": "token",
     "cost": 0,
-    "effect": "Draw 2 lural:card.",
-    "effect_up": "Draw 3 lural:card.",
+    "effect": "Draw 2 cards.",
+    "effect_up": "Draw 3 cards.",
     "keywords": [
       "exhaust"
     ],
@@ -6659,8 +6570,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 2 additional damage for each Soul in your Exhaust Pile.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for each Soul in your Exhaust Pile.",
+    "effect": "Deal ? damage. Deals 2 additional damage for each Soul in your Exhaust Pile.",
+    "effect_up": "Deal ? damage. Deals 3 additional damage for each Soul in your Exhaust Pile.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -6673,13 +6584,13 @@
     "type": "attack",
     "rarity": "token",
     "cost": 2,
-    "effect": "Deal 10 damagehoose(AllEnemies): to ALL enemieslural:.?",
-    "effect_up": "Deal 10 damagehoose(AllEnemies): to ALL enemieslural:.?",
+    "effect": "Deal 10 damage.",
+    "effect_up": "Deal 10 damage.",
     "keywords": [
       "retain"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化：-1"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后费用变化 -1"
   },
   {
     "id": "sow",
@@ -6704,11 +6615,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "At the start of your turn, add 1 random Colorless lural:card into your Hand.",
-    "effect_up": "At the start of your turn, add 1 random Colorless lural:card into your Hand.",
+    "effect": "At the start of your turn, add 1 random Colorless card into your Hand.",
+    "effect_up": "At the start of your turn, add 1 random Colorless card into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "speedster",
@@ -6720,11 +6631,9 @@
     "cost": 2,
     "effect": "Whenever you draw a card during your turn, deal 2 damage to ALL enemies.",
     "effect_up": "Whenever you draw a card during your turn, deal 2 damage to ALL enemies.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "spinner",
@@ -6734,8 +6643,8 @@
     "type": "power",
     "rarity": "rare",
     "cost": 1,
-    "effect": "?At the start of your turn, Channel 1 Glass.",
-    "effect_up": "?At the start of your turn, Channel 1 Glass.",
+    "effect": "At the start of your turn, Channel 1 Glass.",
+    "effect_up": "Channel 1 Glass. At the start of your turn, Channel 1 Glass.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6749,9 +6658,7 @@
     "cost": 1,
     "effect": "Whenever you play an Ethereal card, gain 4 Block.",
     "effect_up": "Whenever you play an Ethereal card, gain 5 Block.",
-    "keywords": [
-      "ethereal"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -6775,8 +6682,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Choose 1 of 3 randomhow: Upgraded Attacks from another character to add into your Hand. It's free to play this turn.",
-    "effect_up": "Choose 1 of 3 randomhow: Upgraded Attacks from another character to add into your Hand. It's free to play this turn.",
+    "effect": "Choose 1 of 3 random Attacks from another character to add into your Hand. It's free to play this turn.",
+    "effect_up": "Choose 1 of 3 random Upgraded Attacks from another character to add into your Hand. It's free to play this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6801,8 +6708,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 1,
-    "effect": "Forge 5. Draw 2 lural:card.",
-    "effect_up": "Forge 8. Draw 2 lural:card.",
+    "effect": "Forge 5. Draw 2 cards.",
+    "effect_up": "Forge 8. Draw 2 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6857,8 +6764,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 3,
-    "effect": "Osty deals CalculatedDamage:diff() damage. Deals 5 additional damage for ALL your other Osty Attacks.",
-    "effect_up": "Osty deals CalculatedDamage:diff() damage. Deals 6 additional damage for ALL your other Osty Attacks.",
+    "effect": "Osty deals ? damage. Deals 5 additional damage for ALL your other Osty Attacks.",
+    "effect_up": "Osty deals ? damage. Deals 6 additional damage for ALL your other Osty Attacks.",
     "keywords": [
       "ostyattack"
     ],
@@ -6873,8 +6780,8 @@
     "type": "skill",
     "rarity": "event",
     "cost": 1,
-    "effect": "Gain Block equal to the number of cards in your Discard Pile.?",
-    "effect_up": "Gain Block equal to the number of cards in your Discard Pilehow: +3.?",
+    "effect": "Gain Block equal to the number of cards in your Discard Pile. (Gain ? Block)",
+    "effect_up": "Gain Block equal to the number of cards in your Discard Pile +3. (Gain ? Block)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -6887,11 +6794,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "At the end of your turn, 1 random lural:Attack in your Hand is played against a random enemy.",
-    "effect_up": "At the end of your turn, 1 random lural:Attack in your Hand is played against a random enemy.",
+    "effect": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
+    "effect_up": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "stardust",
@@ -6916,7 +6823,7 @@
     "rarity": "rare",
     "cost": 1,
     "effect": "Exhaust your Hand. Add 1 random card into your Hand for each card Exhausted.",
-    "effect_up": "Exhaust your Hand. Add 1 random how:Upgraded card into your Hand for each card Exhausted.",
+    "effect_up": "Exhaust your Hand. Add 1 random Upgraded card into your Hand for each card Exhausted.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6928,8 +6835,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Deal 12 damage to ALL enemies. Costs 1 less energyPrefix:energyIcons(1) for each Attack played this turn.",
-    "effect_up": "Deal 15 damage to ALL enemies. Costs 1 less energyPrefix:energyIcons(1) for each Attack played this turn.",
+    "effect": "Deal 12 damage to ALL enemies. Costs 1 less Energy for each Attack played this turn.",
+    "effect_up": "Deal 15 damage to ALL enemies. Costs 1 less Energy for each Attack played this turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6968,7 +6875,7 @@
     "rarity": "rare",
     "cost": 1,
     "effect": "Discard your Hand. Add 1 Shiv into your Hand for each card discarded.",
-    "effect_up": "Discard your Hand. Add 1 how:Shiv+ into your Hand for each card discarded.",
+    "effect_up": "Discard your Hand. Add 1 Shiv+ into your Hand for each card discarded.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -6997,7 +6904,7 @@
     "effect_up": "Whenever you shuffle your Draw Pile, choose a card from it to put into your Hand.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "strike_defect",
@@ -7082,11 +6989,11 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Whenever you play a Power, gain energyPrefix:energyIcons(1).",
-    "effect_up": "Whenever you play a Power, gain energyPrefix:energyIcons(1).",
+    "effect": "Whenever you play a Power, gain Energy.",
+    "effect_up": "Whenever you play a Power, gain Energy.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "sucker_punch",
@@ -7111,9 +7018,7 @@
     "cost": 1,
     "effect": "Put Sovereign Blade into your Hand from anywhere. Forge 8.",
     "effect_up": "Put Sovereign Blade into your Hand from anywhere. Forge 11.",
-    "keywords": [
-      "retain"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -7124,8 +7029,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Deal 24 damage. If this kills an enemy, gain 3.",
-    "effect_up": "Deal 32 damage. If this kills an enemy, gain 3.",
+    "effect": "Deal 24 damage. If this kills an enemy, gain 3 Energy.",
+    "effect_up": "Deal 32 damage. If this kills an enemy, gain 3 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7137,8 +7042,8 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 0,
-    "effect": "Gain 4.",
-    "effect_up": "Gain 6.",
+    "effect": "Gain 4 Energy.",
+    "effect_up": "Gain 6 Energy.",
     "keywords": [
       "exhaust"
     ],
@@ -7152,8 +7057,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal CalculatedDamage:diff() damage. Deals 3 additional damage for each card you created this combat.",
-    "effect_up": "Deal CalculatedDamage:diff() damage. Deals 4 additional damage for each card you created this combat.",
+    "effect": "Deal ? damage. Deals 3 additional damage for each card you created this combat.",
+    "effect_up": "Deal ? damage. Deals 4 additional damage for each card you created this combat.",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -7194,8 +7099,8 @@
     "type": "attack",
     "rarity": "common",
     "cost": 1,
-    "effect": "Deal 6 damage to ALL enemies. Draw 1 lural:card.",
-    "effect_up": "Deal 9 damage to ALL enemies. Draw 1 lural:card.",
+    "effect": "Deal 6 damage to ALL enemies. Draw 1 card.",
+    "effect_up": "Deal 9 damage to ALL enemies. Draw 1 card.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7241,7 +7146,7 @@
     "effect_up": "Sovereign Blade gains Replay 1.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "synchronize",
@@ -7251,13 +7156,13 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Gain 2 Focus this turn for each unique Orb you have.?",
-    "effect_up": "Gain 2 Focus this turn for each unique Orb you have.?",
+    "effect": "Gain 2 Focus this turn for each unique Orb you have. (Gain ? Focus)",
+    "effect_up": "Gain 2 Focus this turn for each unique Orb you have. (Gain ? Focus)",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 Exhaust"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
   },
   {
     "id": "synthesis",
@@ -7267,8 +7172,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Deal 14 damage. The next Power you play costs 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 20 damage. The next Power you play costs 0 energyPrefix:energyIcons(1).",
+    "effect": "Deal 14 damage. The next Power you play costs 0 Energy.",
+    "effect_up": "Deal 20 damage. The next Power you play costs 0 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7280,8 +7185,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 3,
-    "effect": "Gain 1.",
-    "effect_up": "Gain 2.",
+    "effect": "Gain 1 Energy.",
+    "effect_up": "Gain 2 Energy.",
     "keywords": [
       "sly"
     ],
@@ -7312,7 +7217,7 @@
     "effect_up": "Take double damage from enemies. Allies take half damage from enemies.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "taunt",
@@ -7335,8 +7240,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal 5 damage. Hits an additional time for each time you lost HP this combat.?",
-    "effect_up": "Deal 7 damage. Hits an additional time for each time you lost HP this combat.?",
+    "effect": "Deal 5 damage. Hits an additional time for each time you lost HP this combat. (Hits ? times)",
+    "effect_up": "Deal 7 damage. Hits an additional time for each time you lost HP this combat. (Hits ? times)",
     "keywords": [],
     "version": "v0.107.1",
     "notes": "描述中含动态计算数值（以 ? 表示）"
@@ -7350,7 +7255,7 @@
     "rarity": "uncommon",
     "cost": "X",
     "effect": "Channel X Lightning.",
-    "effect_up": "Channel how:X+1 Lightning.",
+    "effect_up": "Channel X+1 Lightning.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7376,7 +7281,7 @@
     "rarity": "uncommon",
     "cost": 0,
     "effect": "Deal 3 damage. Trigger all Lightning against the enemy.",
-    "effect_up": "Deal 4 damage. Trigger all Lightning against the enemyhow: twice.",
+    "effect_up": "Deal 4 damage. Trigger all Lightning against the enemy twice.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7388,8 +7293,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "At the end of 3 lural:turn, deal 40 damage to ALL enemies.",
-    "effect_up": "At the end of 3 lural:turn, deal 50 damage to ALL enemies.",
+    "effect": "At the end of 3 turns, deal 40 damage to ALL enemies.",
+    "effect_up": "At the end of 3 turns, deal 50 damage to ALL enemies.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7429,8 +7334,8 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal Damage:diff() damage. Permanently increase this card's damage by Increase:diff().",
-    "effect_up": "Deal Damage:diff() damage. Permanently increase this card's damage by 1.",
+    "effect": "Deal ? damage. Permanently increase this card's damage by ?.",
+    "effect_up": "Deal ? damage. Permanently increase this card's damage by 1.",
     "keywords": [
       "exhaust"
     ],
@@ -7448,7 +7353,7 @@
     "effect_up": "Whenever you play a card, gain 1 Star.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 3，不消耗能量）；升级后费用变化：-1"
+    "notes": "星辰消耗 3（star cost，不消耗能量）；另有能量费用 1；升级后费用变化 -1"
   },
   {
     "id": "the_smith",
@@ -7462,7 +7367,7 @@
     "effect_up": "Forge 40.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "星辰消耗（star cost 4，不消耗能量）"
+    "notes": "星辰消耗 4（star cost，不消耗能量）；另有能量费用 1"
   },
   {
     "id": "thinking_ahead",
@@ -7472,13 +7377,13 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 0,
-    "effect": "Draw 2 lural:card. Put 1 card from your Hand on top of your Draw Pile.",
-    "effect_up": "Draw 2 lural:card. Put 1 card from your Hand on top of your Draw Pile.",
+    "effect": "Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile.",
+    "effect_up": "Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile.",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "thrash",
@@ -7490,9 +7395,7 @@
     "cost": 1,
     "effect": "Deal 4 damage twice. Exhaust a random Attack in your Hand and add its damage to this card.",
     "effect_up": "Deal 6 damage twice. Exhaust a random Attack in your Hand and add its damage to this card.",
-    "keywords": [
-      "exhaust"
-    ],
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -7542,14 +7445,13 @@
     "type": "attack",
     "rarity": "rare",
     "cost": 2,
-    "effect": "Deal damage equal to the enemy's Doom.?",
-    "effect_up": "Deal damage equal to the enemy's Doom.?",
+    "effect": "Deal damage equal to the enemy's Doom.",
+    "effect_up": "Deal damage equal to the enemy's Doom.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 Retain"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后获得关键词 retain"
   },
   {
     "id": "tools_of_the_trade",
@@ -7563,7 +7465,7 @@
     "effect_up": "At the start of your turn, draw 1 card and discard 1 card.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "toric_toughness",
@@ -7573,8 +7475,8 @@
     "type": "skill",
     "rarity": "event",
     "cost": 2,
-    "effect": "Gain 5 Block. Gain 5 Block at the start of the next 2 lural:turn.",
-    "effect_up": "Gain 7 Block. Gain 7 Block at the start of the next 2 lural:turn.",
+    "effect": "Gain 5 Block. Gain 5 Block at the start of the next 2 turns.",
+    "effect_up": "Gain 7 Block. Gain 7 Block at the start of the next 2 turns.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7605,7 +7507,7 @@
     "effect_up": "Weak enemies take double damage from Attacks.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "transfigure",
@@ -7615,13 +7517,13 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 1,
-    "effect": "Add Replay to a card in your Hand. It costs an extra 1.",
-    "effect_up": "Add Replay to a card in your Hand. It costs an extra 1.",
+    "effect": "Add Replay to a card in your Hand. It costs an extra 1 Energy.",
+    "effect_up": "Add Replay to a card in your Hand. It costs an extra 1 Energy.",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Exhaust"
+    "notes": "升级后移除关键词 exhaust"
   },
   {
     "id": "trash_to_treasure",
@@ -7633,11 +7535,9 @@
     "cost": 1,
     "effect": "Whenever you create a Status, Channel 1 random Orb.",
     "effect_up": "Whenever you create a Status, Channel 1 random Orb.",
-    "keywords": [
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "tremble",
@@ -7663,10 +7563,8 @@
     "rarity": "common",
     "cost": 1,
     "effect": "Gain 7 Block. Exhaust 1 card at random.",
-    "effect_up": "Gain 9 Block. Exhaust 1 cardhow:.",
-    "keywords": [
-      "exhaust"
-    ],
+    "effect_up": "Gain 9 Block. Exhaust 1 card.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -7677,8 +7575,8 @@
     "type": "skill",
     "rarity": "common",
     "cost": 0,
-    "effect": "Gain 2. Add a Void into your Discard Pile.",
-    "effect_up": "Gain 3. Add a Void into your Discard Pile.",
+    "effect": "Gain 2 Energy. Add a Void into your Discard Pile.",
+    "effect_up": "Gain 3 Energy. Add a Void into your Discard Pile.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7707,12 +7605,9 @@
     "cost": 1,
     "effect": "At the start of your turn, draw 1 card and Exhaust 1 card from your Hand.",
     "effect_up": "At the start of your turn, draw 1 card and Exhaust 1 card from your Hand.",
-    "keywords": [
-      "exhaust",
-      "innate"
-    ],
+    "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Innate"
+    "notes": "升级后获得关键词 innate"
   },
   {
     "id": "ultimate_defend",
@@ -7765,8 +7660,8 @@
     "type": "attack",
     "rarity": "basic",
     "cost": 1,
-    "effect": "Osty deals CalculatedDamage:diff() damage. Deals additional damage equal to Osty's current HP.",
-    "effect_up": "Osty deals CalculatedDamage:diff() damage. Deals additional damage equal to Osty's current HP.",
+    "effect": "Osty deals ? damage. Deals additional damage equal to Osty's current HP.",
+    "effect_up": "Osty deals ? damage. Deals additional damage equal to Osty's current HP.",
     "keywords": [
       "ostyattack"
     ],
@@ -7785,7 +7680,7 @@
     "effect_up": "The first time you gain Block from a card each turn, double the amount gained.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "unrelenting",
@@ -7795,8 +7690,8 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Deal 14 damage. The next Attack you play costs 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 20 damage. The next Attack you play costs 0 energyPrefix:energyIcons(1).",
+    "effect": "Deal 14 damage. The next Attack you play costs 0 Energy.",
+    "effect_up": "Deal 20 damage. The next Attack you play costs 0 Energy.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7823,8 +7718,8 @@
     "type": "skill",
     "rarity": "uncommon",
     "cost": 2,
-    "effect": "Add 3 lural:Shiv into your Hand. Reduce this card's cost by 1.",
-    "effect_up": "Add 4 lural:Shiv into your Hand. Reduce this card's cost by 1.",
+    "effect": "Add 3 Shivs into your Hand. Reduce this card's cost by 1.",
+    "effect_up": "Add 4 Shivs into your Hand. Reduce this card's cost by 1.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7848,7 +7743,7 @@
     "character": "defect",
     "type": "attack",
     "rarity": "common",
-    "cost": null,
+    "cost": 2,
     "effect": "Deal 6 damage twice. Play a random Attack from your Draw Pile.",
     "effect_up": "Deal 8 damage twice. Play a random Attack from your Draw Pile.",
     "keywords": [],
@@ -7862,11 +7757,9 @@
     "type": "attack",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Deal 10 damage. The next Ethereal card you play costs 0 energyPrefix:energyIcons(1).",
-    "effect_up": "Deal 13 damage. The next Ethereal card you play costs 0 energyPrefix:energyIcons(1).",
-    "keywords": [
-      "ethereal"
-    ],
+    "effect": "Deal 10 damage. The next Ethereal card you play costs 0 Energy.",
+    "effect_up": "Deal 13 damage. The next Ethereal card you play costs 0 Energy.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -7877,8 +7770,8 @@
     "type": "skill",
     "rarity": "basic",
     "cost": 1,
-    "effect": "Gain 2.",
-    "effect_up": "Gain 3.",
+    "effect": "Gain 2 Stars.",
+    "effect_up": "Gain 3 Stars.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7890,8 +7783,8 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "Whenever you apply Vulnerable, draw 1 lural:card.",
-    "effect_up": "Whenever you apply Vulnerable, draw 2 lural:card.",
+    "effect": "Whenever you apply Vulnerable, draw 1 card.",
+    "effect_up": "Whenever you apply Vulnerable, draw 2 cards.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7903,8 +7796,8 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": "Whenever you draw this card, lose 1.",
-    "effect_up": "Whenever you draw this card, lose 1.",
+    "effect": "Whenever you draw this card, lose 1 Energy.",
+    "effect_up": "Whenever you draw this card, lose 1 Energy.",
     "keywords": [
       "ethereal"
     ],
@@ -7918,13 +7811,13 @@
     "type": "power",
     "rarity": "rare",
     "cost": 3,
-    "effect": "End your turn. The first lural:card you play each turn lural:is free to play.",
-    "effect_up": "End your turn. The first lural:card you play each turn lural:is free to play.",
+    "effect": "End your turn. The first 2 cards you play each turn are free to play.",
+    "effect_up": "End your turn. The first 2 cards you play each turn are free to play.",
     "keywords": [
       "ethereal"
     ],
     "version": "v0.107.1",
-    "notes": "升级后移除关键词 Ethereal"
+    "notes": "升级后移除关键词 ethereal"
   },
   {
     "id": "volley",
@@ -7947,13 +7840,13 @@
     "type": "skill",
     "rarity": "rare",
     "cost": 3,
-    "effect": "Channel Lightning equal to the Lightning already Channeled this combat.?",
-    "effect_up": "Channel Lightning equal to the Lightning already Channeled this combat.?",
+    "effect": "Channel Lightning equal to the Lightning already Channeled this combat. (Channel ? Lightning)",
+    "effect_up": "Channel Lightning equal to the Lightning already Channeled this combat. (Channel ? Lightning)",
     "keywords": [
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 Exhaust"
+    "notes": "描述中含动态计算数值（以 ? 表示）；升级后移除关键词 exhaust"
   },
   {
     "id": "waste_away",
@@ -7963,8 +7856,8 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": "Gain 1 less energyPrefix:energyIcons(1) per turn.",
-    "effect_up": "Gain 1 less energyPrefix:energyIcons(1) per turn.",
+    "effect": "Gain 1 less Energy per turn.",
+    "effect_up": "Gain 1 less Energy per turn.",
     "keywords": [],
     "version": "v0.107.1"
   },
@@ -7976,11 +7869,9 @@
     "type": "power",
     "rarity": "uncommon",
     "cost": 1,
-    "effect": "At the end of your turn, Retain up to 1 lural:card.",
-    "effect_up": "At the end of your turn, Retain up to 2 lural:card.",
-    "keywords": [
-      "retain"
-    ],
+    "effect": "At the end of your turn, Retain up to 1 card.",
+    "effect_up": "At the end of your turn, Retain up to 2 cards.",
+    "keywords": [],
     "version": "v0.107.1"
   },
   {
@@ -8025,7 +7916,7 @@
       "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   },
   {
     "id": "wish",
@@ -8038,11 +7929,10 @@
     "effect": "Put a card from your Draw Pile into your Hand.",
     "effect_up": "Put a card from your Draw Pile into your Hand.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "wisp",
@@ -8052,14 +7942,13 @@
     "type": "skill",
     "rarity": "common",
     "cost": 0,
-    "effect": "Gain 1.",
-    "effect_up": "Gain 1.",
+    "effect": "Gain 1 Energy.",
+    "effect_up": "Gain 1 Energy.",
     "keywords": [
-      "exhaust",
-      "retain"
+      "exhaust"
     ],
     "version": "v0.107.1",
-    "notes": "升级后获得关键词 Retain"
+    "notes": "升级后获得关键词 retain"
   },
   {
     "id": "wither",
@@ -8140,6 +8029,6 @@
     "effect_up": "Channel 1 Lightning.",
     "keywords": [],
     "version": "v0.107.1",
-    "notes": "升级后费用变化：-1"
+    "notes": "升级后费用变化 -1"
   }
 ]

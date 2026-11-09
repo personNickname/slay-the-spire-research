@@ -1,0 +1,958 @@
+[
+  {
+    "id": "a_thousand_cuts",
+    "en": "A Thousand Cuts",
+    "zh": "凌迟",
+    "character": "silent",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 2,
+    "effect": "每当你打出一张卡牌，对所有敌人造成 1 点伤害。",
+    "effect_up": "每当你打出一张卡牌，对所有敌人造成 2 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "accuracy",
+    "en": "Accuracy",
+    "zh": "精准",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "小刀造成的伤害提高 4 点。",
+    "effect_up": "小刀造成的伤害提高 6 点。",
+    "keywords": []
+  },
+  {
+    "id": "acrobatics",
+    "en": "Acrobatics",
+    "zh": "杂技",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "抽 3 张卡牌，弃置 1 张卡牌。",
+    "effect_up": "抽 4 张卡牌，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "adrenaline",
+    "en": "Adrenaline",
+    "zh": "肾上腺素",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 0,
+    "effect": "获得 1 点能量，抽 2 张卡牌。消耗。",
+    "effect_up": "获得 2 点能量，抽 2 张卡牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "after_image",
+    "en": "After Image",
+    "zh": "余像",
+    "character": "silent",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "每当你打出一张卡牌，获得 1 点格挡。",
+    "effect_up": "固有。每当你打出一张卡牌，获得 1 点格挡。",
+    "keywords": [
+      "innate"
+    ]
+  },
+  {
+    "id": "alchemize",
+    "en": "Alchemize",
+    "zh": "炼制药水",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "获得一瓶随机药水。消耗。",
+    "effect_up": "费用变为 0。获得一瓶随机药水。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "all_out_attack",
+    "en": "All-Out Attack",
+    "zh": "全力攻击",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "对所有敌人造成 10 点伤害，随机弃置 1 张卡牌。",
+    "effect_up": "对所有敌人造成 14 点伤害，随机弃置 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "backflip",
+    "en": "Backflip",
+    "zh": "后空翻",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 5 点格挡，抽 2 张卡牌。",
+    "effect_up": "获得 8 点格挡，抽 2 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "backstab",
+    "en": "Backstab",
+    "zh": "背刺",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "固有。造成 11 点伤害。消耗。",
+    "effect_up": "固有。造成 15 点伤害。消耗。",
+    "keywords": [
+      "innate",
+      "exhaust"
+    ]
+  },
+  {
+    "id": "bane",
+    "en": "Bane",
+    "zh": "灾祸",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 7 点伤害。若敌人已中毒，再造成 7 点伤害。",
+    "effect_up": "造成 10 点伤害。若敌人已中毒，再造成 10 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "blade_dance",
+    "en": "Blade Dance",
+    "zh": "刀刃之舞",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "将 3 张小刀加入手牌。",
+    "effect_up": "将 4 张小刀加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "blur",
+    "en": "Blur",
+    "zh": "残影",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "获得 5 点格挡。你的格挡在下回合开始时不会被移除。",
+    "effect_up": "获得 8 点格挡。你的格挡在下回合开始时不会被移除。",
+    "keywords": []
+  },
+  {
+    "id": "bouncing_flask",
+    "en": "Bouncing Flask",
+    "zh": "弹跳药瓶",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "随机对一名敌人施加 3 次中毒，每次 3 层。",
+    "effect_up": "随机对一名敌人施加 4 次中毒，每次 3 层。",
+    "keywords": []
+  },
+  {
+    "id": "bullet_time",
+    "en": "Bullet Time",
+    "zh": "子弹时间",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "本回合你无法抽更多卡牌。本回合你手牌中所有卡牌的费用降为 0。",
+    "effect_up": "费用变为 2。本回合你无法抽更多卡牌。本回合你手牌中所有卡牌的费用降为 0。",
+    "keywords": []
+  },
+  {
+    "id": "burst",
+    "en": "Burst",
+    "zh": "爆发",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "本回合内，你的下一张技能牌会被打出两次。",
+    "effect_up": "本回合内，你的接下来 2 张技能牌会被打出两次。",
+    "keywords": []
+  },
+  {
+    "id": "calculated_gamble",
+    "en": "Calculated Gamble",
+    "zh": "计算下注",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "弃置你的手牌，然后抽取等同数量的卡牌。消耗。",
+    "effect_up": "弃置你的手牌，然后抽取等同数量的卡牌。（升级后不再消耗。）",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "caltrops",
+    "en": "Caltrops",
+    "zh": "铁蒺藜",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "每当你受到攻击，对攻击者造成 3 点伤害。",
+    "effect_up": "每当你受到攻击，对攻击者造成 5 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "catalyst",
+    "en": "Catalyst",
+    "zh": "催化剂",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "使敌人的中毒层数翻倍。消耗。",
+    "effect_up": "使敌人的中毒层数变为三倍。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "choke",
+    "en": "Choke",
+    "zh": "勒脖",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 12 点伤害。本回合内你每打出一张卡牌，该敌人就失去 3 点生命。",
+    "effect_up": "造成 12 点伤害。本回合内你每打出一张卡牌，该敌人就失去 5 点生命。",
+    "keywords": []
+  },
+  {
+    "id": "cloak_and_dagger",
+    "en": "Cloak and Dagger",
+    "zh": "斗篷与匕首",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 6 点格挡，将 1 张小刀加入手牌。",
+    "effect_up": "获得 6 点格挡，将 2 张小刀加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "concentrate",
+    "en": "Concentrate",
+    "zh": "全神贯注",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "弃置 3 张卡牌，获得 2 点能量。",
+    "effect_up": "弃置 2 张卡牌，获得 2 点能量。",
+    "keywords": []
+  },
+  {
+    "id": "corpse_explosion",
+    "en": "Corpse Explosion",
+    "zh": "尸爆术",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 2,
+    "effect": "施加 6 层中毒。当该敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。",
+    "effect_up": "施加 9 层中毒。当该敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。",
+    "keywords": []
+  },
+  {
+    "id": "crippling_cloud",
+    "en": "Crippling Cloud",
+    "zh": "致残毒云",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "对所有敌人施加 4 层中毒和 2 层虚弱。消耗。",
+    "effect_up": "对所有敌人施加 7 层中毒和 2 层虚弱。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "dagger_spray",
+    "en": "Dagger Spray",
+    "zh": "匕首雨",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "对所有敌人造成 2 次、每次 4 点伤害。",
+    "effect_up": "对所有敌人造成 2 次、每次 6 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "dagger_throw",
+    "en": "Dagger Throw",
+    "zh": "投掷匕首",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 9 点伤害，抽 1 张卡牌，弃置 1 张卡牌。",
+    "effect_up": "造成 12 点伤害，抽 1 张卡牌，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "dash",
+    "en": "Dash",
+    "zh": "冲刺",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "获得 10 点格挡，造成 10 点伤害。",
+    "effect_up": "获得 13 点格挡，造成 13 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "deadly_poison",
+    "en": "Deadly Poison",
+    "zh": "致命毒药",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "对一名敌人施加 5 层中毒。",
+    "effect_up": "对一名敌人施加 7 层中毒。",
+    "keywords": []
+  },
+  {
+    "id": "defend_silent",
+    "en": "Defend (Silent)",
+    "zh": "防御",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "basic",
+    "cost": 1,
+    "effect": "获得 5 点格挡。",
+    "effect_up": "获得 8 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "deflect",
+    "en": "Deflect",
+    "zh": "偏折",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "获得 4 点格挡。",
+    "effect_up": "获得 7 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "die_die_die",
+    "en": "Die Die Die",
+    "zh": "死吧死吧死吧",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "对所有敌人造成 13 点伤害。消耗。",
+    "effect_up": "对所有敌人造成 17 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "distraction",
+    "en": "Distraction",
+    "zh": "声东击西",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "随机将一张技能牌加入手牌，其费用在本回合为 0。消耗。",
+    "effect_up": "费用变为 0。随机将一张技能牌加入手牌，其费用在本回合为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "dodge_and_roll",
+    "en": "Dodge and Roll",
+    "zh": "闪避翻滚",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "获得 4 点格挡，下回合再获得 4 点格挡。",
+    "effect_up": "获得 6 点格挡，下回合再获得 6 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "doppelganger",
+    "en": "Doppelganger",
+    "zh": "双重存在",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": "X",
+    "effect": "下回合，抽 X 张卡牌并获得 X 点能量。消耗。",
+    "effect_up": "下回合，抽 X+1 张卡牌并获得 X+1 点能量。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "endless_agony",
+    "en": "Endless Agony",
+    "zh": "无尽苦痛",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "每当你抽到这张牌时，将一张它的复制加入手牌。造成 4 点伤害。消耗。",
+    "effect_up": "每当你抽到这张牌时，将一张它的复制加入手牌。造成 6 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "envenom",
+    "en": "Envenom",
+    "zh": "涂毒",
+    "character": "silent",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 2,
+    "effect": "每当你的攻击牌造成未被格挡的伤害时，施加 1 层中毒。",
+    "effect_up": "费用变为 1。每当你的攻击牌造成未被格挡的伤害时，施加 1 层中毒。",
+    "keywords": []
+  },
+  {
+    "id": "escape_plan",
+    "en": "Escape Plan",
+    "zh": "逃脱计划",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "抽 1 张卡牌。若抽到的是技能牌，获得 3 点格挡。",
+    "effect_up": "抽 1 张卡牌。若抽到的是技能牌，获得 5 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "eviscerate",
+    "en": "Eviscerate",
+    "zh": "内脏切除",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 3,
+    "effect": "本回合内每弃置一张卡牌，费用便降低 1 点。造成 3 次、每次 7 点伤害。",
+    "effect_up": "本回合内每弃置一张卡牌，费用便降低 1 点。造成 3 次、每次 9 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "expertise",
+    "en": "Expertise",
+    "zh": "独门技术",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "抽牌直到手牌达到 6 张。",
+    "effect_up": "抽牌直到手牌达到 7 张。",
+    "keywords": []
+  },
+  {
+    "id": "finisher",
+    "en": "Finisher",
+    "zh": "终结技",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "本回合内每打出过一张攻击牌，便造成一次 6 点伤害。",
+    "effect_up": "本回合内每打出过一张攻击牌，便造成一次 8 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "flechettes",
+    "en": "Flechettes",
+    "zh": "飞镖",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "你的手牌中每有一张技能牌，便造成一次 4 点伤害。",
+    "effect_up": "你的手牌中每有一张技能牌，便造成一次 6 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "flying_knee",
+    "en": "Flying Knee",
+    "zh": "飞膝",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 8 点伤害。下回合获得 1 点能量。",
+    "effect_up": "造成 11 点伤害。下回合获得 1 点能量。",
+    "keywords": []
+  },
+  {
+    "id": "footwork",
+    "en": "Footwork",
+    "zh": "灵动步法",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "获得 2 点敏捷。",
+    "effect_up": "获得 3 点敏捷。",
+    "keywords": []
+  },
+  {
+    "id": "glass_knife",
+    "en": "Glass Knife",
+    "zh": "玻璃刀刃",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "造成 2 次、每次 8 点伤害。本次战斗中，这张牌每次被打出后伤害降低 2 点。",
+    "effect_up": "造成 2 次、每次 12 点伤害。本次战斗中，这张牌每次被打出后伤害降低 2 点。",
+    "keywords": []
+  },
+  {
+    "id": "grand_finale",
+    "en": "Grand Finale",
+    "zh": "华丽收场",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 0,
+    "effect": "仅当抽牌堆为空时才能打出。对所有敌人造成 50 点伤害。",
+    "effect_up": "仅当抽牌堆为空时才能打出。对所有敌人造成 60 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "heel_hook",
+    "en": "Heel Hook",
+    "zh": "足跟勾",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "造成 5 点伤害。若敌人处于虚弱状态，获得 1 点能量并抽 1 张卡牌。",
+    "effect_up": "造成 8 点伤害。若敌人处于虚弱状态，获得 1 点能量并抽 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "infinite_blades",
+    "en": "Infinite Blades",
+    "zh": "无限刀刃",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "在你的回合开始时，将 1 张小刀加入手牌。",
+    "effect_up": "固有。在你的回合开始时，将 1 张小刀加入手牌。",
+    "keywords": [
+      "innate"
+    ]
+  },
+  {
+    "id": "leg_sweep",
+    "en": "Leg Sweep",
+    "zh": "扫腿",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "施加 2 层虚弱，获得 11 点格挡。",
+    "effect_up": "施加 3 层虚弱，获得 14 点格挡。",
+    "keywords": []
+  },
+  {
+    "id": "malaise",
+    "en": "Malaise",
+    "zh": "萎靡",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": "X",
+    "effect": "敌人失去 X 点力量，并施加 X 层虚弱。消耗。",
+    "effect_up": "敌人失去 X+1 点力量，并施加 X+1 层虚弱。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "masterful_stab",
+    "en": "Masterful Stab",
+    "zh": "精巧刺击",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 0,
+    "effect": "本次战斗中你每失去过一次生命，这张牌的费用便提高 1 点。造成 12 点伤害。",
+    "effect_up": "本次战斗中你每失去过一次生命，这张牌的费用便提高 1 点。造成 16 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "neutralize",
+    "en": "Neutralize",
+    "zh": "中和",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "basic",
+    "cost": 0,
+    "effect": "造成 3 点伤害，施加 1 层虚弱。",
+    "effect_up": "造成 4 点伤害，施加 2 层虚弱。",
+    "keywords": []
+  },
+  {
+    "id": "nightmare",
+    "en": "Nightmare",
+    "zh": "夜魇",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "选择一张卡牌。下回合，将 3 张该牌的复制加入手牌。消耗。",
+    "effect_up": "费用变为 2。选择一张卡牌。下回合，将 3 张该牌的复制加入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "noxious_fumes",
+    "en": "Noxious Fumes",
+    "zh": "毒雾",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "在你的回合开始时，对所有敌人施加 2 层中毒。",
+    "effect_up": "在你的回合开始时，对所有敌人施加 3 层中毒。",
+    "keywords": []
+  },
+  {
+    "id": "outmaneuver",
+    "en": "Outmaneuver",
+    "zh": "抢占先机",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "下回合获得 2 点能量。",
+    "effect_up": "下回合获得 3 点能量。",
+    "keywords": []
+  },
+  {
+    "id": "phantasmal_killer",
+    "en": "Phantasmal Killer",
+    "zh": "幻影杀手",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "下回合内，你的攻击牌造成双倍伤害。",
+    "effect_up": "费用变为 0。下回合内，你的攻击牌造成双倍伤害。",
+    "keywords": []
+  },
+  {
+    "id": "piercing_wail",
+    "en": "Piercing Wail",
+    "zh": "尖啸",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "所有敌人本回合失去 6 点力量。消耗。",
+    "effect_up": "所有敌人本回合失去 8 点力量。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "poisoned_stab",
+    "en": "Poisoned Stab",
+    "zh": "带毒刺击",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 6 点伤害，施加 3 层中毒。",
+    "effect_up": "造成 8 点伤害，施加 4 层中毒。",
+    "keywords": []
+  },
+  {
+    "id": "predator",
+    "en": "Predator",
+    "zh": "猎杀者",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 15 点伤害。下回合额外抽 2 张卡牌。",
+    "effect_up": "造成 20 点伤害。下回合额外抽 2 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "prepared",
+    "en": "Prepared",
+    "zh": "早有准备",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "抽 1 张卡牌，弃置 1 张卡牌。",
+    "effect_up": "抽 2 张卡牌，弃置 2 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "quick_slash",
+    "en": "Quick Slash",
+    "zh": "快斩",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 8 点伤害，抽 1 张卡牌。",
+    "effect_up": "造成 12 点伤害，抽 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "reflex",
+    "en": "Reflex",
+    "zh": "本能反应",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": null,
+    "effect": "不可打出。若这张牌从手牌中被弃置，抽 2 张卡牌。",
+    "effect_up": "不可打出。若这张牌从手牌中被弃置，抽 3 张卡牌。",
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  {
+    "id": "riddle_with_holes",
+    "en": "Riddle with Holes",
+    "zh": "千穿百刺",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": 2,
+    "effect": "造成 5 次、每次 3 点伤害。",
+    "effect_up": "造成 5 次、每次 4 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "setup",
+    "en": "Setup",
+    "zh": "部署",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "将手牌中的一张卡牌置于抽牌堆顶部，其费用降为 0 直到被打出。",
+    "effect_up": "费用变为 0。将手牌中的一张卡牌置于抽牌堆顶部，其费用降为 0 直到被打出。",
+    "keywords": []
+  },
+  {
+    "id": "skewer",
+    "en": "Skewer",
+    "zh": "串刺",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "uncommon",
+    "cost": "X",
+    "effect": "造成 X 次、每次 7 点伤害。",
+    "effect_up": "造成 X 次、每次 10 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "slice",
+    "en": "Slice",
+    "zh": "切割",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 0,
+    "effect": "造成 6 点伤害。",
+    "effect_up": "造成 9 点伤害。",
+    "keywords": []
+  },
+  {
+    "id": "sneaky_strike",
+    "en": "Sneaky Strike",
+    "zh": "隐秘打击",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 2,
+    "effect": "造成 12 点伤害。若你本回合弃置过卡牌，获得 2 点能量。",
+    "effect_up": "造成 16 点伤害。若你本回合弃置过卡牌，获得 2 点能量。",
+    "keywords": []
+  },
+  {
+    "id": "storm_of_steel",
+    "en": "Storm of Steel",
+    "zh": "钢铁风暴",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "弃置你的手牌，每弃置一张卡牌便将 1 张小刀加入手牌。",
+    "effect_up": "弃置你的手牌，每弃置一张卡牌便将 1 张升级后的小刀加入手牌。",
+    "keywords": []
+  },
+  {
+    "id": "strike_silent",
+    "en": "Strike (Silent)",
+    "zh": "打击",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "basic",
+    "cost": 1,
+    "effect": "造成 6 点伤害。",
+    "effect_up": "造成 9 点伤害。",
+    "keywords": [
+      "strike"
+    ]
+  },
+  {
+    "id": "sucker_punch",
+    "en": "Sucker Punch",
+    "zh": "突然一拳",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "common",
+    "cost": 1,
+    "effect": "造成 7 点伤害，施加 1 层虚弱。",
+    "effect_up": "造成 9 点伤害，施加 2 层虚弱。",
+    "keywords": []
+  },
+  {
+    "id": "survivor",
+    "en": "Survivor",
+    "zh": "生存者",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "basic",
+    "cost": 1,
+    "effect": "获得 8 点格挡，弃置 1 张卡牌。",
+    "effect_up": "获得 11 点格挡，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "tactician",
+    "en": "Tactician",
+    "zh": "战术大师",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": null,
+    "effect": "不可打出。若这张牌从手牌中被弃置，获得 1 点能量。",
+    "effect_up": "不可打出。若这张牌从手牌中被弃置，获得 2 点能量。",
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  {
+    "id": "terror",
+    "en": "Terror",
+    "zh": "恐怖",
+    "character": "silent",
+    "type": "skill",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "施加 99 层易伤。消耗。",
+    "effect_up": "费用变为 0。施加 99 层易伤。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  {
+    "id": "tools_of_the_trade",
+    "en": "Tools of the Trade",
+    "zh": "必备工具",
+    "character": "silent",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "在你的回合开始时，抽 1 张卡牌并弃置 1 张卡牌。",
+    "effect_up": "费用变为 0。在你的回合开始时，抽 1 张卡牌并弃置 1 张卡牌。",
+    "keywords": []
+  },
+  {
+    "id": "unload",
+    "en": "Unload",
+    "zh": "乾坤一掷",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "rare",
+    "cost": 1,
+    "effect": "造成 14 点伤害，弃置手牌中所有非攻击牌。",
+    "effect_up": "造成 18 点伤害，弃置手牌中所有非攻击牌。",
+    "keywords": []
+  },
+  {
+    "id": "well_laid_plans",
+    "en": "Well-Laid Plans",
+    "zh": "计划妥当",
+    "character": "silent",
+    "type": "power",
+    "rarity": "uncommon",
+    "cost": 1,
+    "effect": "在你的回合结束时，保留最多 1 张手牌。",
+    "effect_up": "在你的回合结束时，保留最多 2 张手牌。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  {
+    "id": "wraith_form",
+    "en": "Wraith Form",
+    "zh": "幽魂形态",
+    "character": "silent",
+    "type": "power",
+    "rarity": "rare",
+    "cost": 3,
+    "effect": "获得 2 层无实体。在你的回合结束时，失去 1 点敏捷。",
+    "effect_up": "获得 3 层无实体。在你的回合结束时，失去 1 点敏捷。",
+    "keywords": []
+  },
+  {
+    "id": "shiv",
+    "en": "Shiv",
+    "zh": "小刀",
+    "character": "silent",
+    "type": "attack",
+    "rarity": "special",
+    "cost": 0,
+    "effect": "造成 4 点伤害。消耗。",
+    "effect_up": "造成 6 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ],
+    "notes": "令牌卡：无法加入卡组，仅能在战斗中由卡牌（刀刃之舞、斗篷与匕首、钢铁风暴、无限刀刃）、遗物（忍者卷轴）或药水（狡诈药水）生成。wiki 数据中标记为无色（Colorless）。"
+  }
+]

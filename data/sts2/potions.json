@@ -1,5 +1,15 @@
 [
   {
+    "id": "ashwater",
+    "en": "Ashwater",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Exhaust any number of cards in your Hand.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
     "id": "attack_potion",
     "en": "Attack Potion",
     "zh": null,
@@ -13,7 +23,7 @@
     "en": "Beetle Juice",
     "zh": null,
     "rarity": "rare",
-    "effect": "Enemy's attacks deal 30% less damage lural:next turn.",
+    "effect": "Enemy's attacks deal 30% less damage for the next ? turns.",
     "target": "敌人",
     "version": "v0.107.1"
   },
@@ -36,11 +46,31 @@
     "version": "v0.107.1"
   },
   {
+    "id": "blood_potion",
+    "en": "Blood Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Heal for 20% of your Max HP.",
+    "target": "玩家",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
+    "id": "bone_brew",
+    "en": "Bone Brew",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Summon 15.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
     "id": "bottled_potential",
     "en": "Bottled Potential",
     "zh": null,
     "rarity": "rare",
-    "effect": "Shuffle ALL your cards into your Draw Pile. Draw 5 lural:card.",
+    "effect": "Shuffle ALL your cards into your Draw Pile. Draw 5 cards.",
     "target": "玩家",
     "version": "v0.107.1"
   },
@@ -49,7 +79,7 @@
     "en": "Clarity Extract",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Draw 1 lural:card. At the start of your next lural:turn, draw 1 additional card.",
+    "effect": "Draw 1 card. At the start of your next ? turns, draw 1 additional card.",
     "target": "玩家",
     "version": "v0.107.1"
   },
@@ -63,11 +93,31 @@
     "version": "v0.107.1"
   },
   {
+    "id": "cosmic_concoction",
+    "en": "Cosmic Concoction",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Add 3 Upgraded Colorless cards into your Hand.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "regent"
+  },
+  {
+    "id": "cunning_potion",
+    "en": "Cunning Potion",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Add 3 Upgraded Shivs into your Hand.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
     "id": "cure_all",
     "en": "Cure All",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Gain 1. Draw 2 lural:card.",
+    "effect": "Gain 1 Energy. Draw 2 cards.",
     "target": "玩家",
     "version": "v0.107.1"
   },
@@ -112,7 +162,7 @@
     "en": "Energy Potion",
     "zh": null,
     "rarity": "common",
-    "effect": "Gain 2.",
+    "effect": "Gain 2 Energy.",
     "target": "玩家",
     "version": "v0.107.1"
   },
@@ -124,6 +174,16 @@
     "effect": "Fill all your empty potion slots with random potions.",
     "target": "自身",
     "version": "v0.107.1"
+  },
+  {
+    "id": "essence_of_darkness",
+    "en": "Essence of Darkness",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Channel a Dark for each of your Orb Slots.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "defect"
   },
   {
     "id": "explosive_ampoule",
@@ -160,6 +220,16 @@
     "effect": "Gain 5 Strength. At the end of your turn, lose 5 Strength.",
     "target": "玩家",
     "version": "v0.107.1"
+  },
+  {
+    "id": "focus_potion",
+    "en": "Focus Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 2 Focus.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "defect"
   },
   {
     "id": "fortifier",
@@ -208,6 +278,16 @@
     "version": "v0.107.1"
   },
   {
+    "id": "ghost_in_a_jar",
+    "en": "Ghost in a Jar",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Gain 1 Intangible.",
+    "target": "玩家",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
     "id": "gigantification_potion",
     "en": "Gigantification Potion",
     "zh": null,
@@ -234,6 +314,16 @@
     "effect": "Gain 7 Plating.",
     "target": "玩家",
     "version": "v0.107.1"
+  },
+  {
+    "id": "kings_courage",
+    "en": "King's Courage",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Forge 15.",
+    "target": "玩家",
+    "version": "v0.107.1",
+    "character": "regent"
   },
   {
     "id": "liquid_bronze",
@@ -281,6 +371,26 @@
     "version": "v0.107.1"
   },
   {
+    "id": "poison_potion",
+    "en": "Poison Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Apply 6 Poison.",
+    "target": "敌人",
+    "version": "v0.107.1",
+    "character": "silent"
+  },
+  {
+    "id": "pot_of_ghouls",
+    "en": "Pot of Ghouls",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "Add 2 Souls into your Hand.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
     "id": "potion_of_binding",
     "en": "Potion of Binding",
     "zh": null,
@@ -290,6 +400,26 @@
     "version": "v0.107.1"
   },
   {
+    "id": "potion_of_capacity",
+    "en": "Potion of Capacity",
+    "zh": null,
+    "rarity": "uncommon",
+    "effect": "Gain 2 Orb Slots.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "defect"
+  },
+  {
+    "id": "potion_of_doom",
+    "en": "Potion of Doom",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Apply 33 Doom.",
+    "target": "敌人",
+    "version": "v0.107.1",
+    "character": "necrobinder"
+  },
+  {
     "id": "potion_shaped_rock",
     "en": "Potion-Shaped Rock",
     "zh": null,
@@ -297,7 +427,8 @@
     "effect": "Deal 15 damage.",
     "target": "敌人",
     "version": "v0.107.1",
-    "character": "token"
+    "character": "token",
+    "notes": "生成药水（不在常规掉落池）"
   },
   {
     "id": "powdered_demise",
@@ -322,7 +453,7 @@
     "en": "Radiant Tincture",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Gain 1. Gain an additional energyPrefix:energyIcons(1) at the start of your next 3 lural:turn.",
+    "effect": "Gain 1 Energy. Gain an additional Energy at the start of your next 3 turns.",
     "target": "玩家",
     "version": "v0.107.1"
   },
@@ -372,6 +503,16 @@
     "version": "v0.107.1"
   },
   {
+    "id": "soldiers_stew",
+    "en": "Soldier's Stew",
+    "zh": null,
+    "rarity": "rare",
+    "effect": "All cards containing Strike gain 1 Replay this combat.",
+    "target": "玩家",
+    "version": "v0.107.1",
+    "character": "ironclad"
+  },
+  {
     "id": "speed_potion",
     "en": "Speed Potion",
     "zh": null,
@@ -385,9 +526,19 @@
     "en": "Stable Serum",
     "zh": null,
     "rarity": "uncommon",
-    "effect": "Retain your Hand for 2 lural:turn.",
+    "effect": "Retain your Hand for 2 turns.",
     "target": "玩家",
     "version": "v0.107.1"
+  },
+  {
+    "id": "star_potion",
+    "en": "Star Potion",
+    "zh": null,
+    "rarity": "common",
+    "effect": "Gain 3 Stars.",
+    "target": "自身",
+    "version": "v0.107.1",
+    "character": "regent"
   },
   {
     "id": "strength_potion",
@@ -403,7 +554,7 @@
     "en": "Swift Potion",
     "zh": null,
     "rarity": "common",
-    "effect": "Draw 3 lural:card.",
+    "effect": "Draw 3 cards.",
     "target": "玩家",
     "version": "v0.107.1"
   },
