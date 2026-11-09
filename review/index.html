@@ -148,6 +148,9 @@
   .doc { display: flex; justify-content: space-between; gap: 14px; padding: 9px 14px; border: 1px solid var(--border); border-radius: 9px; margin: 8px 0; font-size: 13.5px; background: #fff; flex-wrap: wrap; }
   .doc code { font-family: "SF Mono", Menlo, monospace; color: var(--accent); font-size: 13px; }
   .doc .meta { color: var(--faint); white-space: nowrap; }
+  a.doc { color: var(--text); text-decoration: none; transition: border-color .15s; cursor: pointer; }
+  a.doc:hover { border-color: var(--accent); background: var(--accent-soft); }
+  a.doc:hover code { text-decoration: underline; }
   footer { border-top: 1px solid var(--border); padding: 26px; text-align: center; color: var(--faint); font-size: 13px; }
   @media (max-width: 900px) {
     .layout { grid-template-columns: 1fr; }
@@ -320,22 +323,52 @@
       </div>
     </section>
 
-    <section data-t="一局长什么样">
-      <h2><span class="num">8</span>一局长什么样</h2>
+    <section data-t="地图上有什么">
+      <h2><span class="num">8</span>地图上有什么</h2>
+      <div class="sub">7 种节点 + 分岔路径 + 幕结构 —— 爬塔的每一步都是地图上的选择</div>
+      <div class="tbl-wrap">
+      <table>
+        <tr><th>节点</th><th>含义</th><th>关键规则</th></tr>
+        <tr><td>普通战斗</td><td>最常见节点，打一场</td><td>赢后卡牌奖励 3 选 1 + 金币 10–20</td></tr>
+        <tr><td>精英</td><td>强敌，打不过绕着走</td><td>必掉遗物；卡牌奖励更优（稀有率 10%）；进阶后出现率上升</td></tr>
+        <tr><td>？未知</td><td>事件：赌博与机遇</td><td>换血、删卡、诅咒换大奖，也可能撞上战斗或商贩</td></tr>
+        <tr><td>商店</td><td>买卡 / 遗物 / 药水</td><td>删卡 75 金起步每张 +25 —— 地图上唯一主动瘦身卡组的地方</td></tr>
+        <tr><td>篝火</td><td>回 30% 血 或 升级一张卡</td><td>特定遗物能追加举重 / 删卡 / 挖遗物选项</td></tr>
+        <tr><td>宝箱</td><td>免费开一件遗物</td><td>第 9 层固定全是宝箱</td></tr>
+        <tr><td>BOSS</td><td>幕末守关者</td><td>击败后 Boss 遗物 3 选 1，进入下一幕</td></tr>
+      </table>
+      </div>
       <div class="grid g3">
-        <div class="card"><h5>地图</h5><p>每幕 15 行节点分岔路（7×15 网格、6 条路径），第 9 层必是宝箱、第 15 层必是篝火。节点 7 种：战斗 / 精英 / ? / 商店 / 篝火 / 宝箱 / BOSS。</p></div>
-        <div class="card"><h5>3 幕 + 隐藏 1 幕</h5><p>外域 → 城市 → 彼岸。集齐 3 把钥匙（篝火/超级精英/宝箱）解锁第 4 幕打心脏。</p></div>
-        <div class="card"><h5>升阶（难度系统）</h5><p>通关后逐级加难度，共 20 级：精英变多、敌人变硬、开局挂诅咒、每幕双 BOSS……</p></div>
+        <div class="card"><h5>地图形状</h5><p>每幕 7 列 × 15 行网格、6 条路径互不交叉；第 1 层全是普通战斗（热身）、<b>第 9 层全宝箱、第 15 层全篝火</b>（打 Boss 前休整）。种子固定 → 同种子同一张图。</p></div>
+        <div class="card"><h5>3 幕 + 隐藏第 4 幕</h5><p>外域 → 城市 → 彼岸。集齐 3 把钥匙（篝火忆起 / 超级精英掉落 / 宝箱换钥匙）解锁第 4 幕：固定 4 房间 <b>篝火 → 商店 → 精英 → 腐化之心</b>。</p></div>
+        <div class="card"><h5>升阶（难度系统）</h5><p>通关后逐级加难度，共 20 级：精英变多、敌人变硬、开局挂诅咒、每幕双 BOSS……一级一条规则，全表在文档里。</p></div>
       </div>
     </section>
 
     <section data-t="深入资料">
       <h2><span class="num">+</span>深入资料在哪</h2>
-      <div class="doc"><code>docs/sts1/core-mechanics.md</code><span class="meta">725 行 · Buff 全表 / 遗物 90 详列 / 药水 42 全表 / 掉落概率</span></div>
-      <div class="doc"><code>docs/sts1/characters.md</code><span class="meta">466 行 · 四角色起始卡组 / 21 流派 / 专属遗物 / 解锁表</span></div>
-      <div class="doc"><code>docs/sts1/enemies.md</code><span class="meta">418 行 · 意图系统 12 种中断触发器 / 全 BOSS 行动循环</span></div>
-      <div class="doc"><code>docs/sts1/map-events-shop.md</code><span class="meta">637 行 · 地图生成 / 商店价格 / 14 事件全选项 / 升阶 20 级</span></div>
-      <p class="dim" style="font-size:13px">全部数值查证自 slaythespire.wiki.gg（150+ 页面），来源列在每份文档文末。</p>
+      <div class="sub">点条目直接打开对应文档（.md 纯文本，建议用编辑器阅读）</div>
+      <a class="doc" href="../docs/sts1/core-mechanics.md" target="_blank"><code>docs/sts1/core-mechanics.md</code><span class="meta">725 行 · Buff 全表 / 遗物 90 详列 / 药水 42 全表 / 掉落概率</span></a>
+      <a class="doc" href="../docs/sts1/characters.md" target="_blank"><code>docs/sts1/characters.md</code><span class="meta">466 行 · 四角色起始卡组 / 21 流派 / 专属遗物 / 解锁表</span></a>
+      <a class="doc" href="../docs/sts1/enemies.md" target="_blank"><code>docs/sts1/enemies.md</code><span class="meta">418 行 · 意图系统 12 种中断触发器 / 全 BOSS 行动循环</span></a>
+      <a class="doc" href="../docs/sts1/map-events-shop.md" target="_blank"><code>docs/sts1/map-events-shop.md</code><span class="meta">637 行 · 地图生成 / 商店价格 / 事件 / 升阶 20 级</span></a>
+      <h4 style="margin-top:22px">实体完备度自查（一局游戏的全部构成）</h4>
+      <div class="tbl-wrap">
+      <table>
+        <tr><th>实体</th><th>规模</th><th>状态</th></tr>
+        <tr><td>英雄（角色）</td><td>4</td><td>已全：HP / 起始卡组 / 起始遗物 / 机制 / 解锁</td></tr>
+        <tr><td>卡牌</td><td>约 340 张</td><td><b>全量提取中</b> → data/sts1/cards_*.json（5 个并行任务）</td></tr>
+        <tr><td>遗物</td><td>193</td><td>90 件详表已录入文档；<b>全量提取中</b> → relics.json</td></tr>
+        <tr><td>药水</td><td>42</td><td>效果已全（文档全表）；JSON 化中</td></tr>
+        <tr><td>敌人（普通/精英/Boss/事件）</td><td>约 55+</td><td>名单与行为已全；<b>招式数值提取中</b> → enemies.json</td></tr>
+        <tr><td>事件</td><td>100+</td><td>此前仅 14 详表 —— <b>全量提取中</b> → events.json</td></tr>
+        <tr><td>开局祝福（Neow）</td><td>约 25</td><td>此前缺失 —— <b>提取中</b> → neow.json</td></tr>
+        <tr><td>成就 / 分数</td><td>约 90 / 1 表</td><td>解锁与分数构成已有；成就表提取中</td></tr>
+        <tr><td>地图（节点/路径/种子）</td><td>7×15 规则</td><td>已全（见上方地图节）</td></tr>
+        <tr><td>升阶 20 级 / 模式</td><td>全表</td><td>已全</td></tr>
+      </table>
+      </div>
+      <p class="dim" style="font-size:13px">JSON 数据到位后此表会更新为最终状态。</p>
     </section>
   </div>
 
@@ -373,8 +406,25 @@
       </div>
     </section>
 
+    <section data-t="地图上有什么">
+      <h2><span class="num">3</span>地图上有什么</h2>
+      <div class="sub">节点 8 种 = 1 代的 7 种 + 古代节点；幕行数 15 / 14 / 13</div>
+      <div class="tbl-wrap">
+      <table>
+        <tr><th>节点</th><th>与 1 代的差异</th></tr>
+        <tr><td>普通战斗 / 精英 / ？ / 商店 / 篝火 / 宝箱 / BOSS</td><td>同 1 代</td></tr>
+        <tr><td><b>古代 Ancient（新增）</b></td><td>每幕一个，从该幕的古代手里选祝福（取代 1 代打完 Boss 的遗物三选一）</td></tr>
+      </table>
+      </div>
+      <div class="grid g3">
+        <div class="card"><h5>幕结构</h5><p>3 幕，行数 15 / 14 / 13；幕 1 起手有 3 场弱遭遇（弱敌池专用），幕 2/3 为 2 场。</p></div>
+        <div class="card"><h5>交替第 1 幕</h5><p>繁茂之地 / 地下船坞随机二选一，区域、敌人、事件、BOSS 全套更换；幕末有不可战胜的剧情战"建筑师"。</p></div>
+        <div class="card"><h5>生成规则</h5><p>v0.101 整体重做过一次地图；完整生成参数在反编译提取中 → <code>data/sts2/map_config.json</code></p></div>
+      </div>
+    </section>
+
     <section data-t="五个角色">
-      <h2><span class="num">3</span>五个角色</h2>
+      <h2><span class="num">4</span>五个角色</h2>
       <div class="sub">观者未回归，新增摄政王和亡灵缚师；第 6 名角色制作中</div>
       <div class="grid g2">
         <div class="char red">
@@ -417,7 +467,7 @@
     </section>
 
     <section data-t="BOSS 与内容规模">
-      <h2><span class="num">4</span>BOSS 与内容规模</h2>
+      <h2><span class="num">5</span>BOSS 与内容规模</h2>
       <div class="tbl-wrap">
       <table>
         <tr><th>区域</th><th>三个 BOSS（HP）</th></tr>
@@ -437,11 +487,29 @@
 
     <section data-t="深入资料">
       <h2><span class="num">+</span>深入资料在哪</h2>
-      <div class="doc"><code>docs/sts2/overview.md</code><span class="meta">186 行 · EA 时间线 / 补丁历史 / 官方路线图</span></div>
-      <div class="doc"><code>docs/sts2/core-mechanics.md</code><span class="meta">228 行 · 新机制详解 / 与 1 代逐系统对照表</span></div>
-      <div class="doc"><code>docs/sts2/characters.md</code><span class="meta">319 行 · 5 角色反编译级起始卡组 / 新资源系统</span></div>
-      <div class="doc"><code>docs/sts2/content.md</code><span class="meta">284 行 · 12 BOSS / 事件 / 遗物药水全统计</span></div>
-      <div class="doc"><code>docs/comparison.md</code><span class="meta">两代总对比 + 复刻策略建议</span></div>
+      <div class="sub">点条目直接打开对应文档（.md 纯文本，建议用编辑器阅读）</div>
+      <a class="doc" href="../docs/sts2/overview.md" target="_blank"><code>docs/sts2/overview.md</code><span class="meta">186 行 · EA 时间线 / 补丁历史 / 官方路线图</span></a>
+      <a class="doc" href="../docs/sts2/core-mechanics.md" target="_blank"><code>docs/sts2/core-mechanics.md</code><span class="meta">228 行 · 新机制详解 / 与 1 代逐系统对照表</span></a>
+      <a class="doc" href="../docs/sts2/characters.md" target="_blank"><code>docs/sts2/characters.md</code><span class="meta">319 行 · 5 角色反编译级起始卡组 / 新资源系统</span></a>
+      <a class="doc" href="../docs/sts2/content.md" target="_blank"><code>docs/sts2/content.md</code><span class="meta">284 行 · 12 BOSS / 事件 / 遗物药水全统计</span></a>
+      <a class="doc" href="../docs/comparison.md" target="_blank"><code>docs/comparison.md</code><span class="meta">两代总对比 + 复刻策略建议</span></a>
+      <h4 style="margin-top:22px">实体完备度自查（EA 版，v0.107.1 基准）</h4>
+      <div class="tbl-wrap">
+      <table>
+        <tr><th>实体</th><th>规模</th><th>状态</th></tr>
+        <tr><td>英雄（角色）</td><td>5（第 6 名制作中）</td><td>已全：起始卡组为源码级数值</td></tr>
+        <tr><td>卡牌</td><td>约 590 张</td><td><b>全量提取中</b> → data/sts2/cards.json</td></tr>
+        <tr><td>遗物</td><td>297</td><td><b>全量提取中</b> → relics.json</td></tr>
+        <tr><td>药水</td><td>64</td><td><b>全量提取中</b> → potions.json</td></tr>
+        <tr><td>敌人（普通/精英/BOSS）</td><td>约 107 定义 / 12 BOSS</td><td>名单已全；<b>招式数值提取中</b> → enemies.json</td></tr>
+        <tr><td>事件</td><td>50</td><td>名单已全（43 已列名）；<b>全选项数值提取中</b> → events.json</td></tr>
+        <tr><td>古代 Ancients + 祝福池</td><td>8 位</td><td>Neow 池已知；<b>全池提取中</b> → ancients.json</td></tr>
+        <tr><td>附魔 Enchantments</td><td>16+</td><td>此前仅实例 —— <b>全表提取中</b> → enchantments.json</td></tr>
+        <tr><td>地图（节点/行数/配置）</td><td>8 种节点</td><td>结构已知；生成配置提取中 → map_config.json</td></tr>
+        <tr><td>升阶 10 级 / 时间线 / 联机规则</td><td>全表</td><td>已全（联机复刻首期不做）</td></tr>
+      </table>
+      </div>
+      <p class="dim" style="font-size:13px">2 代数值随补丁变动：2026-11-12 大补丁后所有 data/sts2/ 需复核一遍。</p>
     </section>
   </div>
 
@@ -461,7 +529,7 @@
     tocEl.innerHTML = '';
     views[name].querySelectorAll('section').forEach((sec, i) => {
       const a = document.createElement('a');
-      a.href = '#'; a.textContent = (i + 1 === views[name].querySelectorAll('section').length) ? sec.dataset.t : sec.dataset.t;
+      a.href = '#'; a.textContent = sec.dataset.t;
       a.setAttribute('data-i', i);
       a.addEventListener('click', e => { e.preventDefault(); sec.scrollIntoView({ behavior: 'smooth' }); });
       tocEl.appendChild(a);
