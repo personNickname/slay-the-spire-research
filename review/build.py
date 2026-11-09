@@ -45,8 +45,16 @@ def build_game(game_dir):
     if not os.path.isdir(game_dir):
         return out
 
-    # ---- 卡牌：cards_<character>.json（列表）合并 + cards_neutral.json（分组对象）----
+    # ---- 卡牌：优先 data/sts1/cards/*.json（jar 抽出），否则 cards_<character>.json baseline ----
     cards = []
+    cards_dir = os.path.join(game_dir, "cards")
+    if os.path.isdir(cards_dir):
+        for name in sorted(os.listdir(cards_dir)):
+            if not name.endswith(".json") or name.endswith(".effects.json"):
+                continue
+            data = load(os.path.join(cards_dir, name))
+            if isinstance(data, list):
+                cards.extend(data)
     for name in sorted(os.listdir(game_dir)):
         if not (name.startswith("cards_") and name.endswith(".json")):
             continue
@@ -55,10 +63,11 @@ def build_game(game_dir):
             counts = {}
             for group in ("colorless", "curses", "statuses"):
                 items = data.get(group, [])
-                cards.extend(items)
+                if not cards:
+                    cards.extend(items)
                 counts[group] = len(items)
             out["cards_neutral_groups"] = counts
-        elif isinstance(data, list):
+        elif isinstance(data, list) and not cards:
             cards.extend(data)
     if cards:
         out["cards"] = cards

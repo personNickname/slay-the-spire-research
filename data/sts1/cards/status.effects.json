@@ -1,0 +1,29 @@
+{
+  "Burn": {
+    "ops": [],
+    "onEndOfTurnInHand": [
+      {
+        "op": "loseHp",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Dazed": {
+    "ops": []
+  },
+  "Slimed": {
+    "ops": []
+  },
+  "Void": {
+    "ops": [],
+    "onDraw": [
+      {
+        "op": "energy",
+        "amount": -1
+      }
+    ]
+  },
+  "Wound": {
+    "ops": []
+  }
+}

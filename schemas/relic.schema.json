@@ -1,0 +1,20 @@
+{
+  "$id": "https://sts-research/schemas/relic.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "class": { "type": "string" },
+      "name": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "description": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "flavor": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "tier": { "enum": ["starter", "common", "uncommon", "rare", "special", "boss", "shop"] },
+      "pool": { "enum": ["red", "green", "blue", "purple", "shared", "none"] },
+      "usesCounter": { "type": "boolean" }
+    },
+    "required": ["id", "class", "name", "description", "tier", "pool", "usesCounter"],
+    "additionalProperties": false
+  }
+}

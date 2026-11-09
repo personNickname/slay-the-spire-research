@@ -1,0 +1,75 @@
+{
+  "baselineRef": "55d9fa7",
+  "generatedAt": "2026-11-09T15:02:59.237Z",
+  "summary": {
+    "cards": {
+      "baseline": 371,
+      "matched": 368,
+      "code": 367
+    },
+    "relics": {
+      "matched": 180,
+      "code": 180
+    },
+    "potions": {
+      "matched": 42,
+      "code": 42
+    },
+    "monsters": {
+      "matched": 65,
+      "code": 65
+    },
+    "diffs": 7
+  },
+  "diffs": [
+    {
+      "entity": "card",
+      "id": "become_almighty",
+      "field": "match",
+      "baseline": "Become Almighty",
+      "code": null
+    },
+    {
+      "entity": "card",
+      "id": "live_forever",
+      "field": "match",
+      "baseline": "Live Forever",
+      "code": null
+    },
+    {
+      "entity": "card",
+      "id": "fame_and_fortune",
+      "field": "match",
+      "baseline": "Fame and Fortune",
+      "code": null
+    },
+    {
+      "entity": "card",
+      "id": "AscendersBane",
+      "field": "rarity",
+      "baseline": "curse",
+      "code": "special"
+    },
+    {
+      "entity": "card",
+      "id": "CurseOfTheBell",
+      "field": "rarity",
+      "baseline": "curse",
+      "code": "special"
+    },
+    {
+      "entity": "card",
+      "id": "Necronomicurse",
+      "field": "rarity",
+      "baseline": "curse",
+      "code": "special"
+    },
+    {
+      "entity": "card",
+      "id": "Pride",
+      "field": "rarity",
+      "baseline": "curse",
+      "code": "special"
+    }
+  ]
+}

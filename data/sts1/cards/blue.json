@@ -1,0 +1,2283 @@
+[
+  {
+    "id": "Aggregate",
+    "class": "blue/Aggregate",
+    "name": {
+      "eng": "Aggregate",
+      "zhs": "汇集"
+    },
+    "description": {
+      "eng": "Gain [B] for every !M! cards in your draw pile.",
+      "zhs": "你的抽牌堆中每有 !M! 张牌，获得一点 [B] 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": -1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "All For One",
+    "class": "blue/AllForOne",
+    "name": {
+      "eng": "All for One",
+      "zhs": "万物一心"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Put all cost 0 cards from your discard pile into your hand.",
+      "zhs": "造成 !D! 点伤害。 NL 将弃牌堆中所有0耗能的牌放入你的手牌。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 10
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Amplify",
+    "class": "blue/Amplify",
+    "name": {
+      "eng": "Amplify",
+      "zhs": "增幅"
+    },
+    "description": {
+      "eng": "This turn, your next Power card is played twice.",
+      "zhs": "在这个回合，你的下一张 能力牌 会打出两次。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "This turn, your next !M! Power cards are played twice.",
+      "zhs": "在这个回合，你的下 !M! 张 能力牌 会打出两次。"
+    }
+  },
+  {
+    "id": "Auto Shields",
+    "class": "blue/AutoShields",
+    "name": {
+      "eng": "Auto-Shields",
+      "zhs": "自动护盾"
+    },
+    "description": {
+      "eng": "If you have no Block, gain !B! Block.",
+      "zhs": "如果你没有格挡，获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 11
+    },
+    "upgrade": {
+      "block": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Ball Lightning",
+    "class": "blue/BallLightning",
+    "name": {
+      "eng": "Ball Lightning",
+      "zhs": "球状闪电"
+    },
+    "description": {
+      "eng": "Deal !D! damage. Channel !M! Lightning.",
+      "zhs": "造成 !D! 点伤害。 生成 !M! 个 闪电 充能球。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 7,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Barrage",
+    "class": "blue/Barrage",
+    "name": {
+      "eng": "Barrage",
+      "zhs": "弹幕齐射"
+    },
+    "description": {
+      "eng": "Deal !D! damage for each Channeled Orb.",
+      "zhs": "你每拥有一个充能球，造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Beam Cell",
+    "class": "blue/BeamCell",
+    "name": {
+      "eng": "Beam Cell",
+      "zhs": "光束射线"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Vulnerable.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 3,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 1,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Biased Cognition",
+    "class": "blue/BiasedCognition",
+    "name": {
+      "eng": "Biased Cognition",
+      "zhs": "偏差认知"
+    },
+    "description": {
+      "eng": "Gain !M! Focus. NL At the start of your turn, lose 1 Focus.",
+      "zhs": "获得 !M! 点 集中。 NL 在每回合开始时，失去 1 点 集中 。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Blizzard",
+    "class": "blue/Blizzard",
+    "name": {
+      "eng": "Blizzard",
+      "zhs": "暴雪"
+    },
+    "description": {
+      "eng": "Deal damage equal to !M! times the number of Frost Channeled this combat to ALL enemies.",
+      "zhs": "对所有敌人造成你在本场战斗中 生成 过的 冰霜 充能球总数 !M! 倍的伤害。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 0,
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "BootSequence",
+    "class": "blue/BootSequence",
+    "name": {
+      "eng": "Boot Sequence",
+      "zhs": "启动流程"
+    },
+    "description": {
+      "eng": "Innate. NL Gain !B! Block. NL Exhaust.",
+      "zhs": "获得 !B! 点 格挡 。 NL 固有 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "block": 10
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": true,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Buffer",
+    "class": "blue/Buffer",
+    "name": {
+      "eng": "Buffer",
+      "zhs": "缓冲"
+    },
+    "description": {
+      "eng": "Prevent the next time you would lose HP.",
+      "zhs": "阻止下一次你受到的生命值损伤。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Prevent the next !M! times you would lose HP.",
+      "zhs": "阻止下 !M! 次你受到的生命值损伤。"
+    }
+  },
+  {
+    "id": "Capacitor",
+    "class": "blue/Capacitor",
+    "name": {
+      "eng": "Capacitor",
+      "zhs": "扩容"
+    },
+    "description": {
+      "eng": "Gain !M! Orb slots.",
+      "zhs": "获得 !M! 个充能球栏位。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !M! Orb slots.",
+      "zhs": "获得 !M! 个充能球栏位。"
+    }
+  },
+  {
+    "id": "Chaos",
+    "class": "blue/Chaos",
+    "name": {
+      "eng": "Chaos",
+      "zhs": "混沌"
+    },
+    "description": {
+      "eng": "Channel !M! random Orb.",
+      "zhs": " 生成 !M! 个随机充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1,
+      "custom": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Channel !M! random Orbs.",
+      "zhs": " 生成 !M! 个随机充能球。"
+    }
+  },
+  {
+    "id": "Chill",
+    "class": "blue/Chill",
+    "name": {
+      "eng": "Chill",
+      "zhs": "冰寒"
+    },
+    "description": {
+      "eng": "Channel !M! Frost for each enemy in combat. NL Exhaust.",
+      "zhs": "当前每有一名敌人，生成 !M! 个 冰霜 充能球。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL Channel !M! Frost for each enemy in combat. NL Exhaust.",
+      "zhs": "固有 。 NL 当前每有一名敌人，生成 !M! 个 冰霜 充能球。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Cold Snap",
+    "class": "blue/ColdSnap",
+    "name": {
+      "eng": "Cold Snap",
+      "zhs": "寒流"
+    },
+    "description": {
+      "eng": "Deal !D! damage. Channel !M! Frost.",
+      "zhs": "造成 !D! 点伤害。 生成 !M! 个 冰霜 充能球。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Compile Driver",
+    "class": "blue/CompileDriver",
+    "name": {
+      "eng": "Compile Driver",
+      "zhs": "编译冲击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Draw !M! card for each unique Orb you have.",
+      "zhs": "造成 !D! 点伤害。 NL 你每有一种不同的 充能球 ，抽 !M! 张牌。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 7,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Conserve Battery",
+    "class": "blue/ConserveBattery",
+    "name": {
+      "eng": "Charge Battery",
+      "zhs": "充电"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Next turn, gain [B].",
+      "zhs": "获得 !B! 点 格挡 。 NL 在下一回合获得 [B] 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 7
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Consume",
+    "class": "blue/Consume",
+    "name": {
+      "eng": "Consume",
+      "zhs": "耗尽"
+    },
+    "description": {
+      "eng": "Gain !M! Focus. NL Lose 1 Orb slot.",
+      "zhs": "获得 !M! 点 集中 。 NL 失去 1 个充能球栏位。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Coolheaded",
+    "class": "blue/Coolheaded",
+    "name": {
+      "eng": "Coolheaded",
+      "zhs": "冷静头脑"
+    },
+    "description": {
+      "eng": "Channel 1 Frost. NL Draw !M! card.",
+      "zhs": "生成 1 个 冰霜 充能球。 NL 抽 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Channel 1 Frost. NL Draw !M! cards.",
+      "zhs": "生成 1 个 冰霜 充能球。 NL 抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Core Surge",
+    "class": "blue/CoreSurge",
+    "name": {
+      "eng": "Core Surge",
+      "zhs": "核心电涌"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Gain !M! Artifact. NL Exhaust.",
+      "zhs": "造成 !D! 点伤害。 NL 获得 !M! 层 人工制品 。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 11,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Creative AI",
+    "class": "blue/CreativeAI",
+    "name": {
+      "eng": "Creative AI",
+      "zhs": "创造性AI"
+    },
+    "description": {
+      "eng": "At the start of your turn, add a random Power card into your hand.",
+      "zhs": "在每回合开始时，增加一张随机 能力 牌到你的手牌。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "cost": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Darkness",
+    "class": "blue/Darkness",
+    "name": {
+      "eng": "Darkness",
+      "zhs": "漆黑"
+    },
+    "description": {
+      "eng": "Channel !M! Dark.",
+      "zhs": "生成 !M! 个 黑暗 充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Channel !M! Dark. NL Trigger the passive ability of all Dark orbs.",
+      "zhs": "生成 !M! 个 黑暗 充能球。 NL 使用所有 黑暗 充能球 的被动能力。"
+    }
+  },
+  {
+    "id": "Defend_B",
+    "class": "blue/Defend_Blue",
+    "name": {
+      "eng": "Defend",
+      "zhs": "防御"
+    },
+    "description": {
+      "eng": "Gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STARTER_DEFEND"
+    ]
+  },
+  {
+    "id": "Defragment",
+    "class": "blue/Defragment",
+    "name": {
+      "eng": "Defragment",
+      "zhs": "碎片整理"
+    },
+    "description": {
+      "eng": "Gain !M! Focus.",
+      "zhs": "获得 !M! 点 集中 。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Doom and Gloom",
+    "class": "blue/DoomAndGloom",
+    "name": {
+      "eng": "Doom and Gloom",
+      "zhs": "愁云惨淡"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Channel !M! Dark.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 生成 !M! 个 黑暗 充能球。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "damage": 10,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Double Energy",
+    "class": "blue/DoubleEnergy",
+    "name": {
+      "eng": "Double Energy",
+      "zhs": "双倍能量"
+    },
+    "description": {
+      "eng": "Double your Energy. NL Exhaust.",
+      "zhs": "将你的 能量 翻倍。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Double your Energy.",
+      "zhs": "将你的 能量 翻倍。"
+    }
+  },
+  {
+    "id": "Dualcast",
+    "class": "blue/Dualcast",
+    "name": {
+      "eng": "Dualcast",
+      "zhs": "双重释放"
+    },
+    "description": {
+      "eng": "Evoke your next Orb twice.",
+      "zhs": "激发 你最右侧的充能球2次。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Echo Form",
+    "class": "blue/EchoForm",
+    "name": {
+      "eng": "Echo Form",
+      "zhs": "回响形态"
+    },
+    "description": {
+      "eng": "Ethereal. NL The first card you play each turn is played twice.",
+      "zhs": "你每回合打出的第一张牌会打出两次。 NL 虚无 。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "ethereal": false
+    },
+    "exhaust": false,
+    "ethereal": true,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "The first card you play each turn is played twice.",
+      "zhs": "你每回合打出的第一张牌会打出两次。"
+    }
+  },
+  {
+    "id": "Electrodynamics",
+    "class": "blue/Electrodynamics",
+    "name": {
+      "eng": "Electrodynamics",
+      "zhs": "电动力学"
+    },
+    "description": {
+      "eng": "Lightning now hits ALL enemies. NL Channel !M! Lightning.",
+      "zhs": "闪电 充能球现在会击中所有敌人。 NL 生成 !M! 个 闪电 充能球。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Fission",
+    "class": "blue/Fission",
+    "name": {
+      "eng": "Fission",
+      "zhs": "裂变"
+    },
+    "description": {
+      "eng": "Remove all your Orbs. Gain [B] and draw !M! card for each Orb removed. NL Exhaust.",
+      "zhs": "移除所有 充能球 ，每移除一个充能球获得 [B] 并抽 !M! 张牌 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Evoke all your Orbs. Gain [B] and draw !M! card for each Orb Evoked. NL Exhaust.",
+      "zhs": "激发 所有 充能球 ，每激发一个充能球获得 [B] 并抽 !M! 张牌 。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Force Field",
+    "class": "blue/ForceField",
+    "name": {
+      "eng": "Force Field",
+      "zhs": "力场"
+    },
+    "description": {
+      "eng": "Costs 1 less [B] for each Power card played this combat. NL Gain !B! Block.",
+      "zhs": "你在本场战斗中每打出一张能力牌，耗能就减少1 [B] 。 NL 获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 4,
+    "target": "self",
+    "base": {
+      "block": 12
+    },
+    "upgrade": {
+      "block": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "FTL",
+    "class": "blue/FTL",
+    "name": {
+      "eng": "FTL",
+      "zhs": "超越光速"
+    },
+    "description": {
+      "eng": "Deal !D! damage. If you have played less than !M! cards this turn, draw 1 card.",
+      "zhs": "造成 !D! 点伤害。 NL 如果你在这回合打出的牌数少于 !M! 张，抽一张牌。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 5,
+      "magic": 3
+    },
+    "upgrade": {
+      "damage": 1,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Fusion",
+    "class": "blue/Fusion",
+    "name": {
+      "eng": "Fusion",
+      "zhs": "聚变"
+    },
+    "description": {
+      "eng": "Channel !M! Plasma.",
+      "zhs": "生成 !M! 个 等离子 充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "cost": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Gash",
+    "class": "blue/Claw",
+    "name": {
+      "eng": "Claw",
+      "zhs": "爪击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Increase the damage of ALL Claw cards by !M! this combat.",
+      "zhs": "造成 !D! 点伤害。 NL 在本场战斗中所有 爪击 牌的伤害增加 !M! 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 3,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Genetic Algorithm",
+    "class": "blue/GeneticAlgorithm",
+    "name": {
+      "eng": "Genetic Algorithm",
+      "zhs": "遗传算法"
+    },
+    "description": {
+      "eng": "Gain !B! Block. Permanently increase this card's Block by !M!. NL Exhaust.",
+      "zhs": "获得 !B! 点 格挡 。 NL 每打出一次，这张牌在本局游戏中的格挡值永久性增加 !M! 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Glacier",
+    "class": "blue/Glacier",
+    "name": {
+      "eng": "Glacier",
+      "zhs": "冰川"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Channel !M! Frost.",
+      "zhs": "获得 !B! 点 格挡 。 NL 生成 !M! 个 冰霜 充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "block": 7,
+      "magic": 2
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL Channel !M! Frost.",
+      "zhs": "获得 !B! 点 格挡 。 NL 生成 !M! 个 冰霜 充能球。"
+    }
+  },
+  {
+    "id": "Go for the Eyes",
+    "class": "blue/GoForTheEyes",
+    "name": {
+      "eng": "Go for the Eyes",
+      "zhs": "眼部攻击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak.",
+      "zhs": "造成 !D! 点伤害。 NL 如果目标敌人的意图是攻击，则给予其 !M! 层 虚弱 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 3,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 1,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Heatsinks",
+    "class": "blue/Heatsinks",
+    "name": {
+      "eng": "Heatsinks",
+      "zhs": "散热片"
+    },
+    "description": {
+      "eng": "Whenever you play a Power card, draw !M! card.",
+      "zhs": "你每打出一张能力牌，抽 !M! 张牌。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Whenever you play a Power card, draw !M! cards.",
+      "zhs": "你每打出一张能力牌，抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Hello World",
+    "class": "blue/HelloWorld",
+    "name": {
+      "eng": "Hello World",
+      "zhs": "你好，世界"
+    },
+    "description": {
+      "eng": "At the start of your turn, add a random Common card into your hand.",
+      "zhs": "在你的回合开始时，增加一张随机普通牌到你的手牌。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL At the start of your turn, add a random Common card into your hand.",
+      "zhs": "固有 。 NL 在你的回合开始时，增加一张随机普通牌到你的手牌。"
+    }
+  },
+  {
+    "id": "Hologram",
+    "class": "blue/Hologram",
+    "name": {
+      "eng": "Hologram",
+      "zhs": "全息影像"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Put a card from your discard pile into your hand. NL Exhaust.",
+      "zhs": "获得 !B! 点 格挡 。 NL 将弃牌堆中的一张牌放入你的手牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 3
+    },
+    "upgrade": {
+      "block": 2,
+      "exhaust": false
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL Put a card from your discard pile into your hand.",
+      "zhs": "获得 !B! 点 格挡 。 NL 将弃牌堆中的一张牌放入你的手牌。"
+    }
+  },
+  {
+    "id": "Hyperbeam",
+    "class": "blue/Hyperbeam",
+    "name": {
+      "eng": "Hyperbeam",
+      "zhs": "超能光束"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Lose !M! Focus.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 点 集中 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "damage": 26,
+      "magic": 3
+    },
+    "upgrade": {
+      "damage": 8
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Leap",
+    "class": "blue/Leap",
+    "name": {
+      "eng": "Leap",
+      "zhs": "飞跃"
+    },
+    "description": {
+      "eng": "Gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 9
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Lockon",
+    "class": "blue/LockOn",
+    "name": {
+      "eng": "Bullseye",
+      "zhs": "瞄准靶心"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Lock-On.",
+      "zhs": "造成 !D! 点伤害。 NL 给予敌人 !M! 回合 跟踪锁定 效果。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 8,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 3,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Loop",
+    "class": "blue/Loop",
+    "name": {
+      "eng": "Loop",
+      "zhs": "循环"
+    },
+    "description": {
+      "eng": "At the start of your turn, trigger the passive ability of your next Orb.",
+      "zhs": "在你的回合开始时，使用你最右侧的1个充能球的被动能力。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "At the start of your turn, trigger the passive ability of your next Orb !M! times.",
+      "zhs": "在你的回合开始时，使用你最右侧的1个充能球的被动能力 !M! 次。"
+    }
+  },
+  {
+    "id": "Machine Learning",
+    "class": "blue/MachineLearning",
+    "name": {
+      "eng": "Machine Learning",
+      "zhs": "机器学习"
+    },
+    "description": {
+      "eng": "At the start of your turn, draw !M! additional card.",
+      "zhs": "在每回合开始时额外抽 !M! 张牌。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL At the start of your turn, draw !M! additional card.",
+      "zhs": "固有 。 NL 在每回合开始时额外抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Melter",
+    "class": "blue/Melter",
+    "name": {
+      "eng": "Melter",
+      "zhs": "熔化"
+    },
+    "description": {
+      "eng": "Remove all Block from the enemy. NL Deal !D! damage.",
+      "zhs": "去除一名敌人的所有 格挡 值。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 10
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Meteor Strike",
+    "class": "blue/MeteorStrike",
+    "name": {
+      "eng": "Meteor Strike",
+      "zhs": "陨石打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Channel !M! Plasma.",
+      "zhs": "造成 !D! 点伤害。 NL 生成 !M! 个 等离子 充能球。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 5,
+    "target": "enemy",
+    "base": {
+      "damage": 24,
+      "magic": 3
+    },
+    "upgrade": {
+      "damage": 6
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ]
+  },
+  {
+    "id": "Multi-Cast",
+    "class": "blue/MultiCast",
+    "name": {
+      "eng": "Multi-Cast",
+      "zhs": "多重释放"
+    },
+    "description": {
+      "eng": "Evoke your next Orb X times.",
+      "zhs": "激发 你最右侧的充能球X次。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": -1,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Evoke your next Orb X+1 times.",
+      "zhs": "激发 你最右侧的充能球X+1次。"
+    }
+  },
+  {
+    "id": "Rainbow",
+    "class": "blue/Rainbow",
+    "name": {
+      "eng": "Rainbow",
+      "zhs": "彩虹"
+    },
+    "description": {
+      "eng": "Channel 1 Lightning. NL Channel 1 Frost. NL Channel 1 Dark. NL Exhaust.",
+      "zhs": "生成 闪电 、 冰霜 、 黑暗 充能球各一个。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "exhaust": false
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Channel 1 Lightning. NL Channel 1 Frost. NL Channel 1 Dark.",
+      "zhs": "生成 闪电 、 冰霜 、 黑暗 充能球各一个。"
+    }
+  },
+  {
+    "id": "Reboot",
+    "class": "blue/Reboot",
+    "name": {
+      "eng": "Reboot",
+      "zhs": "重启"
+    },
+    "description": {
+      "eng": "Shuffle ALL your cards into your draw pile. NL Draw !M! cards. NL Exhaust.",
+      "zhs": "将你所有未消耗的牌重新洗牌放入抽牌堆。 NL 抽 !M! 张牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Rebound",
+    "class": "blue/Rebound",
+    "name": {
+      "eng": "Rebound",
+      "zhs": "弹回"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Put the next card you play this turn on top of your draw pile.",
+      "zhs": "造成 !D! 点伤害。 NL 你在这个回合打出的下一张牌将会被放置到抽牌堆的顶部。 （只限会移入弃牌堆的牌）"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 9
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Recycle",
+    "class": "blue/Recycle",
+    "name": {
+      "eng": "Recycle",
+      "zhs": "回收"
+    },
+    "description": {
+      "eng": "Exhaust a card. NL Gain [B] equal to its cost.",
+      "zhs": "消耗 一张牌。 NL 获得与其耗能相等的 [B] 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Redo",
+    "class": "blue/Recursion",
+    "name": {
+      "eng": "Recursion",
+      "zhs": "递归"
+    },
+    "description": {
+      "eng": "Evoke your next Orb. NL Channel the Orb that was just Evoked.",
+      "zhs": "激发 你最右侧的充能球。 NL 然后 生成 一个刚才被 激发 的充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Reinforced Body",
+    "class": "blue/ReinforcedBody",
+    "name": {
+      "eng": "Reinforced Body",
+      "zhs": "硬化机体"
+    },
+    "description": {
+      "eng": "Gain !B! Block X times.",
+      "zhs": "获得 !B! 点 格挡 X 次。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": -1,
+    "target": "self",
+    "base": {
+      "block": 7
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Reprogram",
+    "class": "blue/Reprogram",
+    "name": {
+      "eng": "Reprogram",
+      "zhs": "重编程"
+    },
+    "description": {
+      "eng": "Lose !M! Focus. NL Gain !M! Strength. NL Gain !M! Dexterity.",
+      "zhs": "失去 !M! 点 集中 。 NL 获得!M!点 力量 。 NL 获得!M!点 敏捷 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Rip and Tear",
+    "class": "blue/RipAndTear",
+    "name": {
+      "eng": "Rip and Tear",
+      "zhs": "狂乱撕扯"
+    },
+    "description": {
+      "eng": "Deal !D! damage to a random enemy twice.",
+      "zhs": "随机对敌人造成 !D! 点伤害 !M! 次。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 7,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Scrape",
+    "class": "blue/Scrape",
+    "name": {
+      "eng": "Scrape",
+      "zhs": "刮削"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Draw !M! cards. NL Discard all cards drawn this way that do not cost 0.",
+      "zhs": "造成 !D! 伤害。 NL 抽 !M! 张牌。 NL 丢弃抽到的牌中耗能不为0的牌。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 7,
+      "magic": 4
+    },
+    "upgrade": {
+      "damage": 3,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Seek",
+    "class": "blue/Seek",
+    "name": {
+      "eng": "Seek",
+      "zhs": "搜寻"
+    },
+    "description": {
+      "eng": "Put !M! card from your draw pile into your hand. NL Exhaust.",
+      "zhs": "从抽牌堆中选择 !M! 张牌放入你的手牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Put !M! cards from your draw pile into your hand. NL Exhaust.",
+      "zhs": "从抽牌堆中选择 !M! 张牌放入你的手牌。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Self Repair",
+    "class": "blue/SelfRepair",
+    "name": {
+      "eng": "Self Repair",
+      "zhs": "自我修复"
+    },
+    "description": {
+      "eng": "At the end of combat, heal !M! HP.",
+      "zhs": "在战斗结束时，回复 !M! 点生命。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 7
+    },
+    "upgrade": {
+      "magic": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "HEALING"
+    ]
+  },
+  {
+    "id": "Skim",
+    "class": "blue/Skim",
+    "name": {
+      "eng": "Skim",
+      "zhs": "快速检索"
+    },
+    "description": {
+      "eng": "Draw !M! cards.",
+      "zhs": "抽 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Stack",
+    "class": "blue/Stack",
+    "name": {
+      "eng": "Stack",
+      "zhs": "堆栈"
+    },
+    "description": {
+      "eng": "Gain Block equal to the number of cards in your discard pile.",
+      "zhs": "获得与你当前弃牌堆中牌数相等的 格挡 值。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 0
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain Block equal to the number of cards in your discard pile +3.",
+      "zhs": "获得你当前弃牌堆中牌数+3的 格挡 值。"
+    }
+  },
+  {
+    "id": "Static Discharge",
+    "class": "blue/StaticDischarge",
+    "name": {
+      "eng": "Static Discharge",
+      "zhs": "静电释放"
+    },
+    "description": {
+      "eng": "Whenever you receive unblocked attack damage, Channel !M! Lightning.",
+      "zhs": "每当你受到未被格挡的攻击伤害时， 生成 !M! 个 闪电 充能球。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Whenever you receive unblocked attack damage, Channel !M! Lightning.",
+      "zhs": "每当你受到未被格挡的攻击伤害时， 生成 !M! 个 闪电 充能球。"
+    }
+  },
+  {
+    "id": "Steam",
+    "class": "blue/SteamBarrier",
+    "name": {
+      "eng": "Steam Barrier",
+      "zhs": "蒸汽护壁"
+    },
+    "description": {
+      "eng": "Gain !B! Block. Decrease this card's Block by 1 this combat.",
+      "zhs": "获得 !B! 点 格挡 。 NL 这张牌每被打出一次，它在本场战斗中的基础 格挡 下降1。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "block": 6
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Steam Power",
+    "class": "blue/Overclock",
+    "name": {
+      "eng": "Overclock",
+      "zhs": "超频"
+    },
+    "description": {
+      "eng": "Draw !M! cards. NL Add a *Burn into your discard pile.",
+      "zhs": "抽 !M! 张牌。 NL 将一张 *灼伤 放入你的弃牌堆中。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Storm",
+    "class": "blue/Storm",
+    "name": {
+      "eng": "Storm",
+      "zhs": "雷暴"
+    },
+    "description": {
+      "eng": "Whenever you play a Power card, Channel 1 Lightning.",
+      "zhs": "你每打出一张能力牌， 生成 1 个 闪电 充能球。"
+    },
+    "type": "power",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL Whenever you play a Power card, Channel 1 Lightning.",
+      "zhs": "固有 。 NL 你每打出一张能力牌，生成 1 个 闪电 充能球。"
+    }
+  },
+  {
+    "id": "Streamline",
+    "class": "blue/Streamline",
+    "name": {
+      "eng": "Streamline",
+      "zhs": "精简改良"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Reduce this card's cost by !M! this combat.",
+      "zhs": "造成 !D! 点伤害。 NL 这张牌每被打出一次，它在本场战斗中的耗能减少 !M! 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 15,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 5
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Strike_B",
+    "class": "blue/Strike_Blue",
+    "name": {
+      "eng": "Strike",
+      "zhs": "打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE",
+      "STARTER_STRIKE"
+    ]
+  },
+  {
+    "id": "Sunder",
+    "class": "blue/Sunder",
+    "name": {
+      "eng": "Sunder",
+      "zhs": "分离"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If this kills an enemy, gain [B] [B] [B].",
+      "zhs": "造成 !D! 点伤害。 NL 如果这张牌杀死了敌人，则获得 [B] [B] [B] 。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 3,
+    "target": "enemy",
+    "base": {
+      "damage": 24
+    },
+    "upgrade": {
+      "damage": 8
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Sweeping Beam",
+    "class": "blue/SweepingBeam",
+    "name": {
+      "eng": "Sweeping Beam",
+      "zhs": "扫荡射线"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 6,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Tempest",
+    "class": "blue/Tempest",
+    "name": {
+      "eng": "Tempest",
+      "zhs": "暴风雨"
+    },
+    "description": {
+      "eng": "Channel X Lightning. NL Exhaust.",
+      "zhs": "生成 X 个 闪电 充能球。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": -1,
+    "target": "self",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Channel X+1 Lightning. NL Exhaust.",
+      "zhs": "生成 X+1 个 闪电 充能球。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Thunder Strike",
+    "class": "blue/ThunderStrike",
+    "name": {
+      "eng": "Thunder Strike",
+      "zhs": "雷霆打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage to a random enemy for each Lightning Channeled this combat.",
+      "zhs": "你在本场战斗中每 生成 过 一个 闪电 充能球，随机造成一次 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "blue",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "all_enemy",
+    "base": {
+      "damage": 7,
+      "magic": 0
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ]
+  },
+  {
+    "id": "Turbo",
+    "class": "blue/Turbo",
+    "name": {
+      "eng": "TURBO",
+      "zhs": "内核加速"
+    },
+    "description": {
+      "eng": "Gain [B] [B]. NL Add a *Void into your discard pile.",
+      "zhs": "获得 [B] [B] 。 NL 将一张 *虚空 放入你的弃牌堆中。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "common",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain [B] [B] [B]. NL Add a *Void into your discard pile.",
+      "zhs": "获得 [B] [B] [B] 。 NL 将一张 *虚空 放入你的弃牌堆中。"
+    }
+  },
+  {
+    "id": "Undo",
+    "class": "blue/Equilibrium",
+    "name": {
+      "eng": "Equilibrium",
+      "zhs": "均衡"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Retain your hand this turn.",
+      "zhs": "获得 !B! 点 格挡 。 NL 在本回合 保留 你的手牌。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "block": 13,
+      "magic": 1
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "White Noise",
+    "class": "blue/WhiteNoise",
+    "name": {
+      "eng": "White Noise",
+      "zhs": "白噪声"
+    },
+    "description": {
+      "eng": "Add a random Power card into your hand. NL It costs 0 this turn. NL Exhaust.",
+      "zhs": "增加一张随机能力牌到你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Zap",
+    "class": "blue/Zap",
+    "name": {
+      "eng": "Zap",
+      "zhs": "电击"
+    },
+    "description": {
+      "eng": "Channel !M! Lightning.",
+      "zhs": "生成 !M! 个 闪电 充能球。"
+    },
+    "type": "skill",
+    "color": "blue",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  }
+]

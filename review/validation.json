@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-11-09T15:02:46.379Z",
+  "ok": true,
+  "report": [
+    {
+      "file": "cards/blue.effects.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/blue.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/colorless.effects.json",
+      "count": 48,
+      "errors": []
+    },
+    {
+      "file": "cards/colorless.json",
+      "count": 48,
+      "errors": []
+    },
+    {
+      "file": "cards/curse.effects.json",
+      "count": 14,
+      "errors": []
+    },
+    {
+      "file": "cards/curse.json",
+      "count": 14,
+      "errors": []
+    },
+    {
+      "file": "cards/green.effects.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/green.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/purple.effects.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/purple.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/red.effects.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/red.json",
+      "count": 75,
+      "errors": []
+    },
+    {
+      "file": "cards/status.effects.json",
+      "count": 5,
+      "errors": []
+    },
+    {
+      "file": "cards/status.json",
+      "count": 5,
+      "errors": []
+    },
+    {
+      "file": "relics.json",
+      "count": 180,
+      "errors": []
+    },
+    {
+      "file": "potions.json",
+      "count": 42,
+      "errors": []
+    },
+    {
+      "file": "powers.json",
+      "count": 146,
+      "errors": []
+    },
+    {
+      "file": "monsters.json",
+      "count": 65,
+      "errors": []
+    }
+  ]
+}

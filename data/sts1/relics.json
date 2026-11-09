@@ -1,1426 +1,2702 @@
 [
   {
-    "id": "accursed",
-    "en": "Accursed",
-    "zh": "诅咒缠身",
-    "rarity": "blight",
-    "effect": "每当你击败一名首领，获得 2 个随机诅咒。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "akabeko",
-    "en": "Akabeko",
-    "zh": "赤贝牛",
-    "rarity": "common",
-    "effect": "每场战斗中你打出的第一张攻击牌额外造成 8 点伤害。"
-  },
-  {
-    "id": "anchor",
-    "en": "Anchor",
-    "zh": "铁锚",
-    "rarity": "common",
-    "effect": "每场战斗开始时，获得 10 点格挡。"
-  },
-  {
-    "id": "ancient_augmentation",
-    "en": "Ancient Augmentation",
-    "zh": "远古强化",
-    "rarity": "blight",
-    "effect": "敌人战斗开始时获得 1 层魔法守护、10 层板甲和 10 层再生。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "ancient_tea_set",
-    "en": "Ancient Tea Set",
-    "zh": "古董茶具",
-    "rarity": "common",
-    "effect": "每当进入休息处，下一场战斗开始时获得 2 点额外能量。"
-  },
-  {
-    "id": "art_of_war",
-    "en": "Art of War",
-    "zh": "战争艺术",
-    "rarity": "common",
-    "effect": "若你在回合内没有打出任何攻击牌，下回合获得 1 点额外能量。"
-  },
-  {
-    "id": "astrolabe",
-    "en": "Astrolabe",
-    "zh": "星盘",
-    "rarity": "boss",
-    "effect": "拾取时，变化 3 张牌，然后将其升级。"
-  },
-  {
-    "id": "bag_of_marbles",
-    "en": "Bag of Marbles",
-    "zh": "弹珠袋",
-    "rarity": "common",
-    "effect": "每场战斗开始时，对所有敌人施加 1 层易伤。"
-  },
-  {
-    "id": "bag_of_preparation",
-    "en": "Bag of Preparation",
-    "zh": "备战袋",
-    "rarity": "common",
-    "effect": "每场战斗开始时，额外抽 2 张牌。"
-  },
-  {
-    "id": "bird_faced_urn",
-    "en": "Bird-Faced Urn",
-    "zh": "鸟面瓮",
-    "rarity": "rare",
-    "effect": "每当你打出 1 张能力牌，回复 2 点生命。"
-  },
-  {
-    "id": "black_blood",
-    "en": "Black Blood",
-    "zh": "黑血",
-    "rarity": "boss",
-    "effect": "替代「燃烧之血」。每场战斗结束时，回复 12 点生命。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "black_star",
-    "en": "Black Star",
-    "zh": "黑星",
-    "rarity": "boss",
-    "effect": "精英被击败后额外掉落 1 件遗物。"
-  },
-  {
-    "id": "blood_vial",
-    "en": "Blood Vial",
-    "zh": "血瓶",
-    "rarity": "common",
-    "effect": "每场战斗开始时，回复 2 点生命。"
-  },
-  {
-    "id": "bloody_idol",
-    "en": "Bloody Idol",
-    "zh": "染血神像",
-    "rarity": "special",
-    "effect": "每当你获得金币，回复 5 点生命。",
-    "source": "event"
-  },
-  {
-    "id": "blue_candle",
-    "en": "Blue Candle",
-    "zh": "蓝蜡烛",
-    "rarity": "uncommon",
-    "effect": "不可打出的诅咒牌现在可以打出。每打出 1 张诅咒牌，失去 1 点生命并将其消耗。"
-  },
-  {
-    "id": "bottled_flame",
-    "en": "Bottled Flame",
-    "zh": "瓶装火焰",
-    "rarity": "uncommon",
-    "effect": "拾取时选择 1 张攻击牌。每场战斗开始时，该牌在手牌中。"
-  },
-  {
-    "id": "bottled_lightning",
-    "en": "Bottled Lightning",
-    "zh": "瓶装闪电",
-    "rarity": "uncommon",
-    "effect": "拾取时选择 1 张技能牌。每场战斗开始时，该牌在手牌中。"
-  },
-  {
-    "id": "bottled_tornado",
-    "en": "Bottled Tornado",
-    "zh": "瓶装龙卷风",
-    "rarity": "uncommon",
-    "effect": "拾取时选择 1 张能力牌。每场战斗开始时，该牌在手牌中。"
-  },
-  {
-    "id": "brimstone",
-    "en": "Brimstone",
-    "zh": "硫磺",
-    "rarity": "shop",
-    "effect": "回合开始时，你获得 2 点力量，所有敌人获得 1 点力量。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "bronze_scales",
-    "en": "Bronze Scales",
-    "zh": "青铜鳞片",
-    "rarity": "common",
-    "effect": "每场战斗开始时，获得 3 层荆棘。"
-  },
-  {
-    "id": "burning_blood",
-    "en": "Burning Blood",
-    "zh": "燃烧之血",
-    "rarity": "starter",
-    "effect": "每场战斗结束时，回复 6 点生命。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "busted_crown",
-    "en": "Busted Crown",
-    "zh": "破碎王冠",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。后续卡牌奖励少 2 张牌可供选择。"
-  },
-  {
-    "id": "calipers",
-    "en": "Calipers",
-    "zh": "卡尺",
-    "rarity": "rare",
-    "effect": "回合开始时，不再失去全部格挡，改为只失去 15 点格挡。"
-  },
-  {
-    "id": "calling_bell",
-    "en": "Calling Bell",
-    "zh": "召唤之铃",
-    "rarity": "boss",
-    "effect": "拾取时，获得 1 个独特的诅咒和 3 件遗物。"
-  },
-  {
-    "id": "captains_wheel",
-    "en": "Captain's Wheel",
-    "zh": "船长的舵轮",
-    "rarity": "rare",
-    "effect": "第 3 回合开始时，获得 18 点格挡。"
-  },
-  {
-    "id": "cauldron",
-    "en": "Cauldron",
-    "zh": "坩埚",
-    "rarity": "shop",
-    "effect": "获得时，酿出 5 瓶随机药水。"
-  },
-  {
-    "id": "centennial_puzzle",
-    "en": "Centennial Puzzle",
-    "zh": "百年谜题",
-    "rarity": "common",
-    "effect": "每场战斗中你第一次失去生命时，抽 3 张牌。"
-  },
-  {
-    "id": "ceramic_fish",
-    "en": "Ceramic Fish",
-    "zh": "陶瓷鱼",
-    "rarity": "common",
-    "effect": "每当你向卡组加入 1 张牌，获得 9 金币。"
-  },
-  {
-    "id": "champion_belt",
-    "en": "Champion Belt",
-    "zh": "冠军腰带",
-    "rarity": "rare",
-    "effect": "每当你施加易伤，同时施加 1 层虚弱。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "charons_ashes",
-    "en": "Charon's Ashes",
-    "zh": "卡戎之烬",
-    "rarity": "rare",
-    "effect": "每当你消耗 1 张牌，对所有敌人造成 3 点伤害。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "chemical_x",
-    "en": "Chemical X",
-    "zh": "化学物质X",
-    "rarity": "shop",
-    "effect": "你的 X 费用牌的效果提高 2 点。"
-  },
-  {
-    "id": "circlet",
-    "en": "Circlet",
-    "zh": "头环",
-    "rarity": "special",
-    "effect": "尽可能多地收集吧！（集齐其他所有遗物后获得的纪念遗物）",
-    "notes": "特殊/纪念遗物。"
-  },
-  {
-    "id": "cloak_clasp",
-    "en": "Cloak Clasp",
-    "zh": "斗篷搭扣",
-    "rarity": "rare",
-    "effect": "回合结束时，手牌中每有 1 张牌便获得 1 点格挡。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "clockwork_souvenir",
-    "en": "Clockwork Souvenir",
-    "zh": "发条纪念品",
-    "rarity": "shop",
-    "effect": "每场战斗开始时，获得 1 层魔法守护。"
-  },
-  {
-    "id": "coffee_dripper",
-    "en": "Coffee Dripper",
-    "zh": "咖啡滴壶",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你不能再在休息处休息。"
-  },
-  {
-    "id": "cracked_core",
-    "en": "Cracked Core",
-    "zh": "破碎核心",
-    "rarity": "starter",
-    "effect": "每场战斗开始时，引导 1 个闪电球。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "cultist_headpiece",
-    "en": "Cultist Headpiece",
-    "zh": "邪教徒头饰",
-    "rarity": "special",
-    "effect": "你感觉自己变得健谈了。（纪念遗物，无实际效果）",
-    "source": "event"
-  },
-  {
-    "id": "cursed_key",
-    "en": "Cursed Key",
-    "zh": "诅咒钥匙",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。每当你打开非首领宝箱，获得 1 个诅咒。"
-  },
-  {
-    "id": "damaru",
-    "en": "Damaru",
-    "zh": "达玛茹",
-    "rarity": "common",
-    "effect": "回合开始时，获得 1 点真言。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "darkstone_periapt",
-    "en": "Darkstone Periapt",
-    "zh": "暗石护符",
-    "rarity": "uncommon",
-    "effect": "每当你获得 1 个诅咒，最大生命值提高 6 点。"
-  },
-  {
-    "id": "data_disk",
-    "en": "Data Disk",
-    "zh": "数据磁盘",
-    "rarity": "common",
-    "effect": "每场战斗开始时，获得 1 点集中。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "dead_branch",
-    "en": "Dead Branch",
-    "zh": "枯枝",
-    "rarity": "rare",
-    "effect": "每当你消耗 1 张牌，将 1 张随机牌加入手牌。"
-  },
-  {
-    "id": "dollys_mirror",
-    "en": "Dolly's Mirror",
-    "zh": "多莉之镜",
-    "rarity": "shop",
-    "effect": "拾取时，获得卡组中 1 张牌的额外复制。"
-  },
-  {
-    "id": "dream_catcher",
-    "en": "Dream Catcher",
-    "zh": "捕梦网",
-    "rarity": "common",
-    "effect": "每次休息时，可以往卡组加入 1 张牌。"
-  },
-  {
-    "id": "du_vu_doll",
-    "en": "Du-Vu Doll",
-    "zh": "巫毒娃娃",
-    "rarity": "rare",
-    "effect": "卡组中每有 1 个诅咒，每场战斗开始时获得 1 点力量。"
-  },
-  {
-    "id": "duality",
-    "en": "Duality",
-    "zh": "二元性",
-    "rarity": "uncommon",
-    "effect": "每当你打出 1 张攻击牌，获得 1 点临时敏捷。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "ectoplasm",
-    "en": "Ectoplasm",
-    "zh": "灵质",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你不再能获得金币。"
-  },
-  {
-    "id": "emotion_chip",
-    "en": "Emotion Chip",
-    "zh": "情感芯片",
-    "rarity": "rare",
-    "effect": "若上一回合你失去过生命，回合开始时触发所有球体的被动效果。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "empty_cage",
-    "en": "Empty Cage",
-    "zh": "空笼",
-    "rarity": "boss",
-    "effect": "拾取时，从卡组中移除 2 张牌。"
-  },
-  {
-    "id": "enchiridion",
-    "en": "Enchiridion",
-    "zh": "古圣典",
-    "rarity": "special",
-    "effect": "每场战斗开始时，将 1 张随机能力牌加入手牌，该回合其费用为 0。",
-    "source": "event"
-  },
-  {
-    "id": "eternal_feather",
-    "en": "Eternal Feather",
-    "zh": "永恒之羽",
-    "rarity": "uncommon",
-    "effect": "卡组中每有 5 张牌，每次进入休息处时回复 3 点生命。"
-  },
-  {
-    "id": "face_of_cleric",
-    "en": "Face of Cleric",
-    "zh": "牧师之面",
-    "rarity": "special",
-    "effect": "每场战斗结束后，最大生命值提高 1 点。",
-    "source": "event"
-  },
-  {
-    "id": "fossilized_helix",
-    "en": "Fossilized Helix",
-    "zh": "化石螺旋",
-    "rarity": "rare",
-    "effect": "防止战斗中你第一次失去生命。"
-  },
-  {
-    "id": "frozen_core",
-    "en": "Frozen Core",
-    "zh": "冰冻核心",
-    "rarity": "boss",
-    "effect": "替代「破碎核心」。回合结束时若有空的球体槽位，引导 1 个霜寒球。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "frozen_egg",
-    "en": "Frozen Egg",
-    "zh": "冰冻蛋",
-    "rarity": "uncommon",
-    "effect": "每当你向卡组加入 1 张能力牌，将其升级。"
-  },
-  {
-    "id": "frozen_eye",
-    "en": "Frozen Eye",
-    "zh": "冰冻之眼",
-    "rarity": "shop",
-    "effect": "查看抽牌堆时，卡牌按顺序显示。"
-  },
-  {
-    "id": "fusion_hammer",
-    "en": "Fusion Hammer",
-    "zh": "聚变锤",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你不能再在休息处升级卡牌。"
-  },
-  {
-    "id": "gambling_chip",
-    "en": "Gambling Chip",
-    "zh": "赌博筹码",
-    "rarity": "rare",
-    "effect": "每场战斗开始时，弃掉任意数量的牌，然后抽等量的牌。"
-  },
-  {
-    "id": "ginger",
-    "en": "Ginger",
-    "zh": "生姜",
-    "rarity": "rare",
-    "effect": "你不再会陷入虚弱。"
-  },
-  {
-    "id": "girya",
-    "en": "Girya",
-    "zh": "吉里亚",
-    "rarity": "rare",
-    "effect": "现在可以在休息处进行力量训练（最多 3 次，每次 +1 力量）。"
-  },
-  {
-    "id": "gold_plated_cables",
-    "en": "Gold-Plated Cables",
-    "zh": "镀金线缆",
-    "rarity": "uncommon",
-    "effect": "最右侧的球体额外触发一次被动效果。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "golden_eye",
-    "en": "Golden Eye",
-    "zh": "金色之眼",
-    "rarity": "rare",
-    "effect": "每当你预见，额外预见 2 张牌。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "golden_idol",
-    "en": "Golden Idol",
-    "zh": "黄金神像",
-    "rarity": "special",
-    "effect": "敌人掉落的金币增加 25%。",
-    "source": "event"
-  },
-  {
-    "id": "gremlin_horn",
-    "en": "Gremlin Horn",
-    "zh": "小鬼之角",
-    "rarity": "uncommon",
-    "effect": "每当有敌人死亡，获得 1 点能量并抽 1 张牌。"
-  },
-  {
-    "id": "gremlin_visage",
-    "en": "Gremlin Visage",
-    "zh": "小鬼面具",
-    "rarity": "special",
-    "effect": "每场战斗开始时，你获得 1 层虚弱。",
-    "source": "event"
-  },
-  {
-    "id": "grotesque_trophy",
-    "en": "Grotesque Trophy",
-    "zh": "怪异战利品",
-    "rarity": "blight",
-    "effect": "拾取时，获得 3 张「傲慢」。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "hand_drill",
-    "en": "Hand Drill",
-    "zh": "手钻",
-    "rarity": "shop",
-    "effect": "每当你打破一名敌人的格挡（使其格挡归零），施加 2 层易伤。"
-  },
-  {
-    "id": "happy_flower",
-    "en": "Happy Flower",
-    "zh": "快乐花",
-    "rarity": "common",
-    "effect": "每过 3 个回合，获得 1 点能量。"
-  },
-  {
-    "id": "hauntings",
-    "en": "Hauntings",
-    "zh": "闹鬼",
-    "rarity": "blight",
-    "effect": "敌人战斗开始时获得 1 层虚无。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "holy_water",
-    "en": "Holy Water",
-    "zh": "圣水",
-    "rarity": "boss",
-    "effect": "替代「纯净水」。每场战斗开始时，将 3 张「奇迹」加入手牌。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "horn_cleat",
-    "en": "Horn Cleat",
-    "zh": "系船角",
-    "rarity": "uncommon",
-    "effect": "第 2 回合开始时，获得 14 点格挡。"
-  },
-  {
-    "id": "hovering_kite",
-    "en": "Hovering Kite",
-    "zh": "悬浮风筝",
-    "rarity": "boss",
-    "effect": "每回合第一次弃牌时，获得 1 点能量。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "ice_cream",
-    "en": "Ice Cream",
-    "zh": "冰淇淋",
-    "rarity": "rare",
-    "effect": "能量现在可以保留到后续回合。"
-  },
-  {
-    "id": "incense_burner",
-    "en": "Incense Burner",
-    "zh": "香炉",
-    "rarity": "rare",
-    "effect": "每过 6 个回合，获得 1 层虚无。"
-  },
-  {
-    "id": "ink_bottle",
-    "en": "Ink Bottle",
-    "zh": "墨水瓶",
-    "rarity": "uncommon",
-    "effect": "每打出 10 张牌，抽 1 张牌。"
-  },
-  {
-    "id": "inserter",
-    "en": "Inserter",
-    "zh": "嵌入器",
-    "rarity": "boss",
-    "effect": "每过 2 个回合，获得 1 个球体槽位。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "juzu_bracelet",
-    "en": "Juzu Bracelet",
-    "zh": "数珠手链",
-    "rarity": "common",
-    "effect": "在 ? 房间不再遭遇普通敌人战斗。"
-  },
-  {
-    "id": "kunai",
-    "en": "Kunai",
-    "zh": "苦无",
-    "rarity": "uncommon",
-    "effect": "每当你在单回合内打出 3 张攻击牌，获得 1 点敏捷。"
-  },
-  {
-    "id": "lantern",
-    "en": "Lantern",
-    "zh": "灯笼",
-    "rarity": "common",
-    "effect": "每场战斗的第 1 回合获得 1 点能量。"
-  },
-  {
-    "id": "lees_waffle",
-    "en": "Lee's Waffle",
-    "zh": "李的华夫饼",
-    "rarity": "shop",
-    "effect": "拾取时，最大生命值提高 7 点并回复全部生命。"
-  },
-  {
-    "id": "letter_opener",
-    "en": "Letter Opener",
-    "zh": "裁信刀",
-    "rarity": "uncommon",
-    "effect": "每当你在单回合内打出 3 张技能牌，对所有敌人造成 5 点伤害。"
-  },
-  {
-    "id": "lizard_tail",
-    "en": "Lizard Tail",
-    "zh": "蜥蜴尾巴",
-    "rarity": "rare",
-    "effect": "当你即将死亡时，改为回复至 50% 最大生命值（仅生效一次）。"
-  },
-  {
-    "id": "magic_flower",
-    "en": "Magic Flower",
-    "zh": "魔法花",
-    "rarity": "rare",
-    "effect": "战斗中的治疗效果提高 50%。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "mango",
-    "en": "Mango",
-    "zh": "芒果",
-    "rarity": "rare",
-    "effect": "拾取时，最大生命值提高 14 点。"
-  },
-  {
-    "id": "mark_of_pain",
-    "en": "Mark of Pain",
-    "zh": "痛苦烙印",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。每场战斗开始时，将 2 张「伤口」洗入抽牌堆。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "mark_of_the_bloom",
-    "en": "Mark of the Bloom",
-    "zh": "绽放烙印",
-    "rarity": "special",
-    "effect": "你不再能回复生命。",
-    "source": "event"
-  },
-  {
-    "id": "matryoshka",
-    "en": "Matryoshka",
-    "zh": "套娃",
-    "rarity": "uncommon",
-    "effect": "接下来打开的 2 个非首领宝箱各含 2 件遗物。"
-  },
-  {
-    "id": "maw_bank",
-    "en": "Maw Bank",
-    "zh": "巨颚银行",
-    "rarity": "common",
-    "effect": "每爬 1 层楼，获得 12 金币。在商店花费金币后失效。"
-  },
-  {
-    "id": "meal_ticket",
-    "en": "Meal Ticket",
-    "zh": "餐券",
-    "rarity": "common",
-    "effect": "每次进入商店时，回复 15 点生命。"
-  },
-  {
-    "id": "meat_on_the_bone",
-    "en": "Meat on the Bone",
-    "zh": "骨上的肉",
-    "rarity": "uncommon",
-    "effect": "若战斗结束时你的生命值不高于 50%，回复 12 点生命。"
-  },
-  {
-    "id": "medical_kit",
-    "en": "Medical Kit",
-    "zh": "医疗包",
-    "rarity": "shop",
-    "effect": "不可打出的状态牌现在可以打出。每打出 1 张状态牌，将其消耗。"
-  },
-  {
-    "id": "melange",
-    "en": "Melange",
-    "zh": "梅兰格",
-    "rarity": "shop",
-    "effect": "每次洗抽牌堆时，预见 3 张牌。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "membership_card",
-    "en": "Membership Card",
-    "zh": "会员卡",
-    "rarity": "shop",
-    "effect": "所有商品一律 5 折！"
-  },
-  {
-    "id": "mercury_hourglass",
-    "en": "Mercury Hourglass",
-    "zh": "水银沙漏",
-    "rarity": "uncommon",
-    "effect": "回合开始时，对所有敌人造成 3 点伤害。"
-  },
-  {
-    "id": "mimic_infestation",
-    "en": "Mimic Infestation",
-    "zh": "拟态成灾",
-    "rarity": "blight",
-    "effect": "后续章节的宝箱房被精英战斗取代，精英不再掉落遗物。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "molten_egg",
-    "en": "Molten Egg",
-    "zh": "熔岩蛋",
-    "rarity": "uncommon",
-    "effect": "每当你向卡组加入 1 张攻击牌，将其升级。"
-  },
-  {
-    "id": "mummified_hand",
-    "en": "Mummified Hand",
-    "zh": "木乃伊之手",
-    "rarity": "uncommon",
-    "effect": "每当你打出 1 张能力牌，手牌中 1 张随机牌该回合费用变为 0。"
-  },
-  {
-    "id": "mutagenic_strength",
-    "en": "Mutagenic Strength",
-    "zh": "诱变力量",
-    "rarity": "special",
-    "effect": "每场战斗开始时获得 3 点力量，第一回合结束时失去 3 点力量。",
-    "source": "event"
-  },
-  {
-    "id": "muzzle",
-    "en": "Muzzle",
-    "zh": "口枷",
-    "rarity": "blight",
-    "effect": "你不再能提高最大生命值，所有治疗效果减半。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "nloths_gift",
-    "en": "N'loth's Gift",
-    "zh": "尼洛斯的礼物",
-    "rarity": "special",
-    "effect": "战斗奖励中出现稀有牌的概率提高三倍。",
-    "source": "event"
-  },
-  {
-    "id": "nloths_hungry_face",
-    "en": "N'loth's Hungry Face",
-    "zh": "尼洛斯的饥饿面孔",
-    "rarity": "special",
-    "effect": "你打开的下一个非首领宝箱是空的。",
-    "source": "event"
-  },
-  {
-    "id": "necronomicon",
-    "en": "Necronomicon",
-    "zh": "死灵之书",
-    "rarity": "special",
-    "effect": "每回合内你打出的第一张费用不低于 2 的攻击牌会被额外打出一次。拾取时，获得 1 个特殊诅咒。",
-    "source": "event"
-  },
-  {
-    "id": "neows_lament",
-    "en": "Neow's Lament",
-    "zh": "尼奥的哀悼",
-    "rarity": "special",
-    "effect": "你前 3 场战斗中的敌人只有 1 点生命。",
-    "source": "event"
-  },
-  {
-    "id": "nilrys_codex",
-    "en": "Nilry's Codex",
-    "zh": "尼里的法典",
-    "rarity": "special",
-    "effect": "每回合结束时，可以从 3 张随机牌中选择 1 张洗入抽牌堆。",
-    "source": "event"
-  },
-  {
-    "id": "ninja_scroll",
-    "en": "Ninja Scroll",
-    "zh": "忍者卷轴",
-    "rarity": "uncommon",
-    "effect": "每场战斗开始时，将 3 张「袖剑」加入手牌。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "nuclear_battery",
-    "en": "Nuclear Battery",
-    "zh": "核能电池",
-    "rarity": "boss",
-    "effect": "每场战斗开始时，引导 1 个等离子球。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "nunchaku",
-    "en": "Nunchaku",
-    "zh": "双节棍",
-    "rarity": "common",
-    "effect": "每打出 10 张攻击牌，获得 1 点能量。"
-  },
-  {
-    "id": "odd_mushroom",
-    "en": "Odd Mushroom",
-    "zh": "怪异蘑菇",
-    "rarity": "special",
-    "effect": "当你带有易伤时，受到的攻击伤害提高 25% 而非 50%。",
-    "source": "event"
-  },
-  {
-    "id": "oddly_smooth_stone",
-    "en": "Oddly Smooth Stone",
-    "zh": "光滑卵石",
-    "rarity": "common",
-    "effect": "每场战斗开始时，获得 1 点敏捷。"
-  },
-  {
-    "id": "old_coin",
-    "en": "Old Coin",
-    "zh": "古旧硬币",
-    "rarity": "rare",
-    "effect": "拾取时，获得 300 金币。"
-  },
-  {
-    "id": "omamori",
-    "en": "Omamori",
-    "zh": "御守",
-    "rarity": "common",
-    "effect": "抵消接下来获得的 2 个诅咒。"
-  },
-  {
-    "id": "orange_pellets",
-    "en": "Orange Pellets",
-    "zh": "橙色药丸",
-    "rarity": "shop",
-    "effect": "每当你在同一回合内打出能力牌、攻击牌和技能牌，移除你所有的负面状态。"
-  },
-  {
-    "id": "orichalcum",
-    "en": "Orichalcum",
-    "zh": "山铜",
-    "rarity": "common",
-    "effect": "若回合结束时你没有格挡，获得 6 点格挡。"
-  },
-  {
-    "id": "ornamental_fan",
-    "en": "Ornamental Fan",
-    "zh": "华丽折扇",
-    "rarity": "uncommon",
-    "effect": "每当你在单回合内打出 3 张攻击牌，获得 4 点格挡。"
-  },
-  {
-    "id": "orrery",
-    "en": "Orrery",
-    "zh": "星球仪",
-    "rarity": "shop",
-    "effect": "拾取时，选择 5 张牌加入卡组。"
-  },
-  {
-    "id": "pandoras_box",
-    "en": "Pandora's Box",
-    "zh": "潘多拉魔盒",
-    "rarity": "boss",
-    "effect": "拾取时，变化卡组中所有「打击」和「防御」牌。"
-  },
-  {
-    "id": "pantograph",
-    "en": "Pantograph",
-    "zh": "缩放仪",
-    "rarity": "uncommon",
-    "effect": "首领战斗开始时，回复 25 点生命。"
-  },
-  {
-    "id": "paper_krane",
-    "en": "Paper Krane",
-    "zh": "千纸鹤",
-    "rarity": "uncommon",
-    "effect": "带有虚弱的敌人造成的伤害降低 40%（原为 25%）。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "paper_phrog",
-    "en": "Paper Phrog",
-    "zh": "纸蛙",
-    "rarity": "uncommon",
-    "effect": "带有易伤的敌人受到的攻击伤害提高 75%（原为 50%）。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "peace_pipe",
-    "en": "Peace Pipe",
-    "zh": "和平烟斗",
-    "rarity": "rare",
-    "effect": "现在可以在休息处移除卡组中的牌。"
-  },
-  {
-    "id": "pear",
-    "en": "Pear",
-    "zh": "梨",
-    "rarity": "uncommon",
-    "effect": "拾取时，最大生命值提高 10 点。"
-  },
-  {
-    "id": "pen_nib",
-    "en": "Pen Nib",
-    "zh": "钢笔笔尖",
-    "rarity": "common",
-    "effect": "你每打出的第 10 张攻击牌造成双倍伤害。"
-  },
-  {
-    "id": "philosophers_stone",
-    "en": "Philosopher's Stone",
-    "zh": "贤者之石",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。所有敌人战斗开始时获得 1 点力量。"
-  },
-  {
-    "id": "pocketwatch",
-    "en": "Pocketwatch",
-    "zh": "怀表",
-    "rarity": "rare",
-    "effect": "每当你的回合内只打出 3 张或更少的牌，下回合开始时额外抽 3 张牌。"
-  },
-  {
-    "id": "post_durian",
-    "en": "Post-Durian",
-    "zh": "榴莲之殃",
-    "rarity": "blight",
-    "effect": "失去 50% 最大生命值。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "potion_belt",
-    "en": "Potion Belt",
-    "zh": "药水腰带",
-    "rarity": "common",
-    "effect": "拾取时，获得 2 个药水槽。"
-  },
-  {
-    "id": "prayer_wheel",
-    "en": "Prayer Wheel",
-    "zh": "转经轮",
-    "rarity": "rare",
-    "effect": "普通敌人战斗额外掉落 1 个卡牌奖励。"
-  },
-  {
-    "id": "preserved_insect",
-    "en": "Preserved Insect",
-    "zh": "防腐昆虫",
-    "rarity": "common",
-    "effect": "精英战斗中的敌人生命值降低 25%。"
-  },
-  {
-    "id": "prismatic_shard",
-    "en": "Prismatic Shard",
-    "zh": "棱镜碎片",
-    "rarity": "shop",
-    "effect": "战斗奖励界面现在可能出现无色牌和其他角色的牌。"
-  },
-  {
-    "id": "pure_water",
-    "en": "Pure Water",
-    "zh": "纯净水",
-    "rarity": "starter",
-    "effect": "每场战斗开始时，将 1 张「奇迹」加入手牌。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "question_card",
-    "en": "Question Card",
-    "zh": "疑问卡",
-    "rarity": "uncommon",
-    "effect": "后续的卡牌奖励多 1 张牌可供选择。"
-  },
-  {
-    "id": "red_circlet",
-    "en": "Red Circlet",
-    "zh": "红头环",
-    "rarity": "special",
-    "effect": "你的遗物已经拿完了，真厉害！（因游戏代码 bug 实际无法获得）",
-    "notes": "特殊/纪念遗物。"
-  },
-  {
-    "id": "red_mask",
-    "en": "Red Mask",
-    "zh": "红面具",
-    "rarity": "special",
-    "effect": "每场战斗开始时，对所有敌人施加 1 层虚弱。",
-    "source": "event"
-  },
-  {
-    "id": "red_skull",
-    "en": "Red Skull",
-    "zh": "红骷髅",
-    "rarity": "common",
-    "effect": "生命值不高于 50% 时，获得 3 点额外力量。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "regal_pillow",
-    "en": "Regal Pillow",
-    "zh": "华贵枕头",
-    "rarity": "common",
-    "effect": "每次休息时，额外回复 15 点生命。"
-  },
-  {
-    "id": "ring_of_the_serpent",
-    "en": "Ring of the Serpent",
-    "zh": "巨蛇之环",
-    "rarity": "boss",
-    "effect": "替代「蛇之指环」。回合开始时，额外抽 1 张牌。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "ring_of_the_snake",
-    "en": "Ring of the Snake",
-    "zh": "蛇之指环",
-    "rarity": "starter",
-    "effect": "每场战斗开始时，额外抽 2 张牌。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "runic_capacitor",
-    "en": "Runic Capacitor",
-    "zh": "符文电容",
-    "rarity": "shop",
-    "effect": "每场战斗开始时，额外获得 3 个球体槽位。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "runic_cube",
-    "en": "Runic Cube",
-    "zh": "符文立方体",
-    "rarity": "boss",
-    "effect": "每当你失去生命，抽 1 张牌。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "runic_dome",
-    "en": "Runic Dome",
-    "zh": "符文穹顶",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你不再能看到敌人的意图。"
-  },
-  {
-    "id": "runic_pyramid",
-    "en": "Runic Pyramid",
-    "zh": "符文金字塔",
-    "rarity": "boss",
-    "effect": "回合结束时，不再弃掉手牌。"
-  },
-  {
-    "id": "sacred_bark",
-    "en": "Sacred Bark",
-    "zh": "神圣树皮",
-    "rarity": "boss",
-    "effect": "药水的效果翻倍。"
-  },
-  {
-    "id": "scatterbrain",
-    "en": "Scatterbrain",
-    "zh": "心神涣散",
-    "rarity": "blight",
-    "effect": "每回合少抽 1 张牌。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "self_forming_clay",
-    "en": "Self-Forming Clay",
-    "zh": "自塑之泥",
-    "rarity": "uncommon",
-    "effect": "每当你失去生命，下回合获得 3 点格挡。",
-    "notes": "角色专属：铁甲战士（Ironclad）。"
-  },
-  {
-    "id": "shield_of_blight",
-    "en": "Shield of Blight",
-    "zh": "灾祸之盾",
-    "rarity": "blight",
-    "effect": "敌人生命值提高 50%。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "shovel",
-    "en": "Shovel",
-    "zh": "铲子",
-    "rarity": "rare",
-    "effect": "现在可以在休息处挖掘遗物。"
-  },
-  {
-    "id": "shuriken",
-    "en": "Shuriken",
-    "zh": "手里剑",
-    "rarity": "uncommon",
-    "effect": "每当你在单回合内打出 3 张攻击牌，获得 1 点力量。"
-  },
-  {
-    "id": "singing_bowl",
-    "en": "Singing Bowl",
-    "zh": "歌之碗",
-    "rarity": "uncommon",
-    "effect": "选择卡牌奖励时，可以选择将最大生命值提高 2 点来代替拿牌。"
-  },
-  {
-    "id": "slavers_collar",
-    "en": "Slaver's Collar",
-    "zh": "监工的项圈",
-    "rarity": "boss",
-    "effect": "在首领与精英战斗中，回合开始时获得 1 点额外能量。"
-  },
-  {
-    "id": "sling_of_courage",
-    "en": "Sling of Courage",
-    "zh": "勇气投石索",
-    "rarity": "shop",
-    "effect": "每场精英战斗开始时，获得 2 点力量。"
-  },
-  {
-    "id": "smiling_mask",
-    "en": "Smiling Mask",
-    "zh": "微笑面具",
-    "rarity": "common",
-    "effect": "商人的删牌服务固定只花 50 金币。"
-  },
-  {
-    "id": "snecko_eye",
-    "en": "Snecko Eye",
-    "zh": "蛇眼",
-    "rarity": "boss",
-    "effect": "回合开始时，额外抽 2 张牌。每场战斗开始时陷入「混乱」（手牌费用随机化）。"
-  },
-  {
-    "id": "snecko_skull",
-    "en": "Snecko Skull",
-    "zh": "蛇怪颅骨",
-    "rarity": "common",
-    "effect": "每当你施加中毒时，额外施加 1 层中毒。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "sozu",
-    "en": "Sozu",
-    "zh": "添水",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你不再能获得药水。"
-  },
-  {
-    "id": "spear_of_blight",
-    "en": "Spear of Blight",
-    "zh": "灾祸之矛",
-    "rarity": "blight",
-    "effect": "敌人造成 100% 额外伤害。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "spirit_poop",
-    "en": "Spirit Poop",
-    "zh": "幽灵便便",
-    "rarity": "special",
-    "effect": "它令人很不舒服。（纪念遗物，无实际效果）",
-    "source": "event"
-  },
-  {
-    "id": "ssserpent_head",
-    "en": "Ssserpent Head",
-    "zh": "蛇蛇之首",
-    "rarity": "special",
-    "effect": "每次进入 ? 房间，获得 50 金币。",
-    "source": "event"
-  },
-  {
-    "id": "stone_calendar",
-    "en": "Stone Calendar",
-    "zh": "石头日历",
-    "rarity": "rare",
-    "effect": "第 7 回合结束时，对所有敌人造成 52 点伤害。"
-  },
-  {
-    "id": "strange_spoon",
-    "en": "Strange Spoon",
-    "zh": "奇怪的勺子",
-    "rarity": "shop",
-    "effect": "打出后本应被消耗的牌，改为 50% 概率被消耗、50% 概率被弃置。"
-  },
-  {
-    "id": "strawberry",
-    "en": "Strawberry",
-    "zh": "草莓",
-    "rarity": "common",
-    "effect": "拾取时，最大生命值提高 7 点。"
-  },
-  {
-    "id": "strike_dummy",
-    "en": "Strike Dummy",
-    "zh": "打击木偶",
-    "rarity": "uncommon",
-    "effect": "名字中带有「打击」的牌额外造成 3 点伤害。"
-  },
-  {
-    "id": "sundial",
-    "en": "Sundial",
-    "zh": "日晷",
-    "rarity": "uncommon",
-    "effect": "每洗 3 次抽牌堆，获得 2 点能量。"
-  },
-  {
-    "id": "symbiotic_virus",
-    "en": "Symbiotic Virus",
-    "zh": "共生病毒",
-    "rarity": "uncommon",
-    "effect": "每场战斗开始时，引导 1 个暗影球。",
-    "notes": "角色专属：故障机器人（Defect）。"
-  },
-  {
-    "id": "teardrop_locket",
-    "en": "Teardrop Locket",
-    "zh": "泪滴吊坠",
-    "rarity": "uncommon",
-    "effect": "每场战斗以平静姿态开始。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "the_abacus",
-    "en": "The Abacus",
-    "zh": "算盘",
-    "rarity": "shop",
-    "effect": "每次洗抽牌堆时，获得 6 点格挡。"
-  },
-  {
-    "id": "the_boot",
-    "en": "The Boot",
-    "zh": "靴子",
-    "rarity": "common",
-    "effect": "每当你的攻击牌将造成 4 点或更少的未被格挡伤害时，提高至 5 点。"
-  },
-  {
-    "id": "the_courier",
-    "en": "The Courier",
-    "zh": "快递员",
-    "rarity": "uncommon",
-    "effect": "商人的卡牌、遗物和药水都会重新进货，且所有价格降低 20%。"
-  },
-  {
-    "id": "the_specimen",
-    "en": "The Specimen",
-    "zh": "标本",
-    "rarity": "rare",
-    "effect": "每当有敌人死亡，将其身上的所有中毒转移给 1 个随机敌人。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "thread_and_needle",
-    "en": "Thread and Needle",
-    "zh": "丝线与针",
-    "rarity": "rare",
-    "effect": "每场战斗开始时，获得 4 层板甲。"
-  },
-  {
-    "id": "time_maze",
-    "en": "Time Maze",
-    "zh": "时间迷宫",
-    "rarity": "blight",
-    "effect": "你每回合最多打出 15 张牌。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "tingsha",
-    "en": "Tingsha",
-    "zh": "丁夏铜钹",
-    "rarity": "rare",
-    "effect": "每当你在回合内弃 1 张牌，对 1 个随机敌人造成 3 点伤害。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "tiny_chest",
-    "en": "Tiny Chest",
-    "zh": "小宝箱",
-    "rarity": "common",
-    "effect": "每第 4 个 ? 房间是宝箱房。"
-  },
-  {
-    "id": "tiny_house",
-    "en": "Tiny House",
-    "zh": "小房子",
-    "rarity": "boss",
-    "effect": "拾取时，获得 1 瓶药水、50 金币、5 点最大生命值、1 张卡牌，并升级 1 张随机卡牌。"
-  },
-  {
-    "id": "toolbox",
-    "en": "Toolbox",
-    "zh": "工具箱",
-    "rarity": "shop",
-    "effect": "每场战斗开始时，从 3 张随机无色牌中选择 1 张加入手牌。"
-  },
-  {
-    "id": "torii",
-    "en": "Torii",
-    "zh": "鸟居",
-    "rarity": "rare",
-    "effect": "每当攻击将对你造成 5 点或更少的未被格挡伤害时，将其降低至 1 点。"
-  },
-  {
-    "id": "tough_bandages",
-    "en": "Tough Bandages",
-    "zh": "结实绷带",
-    "rarity": "rare",
-    "effect": "每当你在回合内弃 1 张牌，获得 3 点格挡。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "toxic_egg",
-    "en": "Toxic Egg",
-    "zh": "毒性蛋",
-    "rarity": "uncommon",
-    "effect": "每当你向卡组加入 1 张技能牌，将其升级。"
-  },
-  {
-    "id": "toy_ornithopter",
-    "en": "Toy Ornithopter",
-    "zh": "玩具扑翼机",
-    "rarity": "common",
-    "effect": "每次使用药水，回复 5 点生命。"
-  },
-  {
-    "id": "tungsten_rod",
-    "en": "Tungsten Rod",
-    "zh": "钨棒",
-    "rarity": "rare",
-    "effect": "每当你将失去生命，少失去 1 点。"
-  },
-  {
-    "id": "turnip",
-    "en": "Turnip",
-    "zh": "萝卜",
-    "rarity": "rare",
-    "effect": "你不再会陷入脆弱。"
-  },
-  {
-    "id": "twisted_funnel",
-    "en": "Twisted Funnel",
-    "zh": "扭曲漏斗",
-    "rarity": "shop",
-    "effect": "每场战斗开始时，对所有敌人施加 4 层中毒。",
-    "notes": "角色专属：静默猎手（Silent）。"
-  },
-  {
-    "id": "twisting_mind",
-    "en": "Twisting Mind",
-    "zh": "扭曲心智",
-    "rarity": "blight",
-    "effect": "回合结束时，将 1 张随机状态牌置于抽牌堆顶。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "unceasing_top",
-    "en": "Unceasing Top",
-    "zh": "永动陀螺",
-    "rarity": "rare",
-    "effect": "每当你的回合内手牌为空，抽 1 张牌。"
-  },
-  {
-    "id": "vajra",
-    "en": "Vajra",
-    "zh": "金刚杵",
-    "rarity": "common",
-    "effect": "每场战斗开始时，获得 1 点力量。"
-  },
-  {
-    "id": "velvet_choker",
-    "en": "Velvet Choker",
-    "zh": "天鹅绒颈环",
-    "rarity": "boss",
-    "effect": "回合开始时获得 1 点额外能量。你每回合最多打出 6 张牌。"
-  },
-  {
-    "id": "violet_lotus",
-    "en": "Violet Lotus",
-    "zh": "紫罗兰莲花",
-    "rarity": "boss",
-    "effect": "每当你退出平静姿态，获得 1 点额外能量。",
-    "notes": "角色专属：观者（Watcher）。"
-  },
-  {
-    "id": "void_essence",
-    "en": "Void Essence",
-    "zh": "虚空精粹",
-    "rarity": "blight",
-    "effect": "永久失去 1 点能量（每回合基础能量 -1）。",
-    "notes": "诅咒（Blight）：进阶模式下每个章节开始时获得的负面效果，非可收集遗物。"
-  },
-  {
-    "id": "war_paint",
-    "en": "War Paint",
-    "zh": "战争涂料",
-    "rarity": "common",
-    "effect": "拾取时，升级 2 张随机技能牌。"
-  },
-  {
-    "id": "warped_tongs",
-    "en": "Warped Tongs",
-    "zh": "扭曲火钳",
-    "rarity": "special",
-    "effect": "回合开始时，升级手牌中的 1 张随机牌（本场战斗内持续有效）。",
-    "source": "event"
-  },
-  {
-    "id": "whetstone",
-    "en": "Whetstone",
-    "zh": "磨刀石",
-    "rarity": "common",
-    "effect": "拾取时，升级 2 张随机攻击牌。"
-  },
-  {
-    "id": "white_beast_statue",
-    "en": "White Beast Statue",
-    "zh": "白兽雕像",
-    "rarity": "uncommon",
-    "effect": "战斗奖励中必定出现药水。"
-  },
-  {
-    "id": "wing_boots",
-    "en": "Wing Boots",
-    "zh": "翔空之靴",
-    "rarity": "rare",
-    "effect": "选择下一个房间时可以无视路径限制，共 3 次。"
-  },
-  {
-    "id": "wrist_blade",
-    "en": "Wrist Blade",
-    "zh": "腕刃",
-    "rarity": "boss",
-    "effect": "费用为 0 的攻击牌额外造成 4 点伤害。",
-    "notes": "角色专属：静默猎手（Silent）。"
+    "id": "Akabeko",
+    "class": "Akabeko",
+    "name": {
+      "eng": "Akabeko",
+      "zhs": "赤牛"
+    },
+    "description": {
+      "eng": "Your first Attack each combat deals # additional damage.",
+      "zhs": "你在每场战斗中的第一次攻击造成 # 点额外伤害"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Anchor",
+    "class": "Anchor",
+    "name": {
+      "eng": "Anchor",
+      "zhs": "锚"
+    },
+    "description": {
+      "eng": "Start each combat with # Block.",
+      "zhs": "每场战斗开始时获得 # 点 格挡 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Ancient Tea Set",
+    "class": "AncientTeaSet",
+    "name": {
+      "eng": "Ancient Tea Set",
+      "zhs": "古茶具套装"
+    },
+    "description": {
+      "eng": "Whenever you enter a Rest Site, start the next combat with [E] [E] .",
+      "zhs": "到达休息处后的下一场战斗开始时获得 [E] [E] 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Art of War",
+    "class": "ArtOfWar",
+    "name": {
+      "eng": "Art of War",
+      "zhs": "孙子兵法"
+    },
+    "description": {
+      "eng": "If you do not play any Attacks during your turn, gain an additional #[E] next turn.",
+      "zhs": "如果你在回合中不打出任何 攻击牌 ，在下一回合得到一点额外 #[E] 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Astrolabe",
+    "class": "Astrolabe",
+    "name": {
+      "eng": "Astrolabe",
+      "zhs": "星盘"
+    },
+    "description": {
+      "eng": "Upon pickup, Transform 3 cards, then Upgrade them.#Choose 3 cards for ",
+      "zhs": "拾起时，选择 3 张牌进行 变化 ，然后将这些牌 升级 。#选择3张牌 "
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bag of Marbles",
+    "class": "BagOfMarbles",
+    "name": {
+      "eng": "Bag of Marbles",
+      "zhs": "弹珠袋"
+    },
+    "description": {
+      "eng": "At the start of each combat, apply # Vulnerable to ALL enemies.",
+      "zhs": "在每场战斗开始时，给予所有敌人 # 层 易伤 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bag of Preparation",
+    "class": "BagOfPreparation",
+    "name": {
+      "eng": "Bag of Preparation",
+      "zhs": "准备背包"
+    },
+    "description": {
+      "eng": "At the start of each combat, draw # additional cards.",
+      "zhs": "在每场战斗开始时，额外抽 # 张牌。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bird Faced Urn",
+    "class": "BirdFacedUrn",
+    "name": {
+      "eng": "Bird-Faced Urn",
+      "zhs": "鸟面瓮"
+    },
+    "description": {
+      "eng": "Whenever you play a Power card, heal # HP.",
+      "zhs": "每当你打出一张 能力牌 ，回复 # 点生命。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Black Blood",
+    "class": "BlackBlood",
+    "name": {
+      "eng": "Black Blood",
+      "zhs": "黑暗之血"
+    },
+    "description": {
+      "eng": "Replaces Burning Blood. At the end of combat, heal # HP.",
+      "zhs": "替换 燃烧之血 。在战斗结束时，回复 # 点生命。"
+    },
+    "tier": "boss",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Black Star",
+    "class": "BlackStar",
+    "name": {
+      "eng": "Black Star",
+      "zhs": "黑星"
+    },
+    "description": {
+      "eng": "Elites drop an additional relic when defeated.",
+      "zhs": "精英 敌人在被打败时多掉落一件 遗物 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Blood Vial",
+    "class": "BloodVial",
+    "name": {
+      "eng": "Blood Vial",
+      "zhs": "小血瓶"
+    },
+    "description": {
+      "eng": "At the start of each combat, heal # HP.",
+      "zhs": "在每场战斗开始时，回复 # 点生命。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bloody Idol",
+    "class": "BloodyIdol",
+    "name": {
+      "eng": "Bloody Idol",
+      "zhs": "鲜血神像"
+    },
+    "description": {
+      "eng": "Whenever you gain Gold, heal # HP.",
+      "zhs": "每当你获得 金币 时，回复 # 点生命。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Blue Candle",
+    "class": "BlueCandle",
+    "name": {
+      "eng": "Blue Candle",
+      "zhs": "蓝蜡烛"
+    },
+    "description": {
+      "eng": "Unplayable Curse cards can now be played.\nWhenever you play a Curse, lose # HP and Exhaust it.",
+      "zhs": "可以打出原本 不能被打出 的 诅咒牌 ，\nNL 打出 诅咒牌 会让你失去 # 点生命并将其 消耗 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Boot",
+    "class": "Boot",
+    "name": {
+      "eng": "The Boot",
+      "zhs": "发条靴"
+    },
+    "description": {
+      "eng": "Whenever you would deal # or less unblocked attack damage, increase it to 5.",
+      "zhs": "每当你造成小于等于 # 点未被格挡的 攻击 伤害时，将伤害提升为 5 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bottled Flame",
+    "class": "BottledFlame",
+    "name": {
+      "eng": "Bottled Flame",
+      "zhs": "瓶装火焰"
+    },
+    "description": {
+      "eng": "Upon pickup, choose an Attack. Start each combat with this card in your hand.#Choose a card for #Start each combat with # in your hand.",
+      "zhs": "拾起时，选择一张 攻击牌 。在每场战斗开始时，这张牌会出现在手牌中。#选择一张牌 #在每场战斗开始时，将 # 放入你的手牌。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bottled Lightning",
+    "class": "BottledLightning",
+    "name": {
+      "eng": "Bottled Lightning",
+      "zhs": "瓶装闪电"
+    },
+    "description": {
+      "eng": "Upon pickup, choose a Skill. Start each combat with this card in your hand.#Choose a card for #Start each combat with # in your hand.",
+      "zhs": "拾起时，选择一张 技能牌 。在每场战斗开始时，这张牌会出现在手牌中。#选择一张牌 #在每场战斗开始时，将 # 放入你的手牌。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Bottled Tornado",
+    "class": "BottledTornado",
+    "name": {
+      "eng": "Bottled Tornado",
+      "zhs": "瓶装旋风"
+    },
+    "description": {
+      "eng": "Upon pickup, choose a Power card. Start each combat with this card in your hand.#Choose a card for #Start each combat with # in your hand.",
+      "zhs": "拾起时，选择一张 能力牌 。在每场战斗开始时，这张牌会出现在手牌中。#选择一张牌 #在每场战斗开始时，将 # 放入你的手牌。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Brimstone",
+    "class": "Brimstone",
+    "name": {
+      "eng": "Brimstone",
+      "zhs": "硫磺"
+    },
+    "description": {
+      "eng": "At the start of your turn, gain # Strength and ALL enemies gain # Strength.",
+      "zhs": "在你的每个回合开始时，你获得 # 点 力量 ，所有敌人也获得 # 力量。"
+    },
+    "tier": "shop",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Bronze Scales",
+    "class": "BronzeScales",
+    "name": {
+      "eng": "Bronze Scales",
+      "zhs": "铜制鳞片"
+    },
+    "description": {
+      "eng": "Start each combat with # Thorns.",
+      "zhs": "在每场战斗开始时，获得 # 点 荆棘 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Burning Blood",
+    "class": "BurningBlood",
+    "name": {
+      "eng": "Burning Blood",
+      "zhs": "燃烧之血"
+    },
+    "description": {
+      "eng": "At the end of combat, heal # HP.",
+      "zhs": "在战斗结束时，回复 # 点生命。"
+    },
+    "tier": "starter",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Busted Crown",
+    "class": "BustedCrown",
+    "name": {
+      "eng": "Busted Crown",
+      "zhs": "破碎金冠"
+    },
+    "description": {
+      "eng": " at the start of your turn. Future card rewards have 2 less cards to choose from.#Gain [E]",
+      "zhs": "在卡牌奖励画面，可供选择的牌数减少 2 张。#在每回合开始时获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Cables",
+    "class": "GoldPlatedCables",
+    "name": {
+      "eng": "Gold-Plated Cables",
+      "zhs": "镀金缆线"
+    },
+    "description": {
+      "eng": "Your rightmost Orb triggers its passive an additional time.",
+      "zhs": "你最右侧的充能球会额外触发一次被动效果。"
+    },
+    "tier": "uncommon",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Calipers",
+    "class": "Calipers",
+    "name": {
+      "eng": "Calipers",
+      "zhs": "外卡钳"
+    },
+    "description": {
+      "eng": "At the start of your turn, lose # Block rather than all of your Block.",
+      "zhs": "在你的回合开始时，不再失去所有 格挡 ，而是失去 # 点 格挡 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Calling Bell",
+    "class": "CallingBell",
+    "name": {
+      "eng": "Calling Bell",
+      "zhs": "召唤铃铛"
+    },
+    "description": {
+      "eng": "Upon pickup, obtain a unique Curse and 3 relics.#The Bell Tolls...#Skip Rewards#Close",
+      "zhs": "获得一个独特的 诅咒 和 3 件 遗物 。#铃铛鸣响……#跳过奖励#关闭"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "CaptainsWheel",
+    "class": "CaptainsWheel",
+    "name": {
+      "eng": "Captain's Wheel",
+      "zhs": "舵盘"
+    },
+    "description": {
+      "eng": "At the start of your 3rd turn, gain # Block.",
+      "zhs": "在你的第三回合开始时，获得 # 点 格挡 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Cauldron",
+    "class": "Cauldron",
+    "name": {
+      "eng": "Cauldron",
+      "zhs": "大锅"
+    },
+    "description": {
+      "eng": "Upon pickup, brews 5 random potions.#Blup blip bloop...!",
+      "zhs": "拾起时，制作 5 瓶随机药水。#咕嘟咕嘟咕噜……！"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Centennial Puzzle",
+    "class": "CentennialPuzzle",
+    "name": {
+      "eng": "Centennial Puzzle",
+      "zhs": "百年积木"
+    },
+    "description": {
+      "eng": "The first time you lose HP each combat, draw # cards.",
+      "zhs": "你在每场战斗中第一次损伤生命时，抽 # 张牌。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "CeramicFish",
+    "class": "CeramicFish",
+    "name": {
+      "eng": "Ceramic Fish",
+      "zhs": "陶瓷小鱼"
+    },
+    "description": {
+      "eng": "Whenever you add a card to your deck, gain # Gold.",
+      "zhs": "每次你往自己的牌组中加入一张卡牌时，获得 # 金币 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Champion Belt",
+    "class": "ChampionsBelt",
+    "name": {
+      "eng": "Champion Belt",
+      "zhs": "冠军腰带"
+    },
+    "description": {
+      "eng": "Whenever you apply Vulnerable, apply # Weak.",
+      "zhs": "每当你给予 易伤 时，同时给予 # 层 虚弱 。"
+    },
+    "tier": "rare",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Charon's Ashes",
+    "class": "CharonsAshes",
+    "name": {
+      "eng": "Charon's Ashes",
+      "zhs": "卡戎之灰"
+    },
+    "description": {
+      "eng": "Whenever you Exhaust a card, deal # damage to ALL enemies.",
+      "zhs": "每当你 消耗 一张牌，对所有敌人造成 # 点伤害。"
+    },
+    "tier": "rare",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Chemical X",
+    "class": "ChemicalX",
+    "name": {
+      "eng": "Chemical X",
+      "zhs": "化学物X"
+    },
+    "description": {
+      "eng": "The effects of your cost X cards are increased by #",
+      "zhs": "耗能为 X 的牌的效果数值增加 # 点。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Circlet",
+    "class": "Circlet",
+    "name": {
+      "eng": "Circlet",
+      "zhs": "头环"
+    },
+    "description": {
+      "eng": "Collect as many as you can.",
+      "zhs": "多多益善。"
+    },
+    "tier": "special",
+    "pool": "none",
+    "usesCounter": true
+  },
+  {
+    "id": "CloakClasp",
+    "class": "CloakClasp",
+    "name": {
+      "eng": "Cloak Clasp",
+      "zhs": "斗篷扣"
+    },
+    "description": {
+      "eng": "At the end of your turn, gain # Block for each card in your hand.",
+      "zhs": "在你的回合结束时，每有一张手牌获得 # 点 格挡 。"
+    },
+    "tier": "rare",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "ClockworkSouvenir",
+    "class": "ClockworkSouvenir",
+    "name": {
+      "eng": "Clockwork Souvenir",
+      "zhs": "齿轮工艺品"
+    },
+    "description": {
+      "eng": "Start each combat with 1 Artifact.",
+      "zhs": "每场战斗开始时，获得 1 层 人工制品 。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Coffee Dripper",
+    "class": "CoffeeDripper",
+    "name": {
+      "eng": "Coffee Dripper",
+      "zhs": "咖啡滤杯"
+    },
+    "description": {
+      "eng": " at the start of your turn. You can no longer Rest at Rest Sites.#Gain [E]",
+      "zhs": "。 你无法再在休息处 休息 。#在每回合开始时获得 [E] "
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Cracked Core",
+    "class": "CrackedCore",
+    "name": {
+      "eng": "Cracked Core",
+      "zhs": "破损核心"
+    },
+    "description": {
+      "eng": "At the start of each combat, Channel 1 Lightning.",
+      "zhs": "在每场战斗开始时， 生成 1 个 闪电 充能球。"
+    },
+    "tier": "starter",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "CultistMask",
+    "class": "CultistMask",
+    "name": {
+      "eng": "Cultist Headpiece",
+      "zhs": "邪教徒头套"
+    },
+    "description": {
+      "eng": "You feel more talkative.#@CAW!@\n@CAAAW@",
+      "zhs": "你觉得自己有开腔的欲望。#@咔！@\n@咔咔！@"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Cursed Key",
+    "class": "CursedKey",
+    "name": {
+      "eng": "Cursed Key",
+      "zhs": "诅咒钥匙"
+    },
+    "description": {
+      "eng": " at the start of your turn. Whenever you open a non-Boss chest, obtain a Curse.#Gain [E]",
+      "zhs": " 你每次打开一个非Boss宝箱，都会获得一张 诅咒 。#在每回合开始时获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Damaru",
+    "class": "Damaru",
+    "name": {
+      "eng": "Damaru",
+      "zhs": "手摇鼓"
+    },
+    "description": {
+      "eng": "At the start of your turn, gain # Mantra.",
+      "zhs": "在你的回合开始时，获得 # 层 真言 。"
+    },
+    "tier": "common",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "Darkstone Periapt",
+    "class": "DarkstonePeriapt",
+    "name": {
+      "eng": "Darkstone Periapt",
+      "zhs": "黑石护符"
+    },
+    "description": {
+      "eng": "Whenever you obtain a Curse, increase your Max HP by ",
+      "zhs": "每当你获得一张 诅咒 ，将你的最大生命值提高 "
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "DataDisk",
+    "class": "DataDisk",
+    "name": {
+      "eng": "Data Disk",
+      "zhs": "数据磁盘"
+    },
+    "description": {
+      "eng": "Start each combat with # Focus.",
+      "zhs": "在每场战斗开始时，获得 # 点 集中 。"
+    },
+    "tier": "common",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Dead Branch",
+    "class": "DeadBranch",
+    "name": {
+      "eng": "Dead Branch",
+      "zhs": "枯木树枝"
+    },
+    "description": {
+      "eng": "Whenever you Exhaust a card, add a random card into your hand.",
+      "zhs": "每当你 消耗 一张牌，增加一张随机卡牌到你的手牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "DollysMirror",
+    "class": "DollysMirror",
+    "name": {
+      "eng": "Dolly's Mirror",
+      "zhs": "多利之镜"
+    },
+    "description": {
+      "eng": "Upon pickup, obtain an additional copy of a card in your deck.#Choose 1 Card to Copy.",
+      "zhs": "拾起时，从你的牌组中选择一张牌进行复制。#选择1张牌复制。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Dream Catcher",
+    "class": "DreamCatcher",
+    "name": {
+      "eng": "Dream Catcher",
+      "zhs": "捕梦网"
+    },
+    "description": {
+      "eng": "Whenever you Rest, you may add a card into your deck.",
+      "zhs": "每当你 休息 时，可以增加一张牌到你的牌组。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Du-Vu Doll",
+    "class": "DuVuDoll",
+    "name": {
+      "eng": "Du-Vu Doll",
+      "zhs": "毒巫娃娃"
+    },
+    "description": {
+      "eng": "For each Curse in your deck, start each combat with # Strength.# You have no Curses.# You have # Curses.",
+      "zhs": "你的牌组中每有一张 诅咒 牌，你在战斗开始时就额外获得 # 点 力量 。# 你没有 诅咒 牌。# 你有 # 张 诅咒 牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Ectoplasm",
+    "class": "Ectoplasm",
+    "name": {
+      "eng": "Ectoplasm",
+      "zhs": "灵体外质"
+    },
+    "description": {
+      "eng": " You can no longer gain Gold.#Gain [E] at the start of your turn.",
+      "zhs": " 你不能再获得任何 金币 。#在回合开始时获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Emotion Chip",
+    "class": "EmotionChip",
+    "name": {
+      "eng": "Emotion Chip",
+      "zhs": "情感芯片"
+    },
+    "description": {
+      "eng": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn.",
+      "zhs": "在每回合开始时，如果你在之前回合受到过伤害，则触发所有充能球的被动效果。"
+    },
+    "tier": "rare",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Empty Cage",
+    "class": "EmptyCage",
+    "name": {
+      "eng": "Empty Cage",
+      "zhs": "空鸟笼"
+    },
+    "description": {
+      "eng": "Upon pickup, remove 2 cards from your deck.#Choose 2 Cards to Remove.",
+      "zhs": "拾起时，选择移除牌组中的 2 张牌。#选择2张牌移除。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Enchiridion",
+    "class": "Enchiridion",
+    "name": {
+      "eng": "Enchiridion",
+      "zhs": "英雄宝典"
+    },
+    "description": {
+      "eng": "At the start of each combat, add a random Power card into your hand. It costs 0 for that turn.",
+      "zhs": "每场战斗开始时增加一张随机 能力牌 到你的手牌，这张牌在第一回合的耗能变为 0 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Eternal Feather",
+    "class": "EternalFeather",
+    "name": {
+      "eng": "Eternal Feather",
+      "zhs": "永恒羽毛"
+    },
+    "description": {
+      "eng": "For every # cards in your deck, heal # HP whenever you enter a Rest Site.",
+      "zhs": "你牌组中每有 # 张牌，当你进入休息处时就会回复 # 点生命。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "FaceOfCleric",
+    "class": "FaceOfCleric",
+    "name": {
+      "eng": "Face Of Cleric",
+      "zhs": "牧师的脸"
+    },
+    "description": {
+      "eng": "At the end of combat, raise your Max HP by 1.",
+      "zhs": "每场战斗后你的最大生命值增加 1 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "FossilizedHelix",
+    "class": "FossilizedHelix",
+    "name": {
+      "eng": "Fossilized Helix",
+      "zhs": "螺类化石"
+    },
+    "description": {
+      "eng": "Prevent the first time you would lose HP each combat.",
+      "zhs": "阻止你在每场战斗中第一次受到的生命值损伤。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Frozen Egg 2",
+    "class": "FrozenEgg2",
+    "name": {
+      "eng": "Frozen Egg",
+      "zhs": "冻结之蛋"
+    },
+    "description": {
+      "eng": "Whenever you add a Power card into your deck, Upgrade it.",
+      "zhs": "每当你获得 能力牌 时，将其 升级 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Frozen Eye",
+    "class": "FrozenEye",
+    "name": {
+      "eng": "Frozen Eye",
+      "zhs": "冻结之眼"
+    },
+    "description": {
+      "eng": "When viewing your Draw Pile, the cards are now shown in order.",
+      "zhs": "现在观看 抽牌堆 时，卡牌将按顺序排列。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "FrozenCore",
+    "class": "FrozenCore",
+    "name": {
+      "eng": "Frozen Core",
+      "zhs": "冻结核心"
+    },
+    "description": {
+      "eng": "Replaces Cracked Core. If you end your turn with any empty Orb slots, Channel 1 Frost.",
+      "zhs": "替换 破损核心 。 如果你在你的回合结束时还有空余的充能球栏位， 生成 1 个 冰霜 充能球。"
+    },
+    "tier": "boss",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Fusion Hammer",
+    "class": "FusionHammer",
+    "name": {
+      "eng": "Fusion Hammer",
+      "zhs": "融合之锤"
+    },
+    "description": {
+      "eng": " at the start of your turn. You can no longer Smith at Rest Sites.#Gain [E]",
+      "zhs": "。 你无法再在休息处锻造升级卡牌。#在每回合开始时获得 [E] "
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Gambling Chip",
+    "class": "GamblingChip",
+    "name": {
+      "eng": "Gambling Chip",
+      "zhs": "赌博筹码"
+    },
+    "description": {
+      "eng": "At the start of each combat, discard any number of cards, then draw that many cards.",
+      "zhs": "在每场战斗开始时，丢弃任意张牌，然后抽相同数量张牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Ginger",
+    "class": "Ginger",
+    "name": {
+      "eng": "Ginger",
+      "zhs": "生姜"
+    },
+    "description": {
+      "eng": "You can no longer become Weakened.",
+      "zhs": "你不会再被 虚弱 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Girya",
+    "class": "Girya",
+    "name": {
+      "eng": "Girya",
+      "zhs": "壶铃"
+    },
+    "description": {
+      "eng": "You can now gain Strength at Rest Sites (up to 3 times).",
+      "zhs": "你现在能在休息处获得 力量  。（最多3次）"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Golden Idol",
+    "class": "GoldenIdol",
+    "name": {
+      "eng": "Golden Idol",
+      "zhs": "金神像"
+    },
+    "description": {
+      "eng": "Enemies drop 25% more Gold.",
+      "zhs": "敌人掉落的 金币 增加 25% 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "GoldenEye",
+    "class": "GoldenEye",
+    "name": {
+      "eng": "Golden Eye",
+      "zhs": "黄金眼"
+    },
+    "description": {
+      "eng": "Whenever you Scry, Scry # additional cards.",
+      "zhs": "你每次 预见 时，额外 预见 # 张牌。"
+    },
+    "tier": "rare",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "Gremlin Horn",
+    "class": "GremlinHorn",
+    "name": {
+      "eng": "Gremlin Horn",
+      "zhs": "地精之角"
+    },
+    "description": {
+      "eng": "Whenever an enemy dies, gain #[E] and draw 1 card.",
+      "zhs": "每当有一名敌人死亡，获得 #[E] 并抽 1 张牌。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "GremlinMask",
+    "class": "GremlinMask",
+    "name": {
+      "eng": "Gremlin Visage",
+      "zhs": "地精容貌"
+    },
+    "description": {
+      "eng": "Start each combat with 1 Weak.",
+      "zhs": "在每场战斗开始时，你拥有 1 层 虚弱 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "HandDrill",
+    "class": "HandDrill",
+    "name": {
+      "eng": "Hand Drill",
+      "zhs": "手钻"
+    },
+    "description": {
+      "eng": "Whenever you break an enemy's Block, apply 2 Vulnerable.",
+      "zhs": "每当你突破敌人的 格挡 时，给予其 2 层 易伤 。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Happy Flower",
+    "class": "HappyFlower",
+    "name": {
+      "eng": "Happy Flower",
+      "zhs": "开心小花"
+    },
+    "description": {
+      "eng": "Every # turns, gain [E] .",
+      "zhs": "每 # 个回合，获得 [E] 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "HolyWater",
+    "class": "HolyWater",
+    "name": {
+      "eng": "Holy Water",
+      "zhs": "圣水"
+    },
+    "description": {
+      "eng": "Replaces Pure Water. At the start of each combat, add 3 Miracles into your hand.",
+      "zhs": "在每场战斗开始时，将 3 张 奇迹 放入你的手牌。"
+    },
+    "tier": "boss",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "HornCleat",
+    "class": "HornCleat",
+    "name": {
+      "eng": "Horn Cleat",
+      "zhs": "船夹板"
+    },
+    "description": {
+      "eng": "At the start of your 2nd turn, gain # Block.",
+      "zhs": "在你的第二回合开始时，获得 # 点 格挡 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "HoveringKite",
+    "class": "HoveringKite",
+    "name": {
+      "eng": "Hovering Kite",
+      "zhs": "悬浮风筝"
+    },
+    "description": {
+      "eng": "The first time you discard a card each turn, gain [E] .",
+      "zhs": "你在每回合第一次弃牌时，获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Ice Cream",
+    "class": "IceCream",
+    "name": {
+      "eng": "Ice Cream",
+      "zhs": "冰淇淋"
+    },
+    "description": {
+      "eng": "Energy is now conserved between turns.",
+      "zhs": "多余的能量可以留到下一回合。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Incense Burner",
+    "class": "IncenseBurner",
+    "name": {
+      "eng": "Incense Burner",
+      "zhs": "香炉"
+    },
+    "description": {
+      "eng": "Every 6 turns, gain 1 Intangible.",
+      "zhs": "每 6 回合，获得 1 层 无实体 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "InkBottle",
+    "class": "InkBottle",
+    "name": {
+      "eng": "Ink Bottle",
+      "zhs": "墨水瓶"
+    },
+    "description": {
+      "eng": "Whenever you play 10 cards, draw 1 card.",
+      "zhs": "你每打出 10 张牌，抽 1 张牌。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Inserter",
+    "class": "Inserter",
+    "name": {
+      "eng": "Inserter",
+      "zhs": "机械臂"
+    },
+    "description": {
+      "eng": "Every 2 turns, gain 1 Orb slot.",
+      "zhs": "每 2 回合，获得 1 个充能球栏位。"
+    },
+    "tier": "boss",
+    "pool": "blue",
+    "usesCounter": true
+  },
+  {
+    "id": "Juzu Bracelet",
+    "class": "JuzuBracelet",
+    "name": {
+      "eng": "Juzu Bracelet",
+      "zhs": "佛珠手链"
+    },
+    "description": {
+      "eng": "Normal enemy combats are no longer encountered in ? rooms.",
+      "zhs": "你在 ? 房间中不会再遭遇常规战斗。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Kunai",
+    "class": "Kunai",
+    "name": {
+      "eng": "Kunai",
+      "zhs": "苦无"
+    },
+    "description": {
+      "eng": "Every time you play # Attacks in a single turn, gain # Dexterity.",
+      "zhs": "你每在同一回合内打出 # 张 攻击牌 ，获得 # 点 敏捷 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Lantern",
+    "class": "Lantern",
+    "name": {
+      "eng": "Lantern",
+      "zhs": "灯笼"
+    },
+    "description": {
+      "eng": "Start each combat with an additional #[E] #",
+      "zhs": "在每场战斗的第一回合获得 #[E] #。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Lee's Waffle",
+    "class": "Waffle",
+    "name": {
+      "eng": "Lee's Waffle",
+      "zhs": "李家华夫饼"
+    },
+    "description": {
+      "eng": "Upon pickup, raise your Max HP by # and heal all of your HP.",
+      "zhs": "拾起时，将你的最大生命值提升 # 点，并回复所有生命。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Letter Opener",
+    "class": "LetterOpener",
+    "name": {
+      "eng": "Letter Opener",
+      "zhs": "开信刀"
+    },
+    "description": {
+      "eng": "Every time you play 3 Skills in a single turn, deal # damage to ALL enemies.",
+      "zhs": "你每在同一回合内打出 3 张技能牌，对所有敌人造成 # 点伤害。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Lizard Tail",
+    "class": "LizardTail",
+    "name": {
+      "eng": "Lizard Tail",
+      "zhs": "蜥蜴尾巴"
+    },
+    "description": {
+      "eng": "When you would die, heal to 50% of your Max HP instead (works once).",
+      "zhs": "当你要被杀死时，免死并回复到最大生命值的 50% （仅能起效一次）。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Magic Flower",
+    "class": "MagicFlower",
+    "name": {
+      "eng": "Magic Flower",
+      "zhs": "魔法花"
+    },
+    "description": {
+      "eng": "Healing is 50% more effective during combat.",
+      "zhs": "战斗中的回复效果提升 50% 。"
+    },
+    "tier": "rare",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Mango",
+    "class": "Mango",
+    "name": {
+      "eng": "Mango",
+      "zhs": "芒果"
+    },
+    "description": {
+      "eng": "Upon pickup, raise your Max HP by ",
+      "zhs": "拾起时，将你的最大生命值提升 "
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Mark of Pain",
+    "class": "MarkOfPain",
+    "name": {
+      "eng": "Mark of Pain",
+      "zhs": "痛楚印记"
+    },
+    "description": {
+      "eng": "Gain [R] at the start of your turn. At the start of combat, shuffle 2 Wounds into your draw pile.",
+      "zhs": "每回合开始获得 [R] 。在战斗开始时，将 2 张 伤口 放入你的抽牌堆。"
+    },
+    "tier": "boss",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Mark of the Bloom",
+    "class": "MarkOfTheBloom",
+    "name": {
+      "eng": "Mark of the Bloom",
+      "zhs": "绽放印记"
+    },
+    "description": {
+      "eng": "You can no longer heal.",
+      "zhs": "你无法再回复生命。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Matryoshka",
+    "class": "Matryoshka",
+    "name": {
+      "eng": "Matryoshka",
+      "zhs": "套娃"
+    },
+    "description": {
+      "eng": "The next 2 non-Boss chests you open contain 2 Relics.#The next non-Boss chest you open contains 2 Relics.#This relic has been used up.",
+      "zhs": "你接下来打开的 2 个宝箱内会有 2 件 遗物 。 （Boss宝箱除外）#你接下来打开的 1 个宝箱内会有 2 件 遗物 。 （Boss宝箱除外）#这件遗物的效果已经被用完。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "MawBank",
+    "class": "MawBank",
+    "name": {
+      "eng": "Maw Bank",
+      "zhs": "巨口储蓄罐"
+    },
+    "description": {
+      "eng": "Whenever you climb a floor, gain # Gold. No longer works when you spend any Gold at a shop.#This relic has been used up.",
+      "zhs": "每攀爬一层楼层获得 # 金币 。 一旦在商店中花费 金币 就会失效。#这件遗物已经失效。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "MealTicket",
+    "class": "MealTicket",
+    "name": {
+      "eng": "Meal Ticket",
+      "zhs": "餐券"
+    },
+    "description": {
+      "eng": "Whenever you enter a shop, heal # HP.",
+      "zhs": "每当你进入商店房间时，回复 # 点生命。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Meat on the Bone",
+    "class": "MeatOnTheBone",
+    "name": {
+      "eng": "Meat on the Bone",
+      "zhs": "带骨肉"
+    },
+    "description": {
+      "eng": "If your HP is at or below 50% at the end of combat, heal # HP.",
+      "zhs": "如果你在战斗结束时生命值等于或低于 50% ，回复 # 点生命。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Medical Kit",
+    "class": "MedicalKit",
+    "name": {
+      "eng": "Medical Kit",
+      "zhs": "医药箱"
+    },
+    "description": {
+      "eng": "Unplayable Status cards can now be played. Whenever you play a Status card, Exhaust it.",
+      "zhs": "可以打出原本 不能被打出 的 状态牌 。 打出 状态牌 会将其 消耗 。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Melange",
+    "class": "Melange",
+    "name": {
+      "eng": "Melange",
+      "zhs": "美琅脂"
+    },
+    "description": {
+      "eng": "Whenever you shuffle your draw pile, Scry #.",
+      "zhs": "你每次将抽牌堆洗牌时， 预见 # 。"
+    },
+    "tier": "shop",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "Membership Card",
+    "class": "MembershipCard",
+    "name": {
+      "eng": "Membership Card",
+      "zhs": "会员卡"
+    },
+    "description": {
+      "eng": "50% discount on all products!",
+      "zhs": "所有商品打折 50% ！"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Mercury Hourglass",
+    "class": "MercuryHourglass",
+    "name": {
+      "eng": "Mercury Hourglass",
+      "zhs": "水银沙漏"
+    },
+    "description": {
+      "eng": "At the start of your turn, deal # damage to ALL enemies.",
+      "zhs": "在你的回合开始时，对所有敌人造成 # 点伤害。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Molten Egg 2",
+    "class": "MoltenEgg2",
+    "name": {
+      "eng": "Molten Egg",
+      "zhs": "熔火之蛋"
+    },
+    "description": {
+      "eng": "Whenever you add an Attack into your deck, Upgrade it.",
+      "zhs": "每当你获得 攻击牌 时，将其 升级 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Mummified Hand",
+    "class": "MummifiedHand",
+    "name": {
+      "eng": "Mummified Hand",
+      "zhs": "干瘪之手"
+    },
+    "description": {
+      "eng": "Whenever you play a Power card, a random card in your hand costs 0 that turn.",
+      "zhs": "你每打出一张 能力牌 ，手牌中就有一张随机牌在这个回合耗能变为 0 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "MutagenicStrength",
+    "class": "MutagenicStrength",
+    "name": {
+      "eng": "Mutagenic Strength",
+      "zhs": "突变之力"
+    },
+    "description": {
+      "eng": "Start each combat with # Strength. At the end of your first turn, lose # Strength.",
+      "zhs": "在每场战斗开始时获得 # 点 力量 ，在你的第一个回合结束时失去 # 点 力量。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Necronomicon",
+    "class": "Necronomicon",
+    "name": {
+      "eng": "Necronomicon",
+      "zhs": "死灵之书"
+    },
+    "description": {
+      "eng": "The first Attack played each turn that costs # or more is played twice. Upon pickup, obtain a special Curse.# or more is played twice.",
+      "zhs": "你每回合打出的第一张耗能大于等于 # 的  攻击牌 将被打出两次。当你拾起这件遗物时，被 诅咒 。# 的  攻击牌 将被打出两次。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "NeowsBlessing",
+    "class": "NeowsLament",
+    "name": {
+      "eng": "Neow's Lament",
+      "zhs": "涅奥的悲恸"
+    },
+    "description": {
+      "eng": "Enemies in your first 3 combats will have 1 HP.#This relic has been used up.",
+      "zhs": "接下来 3 场战斗中的敌人将只有 1 点生命。#这个祝福已经耗尽。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Nilry's Codex",
+    "class": "NilrysCodex",
+    "name": {
+      "eng": "Nilry's Codex",
+      "zhs": "尼利的宝典"
+    },
+    "description": {
+      "eng": "At the end of your turn, you may shuffle 1 of 3 random cards into your draw pile.",
+      "zhs": "在每回合结束时，你可以从 3 张随机牌中选择 1 张，随机洗入你的抽牌堆。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Ninja Scroll",
+    "class": "NinjaScroll",
+    "name": {
+      "eng": "Ninja Scroll",
+      "zhs": "忍术卷轴"
+    },
+    "description": {
+      "eng": "At the start of each combat, add # Shivs into your hand.",
+      "zhs": "每场战斗开始时，手牌中增加 # 张 小刀 。"
+    },
+    "tier": "uncommon",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Nloth's Gift",
+    "class": "NlothsGift",
+    "name": {
+      "eng": "N'loth's Gift",
+      "zhs": "恩洛斯的礼物"
+    },
+    "description": {
+      "eng": "Triple the chance of finding Rare cards from combat rewards.",
+      "zhs": "使你在怪物奖励中遇见稀有牌的几率变为 三倍 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "NlothsMask",
+    "class": "NlothsMask",
+    "name": {
+      "eng": "N'loth's Hungry Face",
+      "zhs": "恩洛斯的饥饿的脸"
+    },
+    "description": {
+      "eng": "The next non-Boss chest you open is empty.#",
+      "zhs": "你打开的下一个非Boss宝箱将是空的。#"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Nuclear Battery",
+    "class": "NuclearBattery",
+    "name": {
+      "eng": "Nuclear Battery",
+      "zhs": "核能电池"
+    },
+    "description": {
+      "eng": "At the start of each combat, Channel 1 Plasma.",
+      "zhs": "在每场战斗开始时， 生成 1 个 等离子 充能球。"
+    },
+    "tier": "boss",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Nunchaku",
+    "class": "Nunchaku",
+    "name": {
+      "eng": "Nunchaku",
+      "zhs": "双节棍"
+    },
+    "description": {
+      "eng": "Every time you play # Attacks, gain [E] .",
+      "zhs": "你每打出 # 张 攻击牌 ，获得 [E] 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Odd Mushroom",
+    "class": "OddMushroom",
+    "name": {
+      "eng": "Odd Mushroom",
+      "zhs": "奇怪蘑菇"
+    },
+    "description": {
+      "eng": "When Vulnerable, take 25% more attack damage rather than 50%.",
+      "zhs": "当你有 易伤 状态时，受到的额外伤害从 50% 下降为 25% 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Oddly Smooth Stone",
+    "class": "OddlySmoothStone",
+    "name": {
+      "eng": "Oddly Smooth Stone",
+      "zhs": "意外光滑的石头"
+    },
+    "description": {
+      "eng": "Start each combat with # Dexterity.",
+      "zhs": "在每场战斗开始时，获得 # 点 敏捷 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Old Coin",
+    "class": "OldCoin",
+    "name": {
+      "eng": "Old Coin",
+      "zhs": "古钱币"
+    },
+    "description": {
+      "eng": "Upon pickup, gain 300 Gold.",
+      "zhs": "拾起时，获得 300 金币 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Omamori",
+    "class": "Omamori",
+    "name": {
+      "eng": "Omamori",
+      "zhs": "御守"
+    },
+    "description": {
+      "eng": "Negate the next 2 Curses you obtain.#Negate the next Curse you obtain.#This relic has been used up.",
+      "zhs": "抵消你下 2 次获得的 诅咒 。#抵消你下一次获得的 诅咒 。#这件遗物已经耗尽。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "OrangePellets",
+    "class": "OrangePellets",
+    "name": {
+      "eng": "Orange Pellets",
+      "zhs": "橙色药丸"
+    },
+    "description": {
+      "eng": "Whenever you play a Power, Attack, and Skill in the same turn, remove all of your debuffs.",
+      "zhs": "你每在同一回合内打出 能力牌 、 攻击牌 和 技能牌 各一张，移除你身上的所有负面效果。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Orichalcum",
+    "class": "Orichalcum",
+    "name": {
+      "eng": "Orichalcum",
+      "zhs": "奥利哈钢"
+    },
+    "description": {
+      "eng": "If you end your turn without Block, gain # Block.",
+      "zhs": "如果你在回合结束时没有任何 格挡 ，获得 # 点 格挡 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Ornamental Fan",
+    "class": "OrnamentalFan",
+    "name": {
+      "eng": "Ornamental Fan",
+      "zhs": "精致折扇"
+    },
+    "description": {
+      "eng": "Every time you play 3 Attacks in a single turn, gain # Block.",
+      "zhs": "你每在同一回合内打出 3 张 攻击牌 ，就获得 # 点 格挡 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Orrery",
+    "class": "Orrery",
+    "name": {
+      "eng": "Orrery",
+      "zhs": "星系仪"
+    },
+    "description": {
+      "eng": "Upon pickup, choose and add 5 cards to your deck.#Knowledge!",
+      "zhs": "选择 5 张牌加入你的牌组。#知识！"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Pandora's Box",
+    "class": "PandorasBox",
+    "name": {
+      "eng": "Pandora's Box",
+      "zhs": "潘多拉的魔盒"
+    },
+    "description": {
+      "eng": "Upon pickup, Transform all Strike and Defend cards.#Pandora's Box has been opened...",
+      "zhs": "变化 所有“打击”和“防御”牌。#潘多拉的魔盒已经打开了……"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Pantograph",
+    "class": "Pantograph",
+    "name": {
+      "eng": "Pantograph",
+      "zhs": "缩放仪"
+    },
+    "description": {
+      "eng": "At the start of Boss combats, heal # HP.",
+      "zhs": "在Boss战开始时，回复 # 点生命。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Paper Crane",
+    "class": "PaperCrane",
+    "name": {
+      "eng": "Paper Krane",
+      "zhs": "纸鹤"
+    },
+    "description": {
+      "eng": "Enemies with Weak deal 40% less damage rather than 25%.",
+      "zhs": "有 虚弱 状态的敌人造成的伤害降低 40% 而非 25% 。"
+    },
+    "tier": "uncommon",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Paper Frog",
+    "class": "PaperFrog",
+    "name": {
+      "eng": "Paper Phrog",
+      "zhs": "纸蛙"
+    },
+    "description": {
+      "eng": "Enemies with Vulnerable take 75% more damage rather than 50%.",
+      "zhs": "有 易伤 状态的敌人受到的伤害增加 75% 而非 50%。"
+    },
+    "tier": "uncommon",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Peace Pipe",
+    "class": "PeacePipe",
+    "name": {
+      "eng": "Peace Pipe",
+      "zhs": "宁静烟斗"
+    },
+    "description": {
+      "eng": "You can now remove cards from your deck at Rest Sites.",
+      "zhs": "现在你可以在休息处移除你牌组中的牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Pear",
+    "class": "Pear",
+    "name": {
+      "eng": "Pear",
+      "zhs": "梨子"
+    },
+    "description": {
+      "eng": "Upon pickup, raise your Max HP by ",
+      "zhs": "拾起时，将你的最大生命值提升 "
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Pen Nib",
+    "class": "PenNib",
+    "name": {
+      "eng": "Pen Nib",
+      "zhs": "钢笔尖"
+    },
+    "description": {
+      "eng": "Every 10th Attack you play deals double damage.",
+      "zhs": "你每打出的第 10 张 攻击牌 将会造成双倍伤害。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Philosopher's Stone",
+    "class": "PhilosopherStone",
+    "name": {
+      "eng": "Philosopher's Stone",
+      "zhs": "贤者之石"
+    },
+    "description": {
+      "eng": "Gain [E] at the start of your turn. ALL enemies start combat with # Strength.",
+      "zhs": "在每回合开始时获得 [E] 。 所有敌人初始获得 #点 力量 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Pocketwatch",
+    "class": "Pocketwatch",
+    "name": {
+      "eng": "Pocketwatch",
+      "zhs": "怀表"
+    },
+    "description": {
+      "eng": "Whenever you play 3 or less cards during your turn, draw 3 additional cards at the start of your next turn.",
+      "zhs": "若你在某个回合打出的牌少于等于 3 张，则在你的下个回合开始时额外抽 3 张牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Potion Belt",
+    "class": "PotionBelt",
+    "name": {
+      "eng": "Potion Belt",
+      "zhs": "药水腰带"
+    },
+    "description": {
+      "eng": "Upon pickup, gain 2 Potion slots.",
+      "zhs": "拾起时，获得 2 个药水栏位。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Prayer Wheel",
+    "class": "PrayerWheel",
+    "name": {
+      "eng": "Prayer Wheel",
+      "zhs": "转经轮"
+    },
+    "description": {
+      "eng": "Normal enemies drop an additional card reward.",
+      "zhs": "普通敌人多掉落一次卡牌奖励。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "PreservedInsect",
+    "class": "PreservedInsect",
+    "name": {
+      "eng": "Preserved Insect",
+      "zhs": "昆虫标本"
+    },
+    "description": {
+      "eng": "Enemies in Elite combats have #% less HP.",
+      "zhs": "精英战中的敌人生命减少 #% 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "PrismaticShard",
+    "class": "PrismaticShard",
+    "name": {
+      "eng": "Prismatic Shard",
+      "zhs": "棱镜碎片"
+    },
+    "description": {
+      "eng": "Combat reward screens now contain Colorless cards and cards from other colors.",
+      "zhs": "战斗奖励掉落的卡牌现在会包括无色牌和其他颜色的牌。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "PureWater",
+    "class": "PureWater",
+    "name": {
+      "eng": "Pure Water",
+      "zhs": "至纯之水"
+    },
+    "description": {
+      "eng": "At the start of each combat, add a Miracle into your hand.",
+      "zhs": "在每场战斗开始时，将一张 奇迹 放入你的手牌。"
+    },
+    "tier": "starter",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "Question Card",
+    "class": "QuestionCard",
+    "name": {
+      "eng": "Question Card",
+      "zhs": "问号牌"
+    },
+    "description": {
+      "eng": "Future card rewards have 1 additional card to choose from.",
+      "zhs": "在选奖励牌时，可供选择的牌数增加 1 张。（拾起时同一窗口中的奖励牌不受影响）"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Red Circlet",
+    "class": "RedCirclet",
+    "name": {
+      "eng": "Red Circlet",
+      "zhs": "红头环"
+    },
+    "description": {
+      "eng": "Looks very pretty.",
+      "zhs": "看起来非常漂亮。"
+    },
+    "tier": "special",
+    "pool": "none",
+    "usesCounter": false
+  },
+  {
+    "id": "Red Mask",
+    "class": "RedMask",
+    "name": {
+      "eng": "Red Mask",
+      "zhs": "红面具"
+    },
+    "description": {
+      "eng": "At the start of each combat, apply # Weak to ALL enemies.",
+      "zhs": "在每场战斗开始时，给予所有敌人 # 层 虚弱 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Red Skull",
+    "class": "RedSkull",
+    "name": {
+      "eng": "Red Skull",
+      "zhs": "红头骨"
+    },
+    "description": {
+      "eng": "While your HP is at or below 50%, you have # additional Strength.",
+      "zhs": "当你的生命值等于或低于 50% 时， 你获得额外 # 点 力量 。"
+    },
+    "tier": "common",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Regal Pillow",
+    "class": "RegalPillow",
+    "name": {
+      "eng": "Regal Pillow",
+      "zhs": "皇家枕头"
+    },
+    "description": {
+      "eng": "Whenever you Rest, heal an additional # HP.",
+      "zhs": "在 休息 时额外回复 # 点生命。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Ring of the Serpent",
+    "class": "RingOfTheSerpent",
+    "name": {
+      "eng": "Ring of the Serpent",
+      "zhs": "长蛇戒指"
+    },
+    "description": {
+      "eng": "Replaces Ring of the Snake. #At the start of your turn, draw 1 additional card.",
+      "zhs": "替换 蛇之戒指 。#在你的每个回合开始时，额外抽 1 张牌。"
+    },
+    "tier": "boss",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Ring of the Snake",
+    "class": "SnakeRing",
+    "name": {
+      "eng": "Ring of the Snake",
+      "zhs": "蛇之戒指"
+    },
+    "description": {
+      "eng": "At the start of each combat, draw # additional cards.",
+      "zhs": "在每场战斗开始时，额外抽 # 张牌。"
+    },
+    "tier": "starter",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Runic Capacitor",
+    "class": "RunicCapacitor",
+    "name": {
+      "eng": "Runic Capacitor",
+      "zhs": "符文电容器"
+    },
+    "description": {
+      "eng": "Start each combat with 3 additional Orb slots.",
+      "zhs": "每场战斗开始时，获得 3 个额外充能球栏位。"
+    },
+    "tier": "shop",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "Runic Cube",
+    "class": "RunicCube",
+    "name": {
+      "eng": "Runic Cube",
+      "zhs": "符文立方体"
+    },
+    "description": {
+      "eng": "Whenever you lose HP, draw # card.#",
+      "zhs": "每当你失去生命时，抽 # 张牌。#"
+    },
+    "tier": "boss",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Runic Dome",
+    "class": "RunicDome",
+    "name": {
+      "eng": "Runic Dome",
+      "zhs": "符文圆顶"
+    },
+    "description": {
+      "eng": " at the start of your turn. You can no longer see enemy intents.#Gain [E]",
+      "zhs": "。你无法再看见敌人的 意图 。#在每回合开始时获得 [E] "
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Runic Pyramid",
+    "class": "RunicPyramid",
+    "name": {
+      "eng": "Runic Pyramid",
+      "zhs": "符文金字塔"
+    },
+    "description": {
+      "eng": "At the end of your turn, you no longer discard your hand.#",
+      "zhs": "你在回合结束时不再自动丢弃所有手牌。#"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "SacredBark",
+    "class": "SacredBark",
+    "name": {
+      "eng": "Sacred Bark",
+      "zhs": "神圣树皮"
+    },
+    "description": {
+      "eng": "Double the effectiveness of potions.",
+      "zhs": "药水的效果翻倍。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Self Forming Clay",
+    "class": "SelfFormingClay",
+    "name": {
+      "eng": "Self-Forming Clay",
+      "zhs": "自成型黏土"
+    },
+    "description": {
+      "eng": "Whenever you lose HP, gain # Block next turn.",
+      "zhs": "每当你在战斗中失去生命，就在下回合获得 # 点 格挡 。"
+    },
+    "tier": "uncommon",
+    "pool": "red",
+    "usesCounter": false
+  },
+  {
+    "id": "Shovel",
+    "class": "Shovel",
+    "name": {
+      "eng": "Shovel",
+      "zhs": "铲子"
+    },
+    "description": {
+      "eng": "You can now Dig for relics at Rest Sites.",
+      "zhs": "现在你可以在休息处 挖掘 遗物。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Shuriken",
+    "class": "Shuriken",
+    "name": {
+      "eng": "Shuriken",
+      "zhs": "手里剑"
+    },
+    "description": {
+      "eng": "Every time you play # Attacks in a single turn, gain # Strength.",
+      "zhs": "你每在同一回合内打出 # 张 攻击牌 ，获得 # 点 力量 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Singing Bowl",
+    "class": "SingingBowl",
+    "name": {
+      "eng": "Singing Bowl",
+      "zhs": "颂钵"
+    },
+    "description": {
+      "eng": "When adding cards into your deck, you may raise your Max HP by 2 instead.",
+      "zhs": "可以将卡牌奖励转变为 +2 最大生命值。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "SlaversCollar",
+    "class": "SlaversCollar",
+    "name": {
+      "eng": "Slaver's Collar",
+      "zhs": "奴隶贩子颈环"
+    },
+    "description": {
+      "eng": "During Boss and Elite combats, gain [E] at the start of your turn.",
+      "zhs": "在Boss战与精英战中，你在每回合开始时获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Sling",
+    "class": "Sling",
+    "name": {
+      "eng": "Sling of Courage",
+      "zhs": "勇气投石索"
+    },
+    "description": {
+      "eng": "Start each Elite combat with # Strength.",
+      "zhs": "在与精英敌人战斗时，获得 # 点 力量 。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Smiling Mask",
+    "class": "SmilingMask",
+    "name": {
+      "eng": "Smiling Mask",
+      "zhs": "微笑面具"
+    },
+    "description": {
+      "eng": "The Merchant's card removal service now always costs # Gold.",
+      "zhs": "商人的卡牌移除服务现在价格永远是 #  金币 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Snake Skull",
+    "class": "SneckoSkull",
+    "name": {
+      "eng": "Snecko Skull",
+      "zhs": "异蛇头骨"
+    },
+    "description": {
+      "eng": "Whenever you apply Poison, apply an additional # Poison.",
+      "zhs": "每当你给予敌人 中毒 状态时，额外给予 # 层 中毒 。"
+    },
+    "tier": "common",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Snecko Eye",
+    "class": "SneckoEye",
+    "name": {
+      "eng": "Snecko Eye",
+      "zhs": "异蛇之眼"
+    },
+    "description": {
+      "eng": "At the start of your turn, draw 2 additional cards. Start each combat Confused.",
+      "zhs": "每回合多抽 2 张牌。每场战斗开始时获得 混乱 效果。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Sozu",
+    "class": "Sozu",
+    "name": {
+      "eng": "Sozu",
+      "zhs": "添水"
+    },
+    "description": {
+      "eng": " at the start of your turn. You can no longer obtain potions.#Gain [E]",
+      "zhs": " 你无法再获得药水。 #在每回合开始时获得 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Spirit Poop",
+    "class": "SpiritPoop",
+    "name": {
+      "eng": "Spirit Poop",
+      "zhs": "精灵便便"
+    },
+    "description": {
+      "eng": "It's unpleasant.",
+      "zhs": "不管怎么看都很不舒服。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "SsserpentHead",
+    "class": "SsserpentHead",
+    "name": {
+      "eng": "Ssserpent Head",
+      "zhs": "蛇的头"
+    },
+    "description": {
+      "eng": "Whenever you enter a ? room, gain # Gold.",
+      "zhs": "每次进入？房间时获得 # 金币 。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "StoneCalendar",
+    "class": "StoneCalendar",
+    "name": {
+      "eng": "Stone Calendar",
+      "zhs": "历石"
+    },
+    "description": {
+      "eng": "At the end of turn #, deal # damage to ALL enemies.",
+      "zhs": "在第 # 回合结束时，对所有敌人造成 # 点伤害。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Strange Spoon",
+    "class": "StrangeSpoon",
+    "name": {
+      "eng": "Strange Spoon",
+      "zhs": "奇怪的勺子"
+    },
+    "description": {
+      "eng": "Cards which Exhaust when played will instead discard 50% of the time.",
+      "zhs": "应该 消耗 的牌在被打出时会有 50% 几率只被丢弃。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Strawberry",
+    "class": "Strawberry",
+    "name": {
+      "eng": "Strawberry",
+      "zhs": "草莓"
+    },
+    "description": {
+      "eng": "Upon pickup, raise your Max HP by ",
+      "zhs": "拾起时，将你的最大生命值提升 "
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "StrikeDummy",
+    "class": "StrikeDummy",
+    "name": {
+      "eng": "Strike Dummy",
+      "zhs": "打击木偶"
+    },
+    "description": {
+      "eng": "Cards containing \"Strike\" deal # additional damage.",
+      "zhs": "名字中有“打击”的卡牌造成 # 点额外伤害。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Sundial",
+    "class": "Sundial",
+    "name": {
+      "eng": "Sundial",
+      "zhs": "日晷"
+    },
+    "description": {
+      "eng": "Every # times you shuffle your draw pile, gain [E] [E] .",
+      "zhs": "你每洗牌 # 次，获得 [E] [E] 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Symbiotic Virus",
+    "class": "SymbioticVirus",
+    "name": {
+      "eng": "Symbiotic Virus",
+      "zhs": "共生病毒"
+    },
+    "description": {
+      "eng": "At the start of each combat, Channel 1 Dark.",
+      "zhs": "在每场战斗开始时， 生成 1 个 黑暗 充能球。"
+    },
+    "tier": "uncommon",
+    "pool": "blue",
+    "usesCounter": false
+  },
+  {
+    "id": "TeardropLocket",
+    "class": "TeardropLocket",
+    "name": {
+      "eng": "Teardrop Locket",
+      "zhs": "泪滴吊坠盒"
+    },
+    "description": {
+      "eng": "Start each combat in Calm.",
+      "zhs": "每场战斗开始时处于 平静 。"
+    },
+    "tier": "uncommon",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "The Courier",
+    "class": "Courier",
+    "name": {
+      "eng": "The Courier",
+      "zhs": "送货员"
+    },
+    "description": {
+      "eng": "The Merchant restocks cards, relics, and potions. All prices are reduced by 20%.",
+      "zhs": "商人的卡牌、遗物和药水不再会卖光，并且所有商品打折 20% 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "The Specimen",
+    "class": "TheSpecimen",
+    "name": {
+      "eng": "The Specimen",
+      "zhs": "生物样本"
+    },
+    "description": {
+      "eng": "Whenever an enemy dies, transfer any Poison it has to a random enemy.",
+      "zhs": "每当有敌人死去时，将其身上的 中毒 层数移到一名随机敌人身上。"
+    },
+    "tier": "rare",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "TheAbacus",
+    "class": "Abacus",
+    "name": {
+      "eng": "The Abacus",
+      "zhs": "算盘"
+    },
+    "description": {
+      "eng": "Whenever you shuffle your draw pile, gain # Block.",
+      "zhs": "你每次将抽牌堆洗牌时，获得 # 点 格挡 。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Thread and Needle",
+    "class": "ThreadAndNeedle",
+    "name": {
+      "eng": "Thread and Needle",
+      "zhs": "针线"
+    },
+    "description": {
+      "eng": "Start each combat with # Plated Armor.",
+      "zhs": "在每场战斗开始时，获得 # 层 多层护甲 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Tingsha",
+    "class": "Tingsha",
+    "name": {
+      "eng": "Tingsha",
+      "zhs": "铜钹"
+    },
+    "description": {
+      "eng": "Whenever you discard a card during your turn, deal # damage to a random enemy.",
+      "zhs": "你每在你的回合丢弃一张牌，就对一名随机敌人造成 # 点伤害。"
+    },
+    "tier": "rare",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Tiny Chest",
+    "class": "TinyChest",
+    "name": {
+      "eng": "Tiny Chest",
+      "zhs": "小宝箱"
+    },
+    "description": {
+      "eng": "Every #th ? room is a Treasure room.#",
+      "zhs": "每 # 个 ？ 房间的最后一个必是 宝箱房 。#"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "Tiny House",
+    "class": "TinyHouse",
+    "name": {
+      "eng": "Tiny House",
+      "zhs": "小屋子"
+    },
+    "description": {
+      "eng": "Upon pickup, obtain 1 potion.\nGain # Gold.\nRaise your Max HP by #.\nObtain 1 card.\nUpgrade 1 random card.#Tiny House!",
+      "zhs": "拾起时，获得 1 瓶药水。\n获得 #  金币 。\n将你的最大生命值提升 # 。\n获得 1 张牌。\n随机升级 1 张牌。#小小的屋子！"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Toolbox",
+    "class": "Toolbox",
+    "name": {
+      "eng": "Toolbox",
+      "zhs": "工具箱"
+    },
+    "description": {
+      "eng": "At the start of each combat, choose 1 of 3 random Colorless cards and add the chosen card into your hand.",
+      "zhs": "在每场战斗开始时，你可以从 3 张随机无色牌中选择 1 张增加到你的手牌。"
+    },
+    "tier": "shop",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Torii",
+    "class": "Torii",
+    "name": {
+      "eng": "Torii",
+      "zhs": "鸟居"
+    },
+    "description": {
+      "eng": "Whenever you would receive # or less unblocked attack damage, reduce it to 1.",
+      "zhs": "每当你受到小于等于 # 点的未被格挡 攻击 伤害时，将伤害降低为 1。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Tough Bandages",
+    "class": "ToughBandages",
+    "name": {
+      "eng": "Tough Bandages",
+      "zhs": "结实绷带"
+    },
+    "description": {
+      "eng": "Whenever you discard a card during your turn, gain # Block.",
+      "zhs": "你每在你的回合丢弃一张牌，就获得 # 点 格挡 。"
+    },
+    "tier": "rare",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Toxic Egg 2",
+    "class": "ToxicEgg2",
+    "name": {
+      "eng": "Toxic Egg",
+      "zhs": "毒素之蛋"
+    },
+    "description": {
+      "eng": "Whenever you add a Skill into your deck, Upgrade it.",
+      "zhs": "每当你获得 技能牌 时，将其 升级 。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Toy Ornithopter",
+    "class": "ToyOrnithopter",
+    "name": {
+      "eng": "Toy Ornithopter",
+      "zhs": "玩具扑翼飞机"
+    },
+    "description": {
+      "eng": "Whenever you use a potion, heal # HP.",
+      "zhs": "你每使用一瓶药水，回复 # 点生命。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "TungstenRod",
+    "class": "TungstenRod",
+    "name": {
+      "eng": "Tungsten Rod",
+      "zhs": "钨合金棍"
+    },
+    "description": {
+      "eng": "Whenever you would lose HP, lose # less.",
+      "zhs": "你每次失去生命时，减少失去的生命值 # 点。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Turnip",
+    "class": "Turnip",
+    "name": {
+      "eng": "Turnip",
+      "zhs": "萝卜"
+    },
+    "description": {
+      "eng": "You can no longer become Frail.",
+      "zhs": "你不会再被 脆弱 。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "TwistedFunnel",
+    "class": "TwistedFunnel",
+    "name": {
+      "eng": "Twisted Funnel",
+      "zhs": "扭曲漏斗"
+    },
+    "description": {
+      "eng": "At the start of each combat, apply 4 Poison to ALL enemies.",
+      "zhs": "在每场战斗开始时，给予所有敌人 4 层 中毒 。"
+    },
+    "tier": "shop",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Unceasing Top",
+    "class": "UnceasingTop",
+    "name": {
+      "eng": "Unceasing Top",
+      "zhs": "不休陀螺"
+    },
+    "description": {
+      "eng": "Whenever you have no cards in hand during your turn, draw a card.",
+      "zhs": "在你的回合，当你没有手牌时，抽一张牌。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Vajra",
+    "class": "Vajra",
+    "name": {
+      "eng": "Vajra",
+      "zhs": "金刚杵"
+    },
+    "description": {
+      "eng": "Start each combat with # Strength.",
+      "zhs": "在每场战斗开始时，获得 # 点 力量 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Velvet Choker",
+    "class": "VelvetChoker",
+    "name": {
+      "eng": "Velvet Choker",
+      "zhs": "天鹅绒颈圈"
+    },
+    "description": {
+      "eng": " at the start of your turn. You cannot play more than # cards per turn.#Gain [E]#I can only play up to\n",
+      "zhs": "你每回合不能打出超过 # 张牌。#在每回合开始时获得 [E] 。#我只能打出最多\n"
+    },
+    "tier": "boss",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "VioletLotus",
+    "class": "VioletLotus",
+    "name": {
+      "eng": "Violet Lotus",
+      "zhs": "紫色莲花"
+    },
+    "description": {
+      "eng": "Whenever you exit Calm, gain an additional [E] .",
+      "zhs": "每次你离开 平静 时，获得一点额外 [E] 。"
+    },
+    "tier": "boss",
+    "pool": "purple",
+    "usesCounter": false
+  },
+  {
+    "id": "War Paint",
+    "class": "WarPaint",
+    "name": {
+      "eng": "War Paint",
+      "zhs": "战纹涂料"
+    },
+    "description": {
+      "eng": "Upon pickup, Upgrade # random Skills.",
+      "zhs": "拾起时，随机 升级 # 张 技能牌 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "WarpedTongs",
+    "class": "WarpedTongs",
+    "name": {
+      "eng": "Warped Tongs",
+      "zhs": "弯曲铁钳"
+    },
+    "description": {
+      "eng": "At the start of your turn, Upgrade a random card in your hand for the rest of combat.",
+      "zhs": "在你的每个回合开始时，随机 升级 一张你的手牌（只影响本场战斗）。"
+    },
+    "tier": "special",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "Whetstone",
+    "class": "Whetstone",
+    "name": {
+      "eng": "Whetstone",
+      "zhs": "磨刀石"
+    },
+    "description": {
+      "eng": "Upon pickup, Upgrade # random Attacks.",
+      "zhs": "拾起时，随机 升级 # 张 攻击牌 。"
+    },
+    "tier": "common",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "White Beast Statue",
+    "class": "WhiteBeast",
+    "name": {
+      "eng": "White Beast Statue",
+      "zhs": "白兽雕像"
+    },
+    "description": {
+      "eng": "Potions always appear in combat rewards.",
+      "zhs": "战斗结束后必定掉落药水。"
+    },
+    "tier": "uncommon",
+    "pool": "shared",
+    "usesCounter": false
+  },
+  {
+    "id": "WingedGreaves",
+    "class": "WingBoots",
+    "name": {
+      "eng": "Wing Boots",
+      "zhs": "羽翼之靴"
+    },
+    "description": {
+      "eng": "You may ignore paths when choosing the next room to travel to 3 times.",
+      "zhs": "你在选择下一层的房间时有3次机会可以无视当前的路线。"
+    },
+    "tier": "rare",
+    "pool": "shared",
+    "usesCounter": true
+  },
+  {
+    "id": "WristBlade",
+    "class": "WristBlade",
+    "name": {
+      "eng": "Wrist Blade",
+      "zhs": "袖剑"
+    },
+    "description": {
+      "eng": "Attacks that cost 0 deal 4 additional damage.",
+      "zhs": "费用为0的 攻击牌 额外造成 4 点伤害。"
+    },
+    "tier": "boss",
+    "pool": "green",
+    "usesCounter": false
+  },
+  {
+    "id": "Yang",
+    "class": "Duality",
+    "name": {
+      "eng": "Duality",
+      "zhs": "两仪"
+    },
+    "description": {
+      "eng": "Whenever you play an Attack, gain 1 temporary Dexterity.",
+      "zhs": "每回合中，你每次打出一张 攻击牌 ，获得 1 点临时 敏捷 。"
+    },
+    "tier": "uncommon",
+    "pool": "purple",
+    "usesCounter": false
   }
 ]

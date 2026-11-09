@@ -1,0 +1,352 @@
+[
+  {
+    "id": "AscendersBane",
+    "class": "curses/AscendersBane",
+    "name": {
+      "eng": "Ascender's Bane",
+      "zhs": "进阶之灾"
+    },
+    "description": {
+      "eng": "Unplayable. NL Ethereal. NL Cannot be removed from your deck.",
+      "zhs": "不能被打出 。 NL 虚无 。 NL 不能从牌组中移除。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "special",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": true,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Clumsy",
+    "class": "curses/Clumsy",
+    "name": {
+      "eng": "Clumsy",
+      "zhs": "笨拙"
+    },
+    "description": {
+      "eng": "Unplayable. NL Ethereal.",
+      "zhs": " 不能被打出 。 NL 虚无 。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": true,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "CurseOfTheBell",
+    "class": "curses/CurseOfTheBell",
+    "name": {
+      "eng": "Curse of the Bell",
+      "zhs": "铃铛的诅咒"
+    },
+    "description": {
+      "eng": "Unplayable. NL Cannot be removed from your deck.",
+      "zhs": " 不能被打出 。 NL 不能从牌组中移除。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "special",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Decay",
+    "class": "curses/Decay",
+    "name": {
+      "eng": "Decay",
+      "zhs": "腐朽"
+    },
+    "description": {
+      "eng": "Unplayable. NL At the end of your turn, take 2 damage.",
+      "zhs": " 不能被打出 。 NL 在你的回合结束时，受到2点伤害。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Doubt",
+    "class": "curses/Doubt",
+    "name": {
+      "eng": "Doubt",
+      "zhs": "疑虑"
+    },
+    "description": {
+      "eng": "Unplayable. NL At the end of your turn, gain 1 Weak.",
+      "zhs": " 不能被打出 。 NL 在你的回合结束时，获得1层 虚弱 。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Injury",
+    "class": "curses/Injury",
+    "name": {
+      "eng": "Injury",
+      "zhs": "受伤"
+    },
+    "description": {
+      "eng": "Unplayable.",
+      "zhs": " 不能被打出 。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Necronomicurse",
+    "class": "curses/Necronomicurse",
+    "name": {
+      "eng": "Necronomicurse",
+      "zhs": "死灵诅咒"
+    },
+    "description": {
+      "eng": "Unplayable. NL There is no escape from this Curse.",
+      "zhs": " 不能被打出 。 NL 这个 诅咒 无法逃脱。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "special",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Normality",
+    "class": "curses/Normality",
+    "name": {
+      "eng": "Normality",
+      "zhs": "凡庸"
+    },
+    "description": {
+      "eng": "Unplayable. NL While in hand, you cannot play more than 3 cards this turn.",
+      "zhs": " 不能被打出 。 NL 在手牌中时，你在此回合无法打出3张以上牌。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Pain",
+    "class": "curses/Pain",
+    "name": {
+      "eng": "Pain",
+      "zhs": "疼痛"
+    },
+    "description": {
+      "eng": "Unplayable. NL While in hand, NL lose 1 HP whenever you play another card.",
+      "zhs": " 不能被打出 。 NL 当在手牌中时，每打出一张其他牌，失去1生命。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Parasite",
+    "class": "curses/Parasite",
+    "name": {
+      "eng": "Parasite",
+      "zhs": "寄生"
+    },
+    "description": {
+      "eng": "Unplayable. NL If transformed or removed from your deck, lose 3 Max HP.",
+      "zhs": " 不能被打出 。 NL 如果这张牌在你的牌组中被转化或移除，你失去3点最大生命。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Pride",
+    "class": "curses/Pride",
+    "name": {
+      "eng": "Pride",
+      "zhs": "傲慢"
+    },
+    "description": {
+      "eng": "Innate. NL At the end of your turn, put a copy of this card on top of your draw pile. Exhaust.",
+      "zhs": "固有 。 消耗 。 NL 你的回合结束时，在抽牌堆顶部加入一张这张牌的复制品。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "special",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": true,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Regret",
+    "class": "curses/Regret",
+    "name": {
+      "eng": "Regret",
+      "zhs": "悔恨"
+    },
+    "description": {
+      "eng": "Unplayable. NL At the end of your turn, lose HP equal to the number of cards in your hand.",
+      "zhs": " 不能被打出 。 NL 在你的回合结束时，失去相当于手牌数量的生命。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Shame",
+    "class": "curses/Shame",
+    "name": {
+      "eng": "Shame",
+      "zhs": "羞耻"
+    },
+    "description": {
+      "eng": "Unplayable. NL At the end of your turn, gain 1 Frail.",
+      "zhs": "不能被打出 。 NL 在你的回合结束时，获得1层 脆弱 。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Writhe",
+    "class": "curses/Writhe",
+    "name": {
+      "eng": "Writhe",
+      "zhs": "苦恼"
+    },
+    "description": {
+      "eng": "Unplayable. NL Innate.",
+      "zhs": " 不能被打出 。 NL 固有 。"
+    },
+    "type": "curse",
+    "color": "curse",
+    "rarity": "curse",
+    "cost": -2,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": true,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  }
+]

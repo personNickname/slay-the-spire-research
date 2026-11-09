@@ -2,4 +2,10 @@
 node_modules/
 __pycache__/
 *.log
-.cache/
+decompiled/
+dist/
+web/dist/
+packages/*/dist/
+*.tsbuildinfo
+# Commercial jar dumps — keep local for play, do not publish MegaCrit art.
+web/public/assets/sts1/

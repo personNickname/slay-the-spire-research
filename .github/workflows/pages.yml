@@ -1,0 +1,33 @@
+name: github-pages
+on:
+  push:
+    branches: [main, sts1-data-layer]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm install
+      - run: npm test
+      - run: npm run -w web build
+        env:
+          VITE_BASE: /slay-the-spire-research/
+      - name: Bundle review UI into dist
+        run: |
+          mkdir -p web/dist/review
+          cp review/index.html review/data.js web/dist/review/
+          touch web/dist/.nojekyll
+          cp web/dist/index.html web/dist/404.html
+          rm -rf web/dist/assets/sts1
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: web/dist
+          force_orphan: true

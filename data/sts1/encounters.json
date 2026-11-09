@@ -1,0 +1,130 @@
+{
+  "acts": {
+    "1": {
+      "weak": [
+        { "id": "Cultist", "w": 2 },
+        { "id": "Jaw Worm", "w": 2 },
+        { "id": "2 Louse", "w": 2 },
+        { "id": "Small Slimes", "w": 2 }
+      ],
+      "strong": [
+        { "id": "Blue Slaver", "w": 2 },
+        { "id": "Gremlin Gang", "w": 1 },
+        { "id": "Looter", "w": 2 },
+        { "id": "Large Slime", "w": 2 },
+        { "id": "Lots of Slimes", "w": 1 },
+        { "id": "Exordium Thugs", "w": 1.5 },
+        { "id": "Exordium Wildlife", "w": 1.5 },
+        { "id": "Red Slaver", "w": 1 },
+        { "id": "3 Louse", "w": 2 },
+        { "id": "2 Fungi Beasts", "w": 2 }
+      ],
+      "elite": [
+        { "id": "Gremlin Nob", "w": 1 },
+        { "id": "Lagavulin", "w": 1 },
+        { "id": "3 Sentries", "w": 1 }
+      ],
+      "boss": ["The Guardian", "Hexaghost", "Slime Boss"]
+    },
+    "2": {
+      "weak": [
+        { "id": "Spheric Guardian", "w": 2 },
+        { "id": "Chosen", "w": 2 },
+        { "id": "Shell Parasite", "w": 2 },
+        { "id": "3 Byrds", "w": 2 },
+        { "id": "2 Thieves", "w": 2 }
+      ],
+      "strong": [
+        { "id": "Chosen and Byrds", "w": 2 },
+        { "id": "Sentry and Sphere", "w": 2 },
+        { "id": "Snake Plant", "w": 6 },
+        { "id": "Snecko", "w": 4 },
+        { "id": "Centurion and Healer", "w": 6 },
+        { "id": "Cultist and Chosen", "w": 3 },
+        { "id": "3 Cultists", "w": 3 },
+        { "id": "Shelled Parasite and Fungi", "w": 3 }
+      ],
+      "elite": [
+        { "id": "Gremlin Leader", "w": 1 },
+        { "id": "Slavers", "w": 1 },
+        { "id": "Book of Stabbing", "w": 1 }
+      ],
+      "boss": ["The Champ", "Bronze Automaton", "The Collector"]
+    },
+    "3": {
+      "weak": [
+        { "id": "3 Darklings", "w": 2 },
+        { "id": "Orb Walker", "w": 2 },
+        { "id": "3 Shapes", "w": 2 }
+      ],
+      "strong": [
+        { "id": "Spire Growth", "w": 1 },
+        { "id": "Transient", "w": 1 },
+        { "id": "4 Shapes", "w": 1 },
+        { "id": "Maw", "w": 1 },
+        { "id": "Sphere and 2 Shapes", "w": 1 },
+        { "id": "Jaw Worm Horde", "w": 1 },
+        { "id": "3 Darklings", "w": 1 },
+        { "id": "Writhing Mass", "w": 1 }
+      ],
+      "elite": [
+        { "id": "Giant Head", "w": 2 },
+        { "id": "Nemesis", "w": 2 },
+        { "id": "Reptomancer", "w": 2 }
+      ],
+      "boss": ["Awakened One", "Time Eater", "Donu and Deca"]
+    }
+  },
+  "encounters": {
+    "Cultist": { "monsters": [["Cultist"]] },
+    "Jaw Worm": { "monsters": [["JawWorm"]] },
+    "2 Louse": { "monsters": [["FuzzyLouseNormal", "FuzzyLouseDefensive"]] },
+    "Small Slimes": { "monsters": [["SpikeSlime_S", "AcidSlime_M"], ["AcidSlime_S", "SpikeSlime_M"]] },
+    "Blue Slaver": { "monsters": [["SlaverBlue"]] },
+    "Red Slaver": { "monsters": [["SlaverRed"]] },
+    "Looter": { "monsters": [["Looter"]] },
+    "Large Slime": { "monsters": [["AcidSlime_L"], ["SpikeSlime_L"]] },
+    "The Guardian": { "monsters": [["TheGuardian"]] },
+    "Hexaghost": { "monsters": [["Hexaghost"]] },
+    "Slime Boss": { "monsters": [["SlimeBoss"]] },
+    "Gremlin Nob": { "monsters": [["GremlinNob"]] },
+    "Lagavulin": { "monsters": [["Lagavulin"]] },
+    "3 Sentries": { "monsters": [["Sentry", "Sentry", "Sentry"]] },
+    "2 Fungi Beasts": { "monsters": [["FungiBeast", "FungiBeast"]] },
+    "2 Thieves": { "monsters": [["Looter", "Mugger"]] },
+    "Chosen": { "monsters": [["Chosen"]] },
+    "Shell Parasite": { "monsters": [["Shelled Parasite"]] },
+    "Spheric Guardian": { "monsters": [["SphericGuardian"]] },
+    "3 Byrds": { "monsters": [["Byrd", "Byrd", "Byrd"]] },
+    "Snake Plant": { "monsters": [["SnakePlant"]] },
+    "Snecko": { "monsters": [["Snecko"]] },
+    "The Champ": { "monsters": [["Champ"]] },
+    "Bronze Automaton": { "monsters": [["BronzeAutomaton"]] },
+    "The Collector": { "monsters": [["TheCollector"]] },
+    "Book of Stabbing": { "monsters": [["BookOfStabbing"]] },
+    "Gremlin Leader": { "monsters": [["GremlinLeader"]] },
+    "Slavers": { "monsters": [["SlaverBoss", "SlaverRed", "SlaverBlue"]] },
+    "Centurion and Healer": { "monsters": [["Centurion", "Healer"]] },
+    "3 Cultists": { "monsters": [["Cultist", "Cultist", "Cultist"]] },
+    "Cultist and Chosen": { "monsters": [["Cultist", "Chosen"]] },
+    "Chosen and Byrds": { "monsters": [["Chosen", "Byrd", "Byrd"]] },
+    "Sentry and Sphere": { "monsters": [["Sentry", "SphericGuardian"]] },
+    "Shelled Parasite and Fungi": { "monsters": [["Shelled Parasite", "FungiBeast"]] },
+    "3 Darklings": { "monsters": [["Darkling", "Darkling", "Darkling"]] },
+    "Orb Walker": { "monsters": [["Orb Walker"]] },
+    "Maw": { "monsters": [["Maw"]] },
+    "Transient": { "monsters": [["Transient"]] },
+    "Writhing Mass": { "monsters": [["WrithingMass"]] },
+    "Giant Head": { "monsters": [["GiantHead"]] },
+    "Nemesis": { "monsters": [["Nemesis"]] },
+    "Awakened One": { "monsters": [["AwakenedOne"]] },
+    "Time Eater": { "monsters": [["TimeEater"]] },
+    "Donu and Deca": { "monsters": [["Deca", "Donu"]] },
+    "3 Shapes": { "monsters": [["Exploder", "Spiker", "Repulsor"]] },
+    "4 Shapes": { "monsters": [["Exploder", "Spiker", "Repulsor", "Exploder"]] },
+    "Jaw Worm Horde": { "monsters": [["JawWorm", "JawWorm", "JawWorm"]] },
+    "Sphere and 2 Shapes": { "monsters": [["SphericGuardian", "Spiker", "Exploder"]] },
+    "Spire Growth": { "monsters": [["Serpent"]] },
+    "Reptomancer": { "monsters": [["Reptomancer"]] }
+  }
+}

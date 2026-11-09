@@ -1,0 +1,323 @@
+{
+  "Apotheosis": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Bandage Up": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Beta": {
+    "ops": [
+      {
+        "op": "addCard",
+        "card": "Omega",
+        "to": "draw"
+      }
+    ]
+  },
+  "Bite": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Blind": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Chrysalis": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Dark Shackles": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Deep Breath": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Discovery": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Dramatic Entrance": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Enlightenment": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Expunger": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Finesse": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Flash of Steel": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Forethought": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Ghostly": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Good Instincts": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "HandOfGreed": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Impatience": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Insight": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": 2
+      }
+    ]
+  },
+  "J.A.X.": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Jack Of All Trades": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Madness": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Magnetism": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Magnetism",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Master of Strategy": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Mayhem": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Mayhem",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Metamorphosis": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Mind Blast": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Miracle": {
+    "ops": [
+      {
+        "op": "energy",
+        "amount": 1
+      }
+    ]
+  },
+  "Omega": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Omega",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Panacea": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Panache": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Panache",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "PanicButton": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Purity": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "RitualDagger": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Sadistic Nature": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Sadistic Nature",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Safety": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Secret Technique": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Secret Weapon": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Shiv": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Smite": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Swift Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "The Bomb": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Thinking Ahead": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "ThroughViolence": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Transmutation": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Trip": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Violence": {
+    "ops": [],
+    "verified": "auto"
+  }
+}

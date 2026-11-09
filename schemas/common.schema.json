@@ -1,0 +1,21 @@
+{
+  "$id": "https://sts-research/schemas/common.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "bilingual": {
+      "type": "object",
+      "properties": { "eng": { "type": "string" }, "zhs": { "type": "string" } },
+      "required": ["eng", "zhs"],
+      "additionalProperties": false
+    },
+    "bilingualList": {
+      "type": "object",
+      "properties": {
+        "eng": { "type": "array", "items": { "type": "string" } },
+        "zhs": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["eng", "zhs"],
+      "additionalProperties": false
+    }
+  }
+}

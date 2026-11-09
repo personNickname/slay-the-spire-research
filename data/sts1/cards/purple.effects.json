@@ -1,0 +1,734 @@
+{
+  "Adaptation": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Adaptation",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Alpha": {
+    "ops": [
+      {
+        "op": "addCard",
+        "card": "Beta",
+        "to": "draw"
+      }
+    ]
+  },
+  "BattleHymn": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "BattleHymn",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Blasphemy": {
+    "ops": [
+      {
+        "op": "stance",
+        "stance": "divinity"
+      },
+      {
+        "op": "custom",
+        "id": "blasphemy"
+      }
+    ]
+  },
+  "BowlingBash": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "bowlingBash"
+      }
+    ]
+  },
+  "Brilliance": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "CarveReality": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "ClearTheMind": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Collect": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "collect"
+      }
+    ]
+  },
+  "Conclude": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "conclude"
+      }
+    ]
+  },
+  "ConjureBlade": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Consecrate": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Crescendo": {
+    "ops": [
+      {
+        "op": "stance",
+        "stance": "wrath"
+      }
+    ]
+  },
+  "CrushJoints": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "crushJoints"
+      }
+    ]
+  },
+  "CutThroughFate": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      },
+      {
+        "op": "custom",
+        "id": "scry"
+      }
+    ]
+  },
+  "DeceiveReality": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "addCard",
+        "card": "Safety",
+        "to": "hand"
+      }
+    ]
+  },
+  "Defend_P": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "DeusExMachina": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "DevaForm": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "DevaForm",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Devotion": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Devotion",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "EmptyBody": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "stance",
+        "stance": "none"
+      }
+    ]
+  },
+  "EmptyFist": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "stance",
+        "stance": "none"
+      }
+    ]
+  },
+  "EmptyMind": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      },
+      {
+        "op": "stance",
+        "stance": "none"
+      }
+    ]
+  },
+  "Eruption": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "stance",
+        "stance": "wrath"
+      }
+    ]
+  },
+  "Establishment": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Establishment",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Evaluate": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Fasting2": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Fasting2",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "FearNoEvil": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "fearNoEvil"
+      }
+    ]
+  },
+  "FlurryOfBlows": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "FlyingSleeves": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage",
+        "times": 2
+      }
+    ]
+  },
+  "FollowUp": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "followUp"
+      }
+    ]
+  },
+  "ForeignInfluence": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "foreignInfluence"
+      }
+    ]
+  },
+  "Halt": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "halt"
+      }
+    ]
+  },
+  "Indignation": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "indignation"
+      }
+    ]
+  },
+  "InnerPeace": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "innerPeace"
+      }
+    ]
+  },
+  "Judgement": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "judgement"
+      }
+    ]
+  },
+  "JustLucky": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "LessonLearned": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "lessonLearned"
+      }
+    ]
+  },
+  "LikeWater": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "LikeWater",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "MasterReality": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "MasterReality",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Meditate": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "meditate"
+      }
+    ]
+  },
+  "MentalFortress": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "MentalFortress",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Nirvana": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Nirvana",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Omniscience": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "PathToVictory": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Perseverance": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "perseverance"
+      }
+    ]
+  },
+  "Pray": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "pray"
+      }
+    ]
+  },
+  "Prostrate": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "prostrate"
+      }
+    ]
+  },
+  "Protect": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Ragnarok": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "ReachHeaven": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "addCard",
+        "card": "ThroughViolence",
+        "to": "draw"
+      }
+    ]
+  },
+  "Sanctity": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "sanctity"
+      }
+    ]
+  },
+  "SandsOfTime": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "SashWhip": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "sashWhip"
+      }
+    ]
+  },
+  "Scrawl": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "SignatureMove": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "SpiritShield": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "spiritShield"
+      }
+    ]
+  },
+  "Strike_P": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Study": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Study",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Swivel": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "freeAttack"
+      }
+    ]
+  },
+  "TalkToTheHand": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "BlockReturn",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Tantrum": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage",
+        "times": 3
+      },
+      {
+        "op": "stance",
+        "stance": "wrath"
+      }
+    ]
+  },
+  "ThirdEye": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Vault": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "vault"
+      }
+    ]
+  },
+  "Vengeance": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Vigilance": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "stance",
+        "stance": "calm"
+      }
+    ]
+  },
+  "Wallop": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "wallop"
+      }
+    ]
+  },
+  "WaveOfTheHand": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Weave": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "WheelKick": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": 2
+      }
+    ]
+  },
+  "WindmillStrike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Wireheading": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Wireheading",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Wish": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "wish"
+      }
+    ]
+  },
+  "Worship": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "WreathOfFlame": {
+    "ops": [],
+    "verified": "auto"
+  }
+}

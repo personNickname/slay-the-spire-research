@@ -1,0 +1,3052 @@
+[
+  {
+    "id": "Accuracy",
+    "class": "AccuracyPower",
+    "name": {
+      "eng": "Accuracy",
+      "zhs": "精准"
+    },
+    "descriptions": {
+      "eng": [
+        "#yShivs deal #b",
+        " additional damage."
+      ],
+      "zhs": [
+        "#y小刀 造成 #b",
+        " 点额外伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Adaptation",
+    "class": "RushdownPower",
+    "name": {
+      "eng": "Rushdown",
+      "zhs": "猛虎下山"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you enter #yWrath, draw #b",
+        " card.",
+        " cards."
+      ],
+      "zhs": [
+        "每当你进入 #y愤怒 时，抽 #b",
+        " 张牌。",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "After Image",
+    "class": "AfterImagePower",
+    "name": {
+      "eng": "After Image",
+      "zhs": "余像"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a card, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "你每打出一张牌，得到 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Amplify",
+    "class": "AmplifyPower",
+    "name": {
+      "eng": "Amplify",
+      "zhs": "增幅"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next #yPower card is played twice this turn.",
+        "Your next ",
+        " #yPower cards are played twice this turn."
+      ],
+      "zhs": [
+        "在这个回合，你的下一张 #y能力牌 会打出两次。",
+        "在这个回合，你的下 ",
+        " 张 #y能力牌 会打出两次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "AngelForm",
+    "class": "LiveForeverPower",
+    "name": {
+      "eng": "Live Forever",
+      "zhs": "永生不死"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, gain #b",
+        " #yPlated #yArmor."
+      ],
+      "zhs": [
+        "在你的回合结束时，获得 #b",
+        " 层 #y多层护甲 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Anger",
+    "class": "AngerPower",
+    "name": {
+      "eng": "Enrage",
+      "zhs": "激怒"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a #ySkill, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "你每打出一张 #y技能牌 ，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Angry",
+    "class": "AngryPower",
+    "name": {
+      "eng": "Angry",
+      "zhs": "生气"
+    },
+    "descriptions": {
+      "eng": [
+        "",
+        "Upon receiving attack damage, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "每当 ",
+        " 受到 #y攻击 伤害，就获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Artifact",
+    "class": "ArtifactPower",
+    "name": {
+      "eng": "Artifact",
+      "zhs": "人工制品"
+    },
+    "descriptions": {
+      "eng": [
+        "Negates #b",
+        " debuff.",
+        " debuffs."
+      ],
+      "zhs": [
+        "免疫 #b",
+        " 次负面效果。",
+        " 次负面效果。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Attack Burn",
+    "class": "AttackBurnPower",
+    "name": {
+      "eng": "Attack Burn",
+      "zhs": "攻击烧毁"
+    },
+    "descriptions": {
+      "eng": [
+        "For #b",
+        " turn, whenever you play an #yAttack, #yExhaust it.",
+        "For the next #b",
+        " turns, whenever you play an #yAttack, #yExhaust it."
+      ],
+      "zhs": [
+        "在 #b",
+        " 个回合内，你每打出一张 #y攻击牌 ，都会将其 #y消耗 。",
+        "在 #b",
+        " 个回合内，你每打出一张 #y攻击牌 ，都会将其 #y消耗 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "BackAttack",
+    "class": "BackAttackPower",
+    "name": {
+      "eng": "Back Attack",
+      "zhs": "后方攻击"
+    },
+    "descriptions": {
+      "eng": [
+        "Deals #b50% more damage as it is attacking you from behind."
+      ],
+      "zhs": [
+        "因为从后方对你攻击，造成的伤害增加 #b50% 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Barricade",
+    "class": "BarricadePower",
+    "name": {
+      "eng": "Barricade",
+      "zhs": "壁垒"
+    },
+    "descriptions": {
+      "eng": [
+        "#yBlock is not removed at the start of your turn.",
+        "#yBlock is not removed at the start of its turn."
+      ],
+      "zhs": [
+        " #y格挡 不会在你的回合开始时消失。",
+        " #y格挡 不会在回合开始时消失。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "BattleHymn",
+    "class": "BattleHymnPower",
+    "name": {
+      "eng": "Battle Hymn",
+      "zhs": "战歌"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, add #b",
+        " #ySmites into your hand.",
+        " #ySmite into your hand."
+      ],
+      "zhs": [
+        "在你的回合开始时，在你的手牌中加入 #b",
+        " 张 #y惩恶 。",
+        " 张 #y惩恶 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "BeatOfDeath",
+    "class": "BeatOfDeathPower",
+    "name": {
+      "eng": "Beat Of Death",
+      "zhs": "死亡律动"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a card, take #b",
+        " damage."
+      ],
+      "zhs": [
+        "你每打出一张牌，受到 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Berserk",
+    "class": "BerserkPower",
+    "name": {
+      "eng": "Berserk",
+      "zhs": "狂暴"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, gain ",
+        ""
+      ],
+      "zhs": [
+        "在你的回合开始时获得 ",
+        " 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Bias",
+    "class": "BiasPower",
+    "name": {
+      "eng": "Bias",
+      "zhs": "偏差"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, lose #b",
+        " #yFocus."
+      ],
+      "zhs": [
+        "在你的回合开始时，失去 #b",
+        " 层 #y集中 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "BlockReturnPower",
+    "class": "BlockReturnPower",
+    "name": {
+      "eng": "Block Return",
+      "zhs": "格挡返还"
+    },
+    "descriptions": {
+      "eng": [
+        "When attacked, you gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "当被你攻击时，你获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Blur",
+    "class": "BlurPower",
+    "name": {
+      "eng": "Blur",
+      "zhs": "残影"
+    },
+    "descriptions": {
+      "eng": [
+        "#yBlock is not removed at the start of your next turn.",
+        "#yBlock is not removed at the start of your next #b",
+        " turns."
+      ],
+      "zhs": [
+        " #y格挡 不会在你的下一个回合开始时消失。",
+        " #y格挡 不会在你的下 #b",
+        " 个回合开始时消失。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Brutality",
+    "class": "BrutalityPower",
+    "name": {
+      "eng": "Brutality",
+      "zhs": "残暴"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, lose #b",
+        " HP and draw #b",
+        " card.",
+        "At the start of your turn, lose #b",
+        " HP and draw #b",
+        " cards."
+      ],
+      "zhs": [
+        "在你的回合开始时，失去 #b",
+        " 生命并抽 #b",
+        " 张牌。",
+        "在你的回合开始时，失去 #b",
+        " 点生命并抽 #b",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Buffer",
+    "class": "BufferPower",
+    "name": {
+      "eng": "Buffer",
+      "zhs": "缓冲"
+    },
+    "descriptions": {
+      "eng": [
+        "Prevent the next time you would lose HP.",
+        "Prevent the next #b",
+        " times you would lose HP."
+      ],
+      "zhs": [
+        "阻止下一次你受到的生命值损伤。",
+        "阻止下 #b",
+        " 次你受到的生命值损伤。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Burst",
+    "class": "BurstPower",
+    "name": {
+      "eng": "Burst",
+      "zhs": "爆发"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next #ySkill is played twice this turn.",
+        "Your next ",
+        " #ySkills are played twice this turn."
+      ],
+      "zhs": [
+        "在这个回合，你的下一张 #y技能牌 会打出两次。",
+        "在这个回合，你的下 ",
+        " 张 #y技能牌 会打出两次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "CannotChangeStancePower",
+    "class": "CannotChangeStancePower",
+    "name": {
+      "eng": "Cannot Change Stance",
+      "zhs": "不能改变姿态"
+    },
+    "descriptions": {
+      "eng": [
+        "Cannot change your stance this turn."
+      ],
+      "zhs": [
+        "本回合不能改变姿态。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Choked",
+    "class": "ChokePower",
+    "name": {
+      "eng": "Choked",
+      "zhs": "勒脖"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a card this turn, loses #b",
+        " HP."
+      ],
+      "zhs": [
+        "你这回合你每打出一张牌，就失去 #b",
+        " 点生命。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Collect",
+    "class": "CollectPower",
+    "name": {
+      "eng": "Collect",
+      "zhs": "收集"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your next turn, put a #yMiracle+ into your hand.",
+        "At the start of your next #b",
+        " turns, put a #yMiracle+ into your hand."
+      ],
+      "zhs": [
+        "在你的下回合开始时，增加一张 #y奇迹+ 到你的手牌。",
+        "在你的下 #b",
+        " 个回合开始时，增加一张 #y奇迹+ 到你的手牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Combust",
+    "class": "CombustPower",
+    "name": {
+      "eng": "Combust",
+      "zhs": "自燃"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, lose #b",
+        " HP and deal #b",
+        " damage to ALL enemies."
+      ],
+      "zhs": [
+        "在你的回合结束时，失去 #b",
+        " 点生命并对所有敌人造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Compulsive",
+    "class": "ReactivePower",
+    "name": {
+      "eng": "Reactive",
+      "zhs": "扭动"
+    },
+    "descriptions": {
+      "eng": [
+        "Upon receiving attack damage, changes its intent."
+      ],
+      "zhs": [
+        "受到攻击伤害时，改变自己的行动意图。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Confusion",
+    "class": "ConfusionPower",
+    "name": {
+      "eng": "Confusion",
+      "zhs": "混乱"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you draw a card, randomize its cost."
+      ],
+      "zhs": [
+        "你抽到的每一张牌，耗能都会随机变化。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Conserve",
+    "class": "ConservePower",
+    "name": {
+      "eng": "Conserve",
+      "zhs": "保留"
+    },
+    "descriptions": {
+      "eng": [
+        "#yEnergy is conserved this turn.",
+        "#yEnergy is conserved for the next #b",
+        " turns."
+      ],
+      "zhs": [
+        "在本回合结束时，将多余的 #y能量 留到下回合。",
+        "在接下来 #b",
+        " 个回合结束时，将多余的 #y能量 留到下回合。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Constricted",
+    "class": "ConstrictedPower",
+    "name": {
+      "eng": "Constricted",
+      "zhs": "缠绕"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, take #b",
+        " damage."
+      ],
+      "zhs": [
+        "在你的回合结束时，受到 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Controlled",
+    "class": "MentalFortressPower",
+    "name": {
+      "eng": "Mental Fortress",
+      "zhs": "心灵堡垒"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you switch #yStances, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "每当你转换 #y姿态 时，获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "CorpseExplosionPower",
+    "class": "CorpseExplosionPower",
+    "name": {
+      "eng": "Corpse Explosion",
+      "zhs": "尸爆术"
+    },
+    "descriptions": {
+      "eng": [
+        "On death, deal damage equal to its Max HP to ALL enemies.",
+        "On death, deal damage equal to its Max HP #b",
+        " times to ALL enemies."
+      ],
+      "zhs": [
+        "当这名敌人死亡时，对所有敌人造成等于其最大生命值的伤害。",
+        "当这名敌人死亡时，对所有敌人造成等于其最大生命值 #b",
+        " 倍的伤害。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Corruption",
+    "class": "CorruptionPower",
+    "name": {
+      "eng": "Corruption",
+      "zhs": "腐化"
+    },
+    "descriptions": {
+      "eng": [
+        "#ySkills cost #b0. Whenever you play a #ySkill, #yExhaust it.",
+        "Whenever you play a #ySkill, #yExhaust it."
+      ],
+      "zhs": [
+        "技能牌耗能变为 #b0。 你每打出一张 #y技能牌 ，都将其 #y消耗 。",
+        "你每打出一张 #y技能牌 ，都将其 #y消耗 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Creative AI",
+    "class": "CreativeAIPower",
+    "name": {
+      "eng": "Creative AI",
+      "zhs": "创造性AI"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, add #b",
+        " random #yPower card into your hand.",
+        " random #yPower cards into your hand."
+      ],
+      "zhs": [
+        "在你的回合开始时，增加 #b",
+        " 张随机 能力牌 到你的手牌。（不包括“自我修复”）",
+        " 张随机 能力牌 到你的手牌。（不包括“自我修复”）"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Curiosity",
+    "class": "CuriosityPower",
+    "name": {
+      "eng": "Curiosity",
+      "zhs": "好奇"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a #yPower card, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "你每打出一张 #y能力牌 ，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Curl Up",
+    "class": "CurlUpPower",
+    "name": {
+      "eng": "Curl Up",
+      "zhs": "蜷身"
+    },
+    "descriptions": {
+      "eng": [
+        "On receiving attack damage, rolls up and gains #b",
+        " #yBlock. (Once per combat)"
+      ],
+      "zhs": [
+        "当受到 #y攻击 伤害时，蜷起身子并获得 ",
+        " 点 #y格挡 。（每场战斗一次）"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Dark Embrace",
+    "class": "DarkEmbracePower",
+    "name": {
+      "eng": "Dark Embrace",
+      "zhs": "黑暗之拥"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever a card is #yExhausted, draw #b1 card.",
+        "Whenever a card is #yExhausted, draw #b",
+        " cards."
+      ],
+      "zhs": [
+        "每当有一张牌被 #y消耗 时，抽 #b1 张牌。",
+        "每当有一张牌被 #y消耗 时，抽 #b",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Demon Form",
+    "class": "DemonFormPower",
+    "name": {
+      "eng": "Demon Form",
+      "zhs": "恶魔形态"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, gain #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "在你的回合开始时，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "DevaForm",
+    "class": "DevaPower",
+    "name": {
+      "eng": "Deva",
+      "zhs": "天人"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, gain [W] ",
+        "At the start of your turn, gain [W] #b",
+        " times ",
+        "and increase this by #b",
+        ".",
+        "TRANSLATE NOTE: At the start of your turn, gain [W] #b2 times and increase this by #b1."
+      ],
+      "zhs": [
+        "在你的回合开始时，获得 [W] ",
+        "在你的回合开始时，获得 [W] #b",
+        " 次 ",
+        "，然后将次数增加 #b",
+        " 。",
+        "TRANSLATE NOTE: At the start of your turn, gain [W] #b2 times and increase this by #b1."
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "DevotionPower",
+    "class": "DevotionPower",
+    "name": {
+      "eng": "Devotion",
+      "zhs": "虔信"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, gain #b",
+        " #yMantra."
+      ],
+      "zhs": [
+        "在你的回合开始时，获得 #b",
+        " 层 #y真言 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "DexLoss",
+    "class": "LoseDexterityPower",
+    "name": {
+      "eng": "Dexterity Down",
+      "zhs": "敏捷下降"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of this turn, lose #b",
+        " #yDexterity."
+      ],
+      "zhs": [
+        "在你的回合结束时，失去 #b",
+        " 点 #y敏捷 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Dexterity",
+    "class": "DexterityPower",
+    "name": {
+      "eng": "Dexterity",
+      "zhs": "敏捷"
+    },
+    "descriptions": {
+      "eng": [
+        "Increases #yBlock gained from cards by #b",
+        "Decreases #yBlock gained from cards by #b",
+        "."
+      ],
+      "zhs": [
+        "从卡牌获得的 #y格挡 增加 #b",
+        "从卡牌获得的 #y格挡 减少 #b",
+        " 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Double Damage",
+    "class": "DoubleDamagePower",
+    "name": {
+      "eng": "Double Damage",
+      "zhs": "双倍伤害"
+    },
+    "descriptions": {
+      "eng": [
+        "#yAttacks deal double damage for #b",
+        " turn.",
+        " turns."
+      ],
+      "zhs": [
+        " #y攻击 造成的伤害翻倍，生效 #b",
+        " 回合。",
+        " 回合。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Double Tap",
+    "class": "DoubleTapPower",
+    "name": {
+      "eng": "Double Tap",
+      "zhs": "双发"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next #yAttack is played twice this turn.",
+        "Your next ",
+        " #yAttacks are played twice this turn."
+      ],
+      "zhs": [
+        "在这个回合，你打出的下一张 #y攻击牌 会打出两次。",
+        "在这个回合，你打出的下 ",
+        " 张 #y攻击牌 会打出两次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Draw",
+    "class": "DrawPower",
+    "name": {
+      "eng": "Draw",
+      "zhs": "抽牌"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, draw #b",
+        " additional card.",
+        " less card.",
+        " additional cards.",
+        " less cards."
+      ],
+      "zhs": [
+        "#b",
+        " 张额外抽牌，在每个回合开始时。",
+        " 张减少抽牌，在每个回合开始时。",
+        " 张额外抽牌，在每个回合开始时。",
+        " 张减少抽牌，在每个回合开始时。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Draw Card",
+    "class": "DrawCardNextTurnPower",
+    "name": {
+      "eng": "Draw Card",
+      "zhs": "抽牌"
+    },
+    "descriptions": {
+      "eng": [
+        "Draw #b",
+        " additional cards next turn.",
+        " additional card next turn."
+      ],
+      "zhs": [
+        "下回合抽 #b",
+        " 张牌。",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Draw Reduction",
+    "class": "DrawReductionPower",
+    "name": {
+      "eng": "Draw Reduction",
+      "zhs": "抽牌变少"
+    },
+    "descriptions": {
+      "eng": [
+        "Draw #b1 less card next turn.",
+        "Draw #b1 less card for #b",
+        " turns."
+      ],
+      "zhs": [
+        "下一回合少抽 #b1 张牌。",
+        "下 #b",
+        " 回合少抽 #b1 张牌。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "DuplicationPower",
+    "class": "DuplicationPower",
+    "name": {
+      "eng": "Duplication",
+      "zhs": "复制"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next card is played twice this turn.",
+        "Your next #b",
+        " cards are played twice this turn."
+      ],
+      "zhs": [
+        "本回合你的下一张牌被打出两次。",
+        "本回合你的下 ",
+        " 张牌被打出两次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Echo Form",
+    "class": "EchoPower",
+    "name": {
+      "eng": "Echo Form",
+      "zhs": "回响形态"
+    },
+    "descriptions": {
+      "eng": [
+        "The first card you play each turn is played twice.",
+        "The first #b",
+        " cards you play each turn are played twice."
+      ],
+      "zhs": [
+        "你在每回合打出的第一张牌将被打出两次。",
+        "你在每回合打出的前 #b",
+        " 张牌将被打出两次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Electro",
+    "class": "ElectroPower",
+    "name": {
+      "eng": "Electro",
+      "zhs": "电动力学"
+    },
+    "descriptions": {
+      "eng": [
+        "#yLightning hits ALL enemies.",
+        "",
+        ""
+      ],
+      "zhs": [
+        "#y闪电 将击中所有敌人。",
+        "",
+        ""
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "EndTurnDeath",
+    "class": "EndTurnDeathPower",
+    "name": {
+      "eng": "Blasphemer",
+      "zhs": "渎神者"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, die."
+      ],
+      "zhs": [
+        "在你的回合开始时死亡。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Energized",
+    "class": "EnergizedPower",
+    "name": {
+      "eng": "Energized",
+      "zhs": "能量提升"
+    },
+    "descriptions": {
+      "eng": [
+        "Gain #b",
+        " additional [G] next turn.",
+        " additional [G] next turn.",
+        " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+      ],
+      "zhs": [
+        "下一回合获得额外 #b",
+        " [G] 。",
+        " [G] 。",
+        " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "EnergizedBlue",
+    "class": "EnergizedBluePower",
+    "name": {
+      "eng": "Energized",
+      "zhs": "能量提升"
+    },
+    "descriptions": {
+      "eng": [
+        "Gain #b",
+        " additional [B] next turn.",
+        " additional [B] next turn.",
+        " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+      ],
+      "zhs": [
+        "下一回合获得额外 #b",
+        " [B] 。",
+        " [B] 。",
+        " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "EnergyDownPower",
+    "class": "EnergyDownPower",
+    "name": {
+      "eng": "Fasting",
+      "zhs": "斋戒"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, lose ",
+        ""
+      ],
+      "zhs": [
+        "在你的回合开始时，失去 ",
+        ""
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Entangled",
+    "class": "EntanglePower",
+    "name": {
+      "eng": "Entangled",
+      "zhs": "缠身"
+    },
+    "descriptions": {
+      "eng": [
+        "You cannot play #yAttacks this turn."
+      ],
+      "zhs": [
+        "你在这个回合不能打出 #y攻击牌 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "Envenom",
+    "class": "EnvenomPower",
+    "name": {
+      "eng": "Envenom",
+      "zhs": "涂毒"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you deal unblocked attack damage, apply #b",
+        " #yPoison."
+      ],
+      "zhs": [
+        "每当你造成未被格挡的 #y攻击 伤害，给予 #b",
+        " #y层中毒。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Equilibrium",
+    "class": "EquilibriumPower",
+    "name": {
+      "eng": "Equilibrium",
+      "zhs": "均衡"
+    },
+    "descriptions": {
+      "eng": [
+        "#yRetain your hand this turn.",
+        "#yRetain your hand for #b",
+        " turns."
+      ],
+      "zhs": [
+        "在本回合保留你的手牌。",
+        "在接下来 #b",
+        " 回合保留你的手牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "EstablishmentPower",
+    "class": "EstablishmentPower",
+    "name": {
+      "eng": "Establishment",
+      "zhs": "确立基础"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever a card is #yRetained, lower its cost by #b",
+        "."
+      ],
+      "zhs": [
+        "每当有卡牌被 #y保留 时，将其耗能减少 #b",
+        " 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Evolve",
+    "class": "EvolvePower",
+    "name": {
+      "eng": "Evolve",
+      "zhs": "进化"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you draw a #yStatus card, draw #b1 card.",
+        "Whenever you draw a #yStatus card, draw #b",
+        " cards."
+      ],
+      "zhs": [
+        "每当你抽到一张 #y状态 牌，抽一张牌。",
+        "每当你抽到一张 #y状态 牌，抽 #b",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Explosive",
+    "class": "ExplosivePower",
+    "name": {
+      "eng": "Explosive",
+      "zhs": "爆炸"
+    },
+    "descriptions": {
+      "eng": [
+        "Explodes in #b",
+        " turns, dealing #b",
+        " damage.",
+        "Explodes this turn, dealing #b"
+      ],
+      "zhs": [
+        "在 #b",
+        " 回合后，爆炸并造成 #b",
+        " 点伤害。",
+        "在它的下个回合开始时，爆炸并造成 #b"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Fading",
+    "class": "FadingPower",
+    "name": {
+      "eng": "Fading",
+      "zhs": "消逝"
+    },
+    "descriptions": {
+      "eng": [
+        "Dies in #b",
+        " turns.",
+        "Dies this turn."
+      ],
+      "zhs": [
+        "在 #b",
+        " 回合后死亡。",
+        "在本回合死亡。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Feel No Pain",
+    "class": "FeelNoPainPower",
+    "name": {
+      "eng": "Feel No Pain",
+      "zhs": "无惧疼痛"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever a card is #yExhausted, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "每当有一张牌被 #y消耗 ，获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Fire Breathing",
+    "class": "FireBreathingPower",
+    "name": {
+      "eng": "Fire Breathing",
+      "zhs": "火焰吐息"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you draw a #yStatus or #yCurse card, deal #b",
+        " damage to ALL enemies."
+      ],
+      "zhs": [
+        "每当你抽到一张 #y状态 或 #y诅咒 牌时，对所有敌人造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Flame Barrier",
+    "class": "FlameBarrierPower",
+    "name": {
+      "eng": "Flame Barrier",
+      "zhs": "火焰屏障"
+    },
+    "descriptions": {
+      "eng": [
+        "When attacked, deals #b",
+        " damage back."
+      ],
+      "zhs": [
+        "每受到一次 #y攻击 ，造成 #b",
+        " 点反伤。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Flex",
+    "class": "LoseStrengthPower",
+    "name": {
+      "eng": "Strength Down",
+      "zhs": "活动肌肉"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of this turn, lose #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "在你的回合结束时，失去 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Flight",
+    "class": "FlightPower",
+    "name": {
+      "eng": "Flight",
+      "zhs": "飞行"
+    },
+    "descriptions": {
+      "eng": [
+        "Receives 50% less attack damage. Cancelled if dealt attack damage #b",
+        " times in one turn."
+      ],
+      "zhs": [
+        "将所受到的 #y攻击 伤害降低 #b50% 。 如果在一个回合内被 #y攻击 伤害 #b",
+        " 次，就会取消。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Focus",
+    "class": "FocusPower",
+    "name": {
+      "eng": "Focus",
+      "zhs": "集中"
+    },
+    "descriptions": {
+      "eng": [
+        "Increases the effectiveness of Orbs by #b",
+        "Decreases the effectiveness of Orbs by #b",
+        "."
+      ],
+      "zhs": [
+        "所有充能球的效果增加 #b",
+        "所有充能球的效果减少 #b",
+        " 点。（等离子充能球不受影响）"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Frail",
+    "class": "FrailPower",
+    "name": {
+      "eng": "Frail",
+      "zhs": "脆弱"
+    },
+    "descriptions": {
+      "eng": [
+        "Gain #b25% less #yBlock from cards for #b",
+        " turn.",
+        " turns."
+      ],
+      "zhs": [
+        "在 #b",
+        " 个回合内，从卡牌中获得的 #y格挡 减少 #b25% 。",
+        " 个回合内，从卡牌中获得的 #y格挡 减少 #b25% 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "FreeAttackPower",
+    "class": "FreeAttackPower",
+    "name": {
+      "eng": "Free Attack Power",
+      "zhs": "免费攻击"
+    },
+    "descriptions": {
+      "eng": [
+        "Ignore energy cost on the next #yAttack you play.",
+        "Ignore energy cost on the next #b",
+        " #yAttacks you play."
+      ],
+      "zhs": [
+        "你打出下一张的 #y攻击牌 无视耗能。",
+        "你打出下 #b",
+        " 张 #y攻击牌 无视耗能。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Generic Strength Up Power",
+    "class": "GenericStrengthUpPower",
+    "name": {
+      "eng": "",
+      "zhs": ""
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of its turn, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "在其回合结束时，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "GrowthPower",
+    "class": "GrowthPower",
+    "name": {
+      "eng": "Growth",
+      "zhs": "万物生长"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of its turn, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "在其回合结束时，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Heatsink",
+    "class": "HeatsinkPower",
+    "name": {
+      "eng": "Heatsink",
+      "zhs": "散热"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a #yPower card, draw #b",
+        " card.",
+        " cards."
+      ],
+      "zhs": [
+        "你每打出一张能力牌，抽 #b",
+        " 张牌。",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Hello",
+    "class": "HelloPower",
+    "name": {
+      "eng": "Hello",
+      "zhs": "你好"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, add #b",
+        " random Common cards into your hand.",
+        " random Common card into your hand."
+      ],
+      "zhs": [
+        "在你的回合开始时，增加 #b",
+        " 张随机 普通 牌到你的手牌。",
+        " 张随机 普通 牌到你的手牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Hex",
+    "class": "HexPower",
+    "name": {
+      "eng": "Hex",
+      "zhs": "邪咒"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a #ynon-Attack card, shuffle #b",
+        " #yDazed into your draw pile."
+      ],
+      "zhs": [
+        "你每打出一张非攻击牌，都会将 #b",
+        " 张 #y晕眩 随机放入你的牌组中。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Infinite Blades",
+    "class": "InfiniteBladesPower",
+    "name": {
+      "eng": "Infinite Blades",
+      "zhs": "无限刀刃"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, add #b",
+        " #yShivs into your hand.",
+        " #yShiv into your hand."
+      ],
+      "zhs": [
+        "在你的回合开始时，得到 #b",
+        " 张 #y小刀 。",
+        " 张 #y小刀 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Intangible",
+    "class": "IntangiblePower",
+    "name": {
+      "eng": "Intangible",
+      "zhs": "无实体"
+    },
+    "descriptions": {
+      "eng": [
+        "Reduce ALL damage taken and HP loss to #b1 this turn. #yIntangible is reapplied every other turn."
+      ],
+      "zhs": [
+        "将本回合受到的所有伤害和生命减少效果降低为 #b1 。 无实体将每隔一回合重新生效。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "IntangiblePlayer",
+    "class": "IntangiblePlayerPower",
+    "name": {
+      "eng": "Intangible",
+      "zhs": "无实体"
+    },
+    "descriptions": {
+      "eng": [
+        "Reduce ALL damage taken and HP loss to #b1."
+      ],
+      "zhs": [
+        "将受到的所有伤害和生命减少效果降低为 #b1 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Invincible",
+    "class": "InvinciblePower",
+    "name": {
+      "eng": "Invincible",
+      "zhs": "坚不可摧"
+    },
+    "descriptions": {
+      "eng": [
+        "Can only lose #b",
+        " more HP this turn.",
+        "Can no longer be harmed this turn."
+      ],
+      "zhs": [
+        "本回合内最多只会失去 #b",
+        " 生命。",
+        "本回合内不会再受到伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Juggernaut",
+    "class": "JuggernautPower",
+    "name": {
+      "eng": "Juggernaut",
+      "zhs": "势不可当"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you gain #yBlock, deal #b",
+        " damage to a random enemy."
+      ],
+      "zhs": [
+        "每当你获得 #y格挡 时，对一名随机敌人造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Life Link",
+    "class": "RegrowPower",
+    "name": {
+      "eng": "Life Link",
+      "zhs": "生命链接"
+    },
+    "descriptions": {
+      "eng": [
+        "If other enemies are still alive, revives in #b2 turns at #b50% HP."
+      ],
+      "zhs": [
+        "如果其他敌人还生存，将在 #b2 回合后以 #b50% 生命复活。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Life Link",
+    "class": "ResurrectPower",
+    "name": {
+      "eng": "Life Link",
+      "zhs": "生命链接"
+    },
+    "descriptions": {
+      "eng": [
+        "If other enemies are still alive, revives in #b2 turns at #b50% HP."
+      ],
+      "zhs": [
+        "如果其他敌人还生存，将在 #b2 回合后以 #b50% 生命复活。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "LikeWaterPower",
+    "class": "LikeWaterPower",
+    "name": {
+      "eng": "Like Water",
+      "zhs": "如水"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, if you are in #yCalm, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "在你的回合结束时，如果你处于 #y平静 ， 则获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Lockon",
+    "class": "LockOnPower",
+    "name": {
+      "eng": "Lock-On",
+      "zhs": "跟踪锁定"
+    },
+    "descriptions": {
+      "eng": [
+        "Receives #b",
+        "% more damage from Orbs for #b",
+        " turn.",
+        " turns."
+      ],
+      "zhs": [
+        "从充能球受到的伤害增加 #b",
+        " ，持续 #b",
+        " 回合。",
+        " 回合。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "Loop",
+    "class": "LoopPower",
+    "name": {
+      "eng": "Loop",
+      "zhs": "循环"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, trigger the passive ability of your next Orb.",
+        "At the start of your turn, trigger the passive ability of your next Orb #b",
+        " times."
+      ],
+      "zhs": [
+        "在你的回合开始时，使用你最右侧充能球的被动能力。",
+        "在你的回合开始时，使用你最右侧充能球的被动能力 #b",
+        " 次。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Magnetism",
+    "class": "MagnetismPower",
+    "name": {
+      "eng": "Magnetism",
+      "zhs": "磁力"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, add #b%s random Colorless card into your hand.",
+        "At the start of your turn, add #b%s random Colorless cards into your hand."
+      ],
+      "zhs": [
+        "在你的回合开始时，增加 #b%s 张随机无色牌到你的手牌。",
+        "在你的回合开始时，增加 #b%s 张随机无色牌到你的手牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Malleable",
+    "class": "MalleablePower",
+    "name": {
+      "eng": "Malleable",
+      "zhs": "柔韧"
+    },
+    "descriptions": {
+      "eng": [
+        "Upon receiving attack damage, gains #b",
+        " #yBlock. #yBlock gain increases as ",
+        " is triggered. Resets to #b",
+        " at the start of your turn."
+      ],
+      "zhs": [
+        "受到 #y攻击 时，获得 #b",
+        " 点 #y格挡 。 ",
+        " 每触发一次，获得的 #y格挡 值都会增加。在你的回合开始时重新变回 #b",
+        " 点。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Mantra",
+    "class": "MantraPower",
+    "name": {
+      "eng": "Mantra",
+      "zhs": "真言"
+    },
+    "descriptions": {
+      "eng": [
+        "When you obtain #b",
+        " #yMantra, enter #yDivinity."
+      ],
+      "zhs": [
+        "当你获得 #b",
+        " 层 #y真言 时，进入 #y神格 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "MasterRealityPower",
+    "class": "MasterRealityPower",
+    "name": {
+      "eng": "Master Reality",
+      "zhs": "操控现实"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever a card is created, it is #yUpgraded.",
+        "deprecated",
+        "deprecated",
+        "deprecated"
+      ],
+      "zhs": [
+        "在战斗中临时增加的牌将被 #y升级 。",
+        "deprecated",
+        "deprecated",
+        "deprecated"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Mayhem",
+    "class": "MayhemPower",
+    "name": {
+      "eng": "Mayhem",
+      "zhs": "乱战"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, play the top card of your draw pile.",
+        "At the start of your turn, play the top #b",
+        " cards of your draw pile."
+      ],
+      "zhs": [
+        "在你的回合开始时，打出你抽牌堆顶部的牌。",
+        "在你的回合开始时，打出你抽牌堆顶部的 #b",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Metallicize",
+    "class": "MetallicizePower",
+    "name": {
+      "eng": "Metallicize",
+      "zhs": "金属化"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, gain #b",
+        " #yBlock.",
+        "At the end of its turn, gains #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "在你的回合结束时获得 #b",
+        " 点 #y格挡 。",
+        "在其回合结束时获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Minion",
+    "class": "MinionPower",
+    "name": {
+      "eng": "Minion",
+      "zhs": "爪牙"
+    },
+    "descriptions": {
+      "eng": [
+        "Minions abandon combat without their leader."
+      ],
+      "zhs": [
+        "爪牙会在他们的领导者死亡时放弃战斗。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Mode Shift",
+    "class": "ModeShiftPower",
+    "name": {
+      "eng": "Mode Shift",
+      "zhs": "形态转换"
+    },
+    "descriptions": {
+      "eng": [
+        "After receiving #b",
+        " damage, changes to a defensive mode."
+      ],
+      "zhs": [
+        "受到 #b",
+        " 点伤害后，会变成防御形态。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Next Turn Block",
+    "class": "NextTurnBlockPower",
+    "name": {
+      "eng": "Next Turn Block",
+      "zhs": "下回合格挡"
+    },
+    "descriptions": {
+      "eng": [
+        "Gain #b",
+        " #yBlock next turn."
+      ],
+      "zhs": [
+        "在你的下回合开始时，获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Night Terror",
+    "class": "NightmarePower",
+    "name": {
+      "eng": "Nightmare",
+      "zhs": "夜魇"
+    },
+    "descriptions": {
+      "eng": [
+        "Add #b",
+        " cards into your hand next turn."
+      ],
+      "zhs": [
+        "在你的下回合开始时，增加 #b",
+        " 到你的手牌中。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Nirvana",
+    "class": "NirvanaPower",
+    "name": {
+      "eng": "Nirvana",
+      "zhs": "涅槃"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you Scry, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "你每次 预见 时，获得 #b",
+        " 点#y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "No Draw",
+    "class": "NoDrawPower",
+    "name": {
+      "eng": "No Draw",
+      "zhs": "无法抽牌"
+    },
+    "descriptions": {
+      "eng": [
+        "You cannot draw cards this turn."
+      ],
+      "zhs": [
+        "你在回合结束前都无法再抽牌。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "NoBlockPower",
+    "class": "NoBlockPower",
+    "name": {
+      "eng": "No Block",
+      "zhs": "无法格挡"
+    },
+    "descriptions": {
+      "eng": [
+        "You cannot gain #yBlock from cards."
+      ],
+      "zhs": [
+        "你无法从卡牌中获得 #y格挡 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "NoSkills",
+    "class": "NoSkillsPower",
+    "name": {
+      "eng": "No Skills",
+      "zhs": "禁用技能"
+    },
+    "descriptions": {
+      "eng": [
+        "You cannot play #ySkills this turn."
+      ],
+      "zhs": [
+        "本回合你不能打出 #y技能牌 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "Noxious Fumes",
+    "class": "NoxiousFumesPower",
+    "name": {
+      "eng": "Noxious Fumes",
+      "zhs": "毒雾"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, apply #b",
+        " #yPoison to ALL enemies."
+      ],
+      "zhs": [
+        "在你的回合开始时，给予所有敌人 #b",
+        " 层 #y中毒 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Nullify Attack",
+    "class": "ForcefieldPower",
+    "name": {
+      "eng": "Nullify Attack",
+      "zhs": "无视攻击"
+    },
+    "descriptions": {
+      "eng": [
+        "Fully #yBlocks one #yAttack each turn."
+      ],
+      "zhs": [
+        "每回合彻底 #y格挡 一次 #y攻击 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "OmegaPower",
+    "class": "OmegaPower",
+    "name": {
+      "eng": "Omega",
+      "zhs": "欧米伽"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, deal #b",
+        " damage to ALL enemies."
+      ],
+      "zhs": [
+        "在你的回合结束时，对所有敌人造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "OmnisciencePower",
+    "class": "OmnisciencePower",
+    "name": {
+      "eng": "Omniscience",
+      "zhs": "通晓万物"
+    },
+    "descriptions": {
+      "eng": [
+        "DEPERCATED",
+        "DEPRECATED"
+      ],
+      "zhs": [
+        "DEPRECATED",
+        "DEPRECATED"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Painful Stabs",
+    "class": "PainfulStabsPower",
+    "name": {
+      "eng": "Painful Stabs",
+      "zhs": "疼痛戳刺"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you receive attack damage from this enemy, add a #yWound into your discard pile."
+      ],
+      "zhs": [
+        "每当这个敌人对你造成伤害时，在你的弃牌堆里增加一张 #y伤口 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Panache",
+    "class": "PanachePower",
+    "name": {
+      "eng": "Panache",
+      "zhs": "神气制胜"
+    },
+    "descriptions": {
+      "eng": [
+        "If you play #b",
+        " more card this turn, deal #b",
+        " damage to ALL enemies.",
+        " more cards this turn, deal #b"
+      ],
+      "zhs": [
+        "你在这个回合内再打出 #b",
+        " 张牌，就对所有敌人造成 #b",
+        " 点伤害。",
+        " 张牌，就对所有敌人造成 #b"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "PathToVictoryPower",
+    "class": "MarkPower",
+    "name": {
+      "eng": "Mark",
+      "zhs": "印记"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play #yPressure #yPoints, loses #b",
+        " HP."
+      ],
+      "zhs": [
+        "每当你打出 #y点穴 时，这名敌人失去 #b",
+        " 点生命。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Pen Nib",
+    "class": "PenNibPower",
+    "name": {
+      "eng": "Pen Nib",
+      "zhs": "钢笔尖"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next #yAttack deals double damage."
+      ],
+      "zhs": [
+        "你的下一次 #y攻击 造成双倍伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Phantasmal",
+    "class": "PhantasmalPower",
+    "name": {
+      "eng": "Phantasmal",
+      "zhs": "幻影"
+    },
+    "descriptions": {
+      "eng": [
+        "Deal #yDouble #yDamage next turn.",
+        "Deal #yDouble #yDamage for the next ",
+        " turns."
+      ],
+      "zhs": [
+        "下回合造成 #y双倍伤害 。",
+        "下 ",
+        " 个回合造成 #y双倍伤害 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Plated Armor",
+    "class": "PlatedArmorPower",
+    "name": {
+      "eng": "Plated Armor",
+      "zhs": "多层护甲"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, gain #b",
+        " #yBlock. Receiving unblocked attack damage reduces #yPlated #yArmor by #b1.",
+        "At the end of its turn, gains #b",
+        " #yBlock. Receiving unblocked attack damage reduces #yPlated #yArmor by #b1."
+      ],
+      "zhs": [
+        "在你的回合结束时获得 #b",
+        " 点 #y格挡 。受到攻击伤害而失去生命时， #y多层护甲 的层数将会减少 #b1 。",
+        "在其回合结束时获得 #b",
+        " 点 #y格挡 。受到攻击伤害而失去生命时， #y多层护甲 的层数将会减少 #b1 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Poison",
+    "class": "PoisonPower",
+    "name": {
+      "eng": "Poison",
+      "zhs": "中毒"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, lose #b",
+        " HP, then reduce #yPoison by #b1.",
+        "At the start of its turn, loses #b"
+      ],
+      "zhs": [
+        "在你的回合开始时，减少 #b",
+        " 点生命然后将 #y中毒 层数减少 #b1 。",
+        "在其回合开始时，减少 #b"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "Rage",
+    "class": "RagePower",
+    "name": {
+      "eng": "Rage",
+      "zhs": "愤怒"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play an #yAttack this turn, gain #b",
+        " #yBlock."
+      ],
+      "zhs": [
+        "你在这回合每打出一张攻击牌，获得 #b",
+        " 点 #y格挡 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Rebound",
+    "class": "ReboundPower",
+    "name": {
+      "eng": "Rebound",
+      "zhs": "弹回"
+    },
+    "descriptions": {
+      "eng": [
+        "The next card you play this turn is placed on top of your draw pile.",
+        "The next #b",
+        " cards you play this turn are placed on top of your draw pile."
+      ],
+      "zhs": [
+        "你在这个回合打出的下一张牌，将会被放置到抽牌堆的顶部。",
+        "你在这个回合打出的下 #b",
+        " 张牌，将会被放置到抽牌堆的顶部。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": true
+  },
+  {
+    "id": "Regenerate",
+    "class": "RegenerateMonsterPower",
+    "name": {
+      "eng": "Regenerate",
+      "zhs": "再生"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of its turn, heals #b",
+        " #yHP."
+      ],
+      "zhs": [
+        "在其回合结束时回复 #b",
+        " 点 #y生命 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Regeneration",
+    "class": "RegenPower",
+    "name": {
+      "eng": "Regen",
+      "zhs": "再生"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, heal #b",
+        " #yHP, then reduce #yRegen by #b1.",
+        ""
+      ],
+      "zhs": [
+        "在你的回合结束时回复 #b",
+        " 点 #y生命 ，然后将 #y再生 层数减少 #b1 。",
+        ""
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Repair",
+    "class": "RepairPower",
+    "name": {
+      "eng": "Repair",
+      "zhs": "修理"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of combat, heal #b",
+        " HP."
+      ],
+      "zhs": [
+        "在战斗结束时，回复 #b",
+        " 点生命。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Retain Cards",
+    "class": "RetainCardPower",
+    "name": {
+      "eng": "Retain Cards",
+      "zhs": "保留卡牌"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, you may retain #b",
+        " card.",
+        " cards."
+      ],
+      "zhs": [
+        "在每回合结束时，你可以保留 #b",
+        " 张牌。",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Ritual",
+    "class": "RitualPower",
+    "name": {
+      "eng": "Ritual",
+      "zhs": "仪式"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of its turn, gains #b",
+        " #yStrength.",
+        "At the end of your turn, gain #b"
+      ],
+      "zhs": [
+        "在其回合结束时，获得 #b",
+        " 点 #y力量 。",
+        "在你的回合结束时，获得 #b"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Rupture",
+    "class": "RupturePower",
+    "name": {
+      "eng": "Rupture",
+      "zhs": "撕裂"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you lose HP from a card, gain #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "当你从一张牌中失去生命时，获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Sadistic",
+    "class": "SadisticPower",
+    "name": {
+      "eng": "Sadistic",
+      "zhs": "残虐"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you apply a debuff to an enemy, deal #b",
+        " damage."
+      ],
+      "zhs": [
+        "当你对一名敌人造成负面状态时，对其造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Shackled",
+    "class": "GainStrengthPower",
+    "name": {
+      "eng": "Shackled",
+      "zhs": "镣铐"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of its turn, gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "在其回合结束时回复 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Sharp Hide",
+    "class": "SharpHidePower",
+    "name": {
+      "eng": "Sharp Hide",
+      "zhs": "锋利外壳"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play an #yAttack, take #b",
+        " damage."
+      ],
+      "zhs": [
+        "你每打出一张 #y攻击牌 ，就受到 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Shifting",
+    "class": "ShiftingPower",
+    "name": {
+      "eng": "Shifting",
+      "zhs": "变化"
+    },
+    "descriptions": {
+      "eng": [
+        "",
+        "Upon losing HP, loses that much #yStrength until the end of the turn."
+      ],
+      "zhs": [
+        "每当 ",
+        " 受到伤害，它将在回合结束前失去相应点数的 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Skill Burn",
+    "class": "SkillBurnPower",
+    "name": {
+      "eng": "Skill Burn",
+      "zhs": "技能烧毁"
+    },
+    "descriptions": {
+      "eng": [
+        "For #b",
+        " turn, whenever you play a #ySkill, #yExhaust it.",
+        "For the next #b",
+        " turns, whenever you play a #ySkill, #yExhaust it."
+      ],
+      "zhs": [
+        "在 #b",
+        " 个回合内，你每打出一张 #y技能牌 ，都会将其 #y消耗 。",
+        "在 #b",
+        " 个回合内，你每打出一张 #y技能牌 ，都会将其 #y消耗 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "Slow",
+    "class": "SlowPower",
+    "name": {
+      "eng": "Slow",
+      "zhs": "缓慢"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a card, ",
+        " receives #b10% more damage from #yAttacks this turn.",
+        " (Receives #b",
+        "% more damage)"
+      ],
+      "zhs": [
+        "你在这个回合每打出一张卡牌， ",
+        " 从 #y攻击 受到的伤害增加 #b10% 。",
+        " （受到 #b",
+        "% 额外伤害）"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "Split",
+    "class": "SplitPower",
+    "name": {
+      "eng": "Split",
+      "zhs": "分裂"
+    },
+    "descriptions": {
+      "eng": [
+        "When its HP is at or below #b50%, will split into #b2 smaller slimes with ",
+        "'s current HP."
+      ],
+      "zhs": [
+        "当生命值等于或低于 #b50% 时，将会分裂成 #b2 只较小的史莱姆，每只都拥有 ",
+        " 现在的生命值。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Spore Cloud",
+    "class": "SporeCloudPower",
+    "name": {
+      "eng": "Spore Cloud",
+      "zhs": "孢子云"
+    },
+    "descriptions": {
+      "eng": [
+        "On death, applies #b",
+        " #yVulnerable."
+      ],
+      "zhs": [
+        "在死亡时，给予你 #b",
+        " 回合的 #y易伤 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Stasis",
+    "class": "StasisPower",
+    "name": {
+      "eng": "Stasis",
+      "zhs": "凝滞"
+    },
+    "descriptions": {
+      "eng": [
+        "On death, ",
+        " is returned to your hand."
+      ],
+      "zhs": [
+        "在死亡时， ",
+        " 会被放回你的手牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "StaticDischarge",
+    "class": "StaticDischargePower",
+    "name": {
+      "eng": "Static Discharge",
+      "zhs": "静电释放"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you receive attack damage, #yChannel #b",
+        " #yLightning."
+      ],
+      "zhs": [
+        "当你受到 #y攻击 伤害时， #y生成 #b",
+        " 个 #y闪电 充能球。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Storm",
+    "class": "StormPower",
+    "name": {
+      "eng": "Storm",
+      "zhs": "雷暴"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a #yPower card, #yChannel #b",
+        " #yLightning."
+      ],
+      "zhs": [
+        "你每打出一张 #b能力牌 ， #y生成 #b ",
+        " 个 #y闪电 充能球。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Strength",
+    "class": "StrengthPower",
+    "name": {
+      "eng": "Strength",
+      "zhs": "力量"
+    },
+    "descriptions": {
+      "eng": [
+        "Increases attack damage by #b",
+        "Decreases attack damage by #b",
+        "."
+      ],
+      "zhs": [
+        "攻击伤害提升 #b",
+        "攻击伤害降低 #b",
+        " 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "StrikeUp",
+    "class": "StrikeUpPower",
+    "name": {
+      "eng": "Strike Up",
+      "zhs": "打击提升"
+    },
+    "descriptions": {
+      "eng": [
+        "Cards containing #yStrike deal #b",
+        " additional damage."
+      ],
+      "zhs": [
+        "卡牌名中带有 #y打击 的牌造成 #b",
+        " 点额外伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Study",
+    "class": "StudyPower",
+    "name": {
+      "eng": "Study",
+      "zhs": "研习"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, shuffle #b",
+        " #yInsight into your draw pile.",
+        " #yInsights into your draw pile."
+      ],
+      "zhs": [
+        "在你的回合结束时，在你的抽牌堆中加入 #b",
+        " 张 #y洞见 。",
+        " 张 #y洞见 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Surrounded",
+    "class": "SurroundedPower",
+    "name": {
+      "eng": "Surrounded",
+      "zhs": "夹击"
+    },
+    "descriptions": {
+      "eng": [
+        "Receive #b50% more damage if attacked from behind. Use targeting cards or potions to change your orientation."
+      ],
+      "zhs": [
+        "从后方受到的伤害增加 #b50% 。用可选定目标的牌和药水可以改变你的朝向。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "TheBomb",
+    "class": "TheBombPower",
+    "name": {
+      "eng": "The Bomb",
+      "zhs": "炸弹"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of #b%1$s turns, deal #b%2$s damage to ALL enemies.",
+        "At the end of this turn, deal #b%1$s damage to ALL enemies."
+      ],
+      "zhs": [
+        "在 #b%1$s 回合结束后，对所有敌人造成 #b%2$s 伤害。",
+        "在本回合结束时，对所有敌人造成 #b%1$s 伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Thievery",
+    "class": "ThieveryPower",
+    "name": {
+      "eng": "Thievery",
+      "zhs": "偷窃"
+    },
+    "descriptions": {
+      "eng": [
+        " steals #b",
+        " #yGold whenever it attacks."
+      ],
+      "zhs": [
+        " 在攻击时会偷走 #b",
+        " #y金币 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Thorns",
+    "class": "ThornsPower",
+    "name": {
+      "eng": "Thorns",
+      "zhs": "荆棘"
+    },
+    "descriptions": {
+      "eng": [
+        "When attacked, deals #b",
+        " damage back."
+      ],
+      "zhs": [
+        "每受到一次 #y攻击 ，造成 #b",
+        " 点反伤。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Thousand Cuts",
+    "class": "ThousandCutsPower",
+    "name": {
+      "eng": "Thousand Cuts",
+      "zhs": "凌迟"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play a card, deal #b",
+        " damage to ALL enemies."
+      ],
+      "zhs": [
+        "你每打出一张牌，都对所有敌人造成 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Time Warp",
+    "class": "TimeWarpPower",
+    "name": {
+      "eng": "Time Warp",
+      "zhs": "时间扭曲"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play #b",
+        " cards, ends your turn and gains #b",
+        " #yStrength."
+      ],
+      "zhs": [
+        "每当你打出 #b",
+        " 张牌，你的回合会强制结束，并且时间吞噬者获得 #b",
+        " 点 #y力量 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "TimeMazePower",
+    "class": "TimeMazePower",
+    "name": {
+      "eng": "Time Maze",
+      "zhs": "时间迷宫"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you play #b",
+        " cards, your turn is ended"
+      ],
+      "zhs": [
+        "每当你打出 #b",
+        " 张牌，你的回合会强制结束。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Tools Of The Trade",
+    "class": "ToolsOfTheTradePower",
+    "name": {
+      "eng": "Tools Of The Trade",
+      "zhs": "必备工具"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, draw #b",
+        " card and discard #b",
+        " card.",
+        " cards and discard #b",
+        " cards."
+      ],
+      "zhs": [
+        "在你的回合开始时，抽 #b",
+        " 张牌，丢弃 #b",
+        " 张牌。",
+        " 张牌，丢弃 #b",
+        " 张牌。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Unawakened",
+    "class": "UnawakenedPower",
+    "name": {
+      "eng": "Unawakened",
+      "zhs": "未觉醒"
+    },
+    "descriptions": {
+      "eng": [
+        "This enemy hasn't awakened yet..."
+      ],
+      "zhs": [
+        "这名敌人还没有觉醒……"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Vault",
+    "class": "VaultPower",
+    "name": {
+      "eng": "Vault",
+      "zhs": "腾跃"
+    },
+    "descriptions": {
+      "eng": [
+        "Receives #b",
+        " damage at the start of your next turn."
+      ],
+      "zhs": [
+        "在你的下回合开始时受到 #b",
+        " 点伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Vigor",
+    "class": "VigorPower",
+    "name": {
+      "eng": "Vigor",
+      "zhs": "活力"
+    },
+    "descriptions": {
+      "eng": [
+        "Your next Attack deals #b",
+        " additional damage."
+      ],
+      "zhs": [
+        "你的下一次攻击造成 #b",
+        " 点额外伤害。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Vulnerable",
+    "class": "VulnerablePower",
+    "name": {
+      "eng": "Vulnerable",
+      "zhs": "易伤"
+    },
+    "descriptions": {
+      "eng": [
+        "Receive #b",
+        "% more damage from #yAttacks for #b",
+        " turn.",
+        " turns."
+      ],
+      "zhs": [
+        "从 #y攻击 受到的伤害增加 #b",
+        "% 。持续时间 #b",
+        " 回合。",
+        " 回合。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "WaveOfTheHandPower",
+    "class": "WaveOfTheHandPower",
+    "name": {
+      "eng": "Wave of the Hand",
+      "zhs": "摆手"
+    },
+    "descriptions": {
+      "eng": [
+        "Whenever you gain #yBlock, apply #b",
+        " #yWeak to ALL enemies."
+      ],
+      "zhs": [
+        "在本回合，你每次获得 #y格挡 时，给予所有敌人 #b",
+        " 层 #y虚弱 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Weakened",
+    "class": "WeakPower",
+    "name": {
+      "eng": "Weakened",
+      "zhs": "虚弱"
+    },
+    "descriptions": {
+      "eng": [
+        "#yAttacks deal #b",
+        "% less damage for #b",
+        " turn.",
+        " turns."
+      ],
+      "zhs": [
+        " #y攻击 造成的伤害减少 #b",
+        "% 。持续时间 #b",
+        " 回合。",
+        " 回合。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": true
+  },
+  {
+    "id": "WireheadingPower",
+    "class": "ForesightPower",
+    "name": {
+      "eng": "Foresight",
+      "zhs": "先见之明"
+    },
+    "descriptions": {
+      "eng": [
+        "At the start of your turn, #yScry #b",
+        "."
+      ],
+      "zhs": [
+        "在你的回合开始时， #y预见 ",
+        " 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  },
+  {
+    "id": "Wraith Form v2",
+    "class": "WraithFormPower",
+    "name": {
+      "eng": "Wraith Form",
+      "zhs": "幽魂形态"
+    },
+    "descriptions": {
+      "eng": [
+        "At the end of your turn, lose #b",
+        " #yDexterity."
+      ],
+      "zhs": [
+        "在你的回合结束时，失去 #b",
+        " 点 #y敏捷 。"
+      ]
+    },
+    "kind": "debuff",
+    "turnBased": false
+  },
+  {
+    "id": "WrathNextTurnPower",
+    "class": "WrathNextTurnPower",
+    "name": {
+      "eng": "Simmering Rage",
+      "zhs": "怒火中烧"
+    },
+    "descriptions": {
+      "eng": [
+        "Enter #yWrath at the start of your turn."
+      ],
+      "zhs": [
+        "在你的回合开始时进入 #y愤怒 。"
+      ]
+    },
+    "kind": "buff",
+    "turnBased": false
+  }
+]

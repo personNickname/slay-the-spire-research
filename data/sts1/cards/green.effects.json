@@ -1,0 +1,769 @@
+{
+  "A Thousand Cuts": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "A Thousand Cuts",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Accuracy": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Accuracy",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Acrobatics": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      },
+      {
+        "op": "custom",
+        "id": "discardChoose1"
+      }
+    ]
+  },
+  "Adrenaline": {
+    "ops": [
+      {
+        "op": "energy",
+        "amount": 1
+      },
+      {
+        "op": "draw",
+        "amount": 2
+      }
+    ]
+  },
+  "After Image": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "After Image",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "All Out Attack": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "allOutAttack"
+      }
+    ]
+  },
+  "Backflip": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "draw",
+        "amount": 2
+      }
+    ]
+  },
+  "Backstab": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Bane": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "if",
+        "cond": "targetPoisoned",
+        "then": [
+          {
+            "op": "damage",
+            "target": "target",
+            "amount": "damage"
+          }
+        ]
+      }
+    ]
+  },
+  "Blade Dance": {
+    "ops": [
+      {
+        "op": "addCard",
+        "card": "Shiv",
+        "to": "hand",
+        "count": 3
+      }
+    ]
+  },
+  "Blur": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "power",
+        "id": "Blur",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Bouncing Flask": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Poison",
+        "target": "all_enemies",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Bullet Time": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "bulletTime"
+      }
+    ]
+  },
+  "Burst": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "burst"
+      }
+    ]
+  },
+  "Calculated Gamble": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "calculatedGamble"
+      }
+    ]
+  },
+  "Caltrops": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Caltrops",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Catalyst": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "catalyst"
+      }
+    ]
+  },
+  "Choke": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Choked",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Cloak And Dagger": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "addCard",
+        "card": "Shiv",
+        "to": "hand"
+      }
+    ]
+  },
+  "Concentrate": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Corpse Explosion": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Poison",
+        "target": "target",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Corpse Explosion",
+        "target": "target",
+        "amount": 1
+      }
+    ]
+  },
+  "Crippling Poison": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Poison",
+        "target": "all_enemies",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Dagger Spray": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage",
+        "times": 2
+      }
+    ]
+  },
+  "Dagger Throw": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      },
+      {
+        "op": "custom",
+        "id": "discardChoose1"
+      }
+    ]
+  },
+  "Dash": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Deadly Poison": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Poison",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Defend_G": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Deflect": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Die Die Die": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Distraction": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Dodge and Roll": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "dodgeAndRoll"
+      }
+    ]
+  },
+  "Doppelganger": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Endless Agony": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Envenom": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Envenom",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Escape Plan": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": 1
+      }
+    ]
+  },
+  "Eviscerate": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage",
+        "times": 3
+      }
+    ]
+  },
+  "Expertise": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "expertise"
+      }
+    ]
+  },
+  "Finisher": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "finisher"
+      }
+    ]
+  },
+  "Flechettes": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "flechettes"
+      }
+    ]
+  },
+  "Flying Knee": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "outmaneuver"
+      }
+    ]
+  },
+  "Footwork": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Dexterity",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Glass Knife": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Grand Finale": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Heel Hook": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Infinite Blades": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Infinite Blades",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Leg Sweep": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "target",
+        "amount": "magic"
+      },
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Malaise": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "malaise"
+      }
+    ]
+  },
+  "Masterful Stab": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Neutralize": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Night Terror": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Noxious Fumes": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Noxious Fumes",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Outmaneuver": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "outmaneuver"
+      }
+    ]
+  },
+  "Phantasmal Killer": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "phantasmal"
+      }
+    ]
+  },
+  "PiercingWail": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Poisoned Stab": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Poison",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Predator": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "predator"
+      }
+    ]
+  },
+  "Prepared": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      },
+      {
+        "op": "custom",
+        "id": "discardChoose1"
+      }
+    ]
+  },
+  "Quick Slash": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      }
+    ]
+  },
+  "Reflex": {
+    "ops": [],
+    "onExhaust": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Riddle With Holes": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Setup": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "setup"
+      }
+    ]
+  },
+  "Skewer": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "skewer"
+      }
+    ]
+  },
+  "Slice": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Storm of Steel": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "stormOfSteel"
+      }
+    ]
+  },
+  "Strike_G": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Sucker Punch": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Survivor": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "discardChoose1"
+      }
+    ]
+  },
+  "Tactician": {
+    "ops": [],
+    "onExhaust": [
+      {
+        "op": "energy",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Terror": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "target",
+        "amount": 99
+      }
+    ]
+  },
+  "Tools of the Trade": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Tools of the Trade",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Underhanded Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Unload": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "unload"
+      }
+    ]
+  },
+  "Venomology": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "alchemize"
+      }
+    ]
+  },
+  "Well Laid Plans": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Well-Laid Plans",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Wraith Form v2": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Wraith Form v2",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  }
+}

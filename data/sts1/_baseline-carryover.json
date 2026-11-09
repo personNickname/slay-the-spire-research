@@ -1,0 +1,2099 @@
+{
+  "Bash": {
+    "wikiEffectZh": "造成8点伤害。\n给予2层易伤。",
+    "wikiEffectUpZh": "造成10点伤害。\n给予3层易伤。",
+    "keywords": []
+  },
+  "Defend_R": {
+    "wikiEffectZh": "获得5点格挡。",
+    "wikiEffectUpZh": "获得8点格挡。",
+    "keywords": []
+  },
+  "Strike_R": {
+    "wikiEffectZh": "造成6点伤害。",
+    "wikiEffectUpZh": "造成9点伤害。",
+    "keywords": []
+  },
+  "Anger": {
+    "wikiEffectZh": "造成6点伤害。\n在弃牌堆放入一张此牌的复制品。",
+    "wikiEffectUpZh": "造成8点伤害。\n在弃牌堆放入一张此牌的复制品。",
+    "keywords": []
+  },
+  "Armaments": {
+    "wikiEffectZh": "获得5点格挡。\n在本场战斗中升级手牌中的一张牌。",
+    "wikiEffectUpZh": "获得5点格挡。\n在本场战斗中升级手牌中的所有牌。",
+    "keywords": []
+  },
+  "Barricade": {
+    "wikiEffectZh": "格挡不再在你的回合开始时消失。",
+    "wikiEffectUpZh": "格挡不再在你的回合开始时消失。（升级后费用降为2。）",
+    "keywords": []
+  },
+  "Battle Trance": {
+    "wikiEffectZh": "抽3张牌。\n你在这个回合内不能再抽任何牌。",
+    "wikiEffectUpZh": "抽4张牌。\n你在这个回合内不能再抽任何牌。",
+    "keywords": []
+  },
+  "Berserk": {
+    "wikiEffectZh": "获得2层易伤。\n在每回合开始时获得1点能量。",
+    "wikiEffectUpZh": "获得1层易伤。\n在每回合开始时获得1点能量。",
+    "keywords": []
+  },
+  "Blood for Blood": {
+    "wikiEffectZh": "你每在战斗中失去生命一次，这张牌的耗能就减少1点能量。\n造成18点伤害。",
+    "wikiEffectUpZh": "你每在战斗中失去生命一次，这张牌的耗能就减少1点能量。\n造成22点伤害。（升级后费用降为3。）",
+    "keywords": []
+  },
+  "Bloodletting": {
+    "wikiEffectZh": "失去3点生命。获得2点能量。",
+    "wikiEffectUpZh": "失去3点生命。获得3点能量。",
+    "keywords": []
+  },
+  "Bludgeon": {
+    "wikiEffectZh": "造成32点伤害。",
+    "wikiEffectUpZh": "造成42点伤害。",
+    "keywords": []
+  },
+  "Body Slam": {
+    "wikiEffectZh": "造成你当前格挡值的伤害。",
+    "wikiEffectUpZh": "造成你当前格挡值的伤害。（升级后费用降为0。）",
+    "keywords": []
+  },
+  "Brutality": {
+    "wikiEffectZh": "在你的回合开始时，你失去1点生命，抽1张牌。",
+    "wikiEffectUpZh": "固有。\n在你的回合开始时，你失去1点生命，抽1张牌。",
+    "keywords": []
+  },
+  "Burning Pact": {
+    "wikiEffectZh": "消耗1张牌。\n抽2张牌。",
+    "wikiEffectUpZh": "消耗1张牌。\n抽3张牌。",
+    "keywords": []
+  },
+  "Carnage": {
+    "wikiEffectZh": "虚无。\n造成20点伤害。",
+    "wikiEffectUpZh": "虚无。\n造成28点伤害。",
+    "keywords": [
+      "ethereal"
+    ]
+  },
+  "Clash": {
+    "wikiEffectZh": "只有在手牌每一张牌都是攻击牌时才能被打出。\n造成14点伤害。",
+    "wikiEffectUpZh": "只有在手牌每一张牌都是攻击牌时才能被打出。\n造成18点伤害。",
+    "keywords": []
+  },
+  "Cleave": {
+    "wikiEffectZh": "对所有敌人造成8点伤害。",
+    "wikiEffectUpZh": "对所有敌人造成11点伤害。",
+    "keywords": []
+  },
+  "Clothesline": {
+    "wikiEffectZh": "造成12点伤害。\n给予2层虚弱。",
+    "wikiEffectUpZh": "造成14点伤害。\n给予3层虚弱。",
+    "keywords": []
+  },
+  "Combust": {
+    "wikiEffectZh": "在你的回合结束时，你失去1点生命，对所有敌人造成5点伤害。",
+    "wikiEffectUpZh": "在你的回合结束时，你失去1点生命，对所有敌人造成7点伤害。",
+    "keywords": []
+  },
+  "Corruption": {
+    "wikiEffectZh": "所有技能牌耗能变为0。\n所有技能牌在被打出时被消耗。",
+    "wikiEffectUpZh": "所有技能牌耗能变为0。\n所有技能牌在被打出时被消耗。（升级后费用降为2。）",
+    "keywords": []
+  },
+  "Dark Embrace": {
+    "wikiEffectZh": "每当有一张牌被消耗时，抽1张牌。",
+    "wikiEffectUpZh": "每当有一张牌被消耗时，抽1张牌。（升级后费用降为1。）",
+    "keywords": []
+  },
+  "Demon Form": {
+    "wikiEffectZh": "在每回合开始时获得2点力量。",
+    "wikiEffectUpZh": "在每回合开始时获得3点力量。",
+    "keywords": []
+  },
+  "Disarm": {
+    "wikiEffectZh": "使敌人失去2点力量。\n消耗。",
+    "wikiEffectUpZh": "使敌人失去3点力量。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Double Tap": {
+    "wikiEffectZh": "在这个回合，你打出的下一张攻击牌会打出两次。",
+    "wikiEffectUpZh": "在这个回合，你打出的下2张攻击牌会打出两次。",
+    "keywords": []
+  },
+  "Dropkick": {
+    "wikiEffectZh": "造成5点伤害。\n如果敌人有易伤状态，获得1点能量并且抽1张牌。",
+    "wikiEffectUpZh": "造成8点伤害。\n如果敌人有易伤状态，获得1点能量并且抽1张牌。",
+    "keywords": []
+  },
+  "Dual Wield": {
+    "wikiEffectZh": "将你手牌中的一张攻击或能力牌复制一张。",
+    "wikiEffectUpZh": "将你手牌中的一张攻击或能力牌复制两张。",
+    "keywords": []
+  },
+  "Entrench": {
+    "wikiEffectZh": "将你当前的格挡翻倍。",
+    "wikiEffectUpZh": "将你当前的格挡翻倍。（升级后费用降为1。）",
+    "keywords": []
+  },
+  "Evolve": {
+    "wikiEffectZh": "每当你抽到一张状态牌时，抽1张牌。",
+    "wikiEffectUpZh": "每当你抽到一张状态牌时，抽2张牌。",
+    "keywords": []
+  },
+  "Exhume": {
+    "wikiEffectZh": "选择一张已消耗的牌，将其放入你的手牌。\n消耗。",
+    "wikiEffectUpZh": "选择一张已消耗的牌，将其放入你的手牌。\n消耗。（升级后费用降为0。）",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Feed": {
+    "wikiEffectZh": "造成10点伤害。\n斩杀时，永久获得3点最大生命。消耗。",
+    "wikiEffectUpZh": "造成12点伤害。\n斩杀时，永久获得4点最大生命。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Feel No Pain": {
+    "wikiEffectZh": "每当有一张牌被消耗时，获得3点格挡。",
+    "wikiEffectUpZh": "每当有一张牌被消耗时，获得4点格挡。",
+    "keywords": []
+  },
+  "Fiend Fire": {
+    "wikiEffectZh": "消耗所有手牌。\n每张被消耗的牌造成7点伤害。\n消耗。",
+    "wikiEffectUpZh": "消耗所有手牌。\n每张被消耗的牌造成10点伤害。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Fire Breathing": {
+    "wikiEffectZh": "每当你抽到一张状态牌或诅咒牌时，对所有敌人造成6点伤害。",
+    "wikiEffectUpZh": "每当你抽到一张状态牌或诅咒牌时，对所有敌人造成10点伤害。",
+    "keywords": []
+  },
+  "Flame Barrier": {
+    "wikiEffectZh": "获得12点格挡。\n你在这个回合每受到一次攻击，都对攻击者造成4点伤害。",
+    "wikiEffectUpZh": "获得16点格挡。\n你在这个回合每受到一次攻击，都对攻击者造成6点伤害。",
+    "keywords": []
+  },
+  "Flex": {
+    "wikiEffectZh": "获得2点力量。\n你的回合结束时，失去2点力量。",
+    "wikiEffectUpZh": "获得4点力量。\n你的回合结束时，失去4点力量。",
+    "keywords": []
+  },
+  "Ghostly Armor": {
+    "wikiEffectZh": "虚无。\n获得10点格挡。",
+    "wikiEffectUpZh": "虚无。\n获得13点格挡。",
+    "keywords": [
+      "ethereal"
+    ]
+  },
+  "Havoc": {
+    "wikiEffectZh": "打出抽牌堆顶部的牌，将其消耗。",
+    "wikiEffectUpZh": "打出抽牌堆顶部的牌，将其消耗。（升级后费用降为0。）",
+    "keywords": []
+  },
+  "Headbutt": {
+    "wikiEffectZh": "造成9点伤害。\n将弃牌堆中的一张牌放到抽牌堆的顶部。",
+    "wikiEffectUpZh": "造成12点伤害。\n将弃牌堆中的一张牌放到抽牌堆的顶部。",
+    "keywords": []
+  },
+  "Heavy Blade": {
+    "wikiEffectZh": "造成14点伤害。\n力量在重刃上发挥3倍效果。",
+    "wikiEffectUpZh": "造成14点伤害。\n力量在重刃上发挥5倍效果。",
+    "keywords": []
+  },
+  "Hemokinesis": {
+    "wikiEffectZh": "失去2点生命。\n造成15点伤害。",
+    "wikiEffectUpZh": "失去2点生命。\n造成20点伤害。",
+    "keywords": []
+  },
+  "Immolate": {
+    "wikiEffectZh": "对所有敌人造成21点伤害。\n将一张灼伤放入你的弃牌堆中。",
+    "wikiEffectUpZh": "对所有敌人造成28点伤害。\n将一张灼伤放入你的弃牌堆中。",
+    "keywords": []
+  },
+  "Impervious": {
+    "wikiEffectZh": "获得30点格挡。\n消耗。",
+    "wikiEffectUpZh": "获得40点格挡。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Infernal Blade": {
+    "wikiEffectZh": "增加一张随机攻击牌到你的手牌。\n这张牌在本回合耗能变为0。\n消耗。",
+    "wikiEffectUpZh": "增加一张随机攻击牌到你的手牌。\n这张牌在本回合耗能变为0。\n消耗。（升级后费用降为0。）",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Inflame": {
+    "wikiEffectZh": "获得2点力量。",
+    "wikiEffectUpZh": "获得3点力量。",
+    "keywords": []
+  },
+  "Intimidate": {
+    "wikiEffectZh": "给予所有敌人1层虚弱。\n消耗。",
+    "wikiEffectUpZh": "给予所有敌人2层虚弱。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Iron Wave": {
+    "wikiEffectZh": "获得5点格挡。\n造成5点伤害。",
+    "wikiEffectUpZh": "获得7点格挡。\n造成7点伤害。",
+    "keywords": []
+  },
+  "Juggernaut": {
+    "wikiEffectZh": "每当你获得格挡时，对随机一名敌人造成5点伤害。",
+    "wikiEffectUpZh": "每当你获得格挡时，对随机一名敌人造成7点伤害。",
+    "keywords": []
+  },
+  "Limit Break": {
+    "wikiEffectZh": "将你的力量翻倍。\n消耗。",
+    "wikiEffectUpZh": "将你的力量翻倍。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Metallicize": {
+    "wikiEffectZh": "在你的回合结束时，获得3点格挡。",
+    "wikiEffectUpZh": "在你的回合结束时，获得4点格挡。",
+    "keywords": []
+  },
+  "Offering": {
+    "wikiEffectZh": "失去6点生命。\n获得2点能量。\n抽3张牌。\n消耗。",
+    "wikiEffectUpZh": "失去6点生命。\n获得2点能量。\n抽5张牌。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Perfected Strike": {
+    "wikiEffectZh": "造成6点伤害。\n你每有一张名字中有打击的牌，伤害+2。",
+    "wikiEffectUpZh": "造成6点伤害。\n你每有一张名字中有打击的牌，伤害+3。",
+    "keywords": []
+  },
+  "Pommel Strike": {
+    "wikiEffectZh": "造成9点伤害。\n抽1张牌。",
+    "wikiEffectUpZh": "造成10点伤害。\n抽2张牌。",
+    "keywords": []
+  },
+  "Power Through": {
+    "wikiEffectZh": "增加2张伤口到你的手牌。\n获得15点格挡。",
+    "wikiEffectUpZh": "增加2张伤口到你的手牌。\n获得20点格挡。",
+    "keywords": []
+  },
+  "Pummel": {
+    "wikiEffectZh": "造成2点伤害4次。\n消耗。",
+    "wikiEffectUpZh": "造成2点伤害5次。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Rage": {
+    "wikiEffectZh": "打出此牌后，你在这个回合内每打出一张攻击牌，获得3格挡。",
+    "wikiEffectUpZh": "打出此牌后，你在这个回合内每打出一张攻击牌，获得5格挡。",
+    "keywords": []
+  },
+  "Rampage": {
+    "wikiEffectZh": "造成8点伤害。\n这张牌每被打出一次，在本场战斗中其伤害增加5。",
+    "wikiEffectUpZh": "造成8点伤害。\n这张牌每被打出一次，在本场战斗中其伤害增加8。",
+    "keywords": []
+  },
+  "Reaper": {
+    "wikiEffectZh": "对所有敌人造成4点伤害。未被格挡的伤害将回复你的生命。\n消耗。",
+    "wikiEffectUpZh": "对所有敌人造成5点伤害。未被格挡的伤害将回复你的生命。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Reckless Charge": {
+    "wikiEffectZh": "造成7点伤害。\n将一张晕眩放入你的抽牌堆中。",
+    "wikiEffectUpZh": "造成10点伤害。\n将一张晕眩放入你的抽牌堆中。",
+    "keywords": []
+  },
+  "Rupture": {
+    "wikiEffectZh": "每当你从一张牌中失去生命时，获得1点力量。",
+    "wikiEffectUpZh": "每当你从一张牌中失去生命时，获得2点力量。",
+    "keywords": []
+  },
+  "Searing Blow": {
+    "wikiEffectZh": "造成12点伤害。\n能被多次升级。",
+    "wikiEffectUpZh": "造成16点伤害。\n能被多次升级。",
+    "keywords": []
+  },
+  "Second Wind": {
+    "wikiEffectZh": "消耗手牌中所有非攻击牌，每张获得5点格挡。",
+    "wikiEffectUpZh": "消耗手牌中所有非攻击牌，每张获得7点格挡。",
+    "keywords": []
+  },
+  "Seeing Red": {
+    "wikiEffectZh": "获得2点能量。\n消耗。",
+    "wikiEffectUpZh": "获得2点能量。\n消耗。（升级后费用降为0。）",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Sentinel": {
+    "wikiEffectZh": "获得5点格挡。\n如果这张牌被消耗，获得2点能量。",
+    "wikiEffectUpZh": "获得8点格挡。\n如果这张牌被消耗，获得3点能量。",
+    "keywords": []
+  },
+  "Sever Soul": {
+    "wikiEffectZh": "消耗手牌中所有非攻击牌。\n造成16点伤害。",
+    "wikiEffectUpZh": "消耗手牌中所有非攻击牌。\n造成22点伤害。",
+    "keywords": []
+  },
+  "Shockwave": {
+    "wikiEffectZh": "给予所有敌人3层虚弱和易伤。\n消耗。",
+    "wikiEffectUpZh": "给予所有敌人5层虚弱和易伤。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Shrug It Off": {
+    "wikiEffectZh": "获得8点格挡。\n抽1张牌。",
+    "wikiEffectUpZh": "获得11点格挡。\n抽1张牌。",
+    "keywords": []
+  },
+  "Spot Weakness": {
+    "wikiEffectZh": "如果一名敌人的意图是攻击，你获得3点力量。",
+    "wikiEffectUpZh": "如果一名敌人的意图是攻击，你获得4点力量。",
+    "keywords": []
+  },
+  "Sword Boomerang": {
+    "wikiEffectZh": "随机对敌人造成3点伤害3次。",
+    "wikiEffectUpZh": "随机对敌人造成3点伤害4次。",
+    "keywords": []
+  },
+  "Thunderclap": {
+    "wikiEffectZh": "对所有敌人造成4点伤害，给予1层易伤。",
+    "wikiEffectUpZh": "对所有敌人造成7点伤害，给予1层易伤。",
+    "keywords": []
+  },
+  "True Grit": {
+    "wikiEffectZh": "获得7点格挡。\n消耗一张随机手牌。",
+    "wikiEffectUpZh": "获得9点格挡。\n消耗一张手牌。",
+    "keywords": []
+  },
+  "Twin Strike": {
+    "wikiEffectZh": "造成5点伤害两次。",
+    "wikiEffectUpZh": "造成7点伤害两次。",
+    "keywords": []
+  },
+  "Uppercut": {
+    "wikiEffectZh": "造成13点伤害。\n给予1层虚弱。\n给予1层易伤。",
+    "wikiEffectUpZh": "造成13点伤害。\n给予2层虚弱。\n给予2层易伤。",
+    "keywords": []
+  },
+  "Warcry": {
+    "wikiEffectZh": "抽1张牌。\n将手牌中的一张牌放到你的抽牌堆顶部。\n消耗。",
+    "wikiEffectUpZh": "抽2张牌。\n将手牌中的一张牌放到你的抽牌堆顶部。\n消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Whirlwind": {
+    "wikiEffectZh": "对所有敌人造成5点伤害X次。",
+    "wikiEffectUpZh": "对所有敌人造成8点伤害X次。",
+    "keywords": []
+  },
+  "Wild Strike": {
+    "wikiEffectZh": "造成12点伤害。\n将一张伤口放入你的抽牌堆中。",
+    "wikiEffectUpZh": "造成17点伤害。\n将一张伤口放入你的抽牌堆中。",
+    "keywords": []
+  },
+  "A Thousand Cuts": {
+    "wikiEffectZh": "每当你打出一张卡牌，对所有敌人造成 1 点伤害。",
+    "wikiEffectUpZh": "每当你打出一张卡牌，对所有敌人造成 2 点伤害。",
+    "keywords": []
+  },
+  "Accuracy": {
+    "wikiEffectZh": "小刀造成的伤害提高 4 点。",
+    "wikiEffectUpZh": "小刀造成的伤害提高 6 点。",
+    "keywords": []
+  },
+  "Acrobatics": {
+    "wikiEffectZh": "抽 3 张卡牌，弃置 1 张卡牌。",
+    "wikiEffectUpZh": "抽 4 张卡牌，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  "Adrenaline": {
+    "wikiEffectZh": "获得 1 点能量，抽 2 张卡牌。消耗。",
+    "wikiEffectUpZh": "获得 2 点能量，抽 2 张卡牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "After Image": {
+    "wikiEffectZh": "每当你打出一张卡牌，获得 1 点格挡。",
+    "wikiEffectUpZh": "固有。每当你打出一张卡牌，获得 1 点格挡。",
+    "keywords": [
+      "innate"
+    ]
+  },
+  "Venomology": {
+    "wikiEffectZh": "获得一瓶随机药水。消耗。",
+    "wikiEffectUpZh": "费用变为 0。获得一瓶随机药水。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "All Out Attack": {
+    "wikiEffectZh": "对所有敌人造成 10 点伤害，随机弃置 1 张卡牌。",
+    "wikiEffectUpZh": "对所有敌人造成 14 点伤害，随机弃置 1 张卡牌。",
+    "keywords": []
+  },
+  "Backflip": {
+    "wikiEffectZh": "获得 5 点格挡，抽 2 张卡牌。",
+    "wikiEffectUpZh": "获得 8 点格挡，抽 2 张卡牌。",
+    "keywords": []
+  },
+  "Backstab": {
+    "wikiEffectZh": "固有。造成 11 点伤害。消耗。",
+    "wikiEffectUpZh": "固有。造成 15 点伤害。消耗。",
+    "keywords": [
+      "innate",
+      "exhaust"
+    ]
+  },
+  "Bane": {
+    "wikiEffectZh": "造成 7 点伤害。若敌人已中毒，再造成 7 点伤害。",
+    "wikiEffectUpZh": "造成 10 点伤害。若敌人已中毒，再造成 10 点伤害。",
+    "keywords": []
+  },
+  "Blade Dance": {
+    "wikiEffectZh": "将 3 张小刀加入手牌。",
+    "wikiEffectUpZh": "将 4 张小刀加入手牌。",
+    "keywords": []
+  },
+  "Blur": {
+    "wikiEffectZh": "获得 5 点格挡。你的格挡在下回合开始时不会被移除。",
+    "wikiEffectUpZh": "获得 8 点格挡。你的格挡在下回合开始时不会被移除。",
+    "keywords": []
+  },
+  "Bouncing Flask": {
+    "wikiEffectZh": "随机对一名敌人施加 3 次中毒，每次 3 层。",
+    "wikiEffectUpZh": "随机对一名敌人施加 4 次中毒，每次 3 层。",
+    "keywords": []
+  },
+  "Bullet Time": {
+    "wikiEffectZh": "本回合你无法抽更多卡牌。本回合你手牌中所有卡牌的费用降为 0。",
+    "wikiEffectUpZh": "费用变为 2。本回合你无法抽更多卡牌。本回合你手牌中所有卡牌的费用降为 0。",
+    "keywords": []
+  },
+  "Burst": {
+    "wikiEffectZh": "本回合内，你的下一张技能牌会被打出两次。",
+    "wikiEffectUpZh": "本回合内，你的接下来 2 张技能牌会被打出两次。",
+    "keywords": []
+  },
+  "Calculated Gamble": {
+    "wikiEffectZh": "弃置你的手牌，然后抽取等同数量的卡牌。消耗。",
+    "wikiEffectUpZh": "弃置你的手牌，然后抽取等同数量的卡牌。（升级后不再消耗。）",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Caltrops": {
+    "wikiEffectZh": "每当你受到攻击，对攻击者造成 3 点伤害。",
+    "wikiEffectUpZh": "每当你受到攻击，对攻击者造成 5 点伤害。",
+    "keywords": []
+  },
+  "Catalyst": {
+    "wikiEffectZh": "使敌人的中毒层数翻倍。消耗。",
+    "wikiEffectUpZh": "使敌人的中毒层数变为三倍。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Choke": {
+    "wikiEffectZh": "造成 12 点伤害。本回合内你每打出一张卡牌，该敌人就失去 3 点生命。",
+    "wikiEffectUpZh": "造成 12 点伤害。本回合内你每打出一张卡牌，该敌人就失去 5 点生命。",
+    "keywords": []
+  },
+  "Cloak And Dagger": {
+    "wikiEffectZh": "获得 6 点格挡，将 1 张小刀加入手牌。",
+    "wikiEffectUpZh": "获得 6 点格挡，将 2 张小刀加入手牌。",
+    "keywords": []
+  },
+  "Concentrate": {
+    "wikiEffectZh": "弃置 3 张卡牌，获得 2 点能量。",
+    "wikiEffectUpZh": "弃置 2 张卡牌，获得 2 点能量。",
+    "keywords": []
+  },
+  "Corpse Explosion": {
+    "wikiEffectZh": "施加 6 层中毒。当该敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。",
+    "wikiEffectUpZh": "施加 9 层中毒。当该敌人死亡时，对所有敌人造成等同于其最大生命值的伤害。",
+    "keywords": []
+  },
+  "Crippling Poison": {
+    "wikiEffectZh": "对所有敌人施加 4 层中毒和 2 层虚弱。消耗。",
+    "wikiEffectUpZh": "对所有敌人施加 7 层中毒和 2 层虚弱。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Dagger Spray": {
+    "wikiEffectZh": "对所有敌人造成 2 次、每次 4 点伤害。",
+    "wikiEffectUpZh": "对所有敌人造成 2 次、每次 6 点伤害。",
+    "keywords": []
+  },
+  "Dagger Throw": {
+    "wikiEffectZh": "造成 9 点伤害，抽 1 张卡牌，弃置 1 张卡牌。",
+    "wikiEffectUpZh": "造成 12 点伤害，抽 1 张卡牌，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  "Dash": {
+    "wikiEffectZh": "获得 10 点格挡，造成 10 点伤害。",
+    "wikiEffectUpZh": "获得 13 点格挡，造成 13 点伤害。",
+    "keywords": []
+  },
+  "Deadly Poison": {
+    "wikiEffectZh": "对一名敌人施加 5 层中毒。",
+    "wikiEffectUpZh": "对一名敌人施加 7 层中毒。",
+    "keywords": []
+  },
+  "Defend_G": {
+    "wikiEffectZh": "获得 5 点格挡。",
+    "wikiEffectUpZh": "获得 8 点格挡。",
+    "keywords": []
+  },
+  "Deflect": {
+    "wikiEffectZh": "获得 4 点格挡。",
+    "wikiEffectUpZh": "获得 7 点格挡。",
+    "keywords": []
+  },
+  "Die Die Die": {
+    "wikiEffectZh": "对所有敌人造成 13 点伤害。消耗。",
+    "wikiEffectUpZh": "对所有敌人造成 17 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Distraction": {
+    "wikiEffectZh": "随机将一张技能牌加入手牌，其费用在本回合为 0。消耗。",
+    "wikiEffectUpZh": "费用变为 0。随机将一张技能牌加入手牌，其费用在本回合为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Dodge and Roll": {
+    "wikiEffectZh": "获得 4 点格挡，下回合再获得 4 点格挡。",
+    "wikiEffectUpZh": "获得 6 点格挡，下回合再获得 6 点格挡。",
+    "keywords": []
+  },
+  "Doppelganger": {
+    "wikiEffectZh": "下回合，抽 X 张卡牌并获得 X 点能量。消耗。",
+    "wikiEffectUpZh": "下回合，抽 X+1 张卡牌并获得 X+1 点能量。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Endless Agony": {
+    "wikiEffectZh": "每当你抽到这张牌时，将一张它的复制加入手牌。造成 4 点伤害。消耗。",
+    "wikiEffectUpZh": "每当你抽到这张牌时，将一张它的复制加入手牌。造成 6 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Envenom": {
+    "wikiEffectZh": "每当你的攻击牌造成未被格挡的伤害时，施加 1 层中毒。",
+    "wikiEffectUpZh": "费用变为 1。每当你的攻击牌造成未被格挡的伤害时，施加 1 层中毒。",
+    "keywords": []
+  },
+  "Escape Plan": {
+    "wikiEffectZh": "抽 1 张卡牌。若抽到的是技能牌，获得 3 点格挡。",
+    "wikiEffectUpZh": "抽 1 张卡牌。若抽到的是技能牌，获得 5 点格挡。",
+    "keywords": []
+  },
+  "Eviscerate": {
+    "wikiEffectZh": "本回合内每弃置一张卡牌，费用便降低 1 点。造成 3 次、每次 7 点伤害。",
+    "wikiEffectUpZh": "本回合内每弃置一张卡牌，费用便降低 1 点。造成 3 次、每次 9 点伤害。",
+    "keywords": []
+  },
+  "Expertise": {
+    "wikiEffectZh": "抽牌直到手牌达到 6 张。",
+    "wikiEffectUpZh": "抽牌直到手牌达到 7 张。",
+    "keywords": []
+  },
+  "Finisher": {
+    "wikiEffectZh": "本回合内每打出过一张攻击牌，便造成一次 6 点伤害。",
+    "wikiEffectUpZh": "本回合内每打出过一张攻击牌，便造成一次 8 点伤害。",
+    "keywords": []
+  },
+  "Flechettes": {
+    "wikiEffectZh": "你的手牌中每有一张技能牌，便造成一次 4 点伤害。",
+    "wikiEffectUpZh": "你的手牌中每有一张技能牌，便造成一次 6 点伤害。",
+    "keywords": []
+  },
+  "Flying Knee": {
+    "wikiEffectZh": "造成 8 点伤害。下回合获得 1 点能量。",
+    "wikiEffectUpZh": "造成 11 点伤害。下回合获得 1 点能量。",
+    "keywords": []
+  },
+  "Footwork": {
+    "wikiEffectZh": "获得 2 点敏捷。",
+    "wikiEffectUpZh": "获得 3 点敏捷。",
+    "keywords": []
+  },
+  "Glass Knife": {
+    "wikiEffectZh": "造成 2 次、每次 8 点伤害。本次战斗中，这张牌每次被打出后伤害降低 2 点。",
+    "wikiEffectUpZh": "造成 2 次、每次 12 点伤害。本次战斗中，这张牌每次被打出后伤害降低 2 点。",
+    "keywords": []
+  },
+  "Grand Finale": {
+    "wikiEffectZh": "仅当抽牌堆为空时才能打出。对所有敌人造成 50 点伤害。",
+    "wikiEffectUpZh": "仅当抽牌堆为空时才能打出。对所有敌人造成 60 点伤害。",
+    "keywords": []
+  },
+  "Heel Hook": {
+    "wikiEffectZh": "造成 5 点伤害。若敌人处于虚弱状态，获得 1 点能量并抽 1 张卡牌。",
+    "wikiEffectUpZh": "造成 8 点伤害。若敌人处于虚弱状态，获得 1 点能量并抽 1 张卡牌。",
+    "keywords": []
+  },
+  "Infinite Blades": {
+    "wikiEffectZh": "在你的回合开始时，将 1 张小刀加入手牌。",
+    "wikiEffectUpZh": "固有。在你的回合开始时，将 1 张小刀加入手牌。",
+    "keywords": [
+      "innate"
+    ]
+  },
+  "Leg Sweep": {
+    "wikiEffectZh": "施加 2 层虚弱，获得 11 点格挡。",
+    "wikiEffectUpZh": "施加 3 层虚弱，获得 14 点格挡。",
+    "keywords": []
+  },
+  "Malaise": {
+    "wikiEffectZh": "敌人失去 X 点力量，并施加 X 层虚弱。消耗。",
+    "wikiEffectUpZh": "敌人失去 X+1 点力量，并施加 X+1 层虚弱。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Masterful Stab": {
+    "wikiEffectZh": "本次战斗中你每失去过一次生命，这张牌的费用便提高 1 点。造成 12 点伤害。",
+    "wikiEffectUpZh": "本次战斗中你每失去过一次生命，这张牌的费用便提高 1 点。造成 16 点伤害。",
+    "keywords": []
+  },
+  "Neutralize": {
+    "wikiEffectZh": "造成 3 点伤害，施加 1 层虚弱。",
+    "wikiEffectUpZh": "造成 4 点伤害，施加 2 层虚弱。",
+    "keywords": []
+  },
+  "Night Terror": {
+    "wikiEffectZh": "选择一张卡牌。下回合，将 3 张该牌的复制加入手牌。消耗。",
+    "wikiEffectUpZh": "费用变为 2。选择一张卡牌。下回合，将 3 张该牌的复制加入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Noxious Fumes": {
+    "wikiEffectZh": "在你的回合开始时，对所有敌人施加 2 层中毒。",
+    "wikiEffectUpZh": "在你的回合开始时，对所有敌人施加 3 层中毒。",
+    "keywords": []
+  },
+  "Outmaneuver": {
+    "wikiEffectZh": "下回合获得 2 点能量。",
+    "wikiEffectUpZh": "下回合获得 3 点能量。",
+    "keywords": []
+  },
+  "Phantasmal Killer": {
+    "wikiEffectZh": "下回合内，你的攻击牌造成双倍伤害。",
+    "wikiEffectUpZh": "费用变为 0。下回合内，你的攻击牌造成双倍伤害。",
+    "keywords": []
+  },
+  "PiercingWail": {
+    "wikiEffectZh": "所有敌人本回合失去 6 点力量。消耗。",
+    "wikiEffectUpZh": "所有敌人本回合失去 8 点力量。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Poisoned Stab": {
+    "wikiEffectZh": "造成 6 点伤害，施加 3 层中毒。",
+    "wikiEffectUpZh": "造成 8 点伤害，施加 4 层中毒。",
+    "keywords": []
+  },
+  "Predator": {
+    "wikiEffectZh": "造成 15 点伤害。下回合额外抽 2 张卡牌。",
+    "wikiEffectUpZh": "造成 20 点伤害。下回合额外抽 2 张卡牌。",
+    "keywords": []
+  },
+  "Prepared": {
+    "wikiEffectZh": "抽 1 张卡牌，弃置 1 张卡牌。",
+    "wikiEffectUpZh": "抽 2 张卡牌，弃置 2 张卡牌。",
+    "keywords": []
+  },
+  "Quick Slash": {
+    "wikiEffectZh": "造成 8 点伤害，抽 1 张卡牌。",
+    "wikiEffectUpZh": "造成 12 点伤害，抽 1 张卡牌。",
+    "keywords": []
+  },
+  "Reflex": {
+    "wikiEffectZh": "不可打出。若这张牌从手牌中被弃置，抽 2 张卡牌。",
+    "wikiEffectUpZh": "不可打出。若这张牌从手牌中被弃置，抽 3 张卡牌。",
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Riddle With Holes": {
+    "wikiEffectZh": "造成 5 次、每次 3 点伤害。",
+    "wikiEffectUpZh": "造成 5 次、每次 4 点伤害。",
+    "keywords": []
+  },
+  "Setup": {
+    "wikiEffectZh": "将手牌中的一张卡牌置于抽牌堆顶部，其费用降为 0 直到被打出。",
+    "wikiEffectUpZh": "费用变为 0。将手牌中的一张卡牌置于抽牌堆顶部，其费用降为 0 直到被打出。",
+    "keywords": []
+  },
+  "Skewer": {
+    "wikiEffectZh": "造成 X 次、每次 7 点伤害。",
+    "wikiEffectUpZh": "造成 X 次、每次 10 点伤害。",
+    "keywords": []
+  },
+  "Slice": {
+    "wikiEffectZh": "造成 6 点伤害。",
+    "wikiEffectUpZh": "造成 9 点伤害。",
+    "keywords": []
+  },
+  "Underhanded Strike": {
+    "wikiEffectZh": "造成 12 点伤害。若你本回合弃置过卡牌，获得 2 点能量。",
+    "wikiEffectUpZh": "造成 16 点伤害。若你本回合弃置过卡牌，获得 2 点能量。",
+    "keywords": []
+  },
+  "Storm of Steel": {
+    "wikiEffectZh": "弃置你的手牌，每弃置一张卡牌便将 1 张小刀加入手牌。",
+    "wikiEffectUpZh": "弃置你的手牌，每弃置一张卡牌便将 1 张升级后的小刀加入手牌。",
+    "keywords": []
+  },
+  "Strike_G": {
+    "wikiEffectZh": "造成 6 点伤害。",
+    "wikiEffectUpZh": "造成 9 点伤害。",
+    "keywords": [
+      "strike"
+    ]
+  },
+  "Sucker Punch": {
+    "wikiEffectZh": "造成 7 点伤害，施加 1 层虚弱。",
+    "wikiEffectUpZh": "造成 9 点伤害，施加 2 层虚弱。",
+    "keywords": []
+  },
+  "Survivor": {
+    "wikiEffectZh": "获得 8 点格挡，弃置 1 张卡牌。",
+    "wikiEffectUpZh": "获得 11 点格挡，弃置 1 张卡牌。",
+    "keywords": []
+  },
+  "Tactician": {
+    "wikiEffectZh": "不可打出。若这张牌从手牌中被弃置，获得 1 点能量。",
+    "wikiEffectUpZh": "不可打出。若这张牌从手牌中被弃置，获得 2 点能量。",
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Terror": {
+    "wikiEffectZh": "施加 99 层易伤。消耗。",
+    "wikiEffectUpZh": "费用变为 0。施加 99 层易伤。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Tools of the Trade": {
+    "wikiEffectZh": "在你的回合开始时，抽 1 张卡牌并弃置 1 张卡牌。",
+    "wikiEffectUpZh": "费用变为 0。在你的回合开始时，抽 1 张卡牌并弃置 1 张卡牌。",
+    "keywords": []
+  },
+  "Unload": {
+    "wikiEffectZh": "造成 14 点伤害，弃置手牌中所有非攻击牌。",
+    "wikiEffectUpZh": "造成 18 点伤害，弃置手牌中所有非攻击牌。",
+    "keywords": []
+  },
+  "Well Laid Plans": {
+    "wikiEffectZh": "在你的回合结束时，保留最多 1 张手牌。",
+    "wikiEffectUpZh": "在你的回合结束时，保留最多 2 张手牌。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "Wraith Form v2": {
+    "wikiEffectZh": "获得 2 层无实体。在你的回合结束时，失去 1 点敏捷。",
+    "wikiEffectUpZh": "获得 3 层无实体。在你的回合结束时，失去 1 点敏捷。",
+    "keywords": []
+  },
+  "Shiv": {
+    "wikiEffectZh": "造成 4 点伤害。消耗。",
+    "wikiEffectUpZh": "造成 6 点伤害。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Strike_B": {
+    "wikiEffectZh": "造成 6 点伤害。",
+    "wikiEffectUpZh": "造成 9 点伤害。",
+    "keywords": []
+  },
+  "Defend_B": {
+    "wikiEffectZh": "获得 5 点格挡。",
+    "wikiEffectUpZh": "获得 8 点格挡。",
+    "keywords": []
+  },
+  "Zap": {
+    "wikiEffectZh": "生成 1 个闪电充能球。",
+    "wikiEffectUpZh": "生成 1 个闪电充能球。",
+    "keywords": []
+  },
+  "Dualcast": {
+    "wikiEffectZh": "激发你最右侧的充能球 2 次。",
+    "wikiEffectUpZh": "激发你最右侧的充能球 2 次。",
+    "keywords": []
+  },
+  "Ball Lightning": {
+    "wikiEffectZh": "造成 7 点伤害。生成 1 个闪电充能球。",
+    "wikiEffectUpZh": "造成 10 点伤害。生成 1 个闪电充能球。",
+    "keywords": []
+  },
+  "Barrage": {
+    "wikiEffectZh": "本场战斗中每生成过一个充能球，就造成 4 点伤害。",
+    "wikiEffectUpZh": "本场战斗中每生成过一个充能球，就造成 6 点伤害。",
+    "keywords": []
+  },
+  "Beam Cell": {
+    "wikiEffectZh": "造成 3 点伤害。施加 1 层易伤。",
+    "wikiEffectUpZh": "造成 4 点伤害。施加 2 层易伤。",
+    "keywords": []
+  },
+  "Conserve Battery": {
+    "wikiEffectZh": "获得 7 点格挡。下回合获得 1 点能量。",
+    "wikiEffectUpZh": "获得 10 点格挡。下回合获得 1 点能量。",
+    "keywords": []
+  },
+  "Gash": {
+    "wikiEffectZh": "造成 3 点伤害。本场战斗中所有爪击的伤害提高 2 点。",
+    "wikiEffectUpZh": "造成 5 点伤害。本场战斗中所有爪击的伤害提高 2 点。",
+    "keywords": []
+  },
+  "Cold Snap": {
+    "wikiEffectZh": "造成 6 点伤害。生成 1 个冰霜充能球。",
+    "wikiEffectUpZh": "造成 9 点伤害。生成 1 个冰霜充能球。",
+    "keywords": []
+  },
+  "Compile Driver": {
+    "wikiEffectZh": "造成 7 点伤害。你每拥有一种不同类型的充能球，抽 1 张牌。",
+    "wikiEffectUpZh": "造成 10 点伤害。你每拥有一种不同类型的充能球，抽 1 张牌。",
+    "keywords": []
+  },
+  "Coolheaded": {
+    "wikiEffectZh": "生成 1 个冰霜充能球。抽 1 张牌。",
+    "wikiEffectUpZh": "生成 1 个冰霜充能球。抽 2 张牌。",
+    "keywords": []
+  },
+  "Go for the Eyes": {
+    "wikiEffectZh": "造成 3 点伤害。若敌人意图为攻击，施加 1 层虚弱。",
+    "wikiEffectUpZh": "造成 4 点伤害。若敌人意图为攻击，施加 2 层虚弱。",
+    "keywords": []
+  },
+  "Hologram": {
+    "wikiEffectZh": "获得 3 点格挡。将弃牌堆中的一张牌放入手牌。消耗。",
+    "wikiEffectUpZh": "获得 5 点格挡。将弃牌堆中的一张牌放入手牌。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Leap": {
+    "wikiEffectZh": "获得 9 点格挡。",
+    "wikiEffectUpZh": "获得 12 点格挡。",
+    "keywords": []
+  },
+  "Rebound": {
+    "wikiEffectZh": "造成 9 点伤害。本回合你打出的下一张牌将被置于抽牌堆顶。",
+    "wikiEffectUpZh": "造成 12 点伤害。本回合你打出的下一张牌将被置于抽牌堆顶。",
+    "keywords": []
+  },
+  "Redo": {
+    "wikiEffectZh": "激发你最右侧的充能球。然后生成一个刚才被激发的充能球。",
+    "wikiEffectUpZh": "激发你最右侧的充能球。然后生成一个刚才被激发的充能球。",
+    "keywords": []
+  },
+  "Stack": {
+    "wikiEffectZh": "获得等同于弃牌堆中牌数的格挡。",
+    "wikiEffectUpZh": "获得等同于（弃牌堆中的牌数 +3）的格挡。",
+    "keywords": []
+  },
+  "Steam": {
+    "wikiEffectZh": "获得 6 点格挡。此牌每被打出一次，本场战斗中其基础格挡降低 1 点。",
+    "wikiEffectUpZh": "获得 8 点格挡。此牌每被打出一次，本场战斗中其基础格挡降低 1 点。",
+    "keywords": []
+  },
+  "Streamline": {
+    "wikiEffectZh": "造成 15 点伤害。此牌每被打出一次，本场战斗中其费用降低 1 点。",
+    "wikiEffectUpZh": "造成 20 点伤害。此牌每被打出一次，本场战斗中其费用降低 1 点。",
+    "keywords": []
+  },
+  "Sweeping Beam": {
+    "wikiEffectZh": "对所有敌人造成 6 点伤害。抽 1 张牌。",
+    "wikiEffectUpZh": "对所有敌人造成 9 点伤害。抽 1 张牌。",
+    "keywords": []
+  },
+  "Turbo": {
+    "wikiEffectZh": "获得 2 点能量。将一张「虚空」置入弃牌堆。",
+    "wikiEffectUpZh": "获得 3 点能量。将一张「虚空」置入弃牌堆。",
+    "keywords": []
+  },
+  "Aggregate": {
+    "wikiEffectZh": "抽牌堆中每有 4 张牌，获得 1 点能量。",
+    "wikiEffectUpZh": "抽牌堆中每有 3 张牌，获得 1 点能量。",
+    "keywords": []
+  },
+  "Auto Shields": {
+    "wikiEffectZh": "若你没有格挡，获得 11 点格挡。",
+    "wikiEffectUpZh": "若你没有格挡，获得 15 点格挡。",
+    "keywords": []
+  },
+  "Blizzard": {
+    "wikiEffectZh": "对所有敌人造成 2 倍于本场战斗中已生成的冰霜充能球总数的伤害。",
+    "wikiEffectUpZh": "对所有敌人造成 3 倍于本场战斗中已生成的冰霜充能球总数的伤害。",
+    "keywords": []
+  },
+  "BootSequence": {
+    "wikiEffectZh": "固有。获得 10 点格挡。消耗。",
+    "wikiEffectUpZh": "固有。获得 13 点格挡。消耗。",
+    "keywords": [
+      "innate",
+      "exhaust"
+    ]
+  },
+  "Lockon": {
+    "wikiEffectZh": "造成 8 点伤害。施加 2 层跟踪锁定。",
+    "wikiEffectUpZh": "造成 11 点伤害。施加 3 层跟踪锁定。",
+    "keywords": []
+  },
+  "Capacitor": {
+    "wikiEffectZh": "获得 2 个充能球栏位。",
+    "wikiEffectUpZh": "获得 3 个充能球栏位。",
+    "keywords": []
+  },
+  "Chaos": {
+    "wikiEffectZh": "生成 1 个随机充能球。",
+    "wikiEffectUpZh": "生成 2 个随机充能球。",
+    "keywords": []
+  },
+  "Chill": {
+    "wikiEffectZh": "场上每有 1 个敌人，生成 1 个冰霜充能球。消耗。",
+    "wikiEffectUpZh": "固有。场上每有 1 个敌人，生成 1 个冰霜充能球。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Consume": {
+    "wikiEffectZh": "获得 2 点集中。失去 1 个充能球栏位。",
+    "wikiEffectUpZh": "获得 3 点集中。失去 1 个充能球栏位。",
+    "keywords": []
+  },
+  "Darkness": {
+    "wikiEffectZh": "生成 1 个黑暗充能球。",
+    "wikiEffectUpZh": "生成 1 个黑暗充能球。引发所有黑暗充能球的被动效果。",
+    "keywords": []
+  },
+  "Defragment": {
+    "wikiEffectZh": "获得 1 点集中。",
+    "wikiEffectUpZh": "获得 2 点集中。",
+    "keywords": []
+  },
+  "Doom and Gloom": {
+    "wikiEffectZh": "对所有敌人造成 10 点伤害。生成 1 个黑暗充能球。",
+    "wikiEffectUpZh": "对所有敌人造成 14 点伤害。生成 1 个黑暗充能球。",
+    "keywords": []
+  },
+  "Double Energy": {
+    "wikiEffectZh": "将你的能量翻倍。消耗。",
+    "wikiEffectUpZh": "将你的能量翻倍。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Undo": {
+    "wikiEffectZh": "获得 13 点格挡。本回合保留你的手牌。",
+    "wikiEffectUpZh": "获得 16 点格挡。本回合保留你的手牌。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "FTL": {
+    "wikiEffectZh": "造成 5 点伤害。若本回合你打出的牌少于 3 张，抽 1 张牌。",
+    "wikiEffectUpZh": "造成 6 点伤害。若本回合你打出的牌少于 4 张，抽 1 张牌。",
+    "keywords": []
+  },
+  "Fission": {
+    "wikiEffectZh": "移除你所有的充能球。每移除 1 个充能球，获得 1 点能量并抽 1 张牌。消耗。",
+    "wikiEffectUpZh": "激发你所有的充能球。每激发 1 个充能球，获得 1 点能量并抽 1 张牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Force Field": {
+    "wikiEffectZh": "本场战斗中每打出一张能力牌，此牌费用降低 1 点。获得 12 点格挡。",
+    "wikiEffectUpZh": "本场战斗中每打出一张能力牌，此牌费用降低 1 点。获得 16 点格挡。",
+    "keywords": []
+  },
+  "Fusion": {
+    "wikiEffectZh": "生成 1 个等离子充能球。",
+    "wikiEffectUpZh": "生成 1 个等离子充能球。",
+    "keywords": []
+  },
+  "Genetic Algorithm": {
+    "wikiEffectZh": "获得 1 点格挡。此牌每被打出一次，其格挡值在本局游戏中永久提高 2 点。消耗。",
+    "wikiEffectUpZh": "获得 1 点格挡。此牌每被打出一次，其格挡值在本局游戏中永久提高 3 点。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Glacier": {
+    "wikiEffectZh": "获得 7 点格挡。生成 2 个冰霜充能球。",
+    "wikiEffectUpZh": "获得 10 点格挡。生成 2 个冰霜充能球。",
+    "keywords": []
+  },
+  "Heatsinks": {
+    "wikiEffectZh": "每打出一张能力牌，抽 1 张牌。",
+    "wikiEffectUpZh": "每打出一张能力牌，抽 2 张牌。",
+    "keywords": []
+  },
+  "Hello World": {
+    "wikiEffectZh": "回合开始时，将一张随机普通牌加入手牌。",
+    "wikiEffectUpZh": "固有。回合开始时，将一张随机普通牌加入手牌。",
+    "keywords": []
+  },
+  "Loop": {
+    "wikiEffectZh": "回合开始时，触发你最右侧充能球的被动效果 1 次。",
+    "wikiEffectUpZh": "回合开始时，触发你最右侧充能球的被动效果 2 次。",
+    "keywords": []
+  },
+  "Melter": {
+    "wikiEffectZh": "移除一名敌人的所有格挡。造成 10 点伤害。",
+    "wikiEffectUpZh": "移除一名敌人的所有格挡。造成 14 点伤害。",
+    "keywords": []
+  },
+  "Steam Power": {
+    "wikiEffectZh": "抽 2 张牌。将一张「灼伤」置入弃牌堆。",
+    "wikiEffectUpZh": "抽 3 张牌。将一张「灼伤」置入弃牌堆。",
+    "keywords": []
+  },
+  "Recycle": {
+    "wikiEffectZh": "消耗一张牌。获得等同于其费用的能量。",
+    "wikiEffectUpZh": "消耗一张牌。获得等同于其费用的能量。",
+    "keywords": []
+  },
+  "Reinforced Body": {
+    "wikiEffectZh": "获得 7 点格挡 X 次。",
+    "wikiEffectUpZh": "获得 9 点格挡 X 次。",
+    "keywords": []
+  },
+  "Reprogram": {
+    "wikiEffectZh": "失去 1 点集中。获得 1 点力量。获得 1 点敏捷。",
+    "wikiEffectUpZh": "失去 2 点集中。获得 2 点力量。获得 2 点敏捷。",
+    "keywords": []
+  },
+  "Rip and Tear": {
+    "wikiEffectZh": "对随机敌人造成 7 点伤害，共 2 次。",
+    "wikiEffectUpZh": "对随机敌人造成 9 点伤害，共 2 次。",
+    "keywords": []
+  },
+  "Scrape": {
+    "wikiEffectZh": "造成 7 点伤害。抽 4 张牌。弃置以此法抽到的所有费用不为 0 的牌。",
+    "wikiEffectUpZh": "造成 10 点伤害。抽 5 张牌。弃置以此法抽到的所有费用不为 0 的牌。",
+    "keywords": []
+  },
+  "Self Repair": {
+    "wikiEffectZh": "战斗结束时，回复 7 点生命。",
+    "wikiEffectUpZh": "战斗结束时，回复 10 点生命。",
+    "keywords": []
+  },
+  "Skim": {
+    "wikiEffectZh": "抽 3 张牌。",
+    "wikiEffectUpZh": "抽 4 张牌。",
+    "keywords": []
+  },
+  "Static Discharge": {
+    "wikiEffectZh": "每当你受到未被格挡的攻击伤害，生成 1 个闪电充能球。",
+    "wikiEffectUpZh": "每当你受到未被格挡的攻击伤害，生成 2 个闪电充能球。",
+    "keywords": []
+  },
+  "Storm": {
+    "wikiEffectZh": "每打出一张能力牌，生成 1 个闪电充能球。",
+    "wikiEffectUpZh": "固有。每打出一张能力牌，生成 1 个闪电充能球。",
+    "keywords": []
+  },
+  "Sunder": {
+    "wikiEffectZh": "造成 24 点伤害。若此牌击杀敌人，获得 3 点能量。",
+    "wikiEffectUpZh": "造成 32 点伤害。若此牌击杀敌人，获得 3 点能量。",
+    "keywords": []
+  },
+  "Tempest": {
+    "wikiEffectZh": "生成 X 个闪电充能球。消耗。",
+    "wikiEffectUpZh": "生成 X+1 个闪电充能球。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "White Noise": {
+    "wikiEffectZh": "将一张随机能力牌加入手牌。本回合它的费用为 0。消耗。",
+    "wikiEffectUpZh": "将一张随机能力牌加入手牌。本回合它的费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "All For One": {
+    "wikiEffectZh": "造成 10 点伤害。将弃牌堆中所有 0 费牌放入手牌。",
+    "wikiEffectUpZh": "造成 14 点伤害。将弃牌堆中所有 0 费牌放入手牌。",
+    "keywords": []
+  },
+  "Amplify": {
+    "wikiEffectZh": "本回合，你的下一张能力牌会打出两次。",
+    "wikiEffectUpZh": "本回合，你的下两张能力牌会打出两次。",
+    "keywords": []
+  },
+  "Biased Cognition": {
+    "wikiEffectZh": "获得 4 点集中。每回合开始时，失去 1 点集中。",
+    "wikiEffectUpZh": "获得 5 点集中。每回合开始时，失去 1 点集中。",
+    "keywords": []
+  },
+  "Buffer": {
+    "wikiEffectZh": "阻止你下一次将要损失的生命值。",
+    "wikiEffectUpZh": "阻止你接下来 2 次将要损失的生命值。",
+    "keywords": []
+  },
+  "Core Surge": {
+    "wikiEffectZh": "造成 11 点伤害。获得 1 层人工制品。消耗。",
+    "wikiEffectUpZh": "造成 15 点伤害。获得 1 层人工制品。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Creative AI": {
+    "wikiEffectZh": "回合开始时，将一张随机能力牌加入手牌。",
+    "wikiEffectUpZh": "回合开始时，将一张随机能力牌加入手牌。",
+    "keywords": []
+  },
+  "Echo Form": {
+    "wikiEffectZh": "每回合你打出的第一张牌会打出两次。虚无。",
+    "wikiEffectUpZh": "每回合你打出的第一张牌会打出两次。",
+    "keywords": [
+      "ethereal"
+    ]
+  },
+  "Electrodynamics": {
+    "wikiEffectZh": "闪电充能球现在会击中所有敌人。生成 2 个闪电充能球。",
+    "wikiEffectUpZh": "闪电充能球现在会击中所有敌人。生成 3 个闪电充能球。",
+    "keywords": []
+  },
+  "Hyperbeam": {
+    "wikiEffectZh": "对所有敌人造成 26 点伤害。失去 3 点集中。",
+    "wikiEffectUpZh": "对所有敌人造成 34 点伤害。失去 3 点集中。",
+    "keywords": []
+  },
+  "Machine Learning": {
+    "wikiEffectZh": "每回合开始时，额外抽 1 张牌。",
+    "wikiEffectUpZh": "固有。每回合开始时，额外抽 1 张牌。",
+    "keywords": []
+  },
+  "Meteor Strike": {
+    "wikiEffectZh": "造成 24 点伤害。生成 3 个等离子充能球。",
+    "wikiEffectUpZh": "造成 30 点伤害。生成 3 个等离子充能球。",
+    "keywords": []
+  },
+  "Multi-Cast": {
+    "wikiEffectZh": "激发你最右侧的充能球 X 次。",
+    "wikiEffectUpZh": "激发你最右侧的充能球 X+1 次。",
+    "keywords": []
+  },
+  "Rainbow": {
+    "wikiEffectZh": "生成闪电、冰霜、黑暗充能球各 1 个。消耗。",
+    "wikiEffectUpZh": "生成闪电、冰霜、黑暗充能球各 1 个。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Reboot": {
+    "wikiEffectZh": "将你所有未消耗的牌重新洗入抽牌堆。抽 4 张牌。消耗。",
+    "wikiEffectUpZh": "将你所有未消耗的牌重新洗入抽牌堆。抽 6 张牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Seek": {
+    "wikiEffectZh": "从抽牌堆中将 1 张牌放入手牌。消耗。",
+    "wikiEffectUpZh": "从抽牌堆中将 2 张牌放入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Thunder Strike": {
+    "wikiEffectZh": "本场战斗中每生成过一个闪电充能球，就对随机敌人造成 7 点伤害。",
+    "wikiEffectUpZh": "本场战斗中每生成过一个闪电充能球，就对随机敌人造成 9 点伤害。",
+    "keywords": []
+  },
+  "Alpha": {
+    "wikiEffectZh": "将 1 张贝塔(Beta) 洗入抽牌堆。消耗。",
+    "wikiEffectUpZh": "固有。将 1 张贝塔(Beta) 洗入抽牌堆。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "BattleHymn": {
+    "wikiEffectZh": "每回合开始时，将 1 张天谴(Smite) 加入手牌。",
+    "wikiEffectUpZh": "固有。每回合开始时，将 1 张天谴(Smite) 加入手牌。",
+    "keywords": []
+  },
+  "Blasphemy": {
+    "wikiEffectZh": "进入神性(Divinity) 姿态。下一回合死亡。消耗。",
+    "wikiEffectUpZh": "保留。进入神性(Divinity) 姿态。下一回合死亡。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "BowlingBash": {
+    "wikiEffectZh": "对战场上的每个敌人造成 7 点伤害。",
+    "wikiEffectUpZh": "对战场上的每个敌人造成 10 点伤害。",
+    "keywords": []
+  },
+  "Brilliance": {
+    "wikiEffectZh": "造成 12 点伤害。额外造成等同本场战斗中已获得的颂歌(Mantra) 层数的伤害。",
+    "wikiEffectUpZh": "造成 16 点伤害。额外造成等同本场战斗中已获得的颂歌(Mantra) 层数的伤害。",
+    "keywords": []
+  },
+  "CarveReality": {
+    "wikiEffectZh": "造成 6 点伤害。将 1 张天谴(Smite) 加入手牌。",
+    "wikiEffectUpZh": "造成 10 点伤害。将 1 张天谴(Smite) 加入手牌。",
+    "keywords": []
+  },
+  "Collect": {
+    "wikiEffectZh": "在你接下来 X 个回合的回合开始时，各将 1 张奇迹+(Miracle+) 放入手牌。消耗。",
+    "wikiEffectUpZh": "在你接下来 X+1 个回合的回合开始时，各将 1 张奇迹+(Miracle+) 放入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Conclude": {
+    "wikiEffectZh": "对所有敌人造成 12 点伤害。结束你的回合。",
+    "wikiEffectUpZh": "对所有敌人造成 16 点伤害。结束你的回合。",
+    "keywords": []
+  },
+  "ConjureBlade": {
+    "wikiEffectZh": "将 1 张放逐者(Expurger) 洗入抽牌堆（X 费攻击牌，造成 9 点伤害 X 次）。消耗。",
+    "wikiEffectUpZh": "将 1 张放逐者+(Expunger+) 洗入抽牌堆（X 费攻击牌，造成 15 点伤害 X+1 次）。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Consecrate": {
+    "wikiEffectZh": "对所有敌人造成 5 点伤害。",
+    "wikiEffectUpZh": "对所有敌人造成 8 点伤害。",
+    "keywords": []
+  },
+  "Crescendo": {
+    "wikiEffectZh": "保留。进入愤怒(Wrath) 姿态。消耗。",
+    "wikiEffectUpZh": "保留。进入愤怒(Wrath) 姿态。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "CrushJoints": {
+    "wikiEffectZh": "造成 8 点伤害。若本场战斗中打出的上一张牌是技能牌，施加 1 层易伤(Vulnerable)。",
+    "wikiEffectUpZh": "造成 10 点伤害。若本场战斗中打出的上一张牌是技能牌，施加 2 层易伤(Vulnerable)。",
+    "keywords": []
+  },
+  "CutThroughFate": {
+    "wikiEffectZh": "造成 7 点伤害。占卜(Scry) 2。抽 1 张牌。",
+    "wikiEffectUpZh": "造成 9 点伤害。占卜(Scry) 3。抽 1 张牌。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  "DeceiveReality": {
+    "wikiEffectZh": "获得 4 点格挡。将 1 张安全(Safety) 加入手牌。",
+    "wikiEffectUpZh": "获得 7 点格挡。将 1 张安全(Safety) 加入手牌。",
+    "keywords": []
+  },
+  "Defend_P": {
+    "wikiEffectZh": "获得 5 点格挡。",
+    "wikiEffectUpZh": "获得 8 点格挡。",
+    "keywords": []
+  },
+  "DeusExMachina": {
+    "wikiEffectZh": "不可打出(Unplayable)。抽到该牌时，将 2 张奇迹(Miracle) 加入手牌并消耗。",
+    "wikiEffectUpZh": "不可打出(Unplayable)。抽到该牌时，将 3 张奇迹(Miracle) 加入手牌并消耗。",
+    "keywords": [
+      "unplayable",
+      "exhaust"
+    ]
+  },
+  "DevaForm": {
+    "wikiEffectZh": "虚无(Ethereal)。回合开始时，获得 1 点能量，且该获得量每回合增加 1。",
+    "wikiEffectUpZh": "回合开始时，获得 1 点能量，且该获得量每回合增加 1。",
+    "keywords": [
+      "ethereal"
+    ]
+  },
+  "Devotion": {
+    "wikiEffectZh": "回合开始时，获得 2 层颂歌(Mantra)。",
+    "wikiEffectUpZh": "回合开始时，获得 3 层颂歌(Mantra)。",
+    "keywords": []
+  },
+  "EmptyBody": {
+    "wikiEffectZh": "获得 7 点格挡。退出当前姿态。",
+    "wikiEffectUpZh": "获得 10 点格挡。退出当前姿态。",
+    "keywords": []
+  },
+  "EmptyFist": {
+    "wikiEffectZh": "造成 9 点伤害。退出当前姿态。",
+    "wikiEffectUpZh": "造成 14 点伤害。退出当前姿态。",
+    "keywords": []
+  },
+  "EmptyMind": {
+    "wikiEffectZh": "退出当前姿态。抽 2 张牌。",
+    "wikiEffectUpZh": "退出当前姿态。抽 3 张牌。",
+    "keywords": []
+  },
+  "Eruption": {
+    "wikiEffectZh": "造成 9 点伤害。进入愤怒(Wrath) 姿态。",
+    "wikiEffectUpZh": "造成 9 点伤害。进入愤怒(Wrath) 姿态。",
+    "keywords": []
+  },
+  "Establishment": {
+    "wikiEffectZh": "每当有牌被保留(Retain)，其费用降低 1。",
+    "wikiEffectUpZh": "固有。每当有牌被保留(Retain)，其费用降低 1。",
+    "keywords": []
+  },
+  "Evaluate": {
+    "wikiEffectZh": "获得 6 点格挡。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "wikiEffectUpZh": "获得 10 点格挡。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": []
+  },
+  "Fasting2": {
+    "wikiEffectZh": "获得 3 点力量(Strength)。获得 3 点敏捷(Dexterity)。每回合开始时获得的能量减少 1 点。",
+    "wikiEffectUpZh": "获得 4 点力量(Strength)。获得 4 点敏捷(Dexterity)。每回合开始时获得的能量减少 1 点。",
+    "keywords": []
+  },
+  "FearNoEvil": {
+    "wikiEffectZh": "造成 8 点伤害。若敌人意图为攻击，进入平静(Calm) 姿态。",
+    "wikiEffectUpZh": "造成 11 点伤害。若敌人意图为攻击，进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  "FlurryOfBlows": {
+    "wikiEffectZh": "造成 4 点伤害。每当你切换姿态，将该牌从弃牌堆返回手牌。",
+    "wikiEffectUpZh": "造成 6 点伤害。每当你切换姿态，将该牌从弃牌堆返回手牌。",
+    "keywords": []
+  },
+  "FlyingSleeves": {
+    "wikiEffectZh": "保留。造成 4 点伤害，连续 2 次。",
+    "wikiEffectUpZh": "保留。造成 6 点伤害，连续 2 次。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "FollowUp": {
+    "wikiEffectZh": "造成 7 点伤害。若打出的上一张牌是攻击牌，获得 1 点能量。",
+    "wikiEffectUpZh": "造成 11 点伤害。若打出的上一张牌是攻击牌，获得 1 点能量。",
+    "keywords": []
+  },
+  "ForeignInfluence": {
+    "wikiEffectZh": "从 3 张任意颜色的攻击牌中选择 1 张加入手牌。消耗。",
+    "wikiEffectUpZh": "从 3 张任意颜色的攻击牌中选择 1 张加入手牌，该牌本回合费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Wireheading": {
+    "wikiEffectZh": "回合开始时，占卜(Scry) 3。",
+    "wikiEffectUpZh": "回合开始时，占卜(Scry) 4。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  "Halt": {
+    "wikiEffectZh": "获得 3 点格挡。若你处于愤怒(Wrath) 姿态，额外获得 9 点格挡。",
+    "wikiEffectUpZh": "获得 4 点格挡。若你处于愤怒(Wrath) 姿态，额外获得 14 点格挡。",
+    "keywords": []
+  },
+  "Indignation": {
+    "wikiEffectZh": "若你处于愤怒(Wrath) 姿态，对所有敌人施加 3 层易伤(Vulnerable)；否则进入愤怒(Wrath) 姿态。",
+    "wikiEffectUpZh": "若你处于愤怒(Wrath) 姿态，对所有敌人施加 5 层易伤(Vulnerable)；否则进入愤怒(Wrath) 姿态。",
+    "keywords": []
+  },
+  "InnerPeace": {
+    "wikiEffectZh": "若你处于平静(Calm) 姿态，抽 3 张牌；否则进入平静(Calm) 姿态。",
+    "wikiEffectUpZh": "若你处于平静(Calm) 姿态，抽 4 张牌；否则进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  "Judgement": {
+    "wikiEffectZh": "若敌人 HP 不超过 30，将其 HP 置为 0。",
+    "wikiEffectUpZh": "若敌人 HP 不超过 40，将其 HP 置为 0。",
+    "keywords": []
+  },
+  "JustLucky": {
+    "wikiEffectZh": "占卜(Scry) 1。获得 2 点格挡。造成 3 点伤害。",
+    "wikiEffectUpZh": "占卜(Scry) 2。获得 3 点格挡。造成 4 点伤害。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  "LessonLearned": {
+    "wikiEffectZh": "造成 10 点伤害。若此伤害为致命一击，升级你卡组中的 1 张随机牌。消耗。",
+    "wikiEffectUpZh": "造成 13 点伤害。若此伤害为致命一击，升级你卡组中的 1 张随机牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "LikeWater": {
+    "wikiEffectZh": "回合结束时，若你处于平静(Calm) 姿态，获得 5 点格挡。",
+    "wikiEffectUpZh": "回合结束时，若你处于平静(Calm) 姿态，获得 7 点格挡。",
+    "keywords": []
+  },
+  "MasterReality": {
+    "wikiEffectZh": "战斗中每当有卡牌被生成，升级该牌。",
+    "wikiEffectUpZh": "战斗中每当有卡牌被生成，升级该牌。",
+    "keywords": []
+  },
+  "Meditate": {
+    "wikiEffectZh": "将弃牌堆中的 1 张牌放入手牌并保留(Retain) 它。进入平静(Calm) 姿态。结束你的回合。",
+    "wikiEffectUpZh": "将弃牌堆中的 2 张牌放入手牌并保留(Retain) 它们。进入平静(Calm) 姿态。结束你的回合。",
+    "keywords": []
+  },
+  "MentalFortress": {
+    "wikiEffectZh": "每当你切换姿态，获得 4 点格挡。",
+    "wikiEffectUpZh": "每当你切换姿态，获得 6 点格挡。",
+    "keywords": []
+  },
+  "Nirvana": {
+    "wikiEffectZh": "每当你占卜(Scry)，获得 3 点格挡。",
+    "wikiEffectUpZh": "每当你占卜(Scry)，获得 4 点格挡。",
+    "keywords": []
+  },
+  "Omniscience": {
+    "wikiEffectZh": "选择抽牌堆中的 1 张牌。将选中的牌打出两次并消耗。消耗。",
+    "wikiEffectUpZh": "选择抽牌堆中的 1 张牌。将选中的牌打出两次并消耗。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Perseverance": {
+    "wikiEffectZh": "保留。获得 5 点格挡。每当该牌被保留(Retain)，其格挡提高 2 点。",
+    "wikiEffectUpZh": "保留。获得 7 点格挡。每当该牌被保留(Retain)，其格挡提高 3 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "Pray": {
+    "wikiEffectZh": "获得 3 层颂歌(Mantra)。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "wikiEffectUpZh": "获得 4 层颂歌(Mantra)。将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": []
+  },
+  "PathToVictory": {
+    "wikiEffectZh": "施加 8 层印记(Mark)。所有敌人失去等同其印记(Mark) 层数的 HP。",
+    "wikiEffectUpZh": "施加 11 层印记(Mark)。所有敌人失去等同其印记(Mark) 层数的 HP。",
+    "keywords": []
+  },
+  "Prostrate": {
+    "wikiEffectZh": "获得 2 层颂歌(Mantra)。获得 4 点格挡。",
+    "wikiEffectUpZh": "获得 3 层颂歌(Mantra)。获得 4 点格挡。",
+    "keywords": []
+  },
+  "Protect": {
+    "wikiEffectZh": "保留。获得 12 点格挡。",
+    "wikiEffectUpZh": "保留。获得 16 点格挡。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "Ragnarok": {
+    "wikiEffectZh": "对随机敌人造成 5 点伤害，共 5 次。",
+    "wikiEffectUpZh": "对随机敌人造成 6 点伤害，共 6 次。",
+    "keywords": []
+  },
+  "ReachHeaven": {
+    "wikiEffectZh": "造成 10 点伤害。将 1 张穿越暴力(Through Violence) 洗入抽牌堆。",
+    "wikiEffectUpZh": "造成 15 点伤害。将 1 张穿越暴力(Through Violence) 洗入抽牌堆。",
+    "keywords": []
+  },
+  "Adaptation": {
+    "wikiEffectZh": "每当你进入愤怒(Wrath) 姿态，抽 2 张牌。",
+    "wikiEffectUpZh": "每当你进入愤怒(Wrath) 姿态，抽 2 张牌。",
+    "keywords": []
+  },
+  "Sanctity": {
+    "wikiEffectZh": "获得 6 点格挡。若本场战斗中打出的上一张牌是技能牌，抽 2 张牌。",
+    "wikiEffectUpZh": "获得 9 点格挡。若本场战斗中打出的上一张牌是技能牌，抽 2 张牌。",
+    "keywords": []
+  },
+  "SandsOfTime": {
+    "wikiEffectZh": "保留。造成 20 点伤害。当该牌被保留(Retain) 时，本场战斗中其费用降低 1 点。",
+    "wikiEffectUpZh": "保留。造成 26 点伤害。当该牌被保留(Retain) 时，本场战斗中其费用降低 1 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "SashWhip": {
+    "wikiEffectZh": "造成 8 点伤害。若本场战斗中打出的上一张牌是攻击牌，施加 1 层虚弱(Weak)。",
+    "wikiEffectUpZh": "造成 10 点伤害。若本场战斗中打出的上一张牌是攻击牌，施加 2 层虚弱(Weak)。",
+    "keywords": []
+  },
+  "Scrawl": {
+    "wikiEffectZh": "抽牌直到手牌达到上限。消耗。",
+    "wikiEffectUpZh": "抽牌直到手牌达到上限。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "SignatureMove": {
+    "wikiEffectZh": "仅当该牌是你手牌中唯一的攻击牌时才能打出。造成 30 点伤害。",
+    "wikiEffectUpZh": "仅当该牌是你手牌中唯一的攻击牌时才能打出。造成 40 点伤害。",
+    "keywords": []
+  },
+  "Vengeance": {
+    "wikiEffectZh": "下回合开始时，进入愤怒(Wrath) 姿态并抽 2 张牌。",
+    "wikiEffectUpZh": "下回合开始时，进入愤怒(Wrath) 姿态并抽 3 张牌。",
+    "keywords": []
+  },
+  "SpiritShield": {
+    "wikiEffectZh": "手牌中每有 1 张牌，获得 3 点格挡。",
+    "wikiEffectUpZh": "手牌中每有 1 张牌，获得 4 点格挡。",
+    "keywords": []
+  },
+  "Strike_P": {
+    "wikiEffectZh": "造成 6 点伤害。",
+    "wikiEffectUpZh": "造成 9 点伤害。",
+    "keywords": [
+      "strike"
+    ]
+  },
+  "Study": {
+    "wikiEffectZh": "回合结束时，将 1 张洞察(Insight) 洗入抽牌堆。",
+    "wikiEffectUpZh": "回合结束时，将 1 张洞察(Insight) 洗入抽牌堆。",
+    "keywords": []
+  },
+  "Swivel": {
+    "wikiEffectZh": "获得 8 点格挡。你打出的下一张攻击牌费用为 0。",
+    "wikiEffectUpZh": "获得 11 点格挡。你打出的下一张攻击牌费用为 0。",
+    "keywords": []
+  },
+  "TalkToTheHand": {
+    "wikiEffectZh": "造成 5 点伤害。每当你攻击该敌人，获得 2 点格挡。消耗。",
+    "wikiEffectUpZh": "造成 7 点伤害。每当你攻击该敌人，获得 3 点格挡。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Tantrum": {
+    "wikiEffectZh": "造成 3 点伤害，共 3 次。进入愤怒(Wrath) 姿态。将该牌洗回抽牌堆。",
+    "wikiEffectUpZh": "造成 3 点伤害，共 4 次。进入愤怒(Wrath) 姿态。将该牌洗回抽牌堆。",
+    "keywords": []
+  },
+  "ThirdEye": {
+    "wikiEffectZh": "获得 7 点格挡。占卜(Scry) 3。",
+    "wikiEffectUpZh": "获得 9 点格挡。占卜(Scry) 5。",
+    "keywords": [
+      "scry"
+    ]
+  },
+  "ClearTheMind": {
+    "wikiEffectZh": "保留。进入平静(Calm) 姿态。消耗。",
+    "wikiEffectUpZh": "保留。进入平静(Calm) 姿态。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "Vault": {
+    "wikiEffectZh": "在本回合之后获得一个额外回合。结束你的回合。消耗。",
+    "wikiEffectUpZh": "在本回合之后获得一个额外回合。结束你的回合。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Vigilance": {
+    "wikiEffectZh": "获得 8 点格挡。进入平静(Calm) 姿态。",
+    "wikiEffectUpZh": "获得 12 点格挡。进入平静(Calm) 姿态。",
+    "keywords": []
+  },
+  "Wallop": {
+    "wikiEffectZh": "造成 9 点伤害。获得等同未被格挡的伤害数值的格挡。",
+    "wikiEffectUpZh": "造成 12 点伤害。获得等同未被格挡的伤害数值的格挡。",
+    "keywords": []
+  },
+  "WaveOfTheHand": {
+    "wikiEffectZh": "本回合中每当你获得格挡，对所有敌人施加 1 层虚弱(Weak)。",
+    "wikiEffectUpZh": "本回合中每当你获得格挡，对所有敌人施加 2 层虚弱(Weak)。",
+    "keywords": []
+  },
+  "Weave": {
+    "wikiEffectZh": "造成 4 点伤害。每当你占卜(Scry)，将该牌从弃牌堆返回手牌。",
+    "wikiEffectUpZh": "造成 6 点伤害。每当你占卜(Scry)，将该牌从弃牌堆返回手牌。",
+    "keywords": []
+  },
+  "WheelKick": {
+    "wikiEffectZh": "造成 15 点伤害。抽 2 张牌。",
+    "wikiEffectUpZh": "造成 20 点伤害。抽 2 张牌。",
+    "keywords": []
+  },
+  "WindmillStrike": {
+    "wikiEffectZh": "保留。造成 7 点伤害。当该牌被保留(Retain) 时，本场战斗中其伤害提高 4 点。",
+    "wikiEffectUpZh": "保留。造成 10 点伤害。当该牌被保留(Retain) 时，本场战斗中其伤害提高 5 点。",
+    "keywords": [
+      "retain"
+    ]
+  },
+  "Wish": {
+    "wikiEffectZh": "选择一项：获得 6 层重甲(Plated Armor)、获得 3 点力量(Strength)，或获得 25 金币。消耗。",
+    "wikiEffectUpZh": "选择一项：获得 8 层重甲(Plated Armor)、获得 4 点力量(Strength)，或获得 30 金币。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Worship": {
+    "wikiEffectZh": "获得 5 层颂歌(Mantra)。",
+    "wikiEffectUpZh": "保留。获得 5 层颂歌(Mantra)。",
+    "keywords": []
+  },
+  "WreathOfFlame": {
+    "wikiEffectZh": "你的下一张攻击牌额外造成 5 点伤害。",
+    "wikiEffectUpZh": "你的下一张攻击牌额外造成 8 点伤害。",
+    "keywords": []
+  },
+  "Bite": {
+    "wikiEffectZh": "造成 7 点伤害。回复 2 点生命。",
+    "wikiEffectUpZh": "造成 8 点伤害。回复 3 点生命。",
+    "keywords": []
+  },
+  "Dramatic Entrance": {
+    "wikiEffectZh": "固有。对所有敌人造成 8 点伤害。消耗。",
+    "wikiEffectUpZh": "固有。对所有敌人造成 12 点伤害。消耗。",
+    "keywords": [
+      "innate",
+      "exhaust"
+    ]
+  },
+  "Expunger": {
+    "wikiEffectZh": "造成 9 点伤害 X 次。",
+    "wikiEffectUpZh": "造成 15 点伤害 X 次。",
+    "keywords": []
+  },
+  "Flash of Steel": {
+    "wikiEffectZh": "造成 3 点伤害。抽 1 张牌。",
+    "wikiEffectUpZh": "造成 6 点伤害。抽 1 张牌。",
+    "keywords": []
+  },
+  "HandOfGreed": {
+    "wikiEffectZh": "造成 20 点伤害。若击杀敌人，获得 20 金币。",
+    "wikiEffectUpZh": "造成 25 点伤害。若击杀敌人，获得 25 金币。",
+    "keywords": []
+  },
+  "Mind Blast": {
+    "wikiEffectZh": "固有。造成等同于抽牌堆中卡牌数量的伤害。",
+    "wikiEffectUpZh": "固有。造成等同于抽牌堆中卡牌数量的伤害。",
+    "keywords": [
+      "innate"
+    ]
+  },
+  "RitualDagger": {
+    "wikiEffectZh": "造成 15 点伤害。若击杀敌人，本局游戏内该卡的伤害永久提高 3 点。消耗。",
+    "wikiEffectUpZh": "造成 15 点伤害。若击杀敌人，本局游戏内该卡的伤害永久提高 5 点。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Smite": {
+    "wikiEffectZh": "保留。造成 12 点伤害。消耗。",
+    "wikiEffectUpZh": "保留。造成 16 点伤害。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "Swift Strike": {
+    "wikiEffectZh": "造成 7 点伤害。",
+    "wikiEffectUpZh": "造成 10 点伤害。",
+    "keywords": []
+  },
+  "ThroughViolence": {
+    "wikiEffectZh": "保留。造成 20 点伤害。消耗。",
+    "wikiEffectUpZh": "保留。造成 30 点伤害。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "Magnetism": {
+    "wikiEffectZh": "回合开始时，将一张随机无色卡牌加入手牌。",
+    "wikiEffectUpZh": "回合开始时，将一张随机无色卡牌加入手牌。",
+    "keywords": []
+  },
+  "Mayhem": {
+    "wikiEffectZh": "回合开始时，自动打出抽牌堆顶的卡牌。",
+    "wikiEffectUpZh": "回合开始时，自动打出抽牌堆顶的卡牌。",
+    "keywords": []
+  },
+  "Omega": {
+    "wikiEffectZh": "回合结束时，对所有敌人造成 50 点伤害。",
+    "wikiEffectUpZh": "回合结束时，对所有敌人造成 60 点伤害。",
+    "keywords": []
+  },
+  "Panache": {
+    "wikiEffectZh": "单回合内每打出 5 张牌，对所有敌人造成 10 点伤害。",
+    "wikiEffectUpZh": "单回合内每打出 5 张牌，对所有敌人造成 14 点伤害。",
+    "keywords": []
+  },
+  "Sadistic Nature": {
+    "wikiEffectZh": "每当你对敌人施加负面状态（debuff），该敌人受到 5 点伤害。",
+    "wikiEffectUpZh": "每当你对敌人施加负面状态（debuff），该敌人受到 7 点伤害。",
+    "keywords": []
+  },
+  "Ghostly": {
+    "wikiEffectZh": "虚无。获得 1 层无形。消耗。",
+    "wikiEffectUpZh": "获得 1 层无形。消耗。",
+    "keywords": [
+      "ethereal",
+      "exhaust"
+    ]
+  },
+  "Apotheosis": {
+    "wikiEffectZh": "升级你卡组中所有的卡牌，持续到战斗结束。消耗。",
+    "wikiEffectUpZh": "升级你卡组中所有的卡牌，持续到战斗结束。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Bandage Up": {
+    "wikiEffectZh": "回复 4 点生命。消耗。",
+    "wikiEffectUpZh": "回复 6 点生命。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Beta": {
+    "wikiEffectZh": "将一张「欧米伽 Omega」洗入抽牌堆。消耗。",
+    "wikiEffectUpZh": "将一张「欧米伽 Omega」洗入抽牌堆。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Blind": {
+    "wikiEffectZh": "对一名敌人施加 2 层虚弱。",
+    "wikiEffectUpZh": "对所有敌人施加 2 层虚弱。",
+    "keywords": []
+  },
+  "Chrysalis": {
+    "wikiEffectZh": "将 3 张随机技能牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+    "wikiEffectUpZh": "将 5 张随机技能牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Dark Shackles": {
+    "wikiEffectZh": "一名敌人本回合失去 9 点力量。消耗。",
+    "wikiEffectUpZh": "一名敌人本回合失去 15 点力量。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Deep Breath": {
+    "wikiEffectZh": "将弃牌堆洗回抽牌堆。抽 1 张牌。",
+    "wikiEffectUpZh": "将弃牌堆洗回抽牌堆。抽 2 张牌。",
+    "keywords": []
+  },
+  "Discovery": {
+    "wikiEffectZh": "从 3 张随机卡牌中选择 1 张加入手牌。本回合它的费用为 0。消耗。",
+    "wikiEffectUpZh": "从 3 张随机卡牌中选择 1 张加入手牌。本回合它的费用为 0。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Enlightenment": {
+    "wikiEffectZh": "本回合手牌中所有卡牌费用降为 1。",
+    "wikiEffectUpZh": "手牌中所有卡牌费用降为 1，持续到战斗结束。",
+    "keywords": []
+  },
+  "Finesse": {
+    "wikiEffectZh": "获得 2 点格挡。抽 1 张牌。",
+    "wikiEffectUpZh": "获得 4 点格挡。抽 1 张牌。",
+    "keywords": []
+  },
+  "Forethought": {
+    "wikiEffectZh": "将手牌中的一张牌置于抽牌堆底。它在被打出前费用为 0。",
+    "wikiEffectUpZh": "将手牌中任意数量的牌置于抽牌堆底。它们在被打出前费用为 0。",
+    "keywords": []
+  },
+  "Good Instincts": {
+    "wikiEffectZh": "获得 6 点格挡。",
+    "wikiEffectUpZh": "获得 9 点格挡。",
+    "keywords": []
+  },
+  "Impatience": {
+    "wikiEffectZh": "若手牌中没有攻击牌，抽 2 张牌。",
+    "wikiEffectUpZh": "若手牌中没有攻击牌，抽 3 张牌。",
+    "keywords": []
+  },
+  "Insight": {
+    "wikiEffectZh": "保留。抽 2 张牌。消耗。",
+    "wikiEffectUpZh": "保留。抽 3 张牌。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "J.A.X.": {
+    "wikiEffectZh": "失去 3 点生命。获得 2 点力量。",
+    "wikiEffectUpZh": "失去 3 点生命。获得 3 点力量。",
+    "keywords": []
+  },
+  "Jack Of All Trades": {
+    "wikiEffectZh": "将 1 张随机无色卡牌加入手牌。消耗。",
+    "wikiEffectUpZh": "将 2 张随机无色卡牌加入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Madness": {
+    "wikiEffectZh": "使手牌中一张随机卡牌的费用降为 0，持续到战斗结束。消耗。",
+    "wikiEffectUpZh": "使手牌中一张随机卡牌的费用降为 0，持续到战斗结束。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Master of Strategy": {
+    "wikiEffectZh": "抽 3 张牌。消耗。",
+    "wikiEffectUpZh": "抽 4 张牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Metamorphosis": {
+    "wikiEffectZh": "将 3 张随机攻击牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+    "wikiEffectUpZh": "将 5 张随机攻击牌洗入抽牌堆。本场战斗中它们费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Miracle": {
+    "wikiEffectZh": "保留。获得 1 点能量。消耗。",
+    "wikiEffectUpZh": "保留。获得 2 点能量。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "PanicButton": {
+    "wikiEffectZh": "获得 30 点格挡。之后 2 回合内无法通过卡牌获得格挡。消耗。",
+    "wikiEffectUpZh": "获得 40 点格挡。之后 2 回合内无法通过卡牌获得格挡。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Panacea": {
+    "wikiEffectZh": "获得 1 层守护（Artifact）。消耗。",
+    "wikiEffectUpZh": "获得 2 层守护（Artifact）。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Purity": {
+    "wikiEffectZh": "消耗手牌中最多 3 张牌。消耗。",
+    "wikiEffectUpZh": "消耗手牌中最多 5 张牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Secret Technique": {
+    "wikiEffectZh": "从抽牌堆中选择一张技能牌加入手牌。消耗。",
+    "wikiEffectUpZh": "从抽牌堆中选择一张技能牌加入手牌。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Secret Weapon": {
+    "wikiEffectZh": "从抽牌堆中选择一张攻击牌加入手牌。消耗。",
+    "wikiEffectUpZh": "从抽牌堆中选择一张攻击牌加入手牌。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Safety": {
+    "wikiEffectZh": "保留。获得 12 点格挡。消耗。",
+    "wikiEffectUpZh": "保留。获得 16 点格挡。消耗。",
+    "keywords": [
+      "retain",
+      "exhaust"
+    ]
+  },
+  "The Bomb": {
+    "wikiEffectZh": "3 回合后，对所有敌人造成 40 点伤害。",
+    "wikiEffectUpZh": "3 回合后，对所有敌人造成 50 点伤害。",
+    "keywords": []
+  },
+  "Thinking Ahead": {
+    "wikiEffectZh": "抽 2 张牌。将手牌中的一张牌置于抽牌堆顶。消耗。",
+    "wikiEffectUpZh": "抽 2 张牌。将手牌中的一张牌置于抽牌堆顶。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Transmutation": {
+    "wikiEffectZh": "将 X 张随机无色卡牌加入手牌。它们本回合费用为 0。消耗。",
+    "wikiEffectUpZh": "将 X 张随机的已升级无色卡牌加入手牌。它们本回合费用为 0。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Trip": {
+    "wikiEffectZh": "对一名敌人施加 2 层易伤。",
+    "wikiEffectUpZh": "对所有敌人施加 2 层易伤。",
+    "keywords": []
+  },
+  "Violence": {
+    "wikiEffectZh": "将抽牌堆中 3 张随机攻击牌加入手牌。消耗。",
+    "wikiEffectUpZh": "将抽牌堆中 4 张随机攻击牌加入手牌。消耗。",
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "AscendersBane": {
+    "wikiEffectZh": "不可打出。虚无。无法从卡组中移除。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable",
+      "ethereal"
+    ]
+  },
+  "Clumsy": {
+    "wikiEffectZh": "不可打出。虚无。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable",
+      "ethereal"
+    ]
+  },
+  "CurseOfTheBell": {
+    "wikiEffectZh": "不可打出。无法从卡组中移除。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Decay": {
+    "wikiEffectZh": "不可打出。回合结束时，受到 2 点伤害。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Doubt": {
+    "wikiEffectZh": "不可打出。回合结束时，获得 1 层虚弱。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Injury": {
+    "wikiEffectZh": "不可打出。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Necronomicurse": {
+    "wikiEffectZh": "不可打出。你无法摆脱这个诅咒（从手牌中消失后立刻在手牌中重新出现）。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Normality": {
+    "wikiEffectZh": "不可打出。在手牌中时，本回合你无法打出超过 3 张牌。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Pain": {
+    "wikiEffectZh": "不可打出。在手牌中时，每打出一张其他牌就失去 1 点生命。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Parasite": {
+    "wikiEffectZh": "不可打出。若该卡被变形或从卡组中移除，失去 3 点最大生命。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Pride": {
+    "wikiEffectZh": "固有。回合结束时，将这张牌的一张复制置于抽牌堆顶。消耗。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "innate",
+      "exhaust"
+    ]
+  },
+  "Regret": {
+    "wikiEffectZh": "不可打出。回合结束时，失去等同于手牌数量的生命。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Shame": {
+    "wikiEffectZh": "不可打出。回合结束时，获得 1 层脆弱。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Writhe": {
+    "wikiEffectZh": "不可打出。固有。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable",
+      "innate"
+    ]
+  },
+  "Burn": {
+    "wikiEffectZh": "不可打出。回合结束时，受到 2 点伤害。",
+    "wikiEffectUpZh": "不可打出。回合结束时，受到 4 点伤害。",
+    "keywords": [
+      "unplayable"
+    ]
+  },
+  "Dazed": {
+    "wikiEffectZh": "不可打出。虚无。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable",
+      "ethereal"
+    ]
+  },
+  "Slimed": {
+    "wikiEffectZh": "消耗。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "exhaust"
+    ]
+  },
+  "Void": {
+    "wikiEffectZh": "不可打出。虚无。每当抽到这张牌时，失去 1 点能量。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable",
+      "ethereal"
+    ]
+  },
+  "Wound": {
+    "wikiEffectZh": "不可打出。",
+    "wikiEffectUpZh": null,
+    "keywords": [
+      "unplayable"
+    ]
+  }
+}

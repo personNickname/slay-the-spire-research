@@ -1,0 +1,819 @@
+{
+  "Anger": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "copySelf",
+        "to": "discard"
+      }
+    ]
+  },
+  "Armaments": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "armaments"
+      }
+    ]
+  },
+  "Barricade": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Barricade",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Bash": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Battle Trance": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "No Draw",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Berserk": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "self",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Berserk",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Blood for Blood": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Bloodletting": {
+    "ops": [
+      {
+        "op": "loseHp",
+        "amount": 3
+      },
+      {
+        "op": "energy",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Bludgeon": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Body Slam": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "bodySlam"
+      }
+    ]
+  },
+  "Brutality": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Brutality",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Burning Pact": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "burningPact"
+      }
+    ]
+  },
+  "Carnage": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Clash": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "canUse": "allAttacksInHand"
+  },
+  "Cleave": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Clothesline": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Combust": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Combust",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Corruption": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Corruption",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Dark Embrace": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Dark Embrace",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Defend_R": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Demon Form": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Demon Form",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Disarm": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Strength",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Double Tap": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Double Tap",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Dropkick": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "dropkick"
+      }
+    ]
+  },
+  "Dual Wield": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "dualWield"
+      }
+    ]
+  },
+  "Entrench": {
+    "ops": [
+      {
+        "op": "doubleBlock"
+      }
+    ]
+  },
+  "Evolve": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Evolve",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Exhume": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "exhume"
+      }
+    ]
+  },
+  "Feed": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "feed"
+      }
+    ]
+  },
+  "Feel No Pain": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Feel No Pain",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Fiend Fire": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "fiendFire"
+      }
+    ]
+  },
+  "Fire Breathing": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Fire Breathing",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Flame Barrier": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "power",
+        "id": "Flame Barrier",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Flex": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Strength",
+        "target": "self",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Lose Strength",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Ghostly Armor": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Havoc": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "havoc"
+      }
+    ]
+  },
+  "Headbutt": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "headbutt"
+      }
+    ]
+  },
+  "Heavy Blade": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "heavyBlade"
+      }
+    ]
+  },
+  "Hemokinesis": {
+    "ops": [
+      {
+        "op": "loseHp",
+        "amount": "magic"
+      },
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Immolate": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "addCard",
+        "card": "Burn",
+        "to": "discard"
+      }
+    ]
+  },
+  "Impervious": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Infernal Blade": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "infernalBlade"
+      }
+    ]
+  },
+  "Inflame": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Strength",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Intimidate": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "all_enemies",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Iron Wave": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Juggernaut": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Juggernaut",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Limit Break": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "limitBreak"
+      }
+    ]
+  },
+  "Metallicize": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Metallicize",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Offering": {
+    "ops": [
+      {
+        "op": "loseHp",
+        "amount": 6
+      },
+      {
+        "op": "energy",
+        "amount": 2
+      },
+      {
+        "op": "draw",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Perfected Strike": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "perfectedStrike"
+      }
+    ]
+  },
+  "Pommel Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Power Through": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "addCard",
+        "card": "Wound",
+        "to": "hand",
+        "count": 2
+      }
+    ]
+  },
+  "Pummel": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage",
+        "times": "magic"
+      }
+    ]
+  },
+  "Rage": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Rage",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Rampage": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "rampage"
+      }
+    ]
+  },
+  "Reaper": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage",
+        "vampire": true
+      }
+    ]
+  },
+  "Reckless Charge": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "addCard",
+        "card": "Dazed",
+        "to": "draw"
+      }
+    ]
+  },
+  "Rupture": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Rupture",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Searing Blow": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Second Wind": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "secondWind"
+      }
+    ]
+  },
+  "Seeing Red": {
+    "ops": [
+      {
+        "op": "energy",
+        "amount": 2
+      }
+    ]
+  },
+  "Sentinel": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "onExhaust": [
+      {
+        "op": "custom",
+        "id": "sentinelEnergy"
+      }
+    ]
+  },
+  "Sever Soul": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "severSoul"
+      }
+    ]
+  },
+  "Shockwave": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "all_enemies",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "all_enemies",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Shrug It Off": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      }
+    ]
+  },
+  "Spot Weakness": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "spotWeakness"
+      }
+    ]
+  },
+  "Strike_R": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Sword Boomerang": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "random_enemy",
+        "amount": "damage",
+        "times": "magic"
+      }
+    ]
+  },
+  "Thunderclap": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "all_enemies",
+        "amount": 1
+      }
+    ]
+  },
+  "True Grit": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "trueGrit"
+      }
+    ]
+  },
+  "Twin Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage",
+        "times": 2
+      }
+    ]
+  },
+  "Uppercut": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "target",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "target",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Warcry": {
+    "ops": [
+      {
+        "op": "draw",
+        "amount": "magic"
+      },
+      {
+        "op": "custom",
+        "id": "warcry"
+      }
+    ]
+  },
+  "Whirlwind": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "whirlwind"
+      }
+    ]
+  },
+  "Wild Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "addCard",
+        "card": "Wound",
+        "to": "draw"
+      }
+    ]
+  }
+}

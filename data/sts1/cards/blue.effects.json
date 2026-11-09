@@ -1,0 +1,746 @@
+{
+  "Aggregate": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "aggregate"
+      }
+    ]
+  },
+  "All For One": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Amplify": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "amplify"
+      }
+    ]
+  },
+  "Auto Shields": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "autoShields"
+      }
+    ]
+  },
+  "Ball Lightning": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "channel",
+        "orb": "lightning"
+      }
+    ]
+  },
+  "Barrage": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Beam Cell": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Vulnerable",
+        "target": "target",
+        "amount": 1
+      }
+    ]
+  },
+  "Biased Cognition": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Focus",
+        "target": "self",
+        "amount": "magic"
+      },
+      {
+        "op": "power",
+        "id": "Bias",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Blizzard": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "BootSequence": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Buffer": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Buffer",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Capacitor": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "capacitor"
+      }
+    ]
+  },
+  "Chaos": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "chaos"
+      }
+    ]
+  },
+  "Chill": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Cold Snap": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "channel",
+        "orb": "frost"
+      }
+    ]
+  },
+  "Compile Driver": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "compileDriver"
+      }
+    ]
+  },
+  "Conserve Battery": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Consume": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Focus",
+        "target": "self",
+        "amount": "magic"
+      },
+      {
+        "op": "custom",
+        "id": "consume"
+      }
+    ]
+  },
+  "Coolheaded": {
+    "ops": [
+      {
+        "op": "channel",
+        "orb": "frost"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      }
+    ]
+  },
+  "Core Surge": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Artifact",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Creative AI": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Creative AI",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Darkness": {
+    "ops": [
+      {
+        "op": "channel",
+        "orb": "dark"
+      }
+    ]
+  },
+  "Defend_B": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Defragment": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Focus",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Doom and Gloom": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "channel",
+        "orb": "dark"
+      }
+    ]
+  },
+  "Double Energy": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Dualcast": {
+    "ops": [
+      {
+        "op": "evoke",
+        "times": 2
+      }
+    ]
+  },
+  "Echo Form": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Echo",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Electrodynamics": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Electrodynamics",
+        "target": "self",
+        "amount": 1
+      },
+      {
+        "op": "channel",
+        "orb": "lightning"
+      }
+    ]
+  },
+  "Fission": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Force Field": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "FTL": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "ftl"
+      }
+    ]
+  },
+  "Fusion": {
+    "ops": [
+      {
+        "op": "channel",
+        "orb": "plasma"
+      }
+    ]
+  },
+  "Gash": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "claw"
+      }
+    ]
+  },
+  "Genetic Algorithm": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "genetic"
+      }
+    ]
+  },
+  "Glacier": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "channel",
+        "orb": "frost",
+        "count": 2
+      }
+    ]
+  },
+  "Go for the Eyes": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "if",
+        "cond": "targetAttacking",
+        "then": [
+          {
+            "op": "power",
+            "id": "Weakened",
+            "target": "target",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Heatsinks": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Heatsink",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Hello World": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Hello World",
+        "target": "self",
+        "amount": "magic"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Hologram": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      },
+      {
+        "op": "custom",
+        "id": "hologram"
+      }
+    ]
+  },
+  "Hyperbeam": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "power",
+        "id": "Focus",
+        "target": "self",
+        "amount": -3
+      }
+    ]
+  },
+  "Leap": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ]
+  },
+  "Lockon": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Loop": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Loop",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Machine Learning": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Draw Card",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Melter": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Meteor Strike": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "channel",
+        "orb": "plasma",
+        "count": 3
+      }
+    ]
+  },
+  "Multi-Cast": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "multiCast"
+      }
+    ]
+  },
+  "Rainbow": {
+    "ops": [
+      {
+        "op": "channel",
+        "orb": "lightning"
+      },
+      {
+        "op": "channel",
+        "orb": "frost"
+      },
+      {
+        "op": "channel",
+        "orb": "dark"
+      }
+    ]
+  },
+  "Reboot": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "reboot"
+      }
+    ]
+  },
+  "Rebound": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "rebound"
+      }
+    ]
+  },
+  "Recycle": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "recycle"
+      }
+    ]
+  },
+  "Redo": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Reinforced Body": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Reprogram": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Rip and Tear": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Scrape": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "scrape"
+      }
+    ]
+  },
+  "Seek": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Self Repair": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Repair",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Skim": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Stack": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "stack"
+      }
+    ]
+  },
+  "Static Discharge": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Static Discharge",
+        "target": "self",
+        "amount": "magic"
+      }
+    ]
+  },
+  "Steam": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "Steam Power": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Storm": {
+    "ops": [
+      {
+        "op": "power",
+        "id": "Storm",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Streamline": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "streamline"
+      }
+    ]
+  },
+  "Strike_B": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      }
+    ]
+  },
+  "Sunder": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "target",
+        "amount": "damage"
+      },
+      {
+        "op": "custom",
+        "id": "sunder"
+      }
+    ]
+  },
+  "Sweeping Beam": {
+    "ops": [
+      {
+        "op": "damage",
+        "target": "all_enemies",
+        "amount": "damage"
+      },
+      {
+        "op": "draw",
+        "amount": 1
+      }
+    ]
+  },
+  "Tempest": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "tempest"
+      }
+    ]
+  },
+  "Thunder Strike": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "thunderStrike"
+      }
+    ]
+  },
+  "Turbo": {
+    "ops": [],
+    "verified": "auto"
+  },
+  "Undo": {
+    "ops": [
+      {
+        "op": "block",
+        "amount": "block"
+      }
+    ],
+    "verified": "auto"
+  },
+  "White Noise": {
+    "ops": [
+      {
+        "op": "custom",
+        "id": "whiteNoise"
+      }
+    ]
+  },
+  "Zap": {
+    "ops": [
+      {
+        "op": "channel",
+        "orb": "lightning"
+      }
+    ]
+  }
+}

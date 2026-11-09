@@ -1,0 +1,18 @@
+{
+  "$id": "https://sts-research/schemas/power.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "class": { "type": "string" },
+      "name": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "descriptions": { "$ref": "common.schema.json#/$defs/bilingualList" },
+      "kind": { "enum": ["buff", "debuff"] },
+      "turnBased": { "type": "boolean" }
+    },
+    "required": ["id", "class", "name", "descriptions", "kind", "turnBased"],
+    "additionalProperties": false
+  }
+}

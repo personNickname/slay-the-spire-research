@@ -1,0 +1,27 @@
+{
+  "name": "slay-the-spire-research",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "tools",
+    "packages/*",
+    "web"
+  ],
+  "scripts": {
+    "extract": "npm run -w tools extract",
+    "extract-assets": "npm run -w tools extract-assets",
+    "export-effects": "npm run -w tools export-effects",
+    "validate": "npm run -w tools validate",
+    "diff-baseline": "npm run -w tools diff-baseline",
+    "test": "vitest run",
+    "dev": "npm run -w web dev",
+    "build": "npm run -w web build",
+    "pages": "node scripts/build-pages.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "tsx": "^4.19.0"
+  }
+}

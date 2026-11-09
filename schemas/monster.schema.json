@@ -1,0 +1,28 @@
+{
+  "$id": "https://sts-research/schemas/monster.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "class": { "type": "string" },
+      "act": { "enum": [1, 2, 3, 4] },
+      "name": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "kind": { "enum": ["normal", "elite", "boss"] },
+      "hp": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "properties": { "asc": { "type": "integer", "minimum": 0, "maximum": 20 }, "min": { "type": "integer", "minimum": 1 }, "max": { "type": "integer", "minimum": 1 } },
+          "required": ["asc", "min", "max"],
+          "additionalProperties": false
+        }
+      },
+      "moves": { "$ref": "common.schema.json#/$defs/bilingualList" }
+    },
+    "required": ["id", "class", "act", "name", "kind", "hp", "moves"],
+    "additionalProperties": false
+  }
+}

@@ -1,7 +1,38 @@
-# 杀戮尖塔 (Slay the Spire) 1 & 2 — 网页复刻前期资料
+# 杀戮尖塔 (Slay the Spire) 1 & 2 — 网页复刻
 
 > 目标：系统性收集《杀戮尖塔》1 代与 2 代（抢先体验）的**全部实体数据与机制规则**，
-> 作为网页复刻项目的设计与数据基础。
+> 并做成可玩的网页复刻。真值来自本机安装的 `desktop-1.0.jar`（见 `docs/audits/`）。
+
+## 现在就能玩（四角色 · 三幕）
+
+线上：https://personNickname.github.io/slay-the-spire-research/
+
+资料库：https://personNickname.github.io/slay-the-spire-research/review/
+
+```
+npm install
+npm run dev
+```
+
+本地浏览器打开 http://localhost:5173 。选角色、进阶、种子后开局。进度存在 `localStorage` 键 `sts1-web-run`。清单见 `TODO.md`。
+
+## 从本机 jar 重新抽出数据 / 卡图
+
+需要本机安装《杀戮尖塔 1》的 `desktop-1.0.jar`（默认路径 `C:\Games\steamapps\common\SlayTheSpire\desktop-1.0.jar`，可用环境变量 `STS1_JAR` 覆盖）。反编译源码默认在 `F:\Project\_tools\decompiled`（`STS1_DECOMPILED`）。
+
+```
+# 先用 CFR 反编译 jar（仅在源码缺失时）
+# java -jar cfr.jar desktop-1.0.jar --outputdir F:\Project\_tools\decompiled
+
+npm run extract          # 卡/遗物/药水/能力/怪物 JSON → data/sts1/
+npm run extract-assets   # 卡图 1024Portraits、遗物图、意图图标 → web/public/assets/sts1/
+npm run export-effects   # 把引擎 EFFECTS 表写成 data/sts1/cards/*.effects.json
+npm run validate         # JSON Schema + 交叉引用
+npm run diff-baseline    # 对照 wiki 时代 JSON
+python review/build.py   # 把 data/sts1/cards/*.json 打进 review/data.js
+```
+
+音效/BGM 明确不抽，直到有版权方案。
 
 ## 架构：一套数据 + 一个 UI
 
@@ -68,6 +99,6 @@ StS2 数值来源：sts2-rl-agent 反编译仓库（v0.107.1 客户端），Pyth
 
 ## 注意事项
 
-- StS2 处于 EA，数值随补丁变动：**2026-11-12 大补丁后所有 `data/sts2/` 需复核一遍**。
+- StS2 处于 EA，数值随补丁变动：**2026-11-12 大补丁后所有 `data/sts2/` 需复核一遍**（今天是 2026-11-09，该项日期未到，见 `docs/audits/2026-11-09-sts2-fidelity-audit.md`）。
 - StS2 中文译名为项目自拟（官方未发布中文）；StS1 卡牌中文名经官方简中本地化文件交叉校验。
 - 所有文档文末列参考来源与不确定项标注；地图生成规则等社区逆向内容标记 [RE]。

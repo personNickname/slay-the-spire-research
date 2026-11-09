@@ -1,0 +1,1996 @@
+[
+  {
+    "id": "AcidSlime_L",
+    "class": "exordium/AcidSlime_L",
+    "act": 1,
+    "name": {
+      "eng": "Acid Slime (L)",
+      "zhs": "酸液史莱姆（大）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 65,
+        "max": 69
+      },
+      {
+        "asc": 7,
+        "min": 68,
+        "max": 72
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Corrosive Spit",
+        "Split",
+        "Lick"
+      ],
+      "zhs": [
+        "腐蚀喷吐",
+        "分裂",
+        "舔舔"
+      ]
+    }
+  },
+  {
+    "id": "AcidSlime_M",
+    "class": "exordium/AcidSlime_M",
+    "act": 1,
+    "name": {
+      "eng": "Acid Slime (M)",
+      "zhs": "酸液史莱姆（中）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 28,
+        "max": 32
+      },
+      {
+        "asc": 7,
+        "min": 29,
+        "max": 34
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Corrosive Spit",
+        "Lick"
+      ],
+      "zhs": [
+        "腐蚀喷吐",
+        "舔舔"
+      ]
+    }
+  },
+  {
+    "id": "AcidSlime_S",
+    "class": "exordium/AcidSlime_S",
+    "act": 1,
+    "name": {
+      "eng": "Acid Slime (S)",
+      "zhs": "酸液史莱姆（小）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 8,
+        "max": 12
+      },
+      {
+        "asc": 7,
+        "min": 9,
+        "max": 13
+      }
+    ],
+    "moves": {
+      "eng": [],
+      "zhs": []
+    }
+  },
+  {
+    "id": "Cultist",
+    "class": "exordium/Cultist",
+    "act": 1,
+    "name": {
+      "eng": "Cultist",
+      "zhs": "邪教徒"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 48,
+        "max": 54
+      },
+      {
+        "asc": 7,
+        "min": 50,
+        "max": 56
+      }
+    ],
+    "moves": {
+      "eng": [
+        "",
+        "",
+        "Incantation"
+      ],
+      "zhs": [
+        "",
+        "",
+        "念咒"
+      ]
+    }
+  },
+  {
+    "id": "FungiBeast",
+    "class": "exordium/FungiBeast",
+    "act": 1,
+    "name": {
+      "eng": "Fungi Beast",
+      "zhs": "真菌兽"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 22,
+        "max": 28
+      },
+      {
+        "asc": 7,
+        "min": 24,
+        "max": 28
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Grow"
+      ],
+      "zhs": [
+        "生长"
+      ]
+    }
+  },
+  {
+    "id": "FuzzyLouseDefensive",
+    "class": "exordium/LouseDefensive",
+    "act": 1,
+    "name": {
+      "eng": "Louse",
+      "zhs": "虱虫"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 11,
+        "max": 17
+      },
+      {
+        "asc": 7,
+        "min": 12,
+        "max": 18
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Spit Web"
+      ],
+      "zhs": [
+        "吐网"
+      ]
+    }
+  },
+  {
+    "id": "FuzzyLouseNormal",
+    "class": "exordium/LouseNormal",
+    "act": 1,
+    "name": {
+      "eng": "Louse",
+      "zhs": "虱虫"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 10,
+        "max": 15
+      },
+      {
+        "asc": 7,
+        "min": 11,
+        "max": 16
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Grow"
+      ],
+      "zhs": [
+        "成长"
+      ]
+    }
+  },
+  {
+    "id": "GremlinFat",
+    "class": "exordium/GremlinFat",
+    "act": 1,
+    "name": {
+      "eng": "Fat Gremlin",
+      "zhs": "胖地精"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 13,
+        "max": 17
+      },
+      {
+        "asc": 7,
+        "min": 14,
+        "max": 18
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Smash"
+      ],
+      "zhs": [
+        "粉碎"
+      ]
+    }
+  },
+  {
+    "id": "GremlinNob",
+    "class": "exordium/GremlinNob",
+    "act": 1,
+    "name": {
+      "eng": "Gremlin Nob",
+      "zhs": "地精大块头"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 82,
+        "max": 86
+      },
+      {
+        "asc": 8,
+        "min": 85,
+        "max": 90
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Skull Bash",
+        "Bull Rush"
+      ],
+      "zhs": [
+        "颅骨重击",
+        "蛮牛冲撞"
+      ]
+    }
+  },
+  {
+    "id": "GremlinThief",
+    "class": "exordium/GremlinThief",
+    "act": 1,
+    "name": {
+      "eng": "Sneaky Gremlin",
+      "zhs": "卑鄙地精"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 10,
+        "max": 14
+      },
+      {
+        "asc": 7,
+        "min": 11,
+        "max": 15
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "GremlinTsundere",
+    "class": "exordium/GremlinTsundere",
+    "act": 1,
+    "name": {
+      "eng": "Shield Gremlin",
+      "zhs": "持盾地精"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 12,
+        "max": 15
+      },
+      {
+        "asc": 7,
+        "min": 13,
+        "max": 17
+      },
+      {
+        "asc": 17,
+        "min": 13,
+        "max": 17
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Protect",
+        "Shield Bash"
+      ],
+      "zhs": [
+        "保护",
+        "盾击"
+      ]
+    }
+  },
+  {
+    "id": "GremlinWarrior",
+    "class": "exordium/GremlinWarrior",
+    "act": 1,
+    "name": {
+      "eng": "Mad Gremlin",
+      "zhs": "火大地精"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 20,
+        "max": 24
+      },
+      {
+        "asc": 7,
+        "min": 21,
+        "max": 25
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Claw"
+      ],
+      "zhs": [
+        "爪挠"
+      ]
+    }
+  },
+  {
+    "id": "GremlinWizard",
+    "class": "exordium/GremlinWizard",
+    "act": 1,
+    "name": {
+      "eng": "Gremlin Wizard",
+      "zhs": "地精法师"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 21,
+        "max": 25
+      },
+      {
+        "asc": 7,
+        "min": 22,
+        "max": 26
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Charging",
+        "Ultimate Blast"
+      ],
+      "zhs": [
+        "蓄能",
+        "终极大爆炸"
+      ]
+    }
+  },
+  {
+    "id": "Hexaghost",
+    "class": "exordium/Hexaghost",
+    "act": 1,
+    "name": {
+      "eng": "Hexaghost",
+      "zhs": "六火亡魂"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 250,
+        "max": 250
+      },
+      {
+        "asc": 9,
+        "min": 264,
+        "max": 264
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Inflame",
+        "Sear",
+        "Inferno"
+      ],
+      "zhs": [
+        "高热",
+        "灼烧",
+        "地狱火"
+      ]
+    }
+  },
+  {
+    "id": "JawWorm",
+    "class": "exordium/JawWorm",
+    "act": 1,
+    "name": {
+      "eng": "Jaw Worm",
+      "zhs": "大颚虫"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 40,
+        "max": 44
+      },
+      {
+        "asc": 7,
+        "min": 42,
+        "max": 46
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Bellow",
+        "Thrash"
+      ],
+      "zhs": [
+        "咆哮",
+        "抽打"
+      ]
+    }
+  },
+  {
+    "id": "Lagavulin",
+    "class": "exordium/Lagavulin",
+    "act": 1,
+    "name": {
+      "eng": "Lagavulin",
+      "zhs": "乐加维林"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 109,
+        "max": 111
+      },
+      {
+        "asc": 8,
+        "min": 112,
+        "max": 115
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Siphon Soul"
+      ],
+      "zhs": [
+        "灵魂吸取"
+      ]
+    }
+  },
+  {
+    "id": "Looter",
+    "class": "exordium/Looter",
+    "act": 1,
+    "name": {
+      "eng": "Looter",
+      "zhs": "抢劫的"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 44,
+        "max": 48
+      },
+      {
+        "asc": 7,
+        "min": 46,
+        "max": 50
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Lunge",
+        "Mug"
+      ],
+      "zhs": [
+        "突刺",
+        "打劫"
+      ]
+    }
+  },
+  {
+    "id": "Sentry",
+    "class": "exordium/Sentry",
+    "act": 1,
+    "name": {
+      "eng": "Sentry",
+      "zhs": "哨卫"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 38,
+        "max": 42
+      },
+      {
+        "asc": 8,
+        "min": 39,
+        "max": 45
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Disintegrate"
+      ],
+      "zhs": [
+        "粉碎"
+      ]
+    }
+  },
+  {
+    "id": "SlaverBlue",
+    "class": "exordium/SlaverBlue",
+    "act": 1,
+    "name": {
+      "eng": "Slaver",
+      "zhs": "奴隶贩子"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 46,
+        "max": 50
+      },
+      {
+        "asc": 7,
+        "min": 48,
+        "max": 52
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Rake"
+      ],
+      "zhs": [
+        "耙伤"
+      ]
+    }
+  },
+  {
+    "id": "SlaverRed",
+    "class": "exordium/SlaverRed",
+    "act": 1,
+    "name": {
+      "eng": "Slaver",
+      "zhs": "奴隶贩子"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 46,
+        "max": 50
+      },
+      {
+        "asc": 7,
+        "min": 48,
+        "max": 52
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Scrape",
+        "Entangle"
+      ],
+      "zhs": [
+        "刮伤",
+        "丢网"
+      ]
+    }
+  },
+  {
+    "id": "SlimeBoss",
+    "class": "exordium/SlimeBoss",
+    "act": 1,
+    "name": {
+      "eng": "Slime Boss",
+      "zhs": "史莱姆老大"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 140,
+        "max": 140
+      },
+      {
+        "asc": 9,
+        "min": 150,
+        "max": 150
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Slam",
+        "Preparing",
+        "Split",
+        "Goop Spray"
+      ],
+      "zhs": [
+        "猛撞",
+        "准备",
+        "分裂",
+        "黏液喷射"
+      ]
+    }
+  },
+  {
+    "id": "SpikeSlime_L",
+    "class": "exordium/SpikeSlime_L",
+    "act": 1,
+    "name": {
+      "eng": "Spike Slime (L)",
+      "zhs": "尖刺史莱姆（大）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 64,
+        "max": 70
+      },
+      {
+        "asc": 7,
+        "min": 67,
+        "max": 73
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Lick",
+        "Split"
+      ],
+      "zhs": [
+        "舔舔",
+        "分裂"
+      ]
+    }
+  },
+  {
+    "id": "SpikeSlime_M",
+    "class": "exordium/SpikeSlime_M",
+    "act": 1,
+    "name": {
+      "eng": "Spike Slime (M)",
+      "zhs": "尖刺史莱姆（中）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 28,
+        "max": 32
+      },
+      {
+        "asc": 7,
+        "min": 29,
+        "max": 34
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Lick"
+      ],
+      "zhs": [
+        "舔舔"
+      ]
+    }
+  },
+  {
+    "id": "SpikeSlime_S",
+    "class": "exordium/SpikeSlime_S",
+    "act": 1,
+    "name": {
+      "eng": "Spike Slime (S)",
+      "zhs": "尖刺史莱姆（小）"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 10,
+        "max": 14
+      },
+      {
+        "asc": 7,
+        "min": 11,
+        "max": 15
+      }
+    ],
+    "moves": {
+      "eng": [],
+      "zhs": []
+    }
+  },
+  {
+    "id": "TheGuardian",
+    "class": "exordium/TheGuardian",
+    "act": 1,
+    "name": {
+      "eng": "The Guardian",
+      "zhs": "守护者"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 240,
+        "max": 240
+      },
+      {
+        "asc": 9,
+        "min": 250,
+        "max": 250
+      },
+      {
+        "asc": 19,
+        "min": 250,
+        "max": 250
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Defensive Mode",
+        "Fierce Bash",
+        "Roll",
+        "Twin Slam",
+        "Whirlwind",
+        "Charging Up",
+        "Vent Steam"
+      ],
+      "zhs": [
+        "防御模式",
+        "猛烈痛击",
+        "滚动",
+        "双斩",
+        "旋风",
+        "蓄能",
+        "蒸汽喷射"
+      ]
+    }
+  },
+  {
+    "id": "BanditBear",
+    "class": "city/BanditBear",
+    "act": 2,
+    "name": {
+      "eng": "Bear",
+      "zhs": "熊"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 38,
+        "max": 42
+      },
+      {
+        "asc": 7,
+        "min": 40,
+        "max": 44
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "BanditChild",
+    "class": "city/BanditPointy",
+    "act": 2,
+    "name": {
+      "eng": "Pointy",
+      "zhs": "尖尖"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 30,
+        "max": 30
+      },
+      {
+        "asc": 7,
+        "min": 34,
+        "max": 34
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "BanditLeader",
+    "class": "city/BanditLeader",
+    "act": 2,
+    "name": {
+      "eng": "Romeo",
+      "zhs": "罗密欧"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 35,
+        "max": 39
+      },
+      {
+        "asc": 7,
+        "min": 37,
+        "max": 41
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "BookOfStabbing",
+    "class": "city/BookOfStabbing",
+    "act": 2,
+    "name": {
+      "eng": "Book of Stabbing",
+      "zhs": "扎人的书"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 160,
+        "max": 164
+      },
+      {
+        "asc": 8,
+        "min": 168,
+        "max": 172
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "BronzeAutomaton",
+    "class": "city/BronzeAutomaton",
+    "act": 2,
+    "name": {
+      "eng": "Bronze Automaton",
+      "zhs": "铜制机械人偶"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 300,
+        "max": 300
+      },
+      {
+        "asc": 9,
+        "min": 320,
+        "max": 320
+      }
+    ],
+    "moves": {
+      "eng": [
+        "HYPER BEAM"
+      ],
+      "zhs": [
+        "超能光束"
+      ]
+    }
+  },
+  {
+    "id": "BronzeOrb",
+    "class": "city/BronzeOrb",
+    "act": 2,
+    "name": {
+      "eng": "Orb",
+      "zhs": "铜球"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 52,
+        "max": 58
+      },
+      {
+        "asc": 9,
+        "min": 54,
+        "max": 60
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Byrd",
+    "class": "city/Byrd",
+    "act": 2,
+    "name": {
+      "eng": "Byrd",
+      "zhs": "异鸟"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 25,
+        "max": 31
+      },
+      {
+        "asc": 7,
+        "min": 26,
+        "max": 33
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Centurion",
+    "class": "city/Centurion",
+    "act": 2,
+    "name": {
+      "eng": "Centurion",
+      "zhs": "百夫长"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 76,
+        "max": 80
+      },
+      {
+        "asc": 7,
+        "min": 78,
+        "max": 83
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Champ",
+    "class": "city/Champ",
+    "act": 2,
+    "name": {
+      "eng": "The Champ",
+      "zhs": "第一勇士"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 420,
+        "max": 420
+      },
+      {
+        "asc": 9,
+        "min": 440,
+        "max": 440
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Defensive Stance",
+        "Execute",
+        "Face Slap"
+      ],
+      "zhs": [
+        "防御态势",
+        "处决",
+        "打脸"
+      ]
+    }
+  },
+  {
+    "id": "Chosen",
+    "class": "city/Chosen",
+    "act": 2,
+    "name": {
+      "eng": "Chosen",
+      "zhs": "被拣选者"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 95,
+        "max": 99
+      },
+      {
+        "asc": 7,
+        "min": 98,
+        "max": 103
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "GremlinLeader",
+    "class": "city/GremlinLeader",
+    "act": 2,
+    "name": {
+      "eng": "Gremlin Leader",
+      "zhs": "地精首领"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 140,
+        "max": 148
+      },
+      {
+        "asc": 8,
+        "min": 145,
+        "max": 155
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Rally!"
+      ],
+      "zhs": [
+        "集合！"
+      ]
+    }
+  },
+  {
+    "id": "Healer",
+    "class": "city/Healer",
+    "act": 2,
+    "name": {
+      "eng": "Mystic",
+      "zhs": "神秘术士"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 48,
+        "max": 56
+      },
+      {
+        "asc": 7,
+        "min": 50,
+        "max": 58
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Mugger",
+    "class": "city/Mugger",
+    "act": 2,
+    "name": {
+      "eng": "Mugger",
+      "zhs": "打劫的"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 48,
+        "max": 52
+      },
+      {
+        "asc": 7,
+        "min": 50,
+        "max": 54
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Lunge",
+        "Mug"
+      ],
+      "zhs": [
+        "猛冲",
+        "抢劫"
+      ]
+    }
+  },
+  {
+    "id": "Shelled Parasite",
+    "class": "city/ShelledParasite",
+    "act": 2,
+    "name": {
+      "eng": "Shelled Parasite",
+      "zhs": "带壳寄生怪"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 68,
+        "max": 72
+      },
+      {
+        "asc": 7,
+        "min": 70,
+        "max": 75
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "SlaverBoss",
+    "class": "city/Taskmaster",
+    "act": 2,
+    "name": {
+      "eng": "Taskmaster",
+      "zhs": "奴隶头子"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 54,
+        "max": 60
+      },
+      {
+        "asc": 8,
+        "min": 57,
+        "max": 64
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "SnakePlant",
+    "class": "city/SnakePlant",
+    "act": 2,
+    "name": {
+      "eng": "Snake Plant",
+      "zhs": "蛇花"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 75,
+        "max": 79
+      },
+      {
+        "asc": 7,
+        "min": 78,
+        "max": 82
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Enfeebling Spores"
+      ],
+      "zhs": [
+        "虚弱孢子"
+      ]
+    }
+  },
+  {
+    "id": "Snecko",
+    "class": "city/Snecko",
+    "act": 2,
+    "name": {
+      "eng": "Snecko",
+      "zhs": "异蛇"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 114,
+        "max": 120
+      },
+      {
+        "asc": 7,
+        "min": 120,
+        "max": 125
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Perplexing Glare",
+        "Tail Whip",
+        "Bite"
+      ],
+      "zhs": [
+        "困惑瞪视",
+        "扫尾",
+        "噬咬"
+      ]
+    }
+  },
+  {
+    "id": "SphericGuardian",
+    "class": "city/SphericGuardian",
+    "act": 2,
+    "name": {
+      "eng": "Spheric Guardian",
+      "zhs": "圆球守护者"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "TheCollector",
+    "class": "city/TheCollector",
+    "act": 2,
+    "name": {
+      "eng": "The Collector",
+      "zhs": "收藏家"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 282,
+        "max": 282
+      },
+      {
+        "asc": 9,
+        "min": 300,
+        "max": 300
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "TorchHead",
+    "class": "city/TorchHead",
+    "act": 2,
+    "name": {
+      "eng": "Torch Head",
+      "zhs": "火炬头"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 38,
+        "max": 40
+      },
+      {
+        "asc": 9,
+        "min": 40,
+        "max": 45
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "AwakenedOne",
+    "class": "beyond/AwakenedOne",
+    "act": 3,
+    "name": {
+      "eng": "Awakened One",
+      "zhs": "觉醒者"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 300,
+        "max": 300
+      },
+      {
+        "asc": 9,
+        "min": 320,
+        "max": 320
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Soul Strike",
+        "Dark Echo",
+        "Cleanse",
+        "Sludge"
+      ],
+      "zhs": [
+        "灵魂攻击",
+        "黑暗回音",
+        "净化",
+        "污泥"
+      ]
+    }
+  },
+  {
+    "id": "Dagger",
+    "class": "beyond/SnakeDagger",
+    "act": 3,
+    "name": {
+      "eng": "Dagger",
+      "zhs": "匕首"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 20,
+        "max": 25
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Darkling",
+    "class": "beyond/Darkling",
+    "act": 3,
+    "name": {
+      "eng": "Darkling",
+      "zhs": "小黑"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 48,
+        "max": 56
+      },
+      {
+        "asc": 7,
+        "min": 50,
+        "max": 59
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Chomp! Chomp!"
+      ],
+      "zhs": [
+        "啊呜！啊呜！"
+      ]
+    }
+  },
+  {
+    "id": "Deca",
+    "class": "beyond/Deca",
+    "act": 3,
+    "name": {
+      "eng": "Deca",
+      "zhs": "八体"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 250,
+        "max": 250
+      },
+      {
+        "asc": 9,
+        "min": 265,
+        "max": 265
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Donu",
+    "class": "beyond/Donu",
+    "act": 3,
+    "name": {
+      "eng": "Donu",
+      "zhs": "甜圈"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 250,
+        "max": 250
+      },
+      {
+        "asc": 9,
+        "min": 265,
+        "max": 265
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Circle of Power"
+      ],
+      "zhs": [
+        "力量之环"
+      ]
+    }
+  },
+  {
+    "id": "Exploder",
+    "class": "beyond/Exploder",
+    "act": 3,
+    "name": {
+      "eng": "Exploder",
+      "zhs": "爆炸机"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 30,
+        "max": 30
+      },
+      {
+        "asc": 7,
+        "min": 30,
+        "max": 35
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "GiantHead",
+    "class": "beyond/GiantHead",
+    "act": 3,
+    "name": {
+      "eng": "Giant Head",
+      "zhs": "大脑袋"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 500,
+        "max": 500
+      },
+      {
+        "asc": 8,
+        "min": 520,
+        "max": 520
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Maw",
+    "class": "beyond/Maw",
+    "act": 3,
+    "name": {
+      "eng": "The Maw",
+      "zhs": "巨口"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 300,
+        "max": 300
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Nemesis",
+    "class": "beyond/Nemesis",
+    "act": 3,
+    "name": {
+      "eng": "Nemesis",
+      "zhs": "天罚"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 185,
+        "max": 185
+      },
+      {
+        "asc": 8,
+        "min": 200,
+        "max": 200
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Orb Walker",
+    "class": "beyond/OrbWalker",
+    "act": 3,
+    "name": {
+      "eng": "Orb Walker",
+      "zhs": "圆球行者"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 90,
+        "max": 96
+      },
+      {
+        "asc": 7,
+        "min": 92,
+        "max": 102
+      }
+    ],
+    "moves": {
+      "eng": [
+        "Strength Up"
+      ],
+      "zhs": [
+        "强化"
+      ]
+    }
+  },
+  {
+    "id": "Reptomancer",
+    "class": "beyond/Reptomancer",
+    "act": 3,
+    "name": {
+      "eng": "Reptomancer",
+      "zhs": "拜蛇术士"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 180,
+        "max": 190
+      },
+      {
+        "asc": 8,
+        "min": 190,
+        "max": 200
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Repulsor",
+    "class": "beyond/Repulsor",
+    "act": 3,
+    "name": {
+      "eng": "Repulsor",
+      "zhs": "反冲机"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 29,
+        "max": 35
+      },
+      {
+        "asc": 7,
+        "min": 31,
+        "max": 38
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Serpent",
+    "class": "beyond/SpireGrowth",
+    "act": 3,
+    "name": {
+      "eng": "Spire Growth",
+      "zhs": "塔内增生组织"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 170,
+        "max": 170
+      },
+      {
+        "asc": 7,
+        "min": 190,
+        "max": 190
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Spiker",
+    "class": "beyond/Spiker",
+    "act": 3,
+    "name": {
+      "eng": "Spiker",
+      "zhs": "钉刺机"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 42,
+        "max": 56
+      },
+      {
+        "asc": 7,
+        "min": 44,
+        "max": 60
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "TimeEater",
+    "class": "beyond/TimeEater",
+    "act": 3,
+    "name": {
+      "eng": "Time Eater",
+      "zhs": "时间吞噬者"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 456,
+        "max": 456
+      },
+      {
+        "asc": 9,
+        "min": 480,
+        "max": 480
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "Transient",
+    "class": "beyond/Transient",
+    "act": 3,
+    "name": {
+      "eng": "Transient",
+      "zhs": "倏忽魔"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 999,
+        "max": 999
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "WrithingMass",
+    "class": "beyond/WrithingMass",
+    "act": 3,
+    "name": {
+      "eng": "Writhing Mass",
+      "zhs": "扭曲团块"
+    },
+    "kind": "normal",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 160,
+        "max": 160
+      },
+      {
+        "asc": 7,
+        "min": 175,
+        "max": 175
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "CorruptHeart",
+    "class": "ending/CorruptHeart",
+    "act": 4,
+    "name": {
+      "eng": "Corrupt Heart",
+      "zhs": "腐化之心"
+    },
+    "kind": "boss",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 750,
+        "max": 750
+      },
+      {
+        "asc": 9,
+        "min": 800,
+        "max": 800
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "SpireShield",
+    "class": "ending/SpireShield",
+    "act": 4,
+    "name": {
+      "eng": "Spire Shield",
+      "zhs": "高塔之盾"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 110,
+        "max": 110
+      },
+      {
+        "asc": 8,
+        "min": 125,
+        "max": 125
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  },
+  {
+    "id": "SpireSpear",
+    "class": "ending/SpireSpear",
+    "act": 4,
+    "name": {
+      "eng": "Spire Spear",
+      "zhs": "高塔之矛"
+    },
+    "kind": "elite",
+    "hp": [
+      {
+        "asc": 0,
+        "min": 160,
+        "max": 160
+      },
+      {
+        "asc": 8,
+        "min": 180,
+        "max": 180
+      }
+    ],
+    "moves": {
+      "eng": [
+        ""
+      ],
+      "zhs": [
+        ""
+      ]
+    }
+  }
+]

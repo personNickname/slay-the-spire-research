@@ -1,0 +1,785 @@
+[
+  {
+    "id": "ARTIFACT",
+    "names": {
+      "eng": [
+        "artifact"
+      ],
+      "zhs": [
+        "人工制品"
+      ]
+    },
+    "description": {
+      "eng": "Negates the next debuff.",
+      "zhs": "免疫下一次受到的负面效果。"
+    }
+  },
+  {
+    "id": "BLOCK",
+    "names": {
+      "eng": [
+        "block",
+        "blocks"
+      ],
+      "zhs": [
+        "格挡",
+        "blocks"
+      ]
+    },
+    "description": {
+      "eng": "Until next turn, prevents damage.",
+      "zhs": "持续到下回合开始前，阻挡伤害。"
+    }
+  },
+  {
+    "id": "BURN",
+    "names": {
+      "eng": [
+        "burn",
+        "burns"
+      ],
+      "zhs": [
+        "灼伤",
+        "burns"
+      ]
+    },
+    "description": {
+      "eng": "Burns are unplayable status cards that damage you.",
+      "zhs": "灼伤是 不能被打出 的状态牌，并会对你造成伤害。"
+    }
+  },
+  {
+    "id": "CHANNEL",
+    "names": {
+      "eng": [
+        "channel",
+        "channeled"
+      ],
+      "zhs": [
+        "生成",
+        "生成的"
+      ]
+    },
+    "description": {
+      "eng": "Channeling an Orb puts it into your first empty slot. If you have no empty slots, your first Orb is automatically #yEvoked to make room.",
+      "zhs": "生成的充能球将出现在你最右侧起的第一个空栏位。当没有空栏位时，你的第一个充能球将自动被 激发 来空出位置。"
+    }
+  },
+  {
+    "id": "CONFUSED",
+    "names": {
+      "eng": [
+        "confused"
+      ],
+      "zhs": [
+        "混乱"
+      ]
+    },
+    "description": {
+      "eng": "Whenever you draw a card, randomize its cost.",
+      "zhs": "你每抽到一张牌，就将其耗能随机变化。"
+    }
+  },
+  {
+    "id": "CURSE",
+    "names": {
+      "eng": [
+        "curse"
+      ],
+      "zhs": [
+        "诅咒"
+      ]
+    },
+    "description": {
+      "eng": "Curse cards are negative cards that stay in your deck.",
+      "zhs": "诅咒牌是留在你牌组中的负面牌。"
+    }
+  },
+  {
+    "id": "DARK",
+    "names": {
+      "eng": [
+        "dark",
+        "dark+"
+      ],
+      "zhs": [
+        "黑暗",
+        "黑暗+"
+      ]
+    },
+    "description": {
+      "eng": "Orb: Increases damage every turn. When #yEvoked, deals damage to the enemy with the least HP.",
+      "zhs": "充能球：每回合增加伤害。 #y激发 时，对生命值最少的敌人造成伤害。"
+    }
+  },
+  {
+    "id": "DAZED",
+    "names": {
+      "eng": [
+        "dazed"
+      ],
+      "zhs": [
+        "晕眩"
+      ]
+    },
+    "description": {
+      "eng": "Dazed are unplayable status cards.",
+      "zhs": "晕眩是 不能被打出 的 虚无 状态牌。"
+    }
+  },
+  {
+    "id": "DEXTERITY",
+    "names": {
+      "eng": [
+        "dexterity"
+      ],
+      "zhs": [
+        "敏捷"
+      ]
+    },
+    "description": {
+      "eng": "Dexterity improves Block gained from cards.",
+      "zhs": "敏捷增加你从牌中获得的格挡值。"
+    }
+  },
+  {
+    "id": "ETHEREAL",
+    "names": {
+      "eng": [
+        "ethereal"
+      ],
+      "zhs": [
+        "虚无"
+      ]
+    },
+    "description": {
+      "eng": "If this card is in your hand at the end of turn, it is exhausted. Exhausted cards are removed from your deck until the end of combat.",
+      "zhs": "如果这张牌在回合结束时仍然在你的手中，它将被消耗。被消耗的牌将在战斗结束前被移除出牌组。"
+    }
+  },
+  {
+    "id": "EVOKE",
+    "names": {
+      "eng": [
+        "evoke",
+        "evoked"
+      ],
+      "zhs": [
+        "激发",
+        "激发"
+      ]
+    },
+    "description": {
+      "eng": "Consume your rightmost Orb and use its Evoke effect.",
+      "zhs": "消耗掉你最右侧的充能球，使用其 激发 效果。"
+    }
+  },
+  {
+    "id": "EXHAUST",
+    "names": {
+      "eng": [
+        "exhaust",
+        "exhausted",
+        "exhausts"
+      ],
+      "zhs": [
+        "消耗",
+        "exhausted",
+        "exhausts"
+      ]
+    },
+    "description": {
+      "eng": "Removed until end of combat.",
+      "zhs": "在战斗结束前被移除出牌组。"
+    }
+  },
+  {
+    "id": "FOCUS",
+    "names": {
+      "eng": [
+        "focus"
+      ],
+      "zhs": [
+        "集中"
+      ]
+    },
+    "description": {
+      "eng": "Focus increases the effectiveness of #yChanneled Orbs.",
+      "zhs": "集中 会加强 充能球 的效果。"
+    }
+  },
+  {
+    "id": "FRAIL",
+    "names": {
+      "eng": [
+        "frail"
+      ],
+      "zhs": [
+        "脆弱"
+      ]
+    },
+    "description": {
+      "eng": "While Frail, gain #b25% less #yBlock from cards.",
+      "zhs": "处于脆弱状态时，你从卡牌中获得的 #y格挡 减少 #b25% 。"
+    }
+  },
+  {
+    "id": "FROST",
+    "names": {
+      "eng": [
+        "frost",
+        "frost+"
+      ],
+      "zhs": [
+        "冰霜",
+        "冰霜+"
+      ]
+    },
+    "description": {
+      "eng": "Orb: Gains #yBlock.",
+      "zhs": "充能球：获得 #y格挡。"
+    }
+  },
+  {
+    "id": "INNATE",
+    "names": {
+      "eng": [
+        "innate"
+      ],
+      "zhs": [
+        "固有"
+      ]
+    },
+    "description": {
+      "eng": "Start each combat with this card in your hand.",
+      "zhs": "在每场战斗开始时，这张牌会出现在你的手牌中。"
+    }
+  },
+  {
+    "id": "INTANGIBLE",
+    "names": {
+      "eng": [
+        "intangible"
+      ],
+      "zhs": [
+        "无实体"
+      ]
+    },
+    "description": {
+      "eng": "Reduce ALL damage taken and HP loss to #b1.",
+      "zhs": "将受到的所有伤害和生命减少效果降低为 #b1 。"
+    }
+  },
+  {
+    "id": "LIGHTNING",
+    "names": {
+      "eng": [
+        "lightning",
+        "lightning+"
+      ],
+      "zhs": [
+        "闪电",
+        "闪电+"
+      ]
+    },
+    "description": {
+      "eng": "Orb: Deals damage to random enemies.",
+      "zhs": "充能球：对随机敌人造成伤害。"
+    }
+  },
+  {
+    "id": "LOCKED",
+    "names": {
+      "eng": [
+        "locked"
+      ],
+      "zhs": [
+        "锁定"
+      ]
+    },
+    "description": {
+      "eng": "This card has yet to be unlocked.",
+      "zhs": "这张牌还没有被解锁。"
+    }
+  },
+  {
+    "id": "LOCK_ON",
+    "names": {
+      "eng": [
+        "lock-on"
+      ],
+      "zhs": [
+        "跟踪锁定"
+      ]
+    },
+    "description": {
+      "eng": "Lock-On targets receive #b50% more damage from Orbs.",
+      "zhs": "被跟踪锁定的目标从充能球受到的伤害增加 #b50% 。"
+    }
+  },
+  {
+    "id": "OPENER",
+    "names": {
+      "eng": [
+        "opener"
+      ],
+      "zhs": [
+        "opener"
+      ]
+    },
+    "description": {
+      "eng": "Opener cards may only be played as the first card each turn.",
+      "zhs": "Opener cards may only be played as the first card each turn."
+    }
+  },
+  {
+    "id": "PLASMA",
+    "names": {
+      "eng": [
+        "plasma",
+        "plasma+"
+      ],
+      "zhs": [
+        "等离子",
+        "等离子+"
+      ]
+    },
+    "description": {
+      "eng": "Orb: Gains Energy.",
+      "zhs": "充能球：获得 能量 。"
+    }
+  },
+  {
+    "id": "POISON",
+    "names": {
+      "eng": [
+        "poison",
+        "poisoned"
+      ],
+      "zhs": [
+        "中毒",
+        "poisoned"
+      ]
+    },
+    "description": {
+      "eng": "Poisoned creatures lose HP at the start of their turn. Each turn, Poison is reduced by #b1.",
+      "zhs": "中毒的生物会在他们的回合开始时失去相应的生命。中毒层数每回合下降 #b1 。"
+    }
+  },
+  {
+    "id": "RETAIN",
+    "names": {
+      "eng": [
+        "retain",
+        "retains",
+        "retained"
+      ],
+      "zhs": [
+        "保留",
+        "retains",
+        "retained"
+      ]
+    },
+    "description": {
+      "eng": "Retained cards are not discarded at the end of turn.",
+      "zhs": "保留的牌不会在回合结束时被放入弃牌堆。"
+    }
+  },
+  {
+    "id": "SHIV",
+    "names": {
+      "eng": [
+        "shiv",
+        "shivs"
+      ],
+      "zhs": [
+        "小刀",
+        "shivs"
+      ]
+    },
+    "description": {
+      "eng": "Shivs are #b0 cost Attack cards which Exhaust.",
+      "zhs": "小刀是会消耗的 #b0 耗能攻击牌。"
+    }
+  },
+  {
+    "id": "STATUS",
+    "names": {
+      "eng": [
+        "status"
+      ],
+      "zhs": [
+        "状态牌"
+      ]
+    },
+    "description": {
+      "eng": "Status cards are removed at the end of combat.",
+      "zhs": "状态牌在战斗结束时会被移除。"
+    }
+  },
+  {
+    "id": "STRENGTH",
+    "names": {
+      "eng": [
+        "strength"
+      ],
+      "zhs": [
+        "力量"
+      ]
+    },
+    "description": {
+      "eng": "Strength adds additional damage to attacks.",
+      "zhs": "力量会让攻击获得额外的伤害。"
+    }
+  },
+  {
+    "id": "STRIKE",
+    "names": {
+      "eng": [
+        "strike"
+      ],
+      "zhs": [
+        "打击"
+      ]
+    },
+    "description": {
+      "eng": "Any card with the word \"Strike\" in its name.",
+      "zhs": "所有名字中包括“打击”的牌。"
+    }
+  },
+  {
+    "id": "TEXT",
+    "names": {
+      "eng": [],
+      "zhs": []
+    },
+    "description": {
+      "eng": "",
+      "zhs": ""
+    }
+  },
+  {
+    "id": "THORNS",
+    "names": {
+      "eng": [
+        "thorns"
+      ],
+      "zhs": [
+        "荆棘"
+      ]
+    },
+    "description": {
+      "eng": "When receiving #yAttack damage, deals damage back.",
+      "zhs": "受到 #y攻击 伤害时，对攻击者造成伤害。"
+    }
+  },
+  {
+    "id": "TODO",
+    "names": {
+      "eng": [
+        "todo",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE"
+      ],
+      "zhs": [
+        "todo",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE",
+        "JUST FOR DEVS, DONT TRANSLATE"
+      ]
+    },
+    "description": {
+      "eng": "This card is NOT IMPLEMENTED. Someone should really fix that...",
+      "zhs": "这张牌还没做完，呃，会出现在这里还真是需要修复一下……"
+    }
+  },
+  {
+    "id": "TRANSFORM",
+    "names": {
+      "eng": [
+        "transform"
+      ],
+      "zhs": [
+        "变化"
+      ]
+    },
+    "description": {
+      "eng": "Transformed cards become a random card of any rarity.",
+      "zhs": "被变化的牌会变成随机稀有度的随机牌。"
+    }
+  },
+  {
+    "id": "UNKNOWN",
+    "names": {
+      "eng": [
+        "unknown"
+      ],
+      "zhs": [
+        "未知"
+      ]
+    },
+    "description": {
+      "eng": "This card has yet to be encountered.",
+      "zhs": "这张牌你还没有遇到过。"
+    }
+  },
+  {
+    "id": "UNPLAYABLE",
+    "names": {
+      "eng": [
+        "unplayable"
+      ],
+      "zhs": [
+        "不能被打出"
+      ]
+    },
+    "description": {
+      "eng": "Unplayable cards cannot be played from your hand.",
+      "zhs": "不能被打出的牌不能从你的手牌中被打出。"
+    }
+  },
+  {
+    "id": "UPGRADE",
+    "names": {
+      "eng": [
+        "upgrade",
+        "upgraded"
+      ],
+      "zhs": [
+        "升级",
+        "upgraded"
+      ]
+    },
+    "description": {
+      "eng": "Upgrading cards makes them more powerful. Cards can only be upgraded once.",
+      "zhs": "升级卡牌会让它们变得更加强大。卡牌只能升级一次。"
+    }
+  },
+  {
+    "id": "VOID",
+    "names": {
+      "eng": [
+        "void",
+        "voids"
+      ],
+      "zhs": [
+        "虚空",
+        "虚空"
+      ]
+    },
+    "description": {
+      "eng": "Voids are unplayable status cards that consume energy when drawn.",
+      "zhs": "虚空是 不能被打出 的 虚无 状态牌，在被抽到时会消耗能量。"
+    }
+  },
+  {
+    "id": "VULNERABLE",
+    "names": {
+      "eng": [
+        "vulnerable"
+      ],
+      "zhs": [
+        "易伤"
+      ]
+    },
+    "description": {
+      "eng": "Vulnerable creatures take #b50% more damage from Attacks.",
+      "zhs": "有易伤效果的生物从攻击中受到的伤害增加 #b50% 。"
+    }
+  },
+  {
+    "id": "WEAK",
+    "names": {
+      "eng": [
+        "weak",
+        "weaken",
+        "weakened",
+        "weakens"
+      ],
+      "zhs": [
+        "虚弱",
+        "weaken",
+        "weakened",
+        "weakens"
+      ]
+    },
+    "description": {
+      "eng": "Weakened creatures deal #b25% less damage with Attacks.",
+      "zhs": "有虚弱效果的生物用攻击造成的伤害减少 #b25% 。"
+    }
+  },
+  {
+    "id": "WOUND",
+    "names": {
+      "eng": [
+        "wound",
+        "wounds"
+      ],
+      "zhs": [
+        "伤口",
+        "wounds"
+      ]
+    },
+    "description": {
+      "eng": "Wounds are unplayable status cards.",
+      "zhs": "伤口是不能被打出的状态牌。"
+    }
+  },
+  {
+    "id": "WRATH",
+    "names": {
+      "eng": [
+        "wrath"
+      ],
+      "zhs": [
+        "愤怒"
+      ]
+    },
+    "description": {
+      "eng": "In this #yStance, you deal and receive double attack damage.",
+      "zhs": "在这一 #y姿态 中，你造成和受到双倍攻击伤害。"
+    }
+  },
+  {
+    "id": "CALM",
+    "names": {
+      "eng": [
+        "calm"
+      ],
+      "zhs": [
+        "平静"
+      ]
+    },
+    "description": {
+      "eng": "Upon exiting this #yStance, gain [W] [W] .",
+      "zhs": "离开这一 #y姿态 时，获得 [W] [W] 。"
+    }
+  },
+  {
+    "id": "STANCE",
+    "names": {
+      "eng": [
+        "stance",
+        "stances"
+      ],
+      "zhs": [
+        "姿态",
+        "stances"
+      ]
+    },
+    "description": {
+      "eng": "You can only have one stance at a time.",
+      "zhs": "你同一时间只能处于一种姿态。"
+    }
+  },
+  {
+    "id": "SCRY",
+    "names": {
+      "eng": [
+        "scry"
+      ],
+      "zhs": [
+        "预见"
+      ]
+    },
+    "description": {
+      "eng": "Look at the top X cards of your draw pile. You may discard any of them.",
+      "zhs": "检视你抽牌堆顶部的X张牌。你可以选择丢弃其中的任意张。"
+    }
+  },
+  {
+    "id": "DIVINITY",
+    "names": {
+      "eng": [
+        "divinity"
+      ],
+      "zhs": [
+        "神格"
+      ]
+    },
+    "description": {
+      "eng": "Upon entering this stance, gain [W] [W] [W] . Attacks deal triple damage. Exit this #yStance at the start of your next turn.",
+      "zhs": "进入这一 #y姿态 时，获得 [W] [W] [W] 。你的攻击造成三倍伤害。你在下一回合开始时自动离开这一 #y姿态 。"
+    }
+  },
+  {
+    "id": "PRAYER",
+    "names": {
+      "eng": [
+        "mantra",
+        "through violence"
+      ],
+      "zhs": [
+        "真言",
+        "through violence"
+      ]
+    },
+    "description": {
+      "eng": "When you obtain #b10 #yMantra, enter #yDivinity.",
+      "zhs": "当你获得 #b10 层 #y真言 时，进入 #y神格 。"
+    }
+  },
+  {
+    "id": "VIGOR",
+    "names": {
+      "eng": [
+        "vigor"
+      ],
+      "zhs": [
+        "活力"
+      ]
+    },
+    "description": {
+      "eng": "Your next Attack deals additional damage.",
+      "zhs": "你的下一次攻击造成额外伤害。"
+    }
+  },
+  {
+    "id": "REGEN",
+    "names": {
+      "eng": [
+        "regen"
+      ],
+      "zhs": [
+        "再生"
+      ]
+    },
+    "description": {
+      "eng": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by #b1.",
+      "zhs": "在你的回合结束时回复相应的生命值。再生每回合减少 #b1 。"
+    }
+  },
+  {
+    "id": "RITUAL",
+    "names": {
+      "eng": [
+        "ritual"
+      ],
+      "zhs": [
+        "仪式"
+      ]
+    },
+    "description": {
+      "eng": "Gain #yStrength at the end of your turn.",
+      "zhs": "在你的回合结束时，获得相应点数的 #y力量 。"
+    }
+  },
+  {
+    "id": "FATAL",
+    "names": {
+      "eng": [
+        "fatal"
+      ],
+      "zhs": [
+        "斩杀"
+      ]
+    },
+    "description": {
+      "eng": "Triggers whenever this card kills a non-minion enemy.",
+      "zhs": "当用卡牌杀死一名不是“爪牙”的敌人时，触发该效果。"
+    }
+  }
+]

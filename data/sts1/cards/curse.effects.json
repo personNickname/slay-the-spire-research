@@ -1,0 +1,78 @@
+{
+  "AscendersBane": {
+    "ops": []
+  },
+  "Clumsy": {
+    "ops": []
+  },
+  "CurseOfTheBell": {
+    "ops": []
+  },
+  "Decay": {
+    "ops": [],
+    "onEndOfTurnInHand": [
+      {
+        "op": "loseHp",
+        "amount": 2
+      }
+    ]
+  },
+  "Doubt": {
+    "ops": [],
+    "onEndOfTurnInHand": [
+      {
+        "op": "power",
+        "id": "Weakened",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Injury": {
+    "ops": []
+  },
+  "Necronomicurse": {
+    "ops": []
+  },
+  "Normality": {
+    "ops": []
+  },
+  "Pain": {
+    "ops": [],
+    "onOtherCardPlayed": [
+      {
+        "op": "loseHp",
+        "amount": 1
+      }
+    ]
+  },
+  "Parasite": {
+    "ops": []
+  },
+  "Pride": {
+    "ops": []
+  },
+  "Regret": {
+    "ops": [],
+    "onEndOfTurnInHand": [
+      {
+        "op": "custom",
+        "id": "regret"
+      }
+    ]
+  },
+  "Shame": {
+    "ops": [],
+    "onEndOfTurnInHand": [
+      {
+        "op": "power",
+        "id": "Frail",
+        "target": "self",
+        "amount": 1
+      }
+    ]
+  },
+  "Writhe": {
+    "ops": []
+  }
+}

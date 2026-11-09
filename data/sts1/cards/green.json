@@ -1,0 +1,2222 @@
+[
+  {
+    "id": "A Thousand Cuts",
+    "class": "green/AThousandCuts",
+    "name": {
+      "eng": "A Thousand Cuts",
+      "zhs": "凌迟"
+    },
+    "description": {
+      "eng": "Whenever you play a card, deal !M! damage to ALL enemies.",
+      "zhs": "你每打出一张牌，就对所有敌人造成 !M! 点伤害。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Accuracy",
+    "class": "green/Accuracy",
+    "name": {
+      "eng": "Accuracy",
+      "zhs": "精准"
+    },
+    "description": {
+      "eng": "*Shivs deal !M! additional damage.",
+      "zhs": "*小刀 造成的伤害增加 !M! 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Acrobatics",
+    "class": "green/Acrobatics",
+    "name": {
+      "eng": "Acrobatics",
+      "zhs": "杂技"
+    },
+    "description": {
+      "eng": "Draw !M! cards. NL Discard 1 card.",
+      "zhs": "抽 !M! 张牌。 NL 丢弃 1 张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Adrenaline",
+    "class": "green/Adrenaline",
+    "name": {
+      "eng": "Adrenaline",
+      "zhs": "肾上腺素"
+    },
+    "description": {
+      "eng": "Gain [G]. NL Draw 2 cards. NL Exhaust.",
+      "zhs": "获得 [G] 。 NL 抽2张牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "self",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain [G] [G]. NL Draw 2 cards. NL Exhaust.",
+      "zhs": "获得 [G] [G] 。 NL NL 抽2张牌。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "After Image",
+    "class": "green/AfterImage",
+    "name": {
+      "eng": "After Image",
+      "zhs": "余像"
+    },
+    "description": {
+      "eng": "Whenever you play a card, gain 1 Block.",
+      "zhs": "你每打出一张牌，都获得1点 格挡 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL Whenever you play a card, gain 1 Block.",
+      "zhs": " 固有 。 NL 你每打出一张牌，都获得1点 格挡 。"
+    }
+  },
+  {
+    "id": "All Out Attack",
+    "class": "green/AllOutAttack",
+    "name": {
+      "eng": "All-Out Attack",
+      "zhs": "全力攻击"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Discard 1 card at random.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 丢弃一张随机手牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 10
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Backflip",
+    "class": "green/Backflip",
+    "name": {
+      "eng": "Backflip",
+      "zhs": "后空翻"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Draw 2 cards.",
+      "zhs": "获得 !B! 点 格挡 。 NL 抽2张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Backstab",
+    "class": "green/Backstab",
+    "name": {
+      "eng": "Backstab",
+      "zhs": "背刺"
+    },
+    "description": {
+      "eng": "Innate. NL Deal !D! damage. NL Exhaust.",
+      "zhs": "造成 !D! 点伤害。 NL 固有 。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 11
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": true,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Bane",
+    "class": "green/Bane",
+    "name": {
+      "eng": "Bane",
+      "zhs": "灾祸"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If the enemy has Poison, deal !D! damage again.",
+      "zhs": "造成 !D! 点伤害。 NL 如果敌人有 中毒 状态 ，则再次造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 7
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Blade Dance",
+    "class": "green/BladeDance",
+    "name": {
+      "eng": "Blade Dance",
+      "zhs": "刀刃之舞"
+    },
+    "description": {
+      "eng": "Add !M! *Shivs into your hand.",
+      "zhs": "增加 !M! 张 *小刀 到你的手牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Blur",
+    "class": "green/Blur",
+    "name": {
+      "eng": "Blur",
+      "zhs": "残影"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Block is not removed at the start of your next turn.",
+      "zhs": "获得 !B! 点 格挡 。 NL 你的下一回合开始时 格挡 不会消失。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Bouncing Flask",
+    "class": "green/BouncingFlask",
+    "name": {
+      "eng": "Bouncing Flask",
+      "zhs": "弹跳药瓶"
+    },
+    "description": {
+      "eng": "Apply 3 Poison to a random enemy !M! times.",
+      "zhs": "随机给予敌人3层 中毒  !M! 次。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Bullet Time",
+    "class": "green/BulletTime",
+    "name": {
+      "eng": "Bullet Time",
+      "zhs": "子弹时间"
+    },
+    "description": {
+      "eng": "You cannot draw additional cards this turn. Reduce the cost of all cards in your hand to 0 this turn.",
+      "zhs": "你在本回合内不能再抽牌。你手牌中的所有牌在本回合的耗能变为0点。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Burst",
+    "class": "green/Burst",
+    "name": {
+      "eng": "Burst",
+      "zhs": "爆发"
+    },
+    "description": {
+      "eng": "This turn, your next Skill is played twice.",
+      "zhs": "在这个回合，你打出的下一张技能牌会打出两次。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "This turn, your next !M! Skills are played twice.",
+      "zhs": "在这个回合，你打出的下 !M! 张技能牌会打出两次。"
+    }
+  },
+  {
+    "id": "Calculated Gamble",
+    "class": "green/CalculatedGamble",
+    "name": {
+      "eng": "Calculated Gamble",
+      "zhs": "计算下注"
+    },
+    "description": {
+      "eng": "Discard your hand, NL then draw that many cards. NL Exhaust.",
+      "zhs": "丢弃所有手牌。 NL 然后抽相同数量张牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "exhaust": false
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Discard your hand, NL then draw that many cards.",
+      "zhs": "丢弃所有手牌。 NL 然后抽相同数量张牌。"
+    }
+  },
+  {
+    "id": "Caltrops",
+    "class": "green/Caltrops",
+    "name": {
+      "eng": "Caltrops",
+      "zhs": "铁蒺藜"
+    },
+    "description": {
+      "eng": "Whenever you are attacked, deal !M! damage back.",
+      "zhs": "每当你被攻击时，对攻击者造成 !M! 点伤害。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Catalyst",
+    "class": "green/Catalyst",
+    "name": {
+      "eng": "Catalyst",
+      "zhs": "催化剂"
+    },
+    "description": {
+      "eng": "Double the enemy's Poison. NL Exhaust.",
+      "zhs": "将一名敌人的 中毒 层数翻倍。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Triple the enemy's Poison. NL Exhaust.",
+      "zhs": "将一名敌人的 中毒 层数变为三倍。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Choke",
+    "class": "green/Choke",
+    "name": {
+      "eng": "Choke",
+      "zhs": "勒脖"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Whenever you play a card this turn, the enemy loses !M! HP.",
+      "zhs": "造成 !D! 点伤害。 NL 你在这个回合内每打出一张牌，该名敌人都会失去 !M! 点生命。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 12,
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Cloak And Dagger",
+    "class": "green/CloakAndDagger",
+    "name": {
+      "eng": "Cloak and Dagger",
+      "zhs": "斗篷与匕首"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Add !M! *Shiv into your hand.",
+      "zhs": "获得 !B! 点 格挡 。 NL 增加 !M! 张 *小刀 到你的手牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 6,
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL Add !M! *Shivs into your hand.",
+      "zhs": "获得 !B! 点 格挡 。 NL 增加 !M! 张 *小刀 到你的手牌。"
+    }
+  },
+  {
+    "id": "Concentrate",
+    "class": "green/Concentrate",
+    "name": {
+      "eng": "Concentrate",
+      "zhs": "全神贯注"
+    },
+    "description": {
+      "eng": "Discard !M! cards. NL Gain [G] [G].",
+      "zhs": "丢弃 !M! 张牌。 NL 获得 [G] [G] 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": -1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Corpse Explosion",
+    "class": "green/CorpseExplosion",
+    "name": {
+      "eng": "Corpse Explosion",
+      "zhs": "尸爆术"
+    },
+    "description": {
+      "eng": "Apply !M! Poison. NL When the enemy dies, deal damage equal to its Max HP to ALL enemies.",
+      "zhs": "给予 !M! 层 中毒 。 NL 当这名敌人死亡时，对所有敌人造成等于其最大生命值的伤害。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "magic": 6
+    },
+    "upgrade": {
+      "magic": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "deprecated",
+      "zhs": "deprecated"
+    }
+  },
+  {
+    "id": "Crippling Poison",
+    "class": "green/CripplingPoison",
+    "name": {
+      "eng": "Crippling Cloud",
+      "zhs": "致残毒云"
+    },
+    "description": {
+      "eng": "Apply !M! Poison and 2 Weak to ALL enemies. NL Exhaust.",
+      "zhs": "给予所有敌人 !M! 层 中毒 和2层 虚弱 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": 3
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Dagger Spray",
+    "class": "green/DaggerSpray",
+    "name": {
+      "eng": "Dagger Spray",
+      "zhs": "匕首雨"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies twice.",
+      "zhs": "对所有敌人造成 !D! 点伤害两次。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Dagger Throw",
+    "class": "green/DaggerThrow",
+    "name": {
+      "eng": "Dagger Throw",
+      "zhs": "投掷匕首"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Draw 1 card. NL Discard 1 card.",
+      "zhs": "造成 !D! 点伤害。 NL 抽一张牌。 NL 丢弃一张牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 9
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Dash",
+    "class": "green/Dash",
+    "name": {
+      "eng": "Dash",
+      "zhs": "冲刺"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Deal !D! damage.",
+      "zhs": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 10,
+      "block": 10
+    },
+    "upgrade": {
+      "damage": 3,
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Deadly Poison",
+    "class": "green/DeadlyPoison",
+    "name": {
+      "eng": "Deadly Poison",
+      "zhs": "致命毒药"
+    },
+    "description": {
+      "eng": "Apply !M! Poison.",
+      "zhs": "给予 !M! 层 中毒 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "magic": 5
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Defend_G",
+    "class": "green/Defend_Green",
+    "name": {
+      "eng": "Defend",
+      "zhs": "防御"
+    },
+    "description": {
+      "eng": "Gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STARTER_DEFEND"
+    ]
+  },
+  {
+    "id": "Deflect",
+    "class": "green/Deflect",
+    "name": {
+      "eng": "Deflect",
+      "zhs": "偏折"
+    },
+    "description": {
+      "eng": "Gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "block": 4
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Die Die Die",
+    "class": "green/DieDieDie",
+    "name": {
+      "eng": "Die Die Die",
+      "zhs": "死吧死吧死吧"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Exhaust.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 13
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Distraction",
+    "class": "green/Distraction",
+    "name": {
+      "eng": "Distraction",
+      "zhs": "声东击西"
+    },
+    "description": {
+      "eng": "Add a random Skill into your hand. NL It costs 0 this turn. NL Exhaust.",
+      "zhs": "增加一张随机技能牌到你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Dodge and Roll",
+    "class": "green/DodgeAndRoll",
+    "name": {
+      "eng": "Dodge and Roll",
+      "zhs": "闪躲翻滚"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Next turn, gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。 NL 在下一回合获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 4
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Doppelganger",
+    "class": "green/Doppelganger",
+    "name": {
+      "eng": "Doppelganger",
+      "zhs": "双重存在"
+    },
+    "description": {
+      "eng": "Next turn, draw X cards and gain X [G]. NL Exhaust.",
+      "zhs": "下一回合，抽X张牌，获得X [G] 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": -1,
+    "target": "self",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Next turn, draw X+1 cards and gain X+1 [G]. NL Exhaust.",
+      "zhs": "下一回合，抽X+1张牌，获得X+1 [G] 。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Endless Agony",
+    "class": "green/EndlessAgony",
+    "name": {
+      "eng": "Endless Agony",
+      "zhs": "无尽苦痛"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Whenever you draw this card, add a copy of it into your hand. NL Exhaust.",
+      "zhs": "造成 !D! 点伤害。 NL 每当你抽到这张牌，都增加一张其复制品到你的手牌。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Envenom",
+    "class": "green/Envenom",
+    "name": {
+      "eng": "Envenom",
+      "zhs": "涂毒"
+    },
+    "description": {
+      "eng": "Whenever an Attack deals unblocked damage, apply 1 Poison.",
+      "zhs": "每有一次攻击造成未被格挡的伤害，就给予1层 中毒 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Escape Plan",
+    "class": "green/EscapePlan",
+    "name": {
+      "eng": "Escape Plan",
+      "zhs": "逃脱计划"
+    },
+    "description": {
+      "eng": "Draw 1 card. NL If you draw a Skill, gain !B! Block.",
+      "zhs": "抽1张牌。 NL 如果抽到的是技能牌，获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "block": 3
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Eviscerate",
+    "class": "green/Eviscerate",
+    "name": {
+      "eng": "Eviscerate",
+      "zhs": "内脏切除"
+    },
+    "description": {
+      "eng": "Costs 1 less [G] NL for each card discarded this turn. NL Deal !D! damage 3 times.",
+      "zhs": "你在这个回合内每丢弃一张牌，耗能就减少1 [G] 。 NL 造成 !D! 点伤害三次。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 3,
+    "target": "enemy",
+    "base": {
+      "damage": 7
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Expertise",
+    "class": "green/Expertise",
+    "name": {
+      "eng": "Expertise",
+      "zhs": "独门技术"
+    },
+    "description": {
+      "eng": "Draw cards until you have !M! in your hand.",
+      "zhs": "抽牌直到你的手牌有 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 6
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Finisher",
+    "class": "green/Finisher",
+    "name": {
+      "eng": "Finisher",
+      "zhs": "终结技"
+    },
+    "description": {
+      "eng": "Deal !D! damage for each Attack played this turn.",
+      "zhs": "你在这个回合内每打出过一张攻击牌，就造成一次 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Flechettes",
+    "class": "green/Flechettes",
+    "name": {
+      "eng": "Flechettes",
+      "zhs": "飞镖"
+    },
+    "description": {
+      "eng": "Deal !D! damage for each Skill in your hand.",
+      "zhs": "手牌中每有一张技能牌，造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Flying Knee",
+    "class": "green/FlyingKnee",
+    "name": {
+      "eng": "Flying Knee",
+      "zhs": "飞膝"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Next turn, gain [G].",
+      "zhs": "造成 !D! 点伤害。 NL 在下一回合获得 [G] 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 8
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Footwork",
+    "class": "green/Footwork",
+    "name": {
+      "eng": "Footwork",
+      "zhs": "灵动步法"
+    },
+    "description": {
+      "eng": "Gain !M! Dexterity.",
+      "zhs": "获得 !M! 点 敏捷 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Glass Knife",
+    "class": "green/GlassKnife",
+    "name": {
+      "eng": "Glass Knife",
+      "zhs": "玻璃刀刃"
+    },
+    "description": {
+      "eng": "Deal !D! damage twice. Decrease the damage of this card by 2 this combat.",
+      "zhs": "造成 !D! 点伤害两次。 NL 这张牌每被打出一次，在本场战斗中其基础伤害减少2。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 8
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Grand Finale",
+    "class": "green/GrandFinale",
+    "name": {
+      "eng": "Grand Finale",
+      "zhs": "华丽收场"
+    },
+    "description": {
+      "eng": "Can only be played if there are no cards in your draw pile. NL Deal !D! damage to ALL enemies.",
+      "zhs": "只有当抽牌堆中没有牌时才能打出。 NL 对所有敌人造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "all_enemy",
+    "base": {
+      "damage": 50
+    },
+    "upgrade": {
+      "damage": 10
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "My draw pile NL must be #rEmpty.",
+      "zhs": "我的抽牌堆必须是 #r空的。 "
+    }
+  },
+  {
+    "id": "Heel Hook",
+    "class": "green/HeelHook",
+    "name": {
+      "eng": "Heel Hook",
+      "zhs": "足跟勾"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If the enemy has Weak, NL gain [G] and NL draw 1 card.",
+      "zhs": "造成 !D! 点伤害。 NL 如果敌人有 虚弱 状态 ， NL 获得 [G] 并且 NL 抽1张牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 5
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Infinite Blades",
+    "class": "green/InfiniteBlades",
+    "name": {
+      "eng": "Infinite Blades",
+      "zhs": "无限刀刃"
+    },
+    "description": {
+      "eng": "At the start of your turn, add a *Shiv into your hand.",
+      "zhs": "在你的回合开始时，增加一张 *小刀 到你的手牌。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL At the start of your turn, add a *Shiv into your hand.",
+      "zhs": " 固有 。 NL 在你的回合开始时，增加一张 *小刀 到你的手牌。"
+    }
+  },
+  {
+    "id": "Leg Sweep",
+    "class": "green/LegSweep",
+    "name": {
+      "eng": "Leg Sweep",
+      "zhs": "扫腿"
+    },
+    "description": {
+      "eng": "Apply !M! Weak. NL Gain !B! Block.",
+      "zhs": "给予 !M! 层 虚弱 . NL 获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "block": 11,
+      "magic": 2
+    },
+    "upgrade": {
+      "block": 3,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Malaise",
+    "class": "green/Malaise",
+    "name": {
+      "eng": "Malaise",
+      "zhs": "萎靡"
+    },
+    "description": {
+      "eng": "Enemy loses X Strength. Apply X Weak. NL Exhaust.",
+      "zhs": "敌人失去X点 力量 ，给予X层 虚弱 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": -1,
+    "target": "enemy",
+    "base": {},
+    "upgrade": {},
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Enemy loses X+1 Strength. Apply X+1 Weak. NL Exhaust.",
+      "zhs": "敌人失去X+1点 力量 ，给予X+1层 虚弱 。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Masterful Stab",
+    "class": "green/MasterfulStab",
+    "name": {
+      "eng": "Masterful Stab",
+      "zhs": "精巧刺击"
+    },
+    "description": {
+      "eng": "Costs 1 additional [G] NL for each time you lose HP this combat. NL Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。 NL 你每次受到伤害，这张牌的耗能增加1。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 12
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Neutralize",
+    "class": "green/Neutralize",
+    "name": {
+      "eng": "Neutralize",
+      "zhs": "中和"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Weak.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "basic",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 3,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 1,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Night Terror",
+    "class": "green/Nightmare",
+    "name": {
+      "eng": "Nightmare",
+      "zhs": "夜魇"
+    },
+    "description": {
+      "eng": "Choose a card. NL Next turn, add !M! copies of that card into your hand. Exhaust.",
+      "zhs": "选择一张牌， NL 在下一回合，将 !M! 份这张牌的复制品放入你的手牌中。 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "none",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "cost": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Noxious Fumes",
+    "class": "green/NoxiousFumes",
+    "name": {
+      "eng": "Noxious Fumes",
+      "zhs": "毒雾"
+    },
+    "description": {
+      "eng": "At the start of your turn, apply !M! Poison to ALL enemies.",
+      "zhs": "在你的回合开始时，给予所有敌人 !M! 层 中毒 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Outmaneuver",
+    "class": "green/Outmaneuver",
+    "name": {
+      "eng": "Outmaneuver",
+      "zhs": "抢占先机"
+    },
+    "description": {
+      "eng": "Next turn, NL gain [G] [G].",
+      "zhs": "下一回合 NL 获得 [G] [G] 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Next turn, NL gain [G] [G] [G].",
+      "zhs": "下一回合 NL 获得 [G] [G] [G] 。"
+    }
+  },
+  {
+    "id": "Phantasmal Killer",
+    "class": "green/PhantasmalKiller",
+    "name": {
+      "eng": "Phantasmal Killer",
+      "zhs": "幻影杀手"
+    },
+    "description": {
+      "eng": "Next turn, your Attacks deal double damage.",
+      "zhs": "在你的下个回合，你所有的攻击伤害翻倍。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "PiercingWail",
+    "class": "green/PiercingWail",
+    "name": {
+      "eng": "Piercing Wail",
+      "zhs": "尖啸"
+    },
+    "description": {
+      "eng": "ALL enemies lose !M! Strength this turn. NL Exhaust.",
+      "zhs": "所有敌人失去 !M! 力量 1回合。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "magic": 6
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Poisoned Stab",
+    "class": "green/PoisonedStab",
+    "name": {
+      "eng": "Poisoned Stab",
+      "zhs": "带毒刺击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Poison.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6,
+      "magic": 3
+    },
+    "upgrade": {
+      "damage": 2,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Predator",
+    "class": "green/Predator",
+    "name": {
+      "eng": "Predator",
+      "zhs": "猎杀者"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Next turn, draw 2 additional cards.",
+      "zhs": "造成 !D! 点伤害。 NL 在下一回合多抽2张牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 15
+    },
+    "upgrade": {
+      "damage": 5
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Prepared",
+    "class": "green/Prepared",
+    "name": {
+      "eng": "Prepared",
+      "zhs": "早有准备"
+    },
+    "description": {
+      "eng": "Draw !M! card. NL Discard !M! card.",
+      "zhs": "抽 !M! 张牌。 NL 丢弃 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "common",
+    "cost": 0,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Draw !M! cards. NL Discard !M! cards.",
+      "zhs": "抽 !M! 张牌。 NL 丢弃 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Quick Slash",
+    "class": "green/QuickSlash",
+    "name": {
+      "eng": "Quick Slash",
+      "zhs": "快斩"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Draw 1 card.",
+      "zhs": "造成 !D! 点伤害。 NL 抽 1 张牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 8
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Reflex",
+    "class": "green/Reflex",
+    "name": {
+      "eng": "Reflex",
+      "zhs": "本能反应"
+    },
+    "description": {
+      "eng": "Unplayable. NL If this card is discarded from your hand, draw !M! cards.",
+      "zhs": " 不能被打出 。 NL 如果这张牌从你的手牌中被丢弃，抽 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": -2,
+    "target": "none",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Unplayable. NL If this card is discarded from your hand, draw !M! cards.",
+      "zhs": " 不能被打出 。 NL 如果这张牌从你的手牌中被丢弃，抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Riddle With Holes",
+    "class": "green/RiddleWithHoles",
+    "name": {
+      "eng": "Riddle with Holes",
+      "zhs": "千穿百刺"
+    },
+    "description": {
+      "eng": "Deal !D! damage 5 times.",
+      "zhs": "造成 !D! 点伤害5次。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 3
+    },
+    "upgrade": {
+      "damage": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Setup",
+    "class": "green/Setup",
+    "name": {
+      "eng": "Setup",
+      "zhs": "部署"
+    },
+    "description": {
+      "eng": "Put a card from your hand on top of your draw pile. NL It costs 0 until played.",
+      "zhs": "将手牌中的一张牌放到抽牌堆的顶部。 NL 并且在其被打出之前，其耗能变为0。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Skewer",
+    "class": "green/Skewer",
+    "name": {
+      "eng": "Skewer",
+      "zhs": "串刺"
+    },
+    "description": {
+      "eng": "Deal !D! damage X times.",
+      "zhs": "造成 !D! 点伤害X次。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": -1,
+    "target": "enemy",
+    "base": {
+      "damage": 7
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Slice",
+    "class": "green/Slice",
+    "name": {
+      "eng": "Slice",
+      "zhs": "切割"
+    },
+    "description": {
+      "eng": "Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Storm of Steel",
+    "class": "green/StormOfSteel",
+    "name": {
+      "eng": "Storm of Steel",
+      "zhs": "钢铁风暴"
+    },
+    "description": {
+      "eng": "Discard your hand. NL Add 1 *Shiv into your hand for each card discarded.",
+      "zhs": "丢弃所有手牌。 NL 每丢弃一张牌，在你的手牌中增加一张 *小刀 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "custom": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Discard your hand. NL Add 1 *Shiv+ into your hand for each card discarded.",
+      "zhs": "丢弃所有手牌。 NL 每丢弃一张牌，在你的手牌中增加一张 *小刀+ 。"
+    }
+  },
+  {
+    "id": "Strike_G",
+    "class": "green/Strike_Green",
+    "name": {
+      "eng": "Strike",
+      "zhs": "打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE",
+      "STARTER_STRIKE"
+    ]
+  },
+  {
+    "id": "Sucker Punch",
+    "class": "green/SuckerPunch",
+    "name": {
+      "eng": "Sucker Punch",
+      "zhs": "突然一拳"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Weak.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 7,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 2,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Survivor",
+    "class": "green/Survivor",
+    "name": {
+      "eng": "Survivor",
+      "zhs": "生存者"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Discard 1 card.",
+      "zhs": "获得 !B! 点 格挡 。 NL 丢弃一张牌。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 8
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Tactician",
+    "class": "green/Tactician",
+    "name": {
+      "eng": "Tactician",
+      "zhs": "战术大师"
+    },
+    "description": {
+      "eng": "Unplayable. NL If this card is discarded from your hand, gain [G].",
+      "zhs": " 不能被打出 。 NL 如果这张牌从你的手牌中被丢弃，获得 [G] 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": -2,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Unplayable. NL If this card is discarded from your hand, gain [G] [G].",
+      "zhs": " 不能被打出 。 NL 如果这张牌从你的手牌中被丢弃，获得 [G] [G] 。"
+    }
+  },
+  {
+    "id": "Terror",
+    "class": "green/Terror",
+    "name": {
+      "eng": "Terror",
+      "zhs": "恐怖"
+    },
+    "description": {
+      "eng": "Apply 99 Vulnerable. NL Exhaust.",
+      "zhs": "给予99层 易伤 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Tools of the Trade",
+    "class": "green/ToolsOfTheTrade",
+    "name": {
+      "eng": "Tools of the Trade",
+      "zhs": "必备工具"
+    },
+    "description": {
+      "eng": "At the start of your turn, draw 1 card and discard 1 card.",
+      "zhs": "在你的回合开始时，抽1张牌，丢弃1张牌。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Underhanded Strike",
+    "class": "green/SneakyStrike",
+    "name": {
+      "eng": "Sneaky Strike",
+      "zhs": "隐秘打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If you have discarded a card this turn, NL gain [G] [G].",
+      "zhs": " 造成 !D! 点伤害。 NL 如果你在这回合丢弃过牌，获得 [G] [G] 。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "common",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 12
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ]
+  },
+  {
+    "id": "Unload",
+    "class": "green/Unload",
+    "name": {
+      "eng": "Unload",
+      "zhs": "乾坤一掷"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Discard all non-Attack cards in your hand.",
+      "zhs": "造成 !D! 点伤害。 NL 丢弃所有非攻击牌。"
+    },
+    "type": "attack",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 14
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Venomology",
+    "class": "green/Alchemize",
+    "name": {
+      "eng": "Alchemize",
+      "zhs": "炼制药水"
+    },
+    "description": {
+      "eng": "Obtain a random potion. NL Exhaust.",
+      "zhs": "获得一瓶随机药水。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "HEALING"
+    ]
+  },
+  {
+    "id": "Well Laid Plans",
+    "class": "green/WellLaidPlans",
+    "name": {
+      "eng": "Well-Laid Plans",
+      "zhs": "计划妥当"
+    },
+    "description": {
+      "eng": "At the end of your turn, Retain up to !M! card.",
+      "zhs": "在你的回合结束时， 保留 最多 !M! 张牌。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "At the end of your turn, Retain up to !M! cards.",
+      "zhs": "在你的回合结束时， 保留 最多 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Wraith Form v2",
+    "class": "green/WraithForm",
+    "name": {
+      "eng": "Wraith Form",
+      "zhs": "幽魂形态"
+    },
+    "description": {
+      "eng": "Gain !M! Intangible. NL At the end of your turn, lose 1 Dexterity.",
+      "zhs": "获得 !M! 层 无实体 。 NL 在每回合结束时失去1点 敏捷 。"
+    },
+    "type": "power",
+    "color": "green",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  }
+]

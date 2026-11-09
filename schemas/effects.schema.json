@@ -1,0 +1,63 @@
+{
+  "$id": "https://sts-research/schemas/effects.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Curated effect DSL (cards). Keyed by card id.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "notes": { "type": "string" },
+      "verified": { "type": "string", "description": "decompiled class the ops were derived from" },
+      "canUse": { "enum": ["allAttacksInHand", "lessThan3CardsPlayed"] },
+      "strengthMultiplier": { "enum": ["magic"] },
+      "damagePerStrikeInDeck": { "enum": ["magic"] },
+      "damageFromBlock": { "type": "boolean" },
+      "onExhaust": { "$ref": "#/$defs/ops" },
+      "onDraw": { "$ref": "#/$defs/ops" },
+      "onEndOfTurnInHand": { "$ref": "#/$defs/ops" },
+      "onOtherCardPlayed": { "$ref": "#/$defs/ops" },
+      "onTakeDamageReduceCost": { "type": "integer" },
+      "ops": { "$ref": "#/$defs/ops" }
+    },
+    "additionalProperties": false
+  },
+  "$defs": {
+    "amount": { "oneOf": [{ "type": "integer" }, { "enum": ["damage", "block", "magic", "x", "handSize", "energy"] }] },
+    "target": { "enum": ["target", "self", "all_enemies", "random_enemy"] },
+    "ops": { "type": "array", "items": { "$ref": "#/$defs/op" } },
+    "op": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "enum": [
+            "damage", "block", "power", "draw", "energy", "loseHp", "heal", "addCard",
+            "exhaustChoose", "exhaustRandom", "exhaustAll", "discardChoose", "putOnDrawPile",
+            "doubleBlock", "playTopCard", "custom", "if", "repeat", "copySelf",
+            "channel", "evoke", "stance"
+          ]
+        },
+        "target": { "$ref": "#/$defs/target" },
+        "amount": { "$ref": "#/$defs/amount" },
+        "times": { "$ref": "#/$defs/amount" },
+        "vampire": { "type": "boolean" },
+        "id": { "type": "string" },
+        "card": { "type": "string" },
+        "to": { "enum": ["hand", "discard", "draw", "exhaust"] },
+        "upgraded": { "type": "boolean" },
+        "shuffle": { "type": "boolean" },
+        "filter": { "enum": ["attack", "nonAttack", "any", "attackOrPower"] },
+        "anyNumber": { "type": "boolean" },
+        "cond": { "enum": ["targetVulnerable", "targetAttacking", "upgraded", "targetPoisoned"] },
+        "then": { "$ref": "#/$defs/ops" },
+        "else": { "$ref": "#/$defs/ops" },
+        "ops": { "$ref": "#/$defs/ops" },
+        "copySelf": { "type": "boolean" },
+        "count": { "$ref": "#/$defs/amount" },
+        "orb": { "enum": ["lightning", "frost", "dark", "plasma"] },
+        "stance": { "enum": ["none", "calm", "wrath", "divinity"] }
+      },
+      "required": ["op"],
+      "additionalProperties": false
+    }
+  }
+}

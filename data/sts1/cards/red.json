@@ -1,0 +1,2263 @@
+[
+  {
+    "id": "Anger",
+    "class": "red/Anger",
+    "name": {
+      "eng": "Anger",
+      "zhs": "愤怒"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Add a copy of this card into your discard pile.",
+      "zhs": "造成 !D! 点伤害。 NL 在弃牌堆放入一张此牌的复制品。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Armaments",
+    "class": "red/Armaments",
+    "name": {
+      "eng": "Armaments",
+      "zhs": "武装"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Upgrade a card in your hand for the rest of combat.",
+      "zhs": "获得 !B! 点 格挡 。 NL 在本场战斗中 升级 手牌中的一张牌。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {},
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL Upgrade all cards in your hand for the rest of combat.",
+      "zhs": "获得 !B! 点 格挡 。 NL 在本场战斗中 升级 手牌中的所有牌。"
+    }
+  },
+  {
+    "id": "Barricade",
+    "class": "red/Barricade",
+    "name": {
+      "eng": "Barricade",
+      "zhs": "壁垒"
+    },
+    "description": {
+      "eng": "Block is not removed at the start of your turn.",
+      "zhs": " 格挡 不再在你的回合开始时消失。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Bash",
+    "class": "red/Bash",
+    "name": {
+      "eng": "Bash",
+      "zhs": "痛击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Vulnerable.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "basic",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 8,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 2,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Battle Trance",
+    "class": "red/BattleTrance",
+    "name": {
+      "eng": "Battle Trance",
+      "zhs": "战斗专注"
+    },
+    "description": {
+      "eng": "Draw !M! cards. NL You cannot draw additional cards this turn.",
+      "zhs": "抽 !M! 张牌。 NL 你在这个回合内不能再抽任何牌。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "none",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Berserk",
+    "class": "red/Berserk",
+    "name": {
+      "eng": "Berserk",
+      "zhs": "狂暴"
+    },
+    "description": {
+      "eng": "Gain !M! Vulnerable. NL At the start of your turn, gain [R].",
+      "zhs": "获得 !M! 层 易伤 。 NL 在每回合开始时获得 [R] 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": -1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Blood for Blood",
+    "class": "red/BloodForBlood",
+    "name": {
+      "eng": "Blood for Blood",
+      "zhs": "以血还血"
+    },
+    "description": {
+      "eng": "Costs 1 less [R] NL for each time you lose HP this combat. NL Deal !D! damage.",
+      "zhs": "你每在战斗中失去生命一次，这张牌的耗能就减少1 [R] 。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 4,
+    "target": "enemy",
+    "base": {
+      "damage": 18
+    },
+    "upgrade": {
+      "damage": 4,
+      "cost": 3,
+      "custom": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Bloodletting",
+    "class": "red/Bloodletting",
+    "name": {
+      "eng": "Bloodletting",
+      "zhs": "放血"
+    },
+    "description": {
+      "eng": "Lose 3 HP. NL Gain [R] [R].",
+      "zhs": "获得 [R] [R] 。 NL 失去 3 点生命。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Lose 3 HP. NL Gain [R] [R] [R].",
+      "zhs": "获得 [R] [R] [R] 。 NL 失去 3 点生命。"
+    }
+  },
+  {
+    "id": "Bludgeon",
+    "class": "red/Bludgeon",
+    "name": {
+      "eng": "Bludgeon",
+      "zhs": "重锤"
+    },
+    "description": {
+      "eng": "Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "enemy",
+    "base": {
+      "damage": 32
+    },
+    "upgrade": {
+      "damage": 10
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Body Slam",
+    "class": "red/BodySlam",
+    "name": {
+      "eng": "Body Slam",
+      "zhs": "全身撞击"
+    },
+    "description": {
+      "eng": "Deal damage equal to your Block.",
+      "zhs": "造成你当前 格挡 值的伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 0
+    },
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": " NL (Deals !D! damage.)",
+      "zhs": " NL （造成 !D! 点伤害。）"
+    }
+  },
+  {
+    "id": "Brutality",
+    "class": "red/Brutality",
+    "name": {
+      "eng": "Brutality",
+      "zhs": "残暴"
+    },
+    "description": {
+      "eng": "At the start of your turn, lose 1 HP and draw 1 card.",
+      "zhs": "在你的回合开始时，你失去1点生命，抽1张牌。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "innate": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Innate. NL At the start of your turn, lose 1 HP and draw 1 card.",
+      "zhs": " 固有 。 NL 在你的回合开始时，你失去1点生命，抽1张牌。"
+    }
+  },
+  {
+    "id": "Burning Pact",
+    "class": "red/BurningPact",
+    "name": {
+      "eng": "Burning Pact",
+      "zhs": "燃烧契约"
+    },
+    "description": {
+      "eng": "Exhaust 1 card. NL Draw !M! cards.",
+      "zhs": " 消耗 1张牌。 NL 抽 !M! 张牌。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Carnage",
+    "class": "red/Carnage",
+    "name": {
+      "eng": "Carnage",
+      "zhs": "残杀"
+    },
+    "description": {
+      "eng": "Ethereal. NL Deal !D! damage.",
+      "zhs": " 虚无 。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 20
+    },
+    "upgrade": {
+      "damage": 8
+    },
+    "exhaust": false,
+    "ethereal": true,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Clash",
+    "class": "red/Clash",
+    "name": {
+      "eng": "Clash",
+      "zhs": "交锋"
+    },
+    "description": {
+      "eng": "Can only be played if every card in your hand is an Attack. NL Deal !D! damage.",
+      "zhs": "只有在手牌每一张牌都是攻击牌时才能被打出。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 14
+    },
+    "upgrade": {
+      "damage": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Cleave",
+    "class": "red/Cleave",
+    "name": {
+      "eng": "Cleave",
+      "zhs": "顺劈斩"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies.",
+      "zhs": "对所有敌人造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 8
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Clothesline",
+    "class": "red/Clothesline",
+    "name": {
+      "eng": "Clothesline",
+      "zhs": "金刚臂"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Weak.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 12,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 2,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Combust",
+    "class": "red/Combust",
+    "name": {
+      "eng": "Combust",
+      "zhs": "自燃"
+    },
+    "description": {
+      "eng": "At the end of your turn, lose 1 HP and deal !M! damage to ALL enemies.",
+      "zhs": "在你的回合结束时，你失去1点生命，对所有敌人造成 !M! 点伤害。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 5
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Corruption",
+    "class": "red/Corruption",
+    "name": {
+      "eng": "Corruption",
+      "zhs": "腐化"
+    },
+    "description": {
+      "eng": "Skills cost 0. NL Whenever you play a Skill, Exhaust it.",
+      "zhs": "所有技能牌耗能变为0。 NL 所有技能牌在被打出时被 消耗 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "cost": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Dark Embrace",
+    "class": "red/DarkEmbrace",
+    "name": {
+      "eng": "Dark Embrace",
+      "zhs": "黑暗之拥"
+    },
+    "description": {
+      "eng": "Whenever a card is Exhausted, NL draw 1 card.",
+      "zhs": "每当有一张牌被 消耗 时， 抽1张牌。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Defend_R",
+    "class": "red/Defend_Red",
+    "name": {
+      "eng": "Defend",
+      "zhs": "防御"
+    },
+    "description": {
+      "eng": "Gain !B! Block.",
+      "zhs": "获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STARTER_DEFEND"
+    ]
+  },
+  {
+    "id": "Demon Form",
+    "class": "red/DemonForm",
+    "name": {
+      "eng": "Demon Form",
+      "zhs": "恶魔形态"
+    },
+    "description": {
+      "eng": "At the start of your turn, gain !M! Strength.",
+      "zhs": "在每回合开始时获得 NL !M! 点 力量 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 3,
+    "target": "none",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Disarm",
+    "class": "red/Disarm",
+    "name": {
+      "eng": "Disarm",
+      "zhs": "缴械"
+    },
+    "description": {
+      "eng": "Enemy loses !M! Strength. NL Exhaust.",
+      "zhs": "使敌人失去 !M! 点 力量 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Double Tap",
+    "class": "red/DoubleTap",
+    "name": {
+      "eng": "Double Tap",
+      "zhs": "双发"
+    },
+    "description": {
+      "eng": "This turn, your next Attack is played twice.",
+      "zhs": "在这个回合，你打出的下一张攻击牌会打出两次。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "This turn, your next !M! Attacks are played twice.",
+      "zhs": "在这个回合，你打出的下 !M! 张攻击牌会打出两次。"
+    }
+  },
+  {
+    "id": "Dropkick",
+    "class": "red/Dropkick",
+    "name": {
+      "eng": "Dropkick",
+      "zhs": "飞身踢"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If the enemy has Vulnerable, NL gain [R] and NL draw 1 card.",
+      "zhs": "造成 !D! 点伤害。 NL 如果敌人有 易伤 状态 ， NL 获得 [R] 并且 NL 抽1张牌。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 5
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Dual Wield",
+    "class": "red/DualWield",
+    "name": {
+      "eng": "Dual Wield",
+      "zhs": "双持"
+    },
+    "description": {
+      "eng": "Choose an Attack or Power card. Add a copy of that card into your hand.",
+      "zhs": "将你手牌中的一张 攻击 或 能力 牌复制一张。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Choose an Attack or Power card. Add 2 copies of that card into your hand.",
+      "zhs": "将你手牌中的一张 攻击 或 能力 牌复制两张。"
+    }
+  },
+  {
+    "id": "Entrench",
+    "class": "red/Entrench",
+    "name": {
+      "eng": "Entrench",
+      "zhs": "巩固"
+    },
+    "description": {
+      "eng": "Double your Block.",
+      "zhs": "将你当前的 格挡 翻倍。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "cost": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Double your Block.",
+      "zhs": "将你当前的 格挡 翻倍。"
+    }
+  },
+  {
+    "id": "Evolve",
+    "class": "red/Evolve",
+    "name": {
+      "eng": "Evolve",
+      "zhs": "进化"
+    },
+    "description": {
+      "eng": "Whenever you draw a Status card, draw !M! card.",
+      "zhs": "每当你抽到一张 状态牌 时，抽 !M! 张牌。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Whenever you draw a Status card, draw !M! cards.",
+      "zhs": "每当你抽到一张 状态牌 时，抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Exhume",
+    "class": "red/Exhume",
+    "name": {
+      "eng": "Exhume",
+      "zhs": "发掘"
+    },
+    "description": {
+      "eng": "Put a card from your exhaust pile into your hand. NL Exhaust.",
+      "zhs": "选择一张已 消耗 的牌，将其放入你的手牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Feed",
+    "class": "red/Feed",
+    "name": {
+      "eng": "Feed",
+      "zhs": "狂宴"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL If Fatal, raise your Max HP by !M!. Exhaust.",
+      "zhs": "造成 !D! 点伤害。 NL 斩杀 时，永久获得 !M! 点最大生命。 消耗 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 10,
+      "magic": 3
+    },
+    "upgrade": {
+      "damage": 2,
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "HEALING"
+    ]
+  },
+  {
+    "id": "Feel No Pain",
+    "class": "red/FeelNoPain",
+    "name": {
+      "eng": "Feel No Pain",
+      "zhs": "无惧疼痛"
+    },
+    "description": {
+      "eng": "Whenever a card is Exhausted, NL gain !M! Block.",
+      "zhs": "每当有一张牌被 消耗 时， 获得 !M! 点 格挡 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Fiend Fire",
+    "class": "red/FiendFire",
+    "name": {
+      "eng": "Fiend Fire",
+      "zhs": "恶魔之焰"
+    },
+    "description": {
+      "eng": "Exhaust your hand. NL Deal !D! damage for each card Exhausted. NL Exhaust.",
+      "zhs": " 消耗 所有手牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 7
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Fire Breathing",
+    "class": "red/FireBreathing",
+    "name": {
+      "eng": "Fire Breathing",
+      "zhs": "火焰吐息"
+    },
+    "description": {
+      "eng": "Whenever you draw a Status or Curse card, deal !M! damage to ALL enemies.",
+      "zhs": "每当你抽到一张 状态牌 或 诅咒 牌时，对所有敌人造成 !M! 点伤害。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 6
+    },
+    "upgrade": {
+      "magic": 4
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Flame Barrier",
+    "class": "red/FlameBarrier",
+    "name": {
+      "eng": "Flame Barrier",
+      "zhs": "火焰屏障"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage back.",
+      "zhs": "获得 !B! 点 格挡 。 NL 你在这个回合每受到一次攻击，都对攻击者造成 !M! 点伤害。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "block": 12,
+      "magic": 4
+    },
+    "upgrade": {
+      "block": 4,
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Flex",
+    "class": "red/Flex",
+    "name": {
+      "eng": "Flex",
+      "zhs": "活动肌肉"
+    },
+    "description": {
+      "eng": "Gain !M! Strength. NL At the end of this turn, lose !M! Strength.",
+      "zhs": "获得 !M! 点 力量 。 NL 你的回合结束时，失去 !M! 点 力量 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Ghostly Armor",
+    "class": "red/GhostlyArmor",
+    "name": {
+      "eng": "Ghostly Armor",
+      "zhs": "幽灵铠甲"
+    },
+    "description": {
+      "eng": "Ethereal. NL Gain !B! Block.",
+      "zhs": " 虚无 。 NL 获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 10
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": true,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Havoc",
+    "class": "red/Havoc",
+    "name": {
+      "eng": "Havoc",
+      "zhs": "破灭"
+    },
+    "description": {
+      "eng": "Play the top card of your draw pile and Exhaust it.",
+      "zhs": "打出抽牌堆顶部的牌，将其 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Headbutt",
+    "class": "red/Headbutt",
+    "name": {
+      "eng": "Headbutt",
+      "zhs": "头槌"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Put a card from your discard pile on top of your draw pile.",
+      "zhs": "造成 !D! 点伤害。 NL 将弃牌堆中的一张牌放到抽牌堆的顶部。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 9
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Heavy Blade",
+    "class": "red/HeavyBlade",
+    "name": {
+      "eng": "Heavy Blade",
+      "zhs": "重刃"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Strength affects this card !M! times.",
+      "zhs": "造成 !D! 点伤害。 NL 力量 在 重刃 上发挥 !M! 倍效果。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 14,
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Deal !D! damage. NL Strength affects this card !M! times.",
+      "zhs": "造成 !D! 点伤害。 NL 力量 在 重刃 上发挥 !M! 倍效果。"
+    }
+  },
+  {
+    "id": "Hemokinesis",
+    "class": "red/Hemokinesis",
+    "name": {
+      "eng": "Hemokinesis",
+      "zhs": "御血术"
+    },
+    "description": {
+      "eng": "Lose !M! HP. NL Deal !D! damage.",
+      "zhs": "失去 !M! 点生命。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 15,
+      "magic": 2
+    },
+    "upgrade": {
+      "damage": 5
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Immolate",
+    "class": "red/Immolate",
+    "name": {
+      "eng": "Immolate",
+      "zhs": "燔祭"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. NL Add a *Burn into your discard pile.",
+      "zhs": "对所有敌人造成 !D! 点伤害。 NL 将一张 *灼伤 放入你的弃牌堆中。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "damage": 21
+    },
+    "upgrade": {
+      "damage": 7
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Impervious",
+    "class": "red/Impervious",
+    "name": {
+      "eng": "Impervious",
+      "zhs": "岿然不动"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Exhaust.",
+      "zhs": "获得 !B! 点 格挡 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "block": 30
+    },
+    "upgrade": {
+      "block": 10
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Infernal Blade",
+    "class": "red/InfernalBlade",
+    "name": {
+      "eng": "Infernal Blade",
+      "zhs": "地狱之刃"
+    },
+    "description": {
+      "eng": "Add a random Attack into your hand. NL It costs 0 this turn. NL Exhaust.",
+      "zhs": "增加一张随机攻击牌到你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Inflame",
+    "class": "red/Inflame",
+    "name": {
+      "eng": "Inflame",
+      "zhs": "燃烧"
+    },
+    "description": {
+      "eng": "Gain !M! Strength.",
+      "zhs": "获得 !M! 点 力量 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Intimidate",
+    "class": "red/Intimidate",
+    "name": {
+      "eng": "Intimidate",
+      "zhs": "威吓"
+    },
+    "description": {
+      "eng": "Apply !M! Weak to ALL enemies. NL Exhaust.",
+      "zhs": "给予所有敌人 !M! 层 虚弱 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "all_enemy",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Iron Wave",
+    "class": "red/IronWave",
+    "name": {
+      "eng": "Iron Wave",
+      "zhs": "铁斩波"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Deal !D! damage.",
+      "zhs": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 5,
+      "block": 5
+    },
+    "upgrade": {
+      "damage": 2,
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Juggernaut",
+    "class": "red/Juggernaut",
+    "name": {
+      "eng": "Juggernaut",
+      "zhs": "势不可当"
+    },
+    "description": {
+      "eng": "Whenever you gain Block, deal !M! damage to a random enemy.",
+      "zhs": "每当你获得 格挡 时， NL 对随机一名敌人造成 NL !M! 点伤害。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "self",
+    "base": {
+      "magic": 5
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Limit Break",
+    "class": "red/LimitBreak",
+    "name": {
+      "eng": "Limit Break",
+      "zhs": "突破极限"
+    },
+    "description": {
+      "eng": "Double your Strength. NL Exhaust.",
+      "zhs": "将你的 力量 翻倍。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 1,
+    "target": "self",
+    "base": {},
+    "upgrade": {
+      "exhaust": false
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Double your Strength.",
+      "zhs": "将你的 力量 翻倍。"
+    }
+  },
+  {
+    "id": "Metallicize",
+    "class": "red/Metallicize",
+    "name": {
+      "eng": "Metallicize",
+      "zhs": "金属化"
+    },
+    "description": {
+      "eng": "At the end of your turn, gain !M! Block.",
+      "zhs": "在你的回合结束时，获得 !M! 点 格挡 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Offering",
+    "class": "red/Offering",
+    "name": {
+      "eng": "Offering",
+      "zhs": "祭品"
+    },
+    "description": {
+      "eng": "Lose 6 HP. NL Gain [R] [R]. NL Draw !M! cards. NL Exhaust.",
+      "zhs": "失去 6 点生命。 NL 获得 [R] [R] 。 NL 抽 !M! 张牌。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Lose 6 HP. NL Gain [R] [R]. NL Draw !M! cards. NL Exhaust.",
+      "zhs": "失去 6 点生命。 NL 获得 [R] [R] 。 NL 抽 !M! 张牌。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Perfected Strike",
+    "class": "red/PerfectedStrike",
+    "name": {
+      "eng": "Perfected Strike",
+      "zhs": "完美打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\".",
+      "zhs": "造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+2。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 6,
+      "magic": 2
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ],
+    "upgradedDescription": {
+      "eng": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\".",
+      "zhs": "造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+3。"
+    }
+  },
+  {
+    "id": "Pommel Strike",
+    "class": "red/PommelStrike",
+    "name": {
+      "eng": "Pommel Strike",
+      "zhs": "剑柄打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Draw !M! card.",
+      "zhs": "造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 9,
+      "magic": 1
+    },
+    "upgrade": {
+      "damage": 1,
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ],
+    "upgradedDescription": {
+      "eng": "Deal !D! damage. NL Draw !M! cards.",
+      "zhs": "造成 !D! 点伤害。 NL 抽 !M! 张牌。"
+    }
+  },
+  {
+    "id": "Power Through",
+    "class": "red/PowerThrough",
+    "name": {
+      "eng": "Power Through",
+      "zhs": "硬撑"
+    },
+    "description": {
+      "eng": "Add 2 *Wounds into your hand. NL Gain !B! Block.",
+      "zhs": "增加2张 *伤口 到你的手牌。 NL 获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 15
+    },
+    "upgrade": {
+      "block": 5
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Pummel",
+    "class": "red/Pummel",
+    "name": {
+      "eng": "Pummel",
+      "zhs": "连续拳"
+    },
+    "description": {
+      "eng": "Deal !D! damage !M! times. NL Exhaust.",
+      "zhs": "造成 !D! 点伤害 !M! 次。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 2,
+      "magic": 4
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Deal !D! damage !M! times. NL Exhaust.",
+      "zhs": "造成 !D! 点伤害 !M! 次。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Rage",
+    "class": "red/Rage",
+    "name": {
+      "eng": "Rage",
+      "zhs": "狂怒"
+    },
+    "description": {
+      "eng": "Whenever you play an Attack this turn, gain !M! Block.",
+      "zhs": "打出此牌后，你在这个回合内每打出一张攻击牌，获得 !M! 格挡 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Rampage",
+    "class": "red/Rampage",
+    "name": {
+      "eng": "Rampage",
+      "zhs": "暴走"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Increase this card's damage by !M! this combat.",
+      "zhs": "造成 !D! 点伤害。 NL 这张牌每被打出一次，在本场战斗中其伤害增加 !M! 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 8,
+      "magic": 5
+    },
+    "upgrade": {
+      "magic": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Reaper",
+    "class": "red/Reaper",
+    "name": {
+      "eng": "Reaper",
+      "zhs": "死亡收割"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies. Heal HP equal to unblocked damage. NL Exhaust.",
+      "zhs": "对所有敌人造成 !D! 点伤害。未被 格挡 的伤害将回复你的生命。 NL 消耗 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "rare",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": [
+      "HEALING"
+    ]
+  },
+  {
+    "id": "Reckless Charge",
+    "class": "red/RecklessCharge",
+    "name": {
+      "eng": "Reckless Charge",
+      "zhs": "无谋冲锋"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Shuffle a *Dazed into your draw pile.",
+      "zhs": "造成 !D! 点伤害。 NL 将一张 *晕眩 放入你的抽牌堆中。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 0,
+    "target": "enemy",
+    "base": {
+      "damage": 7
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Rupture",
+    "class": "red/Rupture",
+    "name": {
+      "eng": "Rupture",
+      "zhs": "撕裂"
+    },
+    "description": {
+      "eng": "Whenever you lose HP from a card, NL gain !M! Strength.",
+      "zhs": "每当你从一张牌中失去生命时，获得 !M! 点 力量 。"
+    },
+    "type": "power",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Searing Blow",
+    "class": "red/SearingBlow",
+    "name": {
+      "eng": "Searing Blow",
+      "zhs": "灼热攻击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Can be Upgraded any number of times.",
+      "zhs": "造成 !D! 点伤害。 NL 能被多次 升级 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 12
+    },
+    "upgrade": {
+      "custom": true
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Second Wind",
+    "class": "red/SecondWind",
+    "name": {
+      "eng": "Second Wind",
+      "zhs": "重振精神"
+    },
+    "description": {
+      "eng": "Exhaust all non-Attack cards in your hand. Gain !B! Block for each card Exhausted.",
+      "zhs": "消耗 手牌中所有非攻击牌，每张获得 !B! 点 格挡 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Seeing Red",
+    "class": "red/SeeingRed",
+    "name": {
+      "eng": "Seeing Red",
+      "zhs": "盛怒"
+    },
+    "description": {
+      "eng": "Gain [R] [R]. NL Exhaust.",
+      "zhs": "获得 [R] [R] 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "none",
+    "base": {},
+    "upgrade": {
+      "cost": 0
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Sentinel",
+    "class": "red/Sentinel",
+    "name": {
+      "eng": "Sentinel",
+      "zhs": "哨卫"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL If this card is Exhausted, NL gain [R] [R].",
+      "zhs": "获得 !B! 点 格挡 。 NL 如果这张牌被 消耗 ， NL 获得 [R] [R] 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 5
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL If this card is Exhausted, NL gain [R] [R] [R].",
+      "zhs": "获得 !B! 点 格挡 。 NL 如果这张牌被 消耗 ， NL 获得 [R] [R] [R] 。"
+    }
+  },
+  {
+    "id": "Sever Soul",
+    "class": "red/SeverSoul",
+    "name": {
+      "eng": "Sever Soul",
+      "zhs": "断魂斩"
+    },
+    "description": {
+      "eng": "Exhaust all non-Attack cards in your hand. NL Deal !D! damage.",
+      "zhs": " 消耗 手牌中所有非攻击牌。 NL 造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 16
+    },
+    "upgrade": {
+      "damage": 6
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Shockwave",
+    "class": "red/Shockwave",
+    "name": {
+      "eng": "Shockwave",
+      "zhs": "震荡波"
+    },
+    "description": {
+      "eng": "Apply !M! Weak and Vulnerable to ALL enemies. NL Exhaust.",
+      "zhs": "给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "all_enemy",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 2
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Shrug It Off",
+    "class": "red/ShrugItOff",
+    "name": {
+      "eng": "Shrug It Off",
+      "zhs": "耸肩无视"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Draw 1 card.",
+      "zhs": "获得 !B! 点 格挡 。 NL 抽1张牌。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 8
+    },
+    "upgrade": {
+      "block": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Spot Weakness",
+    "class": "red/SpotWeakness",
+    "name": {
+      "eng": "Spot Weakness",
+      "zhs": "观察弱点"
+    },
+    "description": {
+      "eng": "If the enemy intends to attack, gain !M! Strength.",
+      "zhs": "如果一名敌人的意图是攻击，你获得 !M! 点 力量 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 1,
+    "target": "self_and_enemy",
+    "base": {
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Strike_R",
+    "class": "red/Strike_Red",
+    "name": {
+      "eng": "Strike",
+      "zhs": "打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage.",
+      "zhs": "造成 !D! 点伤害。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "basic",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 6
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE",
+      "STARTER_STRIKE"
+    ]
+  },
+  {
+    "id": "Sword Boomerang",
+    "class": "red/SwordBoomerang",
+    "name": {
+      "eng": "Sword Boomerang",
+      "zhs": "飞剑回旋镖"
+    },
+    "description": {
+      "eng": "Deal !D! damage to a random enemy !M! times.",
+      "zhs": "随机对敌人造成 !D! 点伤害 !M! 次。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 3,
+      "magic": 3
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Thunderclap",
+    "class": "red/ThunderClap",
+    "name": {
+      "eng": "Thunderclap",
+      "zhs": "闪电霹雳"
+    },
+    "description": {
+      "eng": "Deal !D! damage and apply 1 Vulnerable to ALL enemies.",
+      "zhs": "对所有敌人造成 !D! 点伤害，给予1层 易伤 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 4
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "True Grit",
+    "class": "red/TrueGrit",
+    "name": {
+      "eng": "True Grit",
+      "zhs": "坚毅"
+    },
+    "description": {
+      "eng": "Gain !B! Block. NL Exhaust 1 card at random.",
+      "zhs": "获得 !B! 点 格挡 。 NL 消耗 一张随机手牌。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "self",
+    "base": {
+      "block": 7
+    },
+    "upgrade": {
+      "block": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Gain !B! Block. NL Exhaust 1 card.",
+      "zhs": "获得 !B! 点 格挡 。 NL 消耗 一张手牌。"
+    }
+  },
+  {
+    "id": "Twin Strike",
+    "class": "red/TwinStrike",
+    "name": {
+      "eng": "Twin Strike",
+      "zhs": "双重打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage twice.",
+      "zhs": "造成 !D! 点伤害两次。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 5
+    },
+    "upgrade": {
+      "damage": 2
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ]
+  },
+  {
+    "id": "Uppercut",
+    "class": "red/Uppercut",
+    "name": {
+      "eng": "Uppercut",
+      "zhs": "上勾拳"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable.",
+      "zhs": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": 2,
+    "target": "enemy",
+    "base": {
+      "damage": 13,
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": []
+  },
+  {
+    "id": "Warcry",
+    "class": "red/Warcry",
+    "name": {
+      "eng": "Warcry",
+      "zhs": "战吼"
+    },
+    "description": {
+      "eng": "Draw !M! card. NL Put a card from your hand onto the top of your draw pile. NL Exhaust.",
+      "zhs": "抽 !M! 张牌。 NL 将手牌中的一张牌放到你的抽牌堆顶部。 NL 消耗 。"
+    },
+    "type": "skill",
+    "color": "red",
+    "rarity": "common",
+    "cost": 0,
+    "target": "self",
+    "base": {
+      "magic": 1
+    },
+    "upgrade": {
+      "magic": 1
+    },
+    "exhaust": true,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [],
+    "upgradedDescription": {
+      "eng": "Draw !M! cards. NL Put a card from your hand onto the top of your draw pile. NL Exhaust.",
+      "zhs": "抽 !M! 张牌。 NL 将手牌中的一张牌放到你的抽牌堆顶部。 NL 消耗 。"
+    }
+  },
+  {
+    "id": "Whirlwind",
+    "class": "red/Whirlwind",
+    "name": {
+      "eng": "Whirlwind",
+      "zhs": "旋风斩"
+    },
+    "description": {
+      "eng": "Deal !D! damage to ALL enemies X times.",
+      "zhs": "对所有敌人造成 !D! 点伤害X次。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "uncommon",
+    "cost": -1,
+    "target": "all_enemy",
+    "base": {
+      "damage": 5
+    },
+    "upgrade": {
+      "damage": 3
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": true,
+    "tags": []
+  },
+  {
+    "id": "Wild Strike",
+    "class": "red/WildStrike",
+    "name": {
+      "eng": "Wild Strike",
+      "zhs": "狂野打击"
+    },
+    "description": {
+      "eng": "Deal !D! damage. NL Shuffle a *Wound into your draw pile.",
+      "zhs": "造成 !D! 点伤害。 NL 将一张 *伤口 放入你的抽牌堆中。"
+    },
+    "type": "attack",
+    "color": "red",
+    "rarity": "common",
+    "cost": 1,
+    "target": "enemy",
+    "base": {
+      "damage": 12
+    },
+    "upgrade": {
+      "damage": 5
+    },
+    "exhaust": false,
+    "ethereal": false,
+    "innate": false,
+    "retain": false,
+    "multiDamage": false,
+    "tags": [
+      "STRIKE"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "name": "@sts/tools",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "extract": "tsx src/extract.ts",
+    "extract-assets": "tsx src/extract-assets.ts",
+    "export-effects": "tsx src/export-effects.ts",
+    "validate": "tsx src/validate.ts",
+    "diff-baseline": "tsx src/diff-baseline.ts"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.5",
+    "@types/node": "^22.0.0"
+  }
+}

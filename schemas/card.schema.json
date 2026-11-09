@@ -1,0 +1,48 @@
+{
+  "$id": "https://sts-research/schemas/card.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "class": { "type": "string", "pattern": "^[a-zA-Z]+/[A-Za-z_0-9]+$" },
+      "name": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "description": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "upgradedDescription": { "$ref": "common.schema.json#/$defs/bilingual" },
+      "type": { "enum": ["attack", "skill", "power", "status", "curse"] },
+      "color": { "enum": ["red", "green", "blue", "purple", "colorless", "curse"] },
+      "rarity": { "enum": ["basic", "common", "uncommon", "rare", "special", "curse"] },
+      "cost": { "type": "integer", "minimum": -2, "maximum": 5 },
+      "target": { "enum": ["enemy", "all_enemy", "self", "none", "self_and_enemy", "all"] },
+      "base": {
+        "type": "object",
+        "properties": { "damage": { "type": "integer" }, "block": { "type": "integer" }, "magic": { "type": "integer" } },
+        "additionalProperties": false
+      },
+      "upgrade": {
+        "type": "object",
+        "properties": {
+          "damage": { "type": "integer" },
+          "block": { "type": "integer" },
+          "magic": { "type": "integer" },
+          "cost": { "type": "integer" },
+          "exhaust": { "type": "boolean" },
+          "innate": { "type": "boolean" },
+          "ethereal": { "type": "boolean" },
+          "retain": { "type": "boolean" },
+          "custom": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      },
+      "exhaust": { "type": "boolean" },
+      "ethereal": { "type": "boolean" },
+      "innate": { "type": "boolean" },
+      "retain": { "type": "boolean" },
+      "multiDamage": { "type": "boolean" },
+      "tags": { "type": "array", "items": { "type": "string" } }
+    },
+    "required": ["id", "class", "name", "description", "type", "color", "rarity", "cost", "target", "base", "upgrade", "exhaust", "ethereal", "innate", "retain", "multiDamage", "tags"],
+    "additionalProperties": false
+  }
+}

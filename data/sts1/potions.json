@@ -1,373 +1,673 @@
 [
   {
-    "id": "ambrosia",
-    "en": "Ambrosia",
-    "zh": "琼浆",
+    "id": "Ambrosia",
+    "class": "Ambrosia",
+    "name": {
+      "eng": "Ambrosia",
+      "zhs": "仙馔密酒"
+    },
+    "description": {
+      "eng": "Enter #yDivinity #yStance.",
+      "zhs": "进入 #y神格 #y姿态 。"
+    },
     "rarity": "rare",
-    "effect": "进入神格姿态。",
-    "target": "自身"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "ancient_potion",
-    "en": "Ancient Potion",
-    "zh": "远古药水",
+    "id": "Ancient Potion",
+    "class": "AncientPotion",
+    "name": {
+      "eng": "Ancient Potion",
+      "zhs": "先古药水"
+    },
+    "description": {
+      "eng": "Gain #b #yArtifact.",
+      "zhs": "获得 #b 层 #y人工制品 。"
+    },
     "rarity": "uncommon",
-    "effect": "获得 1 层魔法守护。",
-    "target": "自身",
-    "notes": "升级（如药剂师事件）后：获得 2 层魔法守护。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "attack_potion",
-    "en": "Attack Potion",
-    "zh": "攻击药水",
+    "id": "AttackPotion",
+    "class": "AttackPotion",
+    "name": {
+      "eng": "Attack Potion",
+      "zhs": "攻击药水"
+    },
+    "description": {
+      "eng": "Choose #b1 of #b3 random #yAttack cards to add to your hand, it costs #b0 this turn.Choose #b1 of #b3 random #yAttack cards and add #b2 copies to your hand, they cost #b0 this turn.",
+      "zhs": "从 #b3 张随机攻击牌中选择 #b1 张加入你的手牌。这张牌在本回合耗能变为 #b0 。从 #b3 张随机攻击牌中选择 #b1 张，将其加入你的手牌 #b2 次。这两张牌在本回合耗能变为 #b0 。"
+    },
     "rarity": "common",
-    "effect": "从 3 张随机攻击牌中选择 1 张加入手牌，本回合其费用为 0。",
-    "target": null,
-    "notes": "升级后：改为加入两张该牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "blessing_of_the_forge",
-    "en": "Blessing of the Forge",
-    "zh": "锻造祝福",
+    "id": "BlessingOfTheForge",
+    "class": "BlessingOfTheForge",
+    "name": {
+      "eng": "Blessing of the Forge",
+      "zhs": "熔炉的祝福"
+    },
+    "description": {
+      "eng": "Upgrade all cards in your hand for the rest of combat.",
+      "zhs": "在本场战斗中升级手牌中的所有牌。"
+    },
     "rarity": "common",
-    "effect": "本场战斗内升级手牌中的所有牌。",
-    "target": null
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 0
   },
   {
-    "id": "block_potion",
-    "en": "Block Potion",
-    "zh": "格挡药水",
+    "id": "Block Potion",
+    "class": "BlockPotion",
+    "name": {
+      "eng": "Block Potion",
+      "zhs": "格挡药水"
+    },
+    "description": {
+      "eng": "Gain #b #yBlock.",
+      "zhs": "获得 #b 点 #y格挡 。"
+    },
     "rarity": "common",
-    "effect": "获得 12 点格挡。",
-    "target": "自身",
-    "notes": "升级后：24 点格挡。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 12
   },
   {
-    "id": "blood_potion",
-    "en": "Blood Potion",
-    "zh": "血液药水",
+    "id": "BloodPotion",
+    "class": "BloodPotion",
+    "name": {
+      "eng": "Blood Potion",
+      "zhs": "鲜血药水"
+    },
+    "description": {
+      "eng": "Heal for #b% of your Max HP.",
+      "zhs": "回复最大生命值的 #b% 。"
+    },
     "rarity": "common",
-    "effect": "回复相当于最大生命值 20% 的生命。",
-    "target": "自身",
-    "notes": "升级后：40%。"
+    "targetRequired": false,
+    "combatOnly": true,
+    "potency": 20
   },
   {
-    "id": "bottled_miracle",
-    "en": "Bottled Miracle",
-    "zh": "瓶装奇迹",
+    "id": "BottledMiracle",
+    "class": "BottledMiracle",
+    "name": {
+      "eng": "Bottled Miracle",
+      "zhs": "瓶装奇迹"
+    },
+    "description": {
+      "eng": "Add #b #yMiracles to your hand.",
+      "zhs": "增加 #b 张 #y奇迹 到你的手牌。"
+    },
     "rarity": "common",
-    "effect": "将 2 张「奇迹」加入手牌。",
-    "target": "自身",
-    "notes": "升级后：4 张。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "colorless_potion",
-    "en": "Colorless Potion",
-    "zh": "无色药水",
+    "id": "ColorlessPotion",
+    "class": "ColorlessPotion",
+    "name": {
+      "eng": "Colorless Potion",
+      "zhs": "无色药水"
+    },
+    "description": {
+      "eng": "Choose #b1 of #b3 random #yColorless cards to add to your hand, it costs #b0 this turn.Choose #b1 of #b3 random #yColorless cards and add #b2 copies to your hand, they cost #b0 this turn.",
+      "zhs": "从 #b3 张随机 #y无色 牌中选择 #b1 张加入你的手牌。这张牌在本回合耗能变为 #b0 。从 #b3 张随机 #y无色 牌中选择 #b1 张，将其加入你的手牌 #b2 次。这两张牌在本回合耗能变为 #b0 。"
+    },
     "rarity": "common",
-    "effect": "从 3 张随机无色牌中选择 1 张加入手牌，本回合其费用为 0。",
-    "target": null,
-    "notes": "升级后：改为加入两张该牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "cultist_potion",
-    "en": "Cultist Potion",
-    "zh": "邪教徒药水",
+    "id": "CultistPotion",
+    "class": "CultistPotion",
+    "name": {
+      "eng": "Cultist Potion",
+      "zhs": "邪教徒药水"
+    },
+    "description": {
+      "eng": "Gain #b #yRitual.",
+      "zhs": "获得 #b 层 #y仪式 。"
+    },
     "rarity": "rare",
-    "effect": "获得 1 层仪式。",
-    "target": "自身",
-    "notes": "升级后：2 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "cunning_potion",
-    "en": "Cunning Potion",
-    "zh": "诡诈药水",
+    "id": "CunningPotion",
+    "class": "CunningPotion",
+    "name": {
+      "eng": "Cunning Potion",
+      "zhs": "狡诈药水"
+    },
+    "description": {
+      "eng": "Add #b #yShiv+ to your hand.",
+      "zhs": "增加 #b 张 #y小刀+ 到你的手牌。"
+    },
     "rarity": "uncommon",
-    "effect": "将 3 张「袖剑+」加入手牌。",
-    "target": "自身",
-    "notes": "升级后：6 张。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 3
   },
   {
-    "id": "dexterity_potion",
-    "en": "Dexterity Potion",
-    "zh": "敏捷药水",
+    "id": "Dexterity Potion",
+    "class": "DexterityPotion",
+    "name": {
+      "eng": "Dexterity Potion",
+      "zhs": "敏捷药水"
+    },
+    "description": {
+      "eng": "Gain #b #yDexterity.",
+      "zhs": "获得 #b 点 #y敏捷 。"
+    },
     "rarity": "common",
-    "effect": "获得 2 点敏捷。",
-    "target": "自身",
-    "notes": "升级后：4 点。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "distilled_chaos",
-    "en": "Distilled Chaos",
-    "zh": "混沌蒸馏液",
+    "id": "DistilledChaos",
+    "class": "DistilledChaosPotion",
+    "name": {
+      "eng": "Distilled Chaos",
+      "zhs": "精炼混沌"
+    },
+    "description": {
+      "eng": "Play the top #b cards of your draw pile.",
+      "zhs": "打出你抽牌堆顶部的 #b 张牌。"
+    },
     "rarity": "uncommon",
-    "effect": "打出抽牌堆顶的 3 张牌。",
-    "target": null,
-    "notes": "升级后：打出 6 张。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 3
   },
   {
-    "id": "duplication_potion",
-    "en": "Duplication Potion",
-    "zh": "复制药水",
+    "id": "DuplicationPotion",
+    "class": "DuplicationPotion",
+    "name": {
+      "eng": "Duplication Potion",
+      "zhs": "复制药水"
+    },
+    "description": {
+      "eng": "This turn, your next card is played twice.This turn, your next #b2 cards are played twice.",
+      "zhs": "本回合你的下一张牌将被打出两次。本回合你的下两张牌将被打出两次。"
+    },
     "rarity": "uncommon",
-    "effect": "本回合内，你打出的下一张牌会被打出两次。",
-    "target": null,
-    "notes": "升级后：接下来打出的两张牌各被打出两次。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "elixir",
-    "en": "Elixir",
-    "zh": "炼金药剂",
+    "id": "ElixirPotion",
+    "class": "Elixir",
+    "name": {
+      "eng": "Elixir",
+      "zhs": "万灵药水"
+    },
+    "description": {
+      "eng": "#yExhaust any number of cards in your hand.",
+      "zhs": "#y消耗 任意张手牌。"
+    },
     "rarity": "uncommon",
-    "effect": "消耗手牌中任意数量的牌。",
-    "target": null
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 0
   },
   {
-    "id": "energy_potion",
-    "en": "Energy Potion",
-    "zh": "能量药水",
+    "id": "Energy Potion",
+    "class": "EnergyPotion",
+    "name": {
+      "eng": "Energy Potion",
+      "zhs": "能量药水"
+    },
+    "description": {
+      "eng": "Gain #b Energy.",
+      "zhs": "获得 #b 点能量。"
+    },
     "rarity": "common",
-    "effect": "获得 2 点能量。",
-    "target": "自身",
-    "notes": "升级后：4 点。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "entropic_brew",
-    "en": "Entropic Brew",
-    "zh": "熵之酿造",
+    "id": "EntropicBrew",
+    "class": "EntropicBrew",
+    "name": {
+      "eng": "Entropic Brew",
+      "zhs": "混沌药水"
+    },
+    "description": {
+      "eng": "Fill all your empty potion slots with random potions.",
+      "zhs": "在所有空药水栏位中获得随机药水。"
+    },
     "rarity": "rare",
-    "effect": "将所有空的药水槽填满随机药水。",
-    "target": null
+    "targetRequired": false,
+    "combatOnly": true
   },
   {
-    "id": "essence_of_darkness",
-    "en": "Essence of Darkness",
-    "zh": "暗影精华",
+    "id": "EssenceOfDarkness",
+    "class": "EssenceOfDarkness",
+    "name": {
+      "eng": "Essence Of Darkness",
+      "zhs": "暗之精华"
+    },
+    "description": {
+      "eng": "#yChannel #b #yDark for each orb slot.",
+      "zhs": "每个充能球栏位 #y生成 #b 个 #y黑暗 充能球。"
+    },
     "rarity": "rare",
-    "effect": "每个空的球体槽位引导 1 个暗影球。",
-    "target": "自身",
-    "notes": "升级后：每槽位引导 2 个。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "essence_of_steel",
-    "en": "Essence of Steel",
-    "zh": "钢铁精华",
+    "id": "EssenceOfSteel",
+    "class": "EssenceOfSteel",
+    "name": {
+      "eng": "Essence of Steel",
+      "zhs": "钢之精华"
+    },
+    "description": {
+      "eng": "Gain #b #yPlated #yArmor.",
+      "zhs": "获得 #b 层 #y多层护甲 。"
+    },
     "rarity": "uncommon",
-    "effect": "获得 4 层板甲。",
-    "target": "自身",
-    "notes": "升级后：8 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 4
   },
   {
-    "id": "explosive_potion",
-    "en": "Explosive Potion",
-    "zh": "爆炸药水",
+    "id": "Explosive Potion",
+    "class": "ExplosivePotion",
+    "name": {
+      "eng": "Explosive Potion",
+      "zhs": "爆炸药水"
+    },
+    "description": {
+      "eng": "Deal #b damage to ALL enemies.",
+      "zhs": "对所有敌人造成 #b 点伤害。"
+    },
     "rarity": "common",
-    "effect": "对所有敌人造成 10 点伤害。",
-    "target": "自身",
-    "notes": "升级后：20 点伤害。"
+    "targetRequired": false,
+    "combatOnly": true,
+    "potency": 10
   },
   {
-    "id": "fairy_in_a_bottle",
-    "en": "Fairy in a Bottle",
-    "zh": "瓶中仙子",
+    "id": "FairyPotion",
+    "class": "FairyPotion",
+    "name": {
+      "eng": "Fairy in a Bottle",
+      "zhs": "瓶中精灵"
+    },
+    "description": {
+      "eng": "When you would die, heal to #b% of your Max HP instead and discard this potion.",
+      "zhs": "当你要被杀死时，免死并回复到最大生命值的 #b% ，丢弃这瓶药水。"
+    },
     "rarity": "rare",
-    "effect": "被动药水：当你即将死亡时，改为回复至最大生命值的 30%，并消耗此药水。",
-    "target": "自身",
-    "notes": "升级后：60%。无法主动使用。"
+    "targetRequired": false,
+    "combatOnly": true,
+    "potency": 30
   },
   {
-    "id": "fear_potion",
-    "en": "Fear Potion",
-    "zh": "恐惧药水",
+    "id": "FearPotion",
+    "class": "FearPotion",
+    "name": {
+      "eng": "Fear Potion",
+      "zhs": "恐惧药水"
+    },
+    "description": {
+      "eng": "Apply #b #yVulnerable.",
+      "zhs": "给予 #b 层 #y易伤 。"
+    },
     "rarity": "common",
-    "effect": "对目标敌人施加 3 层易伤。",
-    "target": "敌人",
-    "notes": "升级后：6 层。"
+    "targetRequired": true,
+    "combatOnly": true,
+    "potency": 3
   },
   {
-    "id": "fire_potion",
-    "en": "Fire Potion",
-    "zh": "火焰药水",
+    "id": "Fire Potion",
+    "class": "FirePotion",
+    "name": {
+      "eng": "Fire Potion",
+      "zhs": "火焰药水"
+    },
+    "description": {
+      "eng": "Deal #b damage.",
+      "zhs": "造成 #b 点伤害。"
+    },
     "rarity": "common",
-    "effect": "对目标敌人造成 20 点伤害。",
-    "target": "敌人",
-    "notes": "升级后：40 点伤害。"
+    "targetRequired": true,
+    "combatOnly": true,
+    "potency": 20
   },
   {
-    "id": "flex_potion",
-    "en": "Flex Potion",
-    "zh": "屈伸药水",
+    "id": "FocusPotion",
+    "class": "FocusPotion",
+    "name": {
+      "eng": "Focus Potion",
+      "zhs": "集中药水"
+    },
+    "description": {
+      "eng": "Gain #b #yFocus.",
+      "zhs": "获得 #b 点 #y集中 。"
+    },
     "rarity": "common",
-    "effect": "获得 5 点力量。回合结束时，失去 5 点力量。",
-    "target": "自身",
-    "notes": "升级后：10/10 点。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "focus_potion",
-    "en": "Focus Potion",
-    "zh": "专注药水",
-    "rarity": "common",
-    "effect": "获得 2 点集中。",
-    "target": "自身",
-    "notes": "升级后：4 点。"
-  },
-  {
-    "id": "fruit_juice",
-    "en": "Fruit Juice",
-    "zh": "果汁",
+    "id": "Fruit Juice",
+    "class": "FruitJuice",
+    "name": {
+      "eng": "Fruit Juice",
+      "zhs": "果汁"
+    },
+    "description": {
+      "eng": "Gain #b Max HP.",
+      "zhs": "获得 #b 点最大生命。"
+    },
     "rarity": "rare",
-    "effect": "最大生命值提高 5 点。",
-    "target": "自身",
-    "notes": "升级后：10 点。"
+    "targetRequired": false,
+    "combatOnly": true,
+    "potency": 5
   },
   {
-    "id": "gamblers_brew",
-    "en": "Gambler's Brew",
-    "zh": "赌徒之酿",
+    "id": "GamblersBrew",
+    "class": "GamblersBrew",
+    "name": {
+      "eng": "Gambler's Brew",
+      "zhs": "赌徒特酿"
+    },
+    "description": {
+      "eng": "Discard any number of cards then draw that many.",
+      "zhs": "丢弃任意张牌，然后抽相同数量的牌。"
+    },
     "rarity": "uncommon",
-    "effect": "弃掉任意数量的牌，然后抽等量的牌。",
-    "target": null
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 0
   },
   {
-    "id": "ghost_in_a_jar",
-    "en": "Ghost in a Jar",
-    "zh": "罐中幽灵",
+    "id": "GhostInAJar",
+    "class": "GhostInAJar",
+    "name": {
+      "eng": "Ghost in a Jar",
+      "zhs": "罐装幽灵"
+    },
+    "description": {
+      "eng": "Gain #b #yIntangible.",
+      "zhs": "获得 #b 层 #y无实体 。"
+    },
     "rarity": "rare",
-    "effect": "获得 1 层虚无。",
-    "target": "自身",
-    "notes": "升级后：2 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "heart_of_iron",
-    "en": "Heart of Iron",
-    "zh": "钢铁之心",
+    "id": "HeartOfIron",
+    "class": "HeartOfIron",
+    "name": {
+      "eng": "Heart of Iron",
+      "zhs": "铁之心"
+    },
+    "description": {
+      "eng": "Gain #b #yMetallicize.",
+      "zhs": "获得 #b 层 #y金属化 。"
+    },
     "rarity": "rare",
-    "effect": "获得 6 层金属化。",
-    "target": "自身",
-    "notes": "升级后：12 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 6
   },
   {
-    "id": "liquid_bronze",
-    "en": "Liquid Bronze",
-    "zh": "液态青铜",
+    "id": "LiquidBronze",
+    "class": "LiquidBronze",
+    "name": {
+      "eng": "Liquid Bronze",
+      "zhs": "流动铜液"
+    },
+    "description": {
+      "eng": "Gain #b #yThorns.",
+      "zhs": "获得 #b 点 #y荆棘 。"
+    },
     "rarity": "uncommon",
-    "effect": "获得 3 层荆棘。",
-    "target": "自身",
-    "notes": "升级后：6 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 3
   },
   {
-    "id": "liquid_memories",
-    "en": "Liquid Memories",
-    "zh": "记忆之液",
+    "id": "LiquidMemories",
+    "class": "LiquidMemories",
+    "name": {
+      "eng": "Liquid Memories",
+      "zhs": "液态记忆"
+    },
+    "description": {
+      "eng": "Choose a card in your discard pile and return it to your hand. It costs #b0 this turn.Choose #b cards in your discard pile and return them to your hand. They cost #b0 this turn.",
+      "zhs": "选择弃牌堆中的一张牌放入你的手牌。这张牌在本回合的耗能变为 #b0 。选择弃牌堆中的 #b  张牌放入你的手牌。它们在本回合的耗能变为 #b0 。"
+    },
     "rarity": "uncommon",
-    "effect": "从弃牌堆中选择 1 张牌返回手牌，本回合其费用为 0。",
-    "target": null,
-    "notes": "升级后：可选择 2 张牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "poison_potion",
-    "en": "Poison Potion",
-    "zh": "剧毒药水",
+    "id": "Poison Potion",
+    "class": "PoisonPotion",
+    "name": {
+      "eng": "Poison Potion",
+      "zhs": "毒药水"
+    },
+    "description": {
+      "eng": "Apply #b #yPoison.",
+      "zhs": "给予 #b 层 #y中毒 。"
+    },
     "rarity": "common",
-    "effect": "对目标敌人施加 6 层中毒。",
-    "target": "敌人",
-    "notes": "升级后：12 层。"
+    "targetRequired": true,
+    "combatOnly": true,
+    "potency": 6
   },
   {
-    "id": "potion_of_capacity",
-    "en": "Potion of Capacity",
-    "zh": "容量药水",
+    "id": "PotionOfCapacity",
+    "class": "PotionOfCapacity",
+    "name": {
+      "eng": "Potion Of Capacity",
+      "zhs": "扩容药水"
+    },
+    "description": {
+      "eng": "Gain #b Orb slots.",
+      "zhs": "获得 #b 个充能球栏位。"
+    },
     "rarity": "uncommon",
-    "effect": "获得 2 个球体槽位。",
-    "target": "自身",
-    "notes": "升级后：4 个。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "power_potion",
-    "en": "Power Potion",
-    "zh": "能力药水",
+    "id": "PowerPotion",
+    "class": "PowerPotion",
+    "name": {
+      "eng": "Power Potion",
+      "zhs": "能力药水"
+    },
+    "description": {
+      "eng": "Choose #b1 of #b3 random #yPower cards to add to your hand, it costs #b0 this turn.Choose #b1 of #b3 random #yPower cards and add #b2 copies to your hand, they cost #b0 this turn.",
+      "zhs": "从 #b3 张随机能力牌中选择 #b1 张加入你的手牌。这张牌在本回合耗能变为 #b0 。从 #b3 张随机能力牌中选择 #b1 张，将其加入你的手牌 #b2 次。这两张牌在本回合耗能变为 #b0 。"
+    },
     "rarity": "common",
-    "effect": "从 3 张随机能力牌中选择 1 张加入手牌，本回合其费用为 0。",
-    "target": null,
-    "notes": "升级后：改为加入两张该牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "regen_potion",
-    "en": "Regen Potion",
-    "zh": "再生药水",
+    "id": "Regen Potion",
+    "class": "RegenPotion",
+    "name": {
+      "eng": "Regen Potion",
+      "zhs": "再生药水"
+    },
+    "description": {
+      "eng": "Gain #b #yRegen.",
+      "zhs": "获得 #b 层 #y再生 。"
+    },
     "rarity": "uncommon",
-    "effect": "获得 5 层再生。",
-    "target": "自身",
-    "notes": "升级后：10 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 5
   },
   {
-    "id": "skill_potion",
-    "en": "Skill Potion",
-    "zh": "技能药水",
+    "id": "SkillPotion",
+    "class": "SkillPotion",
+    "name": {
+      "eng": "Skill Potion",
+      "zhs": "技能药水"
+    },
+    "description": {
+      "eng": "Choose #b1 of #b3 random #ySkill cards to add to your hand, it costs #b0 this turn.Choose #b1 of #b3 random #ySkill cards and add #b2 copies to your hand, they cost #b0 this turn.",
+      "zhs": "从 #b3 张随机技能牌中选择 #b1 张加入你的手牌。这张牌在本回合耗能变为 #b0 。从 #b3 张随机技能牌中选择 #b1 张，将其加入你的手牌 #b2 次。这两张牌在本回合耗能变为 #b0 。"
+    },
     "rarity": "common",
-    "effect": "从 3 张随机技能牌中选择 1 张加入手牌，本回合其费用为 0。",
-    "target": null,
-    "notes": "升级后：改为加入两张该牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 1
   },
   {
-    "id": "smoke_bomb",
-    "en": "Smoke Bomb",
-    "zh": "烟雾弹",
+    "id": "SmokeBomb",
+    "class": "SmokeBomb",
+    "name": {
+      "eng": "Smoke Bomb",
+      "zhs": "烟雾弹"
+    },
+    "description": {
+      "eng": "Escape from a non-boss combat. Receive no rewards.I'm Surrounded!",
+      "zhs": "从一场非Boss战斗中逃离，不获得任何奖励。我被夹击了，无法逃脱！"
+    },
     "rarity": "rare",
-    "effect": "逃离一场非首领战斗，不获得任何奖励。",
-    "target": null
+    "targetRequired": false,
+    "combatOnly": true,
+    "potency": 0
   },
   {
-    "id": "snecko_oil",
-    "en": "Snecko Oil",
-    "zh": "蛇怪油",
+    "id": "SneckoOil",
+    "class": "SneckoOil",
+    "name": {
+      "eng": "Snecko Oil",
+      "zhs": "异蛇之油"
+    },
+    "description": {
+      "eng": "Draw #b cards. Randomize the cost of cards in your hand.",
+      "zhs": "抽 #b 张牌。随机化你手牌的耗能。"
+    },
     "rarity": "rare",
-    "effect": "抽 5 张牌，随机化手牌中所有牌的费用。",
-    "target": "自身",
-    "notes": "升级后：抽 10 张牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 5
   },
   {
-    "id": "speed_potion",
-    "en": "Speed Potion",
-    "zh": "迅捷药水",
+    "id": "SpeedPotion",
+    "class": "SpeedPotion",
+    "name": {
+      "eng": "Speed Potion",
+      "zhs": "速度药水"
+    },
+    "description": {
+      "eng": "Gain #b #yDexterity. At the end of your turn, lose #b #yDexterity.",
+      "zhs": "获得 #b 点 敏捷 。在你的回合结束时，失去 #b 点 敏捷 。"
+    },
     "rarity": "common",
-    "effect": "获得 5 点敏捷。回合结束时，失去 5 点敏捷。",
-    "target": "自身",
-    "notes": "升级后：10/10 点。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 5
   },
   {
-    "id": "stance_potion",
-    "en": "Stance Potion",
-    "zh": "姿态药水",
+    "id": "StancePotion",
+    "class": "StancePotion",
+    "name": {
+      "eng": "Stance Potion",
+      "zhs": "姿态药水"
+    },
+    "description": {
+      "eng": "Enter #yCalm or #yWrath.",
+      "zhs": "进入 #y平静 或 #y愤怒 。"
+    },
     "rarity": "uncommon",
-    "effect": "进入平静或怒火姿态（二选一）。",
-    "target": "自身"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 0
   },
   {
-    "id": "strength_potion",
-    "en": "Strength Potion",
-    "zh": "力量药水",
+    "id": "SteroidPotion",
+    "class": "SteroidPotion",
+    "name": {
+      "eng": "Flex Potion",
+      "zhs": "类固醇药水"
+    },
+    "description": {
+      "eng": "Gain #b #yStrength. At the end of your turn, lose #b #yStrength.",
+      "zhs": "获得 #b 点 力量 。在你的回合结束时，失去 #b 点 力量 。"
+    },
     "rarity": "common",
-    "effect": "获得 2 点力量。",
-    "target": "自身",
-    "notes": "升级后：4 点。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 5
   },
   {
-    "id": "swift_potion",
-    "en": "Swift Potion",
-    "zh": "疾行药水",
+    "id": "Strength Potion",
+    "class": "StrengthPotion",
+    "name": {
+      "eng": "Strength Potion",
+      "zhs": "力量药水"
+    },
+    "description": {
+      "eng": "Gain #b #yStrength.",
+      "zhs": "获得 #b 点 #y力量 。"
+    },
     "rarity": "common",
-    "effect": "抽 3 张牌。",
-    "target": "自身",
-    "notes": "升级后：抽 6 张牌。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 2
   },
   {
-    "id": "weak_potion",
-    "en": "Weak Potion",
-    "zh": "虚弱药水",
+    "id": "Swift Potion",
+    "class": "SwiftPotion",
+    "name": {
+      "eng": "Swift Potion",
+      "zhs": "迅捷药水"
+    },
+    "description": {
+      "eng": "Draw #b cards.",
+      "zhs": "抽 #b 张牌。"
+    },
     "rarity": "common",
-    "effect": "对目标敌人施加 3 层虚弱。",
-    "target": "敌人",
-    "notes": "升级后：6 层。"
+    "targetRequired": false,
+    "combatOnly": false,
+    "potency": 3
+  },
+  {
+    "id": "Weak Potion",
+    "class": "WeakenPotion",
+    "name": {
+      "eng": "Weak Potion",
+      "zhs": "虚弱药水"
+    },
+    "description": {
+      "eng": "Apply #b #yWeak.",
+      "zhs": "给予 #b 层 #y虚弱 。"
+    },
+    "rarity": "common",
+    "targetRequired": true,
+    "combatOnly": true,
+    "potency": 3
   }
 ]
