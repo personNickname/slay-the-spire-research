@@ -1353,7 +1353,13 @@ export function formatCardText(run: RunState, c: CardInst): { name: string; type
     .replace(/ NL /g, "\n")
     .replace(/!D!/g, String(dmg))
     .replace(/!B!/g, String(blk))
-    .replace(/!M!/g, String(nums.magic));
+    .replace(/!M!/g, String(nums.magic))
+    // StS 能量图标标记：[R]红 [G]绿 [B]蓝 [E]通用 [W]白 → 彩色圆点（MiniCard 以 HTML 渲染 .ctext）
+    .replace(/\[R\]/g, '<span class="e-ico r"></span>')
+    .replace(/\[G\]/g, '<span class="e-ico g"></span>')
+    .replace(/\[B\]/g, '<span class="e-ico b"></span>')
+    .replace(/\[E\]/g, '<span class="e-ico e"></span>')
+    .replace(/\[W\]/g, '<span class="e-ico w"></span>');
   const cost = currentCost(run, c);
   const costStr = cost === -1 ? "X" : cost === -2 ? "—" : String(cost);
   const nm = def.name[lang] ?? def.name.zhs;

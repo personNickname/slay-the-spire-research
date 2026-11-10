@@ -551,7 +551,9 @@ function openShop(run: RunState): void {
     const id = pickPotion(run);
     offers.push({ kind: "potion", id, price: jitter(run, 50), sold: false });
   }
-  run.shop = { offers, purgePrice: jitter(run, 75 + run.purgeCount * 25), purgeUsed: false };
+  let purgePrice = 75 + run.purgeCount * 25;
+  if (run.ascension >= 16) purgePrice = Math.round(purgePrice * 1.1);
+  run.shop = { offers, purgePrice, purgeUsed: false };
   run.screen = "shop";
 }
 
@@ -635,7 +637,6 @@ const EVENTS: EventState[] = [
     body: { eng: "A shrine of smithing.", zhs: "锻造神龛。" },
     options: [
       { id: "pray", label: { eng: "Upgrade a card", zhs: "升级一张牌" } },
-      { id: "leave", label: { eng: "Leave", zhs: "离开" } },
     ],
   },
   {

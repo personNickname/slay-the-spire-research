@@ -742,11 +742,41 @@ function MiniCard({
       <div className="cname">{t.name}</div>
       <div className="eng">{run.lang === "zhs" ? def.name.eng : def.name.zhs}</div>
       <div className="ctype">{t.type}</div>
-      <div className="ctext">{t.text}</div>
+      <div className="ctext" dangerouslySetInnerHTML={{ __html: t.text }} />
     </button>
   );
 }
 
+
+function RelicTag({ id }: { id: string }) {
+  const def = RELIC_BY_ID.get(id);
+  const name = def?.name.zhs ?? id;
+  const desc = def?.description?.zhs;
+  return (
+    <span className="entity-tag">
+      {name}
+      <span className="hover-tip">
+        <b>{name}</b>
+        {desc && <em>{desc}</em>}
+      </span>
+    </span>
+  );
+}
+
+function PotionTag({ id }: { id: string }) {
+  const def = POTION_BY_ID.get(id);
+  const name = def?.name.zhs ?? id;
+  const desc = def && "description" in def && def.description ? def.description.zhs : undefined;
+  return (
+    <span className="entity-tag">
+      {name}
+      <span className="hover-tip">
+        <b>{name}</b>
+        {desc && <em>{desc}</em>}
+      </span>
+    </span>
+  );
+}
 function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
   const rw = run.rewards!;
   return (
@@ -773,7 +803,7 @@ function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) 
               bump(run);
             }}
           >
-            遗物：{RELIC_BY_ID.get(rw.relic.id)?.name.zhs ?? rw.relic.id}
+            遗物：<RelicTag id={rw.relic.id} />
           </button>
         </p>
       )}
@@ -786,7 +816,7 @@ function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) 
               bump(run);
             }}
           >
-            药水：{rw.potion.id}
+            药水：<PotionTag id={rw.potion.id} />
           </button>
         </p>
       )}
@@ -883,7 +913,15 @@ function Shop({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
       <div className="shop-grid">
         {run.shop?.offers.map((o, i) => (
           <div key={i} className={`offer ${o.sold ? "sold" : ""}`}>
-            <div>{o.kind === "card" ? o.card && cardDef(o.card.defId).name.zhs : o.id}</div>
+            <div>
+              {o.kind === "card" ? (
+                o.card && cardDef(o.card.defId).name.zhs
+              ) : o.kind === "relic" ? (
+                <RelicTag id={o.id} />
+              ) : (
+                <PotionTag id={o.id} />
+              )}
+            </div>
             <div className="gold">{o.price} 金币</div>
             <button
               className="btn small"
@@ -930,7 +968,7 @@ function Treasure({ run, bump }: { run: RunState; bump: (r: RunState) => void })
   return (
     <div className="screen event-body">
       <h2>宝箱</h2>
-      {run.rewards?.relic && <p>{RELIC_BY_ID.get(run.rewards.relic.id)?.name.zhs ?? run.rewards.relic.id}</p>}
+      {run.rewards?.relic && <p><RelicTag id={run.rewards.relic.id} /></p>}
       <button
         className="btn"
         onClick={() => {

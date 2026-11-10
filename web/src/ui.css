@@ -252,3 +252,22 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 .relic-slot, .potion-slot { position: relative; }
 .relic-slot:hover .hover-tip, .potion-slot:not(:disabled):hover .hover-tip { display: block; }
 .relic-slot:hover i, .relic-slot:hover .relic-name { color: var(--gold); border-color: var(--gold); }
+
+/* 实体名标签：任何位置的遗物/药水名，悬停即出详情卡 */
+.entity-tag {
+  position: relative; cursor: help; color: var(--gold);
+  border-bottom: 1px dashed var(--gold-dim); padding-bottom: 1px;
+}
+.entity-tag:hover { color: var(--gold); border-bottom-color: var(--gold); }
+.entity-tag:hover .hover-tip { display: block; }
+
+/* 卡牌文本内的能量图标点 */
+.e-ico {
+  display: inline-block; width: 11px; height: 11px; border-radius: 50%;
+  vertical-align: -1px; margin: 0 2px; border: 1px solid rgba(0,0,0,.4);
+}
+.e-ico.r { background: #e05c5c; }
+.e-ico.g { background: #52c98a; }
+.e-ico.b { background: #58a6e8; }
+.e-ico.e { background: #e8c96a; }
+.e-ico.w { background: #f0f0f0; }
