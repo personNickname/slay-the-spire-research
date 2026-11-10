@@ -737,7 +737,22 @@ export function chooseEvent(run: RunState, option: string, cardUid?: string): vo
 
 export function usePotion(run: RunState, slot: number, targetId?: string): void {
   const p = run.potions[slot];
-  if (!p || !run.combat) return;
+  if (!p) return;
+  // 原版规则：目标型药水（targetRequired）仅战斗内可用；其余非战斗也可使用
+  const def = POTIONS.find((x) => x.id === p.id);
+  const targetRequired = !!def && "targetRequired" in def && Boolean(def.targetRequired);
+  if (!run.combat) {
+    if (targetRequired) return;
+    // 非战斗子集：血药水回血、果汁加最大生命；其余消耗即浪费（对齐原版行为）
+    if (p.id === "BloodPotion" || p.id === "Blood Potion") {
+      run.player.hp = Math.min(run.player.maxHp, run.player.hp + Math.floor(run.player.maxHp * 0.2));
+    } else if (p.id === "Fruit Juice") {
+      run.player.maxHp += 5;
+      run.player.hp += 5;
+    }
+    run.potions[slot] = null;
+    return;
+  }
   const target = targetId ? run.combat.monsters.find((m) => m.id === targetId) : run.combat.monsters.find((m) => m.alive);
   const id = p.id;
   if ((id === "Fire Potion" || id === "Explosive Potion") && target) {

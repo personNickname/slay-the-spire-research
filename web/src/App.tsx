@@ -232,14 +232,16 @@ export default function App() {
           {run.potions.map((p, i) => {
             const def = p ? POTION_BY_ID.get(p.id) : undefined;
             const desc = def && "description" in def && def.description ? def.description.zhs : undefined;
+            const targetRequired = !!def && "targetRequired" in def && Boolean(def.targetRequired);
+            const locked = !p || (!run.combat && targetRequired);
             return (
               <button
                 key={i}
                 className={`potion-slot ${p ? "" : "empty"}`}
-                disabled={!p || !run.combat}
+                disabled={locked}
                 onClick={() => {
-                  if (!p || !run.combat) return;
-                  usePotion(run, i, run.combat.selectedTargetId);
+                  if (!p || locked) return;
+                  usePotion(run, i, run.combat?.selectedTargetId);
                   bump(run);
                 }}
               >
@@ -248,7 +250,13 @@ export default function App() {
                   <span className="hover-tip">
                     <b>{def?.name.zhs ?? p.id}</b>
                     {desc && <em>{desc}</em>}
-                    <em className="tip-hint">{run.combat ? "点击使用（作用于选中敌人）" : "仅战斗中可用"}</em>
+                    <em className="tip-hint">
+                      {!run.combat && targetRequired
+                        ? "目标型药水，仅战斗中可用"
+                        : run.combat
+                          ? "点击使用（作用于选中敌人）"
+                          : "点击使用"}
+                    </em>
                   </span>
                 )}
               </button>
