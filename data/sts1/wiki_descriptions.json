@@ -1,0 +1,1444 @@
+{
+  "relics": {
+    "Akabeko": {
+      "zh": null,
+      "en": "Your first Attack each combat deals 8 additional damage"
+    },
+    "Anchor": {
+      "zh": null,
+      "en": "Start each combat with 10 Block."
+    },
+    "Ancient Tea Set": {
+      "zh": null,
+      "en": "Whenever you enter a Rest Site, start the next combat with 2 extra Energy."
+    },
+    "Art of War": {
+      "zh": null,
+      "en": "If you do not play any Attacks during your turn, gain an additional Energy next turn."
+    },
+    "Astrolabe": {
+      "zh": null,
+      "en": "Upon pickup, Transform 3 cards, then Upgrade them."
+    },
+    "Bag of Marbles": {
+      "zh": null,
+      "en": "At the start of each combat, apply 1 Vulnerable to ALL enemies."
+    },
+    "Bag of Preparation": {
+      "zh": null,
+      "en": "At the start of each combat, draw 2 additional cards."
+    },
+    "Bird Faced Urn": {
+      "zh": null,
+      "en": "Whenever you play a Power card, heal 2 HP."
+    },
+    "Black Blood": {
+      "zh": null,
+      "en": "Replaces Burning Blood. At the end of combat, heal 12 HP."
+    },
+    "Black Star": {
+      "zh": null,
+      "en": "Elites now drop an additional relic when defeated."
+    },
+    "Blood Vial": {
+      "zh": null,
+      "en": "At the start of each combat, heal 2 HP."
+    },
+    "Bloody Idol": {
+      "zh": null,
+      "en": "Whenever you gain Gold, heal 5 HP."
+    },
+    "Blue Candle": {
+      "zh": null,
+      "en": "Unplayable Curse cards can now be played. Whenever you play a Curse, lose 1 HP and Exhaust it."
+    },
+    "Boot": {
+      "zh": null,
+      "en": "Whenever you would deal 4 or less unblocked Attack damage, increase it to 5."
+    },
+    "Bottled Flame": {
+      "zh": null,
+      "en": "Upon pickup, choose an Attack card. At the start of each combat, this card will be in your hand."
+    },
+    "Bottled Lightning": {
+      "zh": null,
+      "en": "Upon pickup, choose a Skill card. At the start of each combat, this card will be in your hand."
+    },
+    "Bottled Tornado": {
+      "zh": null,
+      "en": "Upon pickup, choose a Power card. At the start of each combat, this card will be in your hand."
+    },
+    "Brimstone": {
+      "zh": null,
+      "en": "At the start of your turn, gain 2 Strength and ALL enemies gain 1 Strength."
+    },
+    "Bronze Scales": {
+      "zh": null,
+      "en": "Start each combat with 3 Thorns."
+    },
+    "Burning Blood": {
+      "zh": null,
+      "en": "At the end of combat, heal 6 HP."
+    },
+    "Busted Crown": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. Future card rewards have 2 less cards to choose from."
+    },
+    "Cables": {
+      "zh": null,
+      "en": "Your rightmost Orb triggers its passive an additional time."
+    },
+    "Calipers": {
+      "zh": null,
+      "en": "At the start of your turn, lose 15 Block rather than all of your Block."
+    },
+    "Calling Bell": {
+      "zh": null,
+      "en": "Upon pickup, obtain a unique Curse and 3 relics."
+    },
+    "CaptainsWheel": {
+      "zh": null,
+      "en": "At the start of your 3rd turn, gain 18 Block."
+    },
+    "Cauldron": {
+      "zh": null,
+      "en": "When obtained, brews 5 random potions."
+    },
+    "Centennial Puzzle": {
+      "zh": null,
+      "en": "The first time you lose HP each combat, draw 3 cards."
+    },
+    "CeramicFish": {
+      "zh": null,
+      "en": "Whenever you add a card to your deck, gain 9 Gold."
+    },
+    "Champion Belt": {
+      "zh": null,
+      "en": "Whenever you apply Vulnerable, also apply 1 Weak."
+    },
+    "Charon's Ashes": {
+      "zh": null,
+      "en": "Whenever you Exhaust a card, deal 3 damage to ALL enemies."
+    },
+    "Chemical X": {
+      "zh": null,
+      "en": "The effects of your cost X cards are increased by 2."
+    },
+    "Circlet": {
+      "zh": null,
+      "en": "Collect as many as you can."
+    },
+    "CloakClasp": {
+      "zh": null,
+      "en": "At the end of your turn, gain 1 Block for each card in your hand."
+    },
+    "ClockworkSouvenir": {
+      "zh": null,
+      "en": "Start each combat with 1 Artifact."
+    },
+    "Coffee Dripper": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You can no longer Rest at Rest Sites."
+    },
+    "Cracked Core": {
+      "zh": null,
+      "en": "At the start of each combat, Channel 1 Lightning."
+    },
+    "CultistMask": {
+      "zh": null,
+      "en": "You feel more talkative."
+    },
+    "Cursed Key": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. Whenever you open a non-Boss chest, obtain a Curse."
+    },
+    "Damaru": {
+      "zh": null,
+      "en": "At the start of your turn, gain 1 Mantra."
+    },
+    "Darkstone Periapt": {
+      "zh": null,
+      "en": "Whenever you obtain a Curse, increase your Max HP by 6"
+    },
+    "DataDisk": {
+      "zh": null,
+      "en": "Start each combat with 1 Focus."
+    },
+    "Dead Branch": {
+      "zh": null,
+      "en": "Whenever you Exhaust a card, add a random card to your hand."
+    },
+    "DollysMirror": {
+      "zh": null,
+      "en": "Upon pickup, obtain an additional copy of a card in your deck."
+    },
+    "Dream Catcher": {
+      "zh": null,
+      "en": "Whenever you Rest, you may add a card to your deck."
+    },
+    "Du-Vu Doll": {
+      "zh": null,
+      "en": "For each Curse in your deck, start each combat with 1 Strength."
+    },
+    "Ectoplasm": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You can no longer gain Gold."
+    },
+    "Emotion Chip": {
+      "zh": null,
+      "en": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn."
+    },
+    "Empty Cage": {
+      "zh": null,
+      "en": "Upon pickup, remove 2 cards from your deck."
+    },
+    "Enchiridion": {
+      "zh": null,
+      "en": "At the start of each combat, add a random Power card into your hand. It costs 0 for that turn."
+    },
+    "Eternal Feather": {
+      "zh": null,
+      "en": "For every 5 cards in your deck, heal 3 HP whenever you enter a Rest Site."
+    },
+    "FaceOfCleric": {
+      "zh": null,
+      "en": "At the end of combat, raise your Max HP by 1."
+    },
+    "FossilizedHelix": {
+      "zh": null,
+      "en": "Prevent the first time you would lose HP in combat."
+    },
+    "Frozen Egg 2": {
+      "zh": null,
+      "en": "Whenever you add a Power card to your deck, Upgrade it."
+    },
+    "Frozen Eye": {
+      "zh": null,
+      "en": "When viewing your Draw Pile, the cards are now shown in order."
+    },
+    "FrozenCore": {
+      "zh": null,
+      "en": "Replaces Cracked Core. If you end your turn with any empty Orb slots, Channel 1 Frost."
+    },
+    "Fusion Hammer": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You can no longer Smith at Rest Sites."
+    },
+    "Gambling Chip": {
+      "zh": null,
+      "en": "At the start of each combat, discard any number of cards, then draw that many cards."
+    },
+    "Ginger": {
+      "zh": null,
+      "en": "You can no longer become Weakened."
+    },
+    "Girya": {
+      "zh": null,
+      "en": "You can now gain Strength at Rest Sites (up to 3 times)."
+    },
+    "Golden Idol": {
+      "zh": null,
+      "en": "Enemies drop 25% more Gold."
+    },
+    "GoldenEye": {
+      "zh": null,
+      "en": "Whenever you Scry, Scry 2 additional cards."
+    },
+    "Gremlin Horn": {
+      "zh": null,
+      "en": "Whenever an enemy dies, gain 1 Energy and draw 1 card."
+    },
+    "GremlinMask": {
+      "zh": null,
+      "en": "Start each combat with 1 Weak."
+    },
+    "HandDrill": {
+      "zh": null,
+      "en": "Whenever you break an enemy's Block, apply 2 Vulnerable."
+    },
+    "Happy Flower": {
+      "zh": null,
+      "en": "Every 3 turns, gain 1 Energy."
+    },
+    "HolyWater": {
+      "zh": null,
+      "en": "Replaces Pure Water. At the start of each combat, add 3 Miracles into your hand."
+    },
+    "HornCleat": {
+      "zh": null,
+      "en": "At the start of your 2nd turn, gain 14 Block."
+    },
+    "HoveringKite": {
+      "zh": null,
+      "en": "The first time you discard a card each turn, gain 1 Energy."
+    },
+    "Ice Cream": {
+      "zh": null,
+      "en": "Energy is now conserved between turns."
+    },
+    "Incense Burner": {
+      "zh": null,
+      "en": "Every 6 turns, gain 1 Intangible."
+    },
+    "InkBottle": {
+      "zh": null,
+      "en": "Whenever you play 10 cards, draw 1 card."
+    },
+    "Inserter": {
+      "zh": null,
+      "en": "Every 2 turns, gain 1 Orb slot."
+    },
+    "Juzu Bracelet": {
+      "zh": null,
+      "en": "Regular enemy combats are no longer encountered in? rooms."
+    },
+    "Kunai": {
+      "zh": null,
+      "en": "Every time you play 3 Attacks in a single turn, gain 1 Dexterity"
+    },
+    "Lantern": {
+      "zh": null,
+      "en": "Gain 1 Energy on the first turn of each combat."
+    },
+    "Lee's Waffle": {
+      "zh": null,
+      "en": "Upon pickup, raise your Max HP by 7 and heal all of your HP."
+    },
+    "Letter Opener": {
+      "zh": null,
+      "en": "Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies."
+    },
+    "Lizard Tail": {
+      "zh": null,
+      "en": "When you would die, heal to 50% of your Max HP instead (works once)."
+    },
+    "Magic Flower": {
+      "zh": null,
+      "en": "Healing is 50% more effective during combat."
+    },
+    "Mango": {
+      "zh": null,
+      "en": "Upon pickup, raise your Max HP by 14."
+    },
+    "Mark of Pain": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. At the start of combat, shuffle 2 Wounds into your draw pile."
+    },
+    "Mark of the Bloom": {
+      "zh": null,
+      "en": "You can no longer heal."
+    },
+    "Matryoshka": {
+      "zh": null,
+      "en": "The next 2 non-boss chests you open contain 2 Relics."
+    },
+    "MawBank": {
+      "zh": null,
+      "en": "Whenever you climb a floor, gain 12 Gold. No longer works when you spend any Gold at a shop."
+    },
+    "MealTicket": {
+      "zh": null,
+      "en": "Whenever you enter a shop, heal 15 HP."
+    },
+    "Meat on the Bone": {
+      "zh": null,
+      "en": "If your HP is at or below 50% at the end of combat, heal 12 HP."
+    },
+    "Medical Kit": {
+      "zh": null,
+      "en": "Unplayable Status cards can now be played. Whenever you play a Status card, Exhaust it."
+    },
+    "Melange": {
+      "zh": null,
+      "en": "Whenever you shuffle your draw pile, Scry 3."
+    },
+    "Membership Card": {
+      "zh": null,
+      "en": "50% discount on all products!"
+    },
+    "Mercury Hourglass": {
+      "zh": null,
+      "en": "At the start of your turn, deal 3 damage to ALL enemies."
+    },
+    "Molten Egg 2": {
+      "zh": null,
+      "en": "Whenever you add an Attack card to your deck, Upgrade it."
+    },
+    "Mummified Hand": {
+      "zh": null,
+      "en": "Whenever you play a Power card, a random card in your hand costs 0 that turn."
+    },
+    "MutagenicStrength": {
+      "zh": null,
+      "en": "Start each combat with 3 Strength. At the end of your first turn, lose 3 Strength."
+    },
+    "Necronomicon": {
+      "zh": null,
+      "en": "The first Attack played each turn that costs 2 or more is played twice. Upon pickup, obtain a special Curse."
+    },
+    "NeowsBlessing": {
+      "zh": null,
+      "en": "Enemies in your first 3 combats will have 1 HP."
+    },
+    "Nilry's Codex": {
+      "zh": null,
+      "en": "At the end of each turn, you may shuffle 1 of 3 random cards to shuffle into your draw pile."
+    },
+    "Ninja Scroll": {
+      "zh": null,
+      "en": "At the start each combat, add 3 Shivs into your hand."
+    },
+    "Nloth's Gift": {
+      "zh": null,
+      "en": "Triples the chance of finding Rare cards from combat rewards."
+    },
+    "NlothsMask": {
+      "zh": null,
+      "en": "The next non-Boss chest you open is empty."
+    },
+    "Nuclear Battery": {
+      "zh": null,
+      "en": "At the start of each combat, Channel 1 Plasma."
+    },
+    "Nunchaku": {
+      "zh": null,
+      "en": "Every time you play 10 Attacks, gain 1 Energy."
+    },
+    "Odd Mushroom": {
+      "zh": null,
+      "en": "When Vulnerable, take 25% more attack damage rather than 50%."
+    },
+    "Oddly Smooth Stone": {
+      "zh": null,
+      "en": "At the start of each combat, gain 1 Dexterity."
+    },
+    "Old Coin": {
+      "zh": null,
+      "en": "Upon pickup, gain 300 Gold."
+    },
+    "Omamori": {
+      "zh": null,
+      "en": "Negate the next 2 Curses you obtain."
+    },
+    "OrangePellets": {
+      "zh": null,
+      "en": "Whenever you play a Power, Attack, and Skill in the same turn, remove all of your debuffs."
+    },
+    "Orichalcum": {
+      "zh": null,
+      "en": "If you end your turn without Block, gain 6 Block."
+    },
+    "Ornamental Fan": {
+      "zh": null,
+      "en": "Every time you play 3 Attacks in a single turn, gain 4 Block."
+    },
+    "Orrery": {
+      "zh": null,
+      "en": "Upon pickup, choose and add 5 cards to your deck."
+    },
+    "Pandora's Box": {
+      "zh": null,
+      "en": "Upon pickup, Transform all Strike and Defend cards."
+    },
+    "Pantograph": {
+      "zh": null,
+      "en": "At the start of Boss combats, heal 25 HP."
+    },
+    "Paper Crane": {
+      "zh": null,
+      "en": "Enemies with Weak deal 40% less damage rather than 25%."
+    },
+    "Paper Frog": {
+      "zh": null,
+      "en": "Enemies with Vulnerable take 75% more damage rather than 50%."
+    },
+    "Peace Pipe": {
+      "zh": null,
+      "en": "You can now remove cards from your deck at Rest Sites."
+    },
+    "Pear": {
+      "zh": null,
+      "en": "Upon pickup, raise your Max HP by 10."
+    },
+    "Pen Nib": {
+      "zh": null,
+      "en": "Every 10th Attack you play deals double damage."
+    },
+    "Philosopher's Stone": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. ALL enemies start combat with 1 Strength."
+    },
+    "Pocketwatch": {
+      "zh": null,
+      "en": "Whenever you play 3 or less cards during your turn, draw 3 additional cards at the start of your next turn."
+    },
+    "Potion Belt": {
+      "zh": null,
+      "en": "Upon pickup, gain 2 Potion slots."
+    },
+    "Prayer Wheel": {
+      "zh": null,
+      "en": "Normal enemies drop an additional card reward."
+    },
+    "PreservedInsect": {
+      "zh": null,
+      "en": "Enemies in Elite combats have 25% less HP."
+    },
+    "PrismaticShard": {
+      "zh": null,
+      "en": "Combat reward screens now contain Colorless cards and cards from other colors."
+    },
+    "PureWater": {
+      "zh": null,
+      "en": "At the start of each combat, add 1 Miracle into your hand."
+    },
+    "Question Card": {
+      "zh": null,
+      "en": "Future card rewards have 1 additional card to choose from."
+    },
+    "Red Circlet": {
+      "zh": null,
+      "en": "You ran out of relics. Impressive!"
+    },
+    "Red Mask": {
+      "zh": null,
+      "en": "At the start of each combat, apply 1 Weak to ALL enemies."
+    },
+    "Red Skull": {
+      "zh": null,
+      "en": "While your HP is at or below 50%, you have 3 additional Strength."
+    },
+    "Regal Pillow": {
+      "zh": null,
+      "en": "Whenever you Rest, heal an additional 15 HP."
+    },
+    "Ring of the Serpent": {
+      "zh": null,
+      "en": "Replaces Ring of the Snake. At the start of your turn, draw 1 additional card."
+    },
+    "Ring of the Snake": {
+      "zh": null,
+      "en": "At the start of each combat, draw 2 additional cards."
+    },
+    "Runic Capacitor": {
+      "zh": null,
+      "en": "Start each combat with 3 additional Orb Slots."
+    },
+    "Runic Cube": {
+      "zh": null,
+      "en": "Whenever you lose HP, draw 1 card."
+    },
+    "Runic Dome": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You can no longer see enemy intents."
+    },
+    "Runic Pyramid": {
+      "zh": null,
+      "en": "At the end of your turn, you no longer discard your hand."
+    },
+    "SacredBark": {
+      "zh": null,
+      "en": "Double the effectiveness of potions."
+    },
+    "Self Forming Clay": {
+      "zh": null,
+      "en": "Whenever you lose HP, gain 3 Block next turn."
+    },
+    "Shovel": {
+      "zh": null,
+      "en": "You can now Dig for relics at Rest Sites."
+    },
+    "Shuriken": {
+      "zh": null,
+      "en": "Every time you play 3 Attacks in a single turn, gain 1 Strength."
+    },
+    "Singing Bowl": {
+      "zh": null,
+      "en": "When adding cards to your deck, you may raise your Max HP by 2 instead."
+    },
+    "SlaversCollar": {
+      "zh": null,
+      "en": "During Boss and Elite combats, gain 1 Energy at the start of your turn."
+    },
+    "Sling": {
+      "zh": null,
+      "en": "Start each Elite combat with 2 Strength."
+    },
+    "Smiling Mask": {
+      "zh": null,
+      "en": "The merchant's card removal service now always costs 50 Gold."
+    },
+    "Snake Skull": {
+      "zh": null,
+      "en": "Whenever you apply Poison, apply an additional 1 Poison."
+    },
+    "Snecko Eye": {
+      "zh": null,
+      "en": "At the start of your turn, draw 2 additional cards. Start each combat Confused."
+    },
+    "Sozu": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You can no longer obtain potions."
+    },
+    "Spirit Poop": {
+      "zh": null,
+      "en": "It's unpleasant."
+    },
+    "SsserpentHead": {
+      "zh": null,
+      "en": "Whenever you enter a? room, gain 50 Gold."
+    },
+    "StoneCalendar": {
+      "zh": null,
+      "en": "At the end of turn 7, deal 52 damage to ALL enemies."
+    },
+    "Strange Spoon": {
+      "zh": null,
+      "en": "Cards which Exhaust when played will instead discard 50% of the time."
+    },
+    "Strawberry": {
+      "zh": null,
+      "en": "Upon pickup, raise your Max HP by 7."
+    },
+    "StrikeDummy": {
+      "zh": null,
+      "en": "Cards containing \"Strike\" deal 3 additional damage."
+    },
+    "Sundial": {
+      "zh": null,
+      "en": "Every 3 times you shuffle your draw pile, gain 2 Energy."
+    },
+    "Symbiotic Virus": {
+      "zh": null,
+      "en": "At the start of each combat, Channel 1 Dark."
+    },
+    "TeardropLocket": {
+      "zh": null,
+      "en": "Start each combat in Calm."
+    },
+    "The Courier": {
+      "zh": null,
+      "en": "The Merchant restocks cards, relics, and potions. All prices are reduced by 20%."
+    },
+    "The Specimen": {
+      "zh": null,
+      "en": "Whenever an enemy dies, transfer any Poison it has to a random enemy."
+    },
+    "TheAbacus": {
+      "zh": null,
+      "en": "Whenever you shuffle your draw pile, gain 6 Block."
+    },
+    "Thread and Needle": {
+      "zh": null,
+      "en": "At the start of each combat, gain 4 Plated Armor."
+    },
+    "Tingsha": {
+      "zh": null,
+      "en": "Whenever you discard a card during your turn, deal 3 damage to a random enemy."
+    },
+    "Tiny Chest": {
+      "zh": null,
+      "en": "Every 4th? room is a Treasure room."
+    },
+    "Tiny House": {
+      "zh": null,
+      "en": "Upon pickup, obtain 1 Potion. Gain 50 Gold. Raise your Max HP by 5. Obtain 1 card. Upgrade 1 random card."
+    },
+    "Toolbox": {
+      "zh": null,
+      "en": "At the start of each combat, choose 1 of 3 random Colorless cards and add the chosen card into your hand."
+    },
+    "Torii": {
+      "zh": null,
+      "en": "Whenever you would receive 5 or less unblocked Attack damage, reduce it to 1."
+    },
+    "Tough Bandages": {
+      "zh": null,
+      "en": "Whenever you discard a card during your turn, gain 3 Block."
+    },
+    "Toxic Egg 2": {
+      "zh": null,
+      "en": "Whenever you add a Skill card to your deck, Upgrade it."
+    },
+    "Toy Ornithopter": {
+      "zh": null,
+      "en": "Whenever you use a potion, heal 5 HP."
+    },
+    "TungstenRod": {
+      "zh": null,
+      "en": "Whenever you would lose HP, lose 1 less."
+    },
+    "Turnip": {
+      "zh": null,
+      "en": "You can no longer become Frail."
+    },
+    "TwistedFunnel": {
+      "zh": null,
+      "en": "At the start of each combat, apply 4 Poison to ALL enemies."
+    },
+    "Unceasing Top": {
+      "zh": null,
+      "en": "Whenever you have no cards in hand during your turn, draw a card."
+    },
+    "Vajra": {
+      "zh": null,
+      "en": "At the start of each combat, gain 1 Strength."
+    },
+    "Velvet Choker": {
+      "zh": null,
+      "en": "Gain 1 Energy at the start of your turn. You cannot play more than 6 cards per turn."
+    },
+    "VioletLotus": {
+      "zh": null,
+      "en": "Whenever you exit Calm, gain an additional Energy."
+    },
+    "War Paint": {
+      "zh": null,
+      "en": "Upon pick up, Upgrade 2 random Skills."
+    },
+    "WarpedTongs": {
+      "zh": null,
+      "en": "At the start of your turn, Upgrade a random card in your hand for the rest of combat."
+    },
+    "Whetstone": {
+      "zh": null,
+      "en": "Upon pickup, Upgrade 2 random Attacks."
+    },
+    "White Beast Statue": {
+      "zh": null,
+      "en": "Potions always appear in combat rewards."
+    },
+    "WingedGreaves": {
+      "zh": null,
+      "en": "You may ignore paths when choosing the next room to travel to 3 times."
+    },
+    "WristBlade": {
+      "zh": null,
+      "en": "Attacks that cost 0 deal 4 additional damage."
+    },
+    "Yang": {
+      "zh": null,
+      "en": "Whenever you play an Attack, gain 1 temporary Dexterity."
+    }
+  },
+  "potions": {
+    "Ambrosia": {
+      "zh": null,
+      "en": "Enter Divinity."
+    },
+    "Ancient Potion": {
+      "zh": null,
+      "en": "Gain 1 (2) Artifact."
+    },
+    "AttackPotion": {
+      "zh": null,
+      "en": "Choose 1 of 3 random Attack cards to add (two copies of it) to your hand. It costs (They cost) 0 this turn."
+    },
+    "BlessingOfTheForge": {
+      "zh": null,
+      "en": "Upgrade all cards in your hand for the rest of combat."
+    },
+    "Block Potion": {
+      "zh": null,
+      "en": "Gain 12 (24) Block."
+    },
+    "BloodPotion": {
+      "zh": null,
+      "en": "Heal for 20% (40%) of your Max HP."
+    },
+    "BottledMiracle": {
+      "zh": null,
+      "en": "Add 2 (4) Miracles to your hand."
+    },
+    "ColorlessPotion": {
+      "zh": null,
+      "en": "Choose 1 of 3 random Colorless cards to add (2 copies of) to your hand. It costs (They cost) 0 this turn."
+    },
+    "CultistPotion": {
+      "zh": null,
+      "en": "Gain 1 (2) Ritual."
+    },
+    "CunningPotion": {
+      "zh": null,
+      "en": "Add 3 (6) Shivs+ to your hand."
+    },
+    "Dexterity Potion": {
+      "zh": null,
+      "en": "Gain 2 (4) Dexterity."
+    },
+    "DistilledChaos": {
+      "zh": null,
+      "en": "Play the top 3 (6) cards of your draw pile."
+    },
+    "DuplicationPotion": {
+      "zh": null,
+      "en": "This turn, your next card is (two cards are) played twice."
+    },
+    "ElixirPotion": {
+      "zh": null,
+      "en": "Exhaust any number of cards in your hand."
+    },
+    "Energy Potion": {
+      "zh": null,
+      "en": "Gain 2 (4) Energy."
+    },
+    "EntropicBrew": {
+      "zh": null,
+      "en": "Fill all your empty potion slots with random potions."
+    },
+    "EssenceOfDarkness": {
+      "zh": null,
+      "en": "Channel 1 (2) Dark for each orb slot."
+    },
+    "EssenceOfSteel": {
+      "zh": null,
+      "en": "Gain 4 (8) Plated Armor."
+    },
+    "Explosive Potion": {
+      "zh": null,
+      "en": "Deal 10 (20) damage to all enemies."
+    },
+    "FairyPotion": {
+      "zh": null,
+      "en": "When you would die, heal to 30% (60%) of your Max HP instead and discard this potion."
+    },
+    "FearPotion": {
+      "zh": null,
+      "en": "Apply 3 (6) Vulnerable to target enemy."
+    },
+    "Fire Potion": {
+      "zh": null,
+      "en": "Deal 20 (40) damage to target enemy."
+    },
+    "FocusPotion": {
+      "zh": null,
+      "en": "Gain 2 (4) Focus."
+    },
+    "Fruit Juice": {
+      "zh": null,
+      "en": "Gain 5 (10) Max HP."
+    },
+    "GamblersBrew": {
+      "zh": null,
+      "en": "Discard any number of cards, then draw that many."
+    },
+    "GhostInAJar": {
+      "zh": null,
+      "en": "Gain 1 (2) Intangible."
+    },
+    "HeartOfIron": {
+      "zh": null,
+      "en": "Gain 6 (12) Metallicize."
+    },
+    "LiquidBronze": {
+      "zh": null,
+      "en": "Gain 3 (6) Thorns."
+    },
+    "LiquidMemories": {
+      "zh": null,
+      "en": "Choose a card (2 cards) in your discard pile and return it to your hand. It costs (They cost) 0 this turn."
+    },
+    "Poison Potion": {
+      "zh": null,
+      "en": "Apply 6 (12) Poison to target enemy."
+    },
+    "PotionOfCapacity": {
+      "zh": null,
+      "en": "Gain 2 (4) Orb Slots."
+    },
+    "PowerPotion": {
+      "zh": null,
+      "en": "Choose 1 of 3 random Power cards to add (two copies of it) to your hand. It costs (They cost) 0 this turn."
+    },
+    "Regen Potion": {
+      "zh": null,
+      "en": "Gain 5 (10) Regen."
+    },
+    "SkillPotion": {
+      "zh": null,
+      "en": "Choose 1 of 3 random Skill cards to add (two copies of) to your hand. It costs (They cost) 0 this turn."
+    },
+    "SmokeBomb": {
+      "zh": null,
+      "en": "Escape from a non-boss combat. Receive no rewards."
+    },
+    "SneckoOil": {
+      "zh": null,
+      "en": "Draw 5 (10) Cards. Randomize the cost of cards in your hand"
+    },
+    "SpeedPotion": {
+      "zh": null,
+      "en": "Gain 5 (10) Dexterity. At the end of your turn, lose 5 (10) Dexterity."
+    },
+    "StancePotion": {
+      "zh": null,
+      "en": "Enter Calm or Wrath."
+    },
+    "SteroidPotion": {
+      "zh": null,
+      "en": "Gain 5 (10) Strength. At the end of your turn, lose 5 (10) Strength."
+    },
+    "Strength Potion": {
+      "zh": null,
+      "en": "Gain 2 (4) Strength."
+    },
+    "Swift Potion": {
+      "zh": null,
+      "en": "Draw 3 (6) cards."
+    },
+    "Weak Potion": {
+      "zh": null,
+      "en": "Apply 3 (6) Weak to target enemy."
+    }
+  },
+  "powers": {
+    "Accuracy": {
+      "zh": null,
+      "en": "Shivs deal X additional damage."
+    },
+    "Adaptation": {
+      "zh": null,
+      "en": "Whenever you enter Wrath, draw X cards."
+    },
+    "After Image": {
+      "zh": null,
+      "en": "Whenever you play a card, gain X Block."
+    },
+    "Amplify": {
+      "zh": null,
+      "en": "Your next X Power cards are played twice."
+    },
+    "AngelForm": {
+      "zh": null,
+      "en": "Live Forever, which gives 6 Plated Armor (8 if Wish was upgraded)."
+    },
+    "Anger": {
+      "zh": null,
+      "en": "Whenever you play a Skill, gains X Strength."
+    },
+    "Angry": {
+      "zh": null,
+      "en": "Upon receiving attack damage, gains X Strength."
+    },
+    "Artifact": {
+      "zh": null,
+      "en": "Negates X debuffs."
+    },
+    "BackAttack": {
+      "zh": null,
+      "en": "Deals 50% more damage as it is attacking you from behind."
+    },
+    "Barricade": {
+      "zh": null,
+      "en": "Block is not removed at the start of your/its turn."
+    },
+    "BattleHymn": {
+      "zh": null,
+      "en": "At the start of your turn, add X Smites to your hand."
+    },
+    "BeatOfDeath": {
+      "zh": null,
+      "en": "Whenever you play a card, take X damage."
+    },
+    "Berserk": {
+      "zh": null,
+      "en": "At the start of your turn, gain X."
+    },
+    "Bias": {
+      "zh": null,
+      "en": "At the start of your turn, lose X Focus."
+    },
+    "BlockReturnPower": {
+      "zh": null,
+      "en": "Whenever you attack this enemy, gain X Block."
+    },
+    "Blur": {
+      "zh": null,
+      "en": "Block is not removed at the start of your next X turns."
+    },
+    "Brutality": {
+      "zh": null,
+      "en": "At the start of your turn, lose X HP and draw X cards."
+    },
+    "Buffer": {
+      "zh": null,
+      "en": "Prevent the next X times you would lose HP."
+    },
+    "Burst": {
+      "zh": null,
+      "en": "Your next X Skills are played twice this turn."
+    },
+    "Choked": {
+      "zh": null,
+      "en": "Whenever you play a card this turn, the targeted enemy loses X HP."
+    },
+    "Collect": {
+      "zh": null,
+      "en": "At the start of your next X turns, put a Miracle+ in your hand."
+    },
+    "Combust": {
+      "zh": null,
+      "en": "At the end of your turn, lose N HP and deal X damage to ALL enemies."
+    },
+    "Compulsive": {
+      "zh": null,
+      "en": "Upon receiving attack damage, it changes its Intent."
+    },
+    "Confusion": {
+      "zh": null,
+      "en": "Whenever you draw a card, randomize its cost."
+    },
+    "Constricted": {
+      "zh": null,
+      "en": "At the end of your turn, take X damage."
+    },
+    "Controlled": {
+      "zh": null,
+      "en": "Whenever you switch Stances, gain X Block."
+    },
+    "CorpseExplosionPower": {
+      "zh": null,
+      "en": "On death, the enemy deals X times its Max HP worth of damage to ALL other enemies."
+    },
+    "Corruption": {
+      "zh": null,
+      "en": "Skills cost 0. Whenever you play a Skill, Exhaust it."
+    },
+    "Creative AI": {
+      "zh": null,
+      "en": "At the start of your turn, add X random Power cards into your hand."
+    },
+    "Curiosity": {
+      "zh": null,
+      "en": "Whenever you play a Power card, gains X Strength."
+    },
+    "Curl Up": {
+      "zh": null,
+      "en": "On receiving attack damage, rolls up and gains X Block."
+    },
+    "Dark Embrace": {
+      "zh": null,
+      "en": "Whenever a card is Exhausted, draw X cards."
+    },
+    "Demon Form": {
+      "zh": null,
+      "en": "At the start of your turn, gain X Strength."
+    },
+    "DevaForm": {
+      "zh": null,
+      "en": "At the start of your turn gain N times and increase this gain by X."
+    },
+    "DevotionPower": {
+      "zh": null,
+      "en": "At the start of your turn, gain X Mantra."
+    },
+    "DexLoss": {
+      "zh": null,
+      "en": "At the end of your turn, lose X Dexterity."
+    },
+    "Dexterity": {
+      "zh": null,
+      "en": "Increases (Decreases) Block gained from cards by X."
+    },
+    "Double Damage": {
+      "zh": null,
+      "en": "Attacks deal double damage for X turns."
+    },
+    "Double Tap": {
+      "zh": null,
+      "en": "Your next X Attacks are played twice."
+    },
+    "Draw": {
+      "zh": null,
+      "en": "At the start of your turn, draw X additional cards."
+    },
+    "Draw Card": {
+      "zh": null,
+      "en": "Draw X additional cards next turn."
+    },
+    "Draw Reduction": {
+      "zh": null,
+      "en": "Draw 1 less card for the next X turns."
+    },
+    "DuplicationPower": {
+      "zh": null,
+      "en": "Your next X cards are played twice."
+    },
+    "Echo Form": {
+      "zh": null,
+      "en": "The first X cards you play each turn are played twice."
+    },
+    "Electro": {
+      "zh": null,
+      "en": "Lightning hits ALL enemies."
+    },
+    "EndTurnDeath": {
+      "zh": null,
+      "en": "At the start of your turn, die."
+    },
+    "Energized": {
+      "zh": null,
+      "en": "Gain X additional next turn."
+    },
+    "EnergizedBlue": {
+      "zh": null,
+      "en": "Gain X additional next turn."
+    },
+    "EnergyDownPower": {
+      "zh": null,
+      "en": "Gain X less Energy at the start of each turn."
+    },
+    "Entangled": {
+      "zh": null,
+      "en": "You may not play Attacks this turn."
+    },
+    "Envenom": {
+      "zh": null,
+      "en": "Whenever you deal unblocked attack damage, apply X Poison."
+    },
+    "Equilibrium": {
+      "zh": null,
+      "en": "Retain your hand for X turns."
+    },
+    "EstablishmentPower": {
+      "zh": null,
+      "en": "Whenever a card is Retained, lower its cost by X."
+    },
+    "Evolve": {
+      "zh": null,
+      "en": "Whenever you draw a Status, draw X cards."
+    },
+    "Explosive": {
+      "zh": null,
+      "en": "Explodes in some amount of turns, dealing X damage."
+    },
+    "Fading": {
+      "zh": null,
+      "en": "Dies in X turns."
+    },
+    "Feel No Pain": {
+      "zh": null,
+      "en": "Whenever a card is Exhausted, gain X Block."
+    },
+    "Fire Breathing": {
+      "zh": null,
+      "en": "Whenever you draw a Status or Curse card, deal X damage to ALL enemies."
+    },
+    "Flame Barrier": {
+      "zh": null,
+      "en": "When attacked, deals X damage back. Wears off at the start of your next turn."
+    },
+    "Flex": {
+      "zh": null,
+      "en": "At the end of this turn, lose X Strength."
+    },
+    "Flight": {
+      "zh": null,
+      "en": "Takes 50% less damage from the next X attacks. Removed when attacked X times in one turn. Resets charges at the start of next turn if not fully removed."
+    },
+    "Focus": {
+      "zh": null,
+      "en": "Increases (Decreases) the effectiveness of your Orbs by X."
+    },
+    "Frail": {
+      "zh": null,
+      "en": "Gain 25% less Block from cards for X turns."
+    },
+    "FreeAttackPower": {
+      "zh": null,
+      "en": "Ignore energy costs on the next X Attacks you play."
+    },
+    "Generic Strength Up Power": {
+      "zh": null,
+      "en": "At the end of your/its turn, gain X Strength."
+    },
+    "GrowthPower": {
+      "zh": null,
+      "en": "At the end of your/its turn, gain X Strength."
+    },
+    "Heatsink": {
+      "zh": null,
+      "en": "Whenever you play a Power card, draw X cards."
+    },
+    "Hello": {
+      "zh": null,
+      "en": "At the start of your turn, add X random Common cards into your hand."
+    },
+    "Hex": {
+      "zh": null,
+      "en": "Whenever you play a non- Attack card, add X Dazed to your draw pile."
+    },
+    "Infinite Blades": {
+      "zh": null,
+      "en": "At the start of your turn, add X Shivs into your hand."
+    },
+    "Intangible": {
+      "zh": null,
+      "en": "Reduce ALL damage and HP loss take to 1 for X turns."
+    },
+    "IntangiblePlayer": {
+      "zh": null,
+      "en": "Reduce ALL damage and HP loss take to 1 for X turns."
+    },
+    "Invincible": {
+      "zh": null,
+      "en": "Can only lose X more HP this turn."
+    },
+    "Juggernaut": {
+      "zh": null,
+      "en": "Whenever you gain Block, deal X damage to a random enemy."
+    },
+    "Life Link": {
+      "zh": null,
+      "en": "If other Darklings are still alive, revives in 2 turns."
+    },
+    "LikeWaterPower": {
+      "zh": null,
+      "en": "At the end of your turn, if you are in Calm, gain X Block."
+    },
+    "Lockon": {
+      "zh": null,
+      "en": "Lightning and Dark Orbs deal 50% more damage to this enemy."
+    },
+    "Loop": {
+      "zh": null,
+      "en": "At the start of your turn, trigger the passive ability of your next Orb X times."
+    },
+    "Magnetism": {
+      "zh": null,
+      "en": "At the start of your turn, add X random Colorless cards into your hand."
+    },
+    "Malleable": {
+      "zh": null,
+      "en": "Upon receiving attack damage, gains X Block. Block gain increases as Malleable triggers. Resets to X at the start of your turn."
+    },
+    "Mantra": {
+      "zh": null,
+      "en": "Whenever you gain 10 Mantra, enter Divinity."
+    },
+    "MasterRealityPower": {
+      "zh": null,
+      "en": "Whenever a card is created during combat, Upgrade it."
+    },
+    "Mayhem": {
+      "zh": null,
+      "en": "At the start of your turn, play the top X card of your draw pile."
+    },
+    "Metallicize": {
+      "zh": null,
+      "en": "At the end of your/its turn, gain X Block."
+    },
+    "Minion": {
+      "zh": null,
+      "en": "Minions abandon combat without their leader."
+    },
+    "Mode Shift": {
+      "zh": null,
+      "en": "After receiving X damage, changes to a defensive mode."
+    },
+    "Next Turn Block": {
+      "zh": null,
+      "en": "Gain X Block next turn."
+    },
+    "Night Terror": {
+      "zh": null,
+      "en": "Add 3 of a chosen card into your hand next turn."
+    },
+    "Nirvana": {
+      "zh": null,
+      "en": "Whenever you Scry, gain X Block."
+    },
+    "No Draw": {
+      "zh": null,
+      "en": "You cannot draw cards this turn."
+    },
+    "NoBlockPower": {
+      "zh": null,
+      "en": "You cannot gain Block from cards for the next X turns."
+    },
+    "Noxious Fumes": {
+      "zh": null,
+      "en": "At the start of your turn, apply X Poison to ALL enemies."
+    },
+    "OmegaPower": {
+      "zh": null,
+      "en": "At the end of your turn, deal X damage to ALL enemies."
+    },
+    "Painful Stabs": {
+      "zh": null,
+      "en": "Whenever you receive attack damage from this enemy, add X Wounds into your discard pile."
+    },
+    "Panache": {
+      "zh": null,
+      "en": "If you play [counter] more cards this turn, deal X damage to all enemies."
+    },
+    "PathToVictoryPower": {
+      "zh": null,
+      "en": "Whenever you play Pressure Points, all enemies with Mark lose X HP."
+    },
+    "Pen Nib": {
+      "zh": null,
+      "en": "Your next Attack deals double damage."
+    },
+    "Phantasmal": {
+      "zh": null,
+      "en": "Deal double damage for the next X turns."
+    },
+    "Plated Armor": {
+      "zh": null,
+      "en": "At the end of your/its turn, gain X Block. Receiving unblocked attack damage reduces Plated Armor by 1."
+    },
+    "Poison": {
+      "zh": null,
+      "en": "At the start of its turn, lose X HP, then reduce Poison by 1."
+    },
+    "Rage": {
+      "zh": null,
+      "en": "Whenever you play an Attack, gain X Block."
+    },
+    "Rebound": {
+      "zh": null,
+      "en": "The next X cards you play this turn are placed on top of your draw pile."
+    },
+    "Regenerate": {
+      "zh": null,
+      "en": "At the end of its turn, heals X HP."
+    },
+    "Regeneration": {
+      "zh": null,
+      "en": "At the end of your turn, heal X HP and reduce Regen by 1."
+    },
+    "Repair": {
+      "zh": null,
+      "en": "At the end of combat, heal X HP."
+    },
+    "Retain Cards": {
+      "zh": null,
+      "en": "At the end of your turn, Retain up to X cards."
+    },
+    "Ritual": {
+      "zh": null,
+      "en": "At the end of your/its turn, gain X Strength."
+    },
+    "Rupture": {
+      "zh": null,
+      "en": "Whenever you lose HP from a card, gain X Strength."
+    },
+    "Sadistic": {
+      "zh": null,
+      "en": "Whenever you apply a debuff to an enemy, deal X damage."
+    },
+    "Shackled": {
+      "zh": null,
+      "en": "At the end of its turn, gains X Strength."
+    },
+    "Sharp Hide": {
+      "zh": null,
+      "en": "Whenever you play an Attack, take X damage."
+    },
+    "Shifting": {
+      "zh": null,
+      "en": "Upon lose HP, loses that much Strength until the end of the turn."
+    },
+    "Slow": {
+      "zh": null,
+      "en": "Whenever you play a card, the target receives 10% more damage from Attacks this turn."
+    },
+    "Split": {
+      "zh": null,
+      "en": "When its HP is at or below 50%, it will split into 2 smaller Slimes with its current HP."
+    },
+    "Spore Cloud": {
+      "zh": null,
+      "en": "On death, applies 2 Vulnerable."
+    },
+    "Stasis": {
+      "zh": null,
+      "en": "On death, a stolen card is returned to your hand."
+    },
+    "StaticDischarge": {
+      "zh": null,
+      "en": "Whenever you receive attack damage, channel X Lightning."
+    },
+    "Storm": {
+      "zh": null,
+      "en": "Whenever you play a Power card, channel X Lightning."
+    },
+    "Strength": {
+      "zh": null,
+      "en": "Increases (Decreases) attack damage by X."
+    },
+    "StrikeUp": {
+      "zh": null,
+      "en": "Cards containing \"Strike\" deal 3 additional damage."
+    },
+    "Study": {
+      "zh": null,
+      "en": "At the end of your turn, shuffle X Insights into your draw pile."
+    },
+    "Surrounded": {
+      "zh": null,
+      "en": "Receive 50% more damage if attacked from behind."
+    },
+    "TheBomb": {
+      "zh": null,
+      "en": "At the end of N turns, deal 40(50) damage to all enemies."
+    },
+    "Thievery": {
+      "zh": null,
+      "en": "Steals X Gold whenever it attacks."
+    },
+    "Thorns": {
+      "zh": null,
+      "en": "When attacked, deals X damage back."
+    },
+    "Thousand Cuts": {
+      "zh": null,
+      "en": "Whenever you play a card, deal X damage to ALL enemies."
+    },
+    "Time Warp": {
+      "zh": null,
+      "en": "Whenever you play some amount of cards, your turn ends and it gains 2 Strength."
+    },
+    "TimeMazePower": {
+      "zh": null,
+      "en": "You cannot play more than 15 cards per turn."
+    },
+    "Tools Of The Trade": {
+      "zh": null,
+      "en": "At the start of your turn, draw X cards and discard X cards."
+    },
+    "Unawakened": {
+      "zh": null,
+      "en": "This enemy hasn't awakened yet..."
+    },
+    "Vigor": {
+      "zh": null,
+      "en": "Your next Attack deals X additional damage."
+    },
+    "Vulnerable": {
+      "zh": null,
+      "en": "Receive 50% (25%) (75%) more damage from Attacks for X turns."
+    },
+    "WaveOfTheHandPower": {
+      "zh": null,
+      "en": "Whenever you gain Block, apply X Weak to ALL enemies."
+    },
+    "Weakened": {
+      "zh": null,
+      "en": "Attacks deal 25% (40%) less damage for X turns."
+    },
+    "WireheadingPower": {
+      "zh": null,
+      "en": "At the start of your turn, Scry X."
+    },
+    "Wraith Form v2": {
+      "zh": null,
+      "en": "Lose X Dexterity at the start of your turn."
+    },
+    "WrathNextTurnPower": {
+      "zh": null,
+      "en": "Enter Wrath at the start of your turn."
+    }
+  }
+}

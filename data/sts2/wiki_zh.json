@@ -1,0 +1,4261 @@
+{
+ "meta": {
+  "name": "Slay the Spire 2 wiki_zh",
+  "fetched": "2026-11-10",
+  "source": "slaythespire.wiki.gg",
+  "source_entry": "https://slaythespire.wiki.gg/wiki/Slay_the_Spire_2:Main",
+  "api": "https://slaythespire.wiki.gg/api.php (MediaWiki Cargo: Localization, Cards)",
+  "zh_source": "Cargo table Localization, field ZHS (游戏文件内置简体中文名, scraped via wiki)",
+  "desc_source": "英文描述: cards/relics/potions 的 desc 取自仓库 data/sts2 的 effect 字段(游戏数据 v0.107.1); 其中 13 张缺失 effect 的诅咒/状态卡由 wiki Cargo Cards.Description 补齐",
+  "desc_language_note": "wiki 仅有英文名与英文描述, 无中文描述, 故 desc 为英文; zh 为游戏文件官方简体中文",
+  "enemies_note": "wiki Enemies 表无描述字段, 故 enemies 的 desc 为 null; 敌人招式与行为见 enemies.json(moves/pattern)",
+  "unmatched_note": "zh 为 null 的实体为 wiki Localization 表未收录的条目(多为事件召唤物/多人模式卡牌等)",
+  "counts": {
+   "cards": {
+    "total": 577,
+    "zh": 575
+   },
+   "relics": {
+    "total": 295,
+    "zh": 295
+   },
+   "potions": {
+    "total": 63,
+    "zh": 63
+   },
+   "enemies": {
+    "total": 120,
+    "zh": 107
+   },
+   "cards_effect_filled_from_wiki": 13
+  }
+ },
+ "cards": {
+  "abrasive": {
+   "zh": "磨蚀",
+   "desc": "Gain 1 Dexterity. Gain 4 Thorns."
+  },
+  "accelerant": {
+   "zh": "触媒",
+   "desc": "Poison is triggered 1 additional time."
+  },
+  "accuracy": {
+   "zh": "精准",
+   "desc": "Shivs deal 4 additional damage."
+  },
+  "acrobatics": {
+   "zh": "杂技",
+   "desc": "Draw 3 cards. Discard 1 card."
+  },
+  "adaptive_strike": {
+   "zh": "适应打击",
+   "desc": "Deal 18 damage. Add a 0Energy copy of this card into your Discard Pile."
+  },
+  "adrenaline": {
+   "zh": "肾上腺素",
+   "desc": "Gain 1 Energy. Draw 2 cards."
+  },
+  "afterimage": {
+   "zh": "余像",
+   "desc": "Whenever you play a card, gain 1 Block."
+  },
+  "afterlife": {
+   "zh": "来生",
+   "desc": "Summon 6."
+  },
+  "aggression": {
+   "zh": "好勇斗狠",
+   "desc": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it."
+  },
+  "alchemize": {
+   "zh": "炼制药水",
+   "desc": "Procure a random potion."
+  },
+  "alignment": {
+   "zh": "星位序列",
+   "desc": "Gain 2 Energy."
+  },
+  "all_for_one": {
+   "zh": "万物一心",
+   "desc": "Deal 10 damage. Put ALL 0Energy cards from your Discard Pile into your Hand."
+  },
+  "anger": {
+   "zh": "愤怒",
+   "desc": "Deal 6 damage. Add a copy of this card into your Discard Pile."
+  },
+  "anointed": {
+   "zh": "天选",
+   "desc": "Put every Rare card from your Draw Pile into your Hand."
+  },
+  "anticipate": {
+   "zh": "预判",
+   "desc": "Gain 2 Dexterity this turn."
+  },
+  "apotheosis": {
+   "zh": "神化",
+   "desc": "Upgrade ALL your cards."
+  },
+  "apparition": {
+   "zh": "灵体",
+   "desc": "Gain 1 Intangible."
+  },
+  "armaments": {
+   "zh": "武装",
+   "desc": "Gain 5 Block. Upgrade a card in your Hand."
+  },
+  "arsenal": {
+   "zh": "武器库",
+   "desc": "Whenever you create a card, gain 1 Strength."
+  },
+  "ascenders_bane": {
+   "zh": "进阶之灾",
+   "desc": "Unplayable. Ethereal. Eternal."
+  },
+  "ashen_strike": {
+   "zh": "灰烬打击",
+   "desc": "Deal ? damage. Deals 3 additional damage for each card in your Exhaust Pile."
+  },
+  "assassinate": {
+   "zh": "刺杀",
+   "desc": "Deal 10 damage. Apply 1 Vulnerable."
+  },
+  "astral_pulse": {
+   "zh": "星界脉冲",
+   "desc": "Deal 6 damage to ALL enemies twice."
+  },
+  "automation": {
+   "zh": "自动化",
+   "desc": "Every 10 cards you draw, gain 1 Energy."
+  },
+  "backflip": {
+   "zh": "后空翻",
+   "desc": "Gain 5 Block. Draw 2 cards."
+  },
+  "backstab": {
+   "zh": "背刺",
+   "desc": "Deal 11 damage."
+  },
+  "bad_luck": {
+   "zh": "霉运",
+   "desc": "At the end of your turn, if this is in your Hand, lose 13 HP."
+  },
+  "ball_lightning": {
+   "zh": "球状闪电",
+   "desc": "Deal 7 damage. Channel 1 Lightning."
+  },
+  "banshees_cry": {
+   "zh": "女妖之嚎",
+   "desc": "Deal 33 damage to ALL enemies. Costs 2 Energy less for each Ethereal card played this combat."
+  },
+  "barrage": {
+   "zh": "弹幕齐射",
+   "desc": "Deal 5 damage for each Channeled Orb. (Hits ? times)"
+  },
+  "barricade": {
+   "zh": "壁垒",
+   "desc": "Block is not removed at the start of your turn."
+  },
+  "bash": {
+   "zh": "痛击",
+   "desc": "Deal 8 damage. Apply 2 Vulnerable."
+  },
+  "battle_trance": {
+   "zh": "战斗专注",
+   "desc": "Draw 3 cards. You cannot draw additional cards this turn."
+  },
+  "beacon_of_hope": {
+   "zh": "希望灯塔",
+   "desc": "Whenever you gain Block on your turn, other players gain half that much Block."
+  },
+  "beam_cell": {
+   "zh": "光束射线",
+   "desc": "Deal 3 damage. Apply 1 Vulnerable."
+  },
+  "beat_down": {
+   "zh": "狠揍",
+   "desc": "Play 3 random Attacks from your Discard Pile."
+  },
+  "beat_into_shape": {
+   "zh": "锻打成型",
+   "desc": "Deal 5 damage. Forge ?. Forges an additional 5 for every other time you've hit the enemy this turn."
+  },
+  "beckon": {
+   "zh": "呼唤",
+   "desc": "At the end of your turn, if this is in your Hand, lose 6 HP."
+  },
+  "begone": {
+   "zh": "下去！",
+   "desc": "Choose a card in your Hand to Transform into Minion Strike."
+  },
+  "believe_in_you": {
+   "zh": "相信着你",
+   "desc": "Another player gains 2 Energy."
+  },
+  "biased_cognition": {
+   "zh": "偏差认知",
+   "desc": "Gain 4 Focus. At the start of your turn, lose 1 Focus."
+  },
+  "big_bang": {
+   "zh": "大爆炸",
+   "desc": "Draw 1 card. Gain 1 Energy. Gain 1 Star. Forge 5."
+  },
+  "black_hole": {
+   "zh": "黑洞",
+   "desc": "Whenever you spend or gain 1 Star, deal 3 damage to ALL enemies."
+  },
+  "blade_dance": {
+   "zh": "刀刃之舞",
+   "desc": "Add 3 Shivs into your Hand."
+  },
+  "blade_of_ink": {
+   "zh": "墨之刃",
+   "desc": "Add 2 Inky Shivs into your Hand."
+  },
+  "blight_strike": {
+   "zh": "荒疫打击",
+   "desc": "Deal 8 damage. Apply Doom equal to damage dealt."
+  },
+  "blood_wall": {
+   "zh": "血墙",
+   "desc": "Lose 2 HP. Gain 16 Block."
+  },
+  "bloodletting": {
+   "zh": "放血",
+   "desc": "Lose 3 HP. Gain 2 Energy."
+  },
+  "bludgeon": {
+   "zh": "重锤",
+   "desc": "Deal 32 damage."
+  },
+  "blur": {
+   "zh": "残影",
+   "desc": "Gain 5 Block. Block is not removed at the start of your next turn."
+  },
+  "body_slam": {
+   "zh": "全身撞击",
+   "desc": "Deal damage equal to your Block. (Deals ? damage)"
+  },
+  "bodyguard": {
+   "zh": "护卫",
+   "desc": "Summon 5."
+  },
+  "bolas": {
+   "zh": "流星锤",
+   "desc": "Deal 3 damage. At the start of your next turn, return this to your Hand."
+  },
+  "bombardment": {
+   "zh": "轰击",
+   "desc": "Deal 18 damage. At the start of your turn, if this is in your Exhaust Pile, play it."
+  },
+  "bone_shards": {
+   "zh": "碎骨",
+   "desc": "If Osty is alive, he deals 9 damage to ALL enemies and you gain 9 Block. Osty dies."
+  },
+  "boost_away": {
+   "zh": "高速脱离",
+   "desc": "Gain 6 Block. Add a Dazed into your Discard Pile."
+  },
+  "boot_sequence": {
+   "zh": "启动流程",
+   "desc": "Gain 10 Block."
+  },
+  "borrowed_time": {
+   "zh": "预借时间",
+   "desc": "Gain 4 Energy. Cards cost an additional 1 Energy this turn."
+  },
+  "bouncing_flask": {
+   "zh": "弹跳药瓶",
+   "desc": "Apply 3 Poison to a random enemy 3 times."
+  },
+  "brand": {
+   "zh": "烙印",
+   "desc": "Lose 1 HP. Exhaust 1 card. Gain 1 Strength."
+  },
+  "break": {
+   "zh": "破击",
+   "desc": "Deal 20 damage. Apply 5 Vulnerable."
+  },
+  "breakthrough": {
+   "zh": "突破",
+   "desc": "Lose 1 HP. Deal 9 damage to ALL enemies."
+  },
+  "brightest_flame": {
+   "zh": "至亮之焰",
+   "desc": "Gain 2 Energy. Draw 2 cards. Lose 1 Max HP."
+  },
+  "bubble_bubble": {
+   "zh": "咕嘟冒泡",
+   "desc": "If the enemy has Poison, apply 9 Poison."
+  },
+  "buffer": {
+   "zh": "缓冲",
+   "desc": "Prevent the next time you would lose HP."
+  },
+  "bulk_up": {
+   "zh": "暴涨",
+   "desc": "Lose 1 Orb Slot. Gain 2 Strength. Gain 2 Dexterity."
+  },
+  "bullet_time": {
+   "zh": "子弹时间",
+   "desc": "You cannot draw additional cards this turn. ALL cards in your Hand are free to play this turn."
+  },
+  "bully": {
+   "zh": "欺凌",
+   "desc": "Deal ? damage. Deals 2 additional damage for each Vulnerable on the enemy."
+  },
+  "bulwark": {
+   "zh": "铸墙",
+   "desc": "Gain 12 Block. Forge 10."
+  },
+  "bundle_of_joy": {
+   "zh": "新生之喜",
+   "desc": "Add 3 random Colorless cards into your Hand."
+  },
+  "burn": {
+   "zh": "灼伤",
+   "desc": "At the end of your turn, if this is in your Hand, take 2 damage."
+  },
+  "burning_pact": {
+   "zh": "燃烧契约",
+   "desc": "Exhaust 1 card. Draw 2 cards."
+  },
+  "burst": {
+   "zh": "爆发",
+   "desc": "This turn, your next Skill is played an extra time."
+  },
+  "bury": {
+   "zh": "埋葬",
+   "desc": "Deal 52 damage."
+  },
+  "byrd_swoop": {
+   "zh": "异鸟扑击",
+   "desc": "Deal 14 damage."
+  },
+  "byrdonis_egg": {
+   "zh": "多尼斯异鸟蛋",
+   "desc": "Can be hatched at a Rest Site."
+  },
+  "calamity": {
+   "zh": "劫难",
+   "desc": "Whenever you play an Attack, add a random Attack into your Hand."
+  },
+  "calcify": {
+   "zh": "钙化",
+   "desc": "Osty's attacks deal 4 additional damage."
+  },
+  "calculated_gamble": {
+   "zh": "计算下注",
+   "desc": "Discard your Hand, then draw that many cards."
+  },
+  "call_of_the_void": {
+   "zh": "虚空之唤",
+   "desc": "At the start of your turn, add 1 random card into your Hand. It gains Ethereal."
+  },
+  "caltrops": {
+   "zh": "铁蒺藜",
+   "desc": "Whenever you are attacked, deal 3 damage back."
+  },
+  "capacitor": {
+   "zh": "扩容",
+   "desc": "Gain 2 Orb Slots."
+  },
+  "capture_spirit": {
+   "zh": "捕捉灵魂",
+   "desc": "Enemy loses 3 HP. Add 3 Souls into your Draw Pile."
+  },
+  "cascade": {
+   "zh": "倾泻",
+   "desc": "Play the top X cards of your Draw Pile."
+  },
+  "catastrophe": {
+   "zh": "横祸",
+   "desc": "Play 2 random cards from your Draw Pile."
+  },
+  "celestial_might": {
+   "zh": "天穹之力",
+   "desc": "Deal 6 damage 3 times."
+  },
+  "chaos": {
+   "zh": "混沌",
+   "desc": "Channel 1 random Orb."
+  },
+  "charge": {
+   "zh": "冲锋！！",
+   "desc": "Choose 2 cards in your Draw Pile to Transform into Minion Dive Bombs."
+  },
+  "charge_battery": {
+   "zh": "充电",
+   "desc": "Gain 7 Block. Next turn, gain 1 Energy."
+  },
+  "child_of_the_stars": {
+   "zh": "群星之子",
+   "desc": "Whenever you spend 1 Star, gain 2 Block for each 1 Star spent."
+  },
+  "chill": {
+   "zh": "冰寒",
+   "desc": "Channel 1 Frost for each enemy."
+  },
+  "cinder": {
+   "zh": "余烬",
+   "desc": "Deal 18 damage. Exhaust 1 card at random."
+  },
+  "clash": {
+   "zh": "交锋",
+   "desc": "Can only be played if every card in your Hand is an Attack. Deal 14 damage."
+  },
+  "claw": {
+   "zh": "爪击",
+   "desc": "Deal 3 damage. Increase the damage of ALL Claw cards by 2 this combat."
+  },
+  "cleanse": {
+   "zh": "洁净",
+   "desc": "Summon 3. Exhaust 1 card from your Draw Pile."
+  },
+  "cloak_and_dagger": {
+   "zh": "斗篷与匕首",
+   "desc": "Gain 6 Block. Add 1 Shiv into your Hand."
+  },
+  "cloak_of_stars": {
+   "zh": "群星斗篷",
+   "desc": "Gain 7 Block."
+  },
+  "clumsy": {
+   "zh": "笨拙",
+   "desc": "Unplayable. Ethereal."
+  },
+  "cold_snap": {
+   "zh": "寒流",
+   "desc": "Deal 6 damage. Channel 1 Frost."
+  },
+  "collision_course": {
+   "zh": "碰撞轨迹",
+   "desc": "Deal 11 damage. Add a Debris into your Hand."
+  },
+  "colossus": {
+   "zh": "巨像",
+   "desc": "Gain 5 Block. You receive 50% less damage from Vulnerable enemies this turn."
+  },
+  "comet": {
+   "zh": "彗星",
+   "desc": "Deal 33 damage. Apply 3 Weak. Apply 3 Vulnerable."
+  },
+  "compact": {
+   "zh": "压缩",
+   "desc": "Gain 6 Block. Transform all Status cards in your Hand into Fuel."
+  },
+  "compile_driver": {
+   "zh": "编译冲击",
+   "desc": "Deal 7 damage. Draw 1 card for each unique Orb you have. (Draw ? cards)"
+  },
+  "conflagration": {
+   "zh": "焚烧",
+   "desc": "Deal 2 damage to ALL enemies 4 times."
+  },
+  "conqueror": {
+   "zh": "征服者",
+   "desc": "Forge 3. Sovereign Blade deals double damage to the enemy this turn."
+  },
+  "consuming_shadow": {
+   "zh": "吞噬暗影",
+   "desc": "Channel 2 Dark. At the end of your turn, Evoke your leftmost Orb."
+  },
+  "convergence": {
+   "zh": "汇流",
+   "desc": "Next turn, gain 1 Energy and 1 Star. Retain your Hand this turn."
+  },
+  "coolant": {
+   "zh": "冷却剂",
+   "desc": "At the start of your turn, gain 2 Block for each unique Orb you have."
+  },
+  "coolheaded": {
+   "zh": "冷静头脑",
+   "desc": "Channel 1 Frost. Draw 1 card."
+  },
+  "coordinate": {
+   "zh": "协同配合",
+   "desc": "Give another player 5 Strength this turn."
+  },
+  "corrosive_wave": {
+   "zh": "腐蚀波",
+   "desc": "Whenever you draw a card this turn, apply 2 Poison to ALL enemies."
+  },
+  "corruption": {
+   "zh": "腐化",
+   "desc": "Skills cost 0 Energy. Whenever you play a Skill, Exhaust it."
+  },
+  "cosmic_indifference": {
+   "zh": "宇宙冷漠",
+   "desc": "Gain 6 Block. Put a card from your Discard Pile on top of your Draw Pile."
+  },
+  "countdown": {
+   "zh": "倒数计时",
+   "desc": "At the start of your turn, apply 6 Doom to a random enemy."
+  },
+  "crash_landing": {
+   "zh": "迫降",
+   "desc": "Deal 21 damage to ALL enemies. Fill your Hand with Debris."
+  },
+  "creative_ai": {
+   "zh": "创造性AI",
+   "desc": "At the start of your turn, add a random Power into your Hand."
+  },
+  "crescent_spear": {
+   "zh": "新月长矛",
+   "desc": "Deal ? damage. Deals 2 additional damage for ALL your cards that have a 1 Star cost."
+  },
+  "crimson_mantle": {
+   "zh": "绯红披风",
+   "desc": "At the start of your turn, lose 1 HP and gain 8 Block."
+  },
+  "cruelty": {
+   "zh": "残酷",
+   "desc": "Vulnerable enemies take an additional 25% damage."
+  },
+  "crush_under": {
+   "zh": "下砸",
+   "desc": "Deal 7 damage to ALL enemies. All enemies lose 1 Strength this turn."
+  },
+  "curse_of_the_bell": {
+   "zh": "铃铛的诅咒",
+   "desc": "Unplayable. Eternal."
+  },
+  "dagger_spray": {
+   "zh": "匕首雨",
+   "desc": "Deal 4 damage to ALL enemies twice."
+  },
+  "dagger_throw": {
+   "zh": "投掷匕首",
+   "desc": "Deal 9 damage. Draw 1 card. Discard 1 card."
+  },
+  "danse_macabre": {
+   "zh": "死亡之舞",
+   "desc": "Whenever you play a card that costs 2 Energy or more, gain 4 Block."
+  },
+  "dark_embrace": {
+   "zh": "黑暗之拥",
+   "desc": "Whenever a card is Exhausted, draw 1 card."
+  },
+  "dark_shackles": {
+   "zh": "黑暗镣铐",
+   "desc": "Enemy loses 9 Strength this turn."
+  },
+  "darkness": {
+   "zh": "漆黑",
+   "desc": "Channel 1 Dark. Trigger the passive ability of all Dark Orbs."
+  },
+  "dash": {
+   "zh": "冲刺",
+   "desc": "Gain 10 Block. Deal 10 damage."
+  },
+  "dazed": {
+   "zh": "晕眩",
+   "desc": "Unplayable. Ethereal."
+  },
+  "deadly_poison": {
+   "zh": "致命毒药",
+   "desc": "Apply 5 Poison."
+  },
+  "death_march": {
+   "zh": "死亡行军",
+   "desc": "Deal ? damage. Deals 4 additional damage for each card drawn during your turn."
+  },
+  "deathbringer": {
+   "zh": "死亡使者",
+   "desc": "Apply 21 Doom and 1 Weak to ALL enemies."
+  },
+  "deaths_door": {
+   "zh": "死亡之门",
+   "desc": "Gain 6 Block. If you applied Doom this turn, gain Block 2 additional times."
+  },
+  "debilitate": {
+   "zh": "摧残",
+   "desc": "Deal 10 damage. Vulnerable and Weak are twice as effective against the enemy for the next 2 turns."
+  },
+  "debris": {
+   "zh": "碎屑",
+   "desc": "Exhaust."
+  },
+  "debt": {
+   "zh": "债务",
+   "desc": "At the end of your turn, if this is in your Hand, lose 10 Gold."
+  },
+  "decay": {
+   "zh": "腐朽",
+   "desc": "At the end of your turn, if this is in your Hand, take 2 damage."
+  },
+  "decisions_decisions": {
+   "zh": "抉择，抉择",
+   "desc": "Draw 3 cards. Choose a Skill in your Hand and play it 3 times."
+  },
+  "defend_defect": {
+   "zh": "防御",
+   "desc": "Gain 5 Block."
+  },
+  "defend_ironclad": {
+   "zh": "防御",
+   "desc": "Gain 5 Block."
+  },
+  "defend_necrobinder": {
+   "zh": "防御",
+   "desc": "Gain 5 Block."
+  },
+  "defend_regent": {
+   "zh": "防御",
+   "desc": "Gain 5 Block."
+  },
+  "defend_silent": {
+   "zh": "防御",
+   "desc": "Gain 5 Block."
+  },
+  "defile": {
+   "zh": "玷污",
+   "desc": "Deal 13 damage."
+  },
+  "deflect": {
+   "zh": "偏折",
+   "desc": "Gain 4 Block."
+  },
+  "defragment": {
+   "zh": "碎片整理",
+   "desc": "Gain 1 Focus."
+  },
+  "defy": {
+   "zh": "违逆",
+   "desc": "Gain 6 Block. Apply 1 Weak."
+  },
+  "delay": {
+   "zh": "拖延",
+   "desc": "Gain 11 Block. Next turn, gain 1 Energy."
+  },
+  "demesne": {
+   "zh": "领域",
+   "desc": "At the start of your turn, gain 1 Energy and draw 1 additional card."
+  },
+  "demon_form": {
+   "zh": "恶魔形态",
+   "desc": "At the start of your turn, gain 2 Strength."
+  },
+  "demonic_shield": {
+   "zh": "恶魔护盾",
+   "desc": "Lose 1 HP. Give another player Block equal to your Block. (Gives ? Block)"
+  },
+  "devastate": {
+   "zh": "葬送",
+   "desc": "Deal 30 damage."
+  },
+  "devour_life": {
+   "zh": "吞噬生命",
+   "desc": "Whenever you play a Soul, Summon 1."
+  },
+  "dirge": {
+   "zh": "挽歌",
+   "desc": "Summon 3 X times. Add X Souls into your Draw Pile."
+  },
+  "discovery": {
+   "zh": "发现",
+   "desc": "Choose 1 of 3 random cards to add into your Hand. It's free to play this turn."
+  },
+  "disintegration": {
+   "zh": "瓦解",
+   "desc": "At the end of your turn, take 6 damage."
+  },
+  "dismantle": {
+   "zh": "拆卸",
+   "desc": "Deal 8 damage. If the enemy is Vulnerable, hits twice."
+  },
+  "distraction": {
+   "zh": "声东击西",
+   "desc": "Add a random Skill into your Hand. It's free to play this turn."
+  },
+  "dodge_and_roll": {
+   "zh": "闪躲翻滚",
+   "desc": "Gain 4 Block. Next turn, gain 4 Block."
+  },
+  "dominate": {
+   "zh": "主宰",
+   "desc": "Apply 1 Vulnerable. Gain 1 Strength for each Vulnerable on the enemy."
+  },
+  "double_energy": {
+   "zh": "双倍能量",
+   "desc": "Double your Energy."
+  },
+  "doubt": {
+   "zh": "疑虑",
+   "desc": "At the end of your turn, if this is in your Hand, gain 1 Weak."
+  },
+  "drain_power": {
+   "zh": "能量汲取",
+   "desc": "Deal 10 damage. Upgrade 2 random cards in your Discard Pile."
+  },
+  "dramatic_entrance": {
+   "zh": "闪亮登场",
+   "desc": "Deal 11 damage to ALL enemies."
+  },
+  "dredge": {
+   "zh": "清淤",
+   "desc": "Put 3 cards from your Discard Pile into your Hand."
+  },
+  "drum_of_battle": {
+   "zh": "战鼓",
+   "desc": "Draw 2 cards. When this card is Exhausted, gain 2 Energy."
+  },
+  "dual_wield": {
+   "zh": "双持",
+   "desc": "Choose an Attack or Power card. Add a copy of that card into your Hand."
+  },
+  "dualcast": {
+   "zh": "双重释放",
+   "desc": "Evoke your rightmost Orb twice."
+  },
+  "dying_star": {
+   "zh": "星灭",
+   "desc": "Deal 9 damage to ALL enemies. ALL enemies lose 9 Strength this turn."
+  },
+  "echo_form": {
+   "zh": "回响形态",
+   "desc": "The first card you play each turn is played an extra time."
+  },
+  "echoing_slash": {
+   "zh": "回响斩击",
+   "desc": "Deal 10 damage to ALL enemies. Repeat this effect for each enemy killed."
+  },
+  "eidolon": {
+   "zh": "幻景",
+   "desc": "Exhaust your Hand. If 9 cards were Exhausted this way, gain 1 Intangible."
+  },
+  "end_of_days": {
+   "zh": "末日降临",
+   "desc": "Apply 29 Doom to ALL enemies. Kill enemies with at least as much Doom as HP."
+  },
+  "energy_surge": {
+   "zh": "能量涌动",
+   "desc": "ALL players gain 2 Energy."
+  },
+  "enfeebling_touch": {
+   "zh": "弱化之触",
+   "desc": "Enemy loses 8 Strength this turn."
+  },
+  "enlightenment": {
+   "zh": "开悟",
+   "desc": "Reduce the cost of ALL cards in your Hand to 1 this turn."
+  },
+  "enthralled": {
+   "zh": "执迷",
+   "desc": "If this is in your Hand, it must be played before other cards."
+  },
+  "entrench": {
+   "zh": "巩固",
+   "desc": "Double your Block."
+  },
+  "entropy": {
+   "zh": "熵",
+   "desc": "At the start of your turn, Transform 1 card in your Hand."
+  },
+  "envenom": {
+   "zh": "涂毒",
+   "desc": "Whenever an Attack deals unblocked damage, apply 1 Poison."
+  },
+  "equilibrium": {
+   "zh": "均衡",
+   "desc": "Gain 13 Block. Retain your Hand this turn."
+  },
+  "eradicate": {
+   "zh": "根除",
+   "desc": "Deal 11 damage X times."
+  },
+  "escape_plan": {
+   "zh": "逃脱计划",
+   "desc": "Draw 1 card. If you draw a Skill, gain 3 Block."
+  },
+  "eternal_armor": {
+   "zh": "永恒铠甲",
+   "desc": "Gain 9 Plating."
+  },
+  "evil_eye": {
+   "zh": "邪眼",
+   "desc": "Gain 8 Block. Gain another 8 Block if you have Exhausted a card this turn."
+  },
+  "expect_a_fight": {
+   "zh": "跃跃欲试",
+   "desc": "Gain Energy for each Attack in your Hand. You cannot gain additional Energy this turn. (Gain ? Energy)"
+  },
+  "expertise": {
+   "zh": "独门技术",
+   "desc": "Draw cards until you have 6 in your Hand."
+  },
+  "expose": {
+   "zh": "暴露",
+   "desc": "Remove all Artifact and Block from the enemy. Apply 2 Vulnerable."
+  },
+  "exterminate": {
+   "zh": "杀灭",
+   "desc": "Deal 3 damage to ALL enemies 4 times."
+  },
+  "falling_star": {
+   "zh": "陨星",
+   "desc": "Deal 8 damage. Apply 1 Weak. Apply 1 Vulnerable."
+  },
+  "fan_of_knives": {
+   "zh": "刀扇",
+   "desc": "Shivs now hit ALL enemies. Add 4 Shivs into your Hand."
+  },
+  "fasten": {
+   "zh": "勒紧",
+   "desc": "Gain an additional 4 Block from Defend cards."
+  },
+  "fear": {
+   "zh": "恐惧",
+   "desc": "Deal 7 damage. Apply 1 Vulnerable."
+  },
+  "feed": {
+   "zh": "狂宴",
+   "desc": "Deal 10 damage. If Fatal, raise your Max HP by 3."
+  },
+  "feeding_frenzy": {
+   "zh": "疯狂进食",
+   "desc": "Gain 5 Strength this turn."
+  },
+  "feel_no_pain": {
+   "zh": "无惧疼痛",
+   "desc": "Whenever a card is Exhausted, gain 3 Block."
+  },
+  "feral": {
+   "zh": "野性",
+   "desc": "The first time you play a 0Energy Attack each turn, return it to your Hand."
+  },
+  "fetch": {
+   "zh": "取回",
+   "desc": "Osty deals 3 damage. If this is the first time this card has been played this turn, draw 1 card."
+  },
+  "fiend_fire": {
+   "zh": "恶魔之焰",
+   "desc": "Exhaust your Hand. Deal 7 damage for each card Exhausted."
+  },
+  "fight_me": {
+   "zh": "与我一战！",
+   "desc": "Deal 5 damage twice. Gain 3 Strength. The enemy gains 1 Strength."
+  },
+  "fight_through": {
+   "zh": "强撑",
+   "desc": "Gain 13 Block. Add 2 Wounds into your Discard Pile."
+  },
+  "finesse": {
+   "zh": "妙计",
+   "desc": "Gain 4 Block. Draw 1 card."
+  },
+  "finisher": {
+   "zh": "终结技",
+   "desc": "Deal 6 damage for each Attack already played this turn. (Hits ? times)"
+  },
+  "fisticuffs": {
+   "zh": "拳斗",
+   "desc": "Deal 7 damage. Gain Block equal to damage dealt."
+  },
+  "flak_cannon": {
+   "zh": "散射炮",
+   "desc": "Exhaust ALL your Status cards. Deal 8 damage to a random enemy for each card Exhausted. (Hits ? times)"
+  },
+  "flame_barrier": {
+   "zh": "火焰屏障",
+   "desc": "Gain 12 Block. Whenever you are attacked this turn, deal 4 damage back."
+  },
+  "flanking": {
+   "zh": "夹击",
+   "desc": "The enemy takes double attack damage from other players this turn."
+  },
+  "flash_of_steel": {
+   "zh": "亮剑",
+   "desc": "Deal 5 damage. Draw 1 card."
+  },
+  "flatten": {
+   "zh": "重压",
+   "desc": "Osty deals 12 damage. This card costs 0 Energy if Osty has attacked this turn."
+  },
+  "flechettes": {
+   "zh": "飞镖",
+   "desc": "Deal 5 damage for each Skill in your Hand. (Hits ? times)"
+  },
+  "flick_flack": {
+   "zh": "翻越撑击",
+   "desc": "Deal 6 damage to ALL enemies."
+  },
+  "focused_strike": {
+   "zh": "集中打击",
+   "desc": "Deal 9 damage. Gain 1 Focus this turn."
+  },
+  "folly": {
+   "zh": "愚行",
+   "desc": "Unplayable. Ethereal. Innate. Eternal."
+  },
+  "footwork": {
+   "zh": "灵动步法",
+   "desc": "Gain 2 Dexterity."
+  },
+  "forbidden_grimoire": {
+   "zh": "禁忌魔典",
+   "desc": "At the end of combat, you may remove a card from your Deck."
+  },
+  "foregone_conclusion": {
+   "zh": "既定事项",
+   "desc": "Next turn, put 2 cards from your Draw Pile into your Hand."
+  },
+  "forgotten_ritual": {
+   "zh": "被遗忘的仪式",
+   "desc": "If you Exhausted a card this turn, gain 3 Energy."
+  },
+  "frantic_escape": {
+   "zh": "狂乱逃离",
+   "desc": "Get farther away. Increase Sandpit by 1. Increase the cost of this card by 1."
+  },
+  "friendship": {
+   "zh": "友谊",
+   "desc": "Lose 2 Strength. Gain 1 Energy at the start of each turn."
+  },
+  "ftl": {
+   "zh": "超越光速",
+   "desc": "Deal 5 damage. If you have played fewer than 3 cards this turn, draw 1 card."
+  },
+  "fuel": {
+   "zh": "燃料",
+   "desc": "Gain 1 Energy. Draw 1 card."
+  },
+  "furnace": {
+   "zh": "熔炉",
+   "desc": "At the start of your turn, Forge 5."
+  },
+  "fusion": {
+   "zh": "聚变",
+   "desc": "Channel 1 Plasma."
+  },
+  "gamma_blast": {
+   "zh": "伽马爆破",
+   "desc": "Deal 13 damage. Apply 2 Weak. Apply 2 Vulnerable."
+  },
+  "gang_up": {
+   "zh": "群起攻之",
+   "desc": "Deal ? damage. Deals 5 additional damage for each time another player has attacked the enemy this turn."
+  },
+  "gather_light": {
+   "zh": "收集光辉",
+   "desc": "Gain 8 Block. Gain 1 Star."
+  },
+  "genesis": {
+   "zh": "创世纪",
+   "desc": "At the start of your turn, gain 2 Stars."
+  },
+  "genetic_algorithm": {
+   "zh": "遗传算法",
+   "desc": "Gain 1 Block. Permanently increase this card's Block by 3."
+  },
+  "giant_rock": {
+   "zh": "巨石",
+   "desc": "Deal 16 damage."
+  },
+  "glacier": {
+   "zh": "冰川",
+   "desc": "Gain 6 Block. Channel 2 Frost."
+  },
+  "glasswork": {
+   "zh": "玻璃工艺",
+   "desc": "Gain 5 Block. Channel 1 Glass."
+  },
+  "glimmer": {
+   "zh": "微光",
+   "desc": "Draw 3 cards. Put 1 card from your Hand on top of your Draw Pile."
+  },
+  "glimpse_beyond": {
+   "zh": "彼岸一瞥",
+   "desc": "ALL players add 3 Souls into their Draw Pile."
+  },
+  "glitterstream": {
+   "zh": "流光溢彩",
+   "desc": "Gain 11 Block. Next turn, gain 5 Block."
+  },
+  "glow": {
+   "zh": "辉光",
+   "desc": "Gain 1 Star. Draw 1 card. Next turn, draw 1 card."
+  },
+  "go_for_the_eyes": {
+   "zh": "眼部攻击",
+   "desc": "Deal 3 damage. If the enemy intends to attack, apply 1 Weak."
+  },
+  "gold_axe": {
+   "zh": "金斧",
+   "desc": "Deal damage equal to the number of cards played this combat. (Deals ? damage)"
+  },
+  "grand_finale": {
+   "zh": "华丽收场",
+   "desc": "Can only be played if there are no cards in your Draw Pile. Deal 60 damage to ALL enemies."
+  },
+  "grave_warden": {
+   "zh": "守墓人",
+   "desc": "Gain 8 Block. Add a Soul into your Draw Pile."
+  },
+  "graveblast": {
+   "zh": "坟冢爆射",
+   "desc": "Deal 4 damage. Put a card from your Discard Pile into your Hand."
+  },
+  "greed": {
+   "zh": "贪婪",
+   "desc": "Unplayable. Eternal."
+  },
+  "guards": {
+   "zh": "护驾！！！",
+   "desc": "Transform any number of cards in your Hand into Minion Sacrifice."
+  },
+  "guiding_star": {
+   "zh": "引导之星",
+   "desc": "Deal 12 damage. Draw 2 cards."
+  },
+  "guilty": {
+   "zh": "愧疚",
+   "desc": "Removed from your Deck after 5 combats."
+  },
+  "gunk_up": {
+   "zh": "污秽攻击",
+   "desc": "Deal 4 damage 3 times. Add a Slimed into your Discard Pile."
+  },
+  "hailstorm": {
+   "zh": "冰雹风暴",
+   "desc": "At the end of your turn, if you have Frost, deal 6 damage to ALL enemies."
+  },
+  "hammer_time": {
+   "zh": "锤子时间",
+   "desc": "Whenever you Forge, all allies Forge as well."
+  },
+  "hand_of_greed": {
+   "zh": "贪婪之手",
+   "desc": "Deal 20 damage. If Fatal, gain 20 Gold."
+  },
+  "hand_trick": {
+   "zh": "手上技法",
+   "desc": "Gain 7 Block. Add Sly to a Skill in your Hand this turn."
+  },
+  "hang": {
+   "zh": "吊杀",
+   "desc": "Deal 10 damage. Double the damage ALL Hang cards deal to this enemy."
+  },
+  "haunt": {
+   "zh": "纠缠",
+   "desc": "Whenever you play a Soul, a random enemy loses 6 HP."
+  },
+  "havoc": {
+   "zh": "破灭",
+   "desc": "Play the top card of your Draw Pile and Exhaust it."
+  },
+  "haze": {
+   "zh": "迷雾",
+   "desc": "Apply 4 Poison to ALL enemies."
+  },
+  "headbutt": {
+   "zh": "头槌",
+   "desc": "Deal 9 damage. Put a card from your Discard Pile on top of your Draw Pile."
+  },
+  "heavenly_drill": {
+   "zh": "天际钻头",
+   "desc": "Deal 8 damage X times. Double X if it's 4 or more."
+  },
+  "hegemony": {
+   "zh": "霸权",
+   "desc": "Deal 15 damage. Next turn, gain 2 Energy."
+  },
+  "heirloom_hammer": {
+   "zh": "传承之锤",
+   "desc": "Deal 20 damage. Choose a Colorless card in your Hand. Add a copy of that card into your Hand."
+  },
+  "helix_drill": {
+   "zh": "螺旋钻击",
+   "desc": "Deal 3 damage for each Energy previously spent this turn. (Hits ? times)"
+  },
+  "hello_world": {
+   "zh": "你好世界",
+   "desc": "At the start of your turn, add a random Common card into your Hand."
+  },
+  "hellraiser": {
+   "zh": "地狱狂徒",
+   "desc": "Whenever you draw a card containing “Strike”, it is played against a random enemy."
+  },
+  "hemokinesis": {
+   "zh": "御血术",
+   "desc": "Lose 2 HP. Deal 15 damage."
+  },
+  "hidden_cache": {
+   "zh": "隐秘藏品",
+   "desc": "Gain 1 Star. Next turn, gain 3 Stars."
+  },
+  "hidden_daggers": {
+   "zh": "隐秘匕首",
+   "desc": "Discard 2 cards. Add 2 Shivs into your Hand."
+  },
+  "hidden_gem": {
+   "zh": "未掘宝石",
+   "desc": "A random card without Replay in your Draw Pile gains Replay 2."
+  },
+  "high_five": {
+   "zh": "击掌",
+   "desc": "Osty deals 11 damage and applies 2 Vulnerable to ALL enemies."
+  },
+  "hologram": {
+   "zh": "全息影像",
+   "desc": "Gain 3 Block. Put a card from your Discard Pile into your Hand."
+  },
+  "hotfix": {
+   "zh": "热修复",
+   "desc": "Gain 2 Focus this turn."
+  },
+  "howl_from_beyond": {
+   "zh": "彼岸咆哮",
+   "desc": "Deal 16 damage to ALL enemies. At the end of your turn, if this is in your Exhaust Pile, play it."
+  },
+  "huddle_up": {
+   "zh": "抱团",
+   "desc": "ALL players draw 2 cards."
+  },
+  "hyperbeam": {
+   "zh": "超能光束",
+   "desc": "Deal 28 damage to ALL enemies. Lose 3 Focus."
+  },
+  "i_am_invincible": {
+   "zh": "所向无敌",
+   "desc": "Gain 10 Block. At the end of your turn, if this is on top of your Draw Pile, play it."
+  },
+  "ice_lance": {
+   "zh": "冰之长枪",
+   "desc": "Deal 19 damage. Channel 3 Frost."
+  },
+  "ignition": {
+   "zh": "引火",
+   "desc": "Another player Channels Plasma."
+  },
+  "impatience": {
+   "zh": "急躁",
+   "desc": "If you have no Attacks in your Hand, draw 2 cards."
+  },
+  "impervious": {
+   "zh": "岿然不动",
+   "desc": "Gain 30 Block."
+  },
+  "infection": {
+   "zh": "感染",
+   "desc": "At the end of your turn, if this is in your Hand, take 3 damage."
+  },
+  "infernal_blade": {
+   "zh": "地狱之刃",
+   "desc": "Add a random Attack into your Hand. It's free to play this turn."
+  },
+  "inferno": {
+   "zh": "狱火",
+   "desc": "At the start of your turn, lose 1 HP. Whenever you lose HP on your turn, deal 6 damage to ALL enemies."
+  },
+  "infinite_blades": {
+   "zh": "无尽刀刃",
+   "desc": "At the start of your turn, add 1 Shiv into your Hand."
+  },
+  "inflame": {
+   "zh": "燃烧",
+   "desc": "Gain 2 Strength."
+  },
+  "injury": {
+   "zh": "受伤",
+   "desc": "Unplayable."
+  },
+  "intercept": {
+   "zh": "拦截",
+   "desc": "Gain 9 Block. Redirect all incoming attacks that would be dealt to another player this turn to you."
+  },
+  "invoke": {
+   "zh": "唤起",
+   "desc": "Next turn, Summon 2 and gain 2 Energy."
+  },
+  "iron_wave": {
+   "zh": "铁斩波",
+   "desc": "Gain 5 Block. Deal 5 damage."
+  },
+  "iteration": {
+   "zh": "迭代",
+   "desc": "The first time you draw a Status each turn, draw 2 cards."
+  },
+  "jack_of_all_trades": {
+   "zh": "花样百出",
+   "desc": "Add 1 random Colorless card into your Hand."
+  },
+  "jackpot": {
+   "zh": "大奖",
+   "desc": "Deal 25 damage. Add 3 random 0Energy cards into your Hand."
+  },
+  "juggernaut": {
+   "zh": "势不可当",
+   "desc": "Whenever you gain Block, deal 6 damage to a random enemy."
+  },
+  "juggling": {
+   "zh": "杂耍",
+   "desc": "Add a copy of the third Attack you play each turn into your Hand."
+  },
+  "kingly_kick": {
+   "zh": "王者之踢",
+   "desc": "Deal 27 damage. Whenever you draw this card, reduce its cost by 1."
+  },
+  "kingly_punch": {
+   "zh": "王者之拳",
+   "desc": "Deal 8 damage. Whenever you draw this card, increase its damage by 4 this combat."
+  },
+  "knife_trap": {
+   "zh": "刀刃陷阱",
+   "desc": "Play every Shiv in your Exhaust Pile on the enemy. (Plays ? Shivs)"
+  },
+  "knockdown": {
+   "zh": "击倒",
+   "desc": "Deal 10 damage. The enemy takes double damage from other players this turn."
+  },
+  "knockout_blow": {
+   "zh": "决胜一击",
+   "desc": "Deal 30 damage. If this kills an enemy, gain 5 Stars."
+  },
+  "know_thy_place": {
+   "zh": "何人僭越",
+   "desc": "Apply 1 Weak. Apply 1 Vulnerable."
+  },
+  "lantern_key": {
+   "zh": "灯火钥匙",
+   "desc": "Unlocks a special event in the next Act."
+  },
+  "largesse": {
+   "zh": "慷慨捐助",
+   "desc": "Another player adds 1 random Colorless card to their Hand."
+  },
+  "leading_strike": {
+   "zh": "先制打击",
+   "desc": "Deal 3 damage. Add 2 Shivs into your Hand."
+  },
+  "leap": {
+   "zh": "飞跃",
+   "desc": "Gain 9 Block."
+  },
+  "leg_sweep": {
+   "zh": "扫腿",
+   "desc": "Apply 2 Weak. Gain 11 Block."
+  },
+  "legion_of_bone": {
+   "zh": "骸骨军团",
+   "desc": "ALL players Summon 6."
+  },
+  "lethality": {
+   "zh": "致死性",
+   "desc": "The first Attack each turn deals 50% additional damage."
+  },
+  "lift": {
+   "zh": "托举",
+   "desc": "Give another player 11 Block."
+  },
+  "lightning_rod": {
+   "zh": "引雷针",
+   "desc": "Gain 4 Block. At the start of the next 2, Channel 1 Lightning."
+  },
+  "loop": {
+   "zh": "循环",
+   "desc": "At the start of your turn, trigger the passive ability of your rightmost Orb."
+  },
+  "luminesce": {
+   "zh": "冷光",
+   "desc": "Gain 2 Energy."
+  },
+  "lunar_blast": {
+   "zh": "月面射击",
+   "desc": "Deal 4 damage for each Skill already played this turn. (Hits ? times)"
+  },
+  "machine_learning": {
+   "zh": "机器学习",
+   "desc": "At the start of your turn, draw 1 additional card."
+  },
+  "mad_science": {
+   "zh": "疯狂科学",
+   "desc": "Deal 12 damage (Attack form, possibly 3 times) / Gain 8 Block (Skill form) / Power form effect varies. Also gains a random Rider effect: Sapping: Apply 2 Weak and 2 Vulnerable; Choking: whenever you play a card this turn, the enemy loses 6 HP; Energized: Gain 2 Energy; Wisdom: Draw 3 cards; Chaos: Add a random card into your Hand, free to play this turn; Expertise: Gain 2 Strength and 2 Dexterity; Curious: Powers cost 1 less Energy; Improvement: At the end of combat, Upgrade a random card."
+  },
+  "make_it_so": {
+   "zh": "如此甚好",
+   "desc": "Deal 6 damage. Every 3 Skills you play in a turn, put this into your Hand."
+  },
+  "malaise": {
+   "zh": "萎靡",
+   "desc": "Enemy loses X Strength. Apply X Weak."
+  },
+  "mangle": {
+   "zh": "凌虐",
+   "desc": "Deal 15 damage. Enemy loses 10 Strength this turn."
+  },
+  "manifest_authority": {
+   "zh": "君权自授",
+   "desc": "Gain 7 Block. Add 1 random Colorless card into your Hand."
+  },
+  "master_of_strategy": {
+   "zh": "战略大师",
+   "desc": "Draw 3 cards."
+  },
+  "master_planner": {
+   "zh": "谋划专家",
+   "desc": "When you play a Skill, it gains Sly."
+  },
+  "maul": {
+   "zh": "撕咬",
+   "desc": "Deal 5 damage twice. Increase the damage of ALL Maul cards by 1 this combat."
+  },
+  "mayhem": {
+   "zh": "乱战",
+   "desc": "At the start of your turn, play the top card of your Draw Pile."
+  },
+  "melancholy": {
+   "zh": "忧郁",
+   "desc": "Gain 13 Block. Reduce this card's cost by 1 Energy whenever ANYONE dies."
+  },
+  "memento_mori": {
+   "zh": "铭记死亡",
+   "desc": "Deal ? damage. Deals 4 additional damage for each card discarded this turn."
+  },
+  "metamorphosis": {
+   "zh": "羽化",
+   "desc": "Add 3 random Attacks into your Draw Pile. They're free to play this combat."
+  },
+  "meteor_shower": {
+   "zh": "流星雨",
+   "desc": "Deal 14 damage to ALL enemies. Apply 2 Weak and Vulnerable to ALL enemies."
+  },
+  "meteor_strike": {
+   "zh": "陨石打击",
+   "desc": "Deal 24 damage. Channel 3 Plasma."
+  },
+  "mimic": {
+   "zh": "拟态",
+   "desc": "Gain Block equal to the Block on another player."
+  },
+  "mind_blast": {
+   "zh": "心灵震慑",
+   "desc": "Deal damage equal to the number of cards in your Draw Pile. (Deals ? damage)"
+  },
+  "mind_rot": {
+   "zh": "心灵腐化",
+   "desc": "Draw 1 fewer card each turn."
+  },
+  "minion_dive_bomb": {
+   "zh": null,
+   "desc": "Deal 13 damage."
+  },
+  "minion_sacrifice": {
+   "zh": "仆从捐躯",
+   "desc": "Gain 8 Block."
+  },
+  "minion_strike": {
+   "zh": "仆从打击",
+   "desc": "Deal 6 damage. Draw 1 card."
+  },
+  "mirage": {
+   "zh": "蜃景",
+   "desc": "Gain Block equal to Poison on ALL enemies. (Gain ? Block)"
+  },
+  "misery": {
+   "zh": "苦难",
+   "desc": "Deal 7 damage. Apply any debuffs on the enemy to ALL other enemies."
+  },
+  "modded": {
+   "zh": "模组改造",
+   "desc": "Gain 1 Orb Slot. Draw 1 card. Increase this card's cost by 1."
+  },
+  "molten_fist": {
+   "zh": "熔融之拳",
+   "desc": "Deal 10 damage. Double the enemy's Vulnerable."
+  },
+  "momentum_strike": {
+   "zh": "趁势打击",
+   "desc": "Deal 10 damage. Reduce this card's cost to 0 Energy."
+  },
+  "monarchs_gaze": {
+   "zh": "王之凝视",
+   "desc": "Whenever you attack an enemy, it loses 1 Strength this turn."
+  },
+  "monologue": {
+   "zh": "独白",
+   "desc": "Whenever you play a card this turn, gain 1 Strength this turn."
+  },
+  "multi_cast": {
+   "zh": "多重释放",
+   "desc": "Evoke your rightmost Orb X times."
+  },
+  "murder": {
+   "zh": "谋杀",
+   "desc": "Deal ? damage. Deals 1 additional damage for each card drawn this combat."
+  },
+  "necro_mastery": {
+   "zh": "亡灵精通",
+   "desc": "Summon 5. Whenever Osty loses HP, ALL enemies lose that much HP as well."
+  },
+  "negative_pulse": {
+   "zh": "负能量脉冲",
+   "desc": "Gain 5 Block. Apply 7 Doom to ALL enemies."
+  },
+  "neows_fury": {
+   "zh": "涅奥之怒",
+   "desc": "Deal 10 damage. Put up to 2 cards from your Discard Pile into your Hand."
+  },
+  "neurosurge": {
+   "zh": "精神过载",
+   "desc": "Gain 3 Energy. Draw 2 cards. At the start of your turn, apply 3 Doom to yourself."
+  },
+  "neutralize": {
+   "zh": "中和",
+   "desc": "Deal 3 damage. Apply 1 Weak."
+  },
+  "neutron_aegis": {
+   "zh": "中子护盾",
+   "desc": "Gain 8 Plating."
+  },
+  "nightmare": {
+   "zh": "夜魇",
+   "desc": "Choose a card. Next turn, add 3 copies of that card into your Hand."
+  },
+  "no_escape": {
+   "zh": "无处可逃",
+   "desc": "Apply 10 Doom, plus an additional 5 Doom for every 10 Doom already on this enemy."
+  },
+  "normality": {
+   "zh": "凡庸",
+   "desc": "You cannot play more than 3 cards this turn. (? cards left)"
+  },
+  "nostalgia": {
+   "zh": "怀旧",
+   "desc": "The first Attack or Skill you play each turn is placed on top of your Draw Pile."
+  },
+  "not_yet": {
+   "zh": "时候未到",
+   "desc": "Heal 10 HP."
+  },
+  "noxious_fumes": {
+   "zh": "毒雾",
+   "desc": "At the start of your turn, apply 2 Poison to ALL enemies."
+  },
+  "null": {
+   "zh": "空值",
+   "desc": "Deal 10 damage. Apply 2 Weak. Channel 1 Dark."
+  },
+  "oblivion": {
+   "zh": "湮灭",
+   "desc": "Whenever you play a card this turn, apply 3 Doom to the enemy."
+  },
+  "offering": {
+   "zh": "祭品",
+   "desc": "Lose 6 HP. Gain 2 Energy. Draw 3 cards."
+  },
+  "omnislice": {
+   "zh": "万向斩",
+   "desc": "Deal 8 damage. Damage ALL other enemies equal to the damage dealt."
+  },
+  "one_two_punch": {
+   "zh": "连环拳",
+   "desc": "This turn, your next Attack is played an extra time."
+  },
+  "orbit": {
+   "zh": "环绕轨道",
+   "desc": "Every 4 Energy you spend, gain 1 Energy."
+  },
+  "outbreak": {
+   "zh": "毒性爆发",
+   "desc": "Every 3 times you apply Poison, deal 11 damage to ALL enemies."
+  },
+  "outmaneuver": {
+   "zh": "抢占先机",
+   "desc": "Next turn, gain 2 Energy."
+  },
+  "overclock": {
+   "zh": "超频",
+   "desc": "Draw 2 cards. Add a Burn into your Discard Pile."
+  },
+  "pacts_end": {
+   "zh": "契约终结",
+   "desc": "If you have 3 or more cards in your Exhaust Pile, deal 17 damage to ALL enemies."
+  },
+  "pagestorm": {
+   "zh": "书页风暴",
+   "desc": "Whenever you draw an Ethereal card, draw 1 card."
+  },
+  "pale_blue_dot": {
+   "zh": "暗淡蓝点",
+   "desc": "If you play 5 or more cards in a turn, draw 1 card at the start of your next turn."
+  },
+  "panache": {
+   "zh": "神气制胜",
+   "desc": "Every time you play 5 cards in a single turn, deal 10 damage to ALL enemies."
+  },
+  "panic_button": {
+   "zh": "应急按钮",
+   "desc": "Gain 30 Block. You cannot gain Block from cards for 2 turns."
+  },
+  "parry": {
+   "zh": "招架",
+   "desc": "Sovereign Blade now gains 10 Block."
+  },
+  "parse": {
+   "zh": "领会",
+   "desc": "Draw 3 cards."
+  },
+  "particle_wall": {
+   "zh": "粒子墙",
+   "desc": "Gain 9 Block. Return this card to your Hand."
+  },
+  "patter": {
+   "zh": "星星点点",
+   "desc": "Gain 8 Block. Gain 2 Vigor."
+  },
+  "peck": {
+   "zh": "啄击",
+   "desc": "Deal 2 damage 3 times."
+  },
+  "perfected_strike": {
+   "zh": "完美打击",
+   "desc": "Deal ? damage. Deals 2 additional damage for ALL your cards containing “Strike”."
+  },
+  "phantom_blades": {
+   "zh": "幻影之刃",
+   "desc": "Shivs gain Retain. The first Shiv you play each turn deals 9 additional damage."
+  },
+  "photon_cut": {
+   "zh": "光子切割",
+   "desc": "Deal 10 damage. Draw 1 card. Put 1 card from your Hand on top of your Draw Pile."
+  },
+  "piercing_wail": {
+   "zh": "尖啸",
+   "desc": "ALL enemies lose 6 Strength this turn."
+  },
+  "pillage": {
+   "zh": "劫掠",
+   "desc": "Deal 6 damage. Draw cards until you draw a non-Attack card."
+  },
+  "pillar_of_creation": {
+   "zh": "创世之柱",
+   "desc": "Whenever you create a card, gain 3 Block."
+  },
+  "pinpoint": {
+   "zh": "精密瞄准",
+   "desc": "Deal 15 damage. Costs 1 less Energy for each Skill played this turn."
+  },
+  "poisoned_stab": {
+   "zh": "带毒刺击",
+   "desc": "Deal 6 damage. Apply 3 Poison."
+  },
+  "poke": {
+   "zh": "戳击",
+   "desc": "Osty deals 6 damage."
+  },
+  "pommel_strike": {
+   "zh": "剑柄打击",
+   "desc": "Deal 9 damage. Draw 1 card."
+  },
+  "poor_sleep": {
+   "zh": "睡眠不佳",
+   "desc": "Unplayable. Retain."
+  },
+  "pounce": {
+   "zh": "猛扑",
+   "desc": "Deal 14 damage. The next Skill you play costs 0 Energy."
+  },
+  "precise_cut": {
+   "zh": "精确切击",
+   "desc": "Deal ? damage. Deals 2 less damage for each other card in your Hand."
+  },
+  "predator": {
+   "zh": "猎杀者",
+   "desc": "Deal 15 damage. Next turn, draw 2 cards."
+  },
+  "prep_time": {
+   "zh": "准备时间",
+   "desc": "At the start of your turn, gain 4 Vigor."
+  },
+  "prepared": {
+   "zh": "早有准备",
+   "desc": "Draw 1 card. Discard 1 card."
+  },
+  "primal_force": {
+   "zh": "原始力量",
+   "desc": "Transform all Attacks in your Hand into Giant Rock."
+  },
+  "production": {
+   "zh": "生产制造",
+   "desc": "Gain 2 Energy."
+  },
+  "prolong": {
+   "zh": "延伸",
+   "desc": "Next turn, gain Block equal to your current Block."
+  },
+  "prophesize": {
+   "zh": "预言",
+   "desc": "Draw 6 cards."
+  },
+  "protector": {
+   "zh": "守护者",
+   "desc": "Osty deals ? damage. Deals additional damage equal to Osty's Max HP."
+  },
+  "prowess": {
+   "zh": "非凡技艺",
+   "desc": "Gain 1 Strength. Gain 1 Dexterity."
+  },
+  "pull_aggro": {
+   "zh": "吸引仇恨",
+   "desc": "Summon 4. Gain 7 Block."
+  },
+  "pull_from_below": {
+   "zh": "亡魂牵引",
+   "desc": "Deal 5 damage for each Ethereal card played this combat. (Hits ? times)"
+  },
+  "purity": {
+   "zh": "净化",
+   "desc": "Exhaust up to 3 cards in your Hand."
+  },
+  "putrefy": {
+   "zh": "腐败",
+   "desc": "Apply 2 Weak. Apply 2 Vulnerable."
+  },
+  "pyre": {
+   "zh": "薪火之源",
+   "desc": "Gain 1 Energy at the start of each turn."
+  },
+  "quadcast": {
+   "zh": "四重释放",
+   "desc": "Evoke your rightmost Orb 4 times."
+  },
+  "quasar": {
+   "zh": "类星体",
+   "desc": "Choose 1 of 3 random Colorless cards to add into your Hand."
+  },
+  "radiate": {
+   "zh": "辐射",
+   "desc": "Deal 3 damage to ALL enemies for each 1 Star gained this turn. (Hits ? times)"
+  },
+  "rage": {
+   "zh": "狂怒",
+   "desc": "Whenever you play an Attack this turn, gain 3 Block."
+  },
+  "rainbow": {
+   "zh": "彩虹",
+   "desc": "Channel 1 Lightning. Channel 1 Frost. Channel 1 Dark."
+  },
+  "rally": {
+   "zh": "集结",
+   "desc": "ALL players gain 12 Block."
+  },
+  "rampage": {
+   "zh": "暴走",
+   "desc": "Deal 9 damage. Increase this card's damage by 5 this combat."
+  },
+  "rattle": {
+   "zh": "猛晃",
+   "desc": "Osty deals 7 damage. Hits an additional time for each other time he has attacked this turn. (Hits ? times)"
+  },
+  "reanimate": {
+   "zh": "死者苏生",
+   "desc": "Summon 20."
+  },
+  "reap": {
+   "zh": "收割",
+   "desc": "Deal 27 damage."
+  },
+  "reaper_form": {
+   "zh": "死神形态",
+   "desc": "Whenever Attacks deal damage, apply that much Doom."
+  },
+  "reave": {
+   "zh": "剥夺",
+   "desc": "Deal 9 damage. Add a Soul into your Draw Pile."
+  },
+  "reboot": {
+   "zh": "重启",
+   "desc": "Shuffle ALL your cards into your Draw Pile. Draw 4 cards."
+  },
+  "rebound": {
+   "zh": "弹回",
+   "desc": "Deal 9 damage. Put the next card you play this turn on top of your Draw Pile."
+  },
+  "refine_blade": {
+   "zh": "淬炼刀刃",
+   "desc": "Forge 9. Next turn, gain 1 Energy."
+  },
+  "reflect": {
+   "zh": "倒映",
+   "desc": "Gain 15 Block. Blocked attack damage is reflected to your attacker this turn."
+  },
+  "reflex": {
+   "zh": "本能反应",
+   "desc": "Draw 2 cards."
+  },
+  "refract": {
+   "zh": "折射",
+   "desc": "Deal 9 damage twice. Channel 2 Glass."
+  },
+  "regret": {
+   "zh": "悔恨",
+   "desc": "At the end of your turn, if this is in your Hand, lose 1 HP for each card in your Hand."
+  },
+  "relax": {
+   "zh": "放松",
+   "desc": "Gain 15 Block. Next turn, draw 2 cards and gain 2 Energy."
+  },
+  "rend": {
+   "zh": "撕碎",
+   "desc": "Deal ? damage. Deals 5 additional damage for each unique debuff on the enemy."
+  },
+  "resonance": {
+   "zh": "共鸣",
+   "desc": "Gain 1 Strength. ALL enemies lose 1 Strength."
+  },
+  "restlessness": {
+   "zh": "心神不宁",
+   "desc": "If your Hand is empty, draw 2 cards and gain 2 Energy."
+  },
+  "ricochet": {
+   "zh": "连续反弹",
+   "desc": "Deal 3 damage to a random enemy 4 times."
+  },
+  "right_hand_hand": {
+   "zh": "得力助手",
+   "desc": "Osty deals 4 damage. Whenever you play a card that costs 2 Energy or more, return this to your Hand from the Discard Pile."
+  },
+  "rip_and_tear": {
+   "zh": "狂乱撕扯",
+   "desc": "Deal 7 damage to a random enemy twice."
+  },
+  "rocket_punch": {
+   "zh": "火箭飞拳",
+   "desc": "Deal 13 damage. Draw 1 card. Whenever you create a Status, reduce this card's cost to 0 Energy until played."
+  },
+  "rolling_boulder": {
+   "zh": "滚石",
+   "desc": "At the start of your turn, deal 5 damage to ALL enemies and increase this damage by 5."
+  },
+  "royal_gamble": {
+   "zh": "胜券在王",
+   "desc": "Gain 9 1 Star."
+  },
+  "royalties": {
+   "zh": "王国资产",
+   "desc": "At the end of combat, gain 30 Gold."
+  },
+  "rupture": {
+   "zh": "撕裂",
+   "desc": "Whenever you lose HP on your turn, gain 1 Strength."
+  },
+  "sacrifice": {
+   "zh": "牺牲",
+   "desc": "If Osty is alive, he dies and you gain Block equal to double his Max HP. (Gain 0 Block)"
+  },
+  "salvo": {
+   "zh": "箭雨",
+   "desc": "Deal 12 damage. Retain your Hand this turn."
+  },
+  "scare": {
+   "zh": null,
+   "desc": "Apply 1 Weak to ALL enemies."
+  },
+  "scavenge": {
+   "zh": "内存清理",
+   "desc": "Exhaust a card. Next turn, gain 2 Energy."
+  },
+  "scourge": {
+   "zh": "鞭打",
+   "desc": "Apply 13 Doom. Draw 1 card."
+  },
+  "scrape": {
+   "zh": "刮削",
+   "desc": "Deal 7 damage. Draw 4 cards. Discard all cards drawn this way that do not cost 0 Energy."
+  },
+  "scrawl": {
+   "zh": "潦草急就",
+   "desc": "Draw cards until your Hand is full."
+  },
+  "sculpting_strike": {
+   "zh": "雕琢打击",
+   "desc": "Deal 9 damage. Add Ethereal to a card in your Hand."
+  },
+  "seance": {
+   "zh": "降灵",
+   "desc": "Transform a card in your Draw Pile into Soul."
+  },
+  "second_wind": {
+   "zh": "重振精神",
+   "desc": "Exhaust all non-Attack cards in your Hand. Gain 5 Block for each card Exhausted."
+  },
+  "secret_technique": {
+   "zh": "秘密技法",
+   "desc": "Put a Skill from your Draw Pile into your Hand."
+  },
+  "secret_weapon": {
+   "zh": "秘密武器",
+   "desc": "Put an Attack from your Draw Pile into your Hand."
+  },
+  "seeker_strike": {
+   "zh": "探寻打击",
+   "desc": "Deal 9 damage. Choose 1 of 3 cards in your Draw Pile to add into your Hand."
+  },
+  "seeking_edge": {
+   "zh": "追踪之刃",
+   "desc": "Forge 7. Sovereign Blade now deals damage to ALL enemies."
+  },
+  "sentry_mode": {
+   "zh": "哨卫模式",
+   "desc": "At the start of your turn, add 1 Sweeping Gaze into your Hand."
+  },
+  "serpent_form": {
+   "zh": "群蛇形态",
+   "desc": "Whenever you play a card, deal 4 damage to a random enemy."
+  },
+  "setup_strike": {
+   "zh": "预备打击",
+   "desc": "Deal 7 damage. Gain 2 Strength this turn."
+  },
+  "seven_stars": {
+   "zh": "七星",
+   "desc": "Deal 7 damage to ALL enemies 7 times."
+  },
+  "severance": {
+   "zh": "切断",
+   "desc": "Deal 13 damage. Add a Soul into your Draw Pile, Hand, and Discard Pile."
+  },
+  "shadow_shield": {
+   "zh": "暗影之盾",
+   "desc": "Gain 11 Block. Channel 1 Dark."
+  },
+  "shadow_step": {
+   "zh": "暗影步",
+   "desc": "Discard your Hand. Next turn, Attacks deal double damage."
+  },
+  "shadowmeld": {
+   "zh": "融入暗影",
+   "desc": "Double your Block gain this turn."
+  },
+  "shame": {
+   "zh": "羞耻",
+   "desc": "At the end of your turn, if this is in your Hand, gain 1 Frail."
+  },
+  "shared_fate": {
+   "zh": "命运同担",
+   "desc": "Lose 2 Strength. Enemy loses 2 Strength."
+  },
+  "shatter": {
+   "zh": "打碎",
+   "desc": "Deal 7 damage to ALL enemies. Evoke all of your Orbs twice."
+  },
+  "shining_strike": {
+   "zh": "明耀打击",
+   "desc": "Deal 8 damage. Gain 2 Stars. Put this card on top of your Draw Pile."
+  },
+  "shiv": {
+   "zh": "小刀",
+   "desc": "Deal 4 damage."
+  },
+  "shockwave": {
+   "zh": "震荡波",
+   "desc": "Apply 3 Weak and Vulnerable to ALL enemies."
+  },
+  "shroud": {
+   "zh": "厄运之衣",
+   "desc": "Whenever you apply Doom, gain 2 Block."
+  },
+  "shrug_it_off": {
+   "zh": "耸肩无视",
+   "desc": "Gain 8 Block. Draw 1 card."
+  },
+  "sic_em": {
+   "zh": "紧追不放",
+   "desc": "Osty deals 5 damage. Whenever Osty hits this enemy this turn, Summon 3."
+  },
+  "signal_boost": {
+   "zh": "信号增强",
+   "desc": "The next Power you play is played an additional time."
+  },
+  "skewer": {
+   "zh": "串刺",
+   "desc": "Deal 8 damage X times."
+  },
+  "skim": {
+   "zh": "快速检索",
+   "desc": "Draw 3 cards."
+  },
+  "sleight_of_flesh": {
+   "zh": "血肉戏法",
+   "desc": "Whenever you apply a debuff to an enemy, they take 9 damage."
+  },
+  "slice": {
+   "zh": "切割",
+   "desc": "Deal 6 damage."
+  },
+  "slimed": {
+   "zh": "黏液",
+   "desc": "Draw 1 card."
+  },
+  "sloth": {
+   "zh": "懒惰",
+   "desc": "You cannot play more than 3 cards each turn."
+  },
+  "smokestack": {
+   "zh": "烟囱",
+   "desc": "Whenever you create a Status, deal 5 damage to ALL enemies."
+  },
+  "snakebite": {
+   "zh": "蛇咬",
+   "desc": "Apply 7 Poison."
+  },
+  "snap": {
+   "zh": "响指",
+   "desc": "Osty deals 7 damage. Add Retain to a card in your Hand."
+  },
+  "sneaky": {
+   "zh": "鬼祟",
+   "desc": "Whenever another player attacks an enemy, gain 1 Block."
+  },
+  "solar_strike": {
+   "zh": "太阳打击",
+   "desc": "Deal 9 damage. Gain 1 Star."
+  },
+  "soot": {
+   "zh": "煤灰",
+   "desc": "Unplayable."
+  },
+  "soul": {
+   "zh": "灵魂",
+   "desc": "Draw 2 cards."
+  },
+  "soul_storm": {
+   "zh": "灵魂风暴",
+   "desc": "Deal ? damage. Deals 2 additional damage for each Soul in your Exhaust Pile."
+  },
+  "sovereign_blade": {
+   "zh": "君王之剑",
+   "desc": "Deal 10 damage."
+  },
+  "sow": {
+   "zh": "播种",
+   "desc": "Deal 8 damage to ALL enemies."
+  },
+  "spectrum_shift": {
+   "zh": "光谱偏移",
+   "desc": "At the start of your turn, add 1 random Colorless card into your Hand."
+  },
+  "speedster": {
+   "zh": "速行者",
+   "desc": "Whenever you draw a card during your turn, deal 2 damage to ALL enemies."
+  },
+  "spinner": {
+   "zh": "旋转工艺",
+   "desc": "At the start of your turn, Channel 1 Glass."
+  },
+  "spirit_of_ash": {
+   "zh": "灰烬之灵",
+   "desc": "Whenever you play an Ethereal card, gain 4 Block."
+  },
+  "spite": {
+   "zh": "怨恨",
+   "desc": "Deal 5 damage. If you lost HP this turn, hits 2 times."
+  },
+  "splash": {
+   "zh": "飞溅",
+   "desc": "Choose 1 of 3 random Attacks from another character to add into your Hand. It's free to play this turn."
+  },
+  "spoils_map": {
+   "zh": "藏宝图",
+   "desc": "Marks a site of 600 extra Gold in the next Act."
+  },
+  "spoils_of_battle": {
+   "zh": "战利品",
+   "desc": "Forge 5. Draw 2 cards."
+  },
+  "spore_mind": {
+   "zh": "孢子心灵",
+   "desc": "Exhaust."
+  },
+  "spur": {
+   "zh": "增生",
+   "desc": "Summon 3. Osty heals 5 HP."
+  },
+  "squash": {
+   "zh": "压扁",
+   "desc": "Deal 10 damage. Apply 2 Vulnerable."
+  },
+  "squeeze": {
+   "zh": "榨取",
+   "desc": "Osty deals ? damage. Deals 5 additional damage for ALL your other Osty Attacks."
+  },
+  "stack": {
+   "zh": "堆栈",
+   "desc": "Gain Block equal to the number of cards in your Discard Pile. (Gain ? Block)"
+  },
+  "stampede": {
+   "zh": "惊逃",
+   "desc": "At the end of your turn, 1 random Attack in your Hand is played against a random enemy."
+  },
+  "stardust": {
+   "zh": "星尘",
+   "desc": "Deal 5 damage to a random enemy X times."
+  },
+  "stoke": {
+   "zh": "添柴",
+   "desc": "Exhaust your Hand. Add 1 random card into your Hand for each card Exhausted."
+  },
+  "stomp": {
+   "zh": "踩踏",
+   "desc": "Deal 12 damage to ALL enemies. Costs 1 less Energy for each Attack played this turn."
+  },
+  "stone_armor": {
+   "zh": "岩石铠甲",
+   "desc": "Gain 4 Plating."
+  },
+  "storm": {
+   "zh": "雷暴",
+   "desc": "Whenever you play a Power, Channel 1 Lightning."
+  },
+  "storm_of_steel": {
+   "zh": "钢铁风暴",
+   "desc": "Discard your Hand. Add 1 Shiv into your Hand for each card discarded."
+  },
+  "strangle": {
+   "zh": "紧勒",
+   "desc": "Deal 8 damage. Whenever you play a card this turn, the enemy loses 2 HP."
+  },
+  "stratagem": {
+   "zh": "计策",
+   "desc": "Whenever you shuffle your Draw Pile, choose a card from it to put into your Hand."
+  },
+  "strike_defect": {
+   "zh": "打击",
+   "desc": "Deal 6 damage."
+  },
+  "strike_ironclad": {
+   "zh": "打击",
+   "desc": "Deal 6 damage."
+  },
+  "strike_necrobinder": {
+   "zh": "打击",
+   "desc": "Deal 6 damage."
+  },
+  "strike_regent": {
+   "zh": "打击",
+   "desc": "Deal 6 damage."
+  },
+  "strike_silent": {
+   "zh": "打击",
+   "desc": "Deal 6 damage."
+  },
+  "subroutine": {
+   "zh": "子程序",
+   "desc": "Whenever you play a Power, gain Energy."
+  },
+  "sucker_punch": {
+   "zh": "突然一拳",
+   "desc": "Deal 8 damage. Apply 1 Weak."
+  },
+  "summon_forth": {
+   "zh": "征召上前",
+   "desc": "Put Sovereign Blade into your Hand from anywhere. Forge 8."
+  },
+  "sunder": {
+   "zh": "分离",
+   "desc": "Deal 24 damage. If this kills an enemy, gain 3 Energy."
+  },
+  "supercritical": {
+   "zh": "超临界态",
+   "desc": "Gain 4 Energy."
+  },
+  "supermassive": {
+   "zh": "超质量体",
+   "desc": "Deal ? damage. Deals 3 additional damage for each card you created this combat."
+  },
+  "suppress": {
+   "zh": "压制",
+   "desc": "Deal 11 damage. Apply 3 Weak."
+  },
+  "survivor": {
+   "zh": "生存者",
+   "desc": "Gain 8 Block. Discard 1 card."
+  },
+  "sweeping_beam": {
+   "zh": "扫荡射线",
+   "desc": "Deal 6 damage to ALL enemies. Draw 1 card."
+  },
+  "sweeping_gaze": {
+   "zh": "扫荡凝视",
+   "desc": "Osty deals 10 damage to a random enemy."
+  },
+  "sword_boomerang": {
+   "zh": "飞剑回旋镖",
+   "desc": "Deal 3 damage to a random enemy 3 times."
+  },
+  "sword_sage": {
+   "zh": "剑圣",
+   "desc": "Sovereign Blade gains Replay 1."
+  },
+  "synchronize": {
+   "zh": "同步",
+   "desc": "Gain 2 Focus this turn for each unique Orb you have. (Gain ? Focus)"
+  },
+  "synthesis": {
+   "zh": "人工合成",
+   "desc": "Deal 14 damage. The next Power you play costs 0 Energy."
+  },
+  "tactician": {
+   "zh": "战术大师",
+   "desc": "Gain 1 Energy."
+  },
+  "tag_team": {
+   "zh": "双打组合",
+   "desc": "Deal 11 damage. The next Attack another player plays on the enemy is played an extra time."
+  },
+  "tank": {
+   "zh": "肉盾",
+   "desc": "Take double damage from enemies. Allies take half damage from enemies."
+  },
+  "taunt": {
+   "zh": "挑衅",
+   "desc": "Gain 7 Block. Apply 1 Vulnerable."
+  },
+  "tear_asunder": {
+   "zh": "扯碎",
+   "desc": "Deal 5 damage. Hits an additional time for each time you lost HP this combat. (Hits ? times)"
+  },
+  "tempest": {
+   "zh": "暴风雨",
+   "desc": "Channel X Lightning."
+  },
+  "terraforming": {
+   "zh": "地形改造",
+   "desc": "Gain 6 Vigor."
+  },
+  "tesla_coil": {
+   "zh": "特斯拉线圈",
+   "desc": "Deal 3 damage. Trigger all Lightning against the enemy."
+  },
+  "the_bomb": {
+   "zh": "炸弹",
+   "desc": "At the end of 3 turns, deal 40 damage to ALL enemies."
+  },
+  "the_gambit": {
+   "zh": "孤注一掷",
+   "desc": "Gain 50 Block. If you take unblocked attack damage this combat, die."
+  },
+  "the_hunt": {
+   "zh": "狩猎",
+   "desc": "Deal 10 damage. If Fatal, gain an additional card reward."
+  },
+  "the_scythe": {
+   "zh": "巨镰",
+   "desc": "Deal 13 damage. Permanently increase this card's damage by 4."
+  },
+  "the_sealed_throne": {
+   "zh": "封印王座",
+   "desc": "Whenever you play a card, gain 1 Star."
+  },
+  "the_smith": {
+   "zh": "铸剑者",
+   "desc": "Forge 30."
+  },
+  "thinking_ahead": {
+   "zh": "深谋远虑",
+   "desc": "Draw 2 cards. Put 1 card from your Hand on top of your Draw Pile."
+  },
+  "thrash": {
+   "zh": "痛殴",
+   "desc": "Deal 4 damage twice. Exhaust a random Attack in your Hand and add its damage to this card."
+  },
+  "thrumming_hatchet": {
+   "zh": "无休手斧",
+   "desc": "Deal 11 damage. At the start of your next turn, return this to your Hand."
+  },
+  "thunder": {
+   "zh": "雷霆",
+   "desc": "Whenever you Evoke Lightning, deal 6 damage to each enemy hit."
+  },
+  "thunderclap": {
+   "zh": "闪电霹雳",
+   "desc": "Deal 4 damage and apply 1 Vulnerable to ALL enemies."
+  },
+  "times_up": {
+   "zh": "大限已至",
+   "desc": "Deal damage equal to the enemy's Doom."
+  },
+  "tools_of_the_trade": {
+   "zh": "必备工具",
+   "desc": "At the start of your turn, draw 1 card and discard 1 card."
+  },
+  "toric_toughness": {
+   "zh": "坚韧之环",
+   "desc": "Gain 5 Block. Gain 5 Block at the start of the next 2 turns."
+  },
+  "toxic": {
+   "zh": "毒素",
+   "desc": "At the end of your turn, if this is in your Hand, take 5 damage."
+  },
+  "tracking": {
+   "zh": "跟踪",
+   "desc": "Weak enemies take double damage from Attacks."
+  },
+  "transfigure": {
+   "zh": "重构",
+   "desc": "Add Replay to a card in your Hand. It costs an extra 1 Energy."
+  },
+  "trash_to_treasure": {
+   "zh": "化废为宝",
+   "desc": "Whenever you create a Status, Channel 1 random Orb."
+  },
+  "tremble": {
+   "zh": "战栗",
+   "desc": "Apply 3 Vulnerable."
+  },
+  "true_grit": {
+   "zh": "坚毅",
+   "desc": "Gain 7 Block. Exhaust 1 card at random."
+  },
+  "turbo": {
+   "zh": "内核加速",
+   "desc": "Gain 2 Energy. Add a Void into your Discard Pile."
+  },
+  "twin_strike": {
+   "zh": "双重打击",
+   "desc": "Deal 5 damage twice."
+  },
+  "tyranny": {
+   "zh": "暴政",
+   "desc": "At the start of your turn, draw 1 card and Exhaust 1 card from your Hand."
+  },
+  "ultimate_defend": {
+   "zh": "究极防御",
+   "desc": "Gain 11 Block."
+  },
+  "ultimate_strike": {
+   "zh": "究极打击",
+   "desc": "Deal 14 damage."
+  },
+  "undeath": {
+   "zh": "不死",
+   "desc": "Gain 7 Block. Add a copy of this card into your Discard Pile."
+  },
+  "unleash": {
+   "zh": "出击",
+   "desc": "Osty deals ? damage. Deals additional damage equal to Osty's current HP."
+  },
+  "unmovable": {
+   "zh": "坚定不移",
+   "desc": "The first time you gain Block from a card each turn, double the amount gained."
+  },
+  "unrelenting": {
+   "zh": "无情猛攻",
+   "desc": "Deal 14 damage. The next Attack you play costs 0 Energy."
+  },
+  "untouchable": {
+   "zh": "触不可及",
+   "desc": "Gain 6 Block."
+  },
+  "up_my_sleeve": {
+   "zh": "袖里乾坤",
+   "desc": "Add 3 Shivs into your Hand. Reduce this card's cost by 1."
+  },
+  "uppercut": {
+   "zh": "上勾拳",
+   "desc": "Deal 13 damage. Apply 1 Weak. Apply 1 Vulnerable."
+  },
+  "uproar": {
+   "zh": "骚动",
+   "desc": "Deal 6 damage twice. Play a random Attack from your Draw Pile."
+  },
+  "veilpiercer": {
+   "zh": "刺破帷幕",
+   "desc": "Deal 10 damage. The next Ethereal card you play costs 0 Energy."
+  },
+  "venerate": {
+   "zh": "崇拜",
+   "desc": "Gain 2 Stars."
+  },
+  "vicious": {
+   "zh": "凶恶",
+   "desc": "Whenever you apply Vulnerable, draw 1 card."
+  },
+  "void": {
+   "zh": "虚空",
+   "desc": "Whenever you draw this card, lose 1 Energy."
+  },
+  "void_form": {
+   "zh": "虚空形态",
+   "desc": "End your turn. The first 2 cards you play each turn are free to play."
+  },
+  "volley": {
+   "zh": "连射",
+   "desc": "Deal 10 damage to a random enemy X times."
+  },
+  "voltaic": {
+   "zh": "电流相生",
+   "desc": "Channel Lightning equal to the Lightning already Channeled this combat. (Channel ? Lightning)"
+  },
+  "waste_away": {
+   "zh": "衰朽",
+   "desc": "Gain 1 less Energy per turn."
+  },
+  "well_laid_plans": {
+   "zh": "计划妥当",
+   "desc": "At the end of your turn, Retain up to 1 card."
+  },
+  "whirlwind": {
+   "zh": "旋风斩",
+   "desc": "Deal 5 damage to ALL enemies X times."
+  },
+  "whistle": {
+   "zh": "吹哨",
+   "desc": "Deal 33 damage. Stun the enemy."
+  },
+  "white_noise": {
+   "zh": "白噪声",
+   "desc": "Add a random Power into your Hand. It's free to play this turn."
+  },
+  "wish": {
+   "zh": "许愿",
+   "desc": "Put a card from your Draw Pile into your Hand."
+  },
+  "wisp": {
+   "zh": "鬼火",
+   "desc": "Gain 1 Energy."
+  },
+  "wither": {
+   "zh": "凋萎",
+   "desc": "At the end of your turn, if this is in your Hand, take 3 damage."
+  },
+  "wound": {
+   "zh": "伤口",
+   "desc": "Unplayable."
+  },
+  "wraith_form": {
+   "zh": "幽魂形态",
+   "desc": "Gain 2 Intangible. At the start of your turn, lose 1 Dexterity."
+  },
+  "writhe": {
+   "zh": "苦恼",
+   "desc": "Unplayable. Innate."
+  },
+  "wrought_in_war": {
+   "zh": "战火铸就",
+   "desc": "Deal 7 damage. Forge 7."
+  },
+  "zap": {
+   "zh": "电击",
+   "desc": "Channel 1 Lightning."
+  }
+ },
+ "relics": {
+  "akabeko": {
+   "zh": "赤牛",
+   "desc": "At the start of each combat, gain 8 Vigor."
+  },
+  "alchemical_coffer": {
+   "zh": "炼金箱",
+   "desc": "Upon pickup, gain 4 potion slots filled with random potions."
+  },
+  "amethyst_aubergine": {
+   "zh": "紫水晶茄子",
+   "desc": "Enemies drop 15 additional Gold."
+  },
+  "anchor": {
+   "zh": "锚",
+   "desc": "Start each combat with 10 Block."
+  },
+  "arcane_scroll": {
+   "zh": "奥术卷轴",
+   "desc": "Upon pickup, obtain a random Rare Card to add to your Deck."
+  },
+  "archaic_tooth": {
+   "zh": "古老牙齿",
+   "desc": "Upon pickup, Transform a starter card into an ancient version."
+  },
+  "art_of_war": {
+   "zh": "孙子兵法",
+   "desc": "If you do not play any Attacks during your turn, gain an additional 1 Energy next turn."
+  },
+  "astrolabe": {
+   "zh": "星盘",
+   "desc": "Upon pickup, Transform 3 cards, then Upgrade them."
+  },
+  "bag_of_marbles": {
+   "zh": "弹珠袋",
+   "desc": "At the start of each combat, apply 1 Vulnerable to ALL enemies."
+  },
+  "bag_of_preparation": {
+   "zh": "准备背包",
+   "desc": "At the start of each combat, draw 2 additional cards."
+  },
+  "beating_remnant": {
+   "zh": "律动残余",
+   "desc": "You cannot lose more than 20 HP in a single turn."
+  },
+  "beautiful_bracelet": {
+   "zh": "华美手镯",
+   "desc": "Upon pickup, choose 3 cards in your Deck. Enchant them with Swift 3."
+  },
+  "bellows": {
+   "zh": "风箱",
+   "desc": "The first Hand you draw each combat is Upgraded."
+  },
+  "belt_buckle": {
+   "zh": "腰带扣",
+   "desc": "While you have no potions, you have 2 additional Dexterity."
+  },
+  "big_hat": {
+   "zh": "大帽子",
+   "desc": "At the start of each combat, add 2 random Ethereal cards into your Hand."
+  },
+  "big_mushroom": {
+   "zh": "大蘑菇",
+   "desc": "Upon pickup, raise your Max HP by 20. At the start of each combat, draw 2 fewer cards."
+  },
+  "biiig_hug": {
+   "zh": "大～抱抱",
+   "desc": "Upon pickup, remove 4 cards from your Deck. Whenever you shuffle your Draw Pile, add a Soot into your Draw Pile."
+  },
+  "bing_bong": {
+   "zh": "宾邦",
+   "desc": "Whenever you add a card to your Deck, add one additional copy."
+  },
+  "black_blood": {
+   "zh": "黑暗之血",
+   "desc": "At the end of combat, heal 12 HP."
+  },
+  "black_star": {
+   "zh": "黑星",
+   "desc": "Elites drop an additional Relic when defeated."
+  },
+  "blessed_antler": {
+   "zh": "赐福鹿角",
+   "desc": "Gain 1 Energy at the start of each turn. At the start of each combat, shuffle 3 Dazed into your Draw Pile."
+  },
+  "blood_soaked_rose": {
+   "zh": "血染玫瑰",
+   "desc": "Upon pickup, add 1 Enthralled to your Deck. Gain 1 Energy at the start of each turn."
+  },
+  "blood_vial": {
+   "zh": "小血瓶",
+   "desc": "At the start of each combat, heal 2 HP."
+  },
+  "bone_flute": {
+   "zh": "骨笛",
+   "desc": "Whenever Osty attacks, gain 2 Block."
+  },
+  "bone_tea": {
+   "zh": "骨茶",
+   "desc": "At the start of the next combat, Upgrade your starting hand."
+  },
+  "book_of_five_rings": {
+   "zh": "五轮书",
+   "desc": "Every 5 cards you add to your Deck, heal 20 HP."
+  },
+  "book_repair_knife": {
+   "zh": "修书小刀",
+   "desc": "Whenever a non-Minion enemy dies to Doom, heal 3 HP."
+  },
+  "bookmark": {
+   "zh": "书签",
+   "desc": "At the end of each turn, lower the cost of a random Retained card by 1 until played."
+  },
+  "booming_conch": {
+   "zh": "轰鸣海螺",
+   "desc": "At the start of Elite combats, draw 2 additional cards and gain 1 Energy."
+  },
+  "bound_phylactery": {
+   "zh": "缚魂命匣",
+   "desc": "At the start of your turn, Summon 1."
+  },
+  "bowler_hat": {
+   "zh": "圆顶礼帽",
+   "desc": "Gain 1.25% more% additional Gold."
+  },
+  "bread": {
+   "zh": "面包",
+   "desc": "At the start of your first turn, lose 2 Energy. At the start of all other turns, gain 1 Energy."
+  },
+  "brilliant_scarf": {
+   "zh": "艳丽围巾",
+   "desc": "The 5th card you play from your hand each turn is free."
+  },
+  "brimstone": {
+   "zh": "硫磺",
+   "desc": "At the start of your turn, gain 2 Strength and ALL enemies gain 1 Strength."
+  },
+  "bronze_scales": {
+   "zh": "铜质鳞片",
+   "desc": "Start each combat with 3 Thorns."
+  },
+  "burning_blood": {
+   "zh": "燃烧之血",
+   "desc": "At the end of combat, heal 6 HP."
+  },
+  "burning_sticks": {
+   "zh": "燃烧木棍",
+   "desc": "The first time each combat you Exhaust a Skill, add a copy of it into your Hand."
+  },
+  "byrdpip": {
+   "zh": "异鸟宝宝",
+   "desc": "Upon pickup, gain the card Byrd Swoop. A Byrdpip will accompany you in battles."
+  },
+  "calling_bell": {
+   "zh": "召唤铃铛",
+   "desc": "Upon pickup, obtain a unique Curse and 3 Relics."
+  },
+  "candelabra": {
+   "zh": "烛台",
+   "desc": "At the start of your 2nd turn, gain 2 Energy."
+  },
+  "captains_wheel": {
+   "zh": "舵盘",
+   "desc": "At the start of your 3rd turn, gain 18 Block."
+  },
+  "cauldron": {
+   "zh": "大锅",
+   "desc": "Upon pickup, brews 5 random potions."
+  },
+  "centennial_puzzle": {
+   "zh": "百年积木",
+   "desc": "The first time you lose HP each combat, draw 3 cards."
+  },
+  "chandelier": {
+   "zh": "吊灯",
+   "desc": "At the start of your 3rd turn, gain 3 Energy."
+  },
+  "charons_ashes": {
+   "zh": "卡戎之灰",
+   "desc": "Whenever you Exhaust a card, deal 3 damage to ALL enemies."
+  },
+  "chemical_x": {
+   "zh": "化学物X",
+   "desc": "The effects of your cost X cards are increased by 2."
+  },
+  "choices_paradox": {
+   "zh": "选择悖论",
+   "desc": "At the start of each combat, add 1 of 5 random cards into your Hand. Add Retain to the chosen card."
+  },
+  "chosen_cheese": {
+   "zh": "天选芝士",
+   "desc": "At the end of combat, gain 1 Max HP."
+  },
+  "claws": {
+   "zh": "利爪",
+   "desc": "Upon pickup, Transform up to 6 cards into Maul."
+  },
+  "cloak_clasp": {
+   "zh": "斗篷扣",
+   "desc": "At the end of your turn, gain 1 Block for each card in your Hand."
+  },
+  "cracked_core": {
+   "zh": "破损核心",
+   "desc": "At the start of each combat, Channel 1 Lightning."
+  },
+  "crossbow": {
+   "zh": "十字弓",
+   "desc": "At the start of your turn, add a random Attack into your Hand. It's free to play this turn."
+  },
+  "cursed_pearl": {
+   "zh": "诅咒珍珠",
+   "desc": "Upon pickup, receive Greed. Gain 333 Gold."
+  },
+  "darkstone_periapt": {
+   "zh": "黑石护符",
+   "desc": "Whenever you obtain a Curse, raise your Max HP by 6."
+  },
+  "data_disk": {
+   "zh": "数据磁盘",
+   "desc": "Start each combat with 1 Focus."
+  },
+  "daughter_of_the_wind": {
+   "zh": "风的女儿",
+   "desc": "Whenever you play an Attack, gain 1 Block."
+  },
+  "delicate_frond": {
+   "zh": "娇嫩蕨草",
+   "desc": "At the start of each combat, fill all empty potion slots with random potions."
+  },
+  "demon_tongue": {
+   "zh": "恶魔之舌",
+   "desc": "The first time you lose HP on your turn, heal HP equal to the amount lost."
+  },
+  "diamond_diadem": {
+   "zh": "钻石头冠",
+   "desc": "Whenever you play 2 or fewer cards in a turn, take half damage from enemies."
+  },
+  "dingy_rug": {
+   "zh": "肮脏地毯",
+   "desc": "Card rewards can now contain Colorless cards."
+  },
+  "distinguished_cape": {
+   "zh": "卓越斗篷",
+   "desc": "Upon pickup, lose 9 Max HP. Add 3 Apparitions to your Deck."
+  },
+  "divine_destiny": {
+   "zh": "天命所归",
+   "desc": "At the start of each combat, gain 6 Stars."
+  },
+  "divine_right": {
+   "zh": "天赋君权",
+   "desc": "At the start of each combat, gain 3 Stars."
+  },
+  "dollys_mirror": {
+   "zh": "多利之镜",
+   "desc": "Upon pickup, obtain an additional copy of a card in your Deck."
+  },
+  "dragon_fruit": {
+   "zh": "火龙果",
+   "desc": "Whenever you gain Gold, raise your Max HP by 1."
+  },
+  "dream_catcher": {
+   "zh": "捕梦网",
+   "desc": "Whenever you Rest, you may add a card to your Deck."
+  },
+  "driftwood": {
+   "zh": "浮木",
+   "desc": "You may reroll each card reward once."
+  },
+  "dusty_tome": {
+   "zh": "尘封魔典",
+   "desc": "Upon pickup, obtain an Ancient Card."
+  },
+  "ectoplasm": {
+   "zh": "灵体外质",
+   "desc": "You can no longer gain Gold. Gain 1 Energy at the start of each turn."
+  },
+  "electric_shrymp": {
+   "zh": "放电异虾",
+   "desc": "Upon pickup, Enchant a Skill with Imbued."
+  },
+  "ember_tea": {
+   "zh": "余烬茶",
+   "desc": "At the start of the next 5 combats, gain 2 Strength."
+  },
+  "emotion_chip": {
+   "zh": "情感芯片",
+   "desc": "If you lost HP during the previous turn, trigger the passive ability of all Orbs at the start of your turn."
+  },
+  "empty_cage": {
+   "zh": "空鸟笼",
+   "desc": "Upon pickup, remove 2 cards from your Deck."
+  },
+  "eternal_feather": {
+   "zh": "永恒羽毛",
+   "desc": "For every 5 cards in your Deck, heal 3 HP whenever you enter a Rest Site."
+  },
+  "fake_anchor": {
+   "zh": "锚？？？",
+   "desc": "Start each combat with 4 Block."
+  },
+  "fake_blood_vial": {
+   "zh": "小血瓶？？？",
+   "desc": "At the start of each combat, heal 1 HP."
+  },
+  "fake_happy_flower": {
+   "zh": "开心小花？？？",
+   "desc": "Every 5 turns, gain 1 Energy."
+  },
+  "fake_lees_waffle": {
+   "zh": "李家华夫饼？？？",
+   "desc": "Upon pickup, heal 10% of your HP."
+  },
+  "fake_mango": {
+   "zh": "芒果？？？",
+   "desc": "Upon pickup, raise your Max HP by 3."
+  },
+  "fake_merchants_rug": {
+   "zh": "商人的地毯？？？",
+   "desc": "Poor imitation. Does nothing."
+  },
+  "fake_orichalcum": {
+   "zh": "奥利哈钢？？？",
+   "desc": "If you end your turn without Block, gain 3 Block."
+  },
+  "fake_snecko_eye": {
+   "zh": "异蛇之眼？？？",
+   "desc": "Start each combat Confused."
+  },
+  "fake_strike_dummy": {
+   "zh": "打击木偶？？？",
+   "desc": "Cards containing “Strike” deal 1 additional damage."
+  },
+  "fake_venerable_tea_set": {
+   "zh": "古茶具套装？？？",
+   "desc": "Whenever you enter a Rest Site, start the next combat with an additional 1 Energy."
+  },
+  "fencing_manual": {
+   "zh": "击剑指南",
+   "desc": "At the start of each combat, Forge 10."
+  },
+  "festive_popper": {
+   "zh": "节日拉炮",
+   "desc": "At the start of each combat, deal 9 damage to ALL enemies."
+  },
+  "fiddle": {
+   "zh": "小提琴",
+   "desc": "At the start of each turn, draw 2 additional cards. You may not draw cards during your turn."
+  },
+  "fishing_rod": {
+   "zh": "钓鱼竿",
+   "desc": "Every 3 normal combats, Upgrade a random card in your Deck."
+  },
+  "forgotten_soul": {
+   "zh": "遗忘之魂",
+   "desc": "Whenever you Exhaust a card, deal 1 damage to a random enemy."
+  },
+  "fragrant_mushroom": {
+   "zh": "芳香蘑菇",
+   "desc": "Upon pickup, lose 15 HP and Upgrade 2 random cards."
+  },
+  "fresnel_lens": {
+   "zh": "菲涅耳透镜",
+   "desc": "Whenever you add a card that gains Block to your Deck, Enchant it with Nimble 2."
+  },
+  "frozen_egg": {
+   "zh": "冻结之蛋",
+   "desc": "Whenever you add a Power into your Deck, Upgrade it."
+  },
+  "funerary_mask": {
+   "zh": "葬礼面具",
+   "desc": "At the start of each combat, add 3 Souls into your Draw Pile."
+  },
+  "fur_coat": {
+   "zh": "皮草大衣",
+   "desc": "Upon pickup, mark 7 random combats. Enemies in those rooms have 1 HP."
+  },
+  "galactic_dust": {
+   "zh": "星系尘埃",
+   "desc": "For every 10 1 Star spent, gain 10 Block."
+  },
+  "gambling_chip": {
+   "zh": "赌博筹码",
+   "desc": "At the start of each combat, discard any number of cards then draw that many."
+  },
+  "game_piece": {
+   "zh": "棋子",
+   "desc": "Whenever you play a Power, draw 1 card."
+  },
+  "ghost_seed": {
+   "zh": "幽灵种子",
+   "desc": "Strikes and Defends gain Ethereal."
+  },
+  "girya": {
+   "zh": "壶铃",
+   "desc": "You can now gain Strength at Rest Sites. (3 times max)"
+  },
+  "glass_eye": {
+   "zh": "玻璃眼珠",
+   "desc": "Upon pickup, obtain 2 Common cards, 2 Uncommon cards, and 1 Rare card."
+  },
+  "glitter": {
+   "zh": "亮片",
+   "desc": "Enchant all card rewards with Glam."
+  },
+  "gnarled_hammer": {
+   "zh": "扭曲锤子",
+   "desc": "Upon pickup, Enchant up to 3 Attacks with Sharp 3."
+  },
+  "gold_plated_cables": {
+   "zh": "镀金缆线",
+   "desc": "Your rightmost Orb triggers its passive an additional time."
+  },
+  "golden_compass": {
+   "zh": "黄金罗盘",
+   "desc": "Upon pickup, replace the Act 2 Map with a single special path."
+  },
+  "golden_pearl": {
+   "zh": "金色珍珠",
+   "desc": "Upon pickup, gain 150 Gold."
+  },
+  "gorget": {
+   "zh": "护喉甲",
+   "desc": "At the start of each combat, gain 4 Plating."
+  },
+  "gremlin_horn": {
+   "zh": "地精之角",
+   "desc": "Whenever an enemy dies, gain 1 Energy and draw 1 card."
+  },
+  "hand_drill": {
+   "zh": "手钻",
+   "desc": "Whenever you break an enemy's Block, apply 2 Vulnerable."
+  },
+  "happy_flower": {
+   "zh": "开心小花",
+   "desc": "Every 3 turns, gain 1 Energy."
+  },
+  "hefty_tablet": {
+   "zh": "沉重石板",
+   "desc": "Upon pickup, choose 1 of 3 Rare cards to add to your Deck, and add 1 Injury to your Deck."
+  },
+  "helical_dart": {
+   "zh": "螺线飞镖",
+   "desc": "Whenever you play a Shiv, gain 1 Dexterity this turn."
+  },
+  "history_course": {
+   "zh": "历史课",
+   "desc": "At the start of your turn, play a copy of your last played Attack or Skill."
+  },
+  "horn_cleat": {
+   "zh": "船夹板",
+   "desc": "At the start of your 2nd turn, gain 14 Block."
+  },
+  "ice_cream": {
+   "zh": "冰淇淋",
+   "desc": "Energy is now conserved between turns."
+  },
+  "infused_core": {
+   "zh": "注能核心",
+   "desc": "At the start of each combat, Channel 3 Lightning. Lightning deals 1 additional damage."
+  },
+  "intimidating_helmet": {
+   "zh": "骇人头盔",
+   "desc": "Whenever you play a card that costs 2 Energy or more, gain 4 Block."
+  },
+  "iron_club": {
+   "zh": "铁棒",
+   "desc": "Every 4 cards you play, draw 1 card."
+  },
+  "ivory_tile": {
+   "zh": "象牙麻将牌",
+   "desc": "Whenever you play a card that costs 3 Energy or more, gain 1 Energy."
+  },
+  "jeweled_mask": {
+   "zh": "宝石面具",
+   "desc": "At the start of each combat, put a random Power from your Draw Pile into your Hand. It's free to play this combat."
+  },
+  "jewelry_box": {
+   "zh": "珠宝盒",
+   "desc": "Upon pickup, add 1 Apotheosis to your Deck."
+  },
+  "joss_paper": {
+   "zh": "金纸",
+   "desc": "Every 5 times you Exhaust a card, draw 1 card."
+  },
+  "juzu_bracelet": {
+   "zh": "佛珠手链",
+   "desc": "Regular enemy combats are no longer encountered in ? rooms."
+  },
+  "kaleidoscope": {
+   "zh": "万花筒",
+   "desc": "Upon pickup, obtain 2 card rewards from other characters."
+  },
+  "kifuda": {
+   "zh": "木札",
+   "desc": "Upon pickup, Enchant up to 3 cards with Adroit."
+  },
+  "kunai": {
+   "zh": "苦无",
+   "desc": "Every time you play 3 Attacks in a single turn, gain 1 Dexterity."
+  },
+  "kusarigama": {
+   "zh": "锁镰",
+   "desc": "Every time you play 3 Attacks in a single turn, deal 6 damage to a random enemy."
+  },
+  "lantern": {
+   "zh": "灯笼",
+   "desc": "Start each combat with an additional 1 Energy."
+  },
+  "large_capsule": {
+   "zh": "巨大扭蛋",
+   "desc": "Upon pickup, obtain 2 random Relics. Add an additional Strike and Defend to your Deck."
+  },
+  "lasting_candy": {
+   "zh": "吃不完的糖",
+   "desc": "Every other combat, your card rewards gain an additional Power."
+  },
+  "lava_lamp": {
+   "zh": "熔岩灯",
+   "desc": "At the end of combat, Upgrade all card rewards if you took no damage."
+  },
+  "lava_rock": {
+   "zh": "熔岩石",
+   "desc": "The Act 1 Boss drops 2 Relics."
+  },
+  "lead_paperweight": {
+   "zh": "铅制镇纸",
+   "desc": "Upon pickup, choose 1 of 2 Colorless cards to add to your Deck."
+  },
+  "leafy_poultice": {
+   "zh": "树叶药膏",
+   "desc": "Upon pickup, Transform 1 of your Strikes and 1 of your Defends and lose 12 Max HP."
+  },
+  "lees_waffle": {
+   "zh": "李家华夫饼",
+   "desc": "Upon pickup, raise your Max HP by 7 and heal all of your HP."
+  },
+  "letter_opener": {
+   "zh": "开信刀",
+   "desc": "Every time you play 3 Skills in a single turn, deal 5 damage to ALL enemies."
+  },
+  "lizard_tail": {
+   "zh": "蜥蜴尾巴",
+   "desc": "When your HP would be reduced to 0, heal to 50% of your Max HP instead (works once)."
+  },
+  "looming_fruit": {
+   "zh": "布质果实",
+   "desc": "Upon pickup, raise your Max HP by 31."
+  },
+  "lords_parasol": {
+   "zh": "领主阳伞",
+   "desc": "When you encounter the Merchant, immediately obtain EVERYTHING he sells."
+  },
+  "lost_coffer": {
+   "zh": "失物盒",
+   "desc": "Upon pickup, gain 1 card reward and procure 1 random potion."
+  },
+  "lost_wisp": {
+   "zh": "迷失鬼火",
+   "desc": "Whenever you play a Power, deal 8 damage to ALL enemies."
+  },
+  "lucky_fysh": {
+   "zh": "招财异鱼",
+   "desc": "Whenever you add a card to your Deck, gain 15 Gold."
+  },
+  "lunar_pastry": {
+   "zh": "月亮糕点",
+   "desc": "At the end of your turn, gain 1 Star."
+  },
+  "mango": {
+   "zh": "芒果",
+   "desc": "Upon pickup, raise your Max HP by 14."
+  },
+  "massive_scroll": {
+   "zh": "巨大卷轴",
+   "desc": "Upon pickup, choose 1 of 3 Multiplayer Cards to add to your Deck."
+  },
+  "maw_bank": {
+   "zh": "巨口储蓄罐",
+   "desc": "Whenever you climb a floor, gain 12 Gold. No longer works when you spend any Gold at the shop."
+  },
+  "meal_ticket": {
+   "zh": "餐券",
+   "desc": "Whenever you enter a shop room, heal 15 HP."
+  },
+  "meat_cleaver": {
+   "zh": "切肉刀",
+   "desc": "You may Cook at Rest Sites."
+  },
+  "meat_on_the_bone": {
+   "zh": "带骨肉",
+   "desc": "If your HP is at or below 50% at the end of combat, heal 12 HP."
+  },
+  "membership_card": {
+   "zh": "会员卡",
+   "desc": "50% discount on all products!"
+  },
+  "mercury_hourglass": {
+   "zh": "水银沙漏",
+   "desc": "At the start of your turn, deal 3 damage to ALL enemies."
+  },
+  "metronome": {
+   "zh": "节拍器",
+   "desc": "The first time you Channel 7 Orbs each combat, deal 30 damage to ALL enemies."
+  },
+  "mini_regent": {
+   "zh": "迷你储君",
+   "desc": "The first time you spend 1 Star each turn, gain 1 Strength."
+  },
+  "miniature_cannon": {
+   "zh": "微型大炮",
+   "desc": "Upgraded Attacks deal 3 additional damage."
+  },
+  "miniature_tent": {
+   "zh": "微型帐篷",
+   "desc": "You may choose any number of options at Rest Sites."
+  },
+  "molten_egg": {
+   "zh": "熔火之蛋",
+   "desc": "Whenever you add an Attack card to your Deck, Upgrade it."
+  },
+  "mr_struggles": {
+   "zh": "抱抱先生",
+   "desc": "At the start of your turn, deal damage equal to the turn number to ALL enemies."
+  },
+  "mummified_hand": {
+   "zh": "干瘪之手",
+   "desc": "Whenever you play a Power, a random card in your Hand is free to play that turn."
+  },
+  "music_box": {
+   "zh": "音乐盒",
+   "desc": "Create an Ethereal copy of the first Attack you play each turn."
+  },
+  "mystic_lighter": {
+   "zh": "神秘打火机",
+   "desc": "Enchanted Attacks deal 9 additional damage."
+  },
+  "neows_bones": {
+   "zh": "涅奥骨骰",
+   "desc": "Upon pickup, gain 2 random Neow Relics. Add 1 random Curse to your Deck."
+  },
+  "neows_talisman": {
+   "zh": "涅奥的护符",
+   "desc": "Upon pickup, Upgrade 1 of your Strikes and 1 of your Defends."
+  },
+  "neows_torment": {
+   "zh": "涅奥的苦痛",
+   "desc": "Upon pickup, add 1 Neow's Fury to your Deck."
+  },
+  "new_leaf": {
+   "zh": "新叶",
+   "desc": "Upon pickup, Transform 1 card."
+  },
+  "ninja_scroll": {
+   "zh": "忍术卷轴",
+   "desc": "At the start of each combat, add 3 Shivs into your Hand."
+  },
+  "nunchaku": {
+   "zh": "双截棍",
+   "desc": "Every time you play 10 Attacks, gain 1 Energy."
+  },
+  "nutritious_oyster": {
+   "zh": "营养牡蛎",
+   "desc": "Upon pickup, raise your Max HP by 11."
+  },
+  "nutritious_soup": {
+   "zh": "营养汤",
+   "desc": "Upon pickup, Enchant all Strikes in your Deck with Tezcatara's Ember."
+  },
+  "oddly_smooth_stone": {
+   "zh": "意外光滑的石头",
+   "desc": "Start each combat with 1 Dexterity."
+  },
+  "old_coin": {
+   "zh": "古钱币",
+   "desc": "Upon pickup, gain 300 Gold."
+  },
+  "orange_dough": {
+   "zh": "橙色团块",
+   "desc": "At the start of each combat, add 2 random Colorless cards into your Hand."
+  },
+  "orichalcum": {
+   "zh": "奥利哈钢",
+   "desc": "If you end your turn without Block, gain 6 Block."
+  },
+  "ornamental_fan": {
+   "zh": "精致折扇",
+   "desc": "Every time you play 3 Attacks in a single turn, gain 4 Block."
+  },
+  "orrery": {
+   "zh": "星系仪",
+   "desc": "Upon pickup, gain 5 card rewards."
+  },
+  "paels_blood": {
+   "zh": "佩尔之血",
+   "desc": "At the start of your turn, draw 1 additional card."
+  },
+  "paels_claw": {
+   "zh": "佩尔之爪",
+   "desc": "Upon pickup, Enchant all Defends with ?."
+  },
+  "paels_eye": {
+   "zh": "佩尔之眼",
+   "desc": "The first time each combat you end your turn without playing cards, Exhaust your Hand, and take an extra turn."
+  },
+  "paels_flesh": {
+   "zh": "佩尔之肉",
+   "desc": "Gain an additional 1 Energy at the start of your 3rd turn, and every turn after that."
+  },
+  "paels_growth": {
+   "zh": "佩尔的增生组织",
+   "desc": "Upon pickup, Enchant a card with ?."
+  },
+  "paels_horn": {
+   "zh": "佩尔之角",
+   "desc": "Upon pickup, add 2 Relax to your Deck."
+  },
+  "paels_legion": {
+   "zh": "佩尔的士兵",
+   "desc": "Doubles Block gained from a card, then goes to sleep for 2 turns."
+  },
+  "paels_tears": {
+   "zh": "佩尔之泪",
+   "desc": "If you end your turn with unspent Energy, gain an additional 2 Energy next turn."
+  },
+  "paels_tooth": {
+   "zh": "佩尔之牙",
+   "desc": "Upon pickup, remove 5 cards from your Deck. After each combat, randomly add 1 back Upgraded."
+  },
+  "paels_wing": {
+   "zh": "佩尔之翼",
+   "desc": "You may sacrifice card rewards to Pael. Every 2 sacrifices, obtain a Relic."
+  },
+  "pandoras_box": {
+   "zh": "潘多拉魔盒",
+   "desc": "Transform ALL Strikes and Defends."
+  },
+  "pantograph": {
+   "zh": "缩放仪",
+   "desc": "At the start of each Boss combat, heal 25 HP."
+  },
+  "paper_krane": {
+   "zh": "纸鹤",
+   "desc": "Enemies with Weak deal 40% less damage to you rather than 25%."
+  },
+  "paper_phrog": {
+   "zh": "纸蛙",
+   "desc": "Enemies with Vulnerable take 75% more damage rather than 50%."
+  },
+  "parrying_shield": {
+   "zh": "招架盾",
+   "desc": "If you end a turn with at least 10 Block, deal 6 damage to a random enemy."
+  },
+  "pear": {
+   "zh": "梨子",
+   "desc": "Upon pickup, raise your Max HP by 10."
+  },
+  "pen_nib": {
+   "zh": "钢笔尖",
+   "desc": "Every 10th Attack you play deals double damage."
+  },
+  "pendulum": {
+   "zh": "摆动球",
+   "desc": "Every 3 turns, draw 1 card."
+  },
+  "permafrost": {
+   "zh": "永冻冰晶",
+   "desc": "The first time you play a Power each combat, gain 7 Block."
+  },
+  "petrified_toad": {
+   "zh": "石化蟾蜍",
+   "desc": "At the start of each combat, procure a Potion-Shaped Rock."
+  },
+  "phial_holster": {
+   "zh": "药瓶皮套",
+   "desc": "Upon pickup, gain 1 potion slot and procure 2 random potions."
+  },
+  "philosophers_stone": {
+   "zh": "贤者之石",
+   "desc": "Gain 1 Energy at the start of each turn. ALL enemies start combat with 1 Strength."
+  },
+  "phylactery_unbound": {
+   "zh": "无界命匣",
+   "desc": "At the start of each combat, Summon 5. At the start of your turn, Summon 2."
+  },
+  "planisphere": {
+   "zh": "活动星图",
+   "desc": "Whenever you enter a ? room, heal 5 HP."
+  },
+  "pocketwatch": {
+   "zh": "怀表",
+   "desc": "Whenever you play 3 or fewer cards during your turn, draw 3 additional cards at the start of your next turn."
+  },
+  "pollinous_core": {
+   "zh": "花粉核心",
+   "desc": "Every 4 turns, draw 2 additional cards."
+  },
+  "pomander": {
+   "zh": "橙型香盒",
+   "desc": "Upon pickup, Upgrade a card."
+  },
+  "potion_belt": {
+   "zh": "药水腰带",
+   "desc": "Upon pickup, gain 2 potion slots."
+  },
+  "power_cell": {
+   "zh": "能量电池",
+   "desc": "At the start of each combat, add 2 zero-cost cards from your Draw Pile into your Hand."
+  },
+  "prayer_wheel": {
+   "zh": "转经轮",
+   "desc": "Normal enemies drop an additional card reward."
+  },
+  "precarious_shears": {
+   "zh": "松动羊毛剪",
+   "desc": "Upon pickup, remove 2 cards from your Deck and lose 16 HP."
+  },
+  "precise_scissors": {
+   "zh": "精准剪刀",
+   "desc": "Upon pickup, remove 1 card from your Deck."
+  },
+  "preserved_fog": {
+   "zh": "腌制活雾",
+   "desc": "Upon pickup, remove 3 cards from your Deck. Add Folly to your Deck."
+  },
+  "prismatic_gem": {
+   "zh": "棱彩宝石",
+   "desc": "Gain 1 Energy at the start of each turn. Card rewards now contain cards from other colors."
+  },
+  "pumpkin_candle": {
+   "zh": "南瓜蜡烛",
+   "desc": "Gain 1 Energy at the start of each turn. Extinguishes after 5 combats. Can be Kindled at Rest Sites."
+  },
+  "punch_dagger": {
+   "zh": "拳刃",
+   "desc": "Upon pickup, Enchant an Attack with Momentum 5."
+  },
+  "radiant_pearl": {
+   "zh": "发光珍珠",
+   "desc": "At the start of each combat, add 1 Luminesce into your Hand."
+  },
+  "rainbow_ring": {
+   "zh": "彩虹戒指",
+   "desc": "The first time you play an Attack, Skill, and Power each turn, gain 1 Strength and 1 Dexterity."
+  },
+  "razor_tooth": {
+   "zh": "剃刀牙",
+   "desc": "Every time you play an Attack or Skill, Upgrade it for the remainder of combat."
+  },
+  "red_mask": {
+   "zh": "红面具",
+   "desc": "At the start of each combat, apply 1 Weak to ALL enemies."
+  },
+  "red_skull": {
+   "zh": "红头骨",
+   "desc": "While your HP is at or below 50%, you have 3 additional Strength."
+  },
+  "regal_pillow": {
+   "zh": "皇家枕头",
+   "desc": "Whenever you Rest, heal an additional 15 HP."
+  },
+  "regalite": {
+   "zh": "君王矿石",
+   "desc": "Whenever you create a card, gain 2 Block."
+  },
+  "reptile_trinket": {
+   "zh": "爬行动物饰品",
+   "desc": "Whenever you use a potion, gain 3 Strength this turn."
+  },
+  "ring_of_the_drake": {
+   "zh": "长蛇戒指",
+   "desc": "At the start of your first 3 turns, draw 2 additional cards."
+  },
+  "ring_of_the_snake": {
+   "zh": "蛇之戒指",
+   "desc": "At the start of each combat, draw 2 additional cards."
+  },
+  "ringing_triangle": {
+   "zh": "三角铃鼓",
+   "desc": "Retain your Hand on the first turn of combat."
+  },
+  "ripple_basin": {
+   "zh": "波纹水盆",
+   "desc": "If you did not play any Attacks during your turn, gain 4 Block."
+  },
+  "royal_poison": {
+   "zh": "王室猛毒",
+   "desc": "At the start of each combat, lose 4 HP."
+  },
+  "royal_stamp": {
+   "zh": "王室印章",
+   "desc": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with ?."
+  },
+  "ruined_helmet": {
+   "zh": "损毁头盔",
+   "desc": "The first time you gain Strength each combat, double the amount gained."
+  },
+  "runic_capacitor": {
+   "zh": "符文电容器",
+   "desc": "Start each combat with 3 additional Orb Slots."
+  },
+  "runic_pyramid": {
+   "zh": "符文金字塔",
+   "desc": "At the end of your turn, you no longer discard your Hand."
+  },
+  "sai": {
+   "zh": "钗",
+   "desc": "At the start of your turn, gain 7 Block."
+  },
+  "sand_castle": {
+   "zh": "沙堡",
+   "desc": "Upon pickup, Upgrade 6 random cards."
+  },
+  "screaming_flagon": {
+   "zh": "尖叫酒壶",
+   "desc": "If you end your turn with no cards in your Hand, deal 20 damage to ALL enemies."
+  },
+  "scroll_boxes": {
+   "zh": "卷轴箱",
+   "desc": "Upon pickup, choose 1 of 2 packs of cards to add to your Deck."
+  },
+  "sea_glass": {
+   "zh": "海玻璃",
+   "desc": "See 15 cards from another character. Choose any number of them to add to your Deck."
+  },
+  "seal_of_gold": {
+   "zh": "黄金印",
+   "desc": "At the start of your turn, spend 5 Gold to gain 1 Energy."
+  },
+  "self_forming_clay": {
+   "zh": "自成型黏土",
+   "desc": "Whenever you lose HP in combat, gain 3 Block next turn."
+  },
+  "sere_talon": {
+   "zh": "原初之爪",
+   "desc": "Upon pickup, add 2 random Curses and 3 Wishes to your Deck."
+  },
+  "shovel": {
+   "zh": "铲子",
+   "desc": "You can now dig at Rest Sites to obtain a random Relic."
+  },
+  "shuriken": {
+   "zh": "手里剑",
+   "desc": "Every time you play 3 Attacks in a single turn, gain 1 Strength."
+  },
+  "signet_ring": {
+   "zh": "图章戒指",
+   "desc": "Upon pickup, gain 999 Gold."
+  },
+  "silken_tress": {
+   "zh": "华美发束",
+   "desc": "Upon pickup, lose all Gold. Enchant all cards in the first card reward with Glam."
+  },
+  "silver_crucible": {
+   "zh": "白银熔炉",
+   "desc": "The first 3 card rewards you see are Upgraded. The first Treasure Chest you open is empty."
+  },
+  "sling_of_courage": {
+   "zh": "勇气投石索",
+   "desc": "Start each Elite combat with 2 Strength."
+  },
+  "small_capsule": {
+   "zh": "小型扭蛋",
+   "desc": "Upon pickup, obtain a random Relic."
+  },
+  "snecko_eye": {
+   "zh": "异蛇之眼",
+   "desc": "At the start of your turn, draw 2 additional cards. Start each combat Confused."
+  },
+  "snecko_skull": {
+   "zh": "异蛇头骨",
+   "desc": "Whenever you apply Poison, apply an additional 1 Poison."
+  },
+  "sozu": {
+   "zh": "添水",
+   "desc": "Gain 1 Energy at the start of each turn. You can no longer obtain potions."
+  },
+  "sparkling_rouge": {
+   "zh": "闪亮口红",
+   "desc": "At the start of your 3rd turn, gain 1 Strength and 1 Dexterity."
+  },
+  "spiked_gauntlets": {
+   "zh": "带刺手甲",
+   "desc": "Gain 1 Energy at the start of each turn. Powers cost 1 more Energy."
+  },
+  "stone_calendar": {
+   "zh": "历石",
+   "desc": "At the end of turn 7, deal 52 damage to ALL enemies."
+  },
+  "stone_cracker": {
+   "zh": "碎石钻",
+   "desc": "At the start of each combat, Upgrade 2 random cards in your Draw Pile for the rest of combat."
+  },
+  "stone_humidifier": {
+   "zh": "石炉加湿器",
+   "desc": "Whenever you Rest at a Rest Site, raise your Max HP by 5."
+  },
+  "storybook": {
+   "zh": "故事书",
+   "desc": "Upon pickup, add 1 Brightest Flame to your Deck."
+  },
+  "strawberry": {
+   "zh": "草莓",
+   "desc": "Upon pickup, raise your Max HP by 7."
+  },
+  "strike_dummy": {
+   "zh": "打击木偶",
+   "desc": "Cards containing “Strike” deal 3 additional damage."
+  },
+  "sturdy_clamp": {
+   "zh": "坚固钳子",
+   "desc": "Up to 10 Block persists across turns."
+  },
+  "sword_of_jade": {
+   "zh": "玉之剑",
+   "desc": "Start each combat with 3 Strength."
+  },
+  "sword_of_stone": {
+   "zh": "石之剑",
+   "desc": "Transforms into a powerful Relic after defeating 5 Elites."
+  },
+  "symbiotic_virus": {
+   "zh": "共生病毒",
+   "desc": "At the start of each combat, Channel 1 Dark."
+  },
+  "tanxs_whistle": {
+   "zh": "坦克斯的哨子",
+   "desc": "Upon pickup, add 1 Whistle to your Deck."
+  },
+  "tea_of_discourtesy": {
+   "zh": "无礼之茶",
+   "desc": "At the start of the next combat, shuffle 2 Dazed into your Draw Pile."
+  },
+  "the_abacus": {
+   "zh": "算盘",
+   "desc": "Whenever you shuffle your Draw Pile, gain 6 Block."
+  },
+  "the_boot": {
+   "zh": "发条靴",
+   "desc": "Whenever you would deal 4 or less unblocked attack damage, increase it to 5."
+  },
+  "the_courier": {
+   "zh": "送货员",
+   "desc": "The merchant no longer runs out of cards, relics, or potions and his prices are reduced by 20%."
+  },
+  "throwing_axe": {
+   "zh": "投斧",
+   "desc": "The first card you play each combat is played an extra time."
+  },
+  "tingsha": {
+   "zh": "铜钹",
+   "desc": "Whenever you discard a card during your turn, deal 3 damage to a random enemy for each card discarded."
+  },
+  "tiny_mailbox": {
+   "zh": "小邮箱",
+   "desc": "Whenever you Rest, procure 2 random potions."
+  },
+  "toasty_mittens": {
+   "zh": "烘焙手套",
+   "desc": "At the start of your turn, Exhaust the top card of your Draw Pile and gain 1 Strength."
+  },
+  "toolbox": {
+   "zh": "工具箱",
+   "desc": "At the start of each combat, choose 1 of 3 random Colorless cards and add the chosen card into your Hand."
+  },
+  "touch_of_orobas": {
+   "zh": "欧洛巴斯之触",
+   "desc": "Upon pickup, replace your starter Relic with an Ancient version."
+  },
+  "tough_bandages": {
+   "zh": "结实绷带",
+   "desc": "Whenever you discard a card during your turn, gain 3 Block."
+  },
+  "toxic_egg": {
+   "zh": "毒素之蛋",
+   "desc": "Whenever you add a Skill into your Deck, Upgrade it."
+  },
+  "toy_box": {
+   "zh": "玩具盒",
+   "desc": "Upon pickup, obtain 4 Wax Relics. Every 3 combats, your left-most Wax Relic will melt away."
+  },
+  "tri_boomerang": {
+   "zh": "三刃回旋镖",
+   "desc": "Choose 3 Attacks in your Deck. Enchant them with Instinct."
+  },
+  "tungsten_rod": {
+   "zh": "钨合金棍",
+   "desc": "Whenever you would lose HP, lose 1 less."
+  },
+  "tuning_fork": {
+   "zh": "音叉",
+   "desc": "Every time you play 10 Skills, gain 7 Block."
+  },
+  "twisted_funnel": {
+   "zh": "扭曲漏斗",
+   "desc": "At the start of each combat, apply 4 Poison to ALL enemies."
+  },
+  "unceasing_top": {
+   "zh": "不休陀螺",
+   "desc": "Whenever you have no cards in Hand during your turn, draw a card."
+  },
+  "undying_sigil": {
+   "zh": "不死符文",
+   "desc": "Enemies with at least as much Doom as HP deal 50% less damage."
+  },
+  "unsettling_lamp": {
+   "zh": "不安油灯",
+   "desc": "Each combat, the first time you play a card that Debuffs an enemy, double its effect."
+  },
+  "vajra": {
+   "zh": "金刚杵",
+   "desc": "Start each combat with 1 Strength."
+  },
+  "vambrace": {
+   "zh": "臂甲",
+   "desc": "The first time you gain Block from a card each combat, double the amount gained."
+  },
+  "velvet_choker": {
+   "zh": "天鹅绒颈圈",
+   "desc": "Gain 1 Energy at the start of each turn. You cannot play more than 6 cards per turn."
+  },
+  "venerable_tea_set": {
+   "zh": "古茶具套装",
+   "desc": "Whenever you enter a Rest Site, start the next combat with an additional 2 Energy."
+  },
+  "very_hot_cocoa": {
+   "zh": "烫嘴可可",
+   "desc": "Start each combat with an additional 4 Energy."
+  },
+  "vexing_puzzlebox": {
+   "zh": "烦人机关盒",
+   "desc": "At the start of each combat, add a random card into your Hand. It's free to play this turn."
+  },
+  "vitruvian_minion": {
+   "zh": "维特鲁威仆从",
+   "desc": "Cards containing “Minion” deal double damage and gain double Block."
+  },
+  "war_hammer": {
+   "zh": "战锤",
+   "desc": "Whenever you kill an Elite, Upgrade 4 random cards."
+  },
+  "war_paint": {
+   "zh": "战纹涂料",
+   "desc": "Upon pickup, Upgrade 2 random Skills."
+  },
+  "whetstone": {
+   "zh": "磨刀石",
+   "desc": "Upon pickup, Upgrade 2 random Attacks."
+  },
+  "whispering_earring": {
+   "zh": "低语耳环",
+   "desc": "Gain 1 Energy at the start of each turn. Vakuu plays your first turn for you."
+  },
+  "white_beast_statue": {
+   "zh": "白兽雕像",
+   "desc": "Potions always appear in combat rewards."
+  },
+  "white_star": {
+   "zh": "白星",
+   "desc": "Elites drop an additional Rare card reward."
+  },
+  "wing_charm": {
+   "zh": "羽翼护符",
+   "desc": "A random card in each card reward is Enchanted with Swift 1."
+  },
+  "winged_boots": {
+   "zh": "羽翼之靴",
+   "desc": "You may ignore paths when choosing the next rooms to travel to 3 times."
+  },
+  "wongo_customer_appreciation_badge": {
+   "zh": "旺购客户感恩徽章",
+   "desc": "Does nothing."
+  },
+  "wongos_mystery_ticket": {
+   "zh": "旺购神秘券",
+   "desc": "Receive 3 random Relics after 5 combats."
+  },
+  "yummy_cookie": {
+   "zh": "美味饼干",
+   "desc": "Upon pickup, Upgrade 4 cards."
+  }
+ },
+ "potions": {
+  "ashwater": {
+   "zh": "灰水",
+   "desc": "Exhaust any number of cards in your Hand."
+  },
+  "attack_potion": {
+   "zh": "攻击药水",
+   "desc": "Choose 1 of 3 random Attack cards to add into your Hand. It's free to play this turn."
+  },
+  "beetle_juice": {
+   "zh": "甲虫汁",
+   "desc": "Enemy's attacks deal 30% less damage for the next 4 turns."
+  },
+  "blessing_of_the_forge": {
+   "zh": "熔炉的祝福",
+   "desc": "Upgrade all cards in your Hand for the rest of combat."
+  },
+  "block_potion": {
+   "zh": "格挡药水",
+   "desc": "Gain 12 Block."
+  },
+  "blood_potion": {
+   "zh": "鲜血药水",
+   "desc": "Heal for 20% of your Max HP."
+  },
+  "bone_brew": {
+   "zh": "骨头酿",
+   "desc": "Summon 15."
+  },
+  "bottled_potential": {
+   "zh": "瓶装潜能",
+   "desc": "Shuffle ALL your cards into your Draw Pile. Draw 5 cards."
+  },
+  "clarity": {
+   "zh": "明晰提取物",
+   "desc": "Draw 1 card. At the start of your next 3 turns, draw 1 additional card."
+  },
+  "colorless_potion": {
+   "zh": "无色药水",
+   "desc": "Choose 1 of 3 random Colorless cards to add into your Hand. It's free to play this turn."
+  },
+  "cosmic_concoction": {
+   "zh": "宇宙药剂",
+   "desc": "Add 3 Upgraded Colorless cards into your Hand."
+  },
+  "cunning_potion": {
+   "zh": "狡诈药水",
+   "desc": "Add 3 Upgraded Shivs into your Hand."
+  },
+  "cure_all": {
+   "zh": "痊愈药水",
+   "desc": "Gain 1 Energy. Draw 2 cards."
+  },
+  "dexterity_potion": {
+   "zh": "敏捷药水",
+   "desc": "Gain 2 Dexterity."
+  },
+  "distilled_chaos": {
+   "zh": "精炼混沌",
+   "desc": "Play the top 3 cards of your Draw Pile."
+  },
+  "droplet_of_precognition": {
+   "zh": "预知之滴",
+   "desc": "Choose a card in your Draw Pile and add it into your Hand."
+  },
+  "duplicator": {
+   "zh": "复制药水",
+   "desc": "This turn, your next card is played an extra time."
+  },
+  "energy_potion": {
+   "zh": "能量药水",
+   "desc": "Gain 2 Energy."
+  },
+  "entropic_brew": {
+   "zh": "混沌药水",
+   "desc": "Fill all your empty potion slots with random potions."
+  },
+  "essence_of_darkness": {
+   "zh": "黑暗精华",
+   "desc": "Channel a Dark for each of your Orb Slots."
+  },
+  "explosive_ampoule": {
+   "zh": "爆炸安瓿",
+   "desc": "Deal 10 damage to ALL enemies."
+  },
+  "fairy_in_a_bottle": {
+   "zh": "瓶中精灵",
+   "desc": "When your HP would be reduced to 0, instead this potion is discarded and you heal to 30% of your Max HP."
+  },
+  "fire_potion": {
+   "zh": "火焰药水",
+   "desc": "Deal 20 damage."
+  },
+  "flex_potion": {
+   "zh": "肌肉药水",
+   "desc": "Gain 5 Strength. At the end of your turn, lose 5 Strength."
+  },
+  "focus_potion": {
+   "zh": "集中药水",
+   "desc": "Gain 2 Focus."
+  },
+  "fortifier": {
+   "zh": "固化药水",
+   "desc": "Triple your Block."
+  },
+  "foul_potion": {
+   "zh": "污浊药水",
+   "desc": "Deal 12 damage to ALL players and enemies. Can be thrown at the Merchant for 100 Gold instead."
+  },
+  "fruit_juice": {
+   "zh": "果汁",
+   "desc": "Gain 5 Max HP."
+  },
+  "fysh_oil": {
+   "zh": "异鱼之油",
+   "desc": "Gain 1 Strength and 1 Dexterity."
+  },
+  "gamblers_brew": {
+   "zh": "赌徒特酿",
+   "desc": "Discard any number of cards, then draw that many."
+  },
+  "ghost_in_a_jar": {
+   "zh": "罐装幽灵",
+   "desc": "Gain 1 Intangible."
+  },
+  "gigantification_potion": {
+   "zh": "超巨化药水",
+   "desc": "The next Attack you play deals triple damage."
+  },
+  "glowwater_potion": {
+   "zh": "发光水",
+   "desc": "Exhaust your Hand. Draw 10 cards."
+  },
+  "heart_of_iron": {
+   "zh": "铁心药水",
+   "desc": "Gain 7 Plating."
+  },
+  "kings_courage": {
+   "zh": "王之勇气",
+   "desc": "Forge 15."
+  },
+  "liquid_bronze": {
+   "zh": "流动铜液",
+   "desc": "Gain 3 Thorns."
+  },
+  "liquid_memories": {
+   "zh": "液态记忆",
+   "desc": "Put a card from your Discard Pile into your Hand. It's free to play this turn."
+  },
+  "lucky_tonic": {
+   "zh": "幸运补剂",
+   "desc": "Gain 1 Buffer."
+  },
+  "mazaleths_gift": {
+   "zh": "马萨雷斯的赠礼",
+   "desc": "Gain 1 Ritual."
+  },
+  "orobic_acid": {
+   "zh": "欧洛巴斯之酸",
+   "desc": "Add a random Attack, Skill, and Power into your Hand. They're free to play this turn."
+  },
+  "poison_potion": {
+   "zh": "毒药水",
+   "desc": "Apply 6 Poison."
+  },
+  "pot_of_ghouls": {
+   "zh": "尸鬼瓮",
+   "desc": "Add 2 Souls into your Hand."
+  },
+  "potion_of_binding": {
+   "zh": "缚魂药水",
+   "desc": "Apply 1 Weak and 1 Vulnerable to ALL enemies."
+  },
+  "potion_of_capacity": {
+   "zh": "扩容药水",
+   "desc": "Gain 2 Orb Slots."
+  },
+  "potion_of_doom": {
+   "zh": "灾厄药水",
+   "desc": "Apply 33 Doom."
+  },
+  "potion_shaped_rock": {
+   "zh": "药水形状的石头",
+   "desc": "Deal 15 damage."
+  },
+  "powdered_demise": {
+   "zh": "消亡粉末",
+   "desc": "Enemy loses 9 HP at the end of each of its turns."
+  },
+  "power_potion": {
+   "zh": "能力药水",
+   "desc": "Choose 1 of 3 random Power cards to add into your Hand. It's free to play this turn."
+  },
+  "radiant_tincture": {
+   "zh": "明耀酊剂",
+   "desc": "Gain 1 Energy. Gain an additional Energy at the start of your next 3 turns."
+  },
+  "regen_potion": {
+   "zh": "再生药水",
+   "desc": "Gain 5 Regen."
+  },
+  "shackling_potion": {
+   "zh": "镣铐药水",
+   "desc": "ALL enemies lose 7 Strength this turn."
+  },
+  "ship_in_a_bottle": {
+   "zh": "瓶中船",
+   "desc": "Gain 10 Block. Next turn, gain 10 Block."
+  },
+  "skill_potion": {
+   "zh": "技能药水",
+   "desc": "Choose 1 of 3 random Skill cards to add into your Hand. It's free to play this turn."
+  },
+  "snecko_oil": {
+   "zh": "异蛇之油",
+   "desc": "Draw 7 cards. Randomize the cost of cards in your Hand this turn."
+  },
+  "soldiers_stew": {
+   "zh": "士兵炖汤",
+   "desc": "All cards containing Strike gain 1 Replay this combat."
+  },
+  "speed_potion": {
+   "zh": "速度药水",
+   "desc": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity."
+  },
+  "stable_serum": {
+   "zh": "稳定血清",
+   "desc": "Retain your Hand for 2 turns."
+  },
+  "star_potion": {
+   "zh": "星星药水",
+   "desc": "Gain 3 Stars."
+  },
+  "strength_potion": {
+   "zh": "力量药水",
+   "desc": "Gain 2 Strength."
+  },
+  "swift_potion": {
+   "zh": "迅捷药水",
+   "desc": "Draw 3 cards."
+  },
+  "touch_of_insanity": {
+   "zh": "癫狂之触",
+   "desc": "Choose a card in your Hand. It is free to play this combat."
+  },
+  "vulnerable_potion": {
+   "zh": "易伤药水",
+   "desc": "Apply 3 Vulnerable."
+  },
+  "weak_potion": {
+   "zh": "虚弱药水",
+   "desc": "Apply 3 Weak."
+  }
+ },
+ "enemies": {
+  "assassin_ruby_raider": {
+   "zh": "劫掠者刺客",
+   "desc": null
+  },
+  "axe_ruby_raider": {
+   "zh": "劫掠者斧手",
+   "desc": null
+  },
+  "brute_ruby_raider": {
+   "zh": "劫掠者暴徒",
+   "desc": null
+  },
+  "crossbow_ruby_raider": {
+   "zh": "劫掠者弩手",
+   "desc": null
+  },
+  "cubex_construct": {
+   "zh": "方柱构装体",
+   "desc": null
+  },
+  "eye_with_teeth": {
+   "zh": null,
+   "desc": null
+  },
+  "flyconid": {
+   "zh": "飞蝇菌子",
+   "desc": null
+  },
+  "fogmog": {
+   "zh": "雾菇",
+   "desc": null
+  },
+  "fuzzy_wurm_crawler": {
+   "zh": "毛绒伏地虫",
+   "desc": null
+  },
+  "inklet": {
+   "zh": "墨宝",
+   "desc": null
+  },
+  "leaf_slime_m": {
+   "zh": "树叶史莱姆（中）",
+   "desc": null
+  },
+  "leaf_slime_s": {
+   "zh": "树叶史莱姆（小）",
+   "desc": null
+  },
+  "mawler": {
+   "zh": "蛮兽",
+   "desc": null
+  },
+  "nibbit": {
+   "zh": "小啃兽",
+   "desc": null
+  },
+  "shrinker_beetle": {
+   "zh": "缩小甲虫",
+   "desc": null
+  },
+  "slithering_strangler": {
+   "zh": "蛇行扼杀者",
+   "desc": null
+  },
+  "snapping_jaxfruit": {
+   "zh": "闪光贾克斯果",
+   "desc": null
+  },
+  "tracker_ruby_raider": {
+   "zh": "劫掠者追踪手",
+   "desc": null
+  },
+  "twig_slime_m": {
+   "zh": "树枝史莱姆（中）",
+   "desc": null
+  },
+  "twig_slime_s": {
+   "zh": "树枝史莱姆（小）",
+   "desc": null
+  },
+  "vine_shambler": {
+   "zh": "藤蔓蹒跚者",
+   "desc": null
+  },
+  "bygone_effigy": {
+   "zh": "旧日雕像",
+   "desc": null
+  },
+  "byrdonis": {
+   "zh": "多尼斯异鸟",
+   "desc": null
+  },
+  "phrog_parasite": {
+   "zh": "异蛙寄生虫",
+   "desc": null
+  },
+  "ceremonial_beast": {
+   "zh": "仪式兽",
+   "desc": null
+  },
+  "kin_follower": {
+   "zh": "同族信徒",
+   "desc": null
+  },
+  "kin_priest": {
+   "zh": "同族神官",
+   "desc": null
+  },
+  "parafright": {
+   "zh": "寄生惧魔",
+   "desc": null
+  },
+  "vantom": {
+   "zh": "墨影幻灵",
+   "desc": null
+  },
+  "calcified_cultist": {
+   "zh": "钙化邪教徒",
+   "desc": null
+  },
+  "corpse_slug": {
+   "zh": "噬尸蛞蝓",
+   "desc": null
+  },
+  "damp_cultist": {
+   "zh": "潮湿邪教徒",
+   "desc": null
+  },
+  "fat_gremlin": {
+   "zh": "胖地精",
+   "desc": null
+  },
+  "fossil_stalker": {
+   "zh": "化石追踪者",
+   "desc": null
+  },
+  "gas_bomb": {
+   "zh": "气态炸弹",
+   "desc": null
+  },
+  "gremlin_merc": {
+   "zh": "地精佣兵",
+   "desc": null
+  },
+  "haunted_ship": {
+   "zh": "幽灵船",
+   "desc": null
+  },
+  "living_fog": {
+   "zh": "活雾",
+   "desc": null
+  },
+  "punch_construct": {
+   "zh": "拳击构装体",
+   "desc": null
+  },
+  "seapunk": {
+   "zh": "海洋混混",
+   "desc": null
+  },
+  "sewer_clam": {
+   "zh": "下水道蚌",
+   "desc": null
+  },
+  "sludge_spinner": {
+   "zh": "淤泥旋螺",
+   "desc": null
+  },
+  "sneaky_gremlin": {
+   "zh": "卑鄙地精",
+   "desc": null
+  },
+  "toadpole": {
+   "zh": "蟾蜍蝌蚪",
+   "desc": null
+  },
+  "two_tailed_rat": {
+   "zh": "双尾鼠",
+   "desc": null
+  },
+  "phantasmal_gardener": {
+   "zh": "花园幽灵鳗",
+   "desc": null
+  },
+  "skulking_colony": {
+   "zh": "鬼祟珊瑚群",
+   "desc": null
+  },
+  "terror_eel": {
+   "zh": "骇鳗",
+   "desc": null
+  },
+  "lagavulin_matriarch": {
+   "zh": "乐加维林族母",
+   "desc": null
+  },
+  "soul_fysh": {
+   "zh": "灵魂异鱼",
+   "desc": null
+  },
+  "waterfall_giant": {
+   "zh": "瀑布巨兽",
+   "desc": null
+  },
+  "bowlbug_egg": {
+   "zh": "盛碗虫（卵）",
+   "desc": null
+  },
+  "bowlbug_nectar": {
+   "zh": "盛碗虫（蜜）",
+   "desc": null
+  },
+  "bowlbug_rock": {
+   "zh": "盛碗虫（石）",
+   "desc": null
+  },
+  "bowlbug_silk": {
+   "zh": "盛碗虫（丝）",
+   "desc": null
+  },
+  "chomper": {
+   "zh": "啃咬机",
+   "desc": null
+  },
+  "exoskeleton": {
+   "zh": "外骨骼虫",
+   "desc": null
+  },
+  "hunter_killer": {
+   "zh": "猎人杀手",
+   "desc": null
+  },
+  "louse_progenitor": {
+   "zh": "虱虫之祖",
+   "desc": null
+  },
+  "myte": {
+   "zh": "异螨",
+   "desc": null
+  },
+  "ovicopter": {
+   "zh": "直飞产卵虫",
+   "desc": null
+  },
+  "slumbering_beetle": {
+   "zh": "熟睡甲虫",
+   "desc": null
+  },
+  "spiny_toad": {
+   "zh": "棘刺蟾蜍",
+   "desc": null
+  },
+  "the_obscura": {
+   "zh": "胧光怪",
+   "desc": null
+  },
+  "thieving_hopper": {
+   "zh": "偷窃草蜢",
+   "desc": null
+  },
+  "tough_egg": {
+   "zh": "结实的卵",
+   "desc": null
+  },
+  "tunneler": {
+   "zh": "地道虫",
+   "desc": null
+  },
+  "wriggler": {
+   "zh": "扭动虫",
+   "desc": null
+  },
+  "decimillipede_segment": {
+   "zh": "残杀千足虫",
+   "desc": null
+  },
+  "decimillipede_segment_back": {
+   "zh": null,
+   "desc": null
+  },
+  "decimillipede_segment_front": {
+   "zh": null,
+   "desc": null
+  },
+  "decimillipede_segment_middle": {
+   "zh": null,
+   "desc": null
+  },
+  "entomancer": {
+   "zh": "蜂群术士",
+   "desc": null
+  },
+  "infested_prism": {
+   "zh": "感染棱柱",
+   "desc": null
+  },
+  "crusher": {
+   "zh": "碾碎爪",
+   "desc": null
+  },
+  "knowledge_demon": {
+   "zh": "知识恶魔",
+   "desc": null
+  },
+  "rocket": {
+   "zh": "火箭",
+   "desc": null
+  },
+  "the_insatiable": {
+   "zh": "无厌沙虫",
+   "desc": null
+  },
+  "axebot": {
+   "zh": "巨斧机器人",
+   "desc": null
+  },
+  "devoted_sculptor": {
+   "zh": "虔诚雕刻师",
+   "desc": null
+  },
+  "fabricator": {
+   "zh": "组装师",
+   "desc": null
+  },
+  "frog_knight": {
+   "zh": "青蛙骑士",
+   "desc": null
+  },
+  "globe_head": {
+   "zh": "电球头",
+   "desc": null
+  },
+  "guardbot": {
+   "zh": "守护机器人",
+   "desc": null
+  },
+  "noisebot": {
+   "zh": "噪音机器人",
+   "desc": null
+  },
+  "osty": {
+   "zh": "奥斯提",
+   "desc": null
+  },
+  "owl_magistrate": {
+   "zh": "猫头鹰法官",
+   "desc": null
+  },
+  "scroll_of_biting": {
+   "zh": "咬人卷轴",
+   "desc": null
+  },
+  "slimed_berserker": {
+   "zh": "史莱姆狂战士",
+   "desc": null
+  },
+  "stabbot": {
+   "zh": "戳刺机器人",
+   "desc": null
+  },
+  "the_forgotten": {
+   "zh": "遗忘之物",
+   "desc": null
+  },
+  "the_lost": {
+   "zh": "失落之物",
+   "desc": null
+  },
+  "turret_operator": {
+   "zh": "高塔炮手",
+   "desc": null
+  },
+  "zapbot": {
+   "zh": "电击机器人",
+   "desc": null
+  },
+  "flail_knight": {
+   "zh": "连枷骑士",
+   "desc": null
+  },
+  "magi_knight": {
+   "zh": "魔法骑士",
+   "desc": null
+  },
+  "mecha_knight": {
+   "zh": "机甲骑士",
+   "desc": null
+  },
+  "soul_nexus": {
+   "zh": "灵魂枢纽",
+   "desc": null
+  },
+  "spectral_knight": {
+   "zh": "幽灵骑士",
+   "desc": null
+  },
+  "aeonglass": {
+   "zh": "永世沙漏",
+   "desc": null
+  },
+  "door": {
+   "zh": null,
+   "desc": null
+  },
+  "doormaker": {
+   "zh": "门扉缔造者",
+   "desc": null
+  },
+  "queen": {
+   "zh": "女王",
+   "desc": null
+  },
+  "royal_guard": {
+   "zh": null,
+   "desc": null
+  },
+  "test_subject": {
+   "zh": "实验体",
+   "desc": null
+  },
+  "living_shield": {
+   "zh": "活体盾",
+   "desc": null
+  },
+  "mysterious_knight": {
+   "zh": "神秘骑士",
+   "desc": null
+  },
+  "architect": {
+   "zh": "建筑师",
+   "desc": null
+  },
+  "battle_friend_v1": {
+   "zh": null,
+   "desc": null
+  },
+  "battle_friend_v2": {
+   "zh": null,
+   "desc": null
+  },
+  "battle_friend_v3": {
+   "zh": null,
+   "desc": null
+  },
+  "big_dummy": {
+   "zh": null,
+   "desc": null
+  },
+  "byrdpip": {
+   "zh": "异鸟宝宝",
+   "desc": null
+  },
+  "dense_vegetation_wriggler": {
+   "zh": "扭动虫",
+   "desc": null
+  },
+  "fake_merchant_monster": {
+   "zh": "商人？？？",
+   "desc": null
+  },
+  "paels_legion": {
+   "zh": "佩尔的士兵",
+   "desc": null
+  },
+  "the_adversary_mk_one": {
+   "zh": null,
+   "desc": null
+  },
+  "the_adversary_mk_three": {
+   "zh": null,
+   "desc": null
+  },
+  "the_adversary_mk_two": {
+   "zh": null,
+   "desc": null
+  },
+  "torch_head_amalgam": {
+   "zh": "火炬头聚合体",
+   "desc": null
+  }
+ }
+}

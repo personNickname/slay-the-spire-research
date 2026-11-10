@@ -280,7 +280,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Ethereal. Eternal.",
     "effect_up": null,
     "keywords": [
       "eternal",
@@ -1339,7 +1339,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Ethereal.",
     "effect_up": null,
     "keywords": [
       "ethereal"
@@ -1657,7 +1657,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Eternal.",
     "effect_up": null,
     "keywords": [
       "eternal"
@@ -1766,7 +1766,7 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Ethereal.",
     "effect_up": null,
     "keywords": [
       "ethereal"
@@ -1846,7 +1846,7 @@
     "type": "status",
     "rarity": "status",
     "cost": 1,
-    "effect": null,
+    "effect": "Exhaust.",
     "effect_up": null,
     "keywords": [
       "exhaust"
@@ -2947,7 +2947,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Ethereal. Innate. Eternal.",
     "effect_up": null,
     "keywords": [
       "eternal",
@@ -3334,7 +3334,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Eternal.",
     "effect_up": null,
     "keywords": [
       "eternal"
@@ -3884,7 +3884,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable.",
     "effect_up": null,
     "keywords": [],
     "version": "v0.107.1"
@@ -5241,7 +5241,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Retain.",
     "effect_up": null,
     "keywords": [
       "retain"
@@ -6520,7 +6520,7 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable.",
     "effect_up": null,
     "keywords": [],
     "version": "v0.107.1"
@@ -6698,7 +6698,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": 1,
-    "effect": null,
+    "effect": "Exhaust.",
     "effect_up": null,
     "keywords": [
       "exhaust"
@@ -7944,7 +7944,7 @@
     "type": "status",
     "rarity": "status",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable.",
     "effect_up": null,
     "keywords": [],
     "version": "v0.107.1"
@@ -7970,7 +7970,7 @@
     "type": "curse",
     "rarity": "curse",
     "cost": null,
-    "effect": null,
+    "effect": "Unplayable. Innate.",
     "effect_up": null,
     "keywords": [
       "innate"

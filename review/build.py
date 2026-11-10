@@ -138,7 +138,7 @@ def build_game(game_dir):
 
     # ---- 各实体直读 ----
     for name in sorted(os.listdir(game_dir)):
-        if not name.endswith(".json") or name.startswith(("cards_", "_")):
+        if not name.endswith(".json") or name.startswith(("cards_", "_", "wiki_")):
             continue
         path = os.path.join(game_dir, name)
         data = load(path)
@@ -165,7 +165,8 @@ def build_game(game_dir):
             else:
                 out[key] = normalize_list(data)
 
-    # ---- wiki 描述合并：wiki_descriptions.json 有具体数值文本时替换 ？ 占位 ----
+    # ---- wiki 合并钩子 ----
+    # wiki_descriptions.json（StS1 爬虫）：{实体: {id: {zh: 带数值描述, en}}} → 替换 ？ 占位
     wiki_path = os.path.join(game_dir, "wiki_descriptions.json")
     if os.path.exists(wiki_path):
         wiki = load(wiki_path)
@@ -179,9 +180,27 @@ def build_game(game_dir):
                     zh = info.get("zh")
                     en = info.get("en")
                     if zh and ("？" in it.get("effect", "") or not it.get("effect")):
-                        it["effect"] = zh
+                        it["effect"] = clean_rich(zh)
                     if en:
-                        it["effect_en"] = en
+                        it["effect_en"] = clean_rich(en)
+    # wiki_zh.json（StS2 wiki Cargo 官方本地化）：{cards|relics|potions|enemies: {id: {zh, desc}}}
+    # zh 为游戏文件官方中文名；desc 为英文描述（effect 缺失时回填）
+    wiki_zh_path = os.path.join(game_dir, "wiki_zh.json")
+    if os.path.exists(wiki_zh_path):
+        wiki = load(wiki_zh_path)
+        for entity in ("cards", "relics", "potions", "enemies"):
+            mapping = wiki.get(entity)
+            items = out.get(entity)
+            if not isinstance(mapping, dict) or not isinstance(items, list):
+                continue
+            for it in items:
+                info = mapping.get(it.get("id", ""))
+                if not isinstance(info, dict):
+                    continue
+                if info.get("zh") and not it.get("zh"):
+                    it["zh"] = info["zh"]
+                if info.get("desc") and not it.get("effect"):
+                    it["effect"] = clean_rich(info["desc"])
     return out
 
 
