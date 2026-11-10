@@ -218,7 +218,7 @@ function transformCard(run: RunState, uid: string): void {
   run.deck[i] = makeCard(run, nxt.id);
 }
 
-export function chooseNeow(run: RunState, option: string, cardUid?: string): void {
+export function chooseNeow(run: RunState, option: string, cardUid?: string, cardUid2?: string): void {
   const parts = option.split(":");
   const type = parts[1] ?? option;
   const drawback = parts[2];
@@ -247,7 +247,12 @@ export function chooseNeow(run: RunState, option: string, cardUid?: string): voi
     if (c) upgradeCard(c);
   } else if ((type === "remove" || type === "REMOVE_CARD" || type === "REMOVE_TWO") && cardUid) {
     run.deck = run.deck.filter((x) => x.uid !== cardUid);
+    if (type === "REMOVE_TWO" && cardUid2) run.deck = run.deck.filter((x) => x.uid !== cardUid2);
   } else if (type === "TRANSFORM_CARD" && cardUid) transformCard(run, cardUid);
+  else if ((type === "TRANSFORM_TWO" || type === "TRANSFORM_TWO_CARDS") && cardUid) {
+    transformCard(run, cardUid);
+    if (cardUid2) transformCard(run, cardUid2);
+  }
   else if (type === "THREE_SMALL_POTIONS") {
     for (let i = 0; i < 3; i++) {
       const slot = run.potions.findIndex((p) => p === null);

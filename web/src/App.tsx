@@ -148,6 +148,7 @@ export default function App() {
   const [selected, setSelected] = useState<string | null>(null);
   const [target, setTarget] = useState<string | null>(null);
   const [pickUids, setPickUids] = useState<string[]>([]);
+  const [deckView, setDeckView] = useState(false);
 
   const bump = (next: RunState) => {
     persist(next);
@@ -227,19 +228,47 @@ export default function App() {
         <span>楼层 {run.floor}</span>
         <span>种子 {run.seed}</span>
         <span>Boss {run.boss}</span>
+        <span className="potion-row">
+          {run.potions.map((p, i) => {
+            const def = p ? POTION_BY_ID.get(p.id) : undefined;
+            const tip = p
+              ? `${def?.name.zhs ?? p.id}${def && "description" in def && def.description ? `\n${def.description.zhs}` : ""}\n${run.combat ? "点击使用（对当前选中敌人）" : "仅战斗中可用"}`
+              : "空药水槽";
+            return (
+              <button
+                key={i}
+                className={`potion-slot ${p ? "" : "empty"}`}
+                disabled={!p || !run.combat}
+                title={tip}
+                onClick={() => {
+                  if (!p || !run.combat) return;
+                  usePotion(run, i, run.combat.selectedTargetId);
+                  bump(run);
+                }}
+              >
+                {p ? (def?.name.zhs ?? p.id).slice(0, 2) : ""}
+              </button>
+            );
+          })}
+        </span>
         <span className="relic-row">
-          {run.relics.map((r) => (
-            <img
-              key={r.id}
-              className="relic-icon"
-              src={relicUrl(r.id)}
-              title={RELIC_BY_ID.get(r.id)?.name[run.lang ?? "zhs"] ?? r.id}
-              alt={r.id}
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
-            />
-          ))}
+          {run.relics.map((r) => {
+            const def = RELIC_BY_ID.get(r.id);
+            const tip = `${def?.name.zhs ?? r.id}${def?.description ? `\n${def.description.zhs}` : ""}`;
+            return (
+              <span key={r.id} className="relic-slot" title={tip}>
+                <img
+                  className="relic-icon"
+                  src={relicUrl(r.id)}
+                  alt={r.id}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.visibility = "hidden";
+                  }}
+                />
+                <i>{(def?.name.zhs ?? r.id).slice(0, 2)}</i>
+              </span>
+            );
+          })}
         </span>
         {run.keys && (run.keys.ruby || run.keys.sapphire || run.keys.emerald) && (
           <span className="keys-row" title="尾声钥匙">
@@ -251,6 +280,9 @@ export default function App() {
           </span>
         )}
         <span style={{ marginLeft: "auto" }}>
+          <button className="btn small" onClick={() => setDeckView(true)}>
+            牌组 {run.deck.length}
+          </button>
           <button className="btn small" onClick={() => { run.lang = run.lang === "zhs" ? "eng" : "zhs"; bump(run); }}>
             {run.lang === "zhs" ? "EN" : "中"}
           </button>
@@ -265,6 +297,7 @@ export default function App() {
           </button>
         </span>
       </header>
+      {deckView && <DeckViewModal run={run} onClose={() => setDeckView(false)} />}
       {run.screen === "neow" && <Neow run={run} bump={bump} />}
       {run.screen === "map" && <MapScreen run={run} bump={bump} />}
       {run.screen === "combat" && run.combat && (
@@ -291,8 +324,10 @@ export default function App() {
 
 function Neow({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
   const [opt, setOpt] = useState<string | null>(null);
+  const [first, setFirst] = useState<string | null>(null);
   const lang = run.lang ?? "zhs";
-  const needsPick = (id: string) => /UPGRADE_CARD|REMOVE_CARD|REMOVE_TWO|TRANSFORM_CARD|upgrade|remove/.test(id);
+  const needsPick = (id: string) =>
+    /UPGRADE_CARD|REMOVE_CARD|REMOVE_TWO|TRANSFORM_CARD|TRANSFORM_TWO|upgrade|remove/.test(id);
   return (
     <div className="screen">
       <div className="event-body">
@@ -303,8 +338,10 @@ function Neow({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
             <button
               key={o.id}
               onClick={() => {
-                if (needsPick(o.id)) setOpt(o.id);
-                else {
+                if (needsPick(o.id)) {
+                  setOpt(o.id);
+                  setFirst(null);
+                } else {
                   chooseNeow(run, o.id);
                   bump(run);
                 }
@@ -315,13 +352,26 @@ function Neow({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
           ))}
         </div>
         {opt && (
-          <DeckPick
-            cards={run.deck}
-            onPick={(uid) => {
-              chooseNeow(run, opt, uid);
-              bump(run);
-            }}
-          />
+          <div>
+            <p className="dim">
+              {/REMOVE_TWO|TRANSFORM_TWO/.test(opt.split(":")[1] ?? opt)
+                ? `选择${first ? "第二" : "第一"}张牌`
+                : "选择一张牌"}
+            </p>
+            <DeckPick
+              cards={run.deck.filter((c) => c.uid !== first)}
+              onPick={(uid) => {
+                if (/REMOVE_TWO|TRANSFORM_TWO/.test(opt.split(":")[1] ?? opt) && !first) {
+                  setFirst(uid);
+                  return;
+                }
+                chooseNeow(run, opt, first ?? uid, first ? uid : undefined);
+                setOpt(null);
+                setFirst(null);
+                bump(run);
+              }}
+            />
+          </div>
         )}
       </div>
     </div>
@@ -333,10 +383,51 @@ function MapScreen({ run, bump }: { run: RunState; bump: (r: RunState) => void }
   const reachSet = new Set(reach.map((n) => `${n.x},${n.y}`));
   const here = run.current ? `${run.current.x},${run.current.y}` : "";
   const done = new Set(run.visited.map((v) => `${v.x},${v.y}`));
+  const PITCH_X = 64;
+  const PITCH_Y = 42;
+  const rows = run.map.length;
+  // column-reverse layout: DOM row 0 is the visual top = map row rows-1
+  const centerOf = (x: number, y: number) => ({
+    cx: x * PITCH_X + 18,
+    cy: (rows - 1 - y) * PITCH_Y + 18,
+  });
+  const hereNode = run.current ? run.map[run.current.y]?.[run.current.x] : undefined;
+  const edgeLines: { x1: number; y1: number; x2: number; y2: number; hot: boolean }[] = [];
+  for (const row of run.map) {
+    for (const n of row) {
+      if (!n.room) continue;
+      for (const e of n.edges) {
+        const a = centerOf(n.x, n.y);
+        const b = centerOf(e.x, e.y);
+        edgeLines.push({ x1: a.cx, y1: a.cy, x2: b.cx, y2: b.cy, hot: n === hereNode });
+      }
+    }
+  }
+  const mapW = 7 * PITCH_X - 28;
+  const mapH = rows * PITCH_Y - 6;
   return (
     <div className="screen">
-      <p className="map-legend">M 怪物 · E 精英 · R 休息 · $ 商店 · T 宝箱 · ? 事件 · 金色边框可进入</p>
+      <p className="map-legend">M 怪物 · E 精英 · R 休息 · $ 商店 · T 宝箱 · ? 事件 · 金色连线可走 · 金框可进入</p>
       <div className="map-wrap">
+        <svg
+          className="map-edges"
+          width={mapW}
+          height={mapH}
+          style={{ position: "absolute", top: 12, left: "50%", transform: "translateX(-50%)", pointerEvents: "none" }}
+        >
+          {edgeLines.map((l, i) => (
+            <line
+              key={i}
+              x1={l.x1}
+              y1={l.y1}
+              x2={l.x2}
+              y2={l.y2}
+              stroke={l.hot ? "#d4b46a" : "#6a563e"}
+              strokeWidth={l.hot ? 2.5 : 1.5}
+              opacity={l.hot ? 0.95 : 0.55}
+            />
+          ))}
+        </svg>
         {run.map.map((row, y) => (
           <div className="map-row" key={y}>
             {row.map((n) => {
@@ -649,6 +740,7 @@ function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) 
   const rw = run.rewards!;
   return (
     <div className="screen">
+      <div className="rewards-center">
       <h2>战斗奖励</h2>
       {rw.gold > 0 && (
         <button
@@ -724,6 +816,7 @@ function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) 
           继续
         </button>
       </p>
+      </div>
     </div>
   );
 }
@@ -884,6 +977,42 @@ function EventScreen({ run, bump }: { run: RunState; bump: (r: RunState) => void
             }}
           />
         )}
+      </div>
+    </div>
+  );
+}
+
+function DeckViewModal({ run, onClose }: { run: RunState; onClose: () => void }) {
+  const counts = new Map<string, { name: string; cost: string; type: string; count: number; upgraded: boolean }>();
+  for (const c of run.deck) {
+    const t = formatCardText(run, c);
+    const key = `${c.defId}|${c.upgraded ? 1 : 0}`;
+    const entry = counts.get(key) ?? { name: t.name, cost: t.cost, type: t.type, count: 0, upgraded: !!c.upgraded };
+    entry.count += 1;
+    counts.set(key, entry);
+  }
+  const list = [...counts.values()].sort((a, b) => a.type.localeCompare(b.type) || a.name.localeCompare(b.name, "zh"));
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal deck-view" onClick={(e) => e.stopPropagation()}>
+        <h2>牌组（{run.deck.length} 张）</h2>
+        <div className="deck-view-grid">
+          {list.map((e, i) => (
+            <div key={i} className={`deck-entry ${e.upgraded ? "up" : ""}`}>
+              <span className="cost">{e.cost}</span>
+              <span className="name">
+                {e.name}
+                {e.upgraded ? "+" : ""}
+              </span>
+              <span className="cnt">×{e.count}</span>
+            </div>
+          ))}
+        </div>
+        <p style={{ textAlign: "center" }}>
+          <button className="btn" onClick={onClose}>
+            关闭
+          </button>
+        </p>
       </div>
     </div>
   );

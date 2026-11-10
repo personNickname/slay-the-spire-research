@@ -8,7 +8,7 @@ import {
   playCard,
   startCombat,
 } from "../src/combat.js";
-import { finishCombat, newRun, restRecall, takeSapphireKey } from "../src/run.js";
+import { chooseNeow, finishCombat, newRun, restRecall, takeSapphireKey } from "../src/run.js";
 import { pickMove, takeTurn } from "../src/monsters.js";
 import { generateMap, startingNodes } from "../src/map.js";
 import { CHARACTERS } from "../src/characters.js";
@@ -159,6 +159,27 @@ describe("map + neow", () => {
     const run = newRun(99);
     expect(run.event?.options).toHaveLength(4);
     expect(run.event?.options[3]?.id).toContain("BOSS_RELIC");
+  });
+});
+
+describe("neow two-card options", () => {
+  it("TRANSFORM_TWO_CARDS transforms both picked cards", () => {
+    const run = newRun(1);
+    const opt = run.event!.options.find((o) => o.id.includes("TRANSFORM_TWO_CARDS"));
+    expect(opt).toBeDefined();
+    const [a, b] = run.deck.map((c) => c.uid);
+    chooseNeow(run, opt!.id, a, b);
+    expect(run.deck.some((c) => c.uid === a || c.uid === b)).toBe(false);
+    expect(run.deck).toHaveLength(10);
+    expect(run.screen).toBe("map");
+  });
+
+  it("REMOVE_TWO removes both picked cards", () => {
+    const run = newRun(1);
+    const [a, b] = run.deck.map((c) => c.uid);
+    chooseNeow(run, "2:REMOVE_TWO", a, b);
+    expect(run.deck).toHaveLength(8);
+    expect(run.deck.some((c) => c.uid === a || c.uid === b)).toBe(false);
   });
 });
 
