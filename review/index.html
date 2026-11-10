@@ -678,6 +678,9 @@
     achievements: { games: ['sts1'], label: '成就', filters: ['category'], cols: [ ['category', '分类'], ['name', '成就'], ['description', '条件'] ] },
     score:     { games: ['sts1'], label: '分数', cols: [ ['name', '计分项'], ['condition', '条件'], ['value', '分值'] ] },
     ancients:  { games: ['sts2'], label: '古代', filters: ['act'], cols: [ ['act', '幕'], ['name', '古代'], ['epithet', '称号'], ['selection_note', '选择规则'] ], expand: 'blessings' },
+    keywords: { games: ['sts1'], label: '关键词', cols: [ ['name', '关键词'], ['effect', '说明'] ] },
+    powers:   { games: ['sts1'], label: '能力', filters: ['kind'], cols: [ ['name', '能力'], ['kind', '类型'], ['effect', '效果'] ] },
+    monsters: { games: ['sts1'], label: '怪物数据', filters: ['act', 'kind'], cols: [ ['act', '幕'], ['tier', '层级'], ['name', '怪物'], ['hp', 'HP'] ], expand: 'moves' },
     enchantments: { games: ['sts2'], label: '附魔', cols: [ ['name', '附魔'], ['effect', '效果'] ] },
     map_config: { games: ['sts2'], label: '地图配置', cols: [ ['key', '项'], ['value', '值'] ] }
   };
@@ -733,7 +736,6 @@
       sel.innerHTML = '<option value="">' + all + '</option>' + opts.map(o => '<option value="' + o + '">' + (f === 'act' && typeof o === 'string' ? o : zhOf(f, o)) + (f === 'act' && typeof o === 'number' ? ' 幕' : '') + '</option>').join('');
       sel.addEventListener('change', () => { dbFilters[f] = sel.value || null; renderTable(); });
       if (dbFilters[f]) sel.value = dbFilters[f];
-      wrap.appendChild(sel);
     });
   }
 
@@ -768,7 +770,7 @@
         let v = '';
         if (k === 'name') v = '<span class="cellname">' + itemName(it) + '<span class="en">' + (it.en || '') + '</span></span>';
         else if (k === 'rarity') v = '<span class="pill-r r-' + it.rarity + '">' + zhOf('rarity', it.rarity) + '</span>';
-        else if (k === 'tier') v = '<span class="pill-r">' + zhOf('tier', it.tier) + '</span>';
+        else if (k === 'tier') v = '<span class="pill-r">' + (zhOf('tier', it.tier) || fmtVal(it.tier)) + '</span>';
         else if (k === 'character') v = zhOf('character', it.character);
         else if (k === 'type') v = zhOf('type', it.type);
         else if (k === 'group') v = zhOf('group', it.group) || it.group;
