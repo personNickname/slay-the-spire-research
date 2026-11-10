@@ -104,6 +104,7 @@ export function newRun(
     uidSeq: 0,
     neowLament: 0,
     actBosses: [],
+    keys: { ruby: false, sapphire: false, emerald: false },
   };
   run.deck = ch.deck.map((id) => makeCard(run, id));
   if (ascension >= 10) run.deck.push(makeCard(run, "AscendersBane"));
@@ -357,6 +358,22 @@ export function finishCombat(run: RunState): void {
   }
   const elite = run.roomKind === "elite";
   const boss = run.roomKind === "boss";
+  // Emerald Key: first elite victory after holding any other key
+  if (elite && run.keys && !run.keys.emerald && (run.keys.ruby || run.keys.sapphire)) {
+    run.keys.emerald = true;
+    log(run, "获得绿宝石钥匙", "Obtained the Emerald Key");
+  }
+  // Act 3/4 bosses give no rewards (wiki/Map_Locations); keys gate the Ending
+  if (boss && run.act >= 3) {
+    run.combat = undefined;
+    if (run.act === 3 && run.keys?.ruby && run.keys.sapphire && run.keys.emerald) {
+      advanceAct(run);
+      return;
+    }
+    run.over = "victory";
+    run.screen = "gameover";
+    return;
+  }
   const tr = R(run, "treasure");
   const gold = boss ? tr.randomRange(95, 105) : elite ? tr.randomRange(25, 35) : tr.randomRange(10, 20);
   save(run, "treasure", tr);
@@ -374,11 +391,6 @@ export function finishCombat(run: RunState): void {
   run.combat = undefined;
   if (boss) {
     run.gold += gold;
-    if (run.act >= 3) {
-      run.over = "victory";
-      run.screen = "gameover";
-      return;
-    }
     advanceAct(run);
     return;
   }
@@ -477,6 +489,27 @@ export function restHeal(run: RunState): void {
 export function restSmith(run: RunState, uid: string): void {
   const c = run.deck.find((x) => x.uid === uid);
   if (c) upgradeCard(c);
+  run.screen = "map";
+}
+
+/** Ruby Key: the "Recall" option at rest sites (wiki/The_Ending). */
+export function restRecall(run: RunState): void {
+  if (!run.keys) run.keys = { ruby: false, sapphire: false, emerald: false };
+  if (!run.keys.ruby) {
+    run.keys.ruby = true;
+    log(run, "回忆起了红宝石钥匙", "Recalled the Ruby Key");
+  }
+  run.screen = "map";
+}
+
+/** Sapphire Key: swap a chest's relic for the key (wiki/The_Ending). */
+export function takeSapphireKey(run: RunState): void {
+  if (!run.keys) run.keys = { ruby: false, sapphire: false, emerald: false };
+  if (!run.keys.sapphire) {
+    run.keys.sapphire = true;
+    log(run, "用宝箱换取了蓝宝石钥匙", "Traded the chest for the Sapphire Key");
+  }
+  run.rewards = undefined;
   run.screen = "map";
 }
 

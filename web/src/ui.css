@@ -142,3 +142,15 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 .orb.plasma { background: #e8e8f0; color: #1a120c; }
 .orb.empty { background: transparent; border: 1px dashed #666; color: #666; }
 .stance { color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* 尾声钥匙（顶栏） */
+.keys-row { display: inline-flex; gap: 4px; align-items: center; }
+.keys-row i {
+  font-style: normal; font-weight: 700; font-size: 12px;
+  padding: 0 7px; border-radius: 9px; border: 1px solid var(--border, #e3e8ef);
+}
+.keys-row i.on { color: #fff; }
+.keys-row i.off { opacity: 0.3; color: inherit; }
+.keys-row i.key-ruby.on { background: #d64545; border-color: #d64545; }
+.keys-row i.key-emerald.on { background: #2e9e5b; border-color: #2e9e5b; }
+.keys-row i.key-sapphire.on { background: #2b7fd4; border-color: #2b7fd4; }

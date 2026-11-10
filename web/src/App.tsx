@@ -26,6 +26,7 @@ import {
   reachableFrom,
   resolvePending,
   restHeal,
+  restRecall,
   restSmith,
   saveRun,
   selectCombatTarget,
@@ -35,6 +36,7 @@ import {
   takeRewardGold,
   takeRewardPotion,
   takeRewardRelic,
+  takeSapphireKey,
   type CardInst,
   type CharacterId,
   type Creature,
@@ -239,6 +241,15 @@ export default function App() {
             />
           ))}
         </span>
+        {run.keys && (run.keys.ruby || run.keys.sapphire || run.keys.emerald) && (
+          <span className="keys-row" title="尾声钥匙">
+            {(["ruby", "emerald", "sapphire"] as const).map((k) => (
+              <i key={k} className={`key-${k} ${run.keys![k] ? "on" : "off"}`}>
+                {k === "ruby" ? "红" : k === "emerald" ? "绿" : "蓝"}
+              </i>
+            ))}
+          </span>
+        )}
         <span style={{ marginLeft: "auto" }}>
           <button className="btn small" onClick={() => { run.lang = run.lang === "zhs" ? "eng" : "zhs"; bump(run); }}>
             {run.lang === "zhs" ? "EN" : "中"}
@@ -733,6 +744,16 @@ function Rest({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
           休息（回复 30% 最大生命）
         </button>
         <button onClick={() => setSmith(true)}>锻造（升级一张牌）</button>
+        {!run.keys?.ruby && (
+          <button
+            onClick={() => {
+              restRecall(run);
+              bump(run);
+            }}
+          >
+            回忆（获得红宝石钥匙）
+          </button>
+        )}
       </div>
       {smith && (
         <DeckPick
@@ -816,6 +837,17 @@ function Treasure({ run, bump }: { run: RunState; bump: (r: RunState) => void })
       >
         拿走
       </button>
+      {!run.keys?.sapphire && (
+        <button
+          className="btn small"
+          onClick={() => {
+            takeSapphireKey(run);
+            bump(run);
+          }}
+        >
+          换成蓝宝石钥匙（放弃遗物）
+        </button>
+      )}
     </div>
   );
 }
@@ -860,9 +892,9 @@ function EventScreen({ run, bump }: { run: RunState; bump: (r: RunState) => void
 function Over({ run, onAgain }: { run: RunState; onAgain: () => void }) {
   return (
     <div className="title-screen">
-      <h1>{run.over === "victory" ? "胜利" : "阵亡"}</h1>
+      <h1>{run.over === "victory" ? (run.act >= 4 ? "真结局" : "胜利") : "阵亡"}</h1>
       <p>
-        种子 {run.seed} · 楼层 {run.floor} · {run.over === "victory" ? `击败了 ${run.boss}` : `${CHARACTERS[run.character]?.name.zhs ?? ""}倒下了`}
+        种子 {run.seed} · 楼层 {run.floor} · {run.over === "victory" ? `击败了 ${run.act >= 4 ? "腐化之心" : run.boss}` : `${CHARACTERS[run.character]?.name.zhs ?? ""}倒下了`}
       </p>
       <button className="btn" onClick={onAgain}>
         再来一局

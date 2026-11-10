@@ -75,6 +75,12 @@ npm run dev
 ## 杂项 / 已知缺口
 
 - [ ] 无色牌 JSON 48/51：Wish 生成的 Become Almighty / Live Forever / Fame and Fortune 未进 `colorless.json`（与 baseline diff 一致）
-- [ ] 尾声（第 4 幕心脏 + 盾/矛）未进地图循环
+- [x] 尾声（第 4 幕）已进地图循环（2026-11-10，macOS 侧）：
+  - 三钥匙：篝火「回忆」红宝石 / 宝箱「换取」蓝宝石 / 精英首胜（已持其他钥匙）掉绿宝石；顶栏显示
+  - 固定链 篝火→商店→精英→心脏（`map.ts endingMap()`），Boss 门在精英后开启
+  - 尖塔之盾/矛：Surrounded 背刺 +50%、器械、盾 3/6/9 碾压、矛 2/5/8 穿刺、灼烧打击塞灼烧（A18 置顶）
+  - 腐化之心：死亡节拍（每出牌掉 HP）+ 无敌（每回合最多失去 300 HP，回合重置）+ 第 4/7/10…递进增益（器械2→节拍+1→痛苦之刺→+10→+50 力量）+ 削弱塞五状态牌
+  - 第 3/4 幕 Boss 无奖励（wiki/Map_Locations 修正）；真结局画面
+  - 数值：wiki 基线（docs/sts1/enemies.md §5），**待 Windows 侧对 TheEnding 源码复核**（怪物 HP 已是 jar 级）
 - [ ] 都市/超越 Boss 的 `getMove` 目前是通用攻击/格挡/力量循环，不是逐文件移植
 - [ ] 部分静默/缺陷/观者非核心牌走描述自动 DSL，未逐张对 `use()`

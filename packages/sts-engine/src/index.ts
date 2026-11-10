@@ -33,6 +33,7 @@ export {
   leaveShop,
   newRun,
   restHeal,
+  restRecall,
   restSmith,
   shopPurge,
   skipRewardCards,
@@ -40,16 +41,18 @@ export {
   takeRewardGold,
   takeRewardPotion,
   takeRewardRelic,
+  takeSapphireKey,
   usePotion,
 } from "./run.js";
 
-export function atBossGate(run: { current: { x: number; y: number } | null; map?: { room?: string }[][] }): boolean {
+
+export function atBossGate(run: { current: { x: number; y: number } | null; map?: { room?: string }[][]; act?: number }): boolean {
   if (!run.current) return false;
   if (run.current.y === 15) return true;
   const node = run.map?.[run.current.y]?.[run.current.x];
+  if ((run.act ?? 1) === 4) return node?.room === "elite";
   return node?.room === "boss" || run.current.y === 14;
 }
-
 export const SAVE_KEY = "sts1-web-run";
 
 export function saveRun(run: unknown): void {

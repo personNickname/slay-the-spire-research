@@ -242,6 +242,7 @@ export function applyDamagePowers(base: number, attacker: Creature, target: Crea
   for (const p of target.powers) {
     if (p.id === "Vulnerable") tmp = Math.fround(tmp * 1.5);
   }
+  if (!attacker.isPlayer && target.isPlayer && hasPower(target, "Surrounded")) tmp = Math.fround(tmp * 1.5);
   return Math.max(0, froundFloor(tmp));
 }
 
@@ -275,8 +276,15 @@ export function dealDamage(
     target.block -= blocked;
     hpDmg -= blocked;
   }
+  const invincible = !target.isPlayer ? getPower(target, "Invincible") : undefined;
+  if (invincible) {
+    const lost = Number(target.misc.hpLostThisTurn ?? 0);
+    if (lost >= invincible.amount) hpDmg = 0;
+    else hpDmg = Math.min(hpDmg, invincible.amount - lost);
+  }
   if (hpDmg > 0) {
     target.hp = Math.max(0, target.hp - hpDmg);
+    if (!target.isPlayer) target.misc.hpLostThisTurn = Number(target.misc.hpLostThisTurn ?? 0) + hpDmg;
     if (target.isPlayer) {
       const bfb = [...(run.combat?.draw ?? []), ...(run.combat?.hand ?? []), ...(run.combat?.discard ?? [])].filter(
         (c) => c.defId === "Blood for Blood",
@@ -313,6 +321,9 @@ export function dealDamage(
     if (target.hp <= 0) {
       die(run, target, attacker);
     }
+  }
+  if (!opts.hpLoss && attacker.isPlayer && attacker !== target && dmg > 0 && getPower(target, "Painful Stabs")) {
+    run.combat?.discard.push(makeCard(run, "Wound"));
   }
   if (!opts.hpLoss && attacker.alive && attacker !== target) {
     const reflect = (flame?.amount ?? 0) + (sharp?.amount ?? 0) + (getPower(target, "Thorns")?.amount ?? 0);
@@ -986,6 +997,12 @@ export function playCard(run: RunState, handIndex: number, targetId?: string): v
     playCardEffects(run, card, target, true);
   }
 
+  // Beat of Death: every card played costs the player HP (Corrupt Heart)
+  for (const em of aliveEnemies(run)) {
+    const bod = getPower(em, "BeatOfDeath");
+    if (bod) dealDamage(run, em, run.player, bod.amount, { hpLoss: true });
+  }
+
   if (cbt.pending) {
     cbt.limbo = card;
     return;
@@ -1145,6 +1162,7 @@ function startPlayerTurn(run: RunState): void {
   if (hasPower(run.player, "Blur")) run.player.powers = run.player.powers.filter((p) => p.id !== "Blur");
   tickDebuffs(run.player);
   for (const m of cbt.monsters) if (m.alive) tickDebuffs(m);
+  for (const m of cbt.monsters) m.misc.hpLostThisTurn = 0;
 
   cbt.energy = cbt.energyMax;
   const nte = getPower(run.player, "Next Turn Energy");
@@ -1294,6 +1312,14 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
     if (m.monsterId === "GremlinNob") {
       /* bellow is first move */
     }
+    if (m.monsterId === "SpireShield" || m.monsterId === "SpireSpear") {
+      addPower(m, "Artifact", run.ascension >= 18 ? 2 : 1);
+    }
+    if (m.monsterId === "CorruptHeart") {
+      addPower(m, "BeatOfDeath", run.ascension >= 19 ? 2 : 1);
+      addPower(m, "Invincible", run.ascension >= 19 ? 200 : 300);
+      m.misc.buffCount = 0;
+    }
     if (m.monsterId === "FungiBeast") addPower(m, "Spore Cloud", 2);
     if (m.monsterId === "FuzzyLouseNormal" || m.monsterId === "FuzzyLouseDefensive") {
       const hpR = rng(run, "monsterHp");
@@ -1301,6 +1327,9 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
       saveRng(run, "monsterHp", hpR);
     }
     rollMove(run, m);
+  }
+  if (monsters.some((m) => m.monsterId === "SpireShield" || m.monsterId === "SpireSpear")) {
+    addPower(run.player, "Surrounded", 1, true);
   }
   startPlayerTurn(run);
 }

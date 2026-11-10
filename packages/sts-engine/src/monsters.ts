@@ -331,6 +331,55 @@ export function pickMove(run: RunState, m: Creature, num: number): void {
       else setMove(m, 1, "attack", tackle);
       break;
     }
+    case "SpireShield": {
+      const turn = Number(m.misc.turn ?? 0) + 1;
+      const smash = asc(run, 3) ? 38 : 34;
+      if (turn >= 3 && turn % 3 === 0) {
+        setMove(m, 3, "attack_defend", smash);
+        break;
+      }
+      const bash = asc(run, 3) ? 14 : 12;
+      if (lastMove(m, 1)) setMove(m, 2, "defend");
+      else if (lastMove(m, 2)) setMove(m, 1, "attack_debuff", bash);
+      else if (r.randomBoolean()) setMove(m, 1, "attack_debuff", bash);
+      else setMove(m, 2, "defend");
+      break;
+    }
+    case "SpireSpear": {
+      const turn = Number(m.misc.turn ?? 0) + 1;
+      const burn = asc(run, 3) ? 6 : 5;
+      if (turn === 1) {
+        setMove(m, 1, "attack_debuff", burn, 2);
+        break;
+      }
+      if (turn >= 2 && turn % 3 === 2) {
+        setMove(m, 2, "attack", 10, asc(run, 3) ? 4 : 3);
+        break;
+      }
+      if (lastMove(m, 1)) setMove(m, 3, "buff");
+      else if (lastMove(m, 3)) setMove(m, 1, "attack_debuff", burn, 2);
+      else if (r.randomBoolean()) setMove(m, 1, "attack_debuff", burn, 2);
+      else setMove(m, 3, "buff");
+      break;
+    }
+    case "CorruptHeart": {
+      const turn = Number(m.misc.turn ?? 0) + 1;
+      if (turn === 1) {
+        setMove(m, 1, "strong_debuff");
+        break;
+      }
+      if (turn >= 4 && turn % 3 === 1) {
+        setMove(m, 4, "buff");
+        break;
+      }
+      const shots = asc(run, 4) ? 15 : 12;
+      const echo = asc(run, 4) ? 45 : 40;
+      if (lastMove(m, 2)) setMove(m, 3, "attack", echo);
+      else if (lastMove(m, 3)) setMove(m, 2, "attack", shots, 2);
+      else if (r.randomBoolean()) setMove(m, 2, "attack", shots, 2);
+      else setMove(m, 3, "attack", echo);
+      break;
+    }
     default: {
       const hp = m.maxHp;
       const hit = Math.max(6, Math.floor(hp / 12));
@@ -552,6 +601,65 @@ export function takeTurn(run: RunState, m: Creature): void {
       else fx.dealDamage(run, m, player, asc(run, 4) ? 10 : 9);
       m.misc.slimeTurn = Number(m.misc.slimeTurn ?? 0) + 1;
       break;
+    case "SpireShield": {
+      m.misc.turn = Number(m.misc.turn ?? 0) + 1;
+      const dmg = m.intentDamage ?? 12;
+      if (mv === 1) {
+        fx.dealDamage(run, m, player, dmg);
+        if ((run.combat?.orbSlots ?? 0) > 0 && bool(run)) fx.addPower(player, "Focus", -1, true);
+        else fx.addPower(player, "Strength", -1, true);
+      } else if (mv === 2) {
+        for (const e of run.combat!.monsters) if (e.alive) fx.gainBlock(run, e, 30);
+      } else if (mv === 3) {
+        fx.dealDamage(run, m, player, dmg);
+        fx.gainBlock(run, m, asc(run, 18) ? 99 : dmg);
+      }
+      break;
+    }
+    case "SpireSpear": {
+      m.misc.turn = Number(m.misc.turn ?? 0) + 1;
+      const dmg = m.intentDamage ?? 5;
+      if (mv === 1) {
+        for (let i = 0; i < (m.intentHits ?? 2); i++) fx.dealDamage(run, m, player, dmg);
+        for (let i = 0; i < 2; i++) {
+          if (asc(run, 18)) run.combat!.draw.unshift(fx.makeCard(run, "Burn"));
+          else run.combat!.discard.push(fx.makeCard(run, "Burn"));
+        }
+      } else if (mv === 2) {
+        for (let i = 0; i < (m.intentHits ?? 3); i++) fx.dealDamage(run, m, player, dmg);
+      } else {
+        for (const e of run.combat!.monsters) if (e.alive) fx.addPower(e, "Strength", 2);
+      }
+      break;
+    }
+    case "CorruptHeart": {
+      m.misc.turn = Number(m.misc.turn ?? 0) + 1;
+      const dmg = m.intentDamage ?? 12;
+      if (mv === 1) {
+        fx.addPower(player, "Vulnerable", 2, true);
+        fx.addPower(player, "Weakened", 2, true);
+        fx.addPower(player, "Frail", 2, true);
+        for (const sid of ["Burn", "Dazed", "Slimed", "Void", "Wound"]) {
+          run.combat!.draw.push(fx.makeCard(run, sid));
+        }
+      } else if (mv === 2) {
+        for (let i = 0; i < (m.intentHits ?? 2); i++) fx.dealDamage(run, m, player, dmg);
+      } else if (mv === 3) {
+        fx.dealDamage(run, m, player, dmg);
+      } else if (mv === 4) {
+        const str = m.powers.find((p) => p.id === "Strength");
+        if (str && str.amount < 0) m.powers = m.powers.filter((p) => p.id !== "Strength");
+        fx.addPower(m, "Strength", 2);
+        m.misc.buffCount = Number(m.misc.buffCount ?? 0) + 1;
+        const step = m.misc.buffCount;
+        if (step === 1) fx.addPower(m, "Artifact", 2);
+        else if (step === 2) fx.addPower(m, "BeatOfDeath", 1);
+        else if (step === 3) fx.addPower(m, "Painful Stabs", 1);
+        else if (step === 4) fx.addPower(m, "Strength", 10);
+        else fx.addPower(m, "Strength", 50);
+      }
+      break;
+    }
     default:
       if (mv === 2) fx.gainBlock(run, m, Math.max(5, Math.floor(m.maxHp / 8)));
       else if (mv === 3) fx.addPower(m, "Strength", 2);
@@ -589,6 +697,10 @@ export function spawnEncounter(run: RunState, key: string): Creature[] {
       return [one("Cultist")];
     case "Jaw Worm":
       return [one("JawWorm")];
+    case "Spire Shield and Spear":
+      return [one("SpireShield"), one("SpireSpear")];
+    case "Corrupt Heart":
+      return [one("CorruptHeart")];
     case "2 Louse":
       return [one(bool(run) ? "FuzzyLouseNormal" : "FuzzyLouseDefensive"), one(bool(run) ? "FuzzyLouseNormal" : "FuzzyLouseDefensive")];
     case "Small Slimes":
@@ -675,7 +787,7 @@ export function poolsForAct(act: number): {
   elite: { id: string; w: number }[];
   boss: string[];
 } {
-  return ENCOUNTERS.acts[String(Math.min(3, Math.max(1, act)))] ?? ENCOUNTERS.acts["1"]!;
+  return ENCOUNTERS.acts[String(Math.max(1, Math.min(4, act)))] ?? ENCOUNTERS.acts["1"]!;
 }
 
 export function weightedPick(run: RunState, pool: { id: string; w: number }[], stream: "monster" | "misc"): string {

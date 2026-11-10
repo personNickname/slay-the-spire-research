@@ -114,6 +114,7 @@ function parentMatch(parents: MapNode[], room: RoomKind): boolean {
 }
 
 export function generateMap(run: RunState): MapNode[][] {
+  if (run.act === 4) return endingMap();
   const height = 15;
   const width = 7;
   const density = 6;
@@ -203,6 +204,29 @@ export function generateMap(run: RunState): MapNode[][] {
   nodes.push(bossRow);
 
   run.rng.map = rng.toState();
+  return nodes;
+}
+
+/**
+ * The Ending (act 4): fixed 3-node chain rest → shop → elite (Spire Shield
+ * and Spire Spear), then the Corrupt Heart boss gate. No randomness.
+ */
+function endingMap(): MapNode[][] {
+  const rooms: RoomKind[] = ["rest", "shop", "elite"];
+  const nodes: MapNode[][] = [];
+  for (let y = 0; y < 3; y++) {
+    const row: MapNode[] = [];
+    for (let x = 0; x < 7; x++) {
+      row.push({
+        x,
+        y,
+        edges: x === 3 && y < 2 ? [{ x: 3, y: y + 1 }] : [],
+        parents: x === 3 && y > 0 ? [{ x: 3, y: y - 1 }] : [],
+        room: x === 3 ? rooms[y] : undefined,
+      });
+    }
+    nodes.push(row);
+  }
   return nodes;
 }
 

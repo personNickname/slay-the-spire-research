@@ -259,4 +259,6 @@ export interface RunState {
   restHealUsed?: boolean;
   neowLament: number;
   actBosses: string[];
+  /** 尾声(The Ending)三钥匙：红=篝火回忆、蓝=宝箱换取、绿=精英战利品（需已持有其他钥匙） */
+  keys?: { ruby: boolean; sapphire: boolean; emerald: boolean };
 }
