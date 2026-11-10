@@ -271,3 +271,9 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 .e-ico.b { background: #58a6e8; }
 .e-ico.e { background: #e8c96a; }
 .e-ico.w { background: #f0f0f0; }
+
+.pile-btn {
+  background: transparent; border: 1px solid var(--gold-dim); color: var(--gold);
+  border-radius: 6px; padding: 3px 10px; cursor: pointer; font-size: 13px;
+}
+.pile-btn:hover { border-color: var(--gold); background: #2a1c10; }

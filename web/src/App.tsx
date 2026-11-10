@@ -500,6 +500,7 @@ function CombatScreen({
   pickUids: string[];
   setPickUids: (s: string[]) => void;
 }) {
+  const [pile, setPile] = useState<"draw" | "discard" | "exhaust" | null>(null);
   const cbt = run.combat!;
   const tryPlay = (card: CardInst, tgt?: string) => {
     const idx = cbt.hand.findIndex((h) => h.uid === card.uid);
@@ -532,7 +533,9 @@ function CombatScreen({
         ))}
       </div>
       <div className="piles">
-        <span>抽牌堆 {cbt.draw.length}</span>
+        <button className="pile-btn" onClick={() => setPile("draw")}>
+          抽牌堆 {cbt.draw.length}
+        </button>
         <span className="energy-pip">
           {run.lang === "eng" ? "Energy" : "能量"} {cbt.energy}/{cbt.energyMax}
         </span>
@@ -559,7 +562,13 @@ function CombatScreen({
           )}
         </span>
         <span>
-          {run.lang === "eng" ? "Discard" : "弃牌"} {cbt.discard.length} · {run.lang === "eng" ? "Exhaust" : "消耗"} {cbt.exhaust.length}
+          <button className="pile-btn" onClick={() => setPile("discard")}>
+            弃牌堆 {cbt.discard.length}
+          </button>
+          {" · "}
+          <button className="pile-btn" onClick={() => setPile("exhaust")}>
+            消耗 {cbt.exhaust.length}
+          </button>
         </span>
       </div>
       <PlayerPowers who={run.player} />
@@ -655,6 +664,31 @@ function CombatScreen({
           <div key={i}>{l}</div>
         ))}
       </div>
+      {pile && (
+        <div className="modal-overlay" onClick={() => setPile(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2>
+              {pile === "draw" ? "抽牌堆" : pile === "discard" ? "弃牌堆" : "消耗堆"}（
+              {(pile === "draw" ? cbt.draw : pile === "discard" ? cbt.discard : cbt.exhaust).length} 张）
+            </h2>
+            <div className="reward-grid">
+              {(pile === "draw"
+                ? [...cbt.draw].sort((a, b) => a.defId.localeCompare(b.defId))
+                : pile === "discard"
+                  ? cbt.discard
+                  : cbt.exhaust
+              ).map((c) => (
+                <MiniCard key={c.uid} run={run} c={c} onClick={() => undefined} />
+              ))}
+            </div>
+            <p style={{ textAlign: "center" }}>
+              <button className="btn" onClick={() => setPile(null)}>
+                关闭
+              </button>
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
