@@ -295,6 +295,16 @@ export function dealDamage(
       if (hasPower(run.player, "Envenom") && attacker.isPlayer && hpDmg > 0) {
         addPower(target, "Poison", getPower(run.player, "Envenom")!.amount);
       }
+      // Lagavulin：受到伤害唤醒，先眩晕 1 回合（wiki/Lagavulin）
+      if (target.misc.asleep && hpDmg > 0) {
+        target.misc.asleep = 0;
+        target.misc.idleCount = 0;
+        target.powers = target.powers.filter((p) => p.id !== "Metallicize");
+        target.nextMove = 6;
+        target.intent = "stun";
+        target.intentDamage = undefined;
+        target.intentHits = undefined;
+      }
       const curl = getPower(target, "Curl Up");
       if (curl && !target.misc.curled) {
         target.block += curl.amount;
@@ -1131,7 +1141,15 @@ export function endTurn(run: RunState): void {
       if (poison.amount <= 0) m.powers = m.powers.filter((p) => p.id !== "Poison");
     }
     if (!m.alive) continue;
+    // 原版规则：怪物回合开始清格挡，回合结束结算 Metallicize/Ritual
+    m.block = 0;
     monsterTakeTurn(run, m);
+    if (m.alive) {
+      const met = getPower(m, "Metallicize");
+      if (met) gainBlock(run, m, met.amount);
+      const ritual = getPower(m, "Ritual");
+      if (ritual) addPower(m, "Strength", ritual.amount);
+    }
     if (m.alive && !m.misc.skipRoll) rollMove(run, m);
     m.misc.skipRoll = 0;
     if (cbt.defeat) return;
@@ -1179,13 +1197,6 @@ function startPlayerTurn(run: RunState): void {
   }
   const ritual = getPower(run.player, "Ritual");
   if (ritual) addPower(run.player, "Strength", ritual.amount);
-  for (const m of cbt.monsters) {
-    if (!m.alive) continue;
-    const r = getPower(m, "Ritual");
-    if (r && cbt.turn > 1) addPower(m, "Strength", r.amount);
-    if (hasPower(m, "Metallicize")) gainBlock(run, m, getPower(m, "Metallicize")!.amount);
-    if (!hasPower(m, "Barricade") && !m.misc.keepBlock) m.block = 0;
-  }
 
   // relics: lantern first turn
   if (cbt.turn === 1 && run.relics.some((r) => r.id === "Lantern")) cbt.energy += 1;

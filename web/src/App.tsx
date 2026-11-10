@@ -44,7 +44,7 @@ import {
   upgradeCard,
   usePotion,
 } from "@sts/engine";
-import "./ui.css";
+import { NUM_SUB, potionWikiEn, relicWikiEn } from "./numSub";
 
 const ROOM_GLYPH: Record<string, string> = {
   monster: "M",
@@ -287,7 +287,7 @@ export default function App() {
         {run.relics.map((r) => {
           const def = RELIC_BY_ID.get(r.id);
           const name = def?.name.zhs ?? r.id;
-          const desc = def?.description?.zhs;
+          const desc = def?.description?.zhs ? NUM_SUB(def.description.zhs, relicWikiEn(r.id)) : undefined;
           return (
             <span key={r.id} className="relic-slot">
               <img
@@ -785,7 +785,8 @@ function MiniCard({
 function RelicTag({ id }: { id: string }) {
   const def = RELIC_BY_ID.get(id);
   const name = def?.name.zhs ?? id;
-  const desc = def?.description?.zhs;
+  const raw = def?.description?.zhs;
+  const desc = raw ? NUM_SUB(raw, relicWikiEn(id)) : undefined;
   return (
     <span className="entity-tag">
       {name}
@@ -800,7 +801,8 @@ function RelicTag({ id }: { id: string }) {
 function PotionTag({ id }: { id: string }) {
   const def = POTION_BY_ID.get(id);
   const name = def?.name.zhs ?? id;
-  const desc = def && "description" in def && def.description ? def.description.zhs : undefined;
+  const raw = def && "description" in def && def.description ? def.description.zhs : undefined;
+  const desc = raw ? NUM_SUB(raw, potionWikiEn(id)) : undefined;
   return (
     <span className="entity-tag">
       {name}
@@ -947,15 +949,17 @@ function Shop({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
       <div className="shop-grid">
         {run.shop?.offers.map((o, i) => (
           <div key={i} className={`offer ${o.sold ? "sold" : ""}`}>
-            <div>
-              {o.kind === "card" ? (
-                o.card && cardDef(o.card.defId).name.zhs
-              ) : o.kind === "relic" ? (
-                <RelicTag id={o.id} />
-              ) : (
-                <PotionTag id={o.id} />
-              )}
-            </div>
+            {o.kind === "card" && o.card ? (
+              <MiniCard
+                run={run}
+                c={o.card}
+                onClick={() => undefined}
+              />
+            ) : (
+              <div>
+                {o.kind === "relic" ? <RelicTag id={o.id} /> : <PotionTag id={o.id} />}
+              </div>
+            )}
             <div className="gold">{o.price} 金币</div>
             <button
               className="btn small"

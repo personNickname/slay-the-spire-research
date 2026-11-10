@@ -257,10 +257,11 @@ export function pickMove(run: RunState, m: Creature, num: number): void {
       const atk = asc(run, 3) ? 20 : 18;
       if (m.misc.asleep) {
         setMove(m, 5, "sleep");
-      } else if (Number(m.misc.debuffTurns ?? 0) < 2) {
-        if (lastTwo(m, 3)) setMove(m, 1, "strong_debuff");
-        else setMove(m, 3, "attack", atk);
-      } else setMove(m, 1, "strong_debuff");
+      } else if (lastTwo(m, 3)) {
+        setMove(m, 1, "strong_debuff");
+      } else {
+        setMove(m, 3, "attack", atk);
+      }
       break;
     }
     case "Sentry": {
@@ -494,27 +495,21 @@ export function takeTurn(run: RunState, m: Creature): void {
       }
       break;
     }
-    case "GremlinNob":
-      if (mv === 3) fx.addPower(m, "Anger", asc(run, 18) ? 3 : 2);
-      else if (mv === 2) {
-        fx.dealDamage(run, m, player, asc(run, 3) ? 8 : 6);
-        fx.addPower(player, "Vulnerable", 2, true);
-      } else fx.dealDamage(run, m, player, asc(run, 3) ? 16 : 14);
-      break;
     case "Lagavulin":
       if (mv === 5) {
         m.misc.idleCount = Number(m.misc.idleCount ?? 0) + 1;
         if (Number(m.misc.idleCount) >= 3) {
+          // 3 回合未受伤害自行苏醒（wiki/Lagavulin）
           m.misc.asleep = 0;
           m.powers = m.powers.filter((p) => p.id !== "Metallicize");
           setMove(m, 3, "attack", asc(run, 3) ? 20 : 18);
           m.misc.skipRoll = 1;
         }
+      } else if (mv === 6) {
+        /* 受击唤醒后的眩晕回合：不行动 */
       } else if (mv === 3) {
-        m.misc.debuffTurns = Number(m.misc.debuffTurns ?? 0) + 1;
         fx.dealDamage(run, m, player, asc(run, 3) ? 20 : 18);
       } else if (mv === 1) {
-        m.misc.debuffTurns = 0;
         fx.addPower(player, "Dexterity", -1, true);
         fx.addPower(player, "Strength", -1, true);
       }

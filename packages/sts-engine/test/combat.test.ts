@@ -4,10 +4,12 @@ import {
   currentCost,
   dealDamage,
   drawCards,
+  endTurn,
   makeCard,
   playCard,
   startCombat,
 } from "../src/combat.js";
+import { RELICS } from "../src/catalog.js";
 import { chooseNeow, finishCombat, newRun, restRecall, takeSapphireKey, usePotion } from "../src/run.js";
 import { pickMove, takeTurn } from "../src/monsters.js";
 import { generateMap, startingNodes } from "../src/map.js";
@@ -205,6 +207,50 @@ describe("potions", () => {
   });
 });
 
+
+describe("monster turn rules (user-reported bugs)", () => {
+  it("Jaw Worm Bellow: block appears after its turn and clears at next own turn", () => {
+    const run = newRun(5001);
+    startCombat(run, "Jaw Worm", "monster");
+    const jaw = run.combat!.monsters[0]!;
+    jaw.nextMove = 2;
+    jaw.intent = "defend_buff";
+    endTurn(run);
+    expect(jaw.block).toBeGreaterThanOrEqual(6);
+    expect(jaw.powers.find((p) => p.id === "Strength")?.amount).toBeGreaterThanOrEqual(3);
+    jaw.nextMove = 3;
+    jaw.intent = "attack_defend";
+    endTurn(run);
+    expect(jaw.block).toBeLessThan(11);
+  });
+
+  it("Lagavulin: Metallicize ticks while asleep; damage wakes it (stun → attack)", () => {
+    const run = newRun(5002);
+    startCombat(run, "Lagavulin", "elite");
+    const lag = run.combat!.monsters[0]!;
+    expect(lag.misc.asleep).toBe(1);
+    expect(lag.block).toBe(8);
+    endTurn(run);
+    expect(lag.block).toBe(8);
+    dealDamage(run, run.player, lag, 20);
+    expect(lag.misc.asleep).toBe(0);
+    expect(lag.intent).toBe("stun");
+    expect(lag.powers.some((p) => p.id === "Metallicize")).toBe(false);
+    endTurn(run);
+    expect(run.player.hp).toBe(run.player.maxHp);
+    expect(lag.nextMove).toBe(3);
+    endTurn(run);
+    expect(run.player.hp).toBeLessThan(run.player.maxHp);
+  });
+
+  it("Neow BOSS_RELIC swaps the starter relic", () => {
+    const run = newRun(5003);
+    const starter = run.relics[0]!.id;
+    chooseNeow(run, "3:BOSS_RELIC");
+    expect(run.relics).toHaveLength(1);
+    expect(run.relics[0]!.id).not.toBe(starter);
+  });
+});
 describe("The Ending (act 4)", () => {
   it("act-4 map is the fixed rest → shop → elite chain", () => {
     const run = newRun(4004);

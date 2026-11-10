@@ -260,7 +260,11 @@ export function chooseNeow(run: RunState, option: string, cardUid?: string, card
     }
   } else if (type === "RANDOM_COMMON_RELIC") run.relics.push({ id: randomRelic(run, "common"), counter: 0 });
   else if (type === "ONE_RARE_RELIC") run.relics.push({ id: randomRelic(run, "rare"), counter: 0 });
-  else if (type === "BOSS_RELIC") run.relics.push({ id: randomRelic(run, "boss"), counter: 0 });
+  else if (type === "BOSS_RELIC") {
+    // Boss 遗物交换：拿走起始遗物（原版 NeowReward 换取逻辑）
+    if (run.relics.length > 0) run.relics.shift();
+    run.relics.push({ id: randomRelic(run, "boss"), counter: 0 });
+  }
   else if (type === "ONE_RANDOM_RARE_CARD") run.deck.push(randomColorCard(run, "rare"));
   else if (type === "RANDOM_COLORLESS") run.deck.push(randomColorCard(run, "uncommon", true));
   else if (type === "RANDOM_COLORLESS_2") {
@@ -309,11 +313,16 @@ export function enterBoss(run: RunState): void {
 function beginFight(run: RunState, elite: boolean): void {
   const pools = poolsForAct(run.act);
   const floorInAct = ((run.floor - 1) % 17) + 1;
-  const enc = elite
+  let enc = elite
     ? weightedPick(run, pools.elite, "monster")
     : floorInAct <= 3
       ? weightedPick(run, pools.weak, "monster")
       : weightedPick(run, pools.strong, "monster");
+  // wiki/Map_Locations：普通遭遇不连续重复（池>1 时重掷）
+  const sourcePool = elite ? pools.elite : floorInAct <= 3 ? pools.weak : pools.strong;
+  if (enc === run.encounter && sourcePool.length > 1) {
+    for (let i = 0; i < 5 && enc === run.encounter; i++) enc = weightedPick(run, sourcePool, "monster");
+  }
   startCombat(run, enc, elite ? "elite" : "monster");
   if (run.neowLament > 0 && run.combat) {
     for (const m of run.combat.monsters) {
@@ -437,9 +446,12 @@ function advanceAct(run: RunState): void {
 
 function randomRelic(run: RunState, tier: string): string {
   const owned = new Set(run.relics.map((r) => r.id));
-  const pool = RELICS.filter((r) => r.tier === tier && r.pool !== "red" || r.tier === tier).filter((r) => !owned.has(r.id));
-  const fallback = RELICS.filter((r) => r.tier === tier && !owned.has(r.id));
-  const use = fallback.length ? fallback : RELICS.filter((r) => r.tier === "common");
+  // pool=角色颜色 的专属遗物只对本角色掉落（如 Cables 仅机器人）
+  const color = colorOf(run);
+  const legal = (r: (typeof RELICS)[number]) =>
+    !owned.has(r.id) && (!r.pool || r.pool === "shared" || r.pool === "none" || r.pool === color);
+  let use = RELICS.filter((r) => r.tier === tier && legal(r));
+  if (!use.length) use = RELICS.filter(legal);
   const r = R(run, "relic");
   const pick = use[r.nextInt(use.length)]!;
   save(run, "relic", r);
