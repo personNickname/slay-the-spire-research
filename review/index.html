@@ -153,6 +153,7 @@
   details .body code { font-family: "SF Mono", Menlo, monospace; color: var(--accent); font-size: 12.5px; }
   footer { border-top: 1px solid var(--border); padding: 26px; text-align: center; color: var(--faint); font-size: 13px; }
   /* ---------- 数据库浏览器 ---------- */
+  .en-sub { color: var(--faint); font-size: 12px; margin-top: 2px; line-height: 1.5; }
   .db-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
   .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 9px; overflow: hidden; }
   .seg button {
@@ -777,7 +778,11 @@
         else if (k === 'cost') v = fmtVal(it.cost);
         else if (k === 'hp') v = fmtVal(it.hp);
         else if (k === 'act') v = (typeof it.act === 'string' ? ({ overgrowth: '繁茂之地', underdocks: '地下船坞', hive: '蜂巢', glory: '荣耀' }[it.act] || it.act) : it.act);
-        else if (k === 'effect' || k === 'effect_up' || k === 'description' || k === 'pattern' || k === 'condition' || k === 'value') v = fmtVal(it[k]);
+        else if (k === 'effect') {
+          v = fmtVal(it.effect);
+          if (it.effect_en && (it.effect || '').includes('？')) v += '<div class="en-sub">' + it.effect_en + '</div>';
+        }
+        else if (k === 'effect_up' || k === 'description' || k === 'pattern' || k === 'condition' || k === 'value') v = fmtVal(it[k]);
         else if (k === 'category') v = fmtVal(it.category);
         else v = fmtVal(it[k]);
         html += '<td>' + v + '</td>';

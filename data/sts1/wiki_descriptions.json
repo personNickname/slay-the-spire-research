@@ -924,6 +924,10 @@
       "zh": null,
       "en": "Negates X debuffs."
     },
+    "Attack Burn": {
+      "zh": null,
+      "en": null
+    },
     "BackAttack": {
       "zh": null,
       "en": "Deals 50% more damage as it is attacking you from behind."
@@ -968,6 +972,10 @@
       "zh": null,
       "en": "Your next X Skills are played twice this turn."
     },
+    "CannotChangeStancePower": {
+      "zh": null,
+      "en": null
+    },
     "Choked": {
       "zh": null,
       "en": "Whenever you play a card this turn, the targeted enemy loses X HP."
@@ -987,6 +995,10 @@
     "Confusion": {
       "zh": null,
       "en": "Whenever you draw a card, randomize its cost."
+    },
+    "Conserve": {
+      "zh": null,
+      "en": null
     },
     "Constricted": {
       "zh": null,
@@ -1150,11 +1162,11 @@
     },
     "Generic Strength Up Power": {
       "zh": null,
-      "en": "At the end of your/its turn, gain X Strength."
+      "en": "At the end of its turn, it gains X Strength."
     },
     "GrowthPower": {
       "zh": null,
-      "en": "At the end of your/its turn, gain X Strength."
+      "en": "At the end of its turn, it gains X Strength."
     },
     "Heatsink": {
       "zh": null,
@@ -1256,13 +1268,25 @@
       "zh": null,
       "en": "You cannot gain Block from cards for the next X turns."
     },
+    "NoSkills": {
+      "zh": null,
+      "en": null
+    },
     "Noxious Fumes": {
       "zh": null,
       "en": "At the start of your turn, apply X Poison to ALL enemies."
     },
+    "Nullify Attack": {
+      "zh": null,
+      "en": null
+    },
     "OmegaPower": {
       "zh": null,
       "en": "At the end of your turn, deal X damage to ALL enemies."
+    },
+    "OmnisciencePower": {
+      "zh": null,
+      "en": null
     },
     "Painful Stabs": {
       "zh": null,
@@ -1340,6 +1364,10 @@
       "zh": null,
       "en": "Upon lose HP, loses that much Strength until the end of the turn."
     },
+    "Skill Burn": {
+      "zh": null,
+      "en": null
+    },
     "Slow": {
       "zh": null,
       "en": "Whenever you play a card, the target receives 10% more damage from Attacks this turn."
@@ -1350,7 +1378,7 @@
     },
     "Spore Cloud": {
       "zh": null,
-      "en": "On death, applies 2 Vulnerable."
+      "en": "On death, applies X Vulnerable."
     },
     "Stasis": {
       "zh": null,
@@ -1411,6 +1439,10 @@
     "Unawakened": {
       "zh": null,
       "en": "This enemy hasn't awakened yet..."
+    },
+    "Vault": {
+      "zh": null,
+      "en": null
     },
     "Vigor": {
       "zh": null,
