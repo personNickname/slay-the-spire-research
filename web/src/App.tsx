@@ -231,15 +231,12 @@ export default function App() {
         <span className="potion-row">
           {run.potions.map((p, i) => {
             const def = p ? POTION_BY_ID.get(p.id) : undefined;
-            const tip = p
-              ? `${def?.name.zhs ?? p.id}${def && "description" in def && def.description ? `\n${def.description.zhs}` : ""}\n${run.combat ? "点击使用（对当前选中敌人）" : "仅战斗中可用"}`
-              : "空药水槽";
+            const desc = def && "description" in def && def.description ? def.description.zhs : undefined;
             return (
               <button
                 key={i}
                 className={`potion-slot ${p ? "" : "empty"}`}
                 disabled={!p || !run.combat}
-                title={tip}
                 onClick={() => {
                   if (!p || !run.combat) return;
                   usePotion(run, i, run.combat.selectedTargetId);
@@ -247,6 +244,13 @@ export default function App() {
                 }}
               >
                 {p ? (def?.name.zhs ?? p.id).slice(0, 2) : ""}
+                {p && (
+                  <span className="hover-tip">
+                    <b>{def?.name.zhs ?? p.id}</b>
+                    {desc && <em>{desc}</em>}
+                    <em className="tip-hint">{run.combat ? "点击使用（作用于选中敌人）" : "仅战斗中可用"}</em>
+                  </span>
+                )}
               </button>
             );
           })}
@@ -283,9 +287,9 @@ export default function App() {
         {run.relics.map((r) => {
           const def = RELIC_BY_ID.get(r.id);
           const name = def?.name.zhs ?? r.id;
-          const tip = `${name}${def?.description ? `\n${def.description.zhs}` : ""}`;
+          const desc = def?.description?.zhs;
           return (
-            <span key={r.id} className="relic-slot" title={tip}>
+            <span key={r.id} className="relic-slot">
               <img
                 className="relic-icon"
                 src={relicUrl(r.id)}
@@ -296,6 +300,10 @@ export default function App() {
               />
               <i>{name.slice(0, 2)}</i>
               <b className="relic-name">{name}</b>
+              <span className="hover-tip">
+                <b>{name}</b>
+                {desc && <em>{desc}</em>}
+              </span>
             </span>
           );
         })}

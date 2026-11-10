@@ -233,3 +233,22 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .relics-bar .relic-slot:hover .relic-name, .relics-bar .relic-slot:hover i { color: var(--gold); border-color: var(--gold); }
+
+/* 即时悬浮卡：遗物/药水（CSS hover，零延迟） */
+.hover-tip {
+  display: none; position: absolute; left: 0; top: calc(100% + 8px); z-index: 600;
+  width: max-content; max-width: 280px; padding: 10px 14px;
+  background: #120b06; border: 1px solid var(--gold); border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.65); text-align: left;
+  pointer-events: none; white-space: normal;
+}
+.hover-tip b {
+  display: block; color: var(--gold); font-size: 14px; font-weight: 700; margin-bottom: 4px;
+}
+.hover-tip em {
+  display: block; font-style: normal; color: #d8cdb8; font-size: 13px; line-height: 1.6;
+}
+.hover-tip em.tip-hint { color: #9b8a6d; font-size: 12px; margin-top: 4px; }
+.relic-slot, .potion-slot { position: relative; }
+.relic-slot:hover .hover-tip, .potion-slot:not(:disabled):hover .hover-tip { display: block; }
+.relic-slot:hover i, .relic-slot:hover .relic-name { color: var(--gold); border-color: var(--gold); }
