@@ -8,7 +8,7 @@ import {
   playCard,
   startCombat,
 } from "../src/combat.js";
-import { chooseNeow, finishCombat, newRun, restRecall, takeSapphireKey } from "../src/run.js";
+import { chooseNeow, finishCombat, newRun, restRecall, takeSapphireKey, usePotion } from "../src/run.js";
 import { pickMove, takeTurn } from "../src/monsters.js";
 import { generateMap, startingNodes } from "../src/map.js";
 import { CHARACTERS } from "../src/characters.js";
@@ -180,6 +180,28 @@ describe("neow two-card options", () => {
     chooseNeow(run, "2:REMOVE_TWO", a, b);
     expect(run.deck).toHaveLength(8);
     expect(run.deck.some((c) => c.uid === a || c.uid === b)).toBe(false);
+  });
+});
+
+describe("potions", () => {
+  it("Block Potion in combat: +12 block and slot cleared", () => {
+    const run = newRun(77);
+    startCombat(run, "Jaw Worm", "monster");
+    run.potions[0] = { id: "Block Potion" };
+    usePotion(run, 0);
+    expect(run.player.block).toBeGreaterThanOrEqual(12);
+    expect(run.potions[0]).toBeNull();
+  });
+
+  it("Fire Potion targets the selected enemy", () => {
+    const run = newRun(78);
+    startCombat(run, "Jaw Worm", "monster");
+    const jaw = run.combat!.monsters[0]!;
+    const hp = jaw.hp;
+    run.potions[0] = { id: "Fire Potion" };
+    usePotion(run, 0, jaw.id);
+    expect(jaw.hp).toBe(hp - 20);
+    expect(run.potions[0]).toBeNull();
   });
 });
 

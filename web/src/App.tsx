@@ -251,25 +251,6 @@ export default function App() {
             );
           })}
         </span>
-        <span className="relic-row">
-          {run.relics.map((r) => {
-            const def = RELIC_BY_ID.get(r.id);
-            const tip = `${def?.name.zhs ?? r.id}${def?.description ? `\n${def.description.zhs}` : ""}`;
-            return (
-              <span key={r.id} className="relic-slot" title={tip}>
-                <img
-                  className="relic-icon"
-                  src={relicUrl(r.id)}
-                  alt={r.id}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.visibility = "hidden";
-                  }}
-                />
-                <i>{(def?.name.zhs ?? r.id).slice(0, 2)}</i>
-              </span>
-            );
-          })}
-        </span>
         {run.keys && (run.keys.ruby || run.keys.sapphire || run.keys.emerald) && (
           <span className="keys-row" title="尾声钥匙">
             {(["ruby", "emerald", "sapphire"] as const).map((k) => (
@@ -297,6 +278,28 @@ export default function App() {
           </button>
         </span>
       </header>
+      <div className="relics-bar">
+        <span className="relics-label">遗物</span>
+        {run.relics.map((r) => {
+          const def = RELIC_BY_ID.get(r.id);
+          const name = def?.name.zhs ?? r.id;
+          const tip = `${name}${def?.description ? `\n${def.description.zhs}` : ""}`;
+          return (
+            <span key={r.id} className="relic-slot" title={tip}>
+              <img
+                className="relic-icon"
+                src={relicUrl(r.id)}
+                alt={r.id}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.visibility = "hidden";
+                }}
+              />
+              <i>{name.slice(0, 2)}</i>
+              <b className="relic-name">{name}</b>
+            </span>
+          );
+        })}
+      </div>
       {deckView && <DeckViewModal run={run} onClose={() => setDeckView(false)} />}
       {run.screen === "neow" && <Neow run={run} bump={bump} />}
       {run.screen === "map" && <MapScreen run={run} bump={bump} />}
