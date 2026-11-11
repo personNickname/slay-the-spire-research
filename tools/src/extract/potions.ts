@@ -14,7 +14,25 @@ export interface PotionRecord {
   targetRequired: boolean;
   /** can only be used in combat (isThrown / canUse checks) */
   combatOnly: boolean;
+  /** PotionHelper.getPotions(class, false) — class potions only roll for that hero */
+  pool?: "red" | "green" | "blue" | "purple" | "shared";
 }
+
+/** PotionHelper.getPotions — class-locked ids prepended before the shared list. */
+const CLASS_POTION_POOL: Record<string, "red" | "green" | "blue" | "purple"> = {
+  BloodPotion: "red",
+  ElixirPotion: "red",
+  HeartOfIron: "red",
+  "Poison Potion": "green",
+  CunningPotion: "green",
+  GhostInAJar: "green",
+  FocusPotion: "blue",
+  PotionOfCapacity: "blue",
+  EssenceOfDarkness: "blue",
+  BottledMiracle: "purple",
+  StancePotion: "purple",
+  Ambrosia: "purple",
+};
 
 const SUPER = /super\(\s*[^,]+,\s*POTION_ID\s*,\s*AbstractPotion\.PotionRarity\.(\w+)\s*,/;
 
@@ -38,6 +56,7 @@ export function parsePotion(cls: JavaClass): PotionRecord | undefined {
     rarity: rarity as PotionRecord["rarity"],
     targetRequired: /this\.targetRequired\s*=\s*true/.test(src) || /PotionTarget|targetRequired = true/.test(src),
     combatOnly: /this\.isThrown\s*=\s*true/.test(src) || /AbstractDungeon\.getCurrRoom\(\)\.phase != AbstractRoom\.RoomPhase\.COMBAT|canUse\(\)/.test(src) && /return false/.test(src),
+    pool: CLASS_POTION_POOL[id] ?? "shared",
   };
   if (pot) rec.potency = Number(pot[1]);
   return rec;

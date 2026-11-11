@@ -22,7 +22,7 @@ jobs:
       - name: Bundle review UI into dist
         run: |
           mkdir -p web/dist/review
-          cp review/index.html review/data.js web/dist/review/
+          cp review/index.html review/data.js review/architecture.html review/logic.html review/logic-data.js review/entity-data.js review/graph.html review/graph-data.js web/dist/review/
           touch web/dist/.nojekyll
           cp web/dist/index.html web/dist/404.html
           rm -rf web/dist/assets/sts1

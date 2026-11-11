@@ -1,16 +1,34 @@
 import { describe, expect, it } from "vitest";
+import { gameActions } from "../src/actions.js";
 import {
+  addPower,
   applyDamagePowers,
   currentCost,
   dealDamage,
   drawCards,
   endTurn,
+  getPower,
+  intentDamageOf,
   makeCard,
   playCard,
+  spawnMonster,
   startCombat,
 } from "../src/combat.js";
-import { RELICS } from "../src/catalog.js";
-import { chooseNeow, finishCombat, newRun, restRecall, takeSapphireKey, usePotion } from "../src/run.js";
+import { CLASS_POTION_IDS, RELICS, potionsForColor } from "../src/catalog.js";
+import { formatPotionText } from "../src/potionEffects.js";
+import {
+  chooseNeow,
+  finishCombat,
+  newRun,
+  obtainRelic,
+  pickPotion,
+  randomRelic,
+  restRecall,
+  takeRewardRelic,
+  takeSapphireKey,
+  usePotion,
+} from "../src/run.js";
+import type { Creature } from "../src/types.js";
 import { pickMove, takeTurn } from "../src/monsters.js";
 import { generateMap, startingNodes } from "../src/map.js";
 import { CHARACTERS } from "../src/characters.js";
@@ -72,8 +90,13 @@ describe("new run + jaw worm", () => {
     if (run.combat!.hand.findIndex((c) => c.defId === "Bash") < 0) run.combat!.hand.push(makeCard(run, "Bash"));
     const idx = run.combat!.hand.findIndex((c) => c.defId === "Bash");
     run.combat!.energy = 3;
+    gameActions.trace = [];
     playCard(run, idx, jaw.id);
+    expect(gameActions.trace).toEqual(["DamageAction", "ApplyPowerAction", "UseCardAction"]);
     expect(jaw.powers.some((p) => p.id === "Vulnerable")).toBe(true);
+    expect(run.combat!.hand.some((c) => c.defId === "Bash")).toBe(false);
+    expect(run.combat!.discard.some((c) => c.defId === "Bash")).toBe(true);
+    expect(run.combat!.energy).toBe(1);
   });
 });
 
@@ -87,8 +110,67 @@ describe("characters", () => {
     expect(s.relics[0]?.id).toBe("Ring of the Snake");
     const d = newRun(7, { character: "defect" });
     expect(d.player.maxHp).toBe(75);
+    expect(d.relics[0]?.id).toBe("Cracked Core");
     const w = newRun(7, { character: "watcher" });
     expect(w.player.maxHp).toBe(72);
+    expect(w.relics[0]?.id).toBe("PureWater");
+  });
+
+  it("each hero starts with their jar starter relic and its combat hook", () => {
+    const iron = newRun(11, { character: "ironclad" });
+    expect(iron.relics.map((r) => r.id)).toEqual(["Burning Blood"]);
+    iron.player.hp = 40;
+    iron.combat = { victory: true } as never;
+    finishCombat(iron);
+    expect(iron.player.hp).toBe(46);
+
+    const silent = newRun(12, { character: "silent" });
+    startCombat(silent, "Jaw Worm", "monster");
+    expect(silent.combat!.hand.length).toBeGreaterThanOrEqual(7);
+
+    const defect = newRun(13, { character: "defect" });
+    startCombat(defect, "Jaw Worm", "monster");
+    expect(defect.combat!.orbs.some((o) => o.type === "lightning")).toBe(true);
+
+    const watcher = newRun(14, { character: "watcher" });
+    startCombat(watcher, "Jaw Worm", "monster");
+    expect(watcher.combat!.hand.some((c) => c.defId === "Miracle")).toBe(true);
+  });
+
+  it("class potions and relics never drop for the wrong hero", () => {
+    const silent = newRun(99, { character: "silent" });
+    const potions = new Set(Array.from({ length: 80 }, () => pickPotion(silent)));
+    expect([...CLASS_POTION_IDS.red, ...CLASS_POTION_IDS.blue, ...CLASS_POTION_IDS.purple].some((id) => potions.has(id))).toBe(false);
+    expect(potionsForColor("green").some((p) => p.id === "Poison Potion")).toBe(true);
+    expect(potionsForColor("green").some((p) => p.id === "BloodPotion")).toBe(false);
+
+    const relics = new Set(Array.from({ length: 80 }, () => randomRelic(silent, "uncommon")));
+    expect(relics.has("Red Skull")).toBe(false);
+    expect(RELICS.find((r) => r.id === "Ninja Scroll")?.pool).toBe("green");
+    expect(RELICS.find((r) => r.id === "Red Skull")?.pool).toBe("red");
+
+    const iron = newRun(100, { character: "ironclad" });
+    const ironPotions = new Set(Array.from({ length: 80 }, () => pickPotion(iron)));
+    expect(ironPotions.has("GhostInAJar")).toBe(false);
+    const commons = new Set(Array.from({ length: 40 }, () => randomRelic(iron, "common")));
+    expect(commons.has("Burning Blood")).toBe(false);
+  });
+
+  it("Black Blood / HolyWater replace the starter relic instead of stacking", () => {
+    const iron = newRun(21, { character: "ironclad" });
+    obtainRelic(iron, "Black Blood");
+    expect(iron.relics.map((r) => r.id)).toEqual(["Black Blood"]);
+    iron.player.hp = 40;
+    iron.combat = { victory: true } as never;
+    finishCombat(iron);
+    expect(iron.player.hp).toBe(52);
+
+    const watcher = newRun(22, { character: "watcher" });
+    watcher.rewards = { gold: 0, cards: [], relic: { id: "HolyWater", counter: 0 } };
+    takeRewardRelic(watcher);
+    expect(watcher.relics.map((r) => r.id)).toEqual(["HolyWater"]);
+    startCombat(watcher, "Jaw Worm", "monster");
+    expect(watcher.combat!.hand.filter((c) => c.defId === "Miracle").length).toBe(3);
   });
 
   it("A6 starts at 90% HP and A10 adds Ascender's Bane", () => {
@@ -186,6 +268,13 @@ describe("neow two-card options", () => {
 });
 
 describe("potions", () => {
+  it("CunningPotion loc: jar concatenates potency after #b, not a literal #", () => {
+    expect(formatPotionText("CunningPotion", "zhs")).toBe("增加 3 张 小刀+ 到你的手牌。");
+    const bark = newRun(79);
+    obtainRelic(bark, "SacredBark");
+    expect(formatPotionText("CunningPotion", "zhs", bark)).toBe("增加 6 张 小刀+ 到你的手牌。");
+  });
+
   it("Block Potion in combat: +12 block and slot cleared", () => {
     const run = newRun(77);
     startCombat(run, "Jaw Worm", "monster");
@@ -417,5 +506,221 @@ describe("The Ending (act 4)", () => {
     finishCombat(run);
     expect(run.over).toBe("victory");
     expect(run.act).toBe(4);
+  });
+});
+
+describe("jar relic + potion hooks", () => {
+  it("Kunai: every 3rd attack this turn grants 1 Dexterity", () => {
+    const run = newRun(501);
+    obtainRelic(run, "Kunai");
+    startCombat(run, "Jaw Worm", "monster");
+    const jaw = run.combat!.monsters[0]!;
+    for (let i = 0; i < 3; i++) {
+      const s = makeCard(run, "Strike_R");
+      run.combat!.hand.push(s);
+      run.combat!.energy = 3;
+      playCard(run, run.combat!.hand.length - 1, jaw.id);
+    }
+    expect(run.player.powers.find((p) => p.id === "Dexterity")?.amount).toBe(1);
+  });
+
+  it("Happy Flower grants 1 energy on the 3rd turn", () => {
+    const run = newRun(502);
+    obtainRelic(run, "Happy Flower");
+    startCombat(run, "Jaw Worm", "monster");
+    expect(run.relics.find((r) => r.id === "Happy Flower")?.counter).toBe(1);
+    endTurn(run);
+    endTurn(run);
+    expect(run.combat!.energy).toBeGreaterThanOrEqual(4);
+  });
+
+  it("BottledMiracle adds 2 Miracles; SacredBark doubles Block Potion", () => {
+    const run = newRun(503);
+    startCombat(run, "Jaw Worm", "monster");
+    run.potions[0] = { id: "BottledMiracle" };
+    usePotion(run, 0);
+    expect(run.combat!.hand.filter((c) => c.defId === "Miracle").length).toBeGreaterThanOrEqual(2);
+
+    const run2 = newRun(504);
+    obtainRelic(run2, "SacredBark");
+    startCombat(run2, "Jaw Worm", "monster");
+    run2.potions[0] = { id: "Block Potion" };
+    usePotion(run2, 0);
+    expect(run2.player.block).toBeGreaterThanOrEqual(24);
+  });
+
+  it("Tungsten Rod reduces HP loss by 1; Velvet Choker blocks the 7th play", () => {
+    const run = newRun(505);
+    obtainRelic(run, "TungstenRod");
+    startCombat(run, "Jaw Worm", "monster");
+    const before = run.player.hp;
+    dealDamage(run, run.combat!.monsters[0]!, run.player, 5);
+    expect(run.player.hp).toBe(before - 4);
+
+    const choke = newRun(506);
+    obtainRelic(choke, "Velvet Choker");
+    expect(choke.energyMaster).toBe(4);
+    startCombat(choke, "Jaw Worm", "monster");
+    expect(choke.combat!.energyMax).toBe(4);
+    const jaw = choke.combat!.monsters[0]!;
+    for (let i = 0; i < 6; i++) {
+      const s = makeCard(choke, "Defend_R");
+      choke.combat!.hand.push(s);
+      choke.combat!.energy = 4;
+      playCard(choke, choke.combat!.hand.length - 1, jaw.id);
+    }
+    const extra = makeCard(choke, "Defend_R");
+    choke.combat!.hand.push(extra);
+    choke.combat!.energy = 4;
+    const idx = choke.combat!.hand.length - 1;
+    playCard(choke, idx, jaw.id);
+    expect(choke.combat!.hand.some((c) => c.uid === extra.uid)).toBe(true);
+  });
+
+  it("Potion Belt adds two slots; Whetstone upgrades two attacks", () => {
+    const run = newRun(507);
+    obtainRelic(run, "Potion Belt");
+    expect(run.potionSlots).toBe(5);
+    expect(run.potions).toHaveLength(5);
+
+    const whet = newRun(508);
+    obtainRelic(whet, "Whetstone");
+    expect(whet.deck.filter((c) => c.defId === "Strike_R" && c.upgraded).length).toBe(2);
+  });
+
+  it("Champ first intent is an attack or buff from jar getMove", () => {
+    const run = newRun(601);
+    startCombat(run, "The Champ", "boss");
+    const champ = run.combat!.monsters[0]!;
+    expect(champ.monsterId).toBe("Champ");
+    expect(champ.nextMove).toBeDefined();
+    expect(["attack", "attack_debuff", "buff", "defend_buff", "debuff"]).toContain(champ.intent);
+  });
+});
+
+describe("poison / Artifact / Ritual / Weak intent / block (jar)", () => {
+  it("Deadly Poison applies stacks but does not deal damage until the monster's turn starts", () => {
+    const run = newRun(701, { character: "silent" });
+    startCombat(run, "Cultist", "monster");
+    const m = run.combat!.monsters[0]!;
+    const hp = m.hp;
+    const card = makeCard(run, "Deadly Poison");
+    run.combat!.hand.push(card);
+    run.combat!.energy = 3;
+    playCard(run, run.combat!.hand.length - 1, m.id);
+    expect(getPower(m, "Poison")?.amount).toBe(5);
+    expect(m.hp).toBe(hp);
+
+    endTurn(run);
+    expect(m.hp).toBe(hp - 5);
+    expect(getPower(m, "Poison")?.amount).toBe(4);
+    expect(m.alive).toBe(true);
+  });
+
+  it("Artifact blocks Poison and Weakened (ApplyPowerAction DEBUFF)", () => {
+    const run = newRun(702, { character: "silent" });
+    startCombat(run, "Jaw Worm", "monster");
+    const m = run.combat!.monsters[0]!;
+    addPower(m, "Artifact", 1);
+    addPower(m, "Poison", 5);
+    expect(getPower(m, "Poison")).toBeUndefined();
+    expect(getPower(m, "Artifact")).toBeUndefined();
+
+    addPower(m, "Artifact", 1);
+    addPower(m, "Weakened", 2);
+    expect(getPower(m, "Weakened")).toBeUndefined();
+    expect(getPower(m, "Artifact")).toBeUndefined();
+  });
+
+  it("Cultist Ritual skips Strength the round it is applied, then adds Strength", () => {
+    const run = newRun(703, { character: "silent" });
+    startCombat(run, "Cultist", "monster");
+    const m = run.combat!.monsters[0]!;
+    expect(m.nextMove).toBe(3);
+    endTurn(run);
+    expect(getPower(m, "Ritual")?.amount).toBe(3);
+    expect(getPower(m, "Strength")).toBeUndefined();
+    expect(m.intent).toBe("attack");
+    expect(intentDamageOf(run, m)).toBe(6);
+
+    endTurn(run);
+    expect(getPower(m, "Strength")?.amount).toBe(3);
+    expect(intentDamageOf(run, m)).toBe(9);
+  });
+
+  it("Weak lowers displayed intent (calculateDamage 12 * 0.75 = 9)", () => {
+    const run = newRun(704, { character: "silent" });
+    startCombat(run, "Jaw Worm", "monster");
+    const m = run.combat!.monsters[0]!;
+    m.intent = "attack";
+    m.intentDamage = 12;
+    addPower(m, "Weakened", 1);
+    expect(intentDamageOf(run, m)).toBe(9);
+  });
+
+  it("every monster loses block and ticks poison before any of them acts; Barricade keeps block", () => {
+    const run = newRun(706, { character: "silent" });
+    startCombat(run, "Jaw Worm", "monster");
+    const a = run.combat!.monsters[0]!;
+    const b = spawnMonster(run, a.monsterId!);
+    run.combat!.monsters.push(b);
+    a.block = 10;
+    b.block = 10;
+    addPower(a, "Barricade", 1);
+    addPower(a, "Poison", 4);
+    addPower(b, "Poison", 4);
+    const hpA = a.hp;
+    const hpB = b.hp;
+    // Neither move attacks: 2 is Bellow (block + strength).
+    a.nextMove = 2;
+    b.nextMove = 2;
+    a.intent = "defend_buff";
+    b.intent = "defend_buff";
+    endTurn(run);
+    expect(a.hp).toBe(hpA - 4);
+    expect(b.hp).toBe(hpB - 4);
+    expect(getPower(a, "Poison")?.amount).toBe(3);
+    expect(getPower(b, "Poison")?.amount).toBe(3);
+    expect(a.block).toBeGreaterThanOrEqual(10);
+    expect(b.block).toBeGreaterThanOrEqual(6);
+    expect(b.block).toBeLessThan(10);
+  });
+
+  it("Blur keeps block across the monster turn, then loses one stack", () => {
+    const run = newRun(707);
+    startCombat(run, "Jaw Worm", "monster");
+    const jaw = run.combat!.monsters[0]!;
+    const quiet = () => {
+      jaw.nextMove = 2;
+      jaw.intent = "defend_buff";
+      jaw.misc.skipRoll = 1;
+    };
+    run.player.block = 8;
+    addPower(run.player, "Blur", 2);
+    quiet();
+    endTurn(run);
+    expect(run.player.block).toBe(8);
+    expect(getPower(run.player, "Blur")?.amount).toBe(1);
+    quiet();
+    endTurn(run);
+    expect(run.player.block).toBe(8);
+    expect(getPower(run.player, "Blur")).toBeUndefined();
+    quiet();
+    endTurn(run);
+    expect(run.player.block).toBe(0);
+  });
+
+  it("NORMAL monster attack subtracts player block (AbstractCreature.decrementBlock)", () => {
+    const run = newRun(705, { character: "silent" });
+    startCombat(run, "Jaw Worm", "monster");
+    const defend = makeCard(run, "Defend_G");
+    run.combat!.hand.push(defend);
+    run.combat!.energy = 3;
+    playCard(run, run.combat!.hand.length - 1);
+    expect(run.player.block).toBe(5);
+    const hp = run.player.hp;
+    dealDamage(run, run.combat!.monsters[0]!, run.player, 11);
+    expect(run.player.block).toBe(0);
+    expect(run.player.hp).toBe(hp - 6);
   });
 });

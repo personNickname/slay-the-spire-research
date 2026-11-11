@@ -3,6 +3,8 @@
  * com.megacrit.cardcrawl.monsters.exordium.* and MonsterHelper.getEncounter.
  */
 import { ENCOUNTERS, hpBand, monsterDef } from "./catalog.js";
+import { MONSTER_CLASSES } from "./generated/monsters.js";
+import { monsterApi } from "./generated/runtime.js";
 import { StsRandom } from "./rng.js";
 import type { CardInst, Creature, Intent, RunState } from "./types.js";
 
@@ -23,6 +25,7 @@ export let fx: {
 
 export function bindCombat(b: typeof fx): void {
   fx = b;
+  monsterApi.fx = b;
 }
 
 function ai(run: RunState): StsRandom {
@@ -104,6 +107,14 @@ function dmgOf(run: RunState, m: Creature, key: string, a0: number, a2?: number,
 
 export function pickMove(run: RunState, m: Creature, num: number): void {
   const id = m.monsterId!;
+  const Ctor = MONSTER_CLASSES[id];
+  if (Ctor) {
+    const getMove = new Ctor().getMove;
+    if (getMove) {
+      getMove(run, m, num);
+      return;
+    }
+  }
   const r = ai(run);
   switch (id) {
     case "JawWorm": {
@@ -381,6 +392,129 @@ export function pickMove(run: RunState, m: Creature, num: number): void {
       else setMove(m, 3, "attack", echo);
       break;
     }
+    case "Champ": {
+      m.misc.numTurns = Number(m.misc.numTurns ?? 0) + 1;
+      const slash = dmgOf(run, m, "slash", 16, 18, 18);
+      const slap = dmgOf(run, m, "slap", 12, 14, 14);
+      const exec = 10;
+      if (m.hp < m.maxHp / 2 && !m.misc.threshold) {
+        m.misc.threshold = 1;
+        setMove(m, 7, "buff");
+        break;
+      }
+      if (m.misc.threshold && !lastMove(m, 3) && m.lastMoves[1] !== 3) {
+        setMove(m, 3, "attack", exec, 2);
+        break;
+      }
+      if (m.misc.numTurns === 4 && !m.misc.threshold) {
+        setMove(m, 6, "debuff");
+        m.misc.numTurns = 0;
+        break;
+      }
+      const forgeChance = asc(run, 19) ? 30 : 15;
+      if (!lastMove(m, 2) && Number(m.misc.forgeTimes ?? 0) < 2 && num <= forgeChance) {
+        m.misc.forgeTimes = Number(m.misc.forgeTimes ?? 0) + 1;
+        setMove(m, 2, "defend_buff");
+        break;
+      }
+      if (!lastMove(m, 5) && !lastMove(m, 2) && num <= 30) {
+        setMove(m, 5, "buff");
+        break;
+      }
+      if (!lastMove(m, 4) && num <= 55) setMove(m, 4, "attack_debuff", slap);
+      else if (!lastMove(m, 1)) setMove(m, 1, "attack", slash);
+      else setMove(m, 4, "attack_debuff", slap);
+      break;
+    }
+    case "BronzeAutomaton": {
+      const flail = dmgOf(run, m, "flail", 7, 8, 8);
+      const beam = dmgOf(run, m, "beam", 45, 50, 55);
+      if (!m.misc.didFirst) {
+        m.misc.didFirst = 1;
+        setMove(m, 4, "unknown");
+        break;
+      }
+      m.misc.numTurns = Number(m.misc.numTurns ?? 0);
+      if (m.misc.numTurns === 4) {
+        setMove(m, 2, "attack", beam);
+        m.misc.numTurns = 0;
+        break;
+      }
+      if (lastMove(m, 2)) {
+        setMove(m, asc(run, 19) ? 5 : 3, asc(run, 19) ? "defend_buff" : "stun");
+        break;
+      }
+      if (lastMove(m, 3) || lastMove(m, 5) || lastMove(m, 4)) setMove(m, 1, "attack", flail, 2);
+      else setMove(m, 5, "defend_buff");
+      m.misc.numTurns = Number(m.misc.numTurns) + 1;
+      break;
+    }
+    case "Donu":
+      if (m.misc.isAttacking) setMove(m, 0, "attack", dmgOf(run, m, "d", 10, 12, 12), 2);
+      else setMove(m, 2, "buff");
+      break;
+    case "Deca":
+      if (m.misc.isAttacking) setMove(m, 0, "attack_debuff", dmgOf(run, m, "d", 10, 12, 12), 2);
+      else setMove(m, 2, asc(run, 19) ? "defend_buff" : "defend");
+      break;
+    case "AwakenedOne": {
+      if (!m.misc.form2) {
+        if (!m.misc.didFirst) {
+          m.misc.didFirst = 1;
+          setMove(m, 1, "attack", 20);
+          break;
+        }
+        if (num < 25) {
+          if (!lastMove(m, 2)) setMove(m, 2, "attack", 6, 4);
+          else setMove(m, 1, "attack", 20);
+        } else if (!lastTwo(m, 1)) setMove(m, 1, "attack", 20);
+        else setMove(m, 2, "attack", 6, 4);
+      } else {
+        if (!m.misc.echo) {
+          m.misc.echo = 1;
+          setMove(m, 5, "attack", 40);
+          break;
+        }
+        if (num < 50) {
+          if (!lastTwo(m, 6)) setMove(m, 6, "attack_debuff", 18);
+          else setMove(m, 8, "attack", 10, 3);
+        } else if (!lastTwo(m, 8)) setMove(m, 8, "attack", 10, 3);
+        else setMove(m, 6, "attack_debuff", 18);
+      }
+      break;
+    }
+    case "TimeEater": {
+      const reverb = dmgOf(run, m, "rev", 7, 8, 8);
+      const slam = dmgOf(run, m, "slam", 26, 32, 32);
+      if (m.hp < m.maxHp / 2 && !m.misc.haste) {
+        m.misc.haste = 1;
+        setMove(m, 5, "buff");
+        break;
+      }
+      let n = num;
+      for (let guard = 0; guard < 6; guard++) {
+        if (n < 45) {
+          if (!lastTwo(m, 2)) {
+            setMove(m, 2, "attack", reverb, 3);
+            break;
+          }
+          n = r.randomRange(50, 99);
+          continue;
+        }
+        if (n < 80) {
+          if (!lastMove(m, 4)) setMove(m, 4, "attack_debuff", slam);
+          else if (r.randomChance(0.66)) setMove(m, 2, "attack", reverb, 3);
+          else setMove(m, 3, "defend_debuff");
+          break;
+        }
+        if (!lastMove(m, 3)) {
+          setMove(m, 3, "defend_debuff");
+          break;
+        }
+        n = r.random(74);
+      }
+      break;
+    }
     default: {
       const hp = m.maxHp;
       const hit = Math.max(6, Math.floor(hp / 12));
@@ -402,9 +536,15 @@ function addDazed(run: RunState, n: number): void {
 
 export function takeTurn(run: RunState, m: Creature): void {
   if (!m.alive || m.nextMove === undefined) return;
+  const id = m.monsterId!;
+  const Ctor = MONSTER_CLASSES[id];
+  if (Ctor) {
+    new Ctor().takeTurn(run, m);
+    commitMove(m);
+    return;
+  }
   const mv = m.nextMove;
   const player = run.player;
-  const id = m.monsterId!;
   switch (id) {
     case "JawWorm":
       if (mv === 1) fx.dealDamage(run, m, player, dmgOf(run, m, "c", 11, 12, 12));
@@ -417,8 +557,11 @@ export function takeTurn(run: RunState, m: Creature): void {
       }
       break;
     case "Cultist":
-      if (mv === 3) fx.addPower(m, "Ritual", asc(run, 2) ? 4 : 3);
-      else fx.dealDamage(run, m, player, 6);
+      if (mv === 3) {
+        let ritual = asc(run, 2) ? 4 : 3;
+        if (asc(run, 17)) ritual += 1;
+        fx.addPower(m, "Ritual", ritual);
+      } else fx.dealDamage(run, m, player, 6);
       break;
     case "FuzzyLouseNormal":
     case "FuzzyLouseDefensive":
@@ -655,6 +798,111 @@ export function takeTurn(run: RunState, m: Creature): void {
       }
       break;
     }
+    case "Champ": {
+      const slash = dmgOf(run, m, "slash", 16, 18, 18);
+      const slap = dmgOf(run, m, "slap", 12, 14, 14);
+      const str = asc(run, 19) ? 4 : asc(run, 4) ? 3 : 2;
+      const forge = asc(run, 19) ? 7 : asc(run, 9) ? 6 : 5;
+      const blk = asc(run, 19) ? 20 : asc(run, 9) ? 18 : 15;
+      if (mv === 7) {
+        m.powers = m.powers.filter((p) => !["Vulnerable", "Weakened", "Frail"].includes(p.id));
+        fx.addPower(m, "Strength", str * 3);
+      } else if (mv === 1) fx.dealDamage(run, m, player, slash);
+      else if (mv === 2) {
+        fx.gainBlock(run, m, blk);
+        fx.addPower(m, "Metallicize", forge);
+      } else if (mv === 3) {
+        fx.dealDamage(run, m, player, 10);
+        fx.dealDamage(run, m, player, 10);
+      } else if (mv === 4) {
+        fx.dealDamage(run, m, player, slap);
+        fx.addPower(player, "Frail", 2, true);
+        fx.addPower(player, "Vulnerable", 2, true);
+      } else if (mv === 5) fx.addPower(m, "Strength", str);
+      else if (mv === 6) {
+        fx.addPower(player, "Weakened", 2, true);
+        fx.addPower(player, "Vulnerable", 2, true);
+      }
+      break;
+    }
+    case "BronzeAutomaton": {
+      const flail = dmgOf(run, m, "flail", 7, 8, 8);
+      const beam = dmgOf(run, m, "beam", 45, 50, 55);
+      if (mv === 4) {
+        if (run.combat) {
+          run.combat.monsters.push(createMonster(run, "BronzeOrb"));
+          run.combat.monsters.push(createMonster(run, "BronzeOrb"));
+        }
+      } else if (mv === 1) {
+        fx.dealDamage(run, m, player, flail);
+        fx.dealDamage(run, m, player, flail);
+      } else if (mv === 5) {
+        fx.gainBlock(run, m, asc(run, 9) ? 12 : 9);
+        fx.addPower(m, "Strength", asc(run, 4) ? 4 : 3);
+      } else if (mv === 2) fx.dealDamage(run, m, player, beam);
+      break;
+    }
+    case "Donu":
+      if (mv === 0) {
+        const d = dmgOf(run, m, "d", 10, 12, 12);
+        fx.dealDamage(run, m, player, d);
+        fx.dealDamage(run, m, player, d);
+        m.misc.isAttacking = 0;
+      } else {
+        for (const ally of run.combat?.monsters.filter((x) => x.alive) ?? []) fx.addPower(ally, "Strength", 3);
+        m.misc.isAttacking = 1;
+      }
+      break;
+    case "Deca":
+      if (mv === 0) {
+        const d = dmgOf(run, m, "d", 10, 12, 12);
+        fx.dealDamage(run, m, player, d);
+        fx.dealDamage(run, m, player, d);
+        addDazed(run, 2);
+        m.misc.isAttacking = 0;
+      } else {
+        for (const ally of run.combat?.monsters.filter((x) => x.alive) ?? []) {
+          fx.gainBlock(run, ally, 16);
+          if (asc(run, 19)) fx.addPower(ally, "Plated Armor", 3);
+        }
+        m.misc.isAttacking = 1;
+      }
+      break;
+    case "AwakenedOne":
+      if (mv === 1) fx.dealDamage(run, m, player, 20);
+      else if (mv === 2) for (let i = 0; i < 4; i++) fx.dealDamage(run, m, player, 6);
+      else if (mv === 3) {
+        m.misc.form2 = 1;
+        m.misc.didFirst = 0;
+        m.alive = true;
+        m.maxHp = asc(run, 9) ? 320 : 300;
+        m.hp = m.maxHp;
+        m.powers = m.powers.filter((p) => p.id !== "Unawakened");
+      } else if (mv === 5) fx.dealDamage(run, m, player, 40);
+      else if (mv === 6) {
+        fx.dealDamage(run, m, player, 18);
+        run.combat?.draw.unshift(fx.makeCard(run, "Void"));
+      } else if (mv === 8) for (let i = 0; i < 3; i++) fx.dealDamage(run, m, player, 10);
+      break;
+    case "TimeEater": {
+      const reverb = dmgOf(run, m, "rev", 7, 8, 8);
+      const slam = dmgOf(run, m, "slam", 26, 32, 32);
+      if (mv === 2) for (let i = 0; i < 3; i++) fx.dealDamage(run, m, player, reverb);
+      else if (mv === 3) {
+        fx.gainBlock(run, m, 20);
+        fx.addPower(player, "Vulnerable", 1, true);
+        fx.addPower(player, "Weakened", 1, true);
+        if (asc(run, 19)) fx.addPower(player, "Frail", 1, true);
+      } else if (mv === 4) {
+        fx.dealDamage(run, m, player, slam);
+        if (asc(run, 19)) addSlimed(run, 2);
+      } else if (mv === 5) {
+        m.powers = m.powers.filter((p) => !["Vulnerable", "Weakened", "Frail"].includes(p.id));
+        m.hp = Math.floor(m.maxHp / 2);
+        if (asc(run, 19)) fx.gainBlock(run, m, slam);
+      }
+      break;
+    }
     default:
       if (mv === 2) fx.gainBlock(run, m, Math.max(5, Math.floor(m.maxHp / 8)));
       else if (mv === 3) fx.addPower(m, "Strength", 2);
@@ -796,3 +1044,20 @@ export function weightedPick(run: RunState, pool: { id: string; w: number }[], s
   }
   return pool[0]!.id;
 }
+
+Object.assign(monsterApi, {
+  dmgOf,
+  asc,
+  setMove,
+  addSlimed,
+  addDazed,
+  ai,
+  saveAi,
+  lastMove,
+  lastTwo,
+  commitMove,
+  createMonster,
+  misc,
+  saveMisc,
+  bool,
+});

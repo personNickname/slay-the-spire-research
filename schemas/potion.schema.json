@@ -12,7 +12,8 @@
       "rarity": { "enum": ["common", "uncommon", "rare"] },
       "potency": { "type": "integer" },
       "targetRequired": { "type": "boolean" },
-      "combatOnly": { "type": "boolean" }
+      "combatOnly": { "type": "boolean" },
+      "pool": { "enum": ["red", "green", "blue", "purple", "shared"] }
     },
     "required": ["id", "class", "name", "description", "rarity", "targetRequired", "combatOnly"],
     "additionalProperties": false

@@ -85,6 +85,9 @@ export interface CardInst {
   /** Blood for Blood current cost (before energy relics). */
   costOverride?: number;
   freeOnce?: boolean;
+  /** Blue Candle / Medical Kit: exhaust after this play. */
+  exhaustOnce?: boolean;
+  bottled?: "flame" | "lightning" | "tornado";
 }
 
 export interface Creature {
@@ -103,7 +106,7 @@ export interface Creature {
   lastMoves: number[];
   alive: boolean;
   escaped?: boolean;
-  misc: Record<string, number | boolean>;
+  misc: Record<string, number | boolean | string>;
 }
 
 export interface CombatState {
@@ -169,6 +172,8 @@ export interface RelicInst {
   id: string;
   counter: number;
   usedThisCombat?: boolean;
+  grayscale?: boolean;
+  flags?: Record<string, number>;
 }
 
 export type Screen =
@@ -258,6 +263,12 @@ export interface RunState {
   uidSeq: number;
   restHealUsed?: boolean;
   neowLament: number;
+  /** AbstractPlayer.energy.energyMaster (default 3). */
+  energyMaster: number;
+  /** AbstractPlayer.masterHandSize (default 5). */
+  handSizeMaster: number;
+  /** AbstractPlayer.masterMaxOrbs (Defect 3, else 0). */
+  masterMaxOrbs: number;
   actBosses: string[];
   /** 尾声(The Ending)三钥匙：红=篝火回忆、蓝=宝箱换取、绿=精英战利品（需已持有其他钥匙） */
   keys?: { ruby: boolean; sapphire: boolean; emerald: boolean };

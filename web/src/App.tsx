@@ -17,6 +17,8 @@ import {
   enterNode,
   finishCombat,
   formatCardText,
+  formatPotionText,
+  intentDamageOf,
   leaveRewards,
   leaveShop,
   loadRun,
@@ -44,7 +46,7 @@ import {
   upgradeCard,
   usePotion,
 } from "@sts/engine";
-import { NUM_SUB, potionWikiEn, relicWikiEn } from "./numSub";
+import { NUM_SUB, relicWikiEn } from "./numSub";
 
 const ROOM_GLYPH: Record<string, string> = {
   monster: "M",
@@ -128,6 +130,25 @@ function relicUrl(id: string): string {
   return `${import.meta.env.BASE_URL}assets/sts1/relics/${lowerCamel}.png`;
 }
 
+function ReviewLinks({ lang }: { lang: "zhs" | "eng" }) {
+  const base = import.meta.env.BASE_URL;
+  const items = [
+    ["review/index.html", "资料复审", "Database"],
+    ["review/architecture.html", "架构", "Architecture"],
+    ["review/logic.html", "逻辑", "Logic"],
+    ["review/graph.html", "进度", "Progress"],
+  ] as const;
+  return (
+    <>
+      {items.map(([href, zhs, eng]) => (
+        <a key={href} className="btn small" href={`${base}${href}`}>
+          {lang === "zhs" ? zhs : eng}
+        </a>
+      ))}
+    </>
+  );
+}
+
 export default function App() {
   const [run, setRun] = useState<RunState | null>(() => {
     if (typeof location !== "undefined" && /[?&]reset=1\b/.test(location.search)) {
@@ -167,12 +188,28 @@ export default function App() {
         <h1>{lang === "zhs" ? "杀戮尖塔" : "Slay the Spire"}</h1>
         <p>{lang === "zhs" ? "四角色 · 三幕 · 数据来自 desktop-1.0.jar" : "Four characters · three acts · data from desktop-1.0.jar"}</p>
         <div className="char-row">
-          {CHARS.map((id) => (
-            <button key={id} className={`char-pick ${character === id ? "on" : ""}`} onClick={() => setCharacter(id)}>
-              {CHARACTERS[id].name[lang]}
-            </button>
-          ))}
+          {CHARS.map((id) => {
+            const ch = CHARACTERS[id];
+            const relic = RELIC_BY_ID.get(ch.relic);
+            return (
+              <button key={id} className={`char-pick ${character === id ? "on" : ""}`} onClick={() => setCharacter(id)}>
+                <b>{ch.name[lang]}</b>
+                <span className="starter-relic">
+                  <img className="relic-icon" src={relicUrl(ch.relic)} alt="" onError={(e) => {
+                    (e.target as HTMLImageElement).style.visibility = "hidden";
+                  }} />
+                  {relic?.name[lang] ?? ch.relic}
+                </span>
+              </button>
+            );
+          })}
         </div>
+        {(() => {
+          const relic = RELIC_BY_ID.get(CHARACTERS[character].relic);
+          const raw = relic?.description?.[lang] ?? relic?.description?.zhs ?? "";
+          const desc = raw ? NUM_SUB(raw, relicWikiEn(CHARACTERS[character].relic)) : "";
+          return desc ? <p className="starter-desc">{desc}</p> : null;
+        })()}
         <label>
           {lang === "zhs" ? "种子" : "Seed"}{" "}
           <input value={seed} onChange={(e) => setSeed(e.target.value)} placeholder={lang === "zhs" ? "随机" : "random"} />
@@ -200,9 +237,7 @@ export default function App() {
         >
           {lang === "zhs" ? "开始新的冒险" : "Embark"}
         </button>
-        <a className="btn small" href={`${import.meta.env.BASE_URL}review/`}>
-          {lang === "zhs" ? "资料库" : "Database"}
-        </a>
+        <ReviewLinks lang={lang} />
       </div>
     );
   }
@@ -221,7 +256,7 @@ export default function App() {
           </div>
           <span>
             {run.player.hp}/{run.player.maxHp}
-            {run.player.block > 0 ? `  格挡 ${run.player.block}` : ""}
+            {run.player.block > 0 ? <span className="block-badge"> 格挡 {run.player.block}</span> : ""}
           </span>
         </div>
         <span className="gold">金币 {run.gold}</span>
@@ -231,7 +266,7 @@ export default function App() {
         <span className="potion-row">
           {run.potions.map((p, i) => {
             const def = p ? POTION_BY_ID.get(p.id) : undefined;
-            const desc = def && "description" in def && def.description ? def.description.zhs : undefined;
+            const desc = p ? formatPotionText(p.id, run.lang ?? "zhs", run) : undefined;
             const targetRequired = !!def && "targetRequired" in def && Boolean(def.targetRequired);
             const locked = !p || (!run.combat && targetRequired);
             return (
@@ -273,6 +308,7 @@ export default function App() {
           </span>
         )}
         <span style={{ marginLeft: "auto" }}>
+          <ReviewLinks lang={run.lang ?? "zhs"} />
           <button className="btn small" onClick={() => setDeckView(true)}>
             牌组 {run.deck.length}
           </button>
@@ -524,6 +560,7 @@ function CombatScreen({
         {cbt.monsters.map((m) => (
           <Enemy
             key={m.id}
+            run={run}
             lang={run.lang}
             m={m}
             selected={target === m.id}
@@ -701,11 +738,24 @@ function CombatScreen({
   );
 }
 
-function Enemy({ m, selected, onClick, lang = "zhs" }: { m: Creature; selected: boolean; onClick: () => void; lang?: "zhs" | "eng" }) {
+function Enemy({
+  run,
+  m,
+  selected,
+  onClick,
+  lang = "zhs",
+}: {
+  run: RunState;
+  m: Creature;
+  selected: boolean;
+  onClick: () => void;
+  lang?: "zhs" | "eng";
+}) {
   const intent = m.intent ? (lang === "eng" ? m.intent : INTENT[m.intent] ?? m.intent) : "";
+  const shown = intentDamageOf(run, m);
   const dmg =
-    m.intentDamage && (m.intent ?? "").startsWith("attack")
-      ? ` ${m.intentDamage}${m.intentHits && m.intentHits > 1 ? `×${m.intentHits}` : ""}`
+    shown != null
+      ? ` ${shown}${m.intentHits && m.intentHits > 1 ? `×${m.intentHits}` : ""}`
       : "";
   return (
     <button className={`enemy ${m.alive ? "" : "dead"} ${selected ? "selected" : ""}`} onClick={onClick}>
@@ -806,11 +856,10 @@ function RelicTag({ id }: { id: string }) {
   );
 }
 
-function PotionTag({ id }: { id: string }) {
+function PotionTag({ id, run }: { id: string; run?: RunState }) {
   const def = POTION_BY_ID.get(id);
   const name = def?.name.zhs ?? id;
-  const raw = def && "description" in def && def.description ? def.description.zhs : undefined;
-  const desc = raw ? NUM_SUB(raw, potionWikiEn(id)) : undefined;
+  const desc = formatPotionText(id, "zhs", run);
   return (
     <span className="entity-tag">
       {name}
@@ -860,7 +909,7 @@ function Rewards({ run, bump }: { run: RunState; bump: (r: RunState) => void }) 
               bump(run);
             }}
           >
-            药水：<PotionTag id={rw.potion.id} />
+            药水：<PotionTag id={rw.potion.id} run={run} />
           </button>
         </p>
       )}
@@ -965,7 +1014,7 @@ function Shop({ run, bump }: { run: RunState; bump: (r: RunState) => void }) {
               />
             ) : (
               <div>
-                {o.kind === "relic" ? <RelicTag id={o.id} /> : <PotionTag id={o.id} />}
+                {o.kind === "relic" ? <RelicTag id={o.id} /> : <PotionTag id={o.id} run={run} />}
               </div>
             )}
             <div className="gold">{o.price} 金币</div>

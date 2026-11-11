@@ -49,6 +49,44 @@ export interface PotionRecord {
 export const POTIONS = potions as PotionRecord[];
 export const POTION_BY_ID = new Map(POTIONS.map((p) => [p.id, p] as const));
 
+export type HeroColor = "red" | "green" | "blue" | "purple";
+
+/**
+ * PotionHelper.getPotions(class, false): three class potions, then the shared list.
+ * Other heroes' class potions must not appear in rewards/shop.
+ */
+export const CLASS_POTION_IDS: Record<HeroColor, readonly string[]> = {
+  red: ["BloodPotion", "ElixirPotion", "HeartOfIron"],
+  green: ["Poison Potion", "CunningPotion", "GhostInAJar"],
+  blue: ["FocusPotion", "PotionOfCapacity", "EssenceOfDarkness"],
+  purple: ["BottledMiracle", "StancePotion", "Ambrosia"],
+};
+
+const ALL_CLASS_POTION_IDS = new Set(Object.values(CLASS_POTION_IDS).flat());
+
+export function potionsForColor(color: HeroColor): PotionRecord[] {
+  return POTIONS.filter((p) => CLASS_POTION_IDS[color].includes(p.id) || !ALL_CLASS_POTION_IDS.has(p.id));
+}
+
+/** Boss relics that replace the hero's starter (BossRelicSelectScreen.relicObtainLogic). */
+export const STARTER_REPLACERS: Record<string, string> = {
+  "Black Blood": "Burning Blood",
+  "Ring of the Serpent": "Ring of the Snake",
+  FrozenCore: "Cracked Core",
+  HolyWater: "PureWater",
+};
+
+export function relicCanDrop(r: RelicRecord, color: HeroColor, owned: Set<string>, tier: string): boolean {
+  if (owned.has(r.id)) return false;
+  if (r.tier !== tier) return false;
+  if (tier === "special") return true;
+  if (r.pool === "none") return false;
+  if (r.pool && r.pool !== "shared" && r.pool !== color) return false;
+  const need = STARTER_REPLACERS[r.id];
+  if (need && !owned.has(need)) return false;
+  return true;
+}
+
 export const ENCOUNTERS = encounters as {
   acts: Record<string, { weak: { id: string; w: number }[]; strong: { id: string; w: number }[]; elite: { id: string; w: number }[]; boss: string[] }>;
   encounters: Record<string, { monsters?: string[][] }>;

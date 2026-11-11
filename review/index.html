@@ -40,6 +40,8 @@
   }
   .head-inner { max-width: 1180px; margin: 0 auto; padding: 18px 28px 0; }
   .title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .nav-links { margin-left: auto; display: flex; gap: 14px; font-size: 13.5px; flex-wrap: wrap; }
+  .nav-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
   h1 { font-size: 22px; letter-spacing: .5px; }
   h1 .accent { color: var(--accent); }
   .subtitle { color: var(--faint); font-size: 13.5px; }
@@ -216,7 +218,13 @@
   <div class="head-inner">
     <div class="title-row">
       <h1>杀戮尖塔 <span class="accent">资料复审</span></h1>
-      <span class="subtitle">网页复刻项目 · 前期研究 · 2026-11-09 · <a href="../">玩网页复刻</a></span>
+      <span class="subtitle">网页复刻项目 · 前期研究 · 2026-11-09</span>
+      <div class="nav-links">
+        <a href="../index.html">网页复刻</a>
+        <a href="architecture.html">数据层架构</a>
+        <a href="logic.html">运行时逻辑</a>
+        <a href="graph.html">复刻进度</a>
+      </div>
     </div>
     <div class="tabs">
       <button class="tab active" data-view="sts1">杀戮尖塔 1</button>

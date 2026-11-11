@@ -12,6 +12,53 @@ import type {
 } from "./types.js";
 import { StsRandom } from "./rng.js";
 import { pickMove, takeTurn as monsterTakeTurn, spawnEncounter, createMonster, bindCombat } from "./monsters.js";
+import {
+  ArtifactPower,
+  BlurPower,
+  FrailPower,
+  LikeWaterPower,
+  MetallicizePower,
+  RitualPower,
+  VulnerablePower,
+  WeakPower,
+  endOfRound,
+  ownerTurnStart,
+  tryStack,
+} from "./powers.js";
+import {
+  ApplyPowerAction,
+  CallbackAction,
+  DamageAction,
+  DiscardAtEndOfTurnAction,
+  DrawCardAction,
+  EmptyDeckShuffleAction,
+  EndTurnAction,
+  GameActionManager,
+  GainBlockAction,
+  GainEnergyAction,
+  LoseHPAction,
+  MonsterStartTurnAction,
+  StartNextTurnAction,
+  UseCardAction,
+  bindActionHooks,
+  gameActions,
+  runAction,
+} from "./actions.js";
+import {
+  bindRelics,
+  checkBloodied,
+  fireRelics,
+  hasRelic,
+  healNow,
+  healPlayer,
+  maybeUnceasingTop,
+  relicCanPlay,
+  tryLizardTail,
+} from "./relicEffects.js";
+import { bindPotions } from "./potionEffects.js";
+import { CARD_CLASSES } from "./generated/cards.js";
+import { bindCardRuntime } from "./generated/runtime.js";
+import { callPower, runPowerHooks } from "./generated/powers.js";
 
 export function froundFloor(n: number): number {
   return Math.floor(Math.fround(n));
@@ -35,7 +82,7 @@ export function makeCard(run: RunState, defId: string, upgraded = false): CardIn
   return c;
 }
 
-export function upgradeCard(c: CardInst): void {
+function upgradeCardNow(c: CardInst): void {
   const def = cardDef(c.defId);
   if (defIdIsSearing(c.defId)) {
     // upgradeDamage(4 + timesUpgraded); then ++timesUpgraded  — SearingBlow.java
@@ -49,6 +96,16 @@ export function upgradeCard(c: CardInst): void {
   c.upgraded = true;
   c.timesUpgraded += 1;
   if (c.defId === "Blood for Blood") c.costOverride = 3;
+}
+
+export function upgradeCard(c: CardInst): void {
+  const Ctor = CARD_CLASSES[c.defId];
+  const upgrade = Ctor && new Ctor().upgrade;
+  if (upgrade) {
+    upgrade(c);
+    return;
+  }
+  upgradeCardNow(c);
 }
 
 function defIdIsSearing(id: string): boolean {
@@ -93,26 +150,99 @@ export function getPower(who: Creature, id: string): PowerInst | undefined {
   return who.powers.find((p) => p.id === id);
 }
 
-export function addPower(who: Creature, id: string, amount: number, fromMonster = false): void {
+/** ApplyPowerAction: Artifact consumes itself vs PowerType.DEBUFF (Poison, Weak, … and negative Str/Dex/Focus). */
+const DEBUFF_IDS = new Set([
+  "Poison",
+  "Weakened",
+  "Vulnerable",
+  "Frail",
+  "Entangled",
+  "Constricted",
+  "Lose Strength",
+  "Lose Dexterity",
+  "Draw Reduction",
+  "Hex",
+  "Lockon",
+  "Mark",
+  "Choked",
+  "Corpse Explosion",
+  "Nails",
+  "Slow",
+  "Confusion",
+  "No Draw",
+  "No Block",
+  "Bias",
+  "Wraith Form",
+  "Energy Down",
+  "Cannot Change Stance",
+  "Block Return",
+  "Skill Burn",
+  "Attack Burn",
+  "Gain Strength",
+  "Shackled",
+]);
+
+function isDebuffPower(id: string, amount: number): boolean {
+  if (amount < 0 && (id === "Strength" || id === "Dexterity" || id === "Focus")) return true;
+  return amount > 0 && DEBUFF_IDS.has(id);
+}
+
+function consumeArtifact(who: Creature): boolean {
+  if (!getPower(who, "Artifact")) return false;
+  new ArtifactPower(who).onSpecificTrigger();
+  return true;
+}
+
+function addPowerNow(who: Creature, id: string, amount: number, fromMonster = false): void {
   if (amount === 0) return;
-  if (amount < 0 && hasPower(who, "Artifact")) {
-    addPower(who, "Artifact", -1);
+  // ApplyPowerAction ctor: Snake Skull adds 1 when the player poisons someone else.
+  if (id === "Poison" && !fromMonster && !who.isPlayer && amount > 0 && combatRun && hasRelic(combatRun, "Snake Skull")) {
+    amount += 1;
+  }
+  if (who.isPlayer && id === "Weakened" && combatRun && hasRelic(combatRun, "Ginger")) return;
+  if (who.isPlayer && id === "Frail" && combatRun && hasRelic(combatRun, "Turnip")) return;
+  if (id === "Artifact" && amount < 0) {
+    consumeArtifact(who);
     return;
   }
+  if (isDebuffPower(id, amount) && consumeArtifact(who)) {
+    if (combatRun) log(combatRun, `${who.name.zhs} 的人工制品抵消了效果`, `Artifact negated ${id}`);
+    return;
+  }
+  const championBelt = () => {
+    if (id === "Vulnerable" && !fromMonster && !who.isPlayer && combatRun && hasRelic(combatRun, "Champion Belt")) {
+      addPowerNow(who, "Weakened", 1, false);
+    }
+  };
   const existing = getPower(who, id);
   if (existing) {
-    existing.amount += amount;
-    if (existing.amount === 0) who.powers = who.powers.filter((p) => p.id !== id);
+    if (!tryStack(who, id, amount)) {
+      existing.amount += amount;
+      if (existing.amount === 0) who.powers = who.powers.filter((p) => p.id !== id);
+    }
+    championBelt();
     return;
   }
-  if (amount < 0 && (id === "Strength" || id === "Dexterity")) {
+  if (amount < 0 && (id === "Strength" || id === "Dexterity" || id === "Focus")) {
     who.powers.push({ id, amount, justApplied: fromMonster });
     return;
   }
   if (amount < 0) return;
-  const turnBased = ["Vulnerable", "Weakened", "Frail", "Lose Strength"].includes(id);
-  who.powers.push({ id, amount, justApplied: fromMonster && turnBased });
+  const turnBased = ["Vulnerable", "Weakened", "Frail", "Lose Strength", "Lose Dexterity"].includes(id);
+  const extra = id === "Ritual" && !who.isPlayer ? { skipFirst: 1 } : undefined;
+  // VulnerablePower sets justApplied only when the source is a monster and the player turn has already ended.
+  const justApplied = id === "Vulnerable" ? fromMonster && turnHasEnded : fromMonster && turnBased;
+  who.powers.push({ id, amount, justApplied, extra });
+  championBelt();
 }
+
+export function addPower(who: Creature, id: string, amount: number, fromMonster = false): void {
+  const source = fromMonster ? (combatRun?.combat?.monsters.find((m) => m.alive) ?? null) : (combatRun?.player ?? null);
+  runAction(new ApplyPowerAction(who, source, id, amount, fromMonster));
+}
+
+/** Set while a combat is resolving so relic immunities can see the run. */
+let combatRun: RunState | undefined;
 
 function rng(run: RunState, name: string): StsRandom {
   return StsRandom.fromState(run.rng[name]!);
@@ -132,21 +262,15 @@ function aliveEnemies(run: RunState): Creature[] {
   return (run.combat?.monsters ?? []).filter((m) => m.alive);
 }
 
-/** GameActionManager-style queue: addToBot appends, addToTop prepends. */
-const actionQ: Array<() => void> = [];
+/** Closures still used by a few callers; they join the same GameActionManager queue. */
 export function addToBot(fn: () => void): void {
-  actionQ.push(fn);
+  gameActions.addToBottom(new CallbackAction(fn));
 }
 export function addToTop(fn: () => void): void {
-  actionQ.unshift(fn);
+  gameActions.addToTop(new CallbackAction(fn));
 }
 export function flushActions(): void {
-  let guard = 0;
-  while (actionQ.length && guard++ < 400) {
-    const fn = actionQ.shift();
-    fn?.();
-  }
-  actionQ.length = 0;
+  gameActions.runUntilIdle();
 }
 
 function focusOf(run: RunState): number {
@@ -223,14 +347,27 @@ export function changeStance(run: RunState, next: Stance): void {
   if (hasPower(run.player, "Mental Fortress")) gainBlock(run, run.player, getPower(run.player, "Mental Fortress")!.amount);
   if (hasPower(run.player, "Nirvana") && next !== "none") gainBlock(run, run.player, getPower(run.player, "Nirvana")!.amount);
   if (hasPower(run.player, "Rushdown") && next === "wrath") drawCards(run, getPower(run.player, "Rushdown")!.amount);
+  fireRelics(run, "onChangeStance", { prevStance: prev, nextStance: next });
 }
 
 /** DamageInfo.applyPowers for a player or monster NORMAL attack. */
-export function applyDamagePowers(base: number, attacker: Creature, target: Creature, stance: Stance = "none"): number {
+export function applyDamagePowers(
+  base: number,
+  attacker: Creature,
+  target: Creature,
+  stance: Stance = "none",
+  run?: RunState,
+): number {
   let tmp = Math.fround(base);
   for (const p of attacker.powers) {
-    if (p.id === "Strength") tmp = Math.fround(tmp + p.amount);
-    if (p.id === "Weakened") tmp = Math.fround(tmp * 0.75);
+    if (p.id === "Strength") {
+      const out = callPower(run as RunState, attacker, "Strength", "atDamageGive", tmp, 0);
+      tmp = Math.fround(typeof out === "number" ? out : tmp + p.amount);
+    }
+    if (p.id === "Weakened") {
+      const crane = !!(run && !attacker.isPlayer && hasRelic(run, "Paper Crane"));
+      tmp = new WeakPower(attacker).atDamageGive(tmp, true, crane);
+    }
     if (p.id === "Vigor" && attacker.isPlayer) tmp = Math.fround(tmp + p.amount);
     if (p.id === "Angry" && attacker.isPlayer === false) {
       /* Angry is on-hit, not a multiplier */
@@ -240,7 +377,7 @@ export function applyDamagePowers(base: number, attacker: Creature, target: Crea
   if (attacker.isPlayer && stance === "divinity") tmp = Math.fround(tmp * 3);
   if (!attacker.isPlayer && target.isPlayer && stance === "wrath") tmp = Math.fround(tmp * 2);
   for (const p of target.powers) {
-    if (p.id === "Vulnerable") tmp = Math.fround(tmp * 1.5);
+    if (p.id === "Vulnerable") tmp = new VulnerablePower(target).atDamageReceive(tmp, true, run);
   }
   if (!attacker.isPlayer && target.isPlayer && hasPower(target, "Surrounded")) tmp = Math.fround(tmp * 1.5);
   return Math.max(0, froundFloor(tmp));
@@ -250,21 +387,35 @@ export function applyBlockPowers(base: number, who: Creature): number {
   let tmp = Math.fround(base);
   const dex = getPower(who, "Dexterity");
   if (dex) tmp = Math.fround(tmp + dex.amount);
-  if (hasPower(who, "Frail")) tmp = Math.fround(tmp * 0.75);
+  if (hasPower(who, "Frail")) tmp = new FrailPower(who).modifyBlock(tmp);
   return Math.max(0, froundFloor(tmp));
 }
 
-export function dealDamage(
+function dealDamageNow(
   run: RunState,
   attacker: Creature,
   target: Creature,
   base: number,
-  opts: { hpLoss?: boolean; vampire?: boolean } = {},
+  opts: { hpLoss?: boolean; vampire?: boolean; card?: CardInst } = {},
 ): number {
   if (!target.alive) return 0;
+  combatRun = run;
   const stance = run.combat?.stance ?? "none";
-  let dmg = opts.hpLoss ? base : applyDamagePowers(base, attacker, target, stance);
+  let dmg = opts.hpLoss ? base : applyDamagePowers(base, attacker, target, stance, run);
+  if (attacker.isPlayer && !opts.hpLoss && opts.card) {
+    dmg = fireRelics(run, "atDamageModify", { card: opts.card, amount: dmg });
+  }
+  if (attacker.isPlayer && !opts.hpLoss && hasPower(attacker, "PenNib")) {
+    dmg *= 2;
+    attacker.powers = attacker.powers.filter((x) => x.id !== "PenNib");
+  }
+  if (attacker.isPlayer && !opts.hpLoss) {
+    dmg = fireRelics(run, "onAttackToChangeDamage", { amount: dmg, card: opts.card, hpLoss: false });
+  }
   if (hasPower(target, "Intangible")) dmg = Math.min(dmg, 1);
+  if (target.isPlayer && !opts.hpLoss) {
+    dmg = fireRelics(run, "onAttacked", { amount: dmg, hpLoss: false, thorns: false });
+  }
 
   const thorns = getPower(target, "Thorns") ?? getPower(target, "Flame Barrier") ?? getPower(target, "Sharp Hide");
   const flame = getPower(target, "Flame Barrier");
@@ -275,12 +426,24 @@ export function dealDamage(
     const blocked = Math.min(target.block, hpDmg);
     target.block -= blocked;
     hpDmg -= blocked;
+    if (blocked > 0 && target.isPlayer) {
+      log(run, `格挡抵消 ${blocked} 点伤害（剩余 ${target.block}）`, `Blocked ${blocked}`);
+    }
   }
   const invincible = !target.isPlayer ? getPower(target, "Invincible") : undefined;
   if (invincible) {
     const lost = Number(target.misc.hpLostThisTurn ?? 0);
     if (lost >= invincible.amount) hpDmg = 0;
     else hpDmg = Math.min(hpDmg, invincible.amount - lost);
+  }
+  if (target.isPlayer && hpDmg > 0) {
+    hpDmg = fireRelics(run, "onLoseHpLast", { amount: hpDmg });
+  }
+  if (hpDmg > 0 && hasPower(target, "Buffer")) {
+    const buf = getPower(target, "Buffer")!;
+    buf.amount -= 1;
+    if (buf.amount <= 0) target.powers = target.powers.filter((x) => x.id !== "Buffer");
+    hpDmg = 0;
   }
   if (hpDmg > 0) {
     target.hp = Math.max(0, target.hp - hpDmg);
@@ -291,11 +454,37 @@ export function dealDamage(
       );
       for (const c of bfb) c.costOverride = Math.max(0, (c.costOverride ?? 4) - 1);
       if (hasPower(target, "Rupture")) addPower(target, "Strength", getPower(target, "Rupture")!.amount);
+      fireRelics(run, "wasHPLost", { amount: hpDmg });
+      checkBloodied(run);
     } else {
-      if (hasPower(run.player, "Envenom") && attacker.isPlayer && hpDmg > 0) {
-        addPower(target, "Poison", getPower(run.player, "Envenom")!.amount);
+      // CurlUp / Angry / Envenom / Mode Shift are onAttacked NORMAL, not HP_LOSS (PoisonLoseHpAction).
+      if (!opts.hpLoss) {
+        if (hasPower(run.player, "Envenom") && attacker.isPlayer && hpDmg > 0) {
+          addPower(target, "Poison", getPower(run.player, "Envenom")!.amount);
+        }
+        const curl = getPower(target, "Curl Up");
+        if (curl && !target.misc.curled) {
+          target.block += curl.amount;
+          target.misc.curled = true;
+          target.powers = target.powers.filter((p) => p.id !== "Curl Up");
+        }
+        const angry = getPower(target, "Angry");
+        if (angry) addPower(target, "Strength", angry.amount);
+        const mode = getPower(target, "Mode Shift");
+        if (mode) {
+          mode.amount -= hpDmg;
+          if (mode.amount <= 0) {
+            target.block += 20;
+            target.misc.guardianOpen = 0;
+            target.powers = target.powers.filter((p) => p.id !== "Mode Shift");
+            addPower(target, "Mode Shift", target.misc.guardianThreshold as number);
+            target.nextMove = 1;
+            target.intent = "buff";
+            target.misc.skipRoll = 1;
+          }
+        }
       }
-      // Lagavulin：受到伤害唤醒，先眩晕 1 回合（wiki/Lagavulin）
+      // Lagavulin.damage(): any HP loss (including poison) wakes it.
       if (target.misc.asleep && hpDmg > 0) {
         target.misc.asleep = 0;
         target.misc.idleCount = 0;
@@ -304,28 +493,6 @@ export function dealDamage(
         target.intent = "stun";
         target.intentDamage = undefined;
         target.intentHits = undefined;
-      }
-      const curl = getPower(target, "Curl Up");
-      if (curl && !target.misc.curled) {
-        target.block += curl.amount;
-        target.misc.curled = true;
-        target.powers = target.powers.filter((p) => p.id !== "Curl Up");
-      }
-      const angry = getPower(target, "Angry");
-      if (angry) addPower(target, "Strength", angry.amount);
-      const mode = getPower(target, "Mode Shift");
-      if (mode) {
-        mode.amount -= hpDmg;
-        if (mode.amount <= 0) {
-          // shift to defensive: gain 20 block, set misc
-          target.block += 20;
-          target.misc.guardianOpen = 0;
-          target.powers = target.powers.filter((p) => p.id !== "Mode Shift");
-          addPower(target, "Mode Shift", target.misc.guardianThreshold as number);
-          target.nextMove = 1;
-          target.intent = "buff";
-          target.misc.skipRoll = 1;
-        }
       }
     }
     if (target.hp <= 0) {
@@ -354,8 +521,27 @@ export function dealDamage(
   return hpDmg;
 }
 
+export function dealDamage(
+  run: RunState,
+  attacker: Creature,
+  target: Creature,
+  base: number,
+  opts: { hpLoss?: boolean; vampire?: boolean; card?: CardInst } = {},
+): number {
+  return runAction(new DamageAction(run, attacker, target, base, opts)).dealt;
+}
+
 function die(run: RunState, who: Creature, killer?: Creature): void {
   if (!who.alive) return;
+  if (who.monsterId === "AwakenedOne" && !who.misc.form2) {
+    who.hp = 0;
+    who.block = 0;
+    who.nextMove = 3;
+    who.intent = "buff";
+    who.misc.skipRoll = 1;
+    log(run, "觉醒者进入第二形态", "The Awakened One is reborn");
+    return;
+  }
   who.alive = false;
   who.hp = 0;
   who.block = 0;
@@ -365,13 +551,18 @@ function die(run: RunState, who: Creature, killer?: Creature): void {
     addToBot(() => splitSlime(run, who));
   }
   log(run, `${who.name.zhs} 倒下了`, `${who.name.eng} dies`);
+  if (!who.isPlayer) fireRelics(run, "onMonsterDeath", { target: who, attacker: killer });
   if (who.isPlayer) {
     const fairy = run.potions.findIndex((p) => p?.id === "FairyPotion" || p?.id === "Fairy Potion");
     if (fairy >= 0) {
       who.alive = true;
-      who.hp = Math.max(1, Math.floor(who.maxHp * 0.3));
+      who.hp = Math.max(1, Math.floor(who.maxHp * (hasRelic(run, "SacredBark") ? 0.6 : 0.3)));
       run.potions[fairy] = null;
       log(run, "瓶中精灵复活了你", "Fairy in a Bottle revives you");
+      return;
+    }
+    if (tryLizardTail(run)) {
+      log(run, "蜥蜴尾巴救了你", "Lizard Tail saves you");
       return;
     }
     run.combat!.defeat = true;
@@ -413,7 +604,7 @@ export function spawnMonster(run: RunState, id: string): Creature {
   return createMonster(run, id);
 }
 
-export function gainBlock(run: RunState, who: Creature, base: number): void {
+function gainBlockNow(run: RunState, who: Creature, base: number): void {
   const amt = applyBlockPowers(base, who);
   who.block += amt;
   const jug = getPower(who, "Juggernaut");
@@ -428,7 +619,11 @@ export function gainBlock(run: RunState, who: Creature, base: number): void {
   }
 }
 
-export function drawCards(run: RunState, n: number): CardInst[] {
+export function gainBlock(run: RunState, who: Creature, base: number): void {
+  runAction(new GainBlockAction(run, who, base));
+}
+
+function drawCardsNow(run: RunState, n: number): CardInst[] {
   if (hasPower(run.player, "No Draw")) return [];
   const cbt = run.combat!;
   const drawn: CardInst[] = [];
@@ -436,15 +631,19 @@ export function drawCards(run: RunState, n: number): CardInst[] {
     if (cbt.hand.length >= 10) break;
     if (cbt.draw.length === 0) {
       if (cbt.discard.length === 0) break;
-      const r = rng(run, "shuffle");
-      r.shuffle(cbt.discard);
-      cbt.draw.push(...cbt.discard);
-      cbt.discard = [];
-      saveRng(run, "shuffle", r);
+      runAction(new EmptyDeckShuffleAction(run));
     }
     const card = cbt.draw.pop()!;
     cbt.hand.push(card);
     drawn.push(card);
+    if (hasPower(run.player, "Confusion")) {
+      const d = cardDef(card.defId);
+      if (d.cost >= 0) {
+        const cr = rng(run, "cardRandom");
+        card.costOverride = cr.nextInt(4);
+        saveRng(run, "cardRandom", cr);
+      }
+    }
     const eff = effectOf(card.defId);
     if (eff.onDraw) runOps(run, card, eff.onDraw, undefined);
     if (hasPower(run.player, "Evolve") && cardDef(card.defId).type === "status") {
@@ -456,7 +655,23 @@ export function drawCards(run: RunState, n: number): CardInst[] {
       }
     }
   }
+  maybeUnceasingTop(run);
   return drawn;
+}
+
+export function drawCards(run: RunState, n: number): CardInst[] {
+  return runAction(new DrawCardAction(run, n)).drawn;
+}
+
+function shuffleDiscardIntoDraw(run: RunState): void {
+  const cbt = run.combat;
+  if (!cbt || cbt.discard.length === 0) return;
+  const r = rng(run, "shuffle");
+  r.shuffle(cbt.discard);
+  cbt.draw.push(...cbt.discard);
+  cbt.discard = [];
+  saveRng(run, "shuffle", r);
+  fireRelics(run, "onShuffle", {});
 }
 
 function resolveAmt(amt: Amt | undefined, nums: { damage: number; block: number; magic: number; cost: number }, run: RunState, fallback = 0): number {
@@ -497,10 +712,10 @@ function executeOp(run: RunState, card: CardInst, op: Op, target: Creature | und
           const r = rng(run, "cardRandom");
           const m = live[r.nextInt(live.length)]!;
           saveRng(run, "cardRandom", r);
-          dealDamage(run, run.player, m, base, { vampire: op.vampire });
+          dealDamage(run, run.player, m, base, { vampire: op.vampire, card });
         } else {
           for (const m of foes) {
-            if (m.alive) dealDamage(run, run.player, m, base, { vampire: op.vampire });
+            if (m.alive) dealDamage(run, run.player, m, base, { vampire: op.vampire, card });
           }
         }
       }
@@ -514,7 +729,9 @@ function executeOp(run: RunState, card: CardInst, op: Op, target: Creature | und
       if (card.defId === "Disarm") amt = -Math.abs(amt);
       const dests =
         op.target === "all_enemies" ? aliveEnemies(run) : op.target === "target" ? (target ? [target] : []) : [run.player];
-      for (const d of dests) addPower(d, op.id, amt, false);
+      for (const d of dests) {
+        addPower(d, op.id, amt, false);
+      }
       break;
     }
     case "draw":
@@ -527,7 +744,7 @@ function executeOp(run: RunState, card: CardInst, op: Op, target: Creature | und
       dealDamage(run, run.player, run.player, resolveAmt(op.amount, nums, run, 1), { hpLoss: true });
       break;
     case "heal":
-      run.player.hp = Math.min(run.player.maxHp, run.player.hp + resolveAmt(op.amount, nums, run, 1));
+      healPlayer(run, resolveAmt(op.amount, nums, run, 1));
       break;
     case "addCard": {
       const n = op.count ?? 1;
@@ -649,6 +866,7 @@ function runCustom(run: RunState, card: CardInst, id: string, target: Creature |
         cbt.draw.push(...cbt.discard);
         cbt.discard = [];
         saveRng(run, "shuffle", r);
+        fireRelics(run, "onShuffle", {});
       }
       const top = cbt.draw.pop();
       if (top) {
@@ -933,6 +1151,7 @@ function onExhaust(run: RunState, card: CardInst): void {
   if (eff.onExhaust) runOps(run, card, eff.onExhaust, undefined);
   if (hasPower(run.player, "Dark Embrace")) drawCards(run, 1);
   if (hasPower(run.player, "Feel No Pain")) gainBlock(run, run.player, getPower(run.player, "Feel No Pain")!.amount);
+  fireRelics(run, "onExhaust", { card });
 }
 
 export function needsTarget(c: CardInst): boolean {
@@ -948,6 +1167,7 @@ export function canPlay(run: RunState, c: CardInst): string | true {
   if (cost === -1 && (run.combat?.energy ?? 0) < 0) return "能量不足";
   if (hasPower(run.player, "Entangled") && def.type === "attack") return "缠身";
   if (run.combat!.hand.some((h) => h.defId === "Normality") && run.combat!.cardsPlayedThisTurn >= 3) return "正常：本回合最多 3 张";
+  if (!relicCanPlay(run, c)) return "天鹅绒颈圈：本回合最多 6 张";
   const eff = effectOf(c.defId);
   if (eff.canUse === "allAttacksInHand") {
     if (run.combat!.hand.some((h) => h.uid !== c.uid && cardDef(h.defId).type !== "attack")) return "Clash：手牌必须全是攻击";
@@ -982,52 +1202,82 @@ export function playCard(run: RunState, handIndex: number, targetId?: string): v
     log(run, String(ok), String(ok));
     return;
   }
-  const def = cardDef(card.defId);
   if (needsTarget(card) && !targetId) return;
   const target = targetId ? cbt.monsters.find((m) => m.id === targetId && m.alive) : undefined;
   if (needsTarget(card) && !target) return;
+  combatRun = run;
+  gameActions.addCardQueueItem({ card, monster: target ?? null, energyOnUse: currentCost(run, card) });
+  if (!gameActions.isRunning) gameActions.runUntilIdle();
+}
 
-  const cost = currentCost(run, card);
-  if (cost > 0) cbt.energy -= cost;
-  if (cost === -1) {
-    /* X-cost spends inside custom (0 energy is a legal play: 0 hits) */
+function invokeCardUse(run: RunState, card: CardInst, target: Creature | undefined, replay = false): void {
+  if (!replay) {
+    const use = CARD_CLASSES[card.defId] && new CARD_CLASSES[card.defId]!().use;
+    if (use) {
+      use(run, card, target);
+      return;
+    }
   }
+  playCardEffects(run, card, target, replay);
+}
+
+function playFromQueue(item: { card: CardInst | null; monster?: Creature | null; energyOnUse?: number }): void {
+  const run = combatRun;
+  const card = item.card;
+  if (!run?.combat || !card) return;
+  const cbt = run.combat;
+  const target = item.monster ?? undefined;
+  const def = cardDef(card.defId);
+  const cost = item.energyOnUse ?? currentCost(run, card);
+  if (cost > 0) cbt.energy -= cost;
   if (target) cbt.selectedTargetId = target.id;
   card.freeOnce = false;
-  cbt.hand.splice(handIndex, 1);
+  const index = cbt.hand.findIndex((h) => h.uid === card.uid);
+  if (index >= 0) cbt.hand.splice(index, 1);
   cbt.cardsPlayedThisTurn += 1;
   if (def.type === "attack") cbt.attacksPlayedThisTurn += 1;
   if (def.type === "skill") cbt.skillsPlayedThisTurn += 1;
 
-  playCardEffects(run, card, target);
-
-  const dt = getPower(run.player, "Double Tap");
-  if (dt && def.type === "attack" && (cbt.extraAttackPlays ?? 0) < dt.amount) {
-    cbt.extraAttackPlays = (cbt.extraAttackPlays ?? 0) + 1;
-    playCardEffects(run, card, target, true);
+  // Build [onPlayCard actions, card actions, onUseCard actions, UseCardAction] and let the queue run them.
+  gameActions.deferToQueue = true;
+  try {
+    fireRelics(run, "onPlayCard", { card, target });
+    invokeCardUse(run, card, target);
+    const necro = run.relics.find((r) => r.id === "Necronomicon");
+    if (necro?.flags?.replay) {
+      necro.flags.replay = 0;
+      invokeCardUse(run, card, target, true);
+    }
+    const dt = getPower(run.player, "Double Tap");
+    if (dt && def.type === "attack" && (cbt.extraAttackPlays ?? 0) < dt.amount) {
+      cbt.extraAttackPlays = (cbt.extraAttackPlays ?? 0) + 1;
+      invokeCardUse(run, card, target, true);
+    }
+    if (cbt.pending) {
+      cbt.limbo = card;
+      return;
+    }
+    gameActions.addToBottom(new UseCardAction(run, card, target ?? null));
+  } finally {
+    gameActions.deferToQueue = false;
   }
+}
 
-  // Beat of Death: every card played costs the player HP (Corrupt Heart)
-  for (const em of aliveEnemies(run)) {
-    const bod = getPower(em, "BeatOfDeath");
-    if (bod) dealDamage(run, em, run.player, bod.amount, { hpLoss: true });
-  }
-
-  if (cbt.pending) {
-    cbt.limbo = card;
-    return;
-  }
-  finishPlayedCard(run, card);
-  flushActions();
-  checkCombatEnd(run);
+function cardShouldExhaust(run: RunState, card: CardInst): boolean {
+  const def = cardDef(card.defId);
+  if (card.defId === "Limit Break" && card.upgraded) return false;
+  return !!(
+    def.exhaust ||
+    card.exhaustOnce ||
+    (card.upgraded && def.upgrade.exhaust === true) ||
+    (hasPower(run.player, "Corruption") && def.type === "skill")
+  );
 }
 
 function finishPlayedCard(run: RunState, card: CardInst): void {
   const cbt = run.combat!;
   const def = cardDef(card.defId);
-  const exhaust = def.exhaust || (card.upgraded && def.upgrade.exhaust === true) || (hasPower(run.player, "Corruption") && def.type === "skill");
-  // Limit Break upgraded: exhaust false
-  const reallyExhaust = card.defId === "Limit Break" && card.upgraded ? false : exhaust;
+  const reallyExhaust = cardShouldExhaust(run, card);
   if (reallyExhaust) {
     cbt.exhaust.push(card);
     onExhaust(run, card);
@@ -1052,7 +1302,10 @@ export function resolvePending(run: RunState, pickedUids: string[]): void {
     for (const h of cbt.hand) upgradeCard(h);
   } else if (p.kind === "discardChoose") {
     const h = take(cbt.hand, pickedUids[0]!);
-    if (h) cbt.discard.push(h);
+    if (h) {
+      cbt.discard.push(h);
+      fireRelics(run, "onManualDiscard", { card: h });
+    }
   } else if (p.kind === "armaments") {
     const h = cbt.hand.find((c) => c.uid === pickedUids[0]);
     if (h) upgradeCard(h);
@@ -1086,9 +1339,14 @@ export function resolvePending(run: RunState, pickedUids: string[]): void {
   checkCombatEnd(run);
 }
 
-function tickDebuffs(who: Creature): void {
+function loseHpToPoison(run: RunState, who: Creature, amount: number): void {
+  runAction(new LoseHPAction(run, who, who, amount));
+}
+
+/** atEndOfTurn (Flex) or atEndOfRound (Weak / Vulnerable / Frail). justApplied skips one beat. */
+function tickPowers(who: Creature, ids: string[]): void {
   for (const p of [...who.powers]) {
-    if (!["Vulnerable", "Weakened", "Frail", "Lose Strength"].includes(p.id)) continue;
+    if (!ids.includes(p.id)) continue;
     if (p.justApplied) {
       p.justApplied = false;
       continue;
@@ -1098,18 +1356,48 @@ function tickDebuffs(who: Creature): void {
       who.powers = who.powers.filter((x) => x.id !== "Lose Strength");
       continue;
     }
+    if (p.id === "Lose Dexterity") {
+      addPower(who, "Dexterity", -p.amount);
+      who.powers = who.powers.filter((x) => x.id !== "Lose Dexterity");
+      continue;
+    }
     p.amount -= 1;
     if (p.amount <= 0) who.powers = who.powers.filter((x) => x !== p);
   }
 }
 
-export function endTurn(run: RunState): void {
+const FLEX_IDS = ["Lose Strength", "Lose Dexterity"];
+
+/** True while monster turns are resolving, so Vulnerable.justApplied matches the jar (only if turnHasEnded). */
+let turnHasEnded = false;
+
+function playerEndBeforeDiscard(run: RunState): void {
   const cbt = run.combat!;
-  if (!cbt.playerTurn || cbt.pending) return;
+  fireRelics(run, "onPlayerEndTurn", {});
+  if (hasPower(run.player, "Metallicize")) {
+    new MetallicizePower(run.player).atEndOfTurnPreEndTurnCards(true, (n) => gainBlock(run, run.player, n));
+  }
+  if (hasPower(run.player, "Like Water")) {
+    new LikeWaterPower(run.player).atEndOfTurnPreEndTurnCards(true, cbt.stance, (n) => gainBlock(run, run.player, n));
+  }
+  runPowerHooks(run, run.player, "atEndOfTurnPreEndTurnCards");
   for (const h of [...cbt.hand]) {
     const e = effectOf(h.defId);
     if (e.onEndOfTurnInHand) runOps(run, h, e.onEndOfTurnInHand, undefined);
   }
+  tickPowers(run.player, FLEX_IDS);
+  if (hasPower(run.player, "Ritual")) {
+    new RitualPower(run.player).atEndOfTurn(true, (n) => addPower(run.player, "Strength", n));
+  }
+  const combust = getPower(run.player, "Combust");
+  if (combust) {
+    dealDamage(run, run.player, run.player, 1, { hpLoss: true });
+    for (const m of aliveEnemies(run)) dealDamage(run, run.player, m, combust.amount, { hpLoss: true });
+  }
+}
+
+function discardAtEndOfTurn(run: RunState): void {
+  const cbt = run.combat!;
   const keep: CardInst[] = [];
   for (const h of cbt.hand) {
     const def = cardDef(h.defId);
@@ -1119,44 +1407,58 @@ export function endTurn(run: RunState): void {
       cbt.exhaust.push(h);
       onExhaust(run, h);
     } else if (retain) keep.push(h);
-    else cbt.discard.push(h);
+    else if (hasRelic(run, "Runic Pyramid")) keep.push(h);
+    else {
+      cbt.discard.push(h);
+      GameActionManager.incrementDiscard(true);
+    }
   }
   cbt.hand = keep;
-
-  const combust = getPower(run.player, "Combust");
-  if (combust) {
-    dealDamage(run, run.player, run.player, 1, { hpLoss: true });
-    for (const m of aliveEnemies(run)) dealDamage(run, run.player, m, combust.amount, { hpLoss: true });
-  }
-  const brutality = hasPower(run.player, "Brutality");
-  void brutality;
-
   cbt.playerTurn = false;
-  for (const m of [...cbt.monsters]) {
-    if (!m.alive) continue;
-    const poison = getPower(m, "Poison");
-    if (poison && poison.amount > 0) {
-      dealDamage(run, m, m, poison.amount, { hpLoss: true });
-      poison.amount -= 1;
-      if (poison.amount <= 0) m.powers = m.powers.filter((p) => p.id !== "Poison");
-    }
-    if (!m.alive) continue;
-    // 原版规则：怪物回合开始清格挡，回合结束结算 Metallicize/Ritual
+}
+
+function preMonsterTurn(run: RunState): void {
+  const monsters = [...(run.combat?.monsters ?? [])];
+  for (const m of monsters) {
+    if (!m.alive || hasPower(m, "Barricade")) continue;
     m.block = 0;
-    monsterTakeTurn(run, m);
-    if (m.alive) {
-      const met = getPower(m, "Metallicize");
-      if (met) gainBlock(run, m, met.amount);
-      const ritual = getPower(m, "Ritual");
-      if (ritual) addPower(m, "Strength", ritual.amount);
-    }
-    if (m.alive && !m.misc.skipRoll) rollMove(run, m);
-    m.misc.skipRoll = 0;
-    if (cbt.defeat) return;
   }
+  for (const m of monsters) {
+    if (!m.alive) continue;
+    ownerTurnStart(run, m, (who, amt) => loseHpToPoison(run, who, amt));
+  }
+}
+
+function afterMonsters(run: RunState): void {
+  const cbt = run.combat!;
+  const monsters = [...cbt.monsters];
+  for (const m of monsters) {
+    if (!m.alive) continue;
+    if (hasPower(m, "Metallicize")) {
+      new MetallicizePower(m).atEndOfTurnPreEndTurnCards(false, (n) => gainBlock(run, m, n));
+    }
+    runPowerHooks(run, m, "atEndOfTurnPreEndTurnCards");
+    tickPowers(m, FLEX_IDS);
+  }
+  endOfRound(run.player);
+  for (const m of monsters) if (m.alive) endOfRound(m);
+  runPowerHooks(run, run.player, "atEndOfRound");
+  for (const m of monsters) if (m.alive) runPowerHooks(run, m, "atEndOfRound");
   flushActions();
   if (cbt.stance === "divinity") changeStance(run, "none");
   startPlayerTurn(run);
+}
+
+export function endTurn(run: RunState): void {
+  const cbt = run.combat!;
+  if (!cbt.playerTurn || cbt.pending) return;
+  combatRun = run;
+  playerEndBeforeDiscard(run);
+  gameActions.addToBottom(new DiscardAtEndOfTurnAction(run));
+  gameActions.addToBottom(new EndTurnAction());
+  gameActions.addToBottom(new MonsterStartTurnAction(run));
+  gameActions.addToBottom(new StartNextTurnAction(run));
+  gameActions.runUntilIdle();
 }
 
 function ensureCombatFields(cbt: NonNullable<RunState["combat"]>, run: RunState): void {
@@ -1176,46 +1478,41 @@ function startPlayerTurn(run: RunState): void {
   cbt.attacksPlayedThisTurn = 0;
   cbt.skillsPlayedThisTurn = 0;
   cbt.extraAttackPlays = 0;
-  if (!hasPower(run.player, "Barricade") && !hasPower(run.player, "Blur")) run.player.block = 0;
-  if (hasPower(run.player, "Blur")) run.player.powers = run.player.powers.filter((p) => p.id !== "Blur");
-  tickDebuffs(run.player);
-  for (const m of cbt.monsters) if (m.alive) tickDebuffs(m);
+  turnHasEnded = false;
+  // Player poison is atStartOfTurn, before block is cleared (HP_LOSS, so block would not stop it anyway).
+  ownerTurnStart(run, run.player, (who, amt) => loseHpToPoison(run, who, amt));
+  if (!hasPower(run.player, "Barricade") && !hasPower(run.player, "Blur")) {
+    if (hasRelic(run, "Calipers")) run.player.block = Math.max(0, run.player.block - 15);
+    else run.player.block = 0;
+  }
+  // BlurPower.atEndOfRound is queued and therefore resolves after the block check above.
+  if (hasPower(run.player, "Blur")) new BlurPower(run.player).atEndOfRound();
   for (const m of cbt.monsters) m.misc.hpLostThisTurn = 0;
 
-  cbt.energy = cbt.energyMax;
+  const ntb = getPower(run.player, "Next Turn Block");
+  if (ntb) {
+    gainBlock(run, run.player, ntb.amount);
+    run.player.powers = run.player.powers.filter((p) => p.id !== "Next Turn Block");
+  }
+
+  if (hasRelic(run, "Ice Cream")) {
+    if (cbt.turn === 1) cbt.energy = cbt.energyMax;
+    else cbt.energy += cbt.energyMax;
+  } else cbt.energy = cbt.energyMax;
   const nte = getPower(run.player, "Next Turn Energy");
   if (nte) {
-    cbt.energy += nte.amount;
+    runAction(new GainEnergyAction(run, nte.amount));
     run.player.powers = run.player.powers.filter((p) => p.id !== "Next Turn Energy");
   }
-  if (hasPower(run.player, "Berserk")) cbt.energy += getPower(run.player, "Berserk")!.amount;
-  if (hasPower(run.player, "Demon Form")) addPower(run.player, "Strength", getPower(run.player, "Demon Form")!.amount);
-  if (hasPower(run.player, "Metallicize")) gainBlock(run, run.player, getPower(run.player, "Metallicize")!.amount);
-  if (hasPower(run.player, "Brutality")) {
-    dealDamage(run, run.player, run.player, 1, { hpLoss: true });
-    drawCards(run, 1);
-  }
-  const ritual = getPower(run.player, "Ritual");
-  if (ritual) addPower(run.player, "Strength", ritual.amount);
+  if (hasPower(run.player, "Berserk")) runAction(new GainEnergyAction(run, getPower(run.player, "Berserk")!.amount));
 
-  // relics: lantern first turn
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Lantern")) cbt.energy += 1;
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Anchor")) gainBlock(run, run.player, 10);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Vajra")) addPower(run.player, "Strength", 1);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Oddly Smooth Stone")) addPower(run.player, "Dexterity", 1);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Akabeko")) addPower(run.player, "Vigor", 8);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Bronze Scales")) addPower(run.player, "Thorns", 3);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Cracked Core")) channelOrb(run, "lightning");
-  if (hasPower(run.player, "Like Water") && cbt.stance === "calm") {
-    gainBlock(run, run.player, getPower(run.player, "Like Water")!.amount);
+  fireRelics(run, "atTurnStart", { kind: run.roomKind as "monster" | "elite" | "boss" | undefined });
+  const damaru = run.relics.find((x) => x.id === "Damaru");
+  if (damaru?.flags?.enterDivinity) {
+    damaru.flags.enterDivinity = 0;
+    changeStance(run, "divinity");
   }
-  if (hasPower(run.player, "Noxious Fumes")) {
-    for (const m of aliveEnemies(run)) addPower(m, "Poison", getPower(run.player, "Noxious Fumes")!.amount);
-  }
-  if (hasPower(run.player, "Infinite Blades")) {
-    const shiv = makeCard(run, "Shiv");
-    if (cbt.hand.length < 10) cbt.hand.push(shiv);
-  }
+  runPowerHooks(run, run.player, "atStartOfTurn");
   if (hasPower(run.player, "Storm")) channelOrb(run, "lightning");
   if (hasPower(run.player, "Devotion")) {
     cbt.mantra += getPower(run.player, "Devotion")!.amount;
@@ -1224,22 +1521,18 @@ function startPlayerTurn(run: RunState): void {
       changeStance(run, "divinity");
     }
   }
-  if (hasPower(run.player, "Blur")) {
-    /* keep block this turn — skip the earlier clear? already cleared. Blur keeps next turn. */
-  }
-  if (!hasPower(run.player, "Barricade") && !hasPower(run.player, "Blur")) {
-    /* block already cleared */
-  } else if (hasPower(run.player, "Blur")) {
-    /* Blur: block was already wiped — apply at end of previous turn instead. */
-  }
   passiveOrbs(run);
-  drawCards(run, 5);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Bag of Preparation")) drawCards(run, 2);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "Ring of the Snake")) drawCards(run, 2);
-  if (cbt.turn === 1 && run.relics.some((r) => r.id === "PureWater")) {
-    const m = makeCard(run, "Miracle");
-    if (cbt.hand.length < 10) cbt.hand.push(m);
-  }
+  const handSize = run.handSizeMaster ?? 5;
+  drawCards(run, handSize);
+  runPowerHooks(run, run.player, "atStartOfTurnPostDraw");
+  if (cbt.turn === 1) fireRelics(run, "atBattleStart", { kind: run.roomKind as "monster" | "elite" | "boss" | undefined });
+  fireRelics(run, "atTurnStartPostDraw", { kind: run.roomKind as "monster" | "elite" | "boss" | undefined });
+}
+
+/** AbstractMonster.calculateDamage: intent number after Strength / Weak / Vulnerable. */
+export function intentDamageOf(run: RunState, m: Creature): number | undefined {
+  if (m.intentDamage == null || !(m.intent ?? "").startsWith("attack")) return undefined;
+  return applyDamagePowers(m.intentDamage, m, run.player, run.combat?.stance ?? "none", run);
 }
 
 export function rollMove(run: RunState, m: Creature): void {
@@ -1277,10 +1570,14 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
   const placeOnTop: CardInst[] = [];
   const pile: CardInst[] = [];
   for (const c of draw) {
-    if (cardDef(c.defId).innate || (c.upgraded && cardDef(c.defId).upgrade.innate)) placeOnTop.push(c);
+    if (c.bottled || cardDef(c.defId).innate || (c.upgraded && cardDef(c.defId).upgrade.innate)) placeOnTop.push(c);
     else pile.push(c);
   }
   pile.push(...placeOnTop);
+
+  if (run.energyMaster == null) run.energyMaster = 3;
+  if (run.handSizeMaster == null) run.handSizeMaster = 5;
+  if (run.masterMaxOrbs == null) run.masterMaxOrbs = run.character === "defect" ? 3 : 0;
 
   run.player.block = 0;
   run.player.powers = [];
@@ -1290,8 +1587,8 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
     discard: [],
     exhaust: [],
     monsters,
-    energy: 3,
-    energyMax: 3,
+    energy: 0,
+    energyMax: run.energyMaster,
     turn: 0,
     playerTurn: true,
     cardsPlayedThisTurn: 0,
@@ -1299,7 +1596,7 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
     skillsPlayedThisTurn: 0,
     extraAttackPlays: 0,
     orbs: [],
-    orbSlots: run.character === "defect" ? 3 : 0,
+    orbSlots: run.masterMaxOrbs,
     stance: "none",
     mantra: 0,
   };
@@ -1331,6 +1628,16 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
       addPower(m, "Invincible", run.ascension >= 19 ? 200 : 300);
       m.misc.buffCount = 0;
     }
+    if (m.monsterId === "BronzeAutomaton") addPower(m, "Artifact", 3);
+    if (m.monsterId === "TimeEater") addPower(m, "Time Warp", 1);
+    if (m.monsterId === "AwakenedOne") {
+      addPower(m, "Unawakened", 1);
+      if (run.ascension >= 4) addPower(m, "Strength", 2);
+    }
+    if (m.monsterId === "Donu" || m.monsterId === "Deca") {
+      addPower(m, "Artifact", run.ascension >= 19 ? 3 : 2);
+      if (m.monsterId === "Deca") m.misc.isAttacking = 1;
+    }
     if (m.monsterId === "FungiBeast") addPower(m, "Spore Cloud", 2);
     if (m.monsterId === "FuzzyLouseNormal" || m.monsterId === "FuzzyLouseDefensive") {
       const hpR = rng(run, "monsterHp");
@@ -1342,7 +1649,34 @@ export function startCombat(run: RunState, encounter: string, kind: "monster" | 
   if (monsters.some((m) => m.monsterId === "SpireShield" || m.monsterId === "SpireSpear")) {
     addPower(run.player, "Surrounded", 1, true);
   }
+  combatRun = run;
+  fireRelics(run, "atPreBattle", { kind });
+  fireRelics(run, "atBattleStartPreDraw", { kind });
+  const tear = run.relics.find((x) => x.id === "TeardropLocket");
   startPlayerTurn(run);
+  if (tear?.flags?.enterCalm) {
+    tear.flags.enterCalm = 0;
+    changeStance(run, "calm");
+  }
+}
+
+export function playTopCard(run: RunState): void {
+  const cbt = run.combat;
+  if (!cbt) return;
+  if (cbt.draw.length === 0) {
+    if (!cbt.discard.length) return;
+    const r = rng(run, "shuffle");
+    r.shuffle(cbt.discard);
+    cbt.draw.push(...cbt.discard);
+    cbt.discard = [];
+    saveRng(run, "shuffle", r);
+    fireRelics(run, "onShuffle", {});
+  }
+  const top = cbt.draw.pop();
+  if (!top) return;
+  const t = needsTarget(top) ? aliveEnemies(run)[0] : undefined;
+  playCardEffects(run, top, t, true);
+  finishPlayedCard(run, top);
 }
 
 export function formatCardText(run: RunState, c: CardInst): { name: string; type: string; cost: string; text: string } {
@@ -1354,7 +1688,7 @@ export function formatCardText(run: RunState, c: CardInst): { name: string; type
     const t =
       run.combat.monsters.find((m) => m.id === run.combat!.selectedTargetId && m.alive) ??
       run.combat.monsters.find((m) => m.alive);
-    if (t && def.type === "attack") dmg = applyDamagePowers(dmg, run.player, t, run.combat.stance);
+    if (t && def.type === "attack") dmg = applyDamagePowers(dmg, run.player, t, run.combat.stance, run);
   }
   const blk = run.combat ? applyBlockPowers(nums.block, run.player) : nums.block;
   const lang = run.lang ?? "zhs";
@@ -1365,6 +1699,7 @@ export function formatCardText(run: RunState, c: CardInst): { name: string; type
     .replace(/!D!/g, String(dmg))
     .replace(/!B!/g, String(blk))
     .replace(/!M!/g, String(nums.magic))
+    .replace(/#[yrgbp]/gi, "")
     // StS 能量图标标记：[R]红 [G]绿 [B]蓝 [E]通用 [W]白 → 彩色圆点（MiniCard 以 HTML 渲染 .ctext）
     .replace(/\[R\]/g, '<span class="e-ico r"></span>')
     .replace(/\[G\]/g, '<span class="e-ico g"></span>')
@@ -1382,5 +1717,82 @@ export function selectCombatTarget(run: RunState, id: string | undefined): void 
   if (run.combat) run.combat.selectedTargetId = id;
 }
 
+bindCardRuntime((run, card, target) => playCardEffects(run, card, target), upgradeCardNow);
 bindCombat({ addPower, dealDamage, gainBlock, makeCard, log });
+bindRelics({
+  addPower,
+  dealDamage,
+  gainBlock,
+  makeCard,
+  drawCards,
+  channelOrb,
+  upgradeCard,
+  log,
+});
+bindPotions({
+  addPower,
+  dealDamage,
+  gainBlock,
+  makeCard,
+  drawCards,
+  channelOrb,
+  upgradeCard,
+  changeStance,
+  playTopCard,
+  pickPotion: () => "Block Potion",
+});
+bindActionHooks({
+  damage: dealDamageNow,
+  block: gainBlockNow,
+  applyPower: addPowerNow,
+  draw: drawCardsNow,
+  shuffleDiscard: shuffleDiscardIntoDraw,
+  discardAtEndOfTurn,
+  preMonsterTurn,
+  actMonster: monsterTakeTurn,
+  rollMove,
+  afterMonsters,
+  heal: (run, who, amount) => (who.isPlayer ? healNow(run, amount) : 0),
+  reducePower: (who, id, amount) => {
+    const p = getPower(who, id);
+    if (!p) return;
+    p.amount -= amount;
+    if (p.amount <= 0) who.powers = who.powers.filter((x) => x.id !== id);
+  },
+  removePower: (who, id) => {
+    who.powers = who.powers.filter((x) => x.id !== id);
+  },
+  markTurnEnded: (ended) => {
+    turnHasEnded = ended;
+  },
+  playQueued: playFromQueue,
+  cardShouldExhaust: (run, card) => cardShouldExhaust(run, card),
+  onUseCard: (run, card, action) => {
+    fireRelics(run, "onUseCard", { card, target: action.target ?? undefined });
+    if (hasPower(run.player, "Corruption") && cardDef(card.defId).type === "skill") action.exhaustCard = true;
+  },
+  onAfterUseCard: (run, card) => {
+    const cbt = run.combat;
+    if (!cbt) return;
+    for (const em of aliveEnemies(run)) {
+      const bod = getPower(em, "BeatOfDeath");
+      if (bod) dealDamage(run, em, run.player, bod.amount, { hpLoss: true });
+      const warp = getPower(em, "Time Warp");
+      if (warp) {
+        warp.extra = warp.extra ?? {};
+        warp.extra.cards = Number(warp.extra.cards ?? 0) + 1;
+        if (warp.extra.cards >= 12) {
+          warp.extra.cards = 0;
+          addPower(em, "Strength", 2);
+          cbt.playerTurn = false;
+        }
+      }
+    }
+    void card;
+  },
+  finishCard: (run, card) => {
+    finishPlayedCard(run, card);
+    checkCombatEnd(run);
+  },
+});
 

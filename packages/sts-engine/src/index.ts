@@ -1,7 +1,19 @@
 export { StsRandom, makeSeed } from "./rng.js";
 export type { RngState } from "./rng.js";
 export * from "./types.js";
-export { CARD_BY_ID, CARDS, IRONCLAD_STARTER, POWER_NAMES, RELIC_BY_ID, POTION_BY_ID, cardDef, monsterDef } from "./catalog.js";
+export {
+  CARD_BY_ID,
+  CARDS,
+  CLASS_POTION_IDS,
+  IRONCLAD_STARTER,
+  POTION_BY_ID,
+  POWER_NAMES,
+  RELIC_BY_ID,
+  STARTER_REPLACERS,
+  cardDef,
+  monsterDef,
+  potionsForColor,
+} from "./catalog.js";
 export { CHARACTERS } from "./characters.js";
 export {
   applyBlockPowers,
@@ -13,6 +25,7 @@ export {
   endTurn,
   formatCardText,
   hasPower,
+  intentDamageOf,
   makeCard,
   needsTarget,
   playCard,
@@ -32,6 +45,9 @@ export {
   leaveRewards,
   leaveShop,
   newRun,
+  obtainRelic,
+  pickPotion,
+  randomRelic,
   restHeal,
   restRecall,
   restSmith,
@@ -44,6 +60,7 @@ export {
   takeSapphireKey,
   usePotion,
 } from "./run.js";
+export { formatPotionText, potionPotency } from "./potionEffects.js";
 
 
 export function atBossGate(run: { current: { x: number; y: number } | null; map?: { room?: string }[][]; act?: number }): boolean {

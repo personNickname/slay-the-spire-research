@@ -8,7 +8,11 @@
     "extract-assets": "tsx src/extract-assets.ts",
     "export-effects": "tsx src/export-effects.ts",
     "validate": "tsx src/validate.ts",
-    "diff-baseline": "tsx src/diff-baseline.ts"
+    "diff-baseline": "tsx src/diff-baseline.ts",
+    "logic-index": "tsx src/logic-index.ts",
+    "entity-index": "tsx src/entity-index.ts",
+    "logic-graph": "tsx src/logic-graph.ts",
+    "port-batch": "tsx src/port-batch.ts"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
