@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杀戮尖塔 1 — 逻辑调用图</title>
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f7f9fc; --text: #1f2733; --dim: #5b6675; --faint: #8a94a6;
+    --accent: #2563eb; --accent-soft: #eaf1fe; --border: #e3e8ef; --green: #1f8a4c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; display: flex; flex-direction: column; }
+  header { border-bottom: 1px solid var(--border); padding: 10px 18px 8px; flex: none; }
+  .title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  h1 { font-size: 18px; }
+  h1 .accent { color: var(--accent); }
+  .nav-links { margin-left: auto; display: flex; gap: 14px; font-size: 13px; }
+  .nav-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .bar-row { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+  .bar { flex: 1; height: 10px; background: #e7edf4; border-radius: 6px; overflow: hidden; min-width: 120px; }
+  .bar > div { height: 100%; width: 0; background: var(--green); }
+  .pct { font-weight: 800; color: var(--green); font-variant-numeric: tabular-nums; }
+  .dim { color: var(--dim); font-size: 12.5px; }
+  .stage-wrap { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) 340px; min-height: 0; }
+  #stage { position: relative; background: linear-gradient(#fbfcfe, #f4f7fb); min-height: 0; }
+  canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+  canvas.drag { cursor: grabbing; }
+  #tip { position: absolute; pointer-events: none; background: #1f2733; color: #fff; font-size: 12px; padding: 4px 8px; border-radius: 6px; display: none; max-width: 280px; z-index: 2; }
+  aside { border-left: 1px solid var(--border); overflow: auto; padding: 14px 16px 28px; background: #fff; }
+  aside h2 { font-size: 14px; margin: 14px 0 6px; }
+  aside p, aside li { font-size: 13px; line-height: 1.6; color: var(--dim); }
+  aside ul { margin: 4px 0 8px 18px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+  input[type="search"] { font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; width: 100%; }
+  button.btn { font: inherit; font-size: 12.5px; padding: 4px 10px; border: 1px solid var(--border); background: #fff; border-radius: 8px; cursor: pointer; color: var(--dim); }
+  button.btn:hover { color: var(--text); }
+  .hit { display: block; width: 100%; text-align: left; font: inherit; font-size: 13px; padding: 5px 8px; border: 0; border-bottom: 1px solid var(--border); background: #fff; cursor: pointer; }
+  .hit:hover, .hit.on { background: var(--accent-soft); }
+  .hit b { font-weight: 650; }
+  .mini { height: 6px; background: #e7edf4; border-radius: 4px; margin-top: 3px; }
+  .mini > div { height: 100%; background: var(--green); border-radius: 4px; }
+  .lod { font-size: 12.5px; color: var(--accent); font-weight: 700; }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; }
+  #detail .name { font-size: 16px; font-weight: 750; color: var(--text); }
+  #detail .sub { color: var(--faint); font-size: 12px; margin-bottom: 6px; }
+  @media (max-width: 860px) { .stage-wrap { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid var(--border); max-height: 42vh; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="title-row">
+    <h1>杀戮尖塔 1 — <span class="accent">逻辑调用图</span></h1>
+    <span class="dim" id="hdr"></span>
+    <div class="nav-links">
+      <a href="../index.html">网页复刻</a>
+      <a href="index.html">资料复审</a>
+      <a href="architecture.html">数据层架构</a>
+      <a href="logic.html">运行时逻辑</a>
+    </div>
+  </div>
+  <div class="bar-row">
+    <span class="pct" id="pct">0%</span>
+    <div class="bar" title="按代码行加权的逻辑复刻进度"><div id="pct-fill"></div></div>
+    <span class="lod" id="lod">种类</span>
+    <button class="btn" id="fit">总览</button>
+    <label class="dim"><input type="checkbox" id="show-all"> 显示画面 / 音效 / UI</label>
+  </div>
+</header>
+<div class="stage-wrap">
+  <div id="stage"><canvas id="cv"></canvas><div id="tip"></div></div>
+  <aside id="side">
+    <h2>这张图怎么定义</h2>
+    <ul>
+      <li><b style="color:var(--text)">节点是一个类。</b>这里一个类一个文件，所以和文件是一回事。方法不做成节点，完成度才跟「一个类移植完」对齐。</li>
+      <li><b style="color:var(--text)">边是调用。</b>类体里出现 <code>new 另一个类</code> 或 <code>另一个类.方法(</code> 就有一条边，次数记在边上。继承写在详情里，不画成边。</li>
+      <li><b style="color:var(--text)">缩放决定聚合。</b>远看按种类，再近按包，最近才是类。边上的次数加总到当前这一层。</li>
+    </ul>
+    <p id="rule"></p>
+    <div class="toolbar"><input id="q" type="search" placeholder="找一个类，例如 PoisonPower、Cultist"></div>
+    <div id="hits"></div>
+    <h2>种类</h2>
+    <div id="kinds"></div>
+    <h2>当前节点</h2>
+    <div id="detail"><p>单击一个圆进入下一层。点到类之后，这里给出它为什么还没完成。</p></div>
+  </aside>
+</div>
+<script src="graph-data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var G = window.GRAPH;
+  var cv = document.getElementById("cv");
+  var ctx = cv.getContext("2d");
+  var tip = document.getElementById("tip");
+  if (!G) {
+    document.getElementById("hdr").textContent = "缺少 graph-data.js，先运行 npm run -w tools logic-graph";
+    return;
+  }
+  var ZH = {
+    action: "动作", actions: "动作队列", power: "能力", relic: "遗物", card: "卡牌", cards: "卡牌库",
+    monster: "怪物", monsters: "怪物组", potion: "药水", potions: "药水库", orb: "充能球", stance: "姿态",
+    blight: "荒疫", event: "事件", events: "事件库", room: "房间", rooms: "房间库", dungeon: "地牢",
+    character: "角色", characters: "角色库", chest: "宝箱", vfx: "特效", core: "核心", helpers: "辅助",
+    map: "地图", shop: "商店", neow: "涅奥", rewards: "奖励", random: "随机", ui: "界面", screens: "界面屏",
+    audio: "音效", localization: "本地化", unlock: "解锁", integrations: "外部接口", daily: "每日挑战",
+    scenes: "场景", cutscenes: "过场", credits: "制作人员", desktop: "桌面", metrics: "统计", trials: "试炼"
+  };
+  var nonLogic = {};
+  G.nonLogic.forEach(function (k) { nonLogic[k] = 1; });
+  var zh = function (k) { return ZH[k] || k; };
+
+  var nodes = G.nodes.map(function (n, i) {
+    return { i: i, name: n[0], pkg: n[1] || "(根)", kind: n[2], lines: n[3], ext: n[4], pct: n[5], has: n[6], methods: n[7], x: 0, y: 0, r: 14 };
+  });
+  var outE = nodes.map(function () { return []; });
+  var inE = nodes.map(function () { return []; });
+  G.edges.forEach(function (e) { outE[e[0]].push(e); inE[e[1]].push(e); });
+
+  var showAll = false;
+  var kinds = [];
+  var cam = { x: 0, y: 0, z: 1 };
+  var entryZ = 1;
+  var view = { level: "kind", kind: null, pkg: null };
+  var picked = null;
+  var hover = null;
+  var dirty = true;
+
+  function placeRing(items, radiusOf) {
+    if (!items.length) return 0;
+    if (items.length === 1) { items[0].x = 0; items[0].y = 0; return radiusOf(items[0]); }
+    var radii = items.map(radiusOf);
+    var gap = 28;
+    var circ = 0;
+    var maxR = 0;
+    radii.forEach(function (r) { circ += 2 * r + gap; if (r > maxR) maxR = r; });
+    var R = Math.max(circ / (2 * Math.PI) * 1.5, maxR * 2.2);
+    var a = -Math.PI / 2;
+    items.forEach(function (it, i) {
+      var step = (2 * radii[i] + gap) / R;
+      a += step / 2;
+      it.x = Math.cos(a) * R;
+      it.y = Math.sin(a) * R;
+      a += step / 2;
+    });
+    return R + maxR;
+  }
+  function build() {
+    var byKind = {};
+    nodes.forEach(function (n) {
+      if (!showAll && nonLogic[n.kind]) return;
+      (byKind[n.kind] = byKind[n.kind] || []).push(n);
+    });
+    kinds = Object.keys(byKind).map(function (id) {
+      var list = byKind[id];
+      var byPkg = {};
+      list.forEach(function (c) { (byPkg[c.pkg] = byPkg[c.pkg] || []).push(c); });
+      var pkgs = Object.keys(byPkg).sort(function (a, b) { return byPkg[b].length - byPkg[a].length; }).map(function (pkg) {
+        var cs = byPkg[pkg].slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
+        cs.forEach(function (c) { c.r = 18 + Math.min(14, Math.sqrt(c.lines) / 5); });
+        placeRing(cs, function (c) { return c.r + 10; });
+        cs.forEach(function (c) { c.lx = c.x; c.ly = c.y; });
+        var pr = 0;
+        cs.forEach(function (c) { pr = Math.max(pr, Math.hypot(c.lx, c.ly) + c.r); });
+        return { id: pkg, kind: id, classes: cs, r: Math.max(pr, 28), drawR: Math.max(46, Math.min(34 + cs.length * 1.4, 92)) };
+      });
+      placeRing(pkgs, function (p) { return p.drawR + 24; });
+      pkgs.forEach(function (p) { p.lx = p.x; p.ly = p.y; });
+      var lines = list.reduce(function (a, c) { return a + c.lines; }, 0);
+      return { id: id, classes: list, pkgs: pkgs, lines: lines, drawR: 78 };
+    }).sort(function (a, b) { return b.lines - a.lines; });
+    var R = Math.max(220, kinds.length * 16);
+    kinds.forEach(function (k, i) {
+      var a = -Math.PI / 2 + (i / kinds.length) * Math.PI * 2;
+      k.x = Math.cos(a) * R;
+      k.y = Math.sin(a) * R;
+      k.drawR = 64 + Math.min(36, Math.sqrt(k.lines) / 6);
+    });
+    renderKindList();
+  }
+  function agg(list) {
+    var lines = 0, done = 0, counted = 0;
+    list.forEach(function (c) {
+      if (nonLogic[c.kind]) return;
+      counted += c.lines; lines += c.lines; done += c.lines * c.pct;
+    });
+    if (!counted) {
+      list.forEach(function (c) { lines += c.lines; done += c.lines * c.pct; });
+      return { pct: lines ? done / lines : 0, counted: false, lines: lines };
+    }
+    return { pct: done / lines, counted: true, lines: counted };
+  }
+  function itemsOfView() {
+    if (view.level === "kind") return kinds.map(function (k) { return { x: k.x, y: k.y, r: k.drawR }; });
+    if (view.level === "pkg") return view.kind.pkgs.map(function (p) { return { x: p.lx, y: p.ly, r: p.drawR }; });
+    return view.pkg.classes.map(function (c) { return { x: c.lx, y: c.ly, r: c.r + 8 }; });
+  }
+  function fit() {
+    var items = itemsOfView();
+    if (!items.length) return;
+    var minx = 1e9, maxx = -1e9, miny = 1e9, maxy = -1e9;
+    items.forEach(function (it) {
+      minx = Math.min(minx, it.x - it.r); maxx = Math.max(maxx, it.x + it.r);
+      miny = Math.min(miny, it.y - it.r); maxy = Math.max(maxy, it.y + it.r);
+    });
+    var w = cv.clientWidth || 800, h = cv.clientHeight || 600;
+    cam.z = Math.min(w / (maxx - minx + 48), h / (maxy - miny + 48));
+    cam.x = (minx + maxx) / 2;
+    cam.y = (miny + maxy) / 2;
+    if (view.level === "class") {
+      var sample = items.reduce(function (a, it) { return a + it.r; }, 0) / items.length || 20;
+      var minZ = 20 / sample;
+      if (cam.z < minZ) {
+        cam.z = minZ;
+        cam.x = view.pkg.classes[0].lx;
+        cam.y = view.pkg.classes[0].ly;
+      }
+    }
+    entryZ = cam.z;
+    dirty = true;
+  }
+  function enterKind(k) { view = { level: "pkg", kind: k, pkg: null }; picked = null; fit(); }
+  function enterPkg(p) { view = { level: "class", kind: view.kind, pkg: p }; picked = null; fit(); }
+  function popView() {
+    if (view.level === "class") view = { level: "pkg", kind: view.kind, pkg: null };
+    else view = { level: "kind", kind: null, pkg: null };
+    picked = null;
+    showDetail(null);
+    fit();
+  }
+  function toScreen(x, y) {
+    return [cv.clientWidth / 2 + (x - cam.x) * cam.z, cv.clientHeight / 2 + (y - cam.y) * cam.z];
+  }
+  function visibleNodes() {
+    var out = [];
+    if (view.level === "kind") {
+      kinds.forEach(function (k) { out.push({ t: "kind", ref: k, x: k.x, y: k.y, r: k.drawR, title: zh(k.id), sub: k.classes.length + " 类", stat: agg(k.classes) }); });
+      return out;
+    }
+    if (view.level === "pkg") {
+      view.kind.pkgs.forEach(function (p) { out.push({ t: "pkg", ref: p, x: p.lx, y: p.ly, r: p.drawR, title: p.id.split("/").pop(), sub: p.classes.length + " 类", stat: agg(p.classes) }); });
+    } else {
+      view.pkg.classes.forEach(function (c) { out.push({ t: "class", ref: c, x: c.lx, y: c.ly, r: c.r + 6, title: c.name, sub: zh(c.kind), stat: { pct: c.pct, counted: !nonLogic[c.kind], lines: c.lines } }); });
+    }
+    var maxx = 0;
+    out.forEach(function (v) { maxx = Math.max(maxx, v.x + v.r); });
+    out.push({ t: "ext", ref: null, x: maxx + 160, y: 0, r: 34, title: "返回", sub: "上一层", stat: { pct: 0, counted: true, lines: 0 } });
+    return out;
+  }
+  function groupId(ci) {
+    var c = nodes[ci];
+    if (!showAll && nonLogic[c.kind]) return "ext";
+    if (view.level === "kind") return nonLogic[c.kind] && !showAll ? "" : "k:" + c.kind;
+    if (view.level === "pkg") return c.kind === view.kind.id ? "p:" + c.pkg : "ext";
+    return view.pkg.classes.indexOf(c) >= 0 ? "c:" + ci : "ext";
+  }
+
+  function draw() {
+    if (!dirty) return;
+    dirty = false;
+    var dpr = window.devicePixelRatio || 1;
+    var w = cv.clientWidth, h = cv.clientHeight;
+    if (cv.width !== Math.floor(w * dpr) || cv.height !== Math.floor(h * dpr)) {
+      cv.width = Math.floor(w * dpr); cv.height = Math.floor(h * dpr);
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    var vis = visibleNodes();
+    var at = {};
+    vis.forEach(function (v) {
+      var id = v.t === "ext" ? "ext" : v.t === "class" ? "c:" + v.ref.i : v.t === "pkg" ? "p:" + v.ref.id : "k:" + v.ref.id;
+      at[id] = v;
+    });
+    var acc = {};
+    G.edges.forEach(function (e) {
+      var a = groupId(e[0]), b = groupId(e[1]);
+      if (!a || !b || a === b || !at[a] || !at[b]) return;
+      var key = a + ">" + b;
+      acc[key] = (acc[key] || 0) + e[2];
+    });
+    ctx.lineCap = "round";
+    var edgeKeys = Object.keys(acc);
+    if (view.level === "kind") {
+      edgeKeys.sort(function (a, b) { return acc[b] - acc[a]; });
+      var keep = {};
+      edgeKeys.slice(0, 36).forEach(function (k) { keep[k] = 1; });
+      if (picked) edgeKeys.forEach(function (k) { if (k.indexOf(picked.id) >= 0) keep[k] = 1; });
+      edgeKeys = Object.keys(keep);
+    }
+    edgeKeys.forEach(function (key) {
+      var parts = key.split(">");
+      var A = at[parts[0]], B = at[parts[1]];
+      var p1 = toScreen(A.x, A.y), p2 = toScreen(B.x, B.y);
+      var dx = p2[0] - p1[0], dy = p2[1] - p1[1];
+      var len = Math.hypot(dx, dy) || 1;
+      var r1 = A.r * cam.z, r2 = B.r * cam.z;
+      if (len < r1 + r2) return;
+      var n = acc[key];
+      var hot = picked && (picked.id === parts[0] || picked.id === parts[1]);
+      ctx.strokeStyle = hot ? "rgba(37,99,235,.85)" : "rgba(120,136,158," + Math.min(0.55, 0.08 + Math.log2(n + 1) / 18) + ")";
+      ctx.lineWidth = hot ? 2 : Math.min(7, 0.6 + Math.log2(n + 1));
+      ctx.beginPath();
+      ctx.moveTo(p1[0] + (dx / len) * r1, p1[1] + (dy / len) * r1);
+      ctx.lineTo(p2[0] - (dx / len) * (r2 + 3), p2[1] - (dy / len) * (r2 + 3));
+      ctx.stroke();
+    });
+    vis.forEach(function (v) {
+      var p = toScreen(v.x, v.y);
+      var r = Math.max(7, v.r * cam.z);
+      if (p[0] < -r || p[1] < -r || p[0] > w + r || p[1] > h + r) return;
+      var id = v.t === "ext" ? "ext" : v.t === "class" ? "c:" + v.ref.i : v.t === "pkg" ? "p:" + v.ref.id : "k:" + v.ref.id;
+      var on = picked && picked.id === id;
+      ctx.beginPath();
+      ctx.arc(p[0], p[1], r, 0, Math.PI * 2);
+      ctx.fillStyle = on ? "#eaf1fe" : (v.stat.counted ? "#ffffff" : "#fbf7ef");
+      ctx.fill();
+      ctx.lineWidth = on ? 2 : 1;
+      ctx.strokeStyle = on ? "#2563eb" : (v.stat.counted ? "#d5dde8" : "#e6dcc4");
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(p[0], p[1], Math.max(4, r - 4), 0, Math.PI * 2);
+      ctx.strokeStyle = v.stat.pct >= 100 ? "#bfe3cc" : "#c5d0dc";
+      ctx.lineWidth = Math.max(3, Math.min(5, r / 8));
+      ctx.stroke();
+      if (v.stat.pct > 0) {
+        ctx.beginPath();
+        ctx.strokeStyle = "#1f8a4c";
+        ctx.lineWidth = Math.max(2, Math.min(5, r / 9));
+        ctx.arc(p[0], p[1], Math.max(4, r - 4), -Math.PI / 2, -Math.PI / 2 + (v.stat.pct / 100) * Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.fillStyle = "#1f2733";
+      ctx.font = (r > 34 ? "12px" : "11px") + " -apple-system, 'Microsoft YaHei', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      var label = v.t === "ext" ? "返回" : v.title;
+      if (r > 28 && v.t !== "ext") {
+        ctx.fillText(label, p[0], p[1] - 5);
+        ctx.fillStyle = v.stat.pct >= 100 ? "#1f8a4c" : "#5b6675";
+        ctx.font = "10px -apple-system, 'Microsoft YaHei', sans-serif";
+        ctx.fillText(Math.round(v.stat.pct) + "%", p[0], p[1] + 9);
+      } else if (r >= 8) {
+        var ox = v.x - cam.x, oy = v.y - cam.y;
+        var olen = Math.hypot(ox, oy) || 1;
+        ctx.fillText(label, p[0] + (ox / olen) * (r + 11), p[1] + (oy / olen) * (r + 11));
+      }
+      v.sx = p[0]; v.sy = p[1]; v.sr = r; v.id = id;
+    });
+    cv._vis = vis;
+    var where = view.level === "kind" ? "聚合：种类" : view.level === "pkg" ? "聚合：包 · " + zh(view.kind.id) : "聚合：类 · " + view.pkg.id;
+    document.getElementById("lod").textContent = where;
+  }
+
+  function hit(mx, my) {
+    var vis = cv._vis || [];
+    for (var i = vis.length - 1; i >= 0; i--) {
+      var v = vis[i];
+      if (v.sx == null) continue;
+      if (Math.hypot(mx - v.sx, my - v.sy) <= v.sr + 2) return v;
+    }
+    return null;
+  }
+  function focus(v) {
+    if (v.t === "kind") enterKind(v.ref);
+    else if (v.t === "pkg") enterPkg(v.ref);
+    else if (v.t === "ext") popView();
+    dirty = true;
+    draw();
+  }
+  function edgeList(pred, slot) {
+    var m = {};
+    G.edges.forEach(function (e) {
+      if (!pred(e)) return;
+      var other = nodes[e[slot]];
+      if (!showAll && nonLogic[other.kind]) return;
+      m[other.name] = (m[other.name] || 0) + e[2];
+    });
+    return Object.keys(m).sort(function (a, b) { return m[b] - m[a]; }).slice(0, 8).map(function (name) {
+      return '<button class="hit" data-name="' + name + '"><b>' + name + '</b> <span class="dim">×' + m[name] + "</span></button>";
+    }).join("") || '<p>没有跨出这一层的调用。</p>';
+  }
+  function showDetail(v) {
+    var box = document.getElementById("detail");
+    if (!v) { box.innerHTML = "<p>单击一个圆进入下一层。点到类之后，这里给出它为什么还没完成。</p>"; return; }
+    var s = v.stat;
+    var head = '<div class="name">' + v.title + "</div>" +
+      '<div class="sub">' + (v.t === "class" ? v.ref.pkg + " · " + zh(v.ref.kind) : v.sub) + " · " + s.lines + " 行</div>" +
+      "<p>" + (s.counted ? "计入总进度 " : "这一支不计入总进度。") + Math.round(s.pct) + "%。</p>";
+    if (v.t === "class") {
+      var c = v.ref;
+      var why = c.has ? (c.pct >= 100 ? "同名 class 里，" + c.methods + " 个逻辑方法都在。" : "有同名 class，但 " + c.methods + " 个逻辑方法没有全部出现在类体里。") : "packages/sts-engine 里没有 class " + c.name + "。";
+      head += "<p>" + why + (c.ext ? " 继承 " + c.ext + "。" : "") + "</p>";
+      head += "<h2>它调用</h2>" + edgeList(function (e) { return e[0] === c.i; }, 1);
+      head += "<h2>谁调用它</h2>" + edgeList(function (e) { return e[1] === c.i; }, 0);
+    } else {
+      var list = v.t === "kind" ? v.ref.classes : v.ref.classes;
+      var set = {};
+      list.forEach(function (c) { set[c.i] = 1; });
+      head += "<h2>向外调用</h2>" + edgeList(function (e) { return set[e[0]] && !set[e[1]]; }, 1);
+      head += "<h2>谁调用这组</h2>" + edgeList(function (e) { return set[e[1]] && !set[e[0]]; }, 0);
+    }
+    box.innerHTML = head;
+  }
+
+  function renderKindList() {
+    document.getElementById("kinds").innerHTML = kinds.map(function (k) {
+      var s = agg(k.classes);
+      return '<button class="hit" data-kind="' + k.id + '"><b>' + zh(k.id) + '</b> <span class="dim">' + k.classes.length + " 类 · " + Math.round(s.pct) + "%" + (s.counted ? "" : " · 不计入") + "</span><div class=\"mini\"><div style=\"width:" + s.pct + "%\"></div></div></button>";
+    }).join("");
+  }
+
+  document.getElementById("pct").textContent = G.stats.pct + "%";
+  document.getElementById("pct-fill").style.width = Math.max(G.stats.pct, G.stats.pct > 0 ? 1 : 0) + "%";
+  document.getElementById("hdr").textContent = G.stats.classes + " 个类 · " + G.stats.edges + " 条调用边 · 逻辑 " + G.stats.logicLines.toLocaleString("en-US") + " 行";
+  document.getElementById("rule").textContent = G.rule + " 如果一个类被标成 100% 但行为不对，就把这条判定收紧到「方法体的行为指纹一致」，而不是改颜色。";
+
+  build();
+  function resize() {
+    dirty = true;
+    var prev = fitZ;
+    fit();
+    if (prev && Math.abs(cam.z - prev * 0.96) > prev) { /* user had zoomed; fit() just recentered. restore is unnecessary on first call */ }
+    draw();
+  }
+  // fit() inside resize overwrites a user's zoom on window resize. Only auto-fit the first time.
+  var fitted = false;
+  function onResize() {
+    dirty = true;
+    if (!fitted) { fit(); fitted = true; }
+    draw();
+  }
+  window.addEventListener("resize", onResize);
+
+  cv.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    var rect = cv.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    var wx = cam.x + (mx - cv.clientWidth / 2) / cam.z;
+    var wy = cam.y + (my - cv.clientHeight / 2) / cam.z;
+    var next = cam.z * (e.deltaY < 0 ? 1.12 : 0.89);
+    if (e.deltaY < 0 && next > entryZ * 1.8) {
+      var target = hover && hover.t !== "ext" ? hover : null;
+      if (view.level === "kind" && target && target.t === "kind") { enterKind(target.ref); draw(); return; }
+      if (view.level === "pkg" && target && target.t === "pkg") { enterPkg(target.ref); draw(); return; }
+      if (!target && view.level !== "class") return;
+    }
+    if (e.deltaY > 0 && view.level !== "kind" && next < entryZ * 0.62) { popView(); draw(); return; }
+    cam.z = Math.max(entryZ * 0.45, Math.min(entryZ * 2.4, next));
+    cam.x = wx - (mx - cv.clientWidth / 2) / cam.z;
+    cam.y = wy - (my - cv.clientHeight / 2) / cam.z;
+    dirty = true; draw();
+  }, { passive: false });
+
+  var drag = null;
+  cv.addEventListener("pointerdown", function (e) {
+    cv.setPointerCapture(e.pointerId);
+    drag = { x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y, moved: false };
+    cv.classList.add("drag");
+  });
+  cv.addEventListener("pointermove", function (e) {
+    var rect = cv.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    if (drag) {
+      if (Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 4) drag.moved = true;
+      cam.x = drag.cx - (e.clientX - drag.x) / cam.z;
+      cam.y = drag.cy - (e.clientY - drag.y) / cam.z;
+      dirty = true; draw();
+      tip.style.display = "none";
+      return;
+    }
+    var v = hit(mx, my);
+    hover = v;
+    cv.style.cursor = v ? "pointer" : "grab";
+    if (!v) { tip.style.display = "none"; return; }
+    tip.style.display = "block";
+    tip.style.left = Math.min(mx + 14, cv.clientWidth - 200) + "px";
+    tip.style.top = (my + 16) + "px";
+    tip.textContent = v.title + " · " + (v.stat.counted ? "" : "不计入 ") + Math.round(v.stat.pct) + "% · " + v.sub;
+  });
+  cv.addEventListener("pointerup", function (e) {
+    cv.classList.remove("drag");
+    if (!drag) return;
+    var moved = drag.moved;
+    drag = null;
+    if (moved) return;
+    var rect = cv.getBoundingClientRect();
+    var v = hit(e.clientX - rect.left, e.clientY - rect.top);
+    if (!v) { picked = null; showDetail(null); dirty = true; draw(); return; }
+    if (v.t === "ext") { popView(); draw(); return; }
+    picked = v;
+    showDetail(v);
+    if (v.t !== "class") focus(v);
+    else { dirty = true; draw(); }
+  });
+  cv.addEventListener("pointerleave", function () { tip.style.display = "none"; });
+
+  document.getElementById("fit").addEventListener("click", function () {
+    view = { level: "kind", kind: null, pkg: null }; picked = null; showDetail(null); fit(); draw();
+  });
+  document.getElementById("show-all").addEventListener("change", function (e) {
+    showAll = e.target.checked; view = { level: "kind", kind: null, pkg: null }; picked = null; showDetail(null); build(); fit(); draw();
+  });
+  document.getElementById("kinds").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-kind]");
+    if (!b) return;
+    var k = kinds.filter(function (x) { return x.id === b.getAttribute("data-kind"); })[0];
+    if (!k) return;
+    enterKind(k);
+    var v = { t: "pkg", ref: k.pkgs[0], title: zh(k.id), sub: "", stat: agg(k.classes), id: "k:" + k.id };
+    showDetail({ t: "kind", ref: k, title: zh(k.id), sub: k.classes.length + " 类", stat: agg(k.classes) });
+    void v;
+    draw();
+  });
+  function gotoClass(name) {
+    var c = nodes.filter(function (n) { return n.name === name; })[0];
+    if (!c) return;
+    if (nonLogic[c.kind] && !showAll) { document.getElementById("show-all").checked = true; showAll = true; build(); }
+    var k = kinds.filter(function (x) { return x.id === c.kind; })[0];
+    var p = k && k.pkgs.filter(function (pkg) { return pkg.classes.indexOf(c) >= 0; })[0];
+    if (!k || !p) return;
+    view = { level: "class", kind: k, pkg: p };
+    fit();
+    cam.x = c.lx; cam.y = c.ly;
+    var v = { t: "class", ref: c, x: c.lx, y: c.ly, title: c.name, sub: zh(c.kind), stat: { pct: c.pct, counted: !nonLogic[c.kind], lines: c.lines }, id: "c:" + c.i };
+    picked = v; showDetail(v); dirty = true; draw();
+  }
+  document.getElementById("q").addEventListener("input", function (e) {
+    var q = e.target.value.trim().toLowerCase();
+    var box = document.getElementById("hits");
+    if (!q) { box.innerHTML = ""; return; }
+    box.innerHTML = nodes.filter(function (n) { return n.name.toLowerCase().indexOf(q) >= 0; }).slice(0, 12).map(function (n) {
+      return '<button class="hit" data-name="' + n.name + '"><b>' + n.name + '</b> <span class="dim">' + zh(n.kind) + " · " + n.pct + "%</span></button>";
+    }).join("");
+  });
+  document.getElementById("side").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-name]");
+    if (b && b.getAttribute("data-name")) gotoClass(b.getAttribute("data-name"));
+  });
+  window.addEventListener("keydown", function (e) {
+    if (e.target.tagName === "INPUT") return;
+    if (e.key === "0" || e.key === "Escape") { view = { level: "kind", kind: null, pkg: null }; picked = null; showDetail(null); fit(); draw(); }
+    if (e.key === "+" || e.key === "=") { cam.z = Math.min(entryZ * 2.4, cam.z * 1.2); dirty = true; draw(); }
+    if (e.key === "-" || e.key === "_") { cam.z = Math.max(entryZ * 0.45, cam.z / 1.2); dirty = true; draw(); }
+    if (e.key === "Backspace" && view.level !== "kind") { popView(); draw(); }
+  });
+
+  requestAnimationFrame(function () { onResize(); });
+})();
+</script>
+</body>
+</html>

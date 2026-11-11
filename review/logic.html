@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杀戮尖塔 1 — 运行时逻辑逆向（复审）</title>
+<style>
+  :root {
+    --bg: #ffffff; --bg-soft: #f7f9fc; --text: #1f2733; --dim: #5b6675; --faint: #8a94a6;
+    --accent: #2563eb; --accent-soft: #eaf1fe; --border: #e3e8ef;
+    --red: #d64545; --green: #2e9e5b; --blue: #2b7fd4; --purple: #8a4fd3; --gold: #b8860b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; line-height: 1.75; font-size: 15px; }
+  header { position: sticky; top: 0; z-index: 200; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  .head-inner { max-width: 1280px; margin: 0 auto; padding: 14px 28px 0; }
+  .title-row { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  h1 { font-size: 21px; letter-spacing: .5px; }
+  h1 .accent { color: var(--accent); }
+  .subtitle { color: var(--faint); font-size: 13px; }
+  .nav-links { margin-left: auto; display: flex; gap: 14px; font-size: 13px; }
+  .nav-links a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .tabs { display: flex; gap: 4px; margin-top: 10px; flex-wrap: wrap; }
+  .tab { border: 0; background: none; font: inherit; font-size: 14px; padding: 8px 14px; cursor: pointer; color: var(--dim); border-bottom: 3px solid transparent; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
+  .tab .cnt { font-size: 11.5px; color: var(--faint); margin-left: 4px; font-weight: 400; }
+  .page { display: none; }
+  .page.active { display: block; }
+  .layout { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 216px minmax(0, 1fr); gap: 40px; padding: 0 28px; }
+  aside { position: sticky; top: 112px; align-self: start; padding: 24px 0 60px; max-height: calc(100vh - 112px); overflow-y: auto; }
+  .toc-title { font-size: 12px; font-weight: 700; color: var(--faint); letter-spacing: 2px; margin-bottom: 10px; }
+  .toc a { display: block; padding: 4px 12px; color: var(--dim); text-decoration: none; font-size: 13px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; }
+  .toc a:hover { color: var(--text); background: var(--bg-soft); }
+  .toc a.active { color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+  main { padding: 30px 0 110px; min-width: 0; }
+  .wide { max-width: 1280px; margin: 0 auto; padding: 26px 28px 110px; }
+  section { margin-bottom: 56px; scroll-margin-top: 124px; }
+  h2 { font-size: 20px; margin-bottom: 4px; }
+  h2 .num { display: inline-block; min-width: 26px; height: 26px; line-height: 26px; text-align: center; background: var(--accent); color: #fff; border-radius: 7px; font-size: 13.5px; margin-right: 10px; vertical-align: 2px; padding: 0 5px; }
+  h3 { font-size: 15.5px; margin: 22px 0 8px; }
+  .sub { color: var(--faint); font-size: 13px; margin-bottom: 14px; padding-left: 36px; }
+  p { margin: 9px 0; }
+  ul, ol { margin: 8px 0 8px 22px; }
+  li { margin: 3px 0; }
+  .dim { color: var(--dim); }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 5px; padding: 0 5px; color: #24457c; }
+  .grid { display: grid; gap: 12px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .g4 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .card h5 { font-size: 14.5px; margin-bottom: 4px; }
+  .card p { font-size: 13px; color: var(--dim); margin: 4px 0; }
+  .stat { text-align: center; padding: 14px 10px; }
+  .stat .n { font-size: 26px; font-weight: 800; color: var(--accent); line-height: 1.2; }
+  .stat .l { font-size: 12.5px; color: var(--dim); }
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 18px; font-size: 13.5px; }
+  th { background: var(--bg-soft); font-weight: 700; text-align: left; padding: 7px 10px; border: 1px solid var(--border); white-space: nowrap; position: sticky; top: 0; }
+  td { padding: 6px 10px; border: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: #fafbfd; }
+  pre.spec { background: #fbfcfe; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 12px 16px; margin: 10px 0 14px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; color: var(--text); overflow-x: auto; white-space: pre; line-height: 1.62; tab-size: 2; }
+  pre.spec .c { color: #7b8698; }
+  pre.spec .k { color: #7c3aed; }
+  pre.spec .s { color: var(--green); }
+  pre.spec .h { color: #b45309; font-weight: 600; }
+  .ref { display: inline-block; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px; background: var(--accent-soft); color: #1d4fbf; border: 1px solid #c7dbfb; border-radius: 9px; padding: 0 7px; line-height: 17px; white-space: nowrap; cursor: help; vertical-align: 1px; }
+  .ref.bad { background: #fdeaea; color: var(--red); border-color: #f1c4c4; }
+  .ref.g { background: #faf3e3; color: var(--gold); border-color: #ecdcae; }
+  .ref.a { background: #f1e9fb; color: var(--purple); border-color: #dccbf3; }
+  .tip { background: var(--accent-soft); border: 1px solid #c7dbfb; border-radius: 10px; padding: 10px 14px; font-size: 13.5px; color: #24457c; margin: 12px 0; }
+  .tip.warn { background: #fdf3f3; border-color: #f1c4c4; color: #7a2a2a; }
+  .tip.ok { background: #eef8f1; border-color: #bfe3cc; color: #1f6b3d; }
+  .badge { display: inline-block; padding: 0 8px; border-radius: 12px; font-size: 11.5px; font-weight: 700; vertical-align: 1px; white-space: nowrap; }
+  .b-red { background: #fdeaea; color: var(--red); } .b-green { background: #e7f6ee; color: var(--green); }
+  .b-blue { background: #e9f3fd; color: var(--blue); } .b-gold { background: #faf3e3; color: var(--gold); }
+  .b-gray { background: #eef1f5; color: var(--dim); } .b-purple { background: #f1e9fb; color: var(--purple); }
+  .timeline { list-style: none; margin: 12px 0; counter-reset: tl; }
+  .timeline li { position: relative; padding: 7px 12px 7px 46px; border-left: 2px solid var(--border); margin: 0 0 0 14px; font-size: 13.5px; }
+  .timeline li::before { counter-increment: tl; content: counter(tl); position: absolute; left: -13px; top: 7px; width: 24px; height: 24px; line-height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; text-align: center; }
+  .timeline li.phase { background: var(--bg-soft); font-weight: 700; color: var(--accent); padding-left: 20px; border-left-color: var(--accent); }
+  .timeline li.phase::before { display: none; counter-increment: none; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 6px 0 14px; }
+  #hook-table, #cls-table, #rng-table { table-layout: fixed; }
+  #hook-table td, #cls-table td, #rng-table td { overflow-wrap: anywhere; }
+  .sites .ref { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+  .toolbar input:not([type=checkbox]) { font: inherit; font-size: 13.5px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px; min-width: 260px; }
+  .chip-btn { font: inherit; font-size: 12.5px; padding: 4px 11px; border: 1px solid var(--border); background: #fff; border-radius: 16px; cursor: pointer; color: var(--dim); }
+  .chip-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .sites { display: flex; flex-wrap: wrap; gap: 4px; }
+  details.inl summary { cursor: pointer; color: var(--accent); font-size: 12.5px; }
+  .mono { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; }
+  .beh { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; line-height: 1.55; }
+  .beh b { color: #7c3aed; font-weight: 600; }
+  .beh .qT { color: var(--red); } .beh .qB { color: var(--blue); } .beh .pw { color: var(--green); } .beh .rg { color: var(--gold); } .beh .mu { color: var(--dim); }
+  .legend { font-size: 12.5px; color: var(--dim); margin: 4px 0 12px; }
+  footer { border-top: 1px solid var(--border); padding: 22px; text-align: center; color: var(--faint); font-size: 12.5px; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } aside { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <div class="title-row">
+      <h1>杀戮尖塔 1 — <span class="accent">运行时逻辑逆向</span></h1>
+      <span class="subtitle">来源：desktop-1.0.jar 的 CFR 反编译 · <span id="hdr-stats"></span></span>
+      <div class="nav-links">
+        <a href="../index.html">网页复刻</a>
+        <a href="index.html">资料复审</a>
+        <a href="architecture.html">数据层架构</a>
+        <a href="graph.html">复刻进度</a>
+      </div>
+    </div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-page="logic">① 运行时逻辑（伪代码）</button>
+      <button class="tab" data-page="hooks">② 钩子矩阵<span class="cnt" id="cnt-hooks"></span></button>
+      <button class="tab" data-page="classes">③ 类行为索引<span class="cnt" id="cnt-classes"></span></button>
+      <button class="tab" data-page="rng">④ RNG 使用点<span class="cnt" id="cnt-rng"></span></button>
+      <button class="tab" data-page="plan">⑤ 差距 &amp; 重写方案</button>
+      <button class="tab" data-page="entities">⑥ 实体枚举<span class="cnt" id="cnt-entities"></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ PAGE 1 -->
+<div class="page active" id="page-logic">
+<div class="layout">
+<aside><div class="toc-title">目录</div><nav class="toc" id="toc"></nav></aside>
+<main>
+
+<section id="s0">
+<h2><span class="num">0</span>总览：这个游戏到底是怎么"转"的</h2>
+<div class="sub">先给结论，再给逐条证据。每个 <span class="ref">蓝色标签</span> 都是反编译源码的 文件:行号，鼠标悬停看完整路径。</div>
+
+<div class="grid g4" id="stat-cards"></div>
+
+<div class="tip warn"><b>为什么现在的引擎"像一坨"：</b>原版是 <b>动作队列 + 钩子</b> 架构——卡牌、能力、遗物、怪物几乎从不直接改状态，只往队列里塞 Action；回合阶段不是一个函数，而是 <code>getNextAction()</code> 按固定优先级轮询 4 个队列"自然流出来"的。现有 TS 引擎是把结果手写成一条直线流程（<code>endTurn()</code> 里逐个怪物 tick 毒→行动→仪式…），所以每加一个机制就要在多处补特判，顺序永远对不上。</div>
+
+<h3>八条核心规则</h3>
+<ol>
+  <li><b>一切皆 Action。</b><code>card.use()</code>、<code>power.atStartOfTurn()</code>、<code>monster.takeTurn()</code> 只做一件事：<code>addToBot/addToTop(new XxxAction)</code>。真正改血量、格挡、牌堆的代码只在 Action.update() 和 Creature 的少数方法里。<span class="ref" data-ref="GameActionManager.addToBottom"></span></li>
+  <li><b>顺序 = 入队位置。</b><code>addToBot</code> 排队尾，<code>addToTop</code> 插队头（下一个执行）。同一方法里连续 <code>addToTop(A); addToTop(B)</code> 的执行顺序是 B→A。<span class="ref" data-ref="GameActionManager.addToTop"></span></li>
+  <li><b>回合阶段由队列优先级驱动。</b><code>actions</code> → <code>preTurnActions</code> → <code>cardQueue</code> → 怪物入队 → <code>monsterQueue</code> → 新回合。只有上一级为空才轮到下一级。<span class="ref" data-ref="GameActionManager.getNextAction"></span></li>
+  <li><b>钩子在固定位置、按固定对象顺序触发。</b>例如打出一张牌：玩家能力 → 所有怪物的能力 → 遗物 → 姿态 → 荒疫 → 手牌 → 弃牌堆 → 抽牌堆。<span class="ref" data-ref="GameActionManager.getNextAction:210-234"></span></li>
+  <li><b>伤害算两遍。</b>先算"面板值"（力量/虚弱/易伤/姿态 → <code>info.output</code>），到结算时再在 <code>creature.damage()</code> 里扣格挡并跑受击钩子。HP_LOSS 类型跳过格挡。<span class="ref" data-ref="DamageInfo.applyPowers"></span> <span class="ref" data-ref="AbstractCreature.decrementBlock"></span></li>
+  <li><b>能力有三个不同的"回合节拍"。</b><code>atStartOfTurn</code>（持有者回合开始：中毒）、<code>atEndOfTurn</code>（持有者回合结束：金属化、玩家仪式）、<code>atEndOfRound</code>（所有怪物行动完之后：虚弱/易伤/脆弱 −1、怪物仪式）。</li>
+  <li><b>13 条独立 RNG 流。</b>其中 5 条每层用 <code>seed + floorNum</code> 重置；牌库洗牌、怪物 AI、卡牌奖励互不干扰。<span class="ref" data-ref="AbstractDungeon.generateSeeds"></span></li>
+  <li><b>怪物意图是"上回合末"掷出来的。</b><code>takeTurn()</code> 的最后一个动作是 <code>RollMoveAction</code>，用 <code>aiRng.random(99)</code> 调 <code>getMove(num)</code>。<span class="ref" data-ref="AbstractMonster.rollMove"></span></li>
+</ol>
+
+<h3>一个完整回合的时间线（从点"结束回合"到下一次可以出牌）</h3>
+<ol class="timeline">
+  <li class="phase">A. 玩家回合结束</li>
+  <li>点击结束回合 → 往 <code>cardQueue</code> 放一个 <b>card == null</b> 的哨兵项；<code>endTurnQueued = true</code>。<span class="ref" data-ref="EndTurnButton.disable"></span> <span class="ref" data-ref="NewQueueCardAction.update"></span></li>
+  <li>取到哨兵 → <code>callEndOfTurnActions()</code>：遗物 <code>onPlayerEndTurn</code> → 玩家能力 <code>atEndOfTurnPreEndTurnCards(true)</code> → 入队 <code>TriggerEndOfTurnOrbsAction</code> → 手牌 <code>triggerOnEndOfTurnForPlayingCard</code>（灼伤/腐朽/悔恨等把自己排进 cardQueue 自动打出）→ 姿态 <code>onEndOfTurn</code>。<span class="ref" data-ref="GameActionManager.callEndOfTurnActions"></span></li>
+  <li>队列和 cardQueue 都排空后 <code>isEndingTurn = true</code> → <code>room.endTurn()</code>：<b>立刻</b>跑玩家能力 <code>atEndOfTurn(true)</code>，然后入队 清空出牌队列 → <code>DiscardAtEndOfTurnAction</code> → (EndTurnAction, Wait, <code>MonsterStartTurnAction</code>)。<span class="ref" data-ref="AbstractPlayer.updateInput:849-851"></span> <span class="ref" data-ref="AbstractRoom.endTurn"></span></li>
+  <li><code>DiscardAtEndOfTurnAction</code>：保留牌移入 limbo → 其余手牌弃掉（符文金字塔/均衡除外）→ 保留牌回手（触发 <code>onRetained</code>）；虚无牌此时 <code>triggerOnEndOfPlayerTurn</code> 消耗。<span class="ref" data-ref="DiscardAtEndOfTurnAction.update"></span></li>
+  <li><code>EndTurnAction</code> → <code>turnHasEnded = true</code>。<span class="ref" data-ref="GameActionManager.endTurn"></span></li>
+  <li class="phase">B. 怪物回合</li>
+  <li><code>MonsterStartTurnAction</code> → <code>monsters.applyPreTurnLogic()</code>：<b>每只</b>存活怪物先失去格挡（壁垒除外）再跑能力 <code>atStartOfTurn</code> —— <b>所有怪物的中毒在任何怪物行动之前统一入队结算</b>。<span class="ref" data-ref="MonsterGroup.applyPreTurnLogic"></span></li>
+  <li>队列空 → <code>monsters.queueMonsters()</code> 把存活怪物放进 <code>monsterQueue</code>。<span class="ref" data-ref="MonsterGroup.queueMonsters"></span></li>
+  <li>逐只出队：<code>m.takeTurn()</code>（把本回合招式的动作全部入队，最后一个是 RollMoveAction）→ <code>m.applyTurnPowers()</code>（<code>duringTurn</code>）。它入队的动作会在<b>下一只怪物出队前</b>全部执行完。<span class="ref" data-ref="GameActionManager.getNextAction:297-317"></span></li>
+  <li class="phase">C. 回合交替（同一个函数里同步完成）</li>
+  <li><code>monsters.applyEndOfTurnPowers()</code>：每只怪物的能力 <code>atEndOfTurnPreEndTurnCards(false)</code> + <code>atEndOfTurn(false)</code> → <b>玩家</b>能力 <code>atEndOfRound</code> → 每只怪物能力 <code>atEndOfRound</code>。<span class="ref" data-ref="MonsterGroup.applyEndOfTurnPowers"></span></li>
+  <li>玩家回合开始钩子：姿态 <code>atStartOfTurn</code> → 遗物 <code>atTurnStart</code> → 手牌 <code>atTurnStartPreDraw</code> → 三个牌堆 <code>atTurnStart</code> → 玩家能力 <code>atStartOfTurn</code>（玩家中毒在这里入队）→ 充能球 <code>onStartOfTurn</code>。<span class="ref" data-ref="GameActionManager.getNextAction:331-335"></span></li>
+  <li><code>++turn</code>；<code>turnHasEnded = false</code>；玩家失去格挡（壁垒/残影不失去；外卡钳只失去 15）。<span class="ref" data-ref="GameActionManager.getNextAction:336-348"></span></li>
+  <li>入队 <code>DrawCardAction(gameHandSize, endTurnDraw=true)</code> —— <b>构造这个动作的瞬间</b>就回复能量（<code>energy.recharge()</code>）并触发 <code>onEnergyRecharge</code>；然后遗物 <code>atTurnStartPostDraw</code>、能力 <code>atStartOfTurnPostDraw</code>（都只是入队）。<span class="ref" data-ref="DrawCardAction.ctor"></span> <span class="ref" data-ref="PlayerTurnEffect.ctor:36-51"></span></li>
+  <li>队列按入队顺序执行：步骤 10–11 里钩子塞的动作 → 抽牌 → PostDraw 动作 → 启用结束回合按钮。此后队列空 = 等待玩家。</li>
+</ol>
+
+<div class="tip"><b>直接后果举例</b>（对应你之前指出的 bug）：① 怪物的毒在"怪物回合开始"统一结算，不是逐只、更不是挂毒时；② 虚弱/易伤是 <code>atEndOfRound</code> 才 −1，且怪物施加的首回合不减（<code>justApplied</code>）<span class="ref" data-ref="WeakPower.atEndOfRound"></span>；③ 怪物仪式是 <code>atEndOfRound</code> 加力量且首轮跳过，玩家仪式是 <code>atEndOfTurn</code> <span class="ref" data-ref="RitualPower.atEndOfRound"></span>；④ 怪物的格挡在它自己回合开始时才清空，所以能挡住玩家整个回合。</div>
+
+<h3>本文档的覆盖状态</h3>
+<div class="tbl-wrap"><table>
+<tr><th>子系统</th><th>状态</th><th>说明</th></tr>
+<tr><td>动作队列 / 回合循环 / 出牌 / 伤害 / 格挡 / 能力施加</td><td><span class="badge b-green">逐行追溯</span></td><td>§3–§9，伪代码与源码逐行对应</td></tr>
+<tr><td>怪物 AI 框架、死亡、战斗结束、奖励</td><td><span class="badge b-green">逐行追溯</span></td><td>§10–§11；每只怪物各自的 <code>getMove/takeTurn</code> 见 ③ 类行为索引</td></tr>
+<tr><td>RNG、地牢构造、地图生成、房间分配、?房间、怪物/事件池</td><td><span class="badge b-green">逐行追溯</span></td><td>§2、§13</td></tr>
+<tr><td>充能球 / 姿态 / 药水 / 商店 / 篝火 / 宝箱 / Neow</td><td><span class="badge b-gold">框架追溯</span></td><td>§12、§14：框架与数值已读，个别分支（如商店 Courier 补货、Neow 各奖励执行体）只列入口</td></tr>
+<tr><td>全部 2008 个类的钩子实现、入队动作、施加能力、RNG 使用</td><td><span class="badge b-blue">机器提取</span></td><td>②③④ 页由 <code>tools/src/logic-index.ts</code> 扫描全部源码生成，不靠人读</td></tr>
+<tr><td>四名角色的初始牌组/遗物、药水与遗物的角色归属、每个能力的触发点</td><td><span class="badge b-blue">机器提取</span></td><td>⑥ 页。中毒、人工制品、虚弱/易伤/脆弱、仪式的触发链是逐行写的</td></tr>
+<tr><td>事件（55 个）各选项的具体效果、每日挑战 mod、存档</td><td><span class="badge b-gray">未展开</span></td><td>入口已定位（<code>AbstractEvent.buttonEffect</code>），留到重写阶段逐个移植</td></tr>
+</table></div>
+
+<div class="tip warn"><b>已发现的反编译陷阱（已用 jar 字节码核实）：</b>CFR 把 <span class="ref" data-ref="AbstractDungeon.nextRoomTransition:1721"></span> 输出成 <code>if (!INTENT_TIP &amp;&amp; ++floorNum == 6)</code>，字面意思是"看过提示后楼层不再 +1"。直接读 <code>AbstractDungeon.class</code> 的字节码，实际是先 <code>++floorNum</code>（独立语句）再判断。结论：<b>反编译文本不是 100% 可信</b>，遇到与游戏表现矛盾的地方要回到字节码核对；重写阶段我会把这类疑点单列。</div>
+</section>
+
+<section id="s1">
+<h2><span class="num">1</span>核心数据模型</h2>
+<div class="sub">所有可变状态挂在这几类对象上；它们的方法名在新引擎里原样保留。</div>
+<script type="text/x-spec">
+interface Creature {                      // @AbstractCreature.addBlock
+  isPlayer: boolean
+  currentHealth: int; maxHealth: int
+  currentBlock: int                       // 上限 999
+  powers: Power[]                         // 新增后 Collections.sort（按 priority）  @ApplyPowerAction.update:160-161
+  isDying; isDead; halfDead; isEscaping; escaped: boolean
+  lastDamageTaken: int
+}
+
+interface Player extends Creature {       // @AbstractPlayer.preBattlePrep
+  masterDeck: CardGroup                   // 跨战斗的牌组
+  drawPile; hand; discardPile; exhaustPile; limbo: CardGroup   // 战斗内 5 个区
+  relics: Relic[]; potions: Potion[]; blights: Blight[]
+  orbs: Orb[]; maxOrbs: int; masterMaxOrbs: int
+  stance: Stance                          // 默认 NeutralStance
+  energy: { energyMaster: int; energy: int }                   // @EnergyManager.prep
+  masterHandSize: int; gameHandSize: int  // 每回合抽牌数
+  gold: int
+  cardsPlayedThisTurn: int; damagedThisCombat: int
+  isEndingTurn: boolean; endTurnQueued: boolean
+}
+
+interface Monster extends Creature {      // @AbstractMonster.setMove
+  move: { nextMove: byte; intent: Intent; baseDamage: int; multiplier: int; isMultiDamage: boolean }
+  nextMove: byte                          // createIntent() 时从 move 拷贝，takeTurn() 里 switch 它
+  moveHistory: byte[]                     // setMove() 追加；lastMove / lastTwoMoves 读它
+  damage: DamageInfo[]                    // 每个攻击招式一个，applyPowers() 重算 output
+  intentDmg: int; intentMultiAmt: int     // 意图上显示的数字
+}
+
+interface Card {                          // @AbstractCard.canUse
+  cardID; type: ATTACK | SKILL | POWER | STATUS | CURSE; color; rarity; target
+  cost: int                               // -1 = X 费，-2 = 不可打出
+  costForTurn: int; freeToPlayOnce: boolean
+  baseDamage; damage; baseBlock; block; baseMagicNumber; magicNumber: int
+  isMultiDamage: boolean; multiDamage: int[]
+  exhaust; exhaustOnUseOnce; isEthereal; retain; selfRetain; isInnate: boolean
+  purgeOnUse; shuffleBackIntoDrawPile; returnToHand; dontTriggerOnUseCard; isInAutoplay: boolean
+  energyOnUse: int; misc: int; timesUpgraded: int; uuid
+}
+
+class CardGroup {                         // @CardGroup.initializeDeck
+  group: Card[]                           // ★ 牌堆顶 = 数组最后一个元素
+  addToTop(c)    { group.push(c) }
+  addToBottom(c) { group.unshift(c) }
+  addToRandomSpot(c) { group.splice(cardRandomRng.random(group.length - 1), 0, c) }   // @CardGroup.addToRandomSpot
+  shuffle(rng)   { javaCollectionsShuffle(group, new java.util.Random(rng.randomLong())) }   // @CardGroup.shuffle
+}
+
+interface DamageInfo {                    // @DamageInfo.applyPowers
+  owner: Creature | null                  // null = 无来源，不触发 onAttack/onAttacked
+  type: NORMAL | THORNS | HP_LOSS         // 只有 NORMAL 吃力量/虚弱/易伤；HP_LOSS 无视格挡
+  base: int; output: int
+}
+
+abstract class Action {                   // @AbstractGameAction.tickDuration
+  actionType; source; target; amount; duration; isDone = false
+  abstract update(): void                 // 原版每帧调用直到 isDone；无头引擎只保留"首帧逻辑"，等待类动作直接完成
+}
+
+abstract class Power {                    // 47 个钩子，见 ② 钩子矩阵
+  ID; owner: Creature; amount: int        // amount == -1 表示不可叠加  @AbstractPower.stackPower
+  type: BUFF | DEBUFF; priority = 5       // 虚弱/易伤等 priority = 99，排在最后结算
+}
+</script>
+</section>
+
+<section id="s2">
+<h2><span class="num">2</span>RNG：13 条随机数流</h2>
+<div class="sub">确定性复刻的地基。每个调用点见 ④ RNG 使用点。</div>
+<script type="text/x-spec">
+class Random {                            // @Random.ctor   (com.megacrit.cardcrawl.random.Random)
+  random: RandomXS128                     // libGDX xorshift128+
+  counter = 0                             // ★ 每次调用任何方法都 +1；存档只存 counter
+  constructor(seed: long, counter = 0) { random = new RandomXS128(seed); repeat(counter) this.random(999) }
+
+  random(range: int): int            { counter++; return random.nextInt(range + 1) }            // [0, range] 闭区间
+  random(start: int, end: int): int  { counter++; return start + random.nextInt(end - start + 1) }
+  random(): float                    { counter++; return random.nextFloat() }                   // [0, 1)
+  random(range: float): float        { counter++; return random.nextFloat() * range }
+  random(start: float, end: float)   { counter++; return start + random.nextFloat() * (end - start) }
+  randomBoolean(): boolean           { counter++; return random.nextBoolean() }
+  randomBoolean(chance: float)       { counter++; return random.nextFloat() < chance }
+  randomLong(): long                 { counter++; return random.nextLong() }
+  setCounter(target) { while (counter < target) randomBoolean() }                               // @Random.setCounter
+}
+
+// —— 开局：全部用同一个 seed 初始化 ——                         @AbstractDungeon.generateSeeds
+monsterRng = eventRng = merchantRng = cardRng = treasureRng = relicRng = potionRng = new Random(seed)   // 整局连续
+monsterHpRng = aiRng = shuffleRng = cardRandomRng = miscRng = new Random(seed)                          // 每层重置 ↓
+
+// —— 每进入一个房间 ——                                         @AbstractDungeon.nextRoomTransition:1727-1731
+monsterHpRng = aiRng = shuffleRng = cardRandomRng = miscRng = new Random(seed + floorNum)
+
+// —— 每进入一幕 ——
+mapRng = new Random(seed + actNum)                              // @Exordium.ctor:53
+if (0 < cardRng.counter < 250) cardRng.setCounter(250)          // 卡牌奖励 RNG 对齐到 250 / 500 / 750
+else if (250 < cardRng.counter < 500) cardRng.setCounter(500)   // @AbstractDungeon.dungeonTransitionSetup
+else if (500 < cardRng.counter < 750) cardRng.setCounter(750)
+
+// —— Neow ——
+NeowEvent.rng = new Random(seed)                                // @NeowEvent.blessing
+</script>
+<div class="tbl-wrap"><table>
+<tr><th>流</th><th>生命周期</th><th>用途（主要调用点）</th></tr>
+<tr><td><code>monsterRng</code></td><td>整局</td><td>遭遇战列表、Boss 顺序洗牌 <span class="ref" data-ref="AbstractDungeon.populateMonsterList"></span></td></tr>
+<tr><td><code>eventRng</code></td><td>整局</td><td>? 房间类型掷骰、事件抽取（用"副本 + counter"的方式推进）<span class="ref" data-ref="EventHelper.roll"></span></td></tr>
+<tr><td><code>merchantRng</code></td><td>整局</td><td>商店价格浮动、遗物稀有度、打折牌</td></tr>
+<tr><td><code>cardRng</code></td><td>整局（跨幕对齐）</td><td>卡牌奖励稀有度与选牌、升级概率 <span class="ref" data-ref="AbstractDungeon.rollRarity"></span></td></tr>
+<tr><td><code>treasureRng</code></td><td>整局</td><td>宝箱大小与内容、战斗金币 <span class="ref" data-ref="AbstractChest.randomizeReward"></span></td></tr>
+<tr><td><code>relicRng</code></td><td>整局</td><td>遗物池洗牌、精英/宝箱遗物稀有度 <span class="ref" data-ref="AbstractDungeon.initializeRelicList"></span></td></tr>
+<tr><td><code>potionRng</code></td><td>整局</td><td>药水掉落判定与稀有度 <span class="ref" data-ref="AbstractRoom.addPotionToRewards"></span></td></tr>
+<tr><td><code>monsterHpRng</code></td><td>每层</td><td>怪物血量、部分初始数值</td></tr>
+<tr><td><code>aiRng</code></td><td>每层</td><td>怪物选招 <span class="ref" data-ref="AbstractMonster.rollMove"></span></td></tr>
+<tr><td><code>shuffleRng</code></td><td>每层</td><td>开局洗牌、弃牌堆洗回 <span class="ref" data-ref="EmptyDeckShuffleAction.update"></span></td></tr>
+<tr><td><code>cardRandomRng</code></td><td>每层</td><td>战斗内随机目标/随机牌/奇怪勺子 <span class="ref" data-ref="MonsterGroup.getRandomMonster"></span></td></tr>
+<tr><td><code>miscRng</code></td><td>每层</td><td>Boss 金币浮动、事件内随机等</td></tr>
+<tr><td><code>mapRng</code></td><td>每幕</td><td>地图路径、房间洗牌、翡翠钥匙精英 <span class="ref" data-ref="MapGenerator.createPaths"></span></td></tr>
+</table></div>
+<div class="tip warn"><b>注意：</b>原版有少量玩法逻辑用的是<b>不带种子</b>的 <code>MathUtils.random</code> / <code>Collections.shuffle(cards)</code>（例如回合结束时虚无牌的触发顺序 <span class="ref" data-ref="DiscardAtEndOfTurnAction.update:41-42"></span>）。④ 页把这些点全部列出来了，移植时逐个判断"纯表现"还是"影响结果"。</div>
+</section>
+
+<section id="s3">
+<h2><span class="num">3</span>GameActionManager：四个队列与主循环</h2>
+<div class="sub">整个战斗引擎的心脏，490 行。</div>
+<script type="text/x-spec">
+class GameActionManager {
+  actions: Action[] = []                  // 主动作队列
+  preTurnActions: Action[] = []           // addToTurnStart：下回合开始前执行（固有牌超过手牌上限时的额外抽牌）
+  cardQueue: CardQueueItem[] = []         // 待打出的牌；card == null 的项 = "结束回合"哨兵
+  monsterQueue: Monster[] = []
+  phase: WAITING_ON_USER | EXECUTING_ACTIONS = WAITING_ON_USER
+  currentAction: Action | null
+  turnHasEnded = false; monsterAttacksQueued = true; usingCard = false; hasControl = true
+  static turn = 1                         // clear() 时重置为 1
+  cardsPlayedThisTurn: Card[]; cardsPlayedThisCombat: Card[]
+  static totalDiscardedThisTurn; damageReceivedThisTurn; damageReceivedThisCombat; hpLossThisCombat; playerHpLastTurn
+
+  addToBottom(a) { if (room.phase == COMBAT) actions.push(a) }          // @GameActionManager.addToBottom
+  addToTop(a)    { if (room.phase == COMBAT) actions.unshift(a) }       // @GameActionManager.addToTop
+  addToTurnStart(a) { if (room.phase == COMBAT) preTurnActions.unshift(a) }   // @GameActionManager.addToTurnStart
+  // ★ 战斗一结束 (phase != COMBAT) 所有入队请求被静默丢弃
+
+  update() {                              // 每帧一次  @GameActionManager.update
+    if (phase == WAITING_ON_USER) { getNextAction(); return }
+    if (currentAction && !currentAction.isDone) { currentAction.update(); return }
+    currentAction = null
+    getNextAction()
+    if (!currentAction && room.phase == COMBAT && !usingCard) { phase = WAITING_ON_USER; hasControl = false }
+    usingCard = false
+  }
+
+  getNextAction() {                       // @GameActionManager.getNextAction
+    if (actions.length)             { currentAction = actions.shift(); phase = EXECUTING; hasControl = true }   // ① 主队列
+    else if (preTurnActions.length) { currentAction = preTurnActions.shift(); phase = EXECUTING; hasControl = true }   // ②
+    else if (cardQueue.length)      { usingCard = true; playNextQueuedCard() }      // ③ 见 §5
+    else if (!monsterAttacksQueued) {                                               // ④ 怪物入队
+      monsterAttacksQueued = true
+      if (!room.skipMonsterTurn) room.monsters.queueMonsters()
+    }
+    else if (monsterQueue.length)   { monsterTakesTurn() }                          // ⑤ 见 §8
+    else if (turnHasEnded && !monsters.areMonstersBasicallyDead()) { startNextPlayerTurn() }   // ⑥ 见 §8
+  }
+
+  clearPostCombatActions() {              // 最后一只怪死亡时调用  @GameActionManager.clearPostCombatActions
+    actions = actions.filter(a => a is HealAction || a is GainBlockAction || a is UseCardAction || a.actionType == DAMAGE)
+  }
+}
+
+// —— 无头引擎的等价驱动（新引擎用这个替代"每帧 update"）——
+function runUntilIdle(am) {
+  do {
+    while (am.currentAction || am.actions.length) { ... 执行到 isDone ... }
+    am.getNextAction()                    // 轮询 ②–⑥
+  } while (am.currentAction || 有新入队 || 回合尚未交还玩家)
+  // 停止条件：队列全空 且 turnHasEnded == false（等玩家） / 出现待选界面（选牌、奖励）/ 战斗结束
+}
+</script>
+<p>Action 自己的基类只有三样东西：<code>isDone</code>、<code>duration</code> 计时、<code>shouldCancelAction()</code>（目标已死或来源已死则取消）<span class="ref" data-ref="AbstractGameAction.shouldCancelAction"></span>。全部 277 个 Action 子类及其调用的核心变更方法见 ③ 页（筛选"动作 Action"）。</p>
+</section>
+
+<section id="s4">
+<h2><span class="num">4</span>战斗开始：从进房间到第一回合</h2>
+<div class="sub">三步：建怪 → preBattlePrep → 第一回合钩子。注意第一回合和后续回合走的不是同一段代码。</div>
+<script type="text/x-spec">
+// —— 1) 进入怪物房间 ——                                         @MonsterRoom.onPlayerEntry
+room.monsters = dungeon.getMonsterForRoomCreation()             // MonsterHelper.getEncounter(monsterList[0])  @AbstractDungeon.getMonsterForRoomCreation
+room.monsters.init()                                            // 每只怪 init() → rollMove()：★首个意图在这里用 aiRng 掷出  @AbstractMonster.init
+waitTimer = 0.1
+
+// —— 2) player.preBattlePrep() ——                               @AbstractPlayer.preBattlePrep
+actionManager.clear()                                           // turn = 1，四个队列与本场计数器清零
+maxOrbs = 0; orbs = []; increaseMaxOrbSlots(masterMaxOrbs)
+isBloodied = currentHealth <= maxHealth / 2
+gameHandSize = masterHandSize
+drawPile.initializeDeck(masterDeck)                             // ↓
+hand.clear(); discardPile.clear(); exhaustPile.clear()
+energy.prep()                                                   // energy = energyMaster；面板能量清 0
+powers.clear()
+room.monsters.usePreBattleAction()                              // 每只怪 usePreBattleAction()（卷曲、人工制品… 只是入队）  @MonsterGroup.usePreBattleAction
+if (本节点是翡翠钥匙精英) room.applyEmeraldEliteBuff()            // mapRng.random(0,3) 选一种强化  @MonsterRoomElite.applyEmeraldEliteBuff
+addToTop(new WaitAction(1.0))
+for (r of relics) r.atPreBattle()                               // @AbstractPlayer.applyPreCombatLogic
+
+function initializeDeck(masterDeck) {                           // @CardGroup.initializeDeck
+  copy = clone(masterDeck); copy.shuffle(shuffleRng)
+  placeOnTop = []
+  for (c of copy.group)
+    if (c.isInnate || c.inBottleFlame || c.inBottleLightning || c.inBottleTornado) placeOnTop.push(c)
+    else drawPile.addToTop(c)
+  for (c of placeOnTop) drawPile.addToTop(c)                    // 固有牌 / 瓶装牌压在牌堆顶
+  if (placeOnTop.length > masterHandSize)
+    addToTurnStart(new DrawCardAction(placeOnTop.length - masterHandSize))   // 进 preTurnActions
+}
+
+// —— 3) 第一回合：waitTimer 归零的那一帧 ——                     @AbstractRoom.update:225-249
+actionManager.turnHasEnded = true
+addToBottom(new GainEnergyAndEnableControlsAction(energy.energyMaster))   // 回能 + onEnergyRecharge + turnHasEnded = false  @GainEnergyAndEnableControlsAction.update
+for (r of relics) r.atBattleStartPreDraw()                      // @AbstractPlayer.applyStartOfCombatPreDrawLogic
+addToBottom(new DrawCardAction(player, gameHandSize))
+addToBottom(new EnableEndTurnButtonAction())
+for (r of relics) r.atBattleStart(); for (b of blights) b.atBattleStart()   // @AbstractPlayer.applyStartOfCombatLogic
+player.applyStartOfTurnRelics()                                 // stance.atStartOfTurn → relics.atTurnStart → blights.atTurnStart  @AbstractPlayer.applyStartOfTurnRelics
+player.applyStartOfTurnPostDrawRelics()                         // relics.atTurnStartPostDraw
+player.applyStartOfTurnCards()                                  // 抽牌堆 → 手牌 → 弃牌堆 的 atTurnStart  @AbstractPlayer.applyStartOfTurnCards
+player.applyStartOfTurnPowers()                                 // powers.atStartOfTurn  @AbstractCreature.applyStartOfTurnPowers
+player.applyStartOfTurnOrbs()                                   // @AbstractPlayer.applyStartOfTurnOrbs
+actionManager.useNextCombatActions()
+</script>
+<div class="tip"><b>由入队顺序推出的实际执行顺序：</b>Wait → 怪物战前动作 → 遗物 <code>atPreBattle</code> 的动作 →（第一回合帧）回能 → <code>atBattleStartPreDraw</code> 的动作 → <b>抽 5 张</b> → <code>atBattleStart</code> 的动作（所以"准备背包"的额外 2 张在起手 5 张<b>之后</b>抽）→ <code>atTurnStart</code> 的动作 → …<br><b>第一回合与后续回合的差异：</b>没有 <code>atTurnStartPreDraw</code>、没有能力的 <code>atStartOfTurnPostDraw</code>、不清格挡、不触发 <code>atEndOfRound</code>；回能走的是 <code>GainEnergyAndEnableControlsAction</code> 而不是 <code>energy.recharge()</code>。</div>
+</section>
+
+<section id="s5">
+<h2><span class="num">5</span>出牌流程</h2>
+<div class="sub">拖牌 → cardQueue → 校验 → onPlayCard 钩子 → useCard → UseCardAction（构造时 onUseCard，执行时归位）。</div>
+<script type="text/x-spec">
+// 玩家把牌拖到目标上                                            @AbstractPlayer.playCard
+cardQueue.push(new CardQueueItem(card, targetOrNull))           // energyOnUse = 入队瞬间的面板能量  @CardQueueItem.ctor
+
+// getNextAction 分支 ③                                          @GameActionManager.getNextAction:183-291
+function playNextQueuedCard() {
+  item = cardQueue[0]; c = item.card; m = item.monster
+  if (c == null) callEndOfTurnActions()                         // "结束回合"哨兵，见 §8
+  if (c) c.isInAutoplay = item.autoplayCard
+  if (c && item.randomTarget) m = item.monster = monsters.getRandomMonster(null, true, cardRandomRng)
+
+  canPlayCard = false
+  if (c && (c.canUse(player, m) || c.dontTriggerOnUseCard)) {
+    canPlayCard = true
+    if (c.freeToPlay()) c.freeToPlayOnce = true
+    c.energyOnUse = item.energyOnUse
+    c.ignoreEnergyOnUse = c.isInAutoplay ? true : item.ignoreEnergyTotal
+    if (!c.dontTriggerOnUseCard) {
+      // ★ onPlayCard 钩子顺序                                   @GameActionManager.getNextAction:210-237
+      for (p of player.powers)            p.onPlayCard(c, m)
+      for (mo of monsters) for (p of mo.powers) p.onPlayCard(c, m)
+      for (r of player.relics)            r.onPlayCard(c, m)
+      player.stance.onPlayCard(c)
+      for (b of player.blights)           b.onPlayCard(c, m)
+      for (x of hand) x.onPlayCard(c, m); for (x of discardPile) x.onPlayCard(c, m); for (x of drawPile) x.onPlayCard(c, m)
+      player.cardsPlayedThisTurn++; cardsPlayedThisTurn.push(c); cardsPlayedThisCombat.push(c)
+    }
+    if (c.target == ENEMY && (m == null || m.isDeadOrEscaped()))
+      limbo.remove(c)                                           // ★ 排队期间目标死了：牌"哑火"，不产生任何效果也不扣费
+    else
+      player.useCard(c, m, item.energyOnUse)
+  } else if (c) {
+    limbo.remove(c)                                             // 打不出：显示 cantUseMessage
+  }
+  cardQueue.shift()
+  if (!canPlayCard && c && c.isInAutoplay) { c.dontTriggerOnUseCard = true; addToBottom(new UseCardAction(c)) }
+}
+
+// —— 能不能打 ——                                                @AbstractCard.canUse
+canUse(p, m) =
+     !(type == STATUS && costForTurn < -1 && !p.hasRelic("Medical Kit"))
+  && !(type == CURSE  && costForTurn < -1 && !p.hasRelic("Blue Candle"))
+  && cardPlayable(m) && hasEnoughEnergy()
+
+cardPlayable(m) =                                               // @AbstractCard.cardPlayable
+  !(((target == ENEMY || target == SELF_AND_ENEMY) && m != null && m.isDying) || monsters.areMonstersBasicallyDead())
+
+hasEnoughEnergy() {                                             // @AbstractCard.hasEnoughEnergy
+  if (actionManager.turnHasEnded) return false
+  for (p of player.powers) if (!p.canPlayCard(this)) return false
+  if (player.hasPower("Entangled") && type == ATTACK) return false
+  for (r of player.relics)  if (!r.canPlay(this)) return false            // 例：天鹅绒颈圈
+  for (b of player.blights) if (!b.canPlay(this)) return false
+  for (c of player.hand)    if (!c.canPlay(this)) return false            // 例：凡庸
+  return energy >= costForTurn || freeToPlay() || isInAutoplay
+}
+
+// —— 真正使用 ——                                                @AbstractPlayer.useCard
+useCard(c, monster, energyOnUse) {
+  c.calculateCardDamage(monster)                                // 针对目标重算面板（§6）
+  if (c.cost == -1 && energy < energyOnUse && !c.ignoreEnergyOnUse) c.energyOnUse = energy
+  if (c.cost == -1 && c.isInAutoplay) c.freeToPlayOnce = true
+  c.use(this, monster)                                          // ★ 卡牌效果：只入队，不结算
+  addToBottom(new UseCardAction(c, monster))                    // ★ 构造函数同步触发 onUseCard（见下）
+  if (!c.dontTriggerOnUseCard) hand.triggerOnOtherCardPlayed(c) // 其余手牌 triggerOnOtherCardPlayed + 玩家能力 onAfterCardPlayed  @CardGroup.triggerOnOtherCardPlayed
+  hand.removeCard(c); cardInUse = c
+  if (c.costForTurn > 0 && !c.freeToPlay() && !c.isInAutoplay && !(hasPower("Corruption") && c.type == SKILL))
+    energy.use(c.costForTurn)                                   // ★ 扣费发生在 use() 之后
+}
+
+// —— UseCardAction 构造函数（同步）——                           @UseCardAction.ctor
+exhaustCard = card.exhaustOnUseOnce || card.exhaust
+if (!card.dontTriggerOnUseCard) {
+  for (p of player.powers) p.onUseCard(card, this)              // 可改写 this.exhaustCard / this.reboundCard（腐化、弹回）
+  for (r of player.relics) r.onUseCard(card, this)
+  for (x of hand) x.triggerOnCardPlayed(card); for (x of discardPile) ...; for (x of drawPile) ...
+  for (mo of monsters) for (p of mo.powers) p.onUseCard(card, this)
+}
+
+// —— UseCardAction.update：排在卡牌效果之后才执行 ——            @UseCardAction.update
+for (p of player.powers) p.onAfterUseCard(card, this)
+for (mo of monsters) for (p of mo.powers) p.onAfterUseCard(card, this)    // 例：时间吞噬者计数
+card.freeToPlayOnce = false; card.isInAutoplay = false
+if (card.purgeOnUse) { cardInUse = null; return }               // 复制出来的牌直接消失
+if (card.type == POWER) { hand.empower(card); hand.applyPowers(); cardInUse = null; return }   // 能力牌不进任何牌堆
+spoonProc = exhaustCard && hasRelic("Strange Spoon") && card.type != POWER ? cardRandomRng.randomBoolean() : false
+if (!exhaustCard || spoonProc) {
+  if (reboundCard)                       hand.moveToDeck(card, false)     // 回抽牌堆顶
+  else if (card.shuffleBackIntoDrawPile) hand.moveToDeck(card, true)      // 抽牌堆随机位置
+  else if (card.returnToHand)            { hand.moveToHand(card); player.onCardDrawOrDiscard() }
+  else                                   hand.moveToDiscardPile(card)
+} else                                   hand.moveToExhaustPile(card)     // §9
+card.exhaustOnUseOnce = false; card.dontTriggerOnUseCard = false
+addToBot(new HandCheckAction())
+</script>
+<div class="tip"><b>打出"痛击"时队列的真实样子：</b><code>use()</code> 入队 [伤害, 施加易伤] → <code>new UseCardAction</code> 构造时各 <code>onUseCard</code> 钩子把自己的动作 <code>addToBot</code> → 最后 UseCardAction 自己入队。即 <code>[伤害, 易伤, 钩子动作…, UseCardAction]</code>。而 <code>onPlayCard</code> 钩子的动作排在 <b>卡牌效果之前</b>。两类钩子一前一后，这是很多遗物/能力时序的根源。</div>
+</section>
+
+<section id="s6">
+<h2><span class="num">6</span>伤害管线</h2>
+<div class="sub">面板计算（三个入口）→ DamageAction → creature.damage()（玩家版和怪物版钩子顺序不同）。全程 float 运算，最后 <code>MathUtils.floor</code>。</div>
+<script type="text/x-spec">
+// —— (a) 手牌面板：不针对目标 ——                                @AbstractCard.applyPowers
+applyPowers() {
+  applyPowersToBlock()                                          // §7
+  tmp: float = baseDamage
+  for (r of player.relics) tmp = r.atDamageModify(tmp, this)            // 例：腕刃
+  for (p of player.powers) tmp = p.atDamageGive(tmp, damageTypeForTurn, this)   // 力量 +N、虚弱 ×0.75、笔尖 ×2
+  tmp = player.stance.atDamageGive(tmp, damageTypeForTurn, this)        // 愤怒 ×2、神格 ×3
+  for (p of player.powers) tmp = p.atDamageFinalGive(tmp, damageTypeForTurn, this)
+  damage = floor(max(0, tmp))
+  // 群攻牌 isMultiDamage：对每只怪各算一遍存 multiDamage[i]
+}
+
+// —— (b) 打出时针对目标 ——                                      @AbstractCard.calculateCardDamage
+calculateCardDamage(mo) {
+  applyPowersToBlock()
+  tmp = baseDamage
+  relics.atDamageModify → player.powers.atDamageGive → stance.atDamageGive
+  for (p of mo.powers)     tmp = p.atDamageReceive(tmp, type, this)     // 易伤 ×1.5
+  for (p of player.powers) tmp = p.atDamageFinalGive(tmp, type, this)
+  for (p of mo.powers)     tmp = p.atDamageFinalReceive(tmp, type, this)   // 无实体 → 1、飞行 ÷2
+  damage = floor(max(0, tmp))
+}
+
+// —— (c) 非卡牌来源：怪物攻击、荆棘、球 ——                      @DamageInfo.applyPowers
+applyPowers(owner, target) {
+  tmp = base
+  if (!owner.isPlayer)   // 怪物 → 玩家
+    owner.powers.atDamageGive → target.powers.atDamageReceive → player.stance.atDamageReceive
+      → owner.powers.atDamageFinalGive → target.powers.atDamageFinalReceive
+  else                   // 玩家 → 怪物
+    owner.powers.atDamageGive → player.stance.atDamageGive → target.powers.atDamageReceive
+      → owner.powers.atDamageFinalGive → target.powers.atDamageFinalReceive
+  output = max(0, floor(tmp))
+}
+
+// —— 怪物意图数字 ——                                            @AbstractMonster.calculateDamage
+intentDmg = 与 (c) 的"怪物→玩家"同序，固定用 NORMAL 类型；背刺 (Surrounded) 再 ×1.5
+// ★ 任何能力增减之后都会调 AbstractDungeon.onModifyPower()：手牌 applyPowers() + 每只怪 applyPowers()
+//   → 所以给怪物上虚弱，它头顶的意图数字立刻变小                  @AbstractDungeon.onModifyPower  @AbstractMonster.applyPowers
+
+// —— DamageAction ——                                            @DamageAction.update
+if (shouldCancelAction() && info.type != THORNS) return done    // 目标已死 / 来源已死 → 取消
+if (info.type != THORNS && (info.owner.isDying || info.owner.halfDead)) return done
+target.damage(info)
+if (monsters.areMonstersBasicallyDead()) actionManager.clearPostCombatActions()
+
+// —— 格挡抵扣（玩家怪物共用）——                                 @AbstractCreature.decrementBlock
+decrementBlock(info, dmg) {
+  if (info.type != HP_LOSS && currentBlock > 0) {
+    if (dmg > currentBlock)       { dmg -= currentBlock; loseBlock(); brokeBlock() }   // brokeBlock → 遗物 onBlockBroken
+    else if (dmg == currentBlock) { dmg = 0; loseBlock(); brokeBlock() }
+    else                          { loseBlock(dmg); dmg = 0 }
+  }
+  return dmg
+}
+</script>
+
+<h3>玩家受伤：<code>AbstractPlayer.damage(info)</code></h3>
+<script type="text/x-spec">
+damage(info) {                                                  // @AbstractPlayer.damage
+  dmg = max(0, info.output)
+  if (dmg > 1 && hasPower("IntangiblePlayer")) dmg = 1
+  dmg = decrementBlock(info, dmg)
+  if (info.owner == this) for (r of relics) dmg = r.onAttackToChangeDamage(info, dmg)
+  if (info.owner)         for (p of info.owner.powers) dmg = p.onAttackToChangeDamage(info, dmg)
+  for (r of relics) dmg = r.onAttackedToChangeDamage(info, dmg)             // （原版没有遗物实现它）
+  for (p of powers) dmg = p.onAttackedToChangeDamage(info, dmg)             // 例：缓冲
+  if (info.owner == this) for (r of relics) r.onAttack(info, dmg, this)     // （原版没有遗物实现它）
+  if (info.owner) {
+    for (p of info.owner.powers) p.onAttack(info, dmg, this)                // 攻击方能力
+    for (p of powers) dmg = p.onAttacked(info, dmg)                         // 例：荆棘、火焰屏障、静电释放
+    for (r of relics) dmg = r.onAttacked(info, dmg)                         // 例：鸟居（2..5 点 → 1）
+  }                                                             // ★ owner == null：这三组钩子全部跳过
+  for (r of relics) dmg = r.onLoseHpLast(dmg)                               // 例：钨合金棍 −1
+  lastDamageTaken = min(dmg, currentHealth)
+
+  if (dmg > 0) {
+    for (p of powers) dmg = p.onLoseHp(dmg)
+    for (r of relics) r.onLoseHp(dmg)
+    for (p of powers) p.wasHPLost(info, dmg)                                // 例：撕裂、多层护甲 −1
+    for (r of relics) r.wasHPLost(dmg)                                      // 例：百年积木、符文立方、自成型黏土、情感芯片
+    if (info.owner) for (p of info.owner.powers) p.onInflictDamage(info, dmg, this)   // 例：痛苦戳刺
+    if (info.type == HP_LOSS) hpLossThisCombat += dmg
+    damageReceivedThisTurn += dmg; damageReceivedThisCombat += dmg
+    currentHealth -= dmg
+    if (room.phase == COMBAT) { updateCardsOnDamage(); damagedThisCombat++ }   // 手牌/牌堆的 tookDamage（血债血偿减费）
+    currentHealth = max(0, currentHealth)
+    if (currentHealth <= maxHealth / 2 && !isBloodied) { isBloodied = true; for (r of relics) r.onBloodied() }   // 红骷髅
+    if (currentHealth < 1) {
+      if (!hasRelic("Mark of the Bloom")) {
+        if (有精灵药水)  { currentHealth = 0; potion.use(this); destroyPotion(); return }
+        else if (蜥蜴尾巴未用过) { currentHealth = 0; relic.onTrigger(); return }
+      }
+      isDead = true; currentHealth = 0; loseBlock()
+    }
+  }
+}
+</script>
+
+<h3>怪物受伤：<code>AbstractMonster.damage(info)</code></h3>
+<script type="text/x-spec">
+damage(info) {                                                  // @AbstractMonster.damage
+  if (info.output > 0 && hasPower("IntangiblePlayer")) info.output = 1
+  dmg = max(0, info.output)
+  if (isDying || isEscaping) return
+  dmg = decrementBlock(info, dmg)
+  if (info.owner == player) for (r of player.relics) dmg = r.onAttackToChangeDamage(info, dmg)   // 例：靴子（1..4 点 → 5）
+  if (info.owner)           for (p of info.owner.powers) dmg = p.onAttackToChangeDamage(info, dmg)
+  for (p of powers) dmg = p.onAttackedToChangeDamage(info, dmg)
+  if (info.owner == player) for (r of player.relics) r.onAttack(info, dmg, this)
+  for (p of powers) p.wasHPLost(info, dmg)                      // ★ 怪物版在扣血之前、且不判 dmg > 0
+  if (info.owner) for (p of info.owner.powers) p.onAttack(info, dmg, this)          // 例：涂毒
+  for (p of powers) dmg = p.onAttacked(info, dmg)               // 例：卷曲、愤怒、荆棘、可塑、飞行、Shifting、Reactive
+  lastDamageTaken = min(dmg, currentHealth)
+  if (dmg > 0) { currentHealth -= dmg; currentHealth = max(0, currentHealth) }
+  if (currentHealth <= 0) {
+    die()                                                       // §11
+    if (monsters.areMonstersBasicallyDead()) actionManager.cleanCardQueue()   // 清掉还在排队的手牌
+    if (currentBlock > 0) loseBlock()
+  }
+}
+</script>
+<div class="tip warn"><b>玩家版 vs 怪物版的差别（都要照抄）：</b>怪物没有 <code>onLoseHp / onLoseHpLast / onInflictDamage</code>；怪物的 <code>wasHPLost</code> 在 <code>onAttack</code> 之前且不要求伤害 &gt; 0；怪物的 <code>onAttacked</code> 不受 <code>owner == null</code> 影响。34 个怪物子类还重写了 <code>damage()</code>（觉醒者、黑暗体等半死机制）——见 ② 怪物 <code>damage</code>。</div>
+</section>
+
+<section id="s7">
+<h2><span class="num">7</span>格挡与能力施加</h2>
+<script type="text/x-spec">
+// —— 卡牌的格挡面板 ——                                          @AbstractCard.applyPowersToBlock
+tmp = baseBlock
+for (p of player.powers) tmp = p.modifyBlock(tmp, this)         // 敏捷 +N、脆弱 ×0.75
+for (p of player.powers) tmp = p.modifyBlockLast(tmp)           // 无格挡 → 0
+block = floor(max(0, tmp))
+
+// —— GainBlockAction ——                                         @GainBlockAction.update
+if (!target.isDying && !target.isDead) { target.addBlock(amount); for (c of hand) c.applyPowers() }
+
+// —— addBlock ——                                                @AbstractCreature.addBlock
+addBlock(amount) {
+  tmp: float = amount
+  if (isPlayer) {
+    for (r of player.relics) tmp = r.onPlayerGainedBlock(tmp)
+    if (tmp > 0) for (p of powers) p.onGainedBlock(tmp)         // 例：势不可挡
+  }
+  for (mo of monsters) for (p of mo.powers) tmp = p.onPlayerGainedBlock(tmp)   // ★ 不区分是谁在加格挡
+  currentBlock = min(999, currentBlock + floor(tmp))
+}
+
+// —— 治疗 ——                                                    @AbstractCreature.heal
+heal(amount) {
+  if (isDying) return
+  if (isPlayer) for (r of player.relics) amount = r.onPlayerHeal(amount)       // 例：魔法花 ×1.5
+  for (p of powers) amount = p.onHeal(amount)
+  currentHealth = min(maxHealth, currentHealth + amount)
+  if (currentHealth > maxHealth / 2 && isBloodied) { isBloodied = false; for (r of player.relics) r.onNotBloodied() }
+}
+
+// —— ApplyPowerAction ——                                        @ApplyPowerAction.update
+// 构造函数：若战斗已结束则直接 isDone；蛇骨（中毒 +1）与腐化的特判也在构造函数   @ApplyPowerAction.ctor
+update() {
+  if (target == null || target.isDeadOrEscaped()) return done
+  if (power is NoDrawPower && target.hasPower(power.ID)) return done
+  if (source) for (p of source.powers) p.onApplyPower(power, target, source)   // 例：残虐天性 Sadistic
+  if (hasRelic("Champion Belt") && source?.isPlayer && target != source && power.ID == "Vulnerable" && !target.hasPower("Artifact"))
+    relic.onTrigger(target)                                     // 冠军腰带：追加虚弱
+  if (target is Monster && target.isDeadOrEscaped()) return done
+  if (hasRelic("Ginger") && target.isPlayer && power.ID == "Weakened") return done   // 生姜：免疫虚弱
+  if (hasRelic("Turnip") && target.isPlayer && power.ID == "Frail")    return done   // 萝卜：免疫脆弱
+  if (target.hasPower("Artifact") && power.type == DEBUFF) {    // ★ 人工制品：按 PowerType 判定，不是按 ID 列表
+    target.getPower("Artifact").onSpecificTrigger()             // 层数 −1（或移除）  @ArtifactPower.onSpecificTrigger
+    return done
+  }
+  existing = target.powers.find(p => p.ID == power.ID && p.ID != "Night Terror")
+  if (existing) { existing.stackPower(amount); existing.updateDescription() }  // @AbstractPower.stackPower
+  else { target.powers.push(power); sort(target.powers); power.onInitialApplication() }
+  AbstractDungeon.onModifyPower()                               // 重算手牌面板与所有怪物意图
+}
+
+// —— 减少 / 移除 ——
+ReducePowerAction:        p.reducePower(amount); if (p.amount == 0) addToTop(new RemoveSpecificPowerAction(...))   // @ReducePowerAction.update
+RemoveSpecificPowerAction: p.onRemove(); target.powers.remove(p); onModifyPower()                                  // @RemoveSpecificPowerAction.update
+</script>
+<div class="tip"><b>关于"负面能力"的判定：</b>力量 / 敏捷 / 集中 在 <code>updateDescription()</code> 里按 amount 正负把 <code>type</code> 切成 BUFF 或 DEBUFF <span class="ref" data-ref="StrengthPower.updateDescription"></span>，所以 −N 力量同样会被人工制品挡掉。新引擎里 <code>type</code> 是 Power 实例的字段，不再维护"负面 ID 白名单"。<br><b>回合结束弃牌的细节：</b>循环里每个 <code>DiscardAction</code> 的 amount 都是整手牌数，所以第一个就把手牌弃光，其余空转——照抄即可，不要"优化"。</div>
+</section>
+
+<section id="s8">
+<h2><span class="num">8</span>回合结束 → 怪物回合 → 新回合</h2>
+<div class="sub">§0 时间线的完整伪代码。</div>
+<script type="text/x-spec">
+// —— A1. 点击结束回合 ——                                        @EndTurnButton.disable
+addToBottom(new NewQueueCardAction())                           // 往 cardQueue 放 card == null 的哨兵  @NewQueueCardAction.update
+player.endTurnQueued = true
+
+// —— A2. cardQueue 取到哨兵 ——                                  @GameActionManager.callEndOfTurnActions
+callEndOfTurnActions() {
+  for (r of relics)  r.onPlayerEndTurn();  for (b of blights) b.onPlayerEndTurn()   // 奥利哈钢、斗篷扣、冰冻核心…  @AbstractRoom.applyEndOfTurnRelics
+  for (p of player.powers) p.atEndOfTurnPreEndTurnCards(true)                       // @AbstractRoom.applyEndOfTurnPreCardPowers
+  addToBottom(new TriggerEndOfTurnOrbsAction())                 // 每个球 onEndOfTurn；电缆让 0 号球再触发一次  @TriggerEndOfTurnOrbsAction.update
+  for (c of hand) c.triggerOnEndOfTurnForPlayingCard()          // 灼伤/腐朽/悔恨/疑虑/羞耻/傲慢：把自己作为 autoplay 项塞进 cardQueue
+  player.stance.onEndOfTurn()
+}
+
+// —— A3. 队列、cardQueue 全空 ——                                @AbstractPlayer.updateInput:849-851
+if (endTurnQueued && cardQueue.isEmpty() && !actionManager.hasControl) { endTurnQueued = false; isEndingTurn = true }
+
+// —— A4. room.endTurn() ——                                      @AbstractRoom.endTurn
+endTurn() {
+  for (p of player.powers) p.atEndOfTurn(true)                  // ★ 同步调用（钩子内部仍是入队）  @AbstractCreature.applyEndOfTurnTriggers
+  addToBottom(new ClearCardQueueAction())
+  addToBottom(new DiscardAtEndOfTurnAction())                   // §9
+  for (c of drawPile ∪ discardPile ∪ hand) c.resetAttributes()  // costForTurn 复原等  @AbstractCard.resetAttributes
+  addToBottom(匿名动作 {
+    addToBot(new EndTurnAction())                               // turnHasEnded = true; playerHpLastTurn = hp  @GameActionManager.endTurn
+    addToBot(new WaitAction(1.2))
+    if (!skipMonsterTurn) addToBot(new MonsterStartTurnAction())
+    actionManager.monsterAttacksQueued = false
+  })
+  player.isEndingTurn = false
+}
+
+// —— B1. MonsterStartTurnAction ——                              @MonsterGroup.applyPreTurnLogic
+for (m of monsters) if (!m.isDying && !m.isEscaping) {
+  if (!m.hasPower("Barricade")) m.loseBlock()
+  for (p of m.powers) p.atStartOfTurn()                         // 中毒 → addToBot(PoisonLoseHpAction)；再生等
+}
+
+// —— B2. getNextAction 分支 ④⑤ ——                               @GameActionManager.getNextAction:292-317
+monsters.queueMonsters()                                        // 存活（或 halfDead）的怪进 monsterQueue  @MonsterGroup.queueMonsters
+function monsterTakesTurn() {
+  m = monsterQueue[0]
+  if (!m.isDeadOrEscaped() || m.halfDead) {
+    m.takeTurn()                                                // 入队本招式全部动作，最后 addToBot(new RollMoveAction(m))
+    for (p of m.powers) p.duringTurn()                          // @AbstractCreature.applyTurnPowers
+  }
+  monsterQueue.shift()
+  if (monsterQueue.isEmpty()) addToBottom(new WaitAction(1.5))
+}
+
+// —— C. getNextAction 分支 ⑥：新回合 ——                         @GameActionManager.getNextAction:318-355
+function startNextPlayerTurn() {
+  if (!room.skipMonsterTurn) monsters.applyEndOfTurnPowers()    // ↓
+  player.cardsPlayedThisTurn = 0; orbsChanneledThisTurn.clear()
+  player.applyStartOfTurnRelics()                               // stance.atStartOfTurn → relics.atTurnStart → blights
+  player.applyStartOfTurnPreDrawCards()                         // 手牌（=保留下来的牌）atTurnStartPreDraw
+  player.applyStartOfTurnCards()                                // 抽牌堆 → 手牌 → 弃牌堆 atTurnStart
+  player.applyStartOfTurnPowers()                               // 玩家 powers.atStartOfTurn
+  player.applyStartOfTurnOrbs()
+  turn++
+  room.skipMonsterTurn = false; turnHasEnded = false
+  totalDiscardedThisTurn = 0; cardsPlayedThisTurn.clear(); damageReceivedThisTurn = 0
+  if (!player.hasPower("Barricade") && !player.hasPower("Blur"))
+    player.hasRelic("Calipers") ? player.loseBlock(15) : player.loseBlock()
+  if (!room.isBattleOver) {
+    addToBottom(new DrawCardAction(null, player.gameHandSize, endTurnDraw = true))   // ★ 构造时：energy.recharge() + onEnergyRecharge
+    player.applyStartOfTurnPostDrawRelics()
+    player.applyStartOfTurnPostDrawPowers()
+    addToBottom(new EnableEndTurnButtonAction())
+  }
+}
+
+applyEndOfTurnPowers() {                                        // @MonsterGroup.applyEndOfTurnPowers
+  for (m of 存活怪物) for (p of m.powers) { p.atEndOfTurnPreEndTurnCards(false); p.atEndOfTurn(false) }   // 金属化、再生、怪物的多层护甲
+  for (p of player.powers) p.atEndOfRound()                     // 玩家身上的虚弱/易伤/脆弱 −1、残影 −1、无实体 −1
+  for (m of 存活怪物) for (p of m.powers) p.atEndOfRound()      // 怪物身上的虚弱/易伤 −1、仪式 +力量（首轮跳过）
+}
+
+// —— 回能 ——                                                    @EnergyManager.recharge
+recharge() {
+  if (hasRelic("Ice Cream"))      addEnergy(energy)             // 冰淇淋：保留上回合剩余
+  else if (hasPower("Conserve"))  { if (面板能量 > 0) addToTop(ReducePower Conserve 1); addEnergy(energy) }
+  else                            setEnergy(energy)
+}
+</script>
+<div class="tbl-wrap"><table>
+<tr><th>能力</th><th>节拍钩子</th><th>行为</th><th>来源</th></tr>
+<tr><td>中毒 Poison</td><td><code>atStartOfTurn</code></td><td>持有者回合开始：入队 PoisonLoseHpAction（HP_LOSS，结算后层数 −1）</td><td><span class="ref" data-ref="PoisonPower.atStartOfTurn"></span></td></tr>
+<tr><td>虚弱 / 易伤 / 脆弱</td><td><code>atEndOfRound</code></td><td>−1；<code>justApplied</code>（怪物施加的那一轮）跳过一次</td><td><span class="ref" data-ref="WeakPower.atEndOfRound"></span> <span class="ref" data-ref="VulnerablePower.atEndOfRound"></span> <span class="ref" data-ref="FrailPower.atEndOfRound"></span></td></tr>
+<tr><td>仪式 Ritual</td><td>玩家 <code>atEndOfTurn</code> / 怪物 <code>atEndOfRound</code></td><td>+N 力量；怪物版首轮 <code>skipFirst</code></td><td><span class="ref" data-ref="RitualPower.atEndOfTurn"></span> <span class="ref" data-ref="RitualPower.atEndOfRound"></span></td></tr>
+<tr><td>怪物再生</td><td><code>atEndOfTurn</code></td><td>怪物回合结束回血</td><td><span class="ref" data-ref="RegenerateMonsterPower.atEndOfTurn"></span></td></tr>
+<tr><td>残影 Blur / 无实体</td><td><code>atEndOfRound</code></td><td>层数 −1</td><td><span class="ref" data-ref="BlurPower.atEndOfRound"></span> <span class="ref" data-ref="IntangiblePlayerPower.atEndOfRound"></span></td></tr>
+</table></div>
+<p class="dim">全部 161 个能力各自实现了哪些节拍钩子：② 钩子矩阵 → 能力 → <code>atStartOfTurn / atEndOfTurn / atEndOfRound / duringTurn / atStartOfTurnPostDraw</code>。</p>
+</section>
+
+<section id="s9">
+<h2><span class="num">9</span>抽牌 / 洗牌 / 弃牌 / 消耗 / 保留</h2>
+<script type="text/x-spec">
+// —— DrawCardAction.update ——                                   @DrawCardAction.update
+if (player.hasPower("No Draw")) return done                     // 战斗专注等
+if (amount <= 0) return done
+deck = drawPile.size(); discard = discardPile.size()
+if (deck + discard == 0) return done
+if (hand.size() == 10) return done                              // 手牌上限 10
+if (amount + hand.size() > 10) amount = 10 - hand.size()
+if (amount > deck) {                                            // ★ 牌不够：拆成三段，全部 addToTop（所以执行顺序是倒着读）
+  addToTop(new DrawCardAction(amount - deck, followUp))         //   ③ 洗完再抽剩下的
+  addToTop(new EmptyDeckShuffleAction())                        //   ② 洗牌
+  if (deck != 0) addToTop(new DrawCardAction(deck))             //   ① 先把现有的抽完
+  return done
+}
+repeat(amount) player.draw()
+if (followUp) addToTop(followUp)
+
+// —— player.draw(1) ——                                          @AbstractPlayer.draw
+c = drawPile.getTopCard()
+c.triggerWhenDrawn()                                            // 虚空、无尽苦痛、机械降神
+hand.addToHand(c); drawPile.removeTopCard()
+for (p of powers) p.onCardDraw(c)                               // 进化、火焰吐息、腐化、混乱
+for (r of relics) r.onCardDraw(c)
+
+// —— EmptyDeckShuffleAction ——
+构造函数: for (r of relics) r.onShuffle()                       // 日晷、算盘：★在"决定要洗牌"时触发，不是真正洗的时候  @EmptyDeckShuffleAction.ctor
+update:   discardPile.shuffle(shuffleRng); 把弃牌堆逐张移入抽牌堆                       // @EmptyDeckShuffleAction.update
+
+// —— 回合结束弃牌 ——                                            @DiscardAtEndOfTurnAction.update
+for (c of hand) if (c.retain || c.selfRetain) { limbo.addToTop(c); hand.remove(c) }
+addToTop(new RestoreRetainedCardsAction(limbo))                 // ② 后执行：保留牌回手，c.onRetained()，retain = false  @RestoreRetainedCardsAction.update
+if (!hasRelic("Runic Pyramid") && !hasPower("Equilibrium"))
+  repeat(hand.size()) addToTop(new DiscardAction(player, null, hand.size(), random = true, endTurn = true))   // ① 先执行
+cards = clone(hand); Collections.shuffle(cards)                 // ★ 无种子洗牌，只影响下面的触发顺序
+for (c of cards) c.triggerOnEndOfPlayerTurn()                   // 基类：isEthereal → addToTop(ExhaustSpecificCardAction)  @AbstractCard.triggerOnEndOfPlayerTurn
+
+// —— 弃一张牌 ——                                                @CardGroup.moveToDiscardPile
+discardPile.addToTop(c); player.onCardDrawOrDiscard()
+// 非回合结束的弃牌还会: c.triggerOnManualDiscard(); incrementDiscard()         @DiscardAction.update
+onCardDrawOrDiscard() {                                         // @AbstractPlayer.onCardDrawOrDiscard
+  for (p of powers) p.onDrawOrDiscard(); for (r of relics) r.onDrawOrDiscard()
+  if (hasPower("Corruption")) 手牌里的技能牌费用置 0
+  hand.applyPowers()
+}
+
+// —— 消耗一张牌 ——                                              @CardGroup.moveToExhaustPile
+for (r of relics) r.onExhaust(c)                                // 卡戎之灰、枯木树枝
+for (p of player.powers) p.onExhaust(c)                         // 无惧疼痛、黑暗之拥
+c.triggerOnExhaust()                                            // 哨卫
+exhaustPile.addToTop(c); player.onCardDrawOrDiscard()
+</script>
+</section>
+
+<section id="s10">
+<h2><span class="num">10</span>怪物 AI 框架</h2>
+<div class="sub">每只怪物 = <code>getMove(num)</code>（选招）+ <code>takeTurn()</code>（出招）+ 一个招式历史数组。66 个怪物子类的具体实现见 ③。</div>
+<script type="text/x-spec">
+abstract class Monster {
+  // 构造：setHp(min, max) → currentHealth = maxHealth = monsterHpRng.random(min, max)   @AbstractMonster.setHp
+  //       进阶等级在构造函数里改数值：通常 A2/A3/A4 加伤害，A7/A8/A9 加血，A17/A18/A19 改 AI
+  init()     { rollMove() }                                     // @AbstractMonster.init
+  rollMove() { getMove(aiRng.random(99)) }                      // ★ 每次选招固定消耗 aiRng 一次，即使该怪物不看 num  @AbstractMonster.rollMove
+  abstract getMove(num: int): void                              // 子类：按 num(0..99)、moveHistory、自身状态 调 setMove(...)
+  abstract takeTurn(): void                                     // 子类：switch (nextMove) 入队动作；末尾 addToBot(new RollMoveAction(this))
+
+  setMove(name?, nextMove: byte, intent, baseDamage = -1, multiplier = 0, isMultiDamage = false) {   // @AbstractMonster.setMove
+    if (nextMove != -1) moveHistory.push(nextMove)
+    move = { nextMove, intent, baseDamage, multiplier, isMultiDamage }
+  }
+  lastMove(m)       = moveHistory.at(-1) == m                   // @AbstractMonster.lastMove
+  lastMoveBefore(m) = moveHistory.at(-2) == m                   // @AbstractMonster.lastMoveBefore
+  lastTwoMoves(m)   = moveHistory.at(-1) == m && moveHistory.at(-2) == m   // @AbstractMonster.lastTwoMoves
+
+  createIntent() {                                              // 把 move "提交"成可见意图  @AbstractMonster.createIntent
+    intent = move.intent
+    nextMove = move.nextMove                                    // ★ takeTurn() 读的是这个字段；setMove 之后必须 createIntent 才生效
+    if (move.baseDamage > -1) { calculateDamage(move.baseDamage); intentMultiAmt = move.isMultiDamage ? move.multiplier : -1 }
+  }
+  applyPowers() {                                               // @AbstractMonster.applyPowers
+    for (d of this.damage) d.applyPowers(this, player)          // 重算每个招式的 DamageInfo.output
+    if (move.baseDamage > -1) calculateDamage(move.baseDamage)  // 重算意图数字
+  }
+}
+// RollMoveAction.update → monster.rollMove()                    @RollMoveAction.update
+// 新回合开始（PlayerTurnEffect 构造）→ monsters.showIntent() → 每只怪 createIntent()   @MonsterGroup.showIntent
+// 随机目标：monsters.getRandomMonster(exclude, aliveOnly, rng) —— rng 传 null 时用无种子随机   @MonsterGroup.getRandomMonster
+
+// —— 完整示例：邪教徒 ——                                        @Cultist.getMove  @Cultist.takeTurn
+class Cultist extends Monster {
+  constructor() { setHp(A7 ? [50, 56] : [48, 54]); ritualAmount = A2 ? 4 : 3; damage.push(new DamageInfo(this, 6)) }
+  getMove(num) {
+    if (firstMove) { firstMove = false; setMove("咒语", 3, BUFF); return }
+    setMove(1, ATTACK, damage[0].base)
+  }
+  takeTurn() {
+    switch (nextMove) {
+      case 3: addToBot(new ApplyPowerAction(this, this, new RitualPower(this, A17 ? ritualAmount + 1 : ritualAmount, playerControlled = false))); break
+      case 1: addToBot(new DamageAction(player, damage[0])); break
+    }
+    addToBot(new RollMoveAction(this))
+  }
+}
+</script>
+<div class="tip"><b>分裂、召唤、逃跑</b>分别走 <span class="ref" data-ref="SpawnMonsterAction.update"></span>（遗物 <code>onSpawnMonster</code> → <code>init()</code> → <code>applyPowers()</code> → 插入怪物列表）、<span class="ref" data-ref="AbstractMonster.escape"></span>、<span class="ref" data-ref="SuicideAction.update"></span>。新生成的怪物当回合不行动（它不在已经建好的 <code>monsterQueue</code> 里）。</div>
+</section>
+
+<section id="s11">
+<h2><span class="num">11</span>死亡、胜利与奖励</h2>
+<script type="text/x-spec">
+// —— 怪物死亡 ——                                                @AbstractMonster.die
+die(triggerRelics = true) {
+  if (isDying) return
+  isDying = true
+  if (currentHealth <= 0 && triggerRelics) for (p of powers) p.onDeath()            // 孢子云、尸爆
+  if (triggerRelics) for (r of player.relics) r.onMonsterDeath(this)                // 格里姆林之角、样本
+  if (monsters.areMonstersBasicallyDead()) limbo.clear()
+}
+areMonstersBasicallyDead() = monsters.every(m => m.isDying || m.isEscaping)         // 逻辑已结束：停止出牌、清动作  @MonsterGroup.areMonstersBasicallyDead
+areMonstersDead()          = monsters.every(m => m.isDead  || m.escaped)            // 死亡动画播完  @MonsterGroup.areMonstersDead
+// 动画计时结束：isDead = true；若 areMonstersDead() && !room.cannotLose → room.endBattle()   @AbstractMonster.updateDeathAnimation
+// （无头引擎：动作队列排空即视为动画结束）
+
+// —— 战斗结束 ——                                                @AbstractRoom.endBattle
+endBattle() {
+  isBattleOver = true
+  if (hasRelic("Meat on the Bone")) relic.onTrigger()           // ≤50% 回 12
+  player.onVictory()                                            // relics.onVictory → blights.onVictory → powers.onVictory  @AbstractPlayer.onVictory
+  actionManager.clear()
+}
+
+// —— 结算奖励：isBattleOver 且队列空 ——                         @AbstractRoom.update:267-346
+phase = COMPLETE
+if (Boss)        addGoldToRewards(A13 ? round((100 + miscRng.random(-5, 5)) * 0.75) : 100 + miscRng.random(-5, 5))
+else if (精英)   addGoldToRewards(treasureRng.random(25, 35))
+else if (普通 && !全部逃跑) addGoldToRewards(treasureRng.random(10, 20))
+if (!(第三幕或终幕的 Boss)) {
+  dropReward()                                                  // 精英：遗物（黑星再加一个非篝火遗物）+ 翡翠钥匙  @MonsterRoomElite.dropReward
+  addPotionToRewards()                                          // ↓
+  combatRewardScreen.open()                                     // 追加卡牌奖励；祈祷轮在普通战斗再加一组  @CombatRewardScreen.setupItemReward
+}
+// 金币奖励显示时：金神像 +25%（宝箱房除外）                       @RewardItem.applyGoldBonus
+
+// —— 药水掉落 ——                                                @AbstractRoom.addPotionToRewards
+chance = (精英 || 普通且未逃跑 || 事件战斗) ? 40 + blizzardPotionMod : 0
+if (hasRelic("White Beast Statue")) chance = 100
+if (rewards.length >= 4) chance = 0
+if (potionRng.random(0, 99) < chance) { rewards.push(returnRandomPotion()); blizzardPotionMod -= 10 }
+else blizzardPotionMod += 10
+// returnRandomPotion: potionRng.random(0,99) < 65 → 普通；< 90 → 罕见；否则稀有；再循环抽到该稀有度为止   @AbstractDungeon.returnRandomPotion
+
+// —— 精英遗物稀有度 ——                                          @MonsterRoomElite.returnRandomRelicTier
+roll = relicRng.random(0, 99);  roll < 50 → COMMON;  roll > 82 → RARE;  否则 UNCOMMON
+
+// —— 从遗物池取一个 ——                                          @AbstractDungeon.returnRandomRelicKey
+// 五个池在开局用 relicRng 各洗一次，之后一律"从队首弹出"         @AbstractDungeon.initializeRelicList
+COMMON 池空 → 取 UNCOMMON；UNCOMMON 空 → RARE；RARE 空 → "Circlet"；SHOP 空 → UNCOMMON；BOSS 空 → "Red Circlet"
+if (!relic.canSpawn()) return returnEndRandomRelicKey(tier)     // 不满足出现条件：改从队尾取
+// 商店用 returnRandomRelicEnd（从队尾取）                         @AbstractDungeon.returnEndRandomRelicKey
+
+// —— 卡牌奖励 ——                                                @AbstractDungeon.getRewardCards
+n = 3; for (r of relics) n = r.changeNumberOfCardsInReward(n)   // 问号牌 +1、破碎王冠 −2
+for (i = 0; i < n; i++) {
+  rarity = rollRarity()                                         // ↓
+  if (rarity == RARE)        cardBlizzRandomizer = 5            // cardBlizzStartOffset
+  else if (rarity == COMMON) cardBlizzRandomizer = max(-40, cardBlizzRandomizer - 1)
+  do { card = hasRelic("PrismaticShard") ? CardLibrary.getAnyColorCard(rarity) : getCard(rarity) }
+  while (本组奖励里已有同 ID)
+}
+cards = cards.map(c => c.makeCopy())
+for (c of cards)
+  if (c.rarity != RARE && cardRng.randomBoolean(cardUpgradedChance) && c.canUpgrade()) c.upgrade()   // 第一幕 0；第二幕 0.25；第三幕 0.5（A12 减半）
+  else for (r of relics) r.onPreviewObtainCard(c)               // 蛋类遗物
+
+rollRarity() { return room.getCardRarity(cardRng.random(99) + cardBlizzRandomizer) }   // @AbstractDungeon.rollRarity
+getCardRarity(roll) {                                           // @AbstractRoom.getCardRarity
+  rare = baseRareCardChance; uncommon = baseUncommonCardChance  // 普通 3 / 37；精英 10 / 40；Boss 恒为 RARE
+  for (r of relics) rare = r.changeRareCardRewardChance(rare)
+  for (r of relics) uncommon = r.changeUncommonCardRewardChance(uncommon)
+  return roll < rare ? RARE : roll < rare + uncommon ? UNCOMMON : COMMON
+}
+</script>
+</section>
+
+<section id="s12">
+<h2><span class="num">12</span>充能球 / 姿态 / 药水</h2>
+<script type="text/x-spec">
+// —— 充能球 ——                                                  @AbstractPlayer.channelOrb
+channelOrb(orb) {
+  if (maxOrbs <= 0) return
+  if (hasRelic("Dark Core") && !(orb is Dark)) orb = new Dark()
+  i = orbs.findIndex(o => o is EmptyOrbSlot)
+  if (i != -1) {
+    orbs[i] = orb
+    for (p of powers) p.onChannel(orb)
+    orbsChanneledThisCombat.push(orb); orbsChanneledThisTurn.push(orb)
+    orb.applyFocus()
+  } else {                                                      // 槽满：先激发最左边的，再重新充能（注意 addToTop 的倒序）
+    addToTop(new ChannelAction(orb)); addToTop(new EvokeOrbAction(1)); addToTop(new AnimateOrbAction(1))
+  }
+}
+evokeOrb() { orbs[0].onEvoke(); 其余左移一格; 末尾补 EmptyOrbSlot }                  // @AbstractPlayer.evokeOrb
+applyFocus() { passive = max(0, basePassive + focus); evoke = max(0, baseEvoke + focus) }   // 等离子不吃集中  @AbstractOrb.applyFocus
+
+//            被动             激发            触发时机
+// Lightning  3 伤害(随机敌人)  8 伤害          onEndOfTurn；伤害类型 THORNS；有电动力学则打全体   @Lightning.onEndOfTurn
+// Frost      2 格挡           5 格挡          onEndOfTurn                                       @Frost.onEndOfTurn
+// Dark       激发值 += 6       打血量最低的敌人  onEndOfTurn                                       @Dark.onEndOfTurn
+// Plasma     1 能量           2 能量          onStartOfTurn                                     @Plasma.onStartOfTurn
+// 锁定 Lock-On：球伤害 ×1.5                                                                      @AbstractOrb.applyLockOn
+// 回合结束：TriggerEndOfTurnOrbsAction 逐个 onEndOfTurn；电缆让 0 号球再触发一次
+
+// —— 姿态切换 ——                                                @ChangeStanceAction.update
+if (player.hasPower("CannotChangeStancePower")) return
+if (old.ID != new.ID) {
+  for (p of powers) p.onChangeStance(old, new)                  // Mental Fortress、Rushdown
+  for (r of relics) r.onChangeStance(old, new)                  // 紫莲花
+  old.onExitStance()                                            // 平静：addToBot(GainEnergy 2)
+  player.stance = new
+  new.onEnterStance()                                           // 神格：addToBot(GainEnergy 3)
+  for (c of discardPile) c.triggerExhaustedCardsOnStanceChange(new)                  // Flurry of Blows 从弃牌堆回手
+  player.onStanceChange(id)
+}
+AbstractDungeon.onModifyPower()
+// 愤怒：NORMAL 伤害 给予 ×2、承受 ×2      @WrathStance.atDamageGive  @WrathStance.atDamageReceive
+// 神格：NORMAL 伤害 给予 ×3；回合开始 addToBot(ChangeStance Neutral)   @DivinityStance.atStartOfTurn
+
+// —— 药水 ——                                                    @PotionPopUp.updateInput
+canUse() = room.phase == COMBAT && !monsters.areMonstersBasicallyDead() && !actionManager.turnHasEnded   // 多数药水只能战斗中用  @AbstractPotion.canUse
+potion.use(target)                                              // 与卡牌一样：只入队
+for (r of relics) r.onUsePotion()                               // 玩具扑翼飞机
+topPanel.destroyPotion(slot)
+getPotency() = getPotency(ascensionLevel) * (hasRelic("SacredBark") ? 2 : 1)        // @AbstractPotion.getPotency
+// 精灵药水在 player.damage() 致死时自动触发（§6）
+</script>
+</section>
+
+<section id="s13">
+<h2><span class="num">13</span>爬塔流程：地牢、地图、进房间</h2>
+<script type="text/x-spec">
+// —— 新建一幕 ——                                                @AbstractDungeon.ctor
+dungeonTransitionSetup()                                        // ↓
+generateMonsters()                                              // 弱怪 3 场 + 强怪 12 场 + 精英 10 场，预先排好队列  @Exordium.generateMonsters
+initializeBoss(); setBoss(bossList[0])                          // 三个 Boss 用 monsterRng 洗牌  @Exordium.initializeBoss
+initializeEventList(); initializeShrineList()
+initializeCardPools()                                           // 按角色把卡分进 common / uncommon / rare / colorless / curse 池  @AbstractDungeon.initializeCardPools
+if (floorNum == 0) player.initializeStarterDeck()
+// Exordium 构造：initializeRelicList() → mapRng = new Random(seed + actNum) → generateMap() → 起点房间 = NeowRoom   @Exordium.ctor
+
+dungeonTransitionSetup() {                                      // @AbstractDungeon.dungeonTransitionSetup
+  actNum++
+  cardRng 对齐到 250 / 500 / 750（§2）
+  EventHelper.resetProbabilities(); 清空 eventList / shrineList / monsterList / eliteMonsterList / bossList
+  blizzardPotionMod = 0
+  player.heal(A5 ? round((maxHealth - currentHealth) * 0.75) : maxHealth)
+  if (第一幕开局) {
+    if (A14) player.decreaseMaxHealth(player.getAscensionMaxHPLoss())
+    if (A6)  player.currentHealth = round(maxHealth * 0.9)
+    if (A10) masterDeck.addToTop(new AscendersBane())
+  }
+}
+
+// —— 遭遇战队列 ——                                              @AbstractDungeon.populateMonsterList
+normalizeWeights(pool)                                          // 按权重升序排序后归一化  @MonsterInfo.normalizeWeights
+roll(pool, monsterRng.random()) = 累加权重直到 > r 的那一项       // @MonsterInfo.roll
+普通怪：不得与上一场相同，也不得与上上场相同；精英：不得与上一场相同
+第一场强怪：按最后一场弱怪排除相似遭遇（如 2 Louse 之后不出 3 Louse）   @Exordium.generateExclusions
+// 第一幕池子：弱怪 Cultist / Jaw Worm / 2 Louse / Small Slimes（各权重 2）
+//            强怪 Blue Slaver 2, Gremlin Gang 1, Looter 2, Large Slime 2, Lots of Slimes 1, Exordium Thugs 1.5,
+//                 Exordium Wildlife 1.5, Red Slaver 1, 3 Louse 2, 2 Fungi Beasts 2     精英 Gremlin Nob / Lagavulin / 3 Sentries
+// 进入下一个房间时把刚打完的那场从队首移除；队列空了再补 12 场强怪 / 10 场精英   @AbstractDungeon.nextRoomTransition:1674-1687
+
+// —— 地图 ——                                                    @AbstractDungeon.generateMap
+map = MapGenerator.generateDungeon(height = 15, width = 7, pathDensity = 6, mapRng)
+count = 有连线且不在第 13 行的节点数
+shop = round(count * 0.05); rest = round(count * 0.12); treasure = 0; event = round(count * 0.22)
+elite = round(count * 0.08 * (A1 ? 1.6 : 1))                    // @AbstractDungeon.generateRoomTypes
+第 14 行全是篝火；第 0 行全是普通怪；第 8 行全是宝箱
+RoomTypeAssigner.distributeRoomsAcrossMap(mapRng, map, roomList)
+setEmeraldElite()                                               // mapRng 随机选一个精英节点放翡翠钥匙
+
+createPaths(nodes, 6, rng) {                                    // @MapGenerator.createPaths
+  for (i = 0; i < 6; i++) {
+    start = rng.random(0, 6)
+    if (i == 1) while (start == firstStart) start = rng.random(0, 6)                // 保证至少两个不同起点
+    _createPaths(nodes, edge(start, -1 → start, 0), rng)
+  }
+}
+_createPaths(nodes, edge, rng) {                                // 一条路从 y=0 递归走到顶  @MapGenerator._createPaths
+  if (到达最后一行) { 连向 Boss; return }
+  newX = edge.dstX + rng.random(min, max)                       // 左右边界处收窄为 [0,1] 或 [-1,0]，否则 [-1,1]
+  // 规则 1：若与目标节点的其它父节点的"最近公共祖先"距离 < 3 → 重掷方向（避免小菱形）   @MapGenerator.getCommonAncestor
+  // 规则 2：不许与左右邻居已有的边交叉（newX 被夹到邻居边的 dstX）
+  连边 → 递归
+}
+
+distributeRoomsAcrossMap(rng, map, roomList) {                  // @RoomTypeAssigner.distributeRoomsAcrossMap
+  while (roomList.length < 未分配的连通节点数) roomList.push(new MonsterRoom())
+  Collections.shuffle(roomList, rng.random)                     // ★ 直接用 mapRng 内部的 RandomXS128，不增加 counter
+  自下而上、自左而右，每个节点取 roomList 中第一个满足规则的房间：   @RoomTypeAssigner.getNextRoomTypeAccordingToRules
+    · 篝火 / 精英 不能出现在 y <= 4；篝火不能出现在 y >= 13          @RoomTypeAssigner.ruleAssignableToRow
+    · 与父节点不能同为 篝火 / 宝箱 / 商店 / 精英                     @RoomTypeAssigner.ruleParentMatches
+    · 与兄弟节点（同父的其它子节点）不能同为 篝火 / 怪物 / 事件 / 精英 / 商店   @RoomTypeAssigner.ruleSiblingMatches
+  剩下没分到的节点一律 MonsterRoom                               // @RoomTypeAssigner.lastMinuteNodeChecker
+}
+
+// —— 进入下一个房间 ——                                          @AbstractDungeon.nextRoomTransition
+从 monsterList / eliteMonsterList 移除刚打完的遭遇
+resetPlayer()                                                   // 清手牌 / 能力 / 牌堆 / 格挡 / 球；姿态回 Neutral；turn = 1  @AbstractDungeon.resetPlayer
+floorNum++                                                      // ★ CFR 此处反编译有误，已按字节码核实（见 §0）
+monsterHpRng = aiRng = shuffleRng = cardRandomRng = miscRng = new Random(seed + floorNum)
+for (r of relics) r.onEnterRoom(nextRoom.room)
+if (nextRoom.room is EventRoom) {                               // ? 房间：先掷"实际是什么"
+  dup = new Random(seed, eventRng.counter)
+  result = EventHelper.roll(dup); eventRng = dup
+  nextRoom.room = generateRoom(result)                          // MONSTER / SHOP / TREASURE / ELITE / EVENT
+}
+setCurrMapNode(nextRoom)
+for (r of relics) r.justEnteredRoom(room)                       // 例：餐券、诅咒钥匙、化石螺旋
+room.onPlayerEntry()                                            // 怪物房：建怪；事件房：generateEvent；篝火；商店；宝箱
+if (room is MonsterRoom) player.preBattlePrep()                 // §4
+
+// —— ? 房间掷骰 ——                                              @EventHelper.roll
+roll = eventRng.random()                                        // float [0,1)
+table[100] = 全部 EVENT；依次填入 MONSTER × (MONSTER_CHANCE*100)、SHOP × (SHOP_CHANCE*100)、TREASURE × (TREASURE_CHANCE*100)
+// 初始：MONSTER 0.10，SHOP 0.03，TREASURE 0.02；当前就在商店时 SHOP 段长度为 0；ELITE 段只在 DeadlyEvents 模式下有
+choice = table[floor(roll * 100)]
+if (小宝箱计数到第 4 次) choice = TREASURE
+if (choice == MONSTER) { if (hasRelic("Juzu Bracelet")) choice = EVENT; MONSTER_CHANCE = 0.10 } else MONSTER_CHANCE += 0.10
+SHOP_CHANCE     = choice == SHOP     ? 0.03 : SHOP_CHANCE + 0.03
+TREASURE_CHANCE = choice == TREASURE ? 0.02 : TREASURE_CHANCE + 0.02
+
+// —— 抽事件 ——                                                  @AbstractDungeon.generateEvent
+if (rng.random(1.0) < 0.25 /* shrineChance */) 抽神龛（shrineList ∪ 满足条件的 specialOneTimeEventList）   @AbstractDungeon.getShrine
+else 抽普通事件（eventList 过滤条件：死去的冒险者/蘑菇 需 floorNum > 6；牧师需金币 ≥ 35 …）              @AbstractDungeon.getEvent
+抽中后从池里移除（每局每个事件只出现一次）
+</script>
+</section>
+
+<section id="s14">
+<h2><span class="num">14</span>非战斗房间：商店 / 篝火 / 宝箱 / Neow</h2>
+<script type="text/x-spec">
+// —— 商店货架 ——                                                @Merchant.ctor
+本色牌 5 张：攻击 ×2、技能 ×2、能力 ×1；每张 rarity = rollRarity()，getCardFromPool(rarity, type, useRng = true)
+            同类型的第二张不得与第一张同 ID；抽到无色牌则重抽                       @AbstractDungeon.getCardFromPool
+无色牌 2 张：罕见 ×1、稀有 ×1                                                       @AbstractDungeon.getColorlessCardFromPool
+
+// —— 定价 ——                                                    @ShopScreen.initCards
+基础价：普通 50 / 罕见 75 / 稀有 150                             // @AbstractCard.getPrice
+本色牌 price = int(base * merchantRng.random(0.9, 1.1))
+无色牌 price = int(base * merchantRng.random(0.9, 1.1) * 1.2)
+随机一张本色牌半价：coloredCards[merchantRng.random(0, 4)].price /= 2
+遗物 3 个：前两个稀有度 rollRelicTier()（merchantRng.random(99) < 48 普通；< 82 罕见；否则稀有），第三个固定 SHOP 池   @ShopScreen.initRelics
+          price = round(relic.getPrice() * merchantRng.random(0.95, 1.05))          // @ShopScreen.rollRelicTier
+药水 3 瓶：returnRandomPotion()；price = round(base * merchantRng.random(0.95, 1.05))   @ShopScreen.initPotions
+全场折扣（依次相乘并四舍五入）：A16 ×1.1 → 送货员 ×0.8 → 会员卡 ×0.5             // @ShopScreen.init
+删牌：75 起，每删一次 +25；微笑面具固定 50；送货员 / 会员卡同样打折                // @ShopScreen.purgeCard
+
+// —— 篝火 ——                                                    @CampfireUI.initializeButtons
+options = [休息, 锻造(有可升级牌时可用)]
+for (r of relics) r.addCampfireOption(options)                  // 哑铃：举重；和平烟斗：冥想删牌；铲子：挖遗物
+for (o of options) if (relics.some(r => !r.canUseCampfireOption(o))) o.usable = false   // 咖啡滤杯禁休息；融合之锤禁锻造
+if (终幕可用 && 没有红宝石钥匙) options.push(回想)
+休息：heal(int(maxHealth * 0.3) + (皇家枕头 ? 15 : 0))；然后 relics.onRest()        // @CampfireSleepEffect.update:42-64
+
+// —— 宝箱 ——                                                    @AbstractDungeon.getRandomChest
+roll = treasureRng.random(0, 99)：< 50 小箱；< 83 中箱；否则大箱（第一幕）
+randomizeReward()：roll = treasureRng.random(0, 99)             // @AbstractChest.randomizeReward
+  小箱：75% 普通 / 25% 罕见遗物；50% 附带 25 金币
+  中箱：35% 普通 / 50% 罕见 / 15% 稀有；35% 附带 50 金币
+  大箱：75% 罕见 / 25% 稀有；50% 附带 75 金币
+open()：relics.onChestOpen → 金币 round(treasureRng.random(GOLD * 0.9, GOLD * 1.1)) → 遗物 → 蓝宝石钥匙 → relics.onChestOpenAfter   @AbstractChest.open
+
+// —— Neow ——                                                    @NeowEvent.blessing
+rng = new Random(seed)
+四个选项各从一类里用 rng 抽一项：                                // @NeowReward.getRewardOptions
+  0 类：选 3 牌 / 随机稀有牌 / 删 1 牌 / 升级 1 牌 / 变化 1 牌 / 随机无色牌
+  1 类：3 瓶药水 / 随机普通遗物 / +10% 最大生命 / 涅奥的悲恸 / 100 金币
+  2 类：先抽代价（−10% 最大生命 / 失去全部金币 / 诅咒 / 受到伤害），再抽奖励（与代价冲突的选项被剔除）
+  3 类：用初始遗物换随机 Boss 遗物
+上一局没打到 Boss：只有 miniBlessing 两个选项                    // @NeowEvent.miniBlessing
+</script>
+<p class="dim">55 个事件各自的选项逻辑在 <code>AbstractEvent.buttonEffect(int)</code> 的各子类里，本页不逐个展开；③ 页筛选"事件 Event"可以看到每个事件用了哪些 RNG、施加了什么。</p>
+</section>
+
+</main>
+</div>
+</div>
+
+<!-- ============================================================ PAGE 2 -->
+<div class="page" id="page-hooks">
+<div class="wide">
+<h2>钩子矩阵：每个钩子在哪里被触发、谁实现了它</h2>
+<p class="dim">机器扫描全部源码得到。"调用点"回答<b>什么时刻触发</b>（哪个类的哪个方法、第几行调用了这个钩子），"实现者"回答<b>谁会响应</b>。重写时每个钩子按这张表逐行核对：调用点要在新引擎的同一位置，实现者要一个不漏。</p>
+<div class="legend">调用点颜色：<span class="ref">精确</span> 接收者类型已确定 · <span class="ref a">父类型</span> 接收者声明为父类（如 <code>AbstractCreature.damage</code>），运行时可能分派到这里 · <span class="ref g">推断</span> 接收者类型靠全局同名字段/返回值推断</div>
+<div class="toolbar" id="hook-hosts"></div>
+<div class="toolbar">
+  <input id="hook-q" placeholder="过滤：钩子名 / 实现类名 / 调用方类名">
+  <label class="dim" style="font-size:13px"><input type="checkbox" id="hook-live" checked> 隐藏"无调用点且无实现者"的钩子</label>
+  <span class="dim" id="hook-count" style="font-size:13px"></span>
+</div>
+<div class="tbl-wrap"><table id="hook-table"></table></div>
+</div>
+</div>
+
+<!-- ============================================================ PAGE 3 -->
+<div class="page" id="page-classes">
+<div class="wide">
+<h2>类行为索引：每个类的每个方法做了什么</h2>
+<p class="dim">对每个逻辑类的每个方法提取"行为指纹"：入队了哪些 Action（队头/队尾）、new 了哪些 Power、用了哪条 RNG、直接调用了哪些核心改状态方法。这是重写阶段的<b>移植清单</b>——一个类移植完，它的指纹必须与这里一致。画面/音效/本地化类不计入；指纹为空的类（没有入队、没有 new 能力、不用 RNG、不调核心方法，例如纯数值修正的能力）不在本页列出，它们的钩子实现在 ② 页。</p>
+<div class="tip warn"><b>指纹是正则扫描的结果，不是执行轨迹：</b>它列出方法体里<b>出现过</b>的入队与调用，不区分 if 分支、不保证先后顺序，间接调用（经辅助方法入队）也看不到。它用来保证"不漏"，精确顺序仍以 ① 页的逐行追溯和源码为准。</div>
+<div class="legend beh">图例：<span class="qT">T:Xxx</span> addToTop 入队 · <span class="qB">B:Xxx</span> addToBot 入队 · <span class="mu">S:/?:</span> 其它入队方式 · <span class="pw">[XxxPower]</span> 构造的能力 · <span class="rg">{rng}</span> 使用的随机流 · <span class="mu">Type.method</span> 直接调用的核心方法 · 灰色小字 = 该类重写的钩子</div>
+<div class="toolbar" id="cls-kinds"></div>
+<div class="toolbar">
+  <input id="cls-q" placeholder="搜索：类名 / Action 名 / Power 名 / rng 名（例：PoisonPower、aiRng、Cultist）">
+  <span class="dim" id="cls-count" style="font-size:13px"></span>
+</div>
+<div class="tbl-wrap"><table id="cls-table"></table></div>
+<div style="text-align:center"><button class="chip-btn" id="cls-more">再显示 60 个</button></div>
+</div>
+</div>
+
+<!-- ============================================================ PAGE 4 -->
+<div class="page" id="page-rng">
+<div class="wide">
+<h2>RNG 使用点：每条随机流在哪里被消耗</h2>
+<p class="dim">要做到"同种子同结果"，每条流的<b>每一次</b>取数都必须在同一时刻发生。下面是全部源码里对每条流的取数位置（<code>stream.random*(…)</code> 以及把流传给洗牌/选牌的地方）。各流的播种与重置规则见 ① §2。</p>
+<div class="toolbar" id="rng-streams"></div>
+<div class="tip" id="rng-note"></div>
+<div class="tbl-wrap"><table id="rng-table"></table></div>
+</div>
+</div>
+
+<!-- ============================================================ PAGE 5 -->
+<div class="page" id="page-plan">
+<div class="wide">
+<h2>现有引擎与原版的结构差距</h2>
+<p class="dim">对照对象：<code>packages/sts-engine/src</code>（12 个文件）。下表只列<b>结构性</b>差距——它们是之前那些具体 bug（毒的时机、仪式、虚弱不影响意图、格挡被无视）的共同根源。</p>
+<div class="tbl-wrap"><table>
+<tr><th>#</th><th>原版（反编译）</th><th>现有 TS 引擎</th><th>后果</th></tr>
+<tr><td>1</td><td>所有效果经 <code>GameActionManager</code> 的队列执行；回合阶段由 <code>getNextAction()</code> 轮询 4 个队列产生 <span class="ref" data-ref="GameActionManager.getNextAction"></span></td><td><code>combat.ts</code> 里有一个闭包队列 <code>addToBot/addToTop/flushActions</code>，但整个引擎只有 4 处调用；绝大多数效果是立即执行的函数调用</td><td>"先入队后结算"的顺序全部丢失：连击中途死亡、受击反馈、抽牌触发等的先后与原版不同</td></tr>
+<tr><td>2</td><td>怪物回合分三段：全体 <code>applyPreTurnLogic</code> → 逐只 <code>takeTurn</code> → 全体 <code>applyEndOfTurnPowers</code> <span class="ref" data-ref="MonsterGroup.applyPreTurnLogic"></span></td><td><code>endTurn()</code> 一个循环里逐只怪物做：毒 → 清格挡 → 行动 → 金属化 → 仪式 → 掷招</td><td>多只怪物时毒/格挡/能力的时机错位；每加一个能力要改这个循环</td></tr>
+<tr><td>3</td><td>能力是对象，行为写在自己的钩子里（161 个子类，47 个钩子）；引擎只负责在固定位置遍历 <code>powers</code> 调钩子</td><td>能力是 <code>{id, amount}</code>，行为散落在 <code>endTurn / startPlayerTurn / dealDamage / applyDamagePowers</code> 里的 <code>if (hasPower("X"))</code>；减益用 <code>tickDebuffs</code> 统一递减</td><td>没有 <code>atEndOfRound / justApplied / priority</code> 这些概念，新增能力只能再加特判</td></tr>
+<tr><td>4</td><td>遗物同样是钩子对象（190 个子类，61 个钩子），与能力在同一批调用点、按固定先后被遍历</td><td><code>relicEffects.ts</code> 用自定义事件名 <code>fireRelics(run, "atTurnStart")</code>，调用位置是手工安排的（例如 <code>atBattleStart</code> 在第一回合抽牌之后才触发）</td><td>遗物与能力的相对顺序、遗物触发时刻与原版不一致</td></tr>
+<tr><td>5</td><td>每张牌是一个类，<code>use()</code> 只入队 Action；面板数值由 <code>applyPowers / calculateCardDamage</code> 统一计算 <span class="ref" data-ref="AbstractCard.calculateCardDamage"></span></td><td>卡牌 = ops 小语言 + <code>runCustom</code> 里一个约 350 行的 <code>switch</code></td><td>同一张牌的逻辑分散在两处；"入队顺序"无从表达</td></tr>
+<tr><td>6</td><td>伤害两段式：面板值（<code>DamageInfo.applyPowers</code>）→ <code>creature.damage()</code>（扣格挡 + 一串顺序固定的受击钩子，玩家与怪物各一套）<span class="ref" data-ref="AbstractPlayer.damage"></span> <span class="ref" data-ref="AbstractMonster.damage"></span></td><td><code>applyDamagePowers</code> + <code>dealDamage</code> 一个函数里处理双方</td><td>受击钩子顺序（缓冲、鸟居、钨合金棍、荆棘、多层护甲…）靠特判，容易漏或错序</td></tr>
+<tr><td>7</td><td>怪物是类：<code>getMove(num)</code> 定招、<code>takeTurn()</code> 入队动作、<code>RollMoveAction</code> 在队列里掷下一招；意图数值由 <code>applyPowers()</code> 重算 <span class="ref" data-ref="AbstractMonster.applyPowers"></span></td><td><code>monsters.ts</code> 用数据表 + 函数，行动立即结算，掷招在循环末尾同步进行</td><td>意图刷新、招式历史、"行动途中被打断"等行为与原版不一致</td></tr>
+<tr><td>8</td><td>13 条 RNG 流；其中 5 条在<b>每次进房间</b>时用 <code>seed + floorNum</code> 重置（不只是战斗房间）<span class="ref" data-ref="AbstractDungeon.nextRoomTransition:1667-1793"></span></td><td><code>rng.ts</code> 的 <code>StsRandom</code> 已按 RandomXS128 实现；5 条流只在 <code>startCombat</code> 时重置</td><td><span class="badge b-gold">待核对</span> 事件/商店/篝火中消耗 miscRng 等的结果可能与原版不同；cardRng 的每幕 counter 对齐也需逐项核对</td></tr>
+<tr><td>9</td><td>结束回合 = 往 <code>cardQueue</code> 放哨兵，之后经 <code>callEndOfTurnActions → room.endTurn → DiscardAtEndOfTurnAction → MonsterStartTurnAction</code> 多步完成</td><td><code>endTurn()</code> 直接弃牌 → 触发遗物 → 特判若干能力 → 进入怪物循环</td><td>回合末自动打出的牌（灼伤、腐朽）、保留、虚无、球的被动之间的先后无法对齐</td></tr>
+</table></div>
+<div class="tip ok"><b>可以保留的部分：</b><code>rng.ts</code>（位级实现已对齐 RandomXS128）、数据抽取管线（<code>tools/</code>，卡牌/遗物/怪物的静态数值）、地图生成的算法骨架（重写时按 §13 逐行复核）。其余战斗相关代码按下面的方案整体替换，而不是继续打补丁。</div>
+
+<h2 style="margin-top:44px">重写方案</h2>
+<h3>原则</h3>
+<ol>
+  <li><b>一个 Java 类对应一个 TS 类，类名、方法名、钩子名原样保留。</b>例如 <code>PoisonPower.atStartOfTurn()</code>、<code>Cultist.takeTurn()</code>、<code>ApplyPowerAction.update()</code>。review 时可以把 TS 文件和反编译文件并排逐行比对。</li>
+  <li><b>每个方法头部标注来源</b> <code>// AbstractPlayer.java:1369-1498</code>。</li>
+  <li><b>引擎核心不认识任何具体的牌/能力/遗物/怪物</b>，只负责：队列调度、在固定位置遍历钩子。出现 <code>if (id === "某能力")</code> 的地方必须是原版也这样写的地方（如 <code>hasPower("Barricade")</code>）。</li>
+  <li><b>去掉时间，保留顺序。</b>原版 Action 靠 <code>duration</code> 分帧；新引擎里每个 Action 只保留"第一帧逻辑"和"结束帧逻辑"两个时点，纯等待/特效/音效 Action 变成空操作，但仍然<b>入队</b>（保证其它动作的相对位置不变）。</li>
+  <li><b>需要玩家选择的 Action</b>（选牌弃置、发现、手牌选择）挂起队列，返回 <code>PendingChoice</code>，收到输入后从原位置继续。</li>
+  <li><b>遇到反编译文本与游戏表现矛盾，回到 jar 字节码核对</b>，并在"疑点清单"里登记（目前 1 条：<code>nextRoomTransition</code> 的 <code>++floorNum</code>）。</li>
+</ol>
+
+<h3>目录结构（<code>packages/sts-engine/src</code>）</h3>
+<script type="text/x-spec">
+core/
+  Random.ts               // 已有 rng.ts 改名                                    @Random.random
+  GameActionManager.ts    // actions / preTurnActions / cardQueue / monsterQueue + getNextAction + runUntilIdle()   @GameActionManager.getNextAction
+  AbstractGameAction.ts   // update() 分"首帧 / 末帧"                             @AbstractGameAction.update
+  AbstractCreature.ts     // addBlock / loseBlock / decrementBlock / heal / addPower / hasPower   @AbstractCreature.addBlock
+  AbstractPlayer.ts       // damage / useCard / draw / preBattlePrep / applyStartOfTurn*          @AbstractPlayer.damage
+  AbstractMonster.ts      // damage / rollMove / setMove / createIntent / applyPowers / die       @AbstractMonster.damage
+  MonsterGroup.ts         // applyPreTurnLogic / queueMonsters / applyEndOfTurnPowers             @MonsterGroup.applyPreTurnLogic
+  AbstractCard.ts         // canUse / applyPowers / calculateCardDamage / 各 trigger* 钩子         @AbstractCard.applyPowers
+  CardGroup.ts            // 抽/弃/消耗/洗牌/移动                                 @CardGroup.moveToDiscardPile
+  DamageInfo.ts           //                                                    @DamageInfo.applyPowers
+  AbstractPower.ts  AbstractRelic.ts  AbstractOrb.ts  AbstractStance.ts  AbstractPotion.ts  AbstractBlight.ts   // 钩子基类，默认实现为空
+actions/                  // 277 个 Action，按原包分目录（common / unique / defect / watcher / utility …）
+powers/                   // 161 个
+relics/                   // 190 个
+cards/red|green|blue|purple|colorless|curses|status|tempCards/   // 438 张
+monsters/exordium|city|beyond|ending/                            // 66 只
+orbs/  stances/  potions/  blights/
+dungeons/                 // AbstractDungeon + Exordium / TheCity / TheBeyond / TheEnding   @AbstractDungeon.nextRoomTransition
+map/                      // MapGenerator / RoomTypeAssigner                               @MapGenerator.generateDungeon
+rooms/                    // AbstractRoom（战斗状态机 + 奖励）及各房间                        @AbstractRoom.update
+rewards/  shop/  events/  neow/
+</script>
+
+<h3>移植顺序与验收</h3>
+<div class="tbl-wrap"><table>
+<tr><th>阶段</th><th>内容</th><th>验收方式</th></tr>
+<tr><td><b>P0 核心循环</b></td><td><code>core/*</code> 全部；约 30 个最常用 Action（Damage / GainBlock / ApplyPower / ReducePower / RemoveSpecificPower / DrawCard / EmptyDeckShuffle / Discard / DiscardAtEndOfTurn / Exhaust / UseCard / LoseHP / Heal / GainEnergy / RollMove / SetMove / MakeTempCard* / MonsterStartTurn / EndTurn …）；基础能力（力量、敏捷、虚弱、易伤、脆弱、中毒、仪式、人工制品、金属化、荆棘…）</td><td>动作轨迹测试：对固定种子的一场战斗，输出"执行的 Action 序列 + 每步后的血量/格挡/能力"，与按 ① 页时间线手工推演的结果逐条比对</td></tr>
+<tr><td><b>P1 第一幕可玩</b></td><td>铁甲战士全部卡牌 + 初始遗物；第一幕全部怪物（弱怪 / 强怪 / 精英 / 3 个 Boss）；战斗奖励；地图与进房间流程</td><td>③ 页逐类核对行为指纹；现有 46 个测试中仍适用的迁移过来</td></tr>
+<tr><td><b>P2 其余角色</b></td><td>静默猎手（中毒、弃牌、小刀）→ 故障机器人（充能球）→ 观者（姿态、预见、保留）；对应能力与 Action</td><td>同上</td></tr>
+<tr><td><b>P3 全量内容</b></td><td>全部遗物、药水、第二/三/终幕怪物、商店、篝火、宝箱、Neow、55 个事件</td><td>② 页每个钩子的"实现者"全部有对应 TS 类；覆盖率 = 已移植类数 / 逻辑类总数</td></tr>
+</table></div>
+<div class="tip"><b>进度怎么看：</b>重写开始后，我会给 ③ 页每个类加一列"已移植 / 未移植 / 指纹不一致"，由脚本比对 TS 类与这里的指纹自动得出，不靠我口头汇报。</div>
+
+<h3>建议重点 review 的地方</h3>
+<ul>
+  <li>① 页 §0 时间线、§6 伤害管线、§8 回合交替：与你对游戏的认知有矛盾的地方，就是我读错或反编译有坑的地方。</li>
+  <li>"一个 Java 类对应一个 TS 类、同名"这条原则：它决定了重写后的代码长什么样。</li>
+  <li>P0 → P3 的顺序：默认先铁甲战士；想先看别的角色，调换 P1/P2 即可。</li>
+</ul>
+</div>
+</div>
+
+<!-- ============================================================ PAGE 6 -->
+<div class="page" id="page-entities">
+<div class="wide">
+<h2>实体枚举：谁拥有什么，效果在哪一拍触发</h2>
+<p class="dim">角色、药水、遗物、卡牌的归属从 <code>PotionHelper.getPotions</code>、<code>RelicLibrary.initialize</code>、<code>CardLibrary</code> 和四个角色类抽出。能力的“触发”列是该能力自己的钩子，加上别的类里 <code>hasPower / getPower</code> 的位置——人工制品这种效果，真正的判断不在它自己的类里。</p>
+<div id="char-cards" class="grid g2"></div>
+
+<h2 style="margin-top:36px"><span class="num">药</span>药水：哪个英雄能拿到</h2>
+<p>开局 <span class="ref" data-ref="AbstractDungeon.initializePotions"></span> 调 <span class="ref" data-ref="PotionHelper.initialize"></span>，按所选角色生成<b>一份</b>药水名单。奖励、商店、事件、大锅、涅奥都从这份名单里抽，没有第二份池。</p>
+<script type="text/x-spec">
+getPotions(角色, getAll=false)：                          // @PotionHelper.getPotions:79-152
+  先放该角色专属的 3 瓶，再放 30 瓶全角色共用
+  铁甲战士：鲜血药水、万灵药水、铁之心
+  静默猎手：毒药水、狡诈药水、罐装幽灵
+  故障机器人：集中药水、扩容药水、暗之精华
+  观者：瓶装奇迹、姿态药水、仙馔密酒
+  getAll=true 时四组专属都放进去（图鉴用），正常对局不会
+
+掉落：                                                      // @AbstractRoom.addPotionToRewards:582-609
+  普通怪 / 精英 / 事件房：potionRng.random(0,99) < 40 + blizzardPotionMod
+  白兽雕像：概率改成 100；但奖励已经有 4 个时概率改回 0（上限盖过白兽）
+  命中后 returnRandomPotion()，blizzardPotionMod -= 10；没命中则 += 10
+
+稀有度：                                                    // @AbstractDungeon.returnRandomPotion:809-829
+  potionRng.random(0,99)：< 65 普通，< 90 罕见，否则稀有
+  然后在该角色名单里、该稀有度中均匀抽一瓶
+  limited=true（炼金术、战斗中的混沌蒸馏）：跳过 Fruit Juice
+
+剂量：getPotency(进阶层数) 的返回值；持有神圣树皮时再 ×2   // @AbstractPotion.getPotency:632-637
+喝下：PotionPopUp 调 potion.use(目标或 null)，然后每件遗物 onUsePotion()  // @PotionPopUp.updateInput:228-234
+
+不改变“哪瓶属于谁”、但改变能不能拿到 / 怎么用：
+  添水 Sozu：领药水奖励时直接吞掉                               // @RewardItem.claimReward:266-268
+            获得药水的动作、商店药水同样拒绝                    // @ObtainPotionAction.update:28
+  药水腰带：装备时 potionSlots += 2（默认 3 槽）               // @PotionBelt.onEquip:25-28
+  玩具扑翼飞机：每次喝药，战斗中入队治疗 5，战斗外直接 heal(5) // @ToyOrnithopter.onUsePotion:27-34
+  异蛇头骨：玩家对别人施加中毒时，在动作构造里 amount += 1     // @ApplyPowerAction.ctor:38-41
+</script>
+<div class="toolbar" id="pot-pools"></div>
+<div class="toolbar"><input id="pot-q" placeholder="搜索药水名 / 类名 / 施加的能力"><span class="dim" id="pot-count" style="font-size:13px"></span></div>
+<div class="tbl-wrap"><table id="pot-table"></table></div>
+
+<h2 style="margin-top:36px"><span class="num">效</span>能力：中毒、人工制品，以及同类效果怎么触发</h2>
+<p>下面五段是跨多个类的触发链，表里的一行装不下。表在后面，161 个能力都在。</p>
+
+<h3>中毒 Poison（DEBUFF，isTurnBased）</h3>
+<script type="text/x-spec">
+施加：和别的能力一样走 ApplyPowerAction。type 固定 DEBUFF，所以目标有人工制品时整次施加被抵消，层数不加。
+异蛇头骨在 ApplyPowerAction 构造时就把 amount + 1（来源是玩家、目标不是自己）。  // @ApplyPowerAction.ctor:38-41
+层数上限 9999。                                                      // @PoisonPower.ctor:31-32
+
+触发点是“持有者自己的回合开始”，不是“被挂上的那一刻”，也不是 atEndOfRound：
+  玩家身上的毒 → 新回合分支里的玩家能力 atStartOfTurn                 // @GameActionManager.getNextAction:331-335
+  怪物身上的毒 → 怪物回合开始 applyPreTurnLogic，每只怪先跑 atStartOfTurn
+                全部怪物的毒都在任何怪物行动之前入队                   // @MonsterGroup.applyPreTurnLogic:93
+  atStartOfTurn：房间处于 COMBAT 且怪物还没全死 → addToBot(PoisonLoseHpAction(owner, source, amount))
+                                                                       // @PoisonPower.atStartOfTurn:59-63
+
+结算（动作结束时，不是入队时）：                                    // @PoisonLoseHpAction.update:39-56
+  目标 currentHealth > 0：target.damage(HP_LOSS)
+    HP_LOSS 不扣格挡                                                // @AbstractCreature.decrementBlock
+  然后无论这次有没有打到：Poison.amount -= 1，到 0 就从 powers 里移除
+  致死也减层（powers.clear 要等死亡动画走完才发生）
+  怪物因此全死：clearPostCombatActions()，后面排着的动作不再执行
+</script>
+
+<h3>人工制品 Artifact（BUFF，不是回合能力）</h3>
+<script type="text/x-spec">
+它自己只有 onSpecificTrigger：amount &lt;= 0 就移除，否则 addToTop(ReducePowerAction 1 层)。  // @ArtifactPower.onSpecificTrigger:31-36
+什么时候触发，写在 ApplyPowerAction.update，顺序是：                // @ApplyPowerAction.update:95-132
+
+  目标已死或已逃走 → 结束
+  要施加的是 NoDraw 且目标已经有 NoDraw → 结束（不消耗人工制品）
+  来源的每个能力 onApplyPower
+  冠军腰带：玩家对别人施加易伤，且目标当前没有人工制品 → 腰带 onTrigger（再施加虚弱）
+            目标有人工制品时腰带不触发
+  生姜：目标是玩家且要施加的是虚弱 → 直接结束（虚弱没加上，人工制品不减）
+  萝卜：目标是玩家且要施加的是脆弱 → 同样直接结束
+  目标有人工制品 且 这次要施加的能力 type == DEBUFF：
+      飘字、闪一下、onSpecificTrigger()，然后 return
+      能力不加、也不叠层
+  否则：已有同 ID 就 stackPower(amount)，没有就加进 powers 并排序
+
+所以人工制品看的是“这次新能力对象的 type”，不是名字。
+  虚弱 / 易伤 / 脆弱 / 中毒：构造时 type 就是 DEBUFF，一定被抵消。
+  力量 / 敏捷 / 集中：type 在 updateDescription 里按层数正负改，构造时就会调用它。
+      正数是 BUFF，人工制品不管；负数是 DEBUFF，整次施加被抵消
+      （不会把目标身上已有的正力量减下去）。                      // @StrengthPower.updateDescription:77-84
+  仪式：类里没有改 type，沿用默认 BUFF，人工制品不拦截。
+  人工制品自己是 BUFF，可以叠在已有的人工制品上。
+</script>
+
+<h3>虚弱 / 易伤 / 脆弱：数值在哪一步改，层数什么时候 −1</h3>
+<script type="text/x-spec">
+三者都是 DEBUFF、isTurnBased。层数 −1 都在 atEndOfRound（全体怪物行动完之后），不是回合开始。
+
+虚弱 atDamageGive，只影响 NORMAL 伤害：                        // @WeakPower.atDamageGive:58-65
+  持有者是怪物且玩家有纸鹤 → damage * 0.6，否则 damage * 0.75
+  怪物意图重算走的就是这条，所以虚弱会让意图数字变小
+易伤 atDamageReceive，只影响 NORMAL：                           // @VulnerablePower.atDamageReceive:58-68
+  持有者是玩家且有古怪蘑菇 → *1.25
+  持有者是怪物且玩家有纸蛙 → *1.75
+  否则 *1.5
+脆弱 modifyBlock：一律 block * 0.75，不看伤害类型               // @FrailPower.modifyBlock:55-56
+
+justApplied（本轮 atEndOfRound 不减层）的条件三者不一样：
+  虚弱、脆弱：来源是怪物就置上，不管现在是谁的回合          // @WeakPower.ctor:31-32  @FrailPower.ctor:29-30
+  易伤：来源是怪物，且 turnHasEnded 已经为 true 才置上       // @VulnerablePower.ctor:32-33
+    玩家回合里被挂上的易伤，紧接着的那个 atEndOfRound 就会 −1
+</script>
+
+<h3>仪式 Ritual（默认 BUFF）</h3>
+<script type="text/x-spec">
+玩家身上的仪式（onPlayer=true）：只在 atEndOfTurn(isPlayer) 里给自己力量。  // @RitualPower.atEndOfTurn:38-42
+怪物身上的仪式：atEndOfRound，并且 skipFirst 第一次直接跳过、只把标记清掉。 // @RitualPower.atEndOfRound:46-54
+  所以怪物仪式在它的第一个回合结束时不加力量，从下一个回合交替开始加。
+两条路径都是 addToBot(ApplyPowerAction(Strength))，不是当场改层数。
+</script>
+<div class="tip">表里“触发”列的 <b>外部</b> 是别的类调用 <code>hasPower/getPower/hasRelic/getRelic</code> 的位置，每类最多 3 处。壁垒、残影的“不失去格挡”就在 <span class="ref" data-ref="GameActionManager.getNextAction:336-348"></span> 和 <span class="ref" data-ref="MonsterGroup.applyPreTurnLogic"></span>，不在能力自己的方法里。<code>BUFF*</code> 表示类里没写 type，用默认值 BUFF。<code>±</code> 表示按层数正负翻转。</div>
+<div class="toolbar" id="pow-kinds"></div>
+<div class="toolbar"><input id="pow-q" placeholder="搜索：中毒、Artifact、atStartOfTurn、PoisonLoseHpAction"><span class="dim" id="pow-count" style="font-size:13px"></span></div>
+<div class="tbl-wrap"><table id="pow-table"></table></div>
+
+<h2 style="margin-top:36px"><span class="num">遗</span>遗物归属</h2>
+<p class="dim"><code>RelicLibrary.add</code> 进全角色池；<code>addRed / addGreen / addBlue / addPurple</code> 只进对应角色。<span class="ref" data-ref="RelicLibrary.populateRelicPool"></span> 发牌时把全角色池和该角色池按稀有度合在一起。初始遗物在角色卡上。</p>
+<div class="toolbar" id="rel-pools"></div>
+<div class="toolbar"><input id="rel-q" placeholder="搜索遗物名 / 钩子名"><span class="dim" id="rel-count" style="font-size:13px"></span></div>
+<div class="tbl-wrap"><table id="rel-table"></table></div>
+<div style="text-align:center"><button class="chip-btn" id="rel-more">再显示 60 个</button></div>
+
+<h2 style="margin-top:36px"><span class="num">牌</span>卡牌归属</h2>
+<p class="dim">登记在 <code>CardLibrary.addRedCards / addGreenCards / addBlueCards / addPurpleCards</code> 的牌属于该角色。奖励池再去掉 BASIC（初始牌不进奖励）。无色、诅咒是另外的池，四个角色共用。每日挑战的“多彩”才会把别的颜色加进来。</p>
+<div class="toolbar" id="card-pools"></div>
+<div class="toolbar"><input id="card-q" placeholder="搜索卡牌名 / id"><span class="dim" id="card-count" style="font-size:13px"></span></div>
+<div class="tbl-wrap"><table id="card-table"></table></div>
+<div style="text-align:center"><button class="chip-btn" id="card-more">再显示 80 个</button></div>
+</div>
+</div>
+
+<footer>由 <code>tools/src/logic-index.ts</code>、<code>tools/src/entity-index.ts</code> + 人工逐行追溯生成 · 仅包含标识符、行号、本地化名称与自写伪代码，不包含反编译源码原文</footer>
+<script src="logic-data.js"></script>
+<script src="entity-data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = window.LOGIC_DATA;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (t) { return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); };
+  if (!D) {
+    document.body.insertAdjacentHTML("afterbegin", '<div class="tip warn" style="margin:20px">没有加载到 logic-data.js。请在仓库根目录运行 <code>npm run -w tools logic-index</code> 生成后刷新。</div>');
+    D = { stats: {}, classes: [], hosts: [], behavior: {}, rng: {} };
+  }
+  var C = D.classes;
+  var ROOT = "com/megacrit/cardcrawl/";
+  var byName = {};
+  var methodsCache = {};
+  C.forEach(function (c, i) { if (!(c[0] in byName)) byName[c[0]] = i; });
+  function methodsOf(i) {
+    if (methodsCache[i]) return methodsCache[i];
+    var out = [];
+    if (C[i][5]) C[i][5].split(",").forEach(function (p) {
+      var k = p.lastIndexOf(":");
+      out.push([p.slice(0, k), +p.slice(k + 1)]);
+    });
+    return (methodsCache[i] = out);
+  }
+  var pathOf = function (i) { return ROOT + C[i][1] + "/" + C[i][0] + ".java"; };
+
+  /* ---------- 引用解析：Class.method[:from[-to]] ---------- */
+  var refTotal = 0, refBad = 0;
+  function resolveRef(str) {
+    var m = /^([A-Za-z_]\w*)\.([\w<>]+)(?::(\d+)(?:-(\d+))?)?$/.exec(str.trim());
+    refTotal++;
+    if (!m) { refBad++; return { text: str, title: "引用格式无法解析", bad: true }; }
+    var ci = byName[m[1]];
+    if (ci === undefined) { refBad++; return { text: m[1] + "?", title: "索引里没有这个类：" + m[1], bad: true }; }
+    var meth = m[2] === "ctor" ? "<init>" : m[2];
+    var from = m[3] ? +m[3] : 0, to = m[4] ? +m[4] : 0;
+    if (!from) {
+      var hit = methodsOf(ci).filter(function (x) { return x[0] === meth; })[0];
+      if (!hit) { refBad++; return { text: m[1] + "." + m[2] + "?", title: "类 " + m[1] + " 里没有找到方法 " + meth, bad: true }; }
+      from = hit[1];
+    } else if (from > C[ci][4] || (to && to > C[ci][4])) {
+      refBad++; return { text: m[1] + ":" + from + "?", title: "行号超出文件长度（" + C[ci][4] + " 行）", bad: true };
+    }
+    return {
+      text: C[ci][0] + ".java:L" + from + (to ? "-" + to : ""),
+      title: pathOf(ci) + "  ·  " + (m[2] === "ctor" ? "构造函数" : meth + "()") + "  ·  第 " + from + (to ? "–" + to : "") + " 行",
+      bad: false
+    };
+  }
+  function refHtml(str) {
+    var r = resolveRef(str);
+    return '<span class="ref' + (r.bad ? " bad" : "") + '" title="' + esc(r.title) + '">' + esc(r.text) + "</span>";
+  }
+  function siteHtml(ci, meth, line, flag) {
+    var name = meth === "<init>" ? "构造" : meth;
+    return '<span class="ref' + (flag ? " " + flag : "") + '" title="' + esc(pathOf(ci) + "  ·  第 " + line + " 行") + '">' + esc(C[ci][0] + "." + name + ":L" + line) + "</span>";
+  }
+
+  /* ---------- 伪代码块渲染 ---------- */
+  var KW = "if|else|for|while|do|return|new|of|in|interface|extends|function|class|switch|case|default|break|continue|true|false|null|this|let|const";
+  var TOKEN = new RegExp('(@[A-Za-z_]\\w*\\.\\w+(?::\\d+(?:-\\d+)?)?)|("[^"\\n]*")|\\b(' + KW + ")\\b", "g");
+  var REF_ONLY = /@([A-Za-z_]\w*\.\w+(?::\d+(?:-\d+)?)?)/g;
+  function renderLine(line) {
+    var k = line.indexOf("//");
+    var code = k < 0 ? line : line.slice(0, k);
+    var cmt = k < 0 ? "" : line.slice(k);
+    var out = "", last = 0, m;
+    TOKEN.lastIndex = 0;
+    while ((m = TOKEN.exec(code))) {
+      out += esc(code.slice(last, m.index));
+      if (m[1]) out += refHtml(m[1].slice(1));
+      else if (m[2]) out += '<span class="s">' + esc(m[2]) + "</span>";
+      else out += '<span class="k">' + m[3] + "</span>";
+      last = m.index + m[0].length;
+    }
+    out += esc(code.slice(last));
+    if (cmt) {
+      var c = "", l2 = 0, m2;
+      REF_ONLY.lastIndex = 0;
+      while ((m2 = REF_ONLY.exec(cmt))) {
+        c += esc(cmt.slice(l2, m2.index)) + refHtml(m2[1]);
+        l2 = m2.index + m2[0].length;
+      }
+      c += esc(cmt.slice(l2));
+      out += '<span class="' + (/^\/\/\s*——/.test(cmt) ? "h" : "c") + '">' + c + "</span>";
+    }
+    return out;
+  }
+  Array.prototype.slice.call(document.querySelectorAll('script[type="text/x-spec"]')).forEach(function (sc) {
+    var txt = sc.textContent.replace(/\r/g, "").replace(/^\n+/, "").replace(/\s+$/, "");
+    var pre = document.createElement("pre");
+    pre.className = "spec";
+    pre.innerHTML = txt.split("\n").map(renderLine).join("\n");
+    sc.parentNode.replaceChild(pre, sc);
+  });
+  Array.prototype.slice.call(document.querySelectorAll(".ref[data-ref]")).forEach(function (el) {
+    var r = resolveRef(el.getAttribute("data-ref"));
+    el.textContent = r.text;
+    el.title = r.title;
+    if (r.bad) el.classList.add("bad");
+  });
+
+  /* ---------- 顶部统计 ---------- */
+  var S = D.stats || {};
+  var fmt = function (n) { return (n || 0).toLocaleString("en-US"); };
+  $("hdr-stats").textContent = fmt(S.files) + " 个类 · " + fmt(S.lines) + " 行 · 源码引用 " + refTotal + " 处" + (refBad ? "（" + refBad + " 处未解析）" : "（全部解析成功）") + " · 索引生成于 " + String(D.generated || "").slice(0, 10);
+  var hostCount = function (id) { var h = D.hosts.filter(function (x) { return x.id === id; })[0]; return h ? h.count : 0; };
+  $("stat-cards").innerHTML = [
+    [fmt(S.files), "Java 类（全部扫描）"], [fmt(S.methods), "方法"], [fmt(S.hookCalls), "钩子调用点"],
+    [hostCount("action"), "Action"], [hostCount("card"), "卡牌"], [hostCount("power"), "能力"], [hostCount("relic"), "遗物"], [hostCount("monster"), "怪物"]
+  ].map(function (x) { return '<div class="card stat"><div class="n">' + x[0] + '</div><div class="l">' + x[1] + "</div></div>"; }).join("");
+
+  /* ---------- 目录 + 滚动高亮 ---------- */
+  var secs = Array.prototype.slice.call(document.querySelectorAll("#page-logic section"));
+  $("toc").innerHTML = secs.map(function (s) {
+    var h = s.querySelector("h2"), num = h.querySelector(".num");
+    var title = h.textContent.replace(num ? num.textContent : "", "").split("：")[0];
+    return '<a href="#' + s.id + '">' + (num ? esc(num.textContent) + " · " : "") + esc(title) + "</a>";
+  }).join("");
+  var tocLinks = Array.prototype.slice.call($("toc").querySelectorAll("a"));
+  function spy() {
+    if (!$("page-logic").classList.contains("active")) return;
+    var cur = 0;
+    for (var i = 0; i < secs.length; i++) if (secs[i].getBoundingClientRect().top < 160) cur = i;
+    tocLinks.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
+  }
+  window.addEventListener("scroll", spy, { passive: true });
+  spy();
+
+  /* ---------- 标签页 ---------- */
+  var rendered = {};
+  var renderers = {};
+  function show(page, keepScroll) {
+    if (!$("page-" + page)) page = "logic";
+    Array.prototype.slice.call(document.querySelectorAll(".tab")).forEach(function (t) { t.classList.toggle("active", t.getAttribute("data-page") === page); });
+    Array.prototype.slice.call(document.querySelectorAll(".page")).forEach(function (p) { p.classList.toggle("active", p.id === "page-" + page); });
+    if (renderers[page] && !rendered[page]) { rendered[page] = true; renderers[page](); }
+    if (!keepScroll) window.scrollTo(0, 0);
+    spy();
+  }
+  $("tabs").addEventListener("click", function (e) {
+    var t = e.target.closest(".tab");
+    if (!t) return;
+    var page = t.getAttribute("data-page");
+    try { history.replaceState(null, "", "#" + page); } catch (err) {}
+    show(page);
+  });
+  function fromHash() {
+    var h = location.hash.slice(1);
+    if (/^s\d+$/.test(h)) show("logic", true);
+    else if (h) show(h);
+  }
+  window.addEventListener("hashchange", fromHash);
+
+  var chips = function (el, items, cur, onPick) {
+    el.innerHTML = items.map(function (it) { return '<button class="chip-btn' + (it[0] === cur ? " active" : "") + '" data-v="' + esc(it[0]) + '">' + esc(it[1]) + "</button>"; }).join("");
+    el.onclick = function (e) { var b = e.target.closest(".chip-btn"); if (b) onPick(b.getAttribute("data-v")); };
+  };
+  var debounce = function (fn) { var t; return function () { clearTimeout(t); t = setTimeout(fn, 120); }; };
+
+  /* ---------- ② 钩子矩阵 ---------- */
+  $("cnt-hooks").textContent = D.hosts.reduce(function (a, h) { return a + h.hooks.length; }, 0);
+  var hookHost = D.hosts.length ? D.hosts[0].id : "";
+  function names(list, limit) {
+    var all = list.map(function (i) { return '<span title="' + esc(pathOf(i)) + '">' + esc(C[i][0]) + "</span>"; });
+    if (all.length <= limit) return '<span class="mono">' + all.join("、") + "</span>";
+    return '<details class="inl"><summary>' + all.length + " 个：" + list.slice(0, 4).map(function (i) { return esc(C[i][0]); }).join("、") + ' …</summary><div class="mono">' + all.join("、") + "</div></details>";
+  }
+  function sites(list) {
+    if (!list.length) return '<span class="dim">（未找到直接调用）</span>';
+    var h = list.map(function (c) { return siteHtml(c[0], c[1], c[2], c[3]); });
+    if (h.length <= 10) return '<div class="sites">' + h.join("") + "</div>";
+    return '<div class="sites">' + h.slice(0, 8).join("") + '</div><details class="inl"><summary>其余 ' + (h.length - 8) + ' 处</summary><div class="sites">' + h.slice(8).join("") + "</div></details>";
+  }
+  function renderHooks() {
+    chips($("hook-hosts"), D.hosts.map(function (h) { return [h.id, h.label + "（" + h.count + " 个子类 · " + h.hooks.length + " 钩子）"]; }), hookHost, function (v) { hookHost = v; renderHooks(); });
+    var host = D.hosts.filter(function (h) { return h.id === hookHost; })[0];
+    if (!host) return;
+    var q = $("hook-q").value.trim().toLowerCase(), live = $("hook-live").checked;
+    var rows = host.hooks.filter(function (k) {
+      if (live && !k.o.length && !k.c.length) return false;
+      if (!q) return true;
+      if (k.n.toLowerCase().indexOf(q) >= 0) return true;
+      return k.o.some(function (i) { return C[i][0].toLowerCase().indexOf(q) >= 0; }) || k.c.some(function (c) { return C[c[0]][0].toLowerCase().indexOf(q) >= 0; });
+    }).sort(function (a, b) { return a.l - b.l; });
+    $("hook-count").textContent = "显示 " + rows.length + " / " + host.hooks.length + " 个钩子（按声明行号排序）";
+    $("hook-table").innerHTML = '<tr><th style="width:24%">钩子（' + esc(C[host.cls][0]) + '）</th><th style="width:40%">调用点 = 触发时刻</th><th>实现者（重写了它的子类）</th></tr>' +
+      rows.map(function (k) {
+        return '<tr><td><b class="mono">' + esc(k.n) + '</b><span class="mono dim">' + esc(k.s) + "</span><br>" + siteHtml(host.cls, k.n, k.l, "") + "</td><td>" + sites(k.c) + "</td><td>" + (k.o.length ? '<span class="badge b-blue">' + k.o.length + "</span> " + names(k.o, 8) : '<span class="dim">无（只有基类默认实现）</span>') + "</td></tr>";
+      }).join("");
+  }
+  renderers.hooks = function () {
+    $("hook-q").addEventListener("input", debounce(renderHooks));
+    $("hook-live").addEventListener("change", renderHooks);
+    renderHooks();
+  };
+
+  /* ---------- ③ 类行为索引 ---------- */
+  var KIND_LABEL = { action: "动作 Action", power: "能力 Power", relic: "遗物 Relic", card: "卡牌 Card", monster: "怪物 Monster", orb: "充能球 Orb", stance: "姿态 Stance", potion: "药水 Potion", blight: "荒疫 Blight", room: "房间 Room", event: "事件 Event", chest: "宝箱", character: "角色", dungeon: "地牢", map: "地图", core: "核心", helpers: "辅助", neow: "Neow", rewards: "奖励", shop: "商店", screens: "界面屏", ui: "UI", daily: "每日 mod", trials: "试炼", random: "随机", actions: "actions 包其它", cards: "cards 包其它", monsters: "monsters 包其它", characters: "characters 包其它", events: "events 包其它", rooms: "rooms 包其它" };
+  var behIdx = Object.keys(D.behavior).map(Number).sort(function (a, b) { return a - b; });
+  $("cnt-classes").textContent = behIdx.length;
+  var hooksOfClass = {};
+  D.hosts.forEach(function (h) { h.hooks.forEach(function (k) { k.o.forEach(function (i) { (hooksOfClass[i] = hooksOfClass[i] || []).push(k.n); }); }); });
+  var kindCount = {};
+  behIdx.forEach(function (i) { kindCount[C[i][3]] = (kindCount[C[i][3]] || 0) + 1; });
+  var clsKind = "", clsLimit = 60;
+  var hay = {};
+  function hayOf(i) {
+    if (hay[i]) return hay[i];
+    return (hay[i] = (C[i][0] + " " + C[i][2] + " " + D.behavior[i].map(function (b) { return b.slice(2).join(" "); }).join(" ")).toLowerCase());
+  }
+  function behHtml(b) {
+    var parts = [];
+    if (b[2]) parts.push(b[2].split(",").map(function (a) { var q = a.charAt(0); return '<span class="' + (q === "T" ? "qT" : q === "B" ? "qB" : "mu") + '">' + esc(a) + "</span>"; }).join(" "));
+    if (b[3]) parts.push('<span class="pw">[' + esc(b[3].split(",").join(", ")) + "]</span>");
+    if (b[4]) parts.push('<span class="rg">{' + esc(b[4].split(",").join(", ")) + "}</span>");
+    if (b[5]) parts.push('<span class="mu">' + esc(b[5].split(",").join(" ")) + "</span>");
+    return "<div><b>" + esc(b[0] === "<init>" ? "构造" : b[0]) + '</b><span class="mu">:L' + b[1] + "</span> → " + parts.join(" ") + "</div>";
+  }
+  function renderClasses() {
+    var order = Object.keys(kindCount).sort(function (a, b) { return kindCount[b] - kindCount[a]; });
+    chips($("cls-kinds"), [["", "全部（" + behIdx.length + "）"]].concat(order.map(function (k) { return [k, (KIND_LABEL[k] || k) + "（" + kindCount[k] + "）"]; })), clsKind, function (v) { clsKind = v; clsLimit = 60; renderClasses(); });
+    var q = $("cls-q").value.trim().toLowerCase();
+    var list = behIdx.filter(function (i) { return (!clsKind || C[i][3] === clsKind) && (!q || hayOf(i).indexOf(q) >= 0); });
+    $("cls-count").textContent = "匹配 " + list.length + " 个类，显示前 " + Math.min(clsLimit, list.length) + " 个";
+    $("cls-table").innerHTML = '<tr><th style="width:26%">类</th><th>各方法的行为指纹</th></tr>' + list.slice(0, clsLimit).map(function (i) {
+      var c = C[i], hk = hooksOfClass[i];
+      return '<tr><td><b class="mono" title="' + esc(pathOf(i)) + '">' + esc(c[0]) + '</b> <span class="badge b-gray">' + esc(KIND_LABEL[c[3]] || c[3]) + '</span><br><span class="mono dim">extends ' + esc(c[2] || "—") + "<br>" + esc(c[1]) + " · " + c[4] + " 行</span>" +
+        (hk ? '<div class="mono dim" style="margin-top:4px">重写钩子：' + esc(hk.join("、")) + "</div>" : "") + '</td><td class="beh">' + D.behavior[i].map(behHtml).join("") + "</td></tr>";
+    }).join("");
+    $("cls-more").style.display = list.length > clsLimit ? "" : "none";
+  }
+  renderers.classes = function () {
+    $("cls-q").addEventListener("input", debounce(function () { clsLimit = 60; renderClasses(); }));
+    $("cls-more").addEventListener("click", function () { clsLimit += 60; renderClasses(); });
+    renderClasses();
+  };
+
+  /* ---------- ④ RNG ---------- */
+  var PER_FLOOR = "每次进入房间时用 seed + floorNum 重新播种（见 ① §2、§13）。";
+  var RNG_NOTE = {
+    aiRng: "怪物 AI 用。" + PER_FLOOR,
+    monsterHpRng: "怪物血量用。" + PER_FLOOR,
+    shuffleRng: "洗牌用。" + PER_FLOOR,
+    cardRandomRng: "战斗内随机选牌 / 随机目标用。" + PER_FLOOR,
+    miscRng: "杂项。" + PER_FLOOR,
+    mapRng: "地图生成用：每幕用 seed + actNum 播种（见 ① §13）。",
+    cardRng: "卡牌奖励用：整局持续，换幕时 counter 对齐到 250 / 500 / 750（见 ① §2）。",
+    monsterRng: "整局持续的流，播种规则见 ① §2。",
+    eventRng: "整局持续的流，播种规则见 ① §2。",
+    merchantRng: "整局持续的流，播种规则见 ① §2。",
+    treasureRng: "整局持续的流，播种规则见 ① §2。",
+    relicRng: "整局持续的流，播种规则见 ① §2。",
+    potionRng: "整局持续的流，播种规则见 ① §2。",
+    "NeowEvent.rng": "Neow 开局奖励专用：new Random(seed)，不属于 AbstractDungeon 的 13 条流。",
+    "MathUtils.random(非种子)": "libGDX 的全局非种子随机。多数是画面/音效（位置抖动、台词选择），但出现在逻辑类里的每一处都要逐个确认是否影响结果；影响结果的地方原版本身就不可复现。"
+  };
+  var rngKeys = Object.keys(D.rng).sort(function (a, b) { var ma = a.indexOf("MathUtils") >= 0, mb = b.indexOf("MathUtils") >= 0; return ma - mb || a.localeCompare(b); });
+  $("cnt-rng").textContent = rngKeys.reduce(function (a, k) { return a + (k.indexOf("MathUtils") >= 0 ? 0 : D.rng[k].length); }, 0);
+  var rngCur = rngKeys.indexOf("aiRng") >= 0 ? "aiRng" : rngKeys[0];
+  function renderRng() {
+    chips($("rng-streams"), rngKeys.map(function (k) { return [k, k + "（" + D.rng[k].length + "）"]; }), rngCur, function (v) { rngCur = v; renderRng(); });
+    $("rng-note").innerHTML = "<b>" + esc(rngCur) + "：</b>" + esc(RNG_NOTE[rngCur] || "");
+    var groups = {}, orderK = [];
+    (D.rng[rngCur] || []).forEach(function (s) { if (!groups[s[0]]) { groups[s[0]] = []; orderK.push(s[0]); } groups[s[0]].push(s); });
+    $("rng-table").innerHTML = '<tr><th style="width:26%">类</th><th>取数位置（方法:行）</th></tr>' + orderK.map(function (ci) {
+      return '<tr><td><b class="mono" title="' + esc(pathOf(ci)) + '">' + esc(C[ci][0]) + '</b> <span class="badge b-gray">' + esc(KIND_LABEL[C[ci][3]] || C[ci][3]) + '</span><br><span class="mono dim">' + esc(C[ci][1]) + '</span></td><td><div class="sites">' +
+        groups[ci].map(function (s) { return siteHtml(s[0], s[1], s[2], ""); }).join("") + "</div></td></tr>";
+    }).join("");
+  }
+  renderers.rng = renderRng;
+
+  /* ---------- ⑥ 实体 ---------- */
+  var ENT = window.ENTITY_DATA;
+  if (ENT) $("cnt-entities").textContent = ENT.powers.length;
+  var POOL_NAME = { red: "铁甲战士", green: "静默猎手", blue: "故障机器人", purple: "观者", shared: "全角色", colorless: "无色", curse: "诅咒" };
+  function deckLine(deck) {
+    var g = [];
+    deck.forEach(function (d) {
+      var last = g[g.length - 1];
+      if (last && last[0] === d[0]) last[2]++;
+      else g.push([d[0], d[1] || d[0], 1]);
+    });
+    return g.map(function (x) { return esc(x[1]) + (x[2] > 1 ? " ×" + x[2] : ""); }).join("、");
+  }
+  function trig(s) {
+    if (!s) return '<span class="dim">类里没有入队或改数值</span>';
+    return esc(s).replace(/外部 /g, '<span class="dim">外部 </span>');
+  }
+  renderers.entities = function () {
+    if (!ENT) {
+      $("char-cards").innerHTML = '<div class="tip warn">没有 entity-data.js。在仓库根目录运行 <code>npm run -w tools entity-index</code> 后刷新。</div>';
+      return;
+    }
+    $("char-cards").innerHTML = ENT.characters.map(function (h) {
+      var pool = h.color.toLowerCase();
+      var pots = ENT.potions.filter(function (p) { return p[4] === pool; });
+      var rels = ENT.relics.filter(function (r) { return r[4] === pool; });
+      var mine = ENT.cards.filter(function (c) { return c[5] === pool && c[6] !== "1"; });
+      var basic = mine.filter(function (c) { return c[3] === "BASIC"; }).length;
+      return '<div class="card"><h5>' + esc(h.name) + ' <span class="badge b-gray">' + esc(h.id) + "</span></h5>" +
+        "<p>生命 " + h.hp + " · 能量 " + h.energy + " · 抽牌 " + h.draw + " · 金币 " + h.gold + " · 药水槽 " + h.potionSlots + (h.orbs ? " · 充能球槽 " + h.orbs : "") + " · 牌色 " + esc(h.color) + "</p>" +
+        "<p>初始遗物：" + h.relics.map(function (r) { return esc(r[1] || r[0]); }).join("、") + "</p>" +
+        "<p>初始牌组：" + deckLine(h.deck) + "</p>" +
+        "<p>专属药水：" + pots.map(function (p) { return esc(p[1] || p[0]); }).join("、") + "</p>" +
+        "<p>专属遗物 " + rels.length + " 件：" + rels.map(function (r) { return esc(r[1] || r[0]); }).join("、") + "</p>" +
+        "<p>卡牌 " + mine.length + " 张，其中 BASIC " + basic + " 张不进奖励池，其余 " + (mine.length - basic) + " 张在奖励池（未解锁的运行时跳过）。</p></div>";
+    }).join("");
+
+    var potPool = "";
+    function renderPot() {
+      var q = $("pot-q").value.trim().toLowerCase();
+      var rows = ENT.potions.filter(function (p) {
+        if (potPool && p[4] !== potPool) return false;
+        if (!q) return true;
+        return (p[0] + " " + p[1] + " " + p[2] + " " + p[8]).toLowerCase().indexOf(q) >= 0;
+      });
+      $("pot-count").textContent = rows.length + " 瓶";
+      $("pot-table").innerHTML = "<tr><th>药水</th><th>稀有度</th><th>谁能抽到</th><th>剂量 getPotency</th><th>使用时</th></tr>" + rows.map(function (p) {
+        var flags = (p[6] ? "投掷 " : "") + (p[7] ? "需指定目标" : "");
+        return "<tr><td><b>" + esc(p[1] || p[0]) + '</b><br><span class="mono dim">' + esc(p[0]) + "</span></td><td>" + esc(p[3].toLowerCase()) +
+          "</td><td>" + esc(POOL_NAME[p[4]] || p[4]) + "</td><td class=\"mono\">" + esc(p[5] || "—") +
+          (flags ? '<br><span class="dim">' + esc(flags) + "</span>" : "") + "</td><td class=\"beh\">" + trig(p[8]) + "</td></tr>";
+      }).join("");
+    }
+    var potChips = [["", "全部（" + ENT.potions.length + "）"], ["red", "铁甲专属"], ["green", "静默专属"], ["blue", "故障专属"], ["purple", "观者专属"], ["shared", "全角色"]];
+    chips($("pot-pools"), potChips, potPool, function (v) { potPool = v; renderPot(); });
+    $("pot-q").addEventListener("input", debounce(renderPot));
+    renderPot();
+
+    var powKind = "";
+    function powBucket(p) {
+      if (p[7] === "1") return "deprecated";
+      if (p[3].indexOf("±") >= 0) return "flip";
+      if (p[3].indexOf("DEBUFF") >= 0) return "debuff";
+      return "buff";
+    }
+    function renderPow() {
+      var q = $("pow-q").value.trim().toLowerCase();
+      var rows = ENT.powers.filter(function (p) {
+        if (powKind && powBucket(p) !== powKind) return false;
+        if (!q) return true;
+        return (p[0] + " " + p[1] + " " + p[2] + " " + p[6]).toLowerCase().indexOf(q) >= 0;
+      });
+      $("pow-count").textContent = rows.length + " / " + ENT.powers.length;
+      $("pow-table").innerHTML = "<tr><th style=\"width:22%\">能力</th><th style=\"width:14%\">类型</th><th>触发</th></tr>" + rows.map(function (p) {
+        return "<tr><td><b>" + esc(p[1] || p[0]) + '</b>' + (p[7] === "1" ? ' <span class="badge b-gray">弃用</span>' : "") +
+          '<br><span class="mono dim">' + esc(p[0]) + " · " + esc(p[2]) + "</span></td><td>" + esc(p[3]) +
+          (p[4] === "1" ? '<br><span class="dim">回合制</span>' : "") + (p[5] !== "5" ? '<br><span class="dim">priority ' + esc(p[5]) + "</span>" : "") +
+          "</td><td class=\"beh\">" + trig(p[6]) + "</td></tr>";
+      }).join("");
+    }
+    chips($("pow-kinds"), [["", "全部"], ["debuff", "减益"], ["buff", "增益"], ["flip", "正负会翻转"], ["deprecated", "弃用"]], powKind, function (v) { powKind = v; renderPow(); });
+    $("pow-q").addEventListener("input", debounce(renderPow));
+    renderPow();
+
+    var relPool = "", relLimit = 60;
+    function renderRel() {
+      var q = $("rel-q").value.trim().toLowerCase();
+      var rows = ENT.relics.filter(function (r) {
+        if (relPool && r[4] !== relPool) return false;
+        if (!q) return true;
+        return (r[0] + " " + r[1] + " " + r[5]).toLowerCase().indexOf(q) >= 0;
+      });
+      $("rel-count").textContent = "匹配 " + rows.length + "，显示前 " + Math.min(relLimit, rows.length);
+      $("rel-table").innerHTML = "<tr><th style=\"width:24%\">遗物</th><th>稀有度</th><th>归属</th><th>触发</th></tr>" + rows.slice(0, relLimit).map(function (r) {
+        return "<tr><td><b>" + esc(r[1] || r[0]) + '</b><br><span class="mono dim">' + esc(r[0]) + "</span></td><td>" + esc(r[3].toLowerCase()) +
+          "</td><td>" + esc(POOL_NAME[r[4]] || r[4]) + "</td><td class=\"beh\">" + trig(r[5]) + "</td></tr>";
+      }).join("");
+      $("rel-more").style.display = rows.length > relLimit ? "" : "none";
+    }
+    var relCounts = {};
+    ENT.relics.forEach(function (r) { relCounts[r[4]] = (relCounts[r[4]] || 0) + 1; });
+    chips($("rel-pools"), [["", "全部（" + ENT.relics.length + "）"]].concat(["red", "green", "blue", "purple", "shared"].map(function (k) {
+      return [k, (POOL_NAME[k] || k) + "（" + (relCounts[k] || 0) + "）"];
+    })), relPool, function (v) { relPool = v; relLimit = 60; renderRel(); });
+    $("rel-q").addEventListener("input", debounce(function () { relLimit = 60; renderRel(); }));
+    $("rel-more").addEventListener("click", function () { relLimit += 60; renderRel(); });
+    renderRel();
+
+    var cardPool = "", cardLimit = 80;
+    function rewardOf(c) {
+      if (c[6] === "1") return "弃用";
+      if (c[5] === "curse") return "诅咒池";
+      if (c[3] === "BASIC") return "仅初始";
+      if (c[5] === "colorless" && (c[3] === "SPECIAL" || c[4] === "STATUS")) return "不进奖励";
+      return "奖励池";
+    }
+    function renderCard() {
+      var q = $("card-q").value.trim().toLowerCase();
+      var rows = ENT.cards.filter(function (c) {
+        if (cardPool && c[5] !== cardPool) return false;
+        if (!q) return true;
+        return (c[0] + " " + c[1]).toLowerCase().indexOf(q) >= 0;
+      });
+      $("card-count").textContent = "匹配 " + rows.length + "，显示前 " + Math.min(cardLimit, rows.length);
+      $("card-table").innerHTML = "<tr><th>卡牌</th><th>池</th><th>类型</th><th>稀有度</th><th>去向</th></tr>" + rows.slice(0, cardLimit).map(function (c) {
+        return "<tr><td><b>" + esc(c[1] || c[0]) + '</b><br><span class="mono dim">' + esc(c[0]) + "</span></td><td>" + esc(POOL_NAME[c[5]] || c[5]) +
+          "</td><td>" + esc(c[4].toLowerCase()) + "</td><td>" + esc(c[3].toLowerCase()) + "</td><td>" + rewardOf(c) + "</td></tr>";
+      }).join("");
+      $("card-more").style.display = rows.length > cardLimit ? "" : "none";
+    }
+    var cardCounts = {};
+    ENT.cards.forEach(function (c) { cardCounts[c[5]] = (cardCounts[c[5]] || 0) + 1; });
+    chips($("card-pools"), [["", "全部（" + ENT.cards.length + "）"]].concat(["red", "green", "blue", "purple", "colorless", "curse"].map(function (k) {
+      return [k, (POOL_NAME[k] || k) + "（" + (cardCounts[k] || 0) + "）"];
+    })), cardPool, function (v) { cardPool = v; cardLimit = 80; renderCard(); });
+    $("card-q").addEventListener("input", debounce(function () { cardLimit = 80; renderCard(); }));
+    $("card-more").addEventListener("click", function () { cardLimit += 80; renderCard(); });
+    renderCard();
+  };
+
+  fromHash();
+  window.__logicReview = { refTotal: refTotal, refBad: refBad };
+})();
+</script>
+</body>
+</html>
